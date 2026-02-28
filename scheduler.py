@@ -1,8 +1,8 @@
 from openclaw_api import OpenClawClient
 #!/usr/bin/env python3
 """
-知微定时任务调度器 v3.3 (2026-03-01 Phase 2)
-特性: Prompt 外部化、支持热更新
+知微定时任务调度器 v3.4 (2026-03-01 Phase 2)
+特性: Prompt 外部化、支持热更新、重试机制、触发器监听
 """
 
 import os
@@ -12,22 +12,40 @@ import signal
 import subprocess
 import logging
 import logging.handlers
+import time
+import threading
 from datetime import datetime, timedelta
 from pathlib import Path
 
 import yaml
 from apscheduler.schedulers.blocking import BlockingScheduler
 from apscheduler.triggers.cron import CronTrigger
+from apscheduler.triggers.date import DateTrigger
 from apscheduler.events import EVENT_JOB_EXECUTED, EVENT_JOB_ERROR
 
 BASE_DIR = Path(__file__).parent
 PROMPT_DIR = BASE_DIR / "prompts"
+TRIGGER_DIR = BASE_DIR / "triggers"
 sys.path.insert(0, str(BASE_DIR))
 
 from pusher import PushManager
 from scheduler_queue import save_result, try_push
 
+# 新增：锁管理、缓存、触发器
+from lock_manager import acquire_lock
+from price_cache import has_price_changed, update_price_cache
+import trigger_listener
+
 CONTAINER = "clawdbot"
+
+# ============ 指数退避重试配置 ============
+RETRY_DELAYS = [600, 1200, 2400]  # 10min, 20min, 40min
+
+def get_retry_delay(attempt: int) -> int:
+    """获取指数退避延迟"""
+    if attempt <= len(RETRY_DELAYS):
+        return RETRY_DELAYS[attempt - 1]
+    return RETRY_DELAYS[-1]  # 最大40分钟
 
 
 # ============ 日志 ============
@@ -427,10 +445,19 @@ def main():
     push_manager = PushManager(config)
 
     logger.info("=" * 50)
-    logger.info("🤖 知微定时任务系统 v3.3 启动")
+    logger.info("🤖 知微定时任务系统 v3.4 启动")
     logger.info("   架构: 调度器 → Agent(LLM) → 推送")
-    logger.info("   特性: Prompt 外部化 (v3.3 Phase 2)")
+    logger.info("   特性: Prompt 外部化、重试机制、触发器监听 (v3.4)")
     logger.info("=" * 50)
+
+    # ============ 启动触发器监听器 (隔离保护) ============
+    try:
+        trigger_listener.init(scheduler, logger)
+        trigger_listener.start()
+        logger.info("👀 触发器监听器已启动")
+    except Exception as e:
+        logger.warning(f"⚠️ 触发器监听器启动失败: {e}")
+        logger.warning("   主定时任务不受影响")
 
     tz = config.get("system", {}).get("timezone", "Asia/Shanghai")
     scheduler = BlockingScheduler(timezone=tz)
@@ -487,11 +514,42 @@ def main():
         id="cleanup", name="日志清理"
     )
 
+    # ============ 失败重试机制 (max_retries=3, 10分钟后重试) ============
+    MAX_RETRIES = 3
+    RETRY_DELAY_MINUTES = 10
+
+    def schedule_retry(job_id: str):
+        """安排重试任务"""
+        retry_count = job_retries.get(job_id, 0) + 1
+        job_retries[job_id] = retry_count
+
+        if retry_count < MAX_RETRIES:
+            logger.warning(f"🔄 安排重试 [{job_id}]: {retry_count}/{MAX_RETRIES}")
+            run_time = datetime.now() + timedelta(minutes=RETRY_DELAY_MINUTES)
+            scheduler.add_job(
+                lambda: scheduler.print_jobs(job_id),  # 重新触发原任务
+                trigger=DateTrigger(run_date=run_time),
+                id=f"{job_id}_retry_{retry_count}",
+                name=f"{job_id} 重试 {retry_count}"
+            )
+        else:
+            logger.error(f"❌ 任务彻底失败 [{job_id}]，已达最大重试次数")
+            job_retries.pop(job_id, None)
+
+    job_retries = {}  # 重试计数
+
     def listener(event):
         if event.exception:
             logger.error(f"❌ 任务异常: {event.job_id}")
+            # 提取原始 job_id（去掉 retry 后缀）
+            original_job_id = event.job_id.rsplit('_retry_', 1)[0]
+            # 安排重试
+            schedule_retry(original_job_id)
         else:
             logger.info(f"✅ 任务完成: {event.job_id}")
+            # 清除重试计数
+            job_retries.pop(event.job_id, None)
+            job_retries.pop(event.job_id.rsplit('_retry_', 1)[0], None)
 
     scheduler.add_listener(listener, EVENT_JOB_EXECUTED | EVENT_JOB_ERROR)
 

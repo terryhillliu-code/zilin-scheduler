@@ -95,3 +95,4 @@ data_sources:
     min_score: 2
   crypto:
     alert_threshold: 5
+# Security Test

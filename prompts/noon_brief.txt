@@ -1,0 +1,8 @@
+请生成午间简报。执行以下命令：
+
+1. exec python3 /root/workspace/skills/daily-brief/brief.py weather --city 杭州
+2. exec python3 /root/workspace/skills/situation-report/sitrep.py news --topic china --limit 10
+3. exec python3 /root/workspace/skills/situation-report/sitrep.py news --topic tech --limit 5
+
+筛选规则：排除繁体中文、台湾/港澳本地政治、纯广告软文。英文新闻保留原标题，摘要中文。
+生成轻量午报：杭州天气 + 上午热点复盘（5条精选，附来源链接）+ 下午关注点。

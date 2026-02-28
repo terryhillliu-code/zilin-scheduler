@@ -1,0 +1,5 @@
+请生成arXiv论文精选。执行：
+
+1. exec python3 /root/workspace/skills/arxiv-tracker/arxiv.py daily --categories 'cs.AI,cs.LG,cs.CL,cs.CV' --min-score 2 --limit 15
+
+生成论文精选报告：每篇包含标题、作者（前3位）、发布日期、arXiv链接、一句话核心贡献总结。按相关性排序。最后写今日论文趋势分析。

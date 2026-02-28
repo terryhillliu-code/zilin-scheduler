@@ -1,0 +1,172 @@
+#!/usr/bin/env python3
+"""
+队列管理命令行工具
+用法:
+  queue stats              # 队列统计
+  queue list [pending|failed|sent]  # 列出任务
+  queue inspect <job_id>   # 查看详情
+  queue cleanup [days]     # 清理旧文件（默认7天）
+  queue retry              # 手动触发重试
+"""
+
+import sys
+import json
+from pathlib import Path
+from datetime import datetime, timedelta
+
+BASE_DIR = Path(__file__).parent
+sys.path.insert(0, str(BASE_DIR))
+
+from scheduler_queue import (
+    PENDING, PROCESSING, SENT, FAILED,
+    get_queue_stats, cleanup_old_files
+)
+
+def cmd_stats():
+    """队列统计"""
+    stats = get_queue_stats()
+    
+    print("\n📊 队列状态")
+    print("=" * 50)
+    print(f"待推送 (pending):    {stats['pending']}")
+    print(f"处理中 (processing): {stats['processing']}")
+    print(f"今日成功 (sent):     {stats['sent_today']}")
+    print(f"历史成功 (total):    {stats['sent_total']}")
+    print(f"失败待重试 (failed): {stats['failed']}")
+    
+    if stats['failed'] > 0:
+        print(f"\n⚠️  有 {stats['failed']} 个任务推送失败，等待重试")
+    
+    if stats['processing'] > 0:
+        print(f"\n⚠️  有 {stats['processing']} 个任务正在处理中（可能卡住）")
+
+def cmd_list(queue_name: str = "all"):
+    """列出队列中的任务"""
+    queues = {
+        "pending": PENDING,
+        "processing": PROCESSING,
+        "failed": FAILED,
+        "sent": SENT
+    }
+    
+    if queue_name == "all":
+        to_check = queues.items()
+    elif queue_name in queues:
+        to_check = [(queue_name, queues[queue_name])]
+    else:
+        print(f"❌ 未知队列: {queue_name}")
+        print("可用队列: pending, processing, failed, sent, all")
+        return
+    
+    for name, path in to_check:
+        files = sorted(path.glob("*.json"))
+        if not files:
+            continue
+            
+        print(f"\n📋 {name.upper()} ({len(files)} 个)")
+        print("-" * 70)
+        
+        for f in files:
+            try:
+                data = json.loads(f.read_text())
+                job_id = data.get("job_id", "unknown")
+                created = data.get("created_at", "")
+                retries = data.get("retries", 0)
+                targets = ",".join(data.get("push_targets", []))
+                
+                retry_info = f" (重试{retries}次)" if retries > 0 else ""
+                print(f"  [{job_id:30}] {targets:20} {created[:19]}{retry_info}")
+                
+                if data.get("last_error"):
+                    print(f"    ❌ 错误: {str(data['last_error'])[:60]}")
+            except Exception as e:
+                print(f"  ⚠️  {f.name}: 解析失败 ({e})")
+
+def cmd_inspect(job_id: str):
+    """查看任务详情"""
+    # 搜索所有队列
+    safe_name = job_id.replace(":", "_")
+    filename = f"{safe_name}.json"
+    
+    found = None
+    for queue_path in [PENDING, PROCESSING, SENT, FAILED]:
+        file_path = queue_path / filename
+        if file_path.exists():
+            found = (queue_path.name, file_path)
+            break
+    
+    if not found:
+        print(f"❌ 未找到任务: {job_id}")
+        return
+    
+    queue_name, file_path = found
+    data = json.loads(file_path.read_text())
+    
+    print(f"\n📄 任务详情")
+    print("=" * 70)
+    print(f"Job ID:      {data.get('job_id')}")
+    print(f"任务类型:    {data.get('task')}")
+    print(f"所在队列:    {queue_name}")
+    print(f"创建时间:    {data.get('created_at')}")
+    print(f"推送目标:    {', '.join(data.get('push_targets', []))}")
+    print(f"重试次数:    {data.get('retries', 0)}")
+    
+    if data.get('metadata'):
+        print(f"元数据:      {json.dumps(data['metadata'], ensure_ascii=False)}")
+    
+    if data.get('last_error'):
+        print(f"\n❌ 最后错误:")
+        print(json.dumps(data['last_error'], indent=2, ensure_ascii=False))
+    
+    print(f"\n📝 内容预览 (前500字符):")
+    print("-" * 70)
+    content = data.get('content', '')
+    print(content[:500])
+    if len(content) > 500:
+        print(f"\n... (还有 {len(content) - 500} 字符)")
+
+def cmd_cleanup(days: int = 7):
+    """清理旧文件"""
+    cleaned = cleanup_old_files(days)
+    print(f"✅ 已清理 {cleaned} 个超过 {days} 天的 sent 文件")
+
+def cmd_retry():
+    """手动触发重试"""
+    from scheduler import load_config
+    from pusher import PushManager
+    from scheduler_queue import retry_failed
+    
+    config = load_config()
+    push_manager = PushManager(config)
+    
+    print("开始重试 failed 队列...")
+    result = retry_failed(push_manager, max_retries=3)
+    
+    print(f"✅ 重新入队: {result['retried']} 个")
+    print(f"✅ 推送成功: {result['success']} 个")
+
+def main():
+    if len(sys.argv) < 2:
+        print(__doc__)
+        sys.exit(1)
+    
+    cmd = sys.argv[1]
+    
+    if cmd == "stats":
+        cmd_stats()
+    elif cmd == "list":
+        queue_name = sys.argv[2] if len(sys.argv) > 2 else "all"
+        cmd_list(queue_name)
+    elif cmd == "inspect" and len(sys.argv) > 2:
+        cmd_inspect(sys.argv[2])
+    elif cmd == "cleanup":
+        days = int(sys.argv[2]) if len(sys.argv) > 2 else 7
+        cmd_cleanup(days)
+    elif cmd == "retry":
+        cmd_retry()
+    else:
+        print(__doc__)
+        sys.exit(1)
+
+if __name__ == "__main__":
+    main()

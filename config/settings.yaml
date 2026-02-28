@@ -1,0 +1,97 @@
+system:
+  name: "知微定时任务系统"
+  version: "3.0.0"
+  timezone: "Asia/Shanghai"
+  log_dir: "logs"
+  output_dir: "outputs"
+  log_retention_days: 30
+
+push:
+  dingtalk:
+    enabled: true
+    webhook: "https://oapi.dingtalk.com/robot/send?access_token=6a671d42464224cfe0b40a2183ea94fd433274e5054d1aa1db84490012d1a772"
+    secret: "SECa28c2e8ed7cb542316e19155dc8183012ad73a9b123061f4a378eb043b044e00"
+  feishu:
+    enabled: true
+    app_id: "cli_a917bc583a78dbcc"
+    app_secret: "n65Xj21PgP4DvtmUYE3kedKGZHOZLdb5"
+    chat_id: "oc_cba5528a321ac0f77de4190390cecf9f"
+
+quiet_hours:
+  enabled: true
+  start: "23:00"
+  end: "06:30"
+
+jobs:
+  system_check:
+    enabled: true
+    hour: 7
+    minute: 0
+    day_of_week: "mon-sun"
+    description: "系统巡检"
+    push_to: ["dingtalk"]
+    retry: { max_attempts: 2, delay_seconds: 30 }
+
+  arxiv_papers:
+    enabled: true
+    hour: 7
+    minute: 30
+    day_of_week: "mon-sun"
+    description: "arXiv 论文精选"
+    push_to: ["dingtalk", "feishu"]
+    retry: { max_attempts: 3, delay_seconds: 120 }
+
+  us_market_close:
+    enabled: true
+    hour: 8
+    minute: 30
+    day_of_week: "tue-sat"
+    description: "美股收盘复盘"
+    push_to: ["dingtalk", "feishu"]
+    retry: { max_attempts: 3, delay_seconds: 120 }
+
+  morning_brief:
+    enabled: true
+    hour: 9
+    minute: 30
+    day_of_week: "mon-sun"
+    description: "每日早报"
+    push_to: ["dingtalk", "feishu"]
+    retry: { max_attempts: 3, delay_seconds: 60 }
+
+  noon_brief:
+    enabled: true
+    hour: 14
+    minute: 30
+    day_of_week: "mon-sun"
+    description: "每日午报"
+    push_to: ["dingtalk", "feishu"]
+    retry: { max_attempts: 3, delay_seconds: 60 }
+
+  crypto_evening:
+    enabled: true
+    hour: 21
+    minute: 0
+    day_of_week: "mon-sun"
+    description: "加密货币晚报"
+    push_to: ["dingtalk", "feishu"]
+    retry: { max_attempts: 3, delay_seconds: 60 }
+
+  us_market_open:
+    enabled: true
+    hour: 21
+    minute: 30
+    day_of_week: "mon-fri"
+    description: "美股开盘播报"
+    push_to: ["dingtalk", "feishu"]
+    retry: { max_attempts: 3, delay_seconds: 120 }
+
+data_sources:
+  weather:
+    city: "杭州"
+  arxiv:
+    categories: ["cs.AI", "cs.LG", "cs.CL", "cs.CV"]
+    max_results: 15
+    min_score: 2
+  crypto:
+    alert_threshold: 5

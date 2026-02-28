@@ -1,0 +1,5 @@
+请生成美股开盘播报。执行：
+
+1. exec python3 /root/workspace/skills/situation-report/sitrep.py markets
+
+生成开盘播报：三大指数表现、重点科技股（AAPL/MSFT/GOOGL/NVDA/TSLA）涨跌幅、盘前要闻、市场情绪分析、今日关注点。

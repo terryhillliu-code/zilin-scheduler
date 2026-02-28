@@ -1,0 +1,13 @@
+请执行系统巡检：
+
+1. exec docker ps --format '{{.Names}}\t{{.Status}}'
+2. exec df -h /
+3. exec launchctl list | grep zhiwei
+
+生成巡检报告，要求：
+- 不要使用表格，全部用列表格式
+- Docker 容器状态（健康/异常）
+- 磁盘使用率（>80% 才告警）
+- 关键服务状态
+- 总体健康评分（满分100）
+- 只有真正发现异常时才使用 🚨，正常情况用 ✅

@@ -1,0 +1,5 @@
+请生成美股收盘复盘。执行：
+
+1. exec python3 /root/workspace/skills/situation-report/sitrep.py markets
+
+生成收盘复盘：三大指数收盘表现、涨跌幅最大个股、盘后重要消息、下一交易日展望。

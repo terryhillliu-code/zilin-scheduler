@@ -1,0 +1,13 @@
+请生成今日全球要闻简报。执行以下命令获取数据：
+
+1. exec python3 /root/workspace/skills/situation-report/sitrep.py full
+2. exec python3 /root/workspace/skills/situation-report/sitrep.py news --topic ai --limit 10
+3. exec python3 /root/workspace/skills/daily-brief/brief.py weather --city 杭州
+
+筛选规则：
+- 排除繁体中文、台湾/港澳本地政治新闻、纯广告软文
+- 英文新闻保留原标题，摘要用中文写
+- 加入杭州天气信息
+- 加密货币数据合并在早报中展示
+
+按完整格式输出，包含：杭州天气、重点新闻（分科技/财经/政策）、加密货币行情表格及趋势分析、趋势深度分析、综合研判。

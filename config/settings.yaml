@@ -29,7 +29,7 @@ jobs:
     minute: 0
     day_of_week: "mon-sun"
     description: "系统巡检"
-    push_to: ["dingtalk"]
+    push_to: ["dingtalk", "feishu"]
     retry: { max_attempts: 2, delay_seconds: 30 }
 
   arxiv_papers:

@@ -32,10 +32,19 @@ jobs:
     push_to: ["dingtalk", "feishu"]
     retry: { max_attempts: 2, delay_seconds: 30 }
 
+  system_metrics:
+    enabled: true
+    hour: 10
+    minute: 35
+    day_of_week: "mon-sun"
+    description: "运维指标报告"
+    push_to: ["dingtalk"]
+    retry: { max_attempts: 2, delay_seconds: 30 }
+
   arxiv_papers:
     enabled: true
     hour: 7
-    minute: 30
+    minute: 0
     day_of_week: "mon-sun"
     description: "arXiv 论文精选"
     push_to: ["dingtalk", "feishu"]
@@ -44,7 +53,7 @@ jobs:
   us_market_close:
     enabled: true
     hour: 8
-    minute: 30
+    minute: 0
     day_of_week: "tue-sat"
     description: "美股收盘复盘"
     push_to: ["dingtalk", "feishu"]
@@ -53,7 +62,7 @@ jobs:
   morning_brief:
     enabled: true
     hour: 9
-    minute: 30
+    minute: 0
     day_of_week: "mon-sun"
     description: "每日早报"
     push_to: ["dingtalk", "feishu"]
@@ -62,7 +71,7 @@ jobs:
   noon_brief:
     enabled: true
     hour: 14
-    minute: 30
+    minute: 0
     day_of_week: "mon-sun"
     description: "每日午报"
     push_to: ["dingtalk", "feishu"]
@@ -80,11 +89,27 @@ jobs:
   us_market_open:
     enabled: true
     hour: 21
-    minute: 30
+    minute: 0
     day_of_week: "mon-fri"
     description: "美股开盘播报"
     push_to: ["dingtalk", "feishu"]
     retry: { max_attempts: 3, delay_seconds: 120 }
+
+  log_rotate:
+    enabled: true
+    hour: 3
+    minute: 0
+    day_of_week: "mon-sun"
+    description: "日志滚动（10MB/5版本）"
+    push_to: []
+
+  knowledge_classify:
+    enabled: true
+    hour: 23
+    minute: 0
+    day_of_week: "mon-sun"
+    description: "知识管线分类"
+    push_to: []
 
 data_sources:
   weather:

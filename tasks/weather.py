@@ -10,14 +10,21 @@ from datetime import datetime
 
 logger = logging.getLogger("zhiwei-scheduler")
 
+# Fallback 消息
+FALLBACK_MESSAGE = "今日天气数据暂不可用，请参考窗外实际情况"
 
-def fetch_weather(city: str = "杭州") -> dict:
+
+def fetch_weather(city: str = "杭州", timeout: int = 5) -> dict:
     """
     获取天气数据
     返回: {"city": "杭州", "temp": "25°C", "condition": "晴", "humidity": "60%", ...}
+
+    Args:
+        city: 城市名称
+        timeout: 请求超时时间（秒）
     """
     try:
-        conn = http.client.HTTPSConnection("wttr.in")
+        conn = http.client.HTTPSConnection("wttr.in", timeout=timeout)
         # 使用中文格式
         conn.request("GET", f"/{city}?format=j1", headers={"Accept-Language": "zh"})
         resp = conn.getresponse()
@@ -52,13 +59,25 @@ def fetch_weather(city: str = "杭州") -> dict:
         logger.info(f"✅ 天气获取成功: {city} {result['temp']} {result['condition']}")
         return result
 
+    except http.client.HTTPException as e:
+        logger.error(f"❌ 天气获取失败 (HTTP): {e}")
+        return {"city": city, "error": str(e), "fallback": FALLBACK_MESSAGE}
+    except TimeoutError as e:
+        logger.error(f"❌ 天气获取超时: {e}")
+        return {"city": city, "error": "timeout", "fallback": FALLBACK_MESSAGE}
+    except json.JSONDecodeError as e:
+        logger.error(f"❌ 天气数据解析失败: {e}")
+        return {"city": city, "error": "parse_error", "fallback": FALLBACK_MESSAGE}
     except Exception as e:
         logger.error(f"❌ 天气获取失败: {e}")
-        return {"city": city, "error": str(e)}
+        return {"city": city, "error": str(e), "fallback": FALLBACK_MESSAGE}
 
 
 def format_weather_markdown(data: dict, brief: bool = False) -> str:
     """格式化天气为 Markdown"""
+    if "fallback" in data:
+        return f"⚠️ {data['fallback']}"
+
     if "error" in data:
         return f"⚠️ 天气获取失败: {data['error']}"
 

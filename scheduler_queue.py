@@ -76,24 +76,29 @@ def claim_file(source: Path, dest_dir: Path):
         return None
 
 
-def try_push(file_path: Path, push_manager, logger=None) -> bool:
+def try_push(file_path: Path, push_manager, logger=None, return_status: bool = False):
     """
     尝试推送单个 artifact（并发安全）
+
+    Args:
+        return_status: 如果为 True，返回包含各渠道状态的字典
     """
     # Step 1: 原子领取到 processing
     processing_path = claim_file(file_path, PROCESSING)
     if processing_path is None:
-        return False
-    
+        return False if not return_status else {}
+
+    push_results = {}  # 记录各渠道推送结果
+
     try:
         # Step 2: 读取并推送
         data = json.loads(processing_path.read_text())
         content = data["content"]
-        
+
         # 提取标题（取第一行或前20字符）
         title = content.split('\n')[0][:50] if content else data["task"]
         title = title.lstrip('#').strip()
-        
+
         errors = {}
         for target in data["push_targets"]:
             try:
@@ -101,19 +106,26 @@ def try_push(file_path: Path, push_manager, logger=None) -> bool:
                     result = push_manager.pushers["dingtalk"].send_markdown(title, content)
                     if result.get("errcode") != 0:
                         errors[target] = str(result)
+                        push_results[target] = False
+                    else:
+                        push_results[target] = True
                 elif target == "feishu":
                     result = push_manager.pushers["feishu"].send_markdown(title, content)
                     if result.get("code") != 0:
                         errors[target] = str(result)
+                        push_results[target] = False
+                    else:
+                        push_results[target] = True
             except Exception as e:
                 errors[target] = str(e)
-        
+                push_results[target] = False
+
         # Step 3: 根据结果移动文件
         if not errors:
             processing_path.rename(SENT / processing_path.name)
             if logger:
                 logger.info(f"✅ 推送成功: {data['job_id']}")
-            return True
+            return True if not return_status else push_results
         else:
             data["retries"] = data.get("retries", 0) + 1
             data["last_error"] = errors
@@ -121,8 +133,8 @@ def try_push(file_path: Path, push_manager, logger=None) -> bool:
             processing_path.unlink(missing_ok=True)
             if logger:
                 logger.warning(f"❌ 推送失败: {data['job_id']}, 错误: {errors}")
-            return False
-            
+            return False if not return_status else push_results
+
     except Exception as e:
         # 异常处理
         try:
@@ -131,7 +143,7 @@ def try_push(file_path: Path, push_manager, logger=None) -> bool:
             pass
         if logger:
             logger.error(f"❌ 推送异常: {e}")
-        return False
+        return False if not return_status else {}
 
 
 def retry_failed(push_manager, max_retries: int = 3, logger=None):

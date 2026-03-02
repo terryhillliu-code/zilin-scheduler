@@ -41,11 +41,113 @@ CONTAINER = "clawdbot"
 # ============ 指数退避重试配置 ============
 RETRY_DELAYS = [600, 1200, 2400]  # 10min, 20min, 40min
 
+# JSONL 日志路径
+JSON_LOG_PATH = Path.home() / "logs" / "scheduler.jsonl"
+
+
 def get_retry_delay(attempt: int) -> int:
     """获取指数退避延迟"""
     if attempt <= len(RETRY_DELAYS):
         return RETRY_DELAYS[attempt - 1]
     return RETRY_DELAYS[-1]  # 最大40分钟
+
+
+# ============ 结构化 JSONL 日志 ============
+
+def log_task_metrics(
+    task_name: str,
+    start_time: float,
+    end_time: float,
+    success: bool,
+    push_status: dict = None,
+    token_usage: dict = None,
+    error_msg: str = None
+):
+    """
+    将任务指标写入 JSONL 日志
+    """
+    import json
+
+    log_entry = {
+        "task_name": task_name,
+        "start_time": datetime.fromtimestamp(start_time).isoformat(),
+        "end_time": datetime.fromtimestamp(end_time).isoformat(),
+        "latency_seconds": round(end_time - start_time, 2),
+        "success": success,
+        "push_status": push_status or {},
+        "token_usage": token_usage or {},
+        "error_msg": error_msg
+    }
+
+    JSON_LOG_PATH.parent.mkdir(parents=True, exist_ok=True)
+
+    with open(JSON_LOG_PATH, "a", encoding="utf-8") as f:
+        f.write(json.dumps(log_entry, ensure_ascii=False) + "\n")
+
+    logger.debug(f"📊 任务指标已记录: {task_name}")
+
+    # T-016.3: 如果任务失败，发送告警
+    if not success:
+        send_failure_alert(task_name, error_msg)
+
+
+# ============ 任务失败告警 (T-016.3) ============
+
+def send_failure_alert(task_name: str, error_msg: str = None):
+    """
+    发送任务失败告警到钉钉/飞书
+    """
+    try:
+        current_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+
+        # 截取错误信息
+        error_summary = "未知异常"
+        if error_msg:
+            error_summary = str(error_msg)[:100]
+            if len(str(error_msg)) > 100:
+                error_summary += "..."
+
+        # 构建告警消息
+        alert_content = f"""## 🚨 系统任务执行异常 (Immediate Alert)
+
+**任务名称**: {task_name}
+
+**发生时间**: {current_time}
+
+**异常摘要**:
+```
+{error_summary}
+```
+
+**建议**: 请查看 ~/logs/scheduler.jsonl 获取详细堆栈信息。
+"""
+
+        # 保存告警到临时文件
+        alert_dir = BASE_DIR / "outputs"
+        alert_dir.mkdir(exist_ok=True)
+        alert_file = alert_dir / f"alert_{task_name}_{datetime.now().strftime('%Y%m%d_%H%M%S')}.md"
+
+        with open(alert_file, "w", encoding="utf-8") as f:
+            f.write(alert_content)
+
+        # 推送到钉钉（紧急告警使用钉钉）
+        channels = ["dingtalk"]
+        file_path = save_result(
+            task=f"alert_{task_name}",
+            content=alert_content,
+            targets=channels,
+            metadata={"type": "alert", "level": "critical"}
+        )
+
+        # 立即推送
+        success = try_push(file_path, push_manager, logger, return_status=True)
+        if success and success.get("dingtalk"):
+            logger.info(f"✅ 告警已发送: {task_name}")
+        else:
+            logger.warning(f"⚠️ 告警发送失败: {task_name}")
+
+    except Exception as e:
+        logger.error(f"❌ 告警发送异常: {e}")
 
 
 # ============ 日志 ============
@@ -55,7 +157,7 @@ def setup_logging(log_dir: str = "logs", retention_days: int = 30):
     log_path.mkdir(exist_ok=True)
 
     logger = logging.getLogger("zhiwei-scheduler")
-    logger.setLevel(logging.INFO)
+    logger.setLevel(logging.DEBUG)
 
     console = logging.StreamHandler()
     console.setFormatter(logging.Formatter(
@@ -137,16 +239,214 @@ def call_agent(agent_id: str, message: str, timeout: int = 180) -> tuple[bool, s
     return False, "Agent 调用失败，请检查 Docker 或网络连接"
 
 
+
+# ============ RAG 上下文获取 (T-017) ============
+
+# 任务名称到关键词的映射表
+KLIB_ENRICHMENT = {
+    "arxiv_papers": ["芯片架构", "HBM", "CoWoS", "MoE", "分布式训练"],
+    "morning_brief": ["半导体", "封装", "推理加速"],
+    "noon_brief": ["AI", "大模型", "GPU"],
+}
+
+
+# ============ A/B 测试配置 (T-019) ============
+# 使用方式：在 AB_TESTS 中添加测试条目，然后手动运行 run_ab_test('test_id')
+# 示例：
+# AB_TESTS = {
+#     "morning_v2_test": {
+#         "task_name": "morning_brief",
+#         "prompt_a": "morning_brief",
+#         "prompt_b": "morning_brief_v2",
+#         "agent": "researcher",
+#         "timeout": 240,
+#         "push_to": ["dingtalk"],
+#     },
+# }
+AB_TESTS = {}
+
+
+def run_ab_test(test_id: str):
+    """
+    运行 A/B 测试：用两个 prompt 版本各调用一次 agent，
+    将结果并排推送给用户对比。
+    """
+    if test_id not in AB_TESTS:
+        logger.warning(f"A/B 测试 [{test_id}] 不存在，可用测试: {list(AB_TESTS.keys())}")
+        return
+
+    config = AB_TESTS[test_id]
+    task_name = config["task_name"]
+    agent = config.get("agent", "researcher")
+    timeout = config.get("timeout", 240)
+    push_to = config.get("push_to", ["dingtalk"])
+
+    now = datetime.now()
+    date_str = now.strftime('%Y年%m月%d日 %A')
+    results = {}
+
+    for version_key in ["prompt_a", "prompt_b"]:
+        template_name = config[version_key]
+        label = "A" if version_key == "prompt_a" else "B"
+
+        try:
+            # 加载 prompt 模板
+            prompt_kwargs = {"date": date_str}
+            # 根据任务类型添加额外参数
+            if "arxiv" in template_name:
+                prompt_kwargs = {"categories": "cs.AI,cs.LG,cs.CL,cs.CV", "min_score": 2, "limit": 10}
+            elif "noon" in template_name:
+                prompt_kwargs = {"time": now.strftime('%m月%d日 %H:%M')}
+            elif "crypto" in template_name:
+                prompt_kwargs = {"period": "morning"}
+
+            prompt = load_prompt(template_name, **prompt_kwargs)
+            prompt = enrich_with_klib(task_name, prompt)
+
+            ok, content = call_agent(agent, prompt, timeout=timeout)
+
+            if ok:
+                results[label] = content
+            else:
+                results[label] = f"[调用失败] {content}"
+
+        except Exception as e:
+            results[label] = f"[异常] {str(e)}"
+
+    # 组装对比报告
+    report = f"## 📊 A/B 测试报告 [{test_id}]\n\n"
+    report += f"- **时间**: {now.strftime('%Y-%m-%d %H:%M')}\n"
+    report += f"- **任务**: {task_name}\n"
+    report += f"- **Prompt A**: {config['prompt_a']}\n"
+    report += f"- **Prompt B**: {config['prompt_b']}\n\n"
+    report += "---\n\n"
+    report += "### 【版本 A】\n\n"
+    report += results.get("A", "[无结果]") + "\n\n"
+    report += "---\n\n"
+    report += "### 【版本 B】\n\n"
+    report += results.get("B", "[无结果]") + "\n"
+
+    # 保存并推送对比报告
+    try:
+        file_path = save_result(
+            task=f"ab_test_{test_id}",
+            content=report,
+            targets=push_to,
+            metadata={"prompt_a": config["prompt_a"], "prompt_b": config["prompt_b"]}
+        )
+        success = try_push(file_path, push_manager, logger, return_status=True)
+        logger.info(f"✅ A/B 测试 [{test_id}] 已推送")
+    except Exception as e:
+        logger.error(f"❌ A/B 测试推送失败 [{test_id}]: {e}")
+
+    # 记录到 jsonl
+    log_task_metrics(
+        task_name=f"ab_test_{test_id}",
+        success=all(not v.startswith("[") for v in results.values()),
+        latency_seconds=0,
+        token_usage={}
+    )
+
+
+def enrich_with_klib(task_name: str, prompt_text: str) -> str:
+    """
+    使用本地知识库增强 prompt (T-017)
+    根据任务名称查询相关关键词，将结果注入 prompt
+    """
+    if task_name not in KLIB_ENRICHMENT:
+        return prompt_text
+
+    try:
+        keywords = KLIB_ENRICHMENT[task_name]
+        results = []
+
+        for kw in keywords:
+            cmd = [
+                "docker", "exec", "clawdbot", "python3",
+                "/root/workspace/skills/knowledge-search/search.py",
+                "keyword", "--query", kw, "--top_k", "2"
+            ]
+            output = subprocess.run(
+                cmd, capture_output=True, text=True, timeout=30
+            )
+            if output.returncode == 0 and output.stdout.strip():
+                stdout = output.stdout.strip()
+                # 过滤无效结果：包含"未找到"或结果过短（仅状态提示）
+                if "未找到" not in stdout and len(stdout) > 50:
+                    results.append(stdout)
+
+        if not results:
+            return prompt_text
+
+        enrichment = "\n---\n[本地知识库参考]\n以下是用户知识库中与本次主题相关的内容，请在分析中适当引用：\n" + "\n".join(results) + "\n---\n"
+        logger.info(f"✅ 已注入知识库上下文 (task: {task_name}, keywords: {keywords})")
+        return prompt_text + enrichment
+
+    except Exception as e:
+        logger.warning(f"⚠️ 知识库增强失败 ({task_name}): {e}")
+        return prompt_text
+
+
+def fetch_rag_context(query: str, top_k: int = 2) -> str:
+    """
+    从本地知识库获取相关背景知识
+    """
+    import subprocess
+
+    cmd = [
+        "docker", "exec", "clawdbot",
+        "python3", "/root/workspace/skills/knowledge-search/search.py",
+        "vector", "--query", query, "--top_k", str(top_k)
+    ]
+
+    try:
+        result = subprocess.run(cmd, capture_output=True, text=True, timeout=30)
+
+        if result.returncode != 0:
+            logger.warning(f"RAG 查询失败: {result.stderr.strip()}")
+            return ""
+
+        output = result.stdout
+        # 解析输出，提取相关片段
+        lines = output.split('\n')
+        context_parts = []
+        capture = False
+
+        for line in lines:
+            if line.startswith('[1]') or line.startswith('[2]'):
+                capture = True
+                context_parts.append(line)
+            elif capture and line.strip():
+                context_parts.append(line)
+            elif line.strip() == '':
+                capture = False
+
+        return '\n'.join(context_parts[:6])  # 限制上下文长度
+
+    except subprocess.TimeoutExpired:
+        logger.warning("RAG 查询超时")
+        return ""
+    except Exception as e:
+        logger.warning(f"RAG 上下文获取异常: {e}")
+        return ""
+
+
 # ============ 任务定义 ============
 
 def job_morning_brief():
     """每日早报 09:30"""
     logger.info("📰 === 每日早报 ===")
-    
+    task_name = "morning_brief"
+    start_time = time.time()
+    push_status = {"dingtalk": False, "feishu": False}
+
     def _run():
         now = datetime.now()
         # Phase 2: 从文件加载 Prompt
         prompt = load_prompt("morning_brief", date=now.strftime('%Y年%m月%d日 %A'))
+
+        # ============ RAG 增强 (T-017) ============
+        prompt = enrich_with_klib("morning_brief", prompt)
 
         ok, content = call_agent("researcher", prompt, timeout=240)
         if not ok:
@@ -154,7 +454,7 @@ def job_morning_brief():
 
         save_output("morning_brief", content)
         channels = config["jobs"]["morning_brief"].get("push_to", ["dingtalk", "feishu"])
-        
+
         file_path = save_result(
             task="morning_brief",
             content=content,
@@ -162,14 +462,25 @@ def job_morning_brief():
             metadata={"agent": "researcher"}
         )
         logger.info(f"📦 结果已保存: {file_path}")
-        
-        success = try_push(file_path, push_manager, logger)
+
+        success = try_push(file_path, push_manager, logger, return_status=True)
+        push_status.update(success or {})
         if not success:
             logger.warning("推送失败，已进入重试队列")
         else:
             logger.info("✅ 早报推送完成")
 
-    _run()
+    try:
+        _run()
+    finally:
+        end_time = time.time()
+        log_task_metrics(
+            task_name=task_name,
+            start_time=start_time,
+            end_time=end_time,
+            success=push_status.get("dingtalk") or push_status.get("feishu"),
+            push_status=push_status
+        )
 
 
 def job_noon_brief():
@@ -180,6 +491,9 @@ def job_noon_brief():
         now = datetime.now()
         # Phase 2: 从文件加载 Prompt
         prompt = load_prompt("noon_brief", time=now.strftime('%m月%d日 %H:%M'))
+
+        # ============ RAG 增强 (T-017) ============
+        prompt = enrich_with_klib("noon_brief", prompt)
 
         ok, content = call_agent("researcher", prompt, timeout=180)
         if not ok:
@@ -308,15 +622,21 @@ def job_crypto(period: str = "morning"):
 def job_arxiv():
     """arXiv 论文追踪 10:30"""
     logger.info("📄 === arXiv 论文精选 ===")
-    
+    task_name = "arxiv_papers"
+    start_time = time.time()
+    push_status = {"dingtalk": False, "feishu": False}
+
     def _run():
         ds = config.get("data_sources", {}).get("arxiv", {})
         categories = ",".join(ds.get("categories", ["cs.AI", "cs.LG"]))
         min_score = ds.get("min_score", 2)
         limit = ds.get("max_results", 10)
-        
+
         # Phase 2: 从文件加载 Prompt
         prompt = load_prompt("arxiv", categories=categories, min_score=min_score, limit=limit)
+
+        # ============ RAG 增强 (T-017) - enrich_with_klib ============
+        prompt = enrich_with_klib("arxiv_papers", prompt)
 
         ok, content = call_agent("researcher", prompt, timeout=240)
         if not ok:
@@ -324,7 +644,7 @@ def job_arxiv():
 
         save_output("arxiv", content)
         channels = config["jobs"]["arxiv_papers"].get("push_to", ["dingtalk", "feishu"])
-        
+
         file_path = save_result(
             task="arxiv_papers",
             content=content,
@@ -332,14 +652,25 @@ def job_arxiv():
             metadata={"agent": "researcher"}
         )
         logger.info(f"📦 结果已保存: {file_path}")
-        
-        success = try_push(file_path, push_manager, logger)
+
+        success = try_push(file_path, push_manager, logger, return_status=True)
+        push_status.update(success or {})
         if not success:
             logger.warning("推送失败，已进入重试队列")
         else:
             logger.info("✅ arXiv 论文推送完成")
 
-    _run()
+    try:
+        _run()
+    finally:
+        end_time = time.time()
+        log_task_metrics(
+            task_name=task_name,
+            start_time=start_time,
+            end_time=end_time,
+            success=push_status.get("dingtalk") or push_status.get("feishu"),
+            push_status=push_status
+        )
 
 
 def job_system_check():
@@ -380,7 +711,114 @@ def job_system_check():
     _run()
 
 
-# ============ 工具函数 ============
+# ============ 运维报告 (T-016.2) ============
+
+def job_system_metrics_report():
+    """每日运维指标报告 10:35"""
+    logger.info("📊 === 运维指标报告 ===")
+    task_name = "system_metrics"
+    start_time = time.time()
+    push_status = {"dingtalk": False, "feishu": False}
+
+    def _run():
+        # 调用 analyze_metrics.py 获取数据
+        import subprocess
+
+        try:
+            result = subprocess.run(
+                ["python3", str(Path.home() / "scripts" / "analyze_metrics.py"), "--hours", "24"],
+                capture_output=True,
+                text=True,
+                timeout=30,
+                cwd=str(BASE_DIR)
+            )
+
+            if result.returncode != 0:
+                logger.warning(f"⚠️ 指标分析失败: {result.stderr}")
+                report_content = "⚠️ 运维指标报告生成失败，请检查日志。"
+            else:
+                report_content = result.stdout
+
+        except subprocess.TimeoutExpired:
+            logger.warning("⚠️ 指标分析超时")
+            report_content = "⚠️ 运维指标报告生成超时。"
+        except Exception as e:
+            logger.warning(f"⚠️ 指标分析异常: {e}")
+            report_content = "⚠️ 运维指标报告生成异常。"
+
+        # 保存输出
+        save_output("system_metrics", report_content)
+
+        # 推送（仅推送到钉钉，避免打扰）
+        channels = config["jobs"]["system_metrics"].get("push_to", ["dingtalk"])
+
+        file_path = save_result(
+            task="system_metrics",
+            content=report_content,
+            targets=channels,
+            metadata={"type": "metrics", "period": "24h"}
+        )
+        logger.info(f"📦 结果已保存: {file_path}")
+
+        success = try_push(file_path, push_manager, logger, return_status=True)
+        push_status.update(success or {})
+        if not success:
+            logger.warning("推送失败，已进入重试队列")
+        else:
+            logger.info("✅ 运维指标报告推送完成")
+
+    try:
+        _run()
+    finally:
+        end_time = time.time()
+        log_task_metrics(
+            task_name=task_name,
+            start_time=start_time,
+            end_time=end_time,
+            success=push_status.get("dingtalk") or push_status.get("feishu"),
+            push_status=push_status
+        )
+
+
+# ============ 测试用故障注入任务 (T-016.3) ============
+
+def job_fail_test():
+    """T-016.3 测试用 - 故意抛异常验证告警"""
+    logger.info("🧪 === 故障注入测试 ===")
+
+    # 故意抛出异常
+    raise Exception("T-016.3 模拟任务执行失败 - 这是一条测试异常")
+
+
+def job_log_rotate():
+    """T-016.5 日志滚动任务"""
+    logger.info("📦 === 日志滚动 ===")
+    import subprocess
+    script = Path.home() / "scripts" / "rotate_logs.sh"
+    result = subprocess.run(["bash", str(script)], capture_output=True, text=True)
+    logger.info(f"📦 日志滚动结果:\n{result.stdout}")
+    if result.returncode != 0:
+        logger.error(f"📦 日志滚动失败: {result.stderr}")
+
+
+def job_knowledge_classify():
+    """T-076 知识管线分类任务"""
+    logger.info("📚 === 知识分类 ===")
+    import subprocess
+    script = BASE_DIR / "knowledge_pipeline.py"
+    if not script.exists():
+        logger.warning("📚 knowledge_pipeline.py 不存在，跳过")
+        return
+
+    result = subprocess.run(
+        ["python3", str(script)],
+        capture_output=True, text=True, timeout=300
+    )
+    if result.returncode == 0:
+        logger.info(f"📚 知识分类完成:\n{result.stdout}")
+    else:
+        logger.error(f"📚 知识分类失败: {result.stderr}")
+
 
 def save_output(job_name: str, content: str):
     output_dir = BASE_DIR / config.get("system", {}).get("output_dir", "outputs")
@@ -471,6 +909,10 @@ def main():
         "crypto_evening":  lambda: job_crypto("evening"),
         "arxiv_papers":    job_arxiv,
         "system_check":    job_system_check,
+        "system_metrics":  job_system_metrics_report,  # T-016.2
+        "fail_test":       job_fail_test,  # T-016.3 (test only)
+        "log_rotate":      job_log_rotate,  # T-016.5
+        "knowledge_classify": job_knowledge_classify,  # T-076
     }
 
     for job_name, job_conf in config.get("jobs", {}).items():
@@ -541,8 +983,10 @@ def main():
     def listener(event):
         if event.exception:
             logger.error(f"❌ 任务异常: {event.job_id}")
-            # 提取原始 job_id（去掉 retry 后缀）
+            # T-016.3: 发送告警
             original_job_id = event.job_id.rsplit('_retry_', 1)[0]
+            error_msg = str(event.exception)[:200]
+            send_failure_alert(original_job_id, f"任务执行异常: {error_msg}")
             # 安排重试
             schedule_retry(original_job_id)
         else:

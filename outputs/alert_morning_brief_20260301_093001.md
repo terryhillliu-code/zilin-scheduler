@@ -1,0 +1,12 @@
+## 🚨 系统任务执行异常 (Immediate Alert)
+
+**任务名称**: morning_brief
+
+**发生时间**: 2026-03-01 09:30:01
+
+**异常摘要**:
+```
+任务执行异常: Agent 执行失败: Agent 调用失败，请检查 Docker 或网络连接
+```
+
+**建议**: 请查看 ~/logs/scheduler.jsonl 获取详细堆栈信息。

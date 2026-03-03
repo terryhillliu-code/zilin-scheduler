@@ -156,6 +156,14 @@ class DevCoordinator:
             # === 7. 解析执行计划 ===
             plan = self._parse_plan(analysis["result"])
 
+            # 确保 plan 有必需的字段
+            if not isinstance(plan, dict) or "action" not in plan:
+                print(f"⚠️ 解析计划失败，使用默认计划: {plan}")
+                plan = {
+                    "action": "direct_execute",
+                    "content": analysis["result"]
+                }
+
             # === 8. 执行任务 ===
             if plan["action"] == "direct_execute":
                 # 简单任务，直接执行
@@ -179,6 +187,7 @@ class DevCoordinator:
                     "result": exec_result.get("result", exec_result.get("error", ""))[:500]
                 })
 
+            # 验证multi_step计划的有效性
             elif plan["action"] == "multi_step":
                 # 多步骤执行
                 for i, step in enumerate(plan.get("steps", []), 1):

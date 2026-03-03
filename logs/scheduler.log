@@ -1,3 +1,6 @@
 2026-03-04 00:00:01,192 [INFO] 重试任务开始，队列状态: {'pending': 0, 'processing': 0, 'sent_today': 0, 'sent_total': 22, 'failed': 1}
 2026-03-04 00:00:01,194 [INFO] 重试完成: 重新入队 0 个, 成功推送 0 个
 2026-03-04 00:00:01,194 [INFO] 当前队列状态: {'pending': 0, 'processing': 0, 'sent_today': 0, 'sent_total': 22, 'failed': 1}
+2026-03-04 01:00:01,499 [INFO] 重试任务开始，队列状态: {'pending': 0, 'processing': 0, 'sent_today': 0, 'sent_total': 22, 'failed': 1}
+2026-03-04 01:00:01,502 [INFO] 重试完成: 重新入队 0 个, 成功推送 0 个
+2026-03-04 01:00:01,502 [INFO] 当前队列状态: {'pending': 0, 'processing': 0, 'sent_today': 0, 'sent_total': 22, 'failed': 1}

@@ -585,6 +585,12 @@ def job_info_brief(hour: int):
         if not ok:
             raise Exception(f"Agent 执行失败: {content}")
 
+        # 检查是否所有数据源都失败
+        if "EXEC_ALL_FAILED" in content:
+            logger.warning("⚠️ 所有数据源获取失败，跳过本次推送")
+            save_output(task_name, content)
+            return
+
         # ============ 新闻去重检查 ============
         # 检查是否有新内容（至少2条新的）
         if "NO_NEW_CONTENT" in content:

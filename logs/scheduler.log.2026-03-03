@@ -401,3 +401,185 @@ Run time of job "美股开盘播报 (trigger: cron[day_of_week='mon-fri', hour='
 2026-03-03 23:00:05,903 [INFO] 📚 知识分类完成:
 
 2026-03-03 23:00:05,904 [INFO] ✅ 任务完成: knowledge_classify
+03:00:00 [INFO] 📦 === 日志滚动 ===
+2026-03-04 03:00:00,218 [INFO] 📦 === 日志滚动 ===
+03:00:00 [INFO] ✅ 任务完成: cleanup
+2026-03-04 03:00:00,230 [INFO] ✅ 任务完成: cleanup
+2026-03-04 03:00:00,291 [INFO] 📦 === 日志滚动 ===
+2026-03-04 03:00:00,298 [INFO] ✅ 任务完成: cleanup
+03:00:00 [INFO] 📦 日志滚动结果:
+=== 2026-03-04 03:00:00 日志滚动检查 ===
+  ✓ /Users/liufang/logs/backup.log (1MB) 无需滚动
+  ✓ /Users/liufang/logs/cleanup.log (1MB) 无需滚动
+  ✓ /Users/liufang/logs/connection_monitor.log (1MB) 无需滚动
+  ✓ /Users/liufang/logs/crypto-push.log (1MB) 无需滚动
+  ✓ /Users/liufang/logs/daily-report.log (1MB) 无需滚动
+  ✓ /Users/liufang/logs/executor_stderr.log (1MB) 无需滚动
+  ✓ /Users/liufang/logs/executor_stdout.log (0MB) 无需滚动
+  ✓ /Users/liufang/logs/feishu-gateway.error.log (1MB) 无需滚动
+  ✓ /Users/liufang/logs/feishu-gateway.log (1MB) 无需滚动
+  ✓ /Users/liufang/logs/health_check.log (1MB) 无需滚动
+  ✓ /Users/liufang/logs/knowledge_pipeline.log (1MB) 无需滚动
+  ✓ /Users/liufang/logs/market-am-error.log (1MB) 无需滚动
+  ✓ /Users/liufang/logs/market-pm-error.log (1MB) 无需滚动
+  ✓ /Users/liufang/logs/news-push.log (1MB) 无需滚动
+  ✓ /Users/liufang/logs/orchestrator.log (1MB) 无需滚动
+  ✓ /Users/liufang/logs/retry.log (1MB) 无需滚动
+  ✓ /Users/liufang/logs/task_executor.log (1MB) 无需滚动
+  ✓ /Users/liufang/logs/task_orchestrator.log (0MB) 无需滚动
+  ✓ /Users/liufang/logs/watchdog.log (1MB) 无需滚动
+  ✓ /Users/liufang/logs/weekly.log (1MB) 无需滚动
+  ✓ /Users/liufang/logs/zhiwei-bot.error.log (1MB) 无需滚动
+  ✓ /Users/liufang/logs/zhiwei-bot.log (1MB) 无需滚动
+  ✓ /Users/liufang/logs/zhiwei-scheduler.error.log (1MB) 无需滚动
+  ✓ /Users/liufang/logs/zhiwei-scheduler.log (0MB) 无需滚动
+  ✓ /Users/liufang/logs/dev_tasks.jsonl (1MB) 无需滚动
+  ✓ /Users/liufang/logs/doc_archive_log.jsonl (1MB) 无需滚动
+  ✓ /Users/liufang/logs/llm_usage.jsonl (1MB) 无需滚动
+  ✓ /Users/liufang/logs/scheduler.jsonl (1MB) 无需滚动
+=== 日志滚动完成 ===
+
+2026-03-04 03:00:00,319 [INFO] 📦 日志滚动结果:
+=== 2026-03-04 03:00:00 日志滚动检查 ===
+  ✓ /Users/liufang/logs/backup.log (1MB) 无需滚动
+  ✓ /Users/liufang/logs/cleanup.log (1MB) 无需滚动
+  ✓ /Users/liufang/logs/connection_monitor.log (1MB) 无需滚动
+  ✓ /Users/liufang/logs/crypto-push.log (1MB) 无需滚动
+  ✓ /Users/liufang/logs/daily-report.log (1MB) 无需滚动
+  ✓ /Users/liufang/logs/executor_stderr.log (1MB) 无需滚动
+  ✓ /Users/liufang/logs/executor_stdout.log (0MB) 无需滚动
+  ✓ /Users/liufang/logs/feishu-gateway.error.log (1MB) 无需滚动
+  ✓ /Users/liufang/logs/feishu-gateway.log (1MB) 无需滚动
+  ✓ /Users/liufang/logs/health_check.log (1MB) 无需滚动
+  ✓ /Users/liufang/logs/knowledge_pipeline.log (1MB) 无需滚动
+  ✓ /Users/liufang/logs/market-am-error.log (1MB) 无需滚动
+  ✓ /Users/liufang/logs/market-pm-error.log (1MB) 无需滚动
+  ✓ /Users/liufang/logs/news-push.log (1MB) 无需滚动
+  ✓ /Users/liufang/logs/orchestrator.log (1MB) 无需滚动
+  ✓ /Users/liufang/logs/retry.log (1MB) 无需滚动
+  ✓ /Users/liufang/logs/task_executor.log (1MB) 无需滚动
+  ✓ /Users/liufang/logs/task_orchestrator.log (0MB) 无需滚动
+  ✓ /Users/liufang/logs/watchdog.log (1MB) 无需滚动
+  ✓ /Users/liufang/logs/weekly.log (1MB) 无需滚动
+  ✓ /Users/liufang/logs/zhiwei-bot.error.log (1MB) 无需滚动
+  ✓ /Users/liufang/logs/zhiwei-bot.log (1MB) 无需滚动
+  ✓ /Users/liufang/logs/zhiwei-scheduler.error.log (1MB) 无需滚动
+  ✓ /Users/liufang/logs/zhiwei-scheduler.log (0MB) 无需滚动
+  ✓ /Users/liufang/logs/dev_tasks.jsonl (1MB) 无需滚动
+  ✓ /Users/liufang/logs/doc_archive_log.jsonl (1MB) 无需滚动
+  ✓ /Users/liufang/logs/llm_usage.jsonl (1MB) 无需滚动
+  ✓ /Users/liufang/logs/scheduler.jsonl (1MB) 无需滚动
+=== 日志滚动完成 ===
+
+03:00:00 [INFO] ✅ 任务完成: log_rotate
+2026-03-04 03:00:00,320 [INFO] ✅ 任务完成: log_rotate
+2026-03-04 03:00:00,387 [INFO] 📦 日志滚动结果:
+=== 2026-03-04 03:00:00 日志滚动检查 ===
+  ✓ /Users/liufang/logs/backup.log (1MB) 无需滚动
+  ✓ /Users/liufang/logs/cleanup.log (1MB) 无需滚动
+  ✓ /Users/liufang/logs/connection_monitor.log (1MB) 无需滚动
+  ✓ /Users/liufang/logs/crypto-push.log (1MB) 无需滚动
+  ✓ /Users/liufang/logs/daily-report.log (1MB) 无需滚动
+  ✓ /Users/liufang/logs/executor_stderr.log (1MB) 无需滚动
+  ✓ /Users/liufang/logs/executor_stdout.log (0MB) 无需滚动
+  ✓ /Users/liufang/logs/feishu-gateway.error.log (1MB) 无需滚动
+  ✓ /Users/liufang/logs/feishu-gateway.log (1MB) 无需滚动
+  ✓ /Users/liufang/logs/health_check.log (1MB) 无需滚动
+  ✓ /Users/liufang/logs/knowledge_pipeline.log (1MB) 无需滚动
+  ✓ /Users/liufang/logs/market-am-error.log (1MB) 无需滚动
+  ✓ /Users/liufang/logs/market-pm-error.log (1MB) 无需滚动
+  ✓ /Users/liufang/logs/news-push.log (1MB) 无需滚动
+  ✓ /Users/liufang/logs/orchestrator.log (1MB) 无需滚动
+  ✓ /Users/liufang/logs/retry.log (1MB) 无需滚动
+  ✓ /Users/liufang/logs/task_executor.log (1MB) 无需滚动
+  ✓ /Users/liufang/logs/task_orchestrator.log (0MB) 无需滚动
+  ✓ /Users/liufang/logs/watchdog.log (1MB) 无需滚动
+  ✓ /Users/liufang/logs/weekly.log (1MB) 无需滚动
+  ✓ /Users/liufang/logs/zhiwei-bot.error.log (1MB) 无需滚动
+  ✓ /Users/liufang/logs/zhiwei-bot.log (1MB) 无需滚动
+  ✓ /Users/liufang/logs/zhiwei-scheduler.error.log (1MB) 无需滚动
+  ✓ /Users/liufang/logs/zhiwei-scheduler.log (0MB) 无需滚动
+  ✓ /Users/liufang/logs/dev_tasks.jsonl (1MB) 无需滚动
+  ✓ /Users/liufang/logs/doc_archive_log.jsonl (1MB) 无需滚动
+  ✓ /Users/liufang/logs/llm_usage.jsonl (1MB) 无需滚动
+  ✓ /Users/liufang/logs/scheduler.jsonl (1MB) 无需滚动
+=== 日志滚动完成 ===
+
+2026-03-04 03:00:00,388 [INFO] ✅ 任务完成: log_rotate
+07:00:00 [INFO] 📄 === arXiv 论文精选 ===
+07:00:00 [INFO] 📰 === 信息流简报 07:00 ===
+07:00:00 [INFO] 🔧 === 系统巡检 ===
+2026-03-04 07:00:00,018 [INFO] 📄 === arXiv 论文精选 ===
+2026-03-04 07:00:00,019 [INFO] 📰 === 信息流简报 07:00 ===
+2026-03-04 07:00:00,019 [INFO] 🔧 === 系统巡检 ===
+2026-03-04 07:00:00,134 [INFO] 📄 === arXiv 论文精选 ===
+2026-03-04 07:00:00,135 [INFO] 📰 === 信息流简报 07:00 ===
+2026-03-04 07:00:00,135 [INFO] 🔧 === 系统巡检 ===
+07:01:28 [INFO] 📋 新闻无变化，跳过推送
+2026-03-04 07:01:28,150 [INFO] 📋 新闻无变化，跳过推送
+07:01:28 [INFO] 💾 输出已保存: info_brief_07_2026-03-04.md
+2026-03-04 07:01:28,152 [INFO] 💾 输出已保存: info_brief_07_2026-03-04.md
+07:01:28 [DEBUG] 📊 任务指标已记录: info_brief_07
+2026-03-04 07:01:28,152 [DEBUG] 📊 任务指标已记录: info_brief_07
+07:01:30 [INFO] ✅ 钉钉推送成功: 🚨 系统任务执行异常 (Immediate Alert)
+2026-03-04 07:01:30,342 [INFO] ✅ 钉钉推送成功: 🚨 系统任务执行异常 (Immediate Alert)
+07:01:30 [INFO] ✅ 推送成功: alert_info_brief_07:2026-03-04
+2026-03-04 07:01:30,343 [INFO] ✅ 推送成功: alert_info_brief_07:2026-03-04
+07:01:30 [INFO] ✅ 告警已发送: info_brief_07
+2026-03-04 07:01:30,343 [INFO] ✅ 告警已发送: info_brief_07
+07:01:30 [INFO] ✅ 任务完成: info_brief_07
+2026-03-04 07:01:30,343 [INFO] ✅ 任务完成: info_brief_07
+07:01:34 [INFO] 💾 输出已保存: system_check_2026-03-04.md
+2026-03-04 07:01:34,506 [INFO] 💾 输出已保存: system_check_2026-03-04.md
+07:01:34 [INFO] 📦 结果已保存: /Users/liufang/zhiwei-scheduler/outputs/artifacts/pending/system_check_2026-03-04.json
+2026-03-04 07:01:34,507 [INFO] 📦 结果已保存: /Users/liufang/zhiwei-scheduler/outputs/artifacts/pending/system_check_2026-03-04.json
+07:01:36 [INFO] ✅ 钉钉推送成功: Request timed out before a response was generated.
+2026-03-04 07:01:36,110 [INFO] ✅ 钉钉推送成功: Request timed out before a response was generated.
+07:01:39 [INFO] ✅ 飞书推送成功: Request timed out before a response was generated.
+2026-03-04 07:01:39,939 [INFO] ✅ 飞书推送成功: Request timed out before a response was generated.
+07:01:39 [INFO] ✅ 推送成功: system_check:2026-03-04
+2026-03-04 07:01:39,945 [INFO] ✅ 推送成功: system_check:2026-03-04
+07:01:39 [INFO] ✅ 系统巡检完成 ✅
+2026-03-04 07:01:39,945 [INFO] ✅ 系统巡检完成 ✅
+07:01:39 [INFO] ✅ 任务完成: system_check
+2026-03-04 07:01:39,945 [INFO] ✅ 任务完成: system_check
+2026-03-04 07:01:52,046 [INFO] 💾 输出已保存: system_check_2026-03-04.md
+2026-03-04 07:01:52,049 [INFO] 📦 结果已保存: /Users/liufang/zhiwei-scheduler/outputs/artifacts/pending/system_check_2026-03-04.json
+2026-03-04 07:01:53,523 [INFO] ✅ 钉钉推送成功: 📋 系统巡检报告
+2026-03-04 07:01:56,776 [INFO] ✅ 飞书推送成功: 📋 系统巡检报告
+2026-03-04 07:01:56,789 [INFO] ✅ 推送成功: system_check:2026-03-04
+2026-03-04 07:01:56,790 [INFO] ✅ 系统巡检完成 ✅
+2026-03-04 07:01:56,791 [INFO] ✅ 任务完成: system_check
+2026-03-04 07:02:24,658 [INFO] 📋 新闻无变化，跳过推送
+2026-03-04 07:02:24,661 [INFO] 💾 输出已保存: info_brief_07_2026-03-04.md
+2026-03-04 07:02:24,663 [DEBUG] 📊 任务指标已记录: info_brief_07
+2026-03-04 07:02:26,256 [INFO] ✅ 钉钉推送成功: 🚨 系统任务执行异常 (Immediate Alert)
+2026-03-04 07:02:26,262 [INFO] ✅ 推送成功: alert_info_brief_07:2026-03-04
+2026-03-04 07:02:26,263 [INFO] ✅ 告警已发送: info_brief_07
+2026-03-04 07:02:26,263 [INFO] ✅ 任务完成: info_brief_07
+2026-03-04 07:03:38,500 [INFO] 💾 输出已保存: arxiv_2026-03-04.md
+2026-03-04 07:03:38,505 [INFO] 📦 结果已保存: /Users/liufang/zhiwei-scheduler/outputs/artifacts/pending/arxiv_papers_2026-03-04.json
+2026-03-04 07:03:40,149 [INFO] ✅ 钉钉推送成功: 我将为您获取今日 arXiv 论文并生成精选报告。
+2026-03-04 07:03:42,345 [INFO] ✅ 飞书推送成功: 我将为您获取今日 arXiv 论文并生成精选报告。
+2026-03-04 07:03:42,356 [INFO] ✅ 推送成功: arxiv_papers:2026-03-04
+2026-03-04 07:03:42,356 [INFO] ✅ arXiv 论文推送完成
+2026-03-04 07:03:42,359 [DEBUG] 📊 任务指标已记录: arxiv_papers
+2026-03-04 07:03:42,359 [INFO] ✅ 任务完成: arxiv_papers
+07:04:31 [ERROR] ❌ Agent 调用超时
+2026-03-04 07:04:31,336 [ERROR] ❌ Agent 调用超时
+07:07:18 [INFO] 💾 输出已保存: arxiv_2026-03-04.md
+2026-03-04 07:07:18,058 [INFO] 💾 输出已保存: arxiv_2026-03-04.md
+07:07:18 [INFO] 📦 结果已保存: /Users/liufang/zhiwei-scheduler/outputs/artifacts/pending/arxiv_papers_2026-03-04.json
+2026-03-04 07:07:18,060 [INFO] 📦 结果已保存: /Users/liufang/zhiwei-scheduler/outputs/artifacts/pending/arxiv_papers_2026-03-04.json
+07:07:19 [INFO] ✅ 钉钉推送成功: 我将为您获取今日 arXiv 论文并生成精选报告。
+2026-03-04 07:07:19,866 [INFO] ✅ 钉钉推送成功: 我将为您获取今日 arXiv 论文并生成精选报告。
+07:07:21 [INFO] ✅ 飞书推送成功: 我将为您获取今日 arXiv 论文并生成精选报告。
+2026-03-04 07:07:21,862 [INFO] ✅ 飞书推送成功: 我将为您获取今日 arXiv 论文并生成精选报告。
+07:07:21 [INFO] ✅ 推送成功: arxiv_papers:2026-03-04
+2026-03-04 07:07:21,868 [INFO] ✅ 推送成功: arxiv_papers:2026-03-04
+07:07:21 [INFO] ✅ arXiv 论文推送完成
+2026-03-04 07:07:21,868 [INFO] ✅ arXiv 论文推送完成
+07:07:21 [DEBUG] 📊 任务指标已记录: arxiv_papers
+2026-03-04 07:07:21,869 [DEBUG] 📊 任务指标已记录: arxiv_papers
+07:07:21 [INFO] ✅ 任务完成: arxiv_papers
+2026-03-04 07:07:21,870 [INFO] ✅ 任务完成: arxiv_papers

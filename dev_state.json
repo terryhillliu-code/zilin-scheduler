@@ -1,10 +1,17 @@
 {
   "current_task": {
-    "id": "dev_1772556973",
+    "id": "dev_1772581093",
     "description": "创建一个测试文件",
-    "start_time": "2026-03-04T00:56:13.657237"
+    "start_time": "2026-03-04T07:38:13.931093"
   },
   "recent_tasks": [
+    {
+      "id": "dev_1772556973",
+      "description": "创建一个测试文件",
+      "start_time": "2026-03-04T00:56:13.657237",
+      "success": true,
+      "end_time": "2026-03-04T01:05:01.319732"
+    },
     {
       "id": "dev_1772555655",
       "description": "创建一个测试文件",
@@ -13,6 +20,8 @@
       "end_time": "2026-03-04T00:40:04.656350"
     }
   ],
-  "modified_files": [],
-  "last_update": "2026-03-04T00:56:13.657240"
+  "modified_files": [
+    "/Users/liufang/zhiwei-scheduler/logs/scheduler.log"
+  ],
+  "last_update": "2026-03-04T07:38:13.931097"
 }

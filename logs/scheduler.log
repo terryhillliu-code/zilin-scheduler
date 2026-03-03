@@ -4,3 +4,21 @@
 2026-03-04 01:00:01,499 [INFO] 重试任务开始，队列状态: {'pending': 0, 'processing': 0, 'sent_today': 0, 'sent_total': 22, 'failed': 1}
 2026-03-04 01:00:01,502 [INFO] 重试完成: 重新入队 0 个, 成功推送 0 个
 2026-03-04 01:00:01,502 [INFO] 当前队列状态: {'pending': 0, 'processing': 0, 'sent_today': 0, 'sent_total': 22, 'failed': 1}
+2026-03-04 02:00:00,792 [INFO] 重试任务开始，队列状态: {'pending': 0, 'processing': 0, 'sent_today': 0, 'sent_total': 22, 'failed': 1}
+2026-03-04 02:00:00,794 [INFO] 重试完成: 重新入队 0 个, 成功推送 0 个
+2026-03-04 02:00:00,794 [INFO] 当前队列状态: {'pending': 0, 'processing': 0, 'sent_today': 0, 'sent_total': 22, 'failed': 1}
+2026-03-04 03:00:01,567 [INFO] 重试任务开始，队列状态: {'pending': 0, 'processing': 0, 'sent_today': 0, 'sent_total': 22, 'failed': 1}
+2026-03-04 03:00:01,569 [INFO] 重试完成: 重新入队 0 个, 成功推送 0 个
+2026-03-04 03:00:01,569 [INFO] 当前队列状态: {'pending': 0, 'processing': 0, 'sent_today': 0, 'sent_total': 22, 'failed': 1}
+2026-03-04 04:00:01,092 [INFO] 重试任务开始，队列状态: {'pending': 0, 'processing': 0, 'sent_today': 0, 'sent_total': 22, 'failed': 1}
+2026-03-04 04:00:01,094 [INFO] 重试完成: 重新入队 0 个, 成功推送 0 个
+2026-03-04 04:00:01,094 [INFO] 当前队列状态: {'pending': 0, 'processing': 0, 'sent_today': 0, 'sent_total': 22, 'failed': 1}
+2026-03-04 05:00:01,537 [INFO] 重试任务开始，队列状态: {'pending': 0, 'processing': 0, 'sent_today': 0, 'sent_total': 22, 'failed': 1}
+2026-03-04 05:00:01,539 [INFO] 重试完成: 重新入队 0 个, 成功推送 0 个
+2026-03-04 05:00:01,539 [INFO] 当前队列状态: {'pending': 0, 'processing': 0, 'sent_today': 0, 'sent_total': 22, 'failed': 1}
+2026-03-04 06:00:01,270 [INFO] 重试任务开始，队列状态: {'pending': 0, 'processing': 0, 'sent_today': 0, 'sent_total': 22, 'failed': 1}
+2026-03-04 06:00:01,275 [INFO] 重试完成: 重新入队 0 个, 成功推送 0 个
+2026-03-04 06:00:01,275 [INFO] 当前队列状态: {'pending': 0, 'processing': 0, 'sent_today': 0, 'sent_total': 22, 'failed': 1}
+2026-03-04 07:00:04,162 [INFO] 重试任务开始，队列状态: {'pending': 0, 'processing': 0, 'sent_today': 0, 'sent_total': 22, 'failed': 1}
+2026-03-04 07:00:04,181 [INFO] 重试完成: 重新入队 0 个, 成功推送 0 个
+2026-03-04 07:00:04,181 [INFO] 当前队列状态: {'pending': 0, 'processing': 0, 'sent_today': 0, 'sent_total': 22, 'failed': 1}

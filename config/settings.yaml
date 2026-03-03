@@ -59,30 +59,86 @@ jobs:
     push_to: ["dingtalk", "feishu"]
     retry: { max_attempts: 3, delay_seconds: 120 }
 
-  morning_brief:
+  # 每2小时信息流简报（07:00, 09:00, 11:00, 13:00, 15:00, 17:00, 19:00, 21:00）
+  info_brief_07:
+    enabled: true
+    hour: 7
+    minute: 0
+    day_of_week: "mon-sun"
+    description: "信息流简报 07:00"
+    push_to: ["dingtalk", "feishu"]
+    retry: { max_attempts: 3, delay_seconds: 60 }
+
+  info_brief_09:
     enabled: true
     hour: 9
     minute: 0
     day_of_week: "mon-sun"
-    description: "每日早报"
+    description: "信息流简报 09:00"
     push_to: ["dingtalk", "feishu"]
     retry: { max_attempts: 3, delay_seconds: 60 }
 
-  noon_brief:
+  info_brief_11:
     enabled: true
-    hour: 14
+    hour: 11
     minute: 0
     day_of_week: "mon-sun"
-    description: "每日午报"
+    description: "信息流简报 11:00"
     push_to: ["dingtalk", "feishu"]
     retry: { max_attempts: 3, delay_seconds: 60 }
 
-  crypto_evening:
+  info_brief_13:
+    enabled: true
+    hour: 13
+    minute: 0
+    day_of_week: "mon-sun"
+    description: "信息流简报 13:00"
+    push_to: ["dingtalk", "feishu"]
+    retry: { max_attempts: 3, delay_seconds: 60 }
+
+  info_brief_15:
+    enabled: true
+    hour: 15
+    minute: 0
+    day_of_week: "mon-sun"
+    description: "信息流简报 15:00"
+    push_to: ["dingtalk", "feishu"]
+    retry: { max_attempts: 3, delay_seconds: 60 }
+
+  info_brief_17:
+    enabled: true
+    hour: 17
+    minute: 0
+    day_of_week: "mon-sun"
+    description: "信息流简报 17:00"
+    push_to: ["dingtalk", "feishu"]
+    retry: { max_attempts: 3, delay_seconds: 60 }
+
+  info_brief_19:
+    enabled: true
+    hour: 19
+    minute: 0
+    day_of_week: "mon-sun"
+    description: "信息流简报 19:00"
+    push_to: ["dingtalk", "feishu"]
+    retry: { max_attempts: 3, delay_seconds: 60 }
+
+  info_brief_21:
     enabled: true
     hour: 21
     minute: 0
     day_of_week: "mon-sun"
-    description: "加密货币晚报"
+    description: "信息流简报 21:00"
+    push_to: ["dingtalk", "feishu"]
+    retry: { max_attempts: 3, delay_seconds: 60 }
+
+  # 加密货币晚报（保留备用，与 info_brief_21 时段重叠）
+  crypto_evening:
+    enabled: false
+    hour: 21
+    minute: 0
+    day_of_week: "mon-sun"
+    description: "加密货币晚报（已弃用，合并到 info_brief_21）"
     push_to: ["dingtalk", "feishu"]
     retry: { max_attempts: 3, delay_seconds: 60 }
 
@@ -110,6 +166,15 @@ jobs:
     day_of_week: "mon-sun"
     description: "知识管线分类"
     push_to: []
+
+  obsidian_sync:
+    enabled: true
+    hour: 2
+    minute: 0
+    day_of_week: "mon-sun"
+    description: "Obsidian 笔记同步到 ChromaDB"
+    push_to: []
+    retry: { max_attempts: 2, delay_seconds: 30 }
 
 data_sources:
   weather:

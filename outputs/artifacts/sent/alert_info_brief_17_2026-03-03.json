@@ -1,0 +1,15 @@
+{
+  "job_id": "alert_info_brief_17:2026-03-03",
+  "task": "alert_info_brief_17",
+  "content": "## 🚨 系统任务执行异常 (Immediate Alert)\n\n**任务名称**: info_brief_17\n\n**发生时间**: 2026-03-03 17:09:14\n\n**异常摘要**:\n```\n任务执行异常: Agent 执行失败: Agent 调用失败，请检查 Docker 或网络连接\n```\n\n**建议**: 请查看 ~/logs/scheduler.jsonl 获取详细堆栈信息。\n",
+  "push_targets": [
+    "dingtalk"
+  ],
+  "created_at": "2026-03-03T09:09:14.105872+00:00",
+  "retries": 0,
+  "last_error": null,
+  "metadata": {
+    "type": "alert",
+    "level": "critical"
+  }
+}

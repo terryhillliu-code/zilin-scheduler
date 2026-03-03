@@ -29,7 +29,10 @@ TRIGGER_DIR = BASE_DIR / "triggers"
 sys.path.insert(0, str(BASE_DIR))
 
 from pusher import PushManager
-from scheduler_queue import save_result, try_push
+from scheduler_queue import save_result, try_push, save_result_safe
+
+# 新增：新闻去重模块
+from news_dedup import should_push, load_sent_today, get_sent_titles, record_sent, extract_titles_from_content
 
 # 新增：锁管理、缓存、触发器
 from lock_manager import acquire_lock
@@ -39,10 +42,28 @@ import trigger_listener
 CONTAINER = "clawdbot"
 
 # ============ 指数退避重试配置 ============
-RETRY_DELAYS = [600, 1200, 2400]  # 10min, 20min, 40min
+RETRY_DELAYS = [120, 300, 600]  # 2min, 5min, 10min
 
 # JSONL 日志路径
 JSON_LOG_PATH = Path.home() / "logs" / "scheduler.jsonl"
+
+
+def is_quiet_hours(now: datetime = None) -> bool:
+    """
+    检查当前时间是否在静默时段（23:00-06:30）
+    重试任务在静默时段不推送
+    """
+    if now is None:
+        now = datetime.now()
+    hour = now.hour
+    minute = now.minute
+
+    # 23:00-06:30 为静默时段
+    if hour >= 23 or hour < 6:
+        return True
+    if hour == 6 and minute < 30:
+        return True
+    return False
 
 
 def get_retry_delay(attempt: int) -> int:
@@ -187,13 +208,18 @@ def load_prompt(template_name: str, **kwargs) -> str:
     if not path.exists():
         logger.error(f"❌ 找不到 Prompt 模板: {path}")
         return f"Error: Prompt template {template_name} missing."
-    
+
     try:
         content = path.read_text(encoding="utf-8")
         return content.format(**kwargs)
+    except KeyError as e:
+        logger.error(f"❌ Prompt 渲染失败 [{template_name}]: 缺少变量 {e}")
+        # 返回错误信息，包含缺失的变量名
+        return f"Error: Missing variable {e} in template {template_name}."
     except Exception as e:
         logger.error(f"❌ Prompt 渲染失败 [{template_name}]: {e}")
-        return content  # 降级返回原始模板
+        # 返回错误信息而不是原始模板
+        return f"Error: Failed to render template {template_name}: {e}"
 
 # ============ Agent 调用 ============
 
@@ -209,7 +235,7 @@ def call_agent(agent_id: str, message: str, timeout: int = 180) -> tuple[bool, s
         "--json",
         "--timeout", str(timeout)
     ]
-    
+
     # 简单的内部重试，防止网络抖动
     for attempt in range(2):
         try:
@@ -218,7 +244,7 @@ def call_agent(agent_id: str, message: str, timeout: int = 180) -> tuple[bool, s
                 err = result.stderr.strip()[:300]
                 logger.warning(f"⚠️ Agent 调用警告 (第{attempt+1}次): {err}")
                 continue
-            
+
             # 解析 JSON 响应
             data = json.loads(result.stdout)
             if data.get("status") == "ok":
@@ -226,9 +252,9 @@ def call_agent(agent_id: str, message: str, timeout: int = 180) -> tuple[bool, s
                 if payloads:
                     text = payloads[0].get("text", "")
                     return True, text
-            
+
             logger.warning(f"⚠️ Agent 返回异常 (第{attempt+1}次): {result.stdout[:100]}")
-            
+
         except subprocess.TimeoutExpired:
             logger.error(f"❌ Agent 调用超时")
         except json.JSONDecodeError as e:
@@ -236,6 +262,7 @@ def call_agent(agent_id: str, message: str, timeout: int = 180) -> tuple[bool, s
         except Exception as e:
             logger.error(f"❌ Agent 调用异常: {e}")
 
+    logger.error(f"❌ Agent {agent_id} 2次尝试均失败，放弃")
     return False, "Agent 调用失败，请检查 Docker 或网络连接"
 
 
@@ -519,6 +546,100 @@ def job_noon_brief():
     _run()
 
 
+def job_info_brief(hour: int):
+    """信息流简报 (每2小时: 07, 09, 11, 13, 15, 17, 19, 21)"""
+    logger.info(f"📰 === 信息流简报 {hour:02d}:00 ===")
+    task_name = f"info_brief_{hour:02d}"
+    start_time = time.time()
+    push_status = {"dingtalk": False, "feishu": False}
+
+    # 检查是否在静默时段（23:00-06:30）
+    now = datetime.now()
+    if is_quiet_hours(now):
+        logger.info(f"🛑 当前在静默时段（23:00-06:30），跳过推送")
+        return
+
+    def _run():
+        # Phase 2: 从文件加载 Prompt
+        date_str = now.strftime('%Y年%m月%d日 %A')
+        weekday_str = now.strftime('%A')
+        sent_news = get_sent_titles()
+
+        # 天气和加密货币部分由 Agent 在 prompt 中通过 exec 命令生成
+        weather_section = "{weather_section}"
+        crypto_section = "{crypto_section}"
+
+        prompt = load_prompt(
+            "info_brief",
+            date=date_str,
+            weekday=weekday_str,
+            sent_news=sent_news,
+            weather_section=weather_section,
+            crypto_section=crypto_section
+        )
+
+        # ============ RAG 增强 (T-017) ============
+        prompt = enrich_with_klib(task_name, prompt)
+
+        ok, content = call_agent("researcher", prompt, timeout=360)
+        if not ok:
+            raise Exception(f"Agent 执行失败: {content}")
+
+        # ============ 新闻去重检查 ============
+        # 检查是否有新内容（至少2条新的）
+        if "NO_NEW_CONTENT" in content:
+            logger.info(f"📋 无新内容，跳过推送")
+            save_output(task_name, content)
+            return
+
+        # 检查是否应该推送
+        if not should_push(content):
+            logger.info(f"📋 新闻无变化，跳过推送")
+            save_output(task_name, content)
+            return
+
+        save_output(task_name, content)
+        channels = config["jobs"].get(task_name, {}).get("push_to", ["dingtalk", "feishu"])
+
+        file_path = save_result(
+            task=task_name,
+            content=content,
+            targets=channels,
+            metadata={"agent": "researcher", "hour": hour}
+        )
+        logger.info(f"📦 结果已保存: {file_path}")
+
+        success = try_push(file_path, push_manager, logger, return_status=True)
+        push_status.update(success or {})
+
+        if success and (push_status.get("dingtalk") or push_status.get("feishu")):
+            # 记录推送的新闻标题（用于下次去重）
+            titles = extract_titles_from_content(content)
+            if titles:
+                record_sent(titles)
+                logger.info(f"✅ 记录 {len(titles)} 条已推送新闻")
+            logger.info("✅ 信息流简报推送完成")
+        else:
+            logger.warning("推送失败，已进入重试队列")
+
+    error_msg = None
+    try:
+        _run()
+    except Exception as e:
+        error_msg = str(e)
+        logger.error(f"❌ info_brief_{hour:02d} 失败: {error_msg}")
+    finally:
+        end_time = time.time()
+        log_task_metrics(
+            task_name=task_name,
+            start_time=start_time,
+            end_time=end_time,
+            success=push_status.get("dingtalk") or push_status.get("feishu"),
+            push_status=push_status,
+            error_msg=error_msg
+        )
+
+
 def job_us_market_open():
     """美股开盘 21:30（工作日）"""
     logger.info("🔔 === 美股开盘 ===")
@@ -780,6 +901,21 @@ def job_system_metrics_report():
         )
 
 
+def job_obsidian_sync():
+    """Obsidian 笔记同步到 ChromaDB 02:00"""
+    logger.info("🔄 === Obsidian 笔记同步 ===")
+
+    def _run():
+        from obsidian_vectorize import sync_to_chromadb
+
+        # 执行同步
+        sync_to_chromadb()
+
+        logger.info("✅ Obsidian 笔记同步完成")
+
+    _run()
+
+
 # ============ 测试用故障注入任务 (T-016.3) ============
 
 def job_fail_test():
@@ -910,10 +1046,16 @@ def main():
         "arxiv_papers":    job_arxiv,
         "system_check":    job_system_check,
         "system_metrics":  job_system_metrics_report,  # T-016.2
+        "obsidian_sync":   job_obsidian_sync,  # Phase 2: Obsidian 笔记同步
         "fail_test":       job_fail_test,  # T-016.3 (test only)
         "log_rotate":      job_log_rotate,  # T-016.5
         "knowledge_classify": job_knowledge_classify,  # T-076
     }
+
+    # 动态添加 info_brief_XX 任务映射 (07, 09, 11, 13, 15, 17, 19, 21)
+    for hour in [7, 9, 11, 13, 15, 17, 19, 21]:
+        job_name = f"info_brief_{hour:02d}"
+        job_map[job_name] = lambda h=hour: job_info_brief(h)
 
     for job_name, job_conf in config.get("jobs", {}).items():
         if not job_conf.get("enabled", False):
@@ -956,18 +1098,31 @@ def main():
         id="cleanup", name="日志清理"
     )
 
-    # ============ 失败重试机制 (max_retries=3, 10分钟后重试) ============
+    # ============ 失败重试机制 (max_retries=3, 2分钟后首次重试) ============
     MAX_RETRIES = 3
-    RETRY_DELAY_MINUTES = 10
+    RETRY_DELAY_MINUTES = 2  # 首次重试2分钟，后续指数增长
 
     def schedule_retry(job_id: str):
-        """安排重试任务"""
+        """安排重试任务（遵守 quiet_hours）"""
         retry_count = job_retries.get(job_id, 0) + 1
         job_retries[job_id] = retry_count
 
         if retry_count < MAX_RETRIES:
             logger.warning(f"🔄 安排重试 [{job_id}]: {retry_count}/{MAX_RETRIES}")
-            run_time = datetime.now() + timedelta(minutes=RETRY_DELAY_MINUTES)
+
+            # 首次重试用 RETRY_DELAY_MINUTES，后续用 RETRY_DELAYS
+            if retry_count == 1:
+                delay_minutes = RETRY_DELAY_MINUTES
+            else:
+                delay_minutes = get_retry_delay(retry_count) // 60
+
+            # 检查是否在静默时段
+            run_time = datetime.now() + timedelta(minutes=delay_minutes)
+            while is_quiet_hours(run_time):
+                # 跳过静默时段，从 07:00 开始
+                run_time = run_time.replace(hour=7, minute=0, second=0, microsecond=0)
+                run_time += timedelta(days=1)
+
             scheduler.add_job(
                 lambda: scheduler.print_jobs(job_id),  # 重新触发原任务
                 trigger=DateTrigger(run_date=run_time),

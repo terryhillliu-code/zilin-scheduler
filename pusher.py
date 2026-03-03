@@ -11,8 +11,11 @@ import urllib.parse
 import http.client
 import logging
 import smtplib
+import os
+import sys
 from email.mime.text import MIMEText
-from datetime import datetime
+from datetime import datetime, date
+from pathlib import Path
 
 logger = logging.getLogger("zhiwei-scheduler")
 
@@ -158,6 +161,40 @@ class FeishuPusher:
 
             if result.get("code") == 0:
                 logger.info(f"✅ 飞书推送成功: {title}")
+                # 记录飞书 API 调用配额
+                quota_file = Path.home() / "logs" / "feishu_quota.json"
+                try:
+                    if quota_file.exists():
+                        with open(quota_file, "r") as f:
+                            quota_data = json.load(f)
+                    else:
+                        quota_data = {"daily": {}, "monthly": {}, "last_call": None}
+
+                    today = date.today().isoformat()
+                    if today not in quota_data["daily"]:
+                        quota_data["daily"][today] = 0
+                    quota_data["daily"][today] += 1
+
+                    # 只保留最近7天
+                    today_date = date.today()
+                    quota_data["daily"] = {
+                        k: v for k, v in quota_data["daily"].items()
+                        if (today_date - date.fromisoformat(k)).days <= 7
+                    }
+                    quota_data["last_call"] = datetime.now().isoformat()
+
+                    with open(quota_file, "w") as f:
+                        json.dump(quota_data, f, indent=2, ensure_ascii=False)
+
+                    # 检查是否接近限额
+                    if quota_data["daily"][today] >= 240:  # 80% 阈值
+                        from pusher import DingTalkPusher
+                        dt_conf = config.get("push", {}).get("dingtalk", {})
+                        if dt_conf.get("enabled"):
+                            pusher = DingTalkPusher(dt_conf["webhook"], dt_conf["secret"])
+                            pusher.send_text(f"⚠️ 飞书API日用量告警：今日已用 {quota_data['daily'][today]}/300 次")
+                except Exception as e:
+                    logger.debug(f"配额记录失败: {e}")
             else:
                 logger.error(f"❌ 飞书推送失败: {result.get('msg')}")
             return result

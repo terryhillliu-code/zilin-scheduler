@@ -15,13 +15,13 @@ class ClaudeRunner:
 
     MODELS = {
         "architect": "qwen3.5-plus",      # 架构分析，1M 上下文
-        "executor": "qwen3-coder-next",   # 代码执行，最强代码能力
+        "executor": "qwen3-coder-plus",   # 代码执行，最强代码能力
         "researcher": "kimi-k2.5",        # 信息采集，128K 上下文
     }
 
     def __init__(self, role: str = "executor", work_dir: str = None):
         self.role = role
-        self.model = self.MODELS.get(role, "qwen3-coder-next")
+        self.model = self.MODELS.get(role, "qwen3-coder-plus")
         self.work_dir = work_dir or str(Path.home())
         self.log_dir = Path.home() / "logs" / "claude_runner"
         self.log_dir.mkdir(parents=True, exist_ok=True)
@@ -42,77 +42,78 @@ class ClaudeRunner:
                 "result": str,
                 "error": str | None,
                 "usage": dict,
-                "duration_ms": int
+                "duration_ms": int,
+                "context_low": bool  # 新增字段，表示上下文不足
             }
         """
-        cmd = [
-            "claude", "-p", prompt,
-            "--model", self.model,
-            "--output-format", "json"
+        # 使用降级策略调用模型
+        from model_fallback import call_with_fallback
+
+        result = call_with_fallback(
+            primary_model=self.model,
+            message=prompt,
+            timeout=timeout,
+            skip_permissions=skip_permissions,
+            work_dir=self.work_dir
+        )
+
+        # 保持原有的返回结构，同时添加降级信息
+        enhanced_result = {
+            "success": result["success"],
+            "result": result["result"],
+            "error": result["error"],
+            "usage": result["usage"],
+            "duration_ms": result["duration_ms"],
+            "session_id": result.get("session_id", ""),
+            "context_low": self._check_context_low(result["result"]),
+            "model_used": result.get("model_used", self.model),
+            "was_fallback": result.get("was_fallback", False)
+        }
+
+        self._log_run(prompt, enhanced_result)
+        return enhanced_result
+
+    def _check_context_low(self, result_text: str) -> bool:
+        """
+        检测输出中是否包含上下文不足信号
+
+        Args:
+            result_text: Claude 的输出文本
+
+        Returns:
+            bool: 如果检测到上下文不足则返回 True
+        """
+        if not result_text:
+            return False
+
+        # 检查是否存在上下文不足的信号
+        # 如 "Context left until auto-compact: X%" 且 X < 10
+        import re
+        # 匹配 "Context left until auto-compact: X%" 格式，其中 X < 10
+        pattern = r'Context left until auto-compact:\s*(\d+(?:\.\d+)?)%'
+        match = re.search(pattern, result_text)
+
+        if match:
+            percent_left = float(match.group(1))
+            if percent_left < 10:
+                return True
+
+        # 其他上下文不足的相关模式
+        low_context_indicators = [
+            "context limit",
+            "context length exceeded",
+            "out of context",
+            "memory exhausted",
+            "context window",
+            "context capacity"
         ]
 
-        if skip_permissions:
-            cmd.append("--dangerously-skip-permissions")
+        result_lower = result_text.lower()
+        for indicator in low_context_indicators:
+            if indicator in result_lower:
+                return True
 
-        # 清除 CLAUDECODE 环境变量，绕过嵌套会话检测
-        env = os.environ.copy()
-        env.pop("CLAUDECODE", None)
-
-        try:
-            result = subprocess.run(
-                cmd,
-                capture_output=True,
-                text=True,
-                timeout=timeout,
-                cwd=self.work_dir,
-                env=env
-            )
-
-            # 解析 JSON 输出
-            if result.stdout.strip():
-                data = json.loads(result.stdout)
-                self._log_run(prompt, data)
-                return {
-                    "success": not data.get("is_error", False),
-                    "result": data.get("result", ""),
-                    "error": None if not data.get("is_error") else data.get("result"),
-                    "usage": data.get("usage", {}),
-                    "duration_ms": data.get("duration_ms", 0),
-                    "session_id": data.get("session_id", "")
-                }
-            else:
-                return {
-                    "success": False,
-                    "result": "",
-                    "error": result.stderr or "Empty response",
-                    "usage": {},
-                    "duration_ms": 0
-                }
-
-        except subprocess.TimeoutExpired:
-            return {
-                "success": False,
-                "result": "",
-                "error": f"Timeout after {timeout}s",
-                "usage": {},
-                "duration_ms": timeout * 1000
-            }
-        except json.JSONDecodeError as e:
-            return {
-                "success": False,
-                "result": result.stdout if result else "",
-                "error": f"JSON parse error: {e}",
-                "usage": {},
-                "duration_ms": 0
-            }
-        except Exception as e:
-            return {
-                "success": False,
-                "result": "",
-                "error": str(e),
-                "usage": {},
-                "duration_ms": 0
-            }
+        return False
 
     def _log_run(self, prompt: str, data: dict):
         """记录运行日志"""
@@ -120,7 +121,8 @@ class ClaudeRunner:
         log_entry = {
             "timestamp": datetime.now().isoformat(),
             "role": self.role,
-            "model": self.model,
+            "model": data.get("model_used", self.model),
+            "was_fallback": data.get("was_fallback", False),
             "prompt_preview": prompt[:200],
             "success": not data.get("is_error", False),
             "duration_ms": data.get("duration_ms", 0),

@@ -95,8 +95,9 @@ def try_push(file_path: Path, push_manager, logger=None, return_status: bool = F
         data = json.loads(processing_path.read_text())
         content = data["content"]
 
-        # 提取标题（取第一行或前20字符）
-        title = content.split('\n')[0][:50] if content else data["task"]
+        # 提取标题（跳过空行，取第一个非空行的前50字符）
+        lines = [ln for ln in content.split('\n') if ln.strip()]
+        title = lines[0][:50] if lines else data["task"]
         title = title.lstrip('#').strip()
 
         errors = {}

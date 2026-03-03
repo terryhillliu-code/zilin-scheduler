@@ -1,0 +1,403 @@
+2026-03-03 00:00:01,476 [INFO] 重试任务开始，队列状态: {'pending': 0, 'processing': 0, 'sent_today': 0, 'sent_total': 14, 'failed': 1}
+2026-03-03 00:00:01,479 [INFO] 重试完成: 重新入队 0 个, 成功推送 0 个
+2026-03-03 00:00:01,479 [INFO] 当前队列状态: {'pending': 0, 'processing': 0, 'sent_today': 0, 'sent_total': 14, 'failed': 1}
+2026-03-03 01:00:01,322 [INFO] 重试任务开始，队列状态: {'pending': 0, 'processing': 0, 'sent_today': 0, 'sent_total': 14, 'failed': 1}
+2026-03-03 01:00:01,324 [INFO] 重试完成: 重新入队 0 个, 成功推送 0 个
+2026-03-03 01:00:01,324 [INFO] 当前队列状态: {'pending': 0, 'processing': 0, 'sent_today': 0, 'sent_total': 14, 'failed': 1}
+2026-03-03 02:00:00,803 [INFO] 重试任务开始，队列状态: {'pending': 0, 'processing': 0, 'sent_today': 0, 'sent_total': 14, 'failed': 1}
+2026-03-03 02:00:00,805 [INFO] 重试完成: 重新入队 0 个, 成功推送 0 个
+2026-03-03 02:00:00,805 [INFO] 当前队列状态: {'pending': 0, 'processing': 0, 'sent_today': 0, 'sent_total': 14, 'failed': 1}
+2026-03-03 03:00:00,648 [INFO] 重试任务开始，队列状态: {'pending': 0, 'processing': 0, 'sent_today': 0, 'sent_total': 14, 'failed': 1}
+2026-03-03 03:00:00,650 [INFO] 重试完成: 重新入队 0 个, 成功推送 0 个
+2026-03-03 03:00:00,650 [INFO] 当前队列状态: {'pending': 0, 'processing': 0, 'sent_today': 0, 'sent_total': 14, 'failed': 1}
+2026-03-03 04:00:01,616 [INFO] 重试任务开始，队列状态: {'pending': 0, 'processing': 0, 'sent_today': 0, 'sent_total': 14, 'failed': 1}
+2026-03-03 04:00:01,618 [INFO] 重试完成: 重新入队 0 个, 成功推送 0 个
+2026-03-03 04:00:01,619 [INFO] 当前队列状态: {'pending': 0, 'processing': 0, 'sent_today': 0, 'sent_total': 14, 'failed': 1}
+2026-03-03 05:00:00,624 [INFO] 重试任务开始，队列状态: {'pending': 0, 'processing': 0, 'sent_today': 0, 'sent_total': 14, 'failed': 1}
+2026-03-03 05:00:00,626 [INFO] 重试完成: 重新入队 0 个, 成功推送 0 个
+2026-03-03 05:00:00,626 [INFO] 当前队列状态: {'pending': 0, 'processing': 0, 'sent_today': 0, 'sent_total': 14, 'failed': 1}
+2026-03-03 06:00:00,535 [INFO] 重试任务开始，队列状态: {'pending': 0, 'processing': 0, 'sent_today': 0, 'sent_total': 14, 'failed': 1}
+2026-03-03 06:00:00,536 [INFO] 重试完成: 重新入队 0 个, 成功推送 0 个
+2026-03-03 06:00:00,536 [INFO] 当前队列状态: {'pending': 0, 'processing': 0, 'sent_today': 0, 'sent_total': 14, 'failed': 1}
+2026-03-03 07:00:00,721 [INFO] 重试任务开始，队列状态: {'pending': 0, 'processing': 0, 'sent_today': 0, 'sent_total': 14, 'failed': 1}
+2026-03-03 07:00:00,722 [INFO] 重试完成: 重新入队 0 个, 成功推送 0 个
+2026-03-03 07:00:00,722 [INFO] 当前队列状态: {'pending': 0, 'processing': 0, 'sent_today': 0, 'sent_total': 14, 'failed': 1}
+2026-03-03 08:00:00,809 [INFO] 重试任务开始，队列状态: {'pending': 0, 'processing': 0, 'sent_today': 2, 'sent_total': 16, 'failed': 1}
+2026-03-03 08:00:00,811 [INFO] 重试完成: 重新入队 0 个, 成功推送 0 个
+2026-03-03 08:00:00,811 [INFO] 当前队列状态: {'pending': 0, 'processing': 0, 'sent_today': 2, 'sent_total': 16, 'failed': 1}
+2026-03-03 10:00:00,848 [INFO] 重试任务开始，队列状态: {'pending': 0, 'processing': 0, 'sent_today': 2, 'sent_total': 16, 'failed': 1}
+2026-03-03 10:00:00,850 [INFO] 重试完成: 重新入队 0 个, 成功推送 0 个
+2026-03-03 10:00:00,850 [INFO] 当前队列状态: {'pending': 0, 'processing': 0, 'sent_today': 2, 'sent_total': 16, 'failed': 1}
+2026-03-03 10:48:46,115 [INFO] ==================================================
+2026-03-03 10:48:46,115 [INFO] 🤖 知微定时任务系统 v3.4 启动
+2026-03-03 10:48:46,115 [INFO]    架构: 调度器 → Agent(LLM) → 推送
+2026-03-03 10:48:46,115 [INFO]    特性: Prompt 外部化、重试机制、触发器监听 (v3.4)
+2026-03-03 10:48:46,115 [INFO] ==================================================
+2026-03-03 10:48:46,115 [WARNING] ⚠️ 触发器监听器启动失败: cannot access local variable 'scheduler' where it is not associated with a value
+2026-03-03 10:48:46,115 [WARNING]    主定时任务不受影响
+2026-03-03 10:48:46,116 [INFO]    📅 系统巡检 [07:00 mon-sun]
+2026-03-03 10:48:46,116 [INFO]    📅 运维指标报告 [10:35 mon-sun]
+2026-03-03 10:48:46,116 [INFO]    📅 arXiv 论文精选 [07:00 mon-sun]
+2026-03-03 10:48:46,116 [INFO]    📅 美股收盘复盘 [08:00 tue-sat]
+2026-03-03 10:48:46,117 [INFO]    📅 信息流简报 07:00 [07:00 mon-sun]
+2026-03-03 10:48:46,117 [INFO]    📅 信息流简报 09:00 [09:00 mon-sun]
+2026-03-03 10:48:46,117 [INFO]    📅 信息流简报 11:00 [11:00 mon-sun]
+2026-03-03 10:48:46,117 [INFO]    📅 信息流简报 13:00 [13:00 mon-sun]
+2026-03-03 10:48:46,117 [INFO]    📅 信息流简报 15:00 [15:00 mon-sun]
+2026-03-03 10:48:46,117 [INFO]    📅 信息流简报 17:00 [17:00 mon-sun]
+2026-03-03 10:48:46,117 [INFO]    📅 信息流简报 19:00 [19:00 mon-sun]
+2026-03-03 10:48:46,117 [INFO]    📅 信息流简报 21:00 [21:00 mon-sun]
+2026-03-03 10:48:46,117 [INFO]    📅 美股开盘播报 [21:00 mon-fri]
+2026-03-03 10:48:46,117 [INFO]    📅 日志滚动（10MB/5版本） [03:00 mon-sun]
+2026-03-03 10:48:46,117 [INFO]    📅 知识管线分类 [23:00 mon-sun]
+Traceback (most recent call last):
+  File "/Users/liufang/zhiwei-scheduler/scheduler.py", line 20, in <module>
+    import yaml
+ModuleNotFoundError: No module named 'yaml'
+2026-03-03 10:49:36,485 [INFO] 📛 收到退出信号
+2026-03-03 10:49:36,488 [INFO] 📛 调度器已关闭
+2026-03-03 10:49:37,079 [INFO] ==================================================
+2026-03-03 10:49:37,079 [INFO] 🤖 知微定时任务系统 v3.4 启动
+2026-03-03 10:49:37,080 [INFO]    架构: 调度器 → Agent(LLM) → 推送
+2026-03-03 10:49:37,080 [INFO]    特性: Prompt 外部化、重试机制、触发器监听 (v3.4)
+2026-03-03 10:49:37,080 [INFO] ==================================================
+2026-03-03 10:49:37,080 [WARNING] ⚠️ 触发器监听器启动失败: cannot access local variable 'scheduler' where it is not associated with a value
+2026-03-03 10:49:37,080 [WARNING]    主定时任务不受影响
+2026-03-03 10:49:37,080 [INFO]    📅 系统巡检 [07:00 mon-sun]
+2026-03-03 10:49:37,080 [INFO]    📅 运维指标报告 [10:35 mon-sun]
+2026-03-03 10:49:37,080 [INFO]    📅 arXiv 论文精选 [07:00 mon-sun]
+2026-03-03 10:49:37,080 [INFO]    📅 美股收盘复盘 [08:00 tue-sat]
+2026-03-03 10:49:37,080 [INFO]    📅 信息流简报 07:00 [07:00 mon-sun]
+2026-03-03 10:49:37,080 [INFO]    📅 信息流简报 09:00 [09:00 mon-sun]
+2026-03-03 10:49:37,080 [INFO]    📅 信息流简报 11:00 [11:00 mon-sun]
+2026-03-03 10:49:37,081 [INFO]    📅 信息流简报 13:00 [13:00 mon-sun]
+2026-03-03 10:49:37,081 [INFO]    📅 信息流简报 15:00 [15:00 mon-sun]
+2026-03-03 10:49:37,081 [INFO]    📅 信息流简报 17:00 [17:00 mon-sun]
+2026-03-03 10:49:37,081 [INFO]    📅 信息流简报 19:00 [19:00 mon-sun]
+2026-03-03 10:49:37,081 [INFO]    📅 信息流简报 21:00 [21:00 mon-sun]
+2026-03-03 10:49:37,081 [INFO]    📅 美股开盘播报 [21:00 mon-fri]
+2026-03-03 10:49:37,081 [INFO]    📅 日志滚动（10MB/5版本） [03:00 mon-sun]
+2026-03-03 10:49:37,081 [INFO]    📅 知识管线分类 [23:00 mon-sun]
+Traceback (most recent call last):
+  File "/Users/liufang/zhiwei-scheduler/scheduler.py", line 21, in <module>
+    from apscheduler.schedulers.blocking import BlockingScheduler
+ModuleNotFoundError: No module named 'apscheduler'
+2026-03-03 10:54:10,925 [INFO] 📛 收到退出信号
+2026-03-03 10:54:10,934 [INFO] 📛 调度器已关闭
+2026-03-03 10:54:11,464 [INFO] ==================================================
+2026-03-03 10:54:11,464 [INFO] 🤖 知微定时任务系统 v3.4 启动
+2026-03-03 10:54:11,464 [INFO]    架构: 调度器 → Agent(LLM) → 推送
+2026-03-03 10:54:11,464 [INFO]    特性: Prompt 外部化、重试机制、触发器监听 (v3.4)
+2026-03-03 10:54:11,464 [INFO] ==================================================
+2026-03-03 10:54:11,464 [WARNING] ⚠️ 触发器监听器启动失败: cannot access local variable 'scheduler' where it is not associated with a value
+2026-03-03 10:54:11,464 [WARNING]    主定时任务不受影响
+2026-03-03 10:54:11,464 [INFO]    📅 系统巡检 [07:00 mon-sun]
+2026-03-03 10:54:11,464 [INFO]    📅 运维指标报告 [10:35 mon-sun]
+2026-03-03 10:54:11,464 [INFO]    📅 arXiv 论文精选 [07:00 mon-sun]
+2026-03-03 10:54:11,465 [INFO]    📅 美股收盘复盘 [08:00 tue-sat]
+2026-03-03 10:54:11,465 [INFO]    📅 信息流简报 07:00 [07:00 mon-sun]
+2026-03-03 10:54:11,465 [INFO]    📅 信息流简报 09:00 [09:00 mon-sun]
+2026-03-03 10:54:11,465 [INFO]    📅 信息流简报 11:00 [11:00 mon-sun]
+2026-03-03 10:54:11,465 [INFO]    📅 信息流简报 13:00 [13:00 mon-sun]
+2026-03-03 10:54:11,465 [INFO]    📅 信息流简报 15:00 [15:00 mon-sun]
+2026-03-03 10:54:11,465 [INFO]    📅 信息流简报 17:00 [17:00 mon-sun]
+2026-03-03 10:54:11,465 [INFO]    📅 信息流简报 19:00 [19:00 mon-sun]
+2026-03-03 10:54:11,465 [INFO]    📅 信息流简报 21:00 [21:00 mon-sun]
+2026-03-03 10:54:11,465 [INFO]    📅 美股开盘播报 [21:00 mon-fri]
+2026-03-03 10:54:11,466 [INFO]    📅 日志滚动（10MB/5版本） [03:00 mon-sun]
+2026-03-03 10:54:11,466 [INFO]    📅 知识管线分类 [23:00 mon-sun]
+10:54:13 [INFO] ==================================================
+2026-03-03 10:54:13,113 [INFO] ==================================================
+10:54:13 [INFO] 🤖 知微定时任务系统 v3.4 启动
+2026-03-03 10:54:13,113 [INFO] 🤖 知微定时任务系统 v3.4 启动
+10:54:13 [INFO]    架构: 调度器 → Agent(LLM) → 推送
+2026-03-03 10:54:13,114 [INFO]    架构: 调度器 → Agent(LLM) → 推送
+10:54:13 [INFO]    特性: Prompt 外部化、重试机制、触发器监听 (v3.4)
+2026-03-03 10:54:13,114 [INFO]    特性: Prompt 外部化、重试机制、触发器监听 (v3.4)
+10:54:13 [INFO] ==================================================
+2026-03-03 10:54:13,114 [INFO] ==================================================
+10:54:13 [WARNING] ⚠️ 触发器监听器启动失败: cannot access local variable 'scheduler' where it is not associated with a value
+2026-03-03 10:54:13,114 [WARNING] ⚠️ 触发器监听器启动失败: cannot access local variable 'scheduler' where it is not associated with a value
+10:54:13 [WARNING]    主定时任务不受影响
+2026-03-03 10:54:13,114 [WARNING]    主定时任务不受影响
+10:54:13 [INFO]    📅 系统巡检 [07:00 mon-sun]
+2026-03-03 10:54:13,114 [INFO]    📅 系统巡检 [07:00 mon-sun]
+10:54:13 [INFO]    📅 运维指标报告 [10:35 mon-sun]
+2026-03-03 10:54:13,114 [INFO]    📅 运维指标报告 [10:35 mon-sun]
+10:54:13 [INFO]    📅 arXiv 论文精选 [07:00 mon-sun]
+2026-03-03 10:54:13,114 [INFO]    📅 arXiv 论文精选 [07:00 mon-sun]
+10:54:13 [INFO]    📅 美股收盘复盘 [08:00 tue-sat]
+2026-03-03 10:54:13,114 [INFO]    📅 美股收盘复盘 [08:00 tue-sat]
+10:54:13 [INFO]    📅 信息流简报 07:00 [07:00 mon-sun]
+2026-03-03 10:54:13,114 [INFO]    📅 信息流简报 07:00 [07:00 mon-sun]
+10:54:13 [INFO]    📅 信息流简报 09:00 [09:00 mon-sun]
+2026-03-03 10:54:13,114 [INFO]    📅 信息流简报 09:00 [09:00 mon-sun]
+10:54:13 [INFO]    📅 信息流简报 11:00 [11:00 mon-sun]
+2026-03-03 10:54:13,114 [INFO]    📅 信息流简报 11:00 [11:00 mon-sun]
+10:54:13 [INFO]    📅 信息流简报 13:00 [13:00 mon-sun]
+2026-03-03 10:54:13,114 [INFO]    📅 信息流简报 13:00 [13:00 mon-sun]
+10:54:13 [INFO]    📅 信息流简报 15:00 [15:00 mon-sun]
+2026-03-03 10:54:13,114 [INFO]    📅 信息流简报 15:00 [15:00 mon-sun]
+10:54:13 [INFO]    📅 信息流简报 17:00 [17:00 mon-sun]
+2026-03-03 10:54:13,114 [INFO]    📅 信息流简报 17:00 [17:00 mon-sun]
+10:54:13 [INFO]    📅 信息流简报 19:00 [19:00 mon-sun]
+2026-03-03 10:54:13,114 [INFO]    📅 信息流简报 19:00 [19:00 mon-sun]
+10:54:13 [INFO]    📅 信息流简报 21:00 [21:00 mon-sun]
+2026-03-03 10:54:13,115 [INFO]    📅 信息流简报 21:00 [21:00 mon-sun]
+10:54:13 [INFO]    📅 美股开盘播报 [21:00 mon-fri]
+2026-03-03 10:54:13,115 [INFO]    📅 美股开盘播报 [21:00 mon-fri]
+10:54:13 [INFO]    📅 日志滚动（10MB/5版本） [03:00 mon-sun]
+2026-03-03 10:54:13,115 [INFO]    📅 日志滚动（10MB/5版本） [03:00 mon-sun]
+10:54:13 [INFO]    📅 知识管线分类 [23:00 mon-sun]
+2026-03-03 10:54:13,115 [INFO]    📅 知识管线分类 [23:00 mon-sun]
+11:00:00 [INFO] 📰 === 信息流简报 11:00 ===
+2026-03-03 11:00:00,047 [INFO] 📰 === 信息流简报 11:00 ===
+11:00:00 [ERROR] ❌ 找不到 Prompt 模板: /Users/liufang/zhiwei-scheduler/prompts/info_brief.md
+2026-03-03 11:00:00,048 [ERROR] ❌ 找不到 Prompt 模板: /Users/liufang/zhiwei-scheduler/prompts/info_brief.md
+2026-03-03 11:00:00,052 [INFO] 📰 === 信息流简报 11:00 ===
+2026-03-03 11:00:00,077 [ERROR] ❌ 找不到 Prompt 模板: /Users/liufang/zhiwei-scheduler/prompts/info_brief.md
+2026-03-03 11:00:02,633 [INFO] 重试任务开始，队列状态: {'pending': 0, 'processing': 0, 'sent_today': 3, 'sent_total': 17, 'failed': 2}
+2026-03-03 11:00:06,016 [ERROR] ❌ 钉钉推送失败: {'errcode': 400402, 'errmsg': '错误描述:参数 markdown --》 title 缺失，或者参数格式不正确; 解决方案:请填充上对应参数;参考链接:请参考本接口对应文档查看参数获取方式，或者在https://open.dingtalk.com/document/  搜索对应文档;'}
+2026-03-03 11:00:06,033 [WARNING] ❌ 推送失败: system_metrics:2026-03-03, 错误: {'dingtalk': "{'errcode': 400402, 'errmsg': '错误描述:参数 markdown --》 title 缺失，或者参数格式不正确; 解决方案:请填充上对应参数;参考链接:请参考本接口对应文档查看参数获取方式，或者在https://open.dingtalk.com/document/  搜索对应文档;'}"}
+2026-03-03 11:00:06,035 [INFO] 重试完成: 重新入队 1 个, 成功推送 0 个
+2026-03-03 11:00:06,035 [INFO] 当前队列状态: {'pending': 0, 'processing': 0, 'sent_today': 3, 'sent_total': 17, 'failed': 2}
+2026-03-03 11:00:20,217 [INFO] 📋 新闻无变化，跳过推送
+2026-03-03 11:00:20,218 [INFO] 💾 输出已保存: info_brief_11_2026-03-03.md
+2026-03-03 11:00:20,219 [DEBUG] 📊 任务指标已记录: info_brief_11
+2026-03-03 11:00:22,021 [INFO] ✅ 钉钉推送成功: 🚨 系统任务执行异常 (Immediate Alert)
+2026-03-03 11:00:22,024 [INFO] ✅ 推送成功: alert_info_brief_11:2026-03-03
+2026-03-03 11:00:22,024 [INFO] ✅ 告警已发送: info_brief_11
+2026-03-03 11:00:22,025 [INFO] ✅ 任务完成: info_brief_11
+11:00:33 [INFO] 📋 新闻无变化，跳过推送
+2026-03-03 11:00:33,858 [INFO] 📋 新闻无变化，跳过推送
+11:00:33 [INFO] 💾 输出已保存: info_brief_11_2026-03-03.md
+2026-03-03 11:00:33,863 [INFO] 💾 输出已保存: info_brief_11_2026-03-03.md
+11:00:33 [DEBUG] 📊 任务指标已记录: info_brief_11
+2026-03-03 11:00:33,865 [DEBUG] 📊 任务指标已记录: info_brief_11
+11:00:35 [INFO] ✅ 钉钉推送成功: 🚨 系统任务执行异常 (Immediate Alert)
+2026-03-03 11:00:35,932 [INFO] ✅ 钉钉推送成功: 🚨 系统任务执行异常 (Immediate Alert)
+11:00:35 [INFO] ✅ 推送成功: alert_info_brief_11:2026-03-03
+2026-03-03 11:00:35,935 [INFO] ✅ 推送成功: alert_info_brief_11:2026-03-03
+11:00:35 [INFO] ✅ 告警已发送: info_brief_11
+2026-03-03 11:00:35,935 [INFO] ✅ 告警已发送: info_brief_11
+11:00:35 [INFO] ✅ 任务完成: info_brief_11
+2026-03-03 11:00:35,936 [INFO] ✅ 任务完成: info_brief_11
+2026-03-03 12:00:00,669 [INFO] 重试任务开始，队列状态: {'pending': 0, 'processing': 0, 'sent_today': 4, 'sent_total': 18, 'failed': 2}
+2026-03-03 12:00:06,065 [INFO] ✅ 钉钉推送成功: ==================================================
+2026-03-03 12:00:06,074 [INFO] ✅ 推送成功: system_metrics:2026-03-03
+2026-03-03 12:00:06,077 [INFO] 重试完成: 重新入队 1 个, 成功推送 1 个
+2026-03-03 12:00:06,077 [INFO] 当前队列状态: {'pending': 0, 'processing': 0, 'sent_today': 5, 'sent_total': 19, 'failed': 1}
+13:00:00 [INFO] 📰 === 信息流简报 13:00 ===
+2026-03-03 13:00:00,020 [INFO] 📰 === 信息流简报 13:00 ===
+13:00:00 [ERROR] ❌ Prompt 渲染失败 [info_brief]: 'weekday'
+2026-03-03 13:00:00,027 [ERROR] ❌ Prompt 渲染失败 [info_brief]: 'weekday'
+2026-03-03 13:00:00,090 [INFO] 📰 === 信息流简报 13:00 ===
+2026-03-03 13:00:00,168 [ERROR] ❌ Prompt 渲染失败 [info_brief]: 'weekday'
+2026-03-03 13:00:01,510 [INFO] 重试任务开始，队列状态: {'pending': 0, 'processing': 0, 'sent_today': 5, 'sent_total': 19, 'failed': 1}
+2026-03-03 13:00:01,512 [INFO] 重试完成: 重新入队 0 个, 成功推送 0 个
+2026-03-03 13:00:01,512 [INFO] 当前队列状态: {'pending': 0, 'processing': 0, 'sent_today': 5, 'sent_total': 19, 'failed': 1}
+13:00:55 [INFO] 📋 新闻无变化，跳过推送
+2026-03-03 13:00:55,963 [INFO] 📋 新闻无变化，跳过推送
+13:00:55 [INFO] 💾 输出已保存: info_brief_13_2026-03-03.md
+2026-03-03 13:00:55,964 [INFO] 💾 输出已保存: info_brief_13_2026-03-03.md
+13:00:55 [DEBUG] 📊 任务指标已记录: info_brief_13
+2026-03-03 13:00:55,965 [DEBUG] 📊 任务指标已记录: info_brief_13
+13:01:05 [INFO] ✅ 钉钉推送成功: 🚨 系统任务执行异常 (Immediate Alert)
+2026-03-03 13:01:05,690 [INFO] ✅ 钉钉推送成功: 🚨 系统任务执行异常 (Immediate Alert)
+13:01:05 [INFO] ✅ 推送成功: alert_info_brief_13:2026-03-03
+2026-03-03 13:01:05,698 [INFO] ✅ 推送成功: alert_info_brief_13:2026-03-03
+13:01:05 [INFO] ✅ 告警已发送: info_brief_13
+2026-03-03 13:01:05,698 [INFO] ✅ 告警已发送: info_brief_13
+13:01:05 [INFO] ✅ 任务完成: info_brief_13
+2026-03-03 13:01:05,699 [INFO] ✅ 任务完成: info_brief_13
+2026-03-03 13:01:50,297 [INFO] 📋 新闻无变化，跳过推送
+2026-03-03 13:01:50,299 [INFO] 💾 输出已保存: info_brief_13_2026-03-03.md
+2026-03-03 13:01:50,301 [DEBUG] 📊 任务指标已记录: info_brief_13
+2026-03-03 13:01:52,638 [INFO] ✅ 钉钉推送成功: 🚨 系统任务执行异常 (Immediate Alert)
+2026-03-03 13:01:52,641 [INFO] ✅ 推送成功: alert_info_brief_13:2026-03-03
+2026-03-03 13:01:52,641 [INFO] ✅ 告警已发送: info_brief_13
+2026-03-03 13:01:52,642 [INFO] ✅ 任务完成: info_brief_13
+13:03:18 [INFO] 📛 收到退出信号
+2026-03-03 13:03:18,933 [INFO] 📛 收到退出信号
+13:03:18 [INFO] 📛 调度器已关闭
+2026-03-03 13:03:18,937 [INFO] 📛 调度器已关闭
+2026-03-03 13:03:18,939 [INFO] 📛 收到退出信号
+2026-03-03 13:03:18,954 [INFO] 📛 调度器已关闭
+2026-03-03 13:03:19,548 [INFO] ==================================================
+2026-03-03 13:03:19,548 [INFO] 🤖 知微定时任务系统 v3.4 启动
+2026-03-03 13:03:19,548 [INFO]    架构: 调度器 → Agent(LLM) → 推送
+2026-03-03 13:03:19,548 [INFO]    特性: Prompt 外部化、重试机制、触发器监听 (v3.4)
+2026-03-03 13:03:19,548 [INFO] ==================================================
+2026-03-03 13:03:19,548 [WARNING] ⚠️ 触发器监听器启动失败: cannot access local variable 'scheduler' where it is not associated with a value
+2026-03-03 13:03:19,548 [WARNING]    主定时任务不受影响
+2026-03-03 13:03:19,549 [INFO]    📅 系统巡检 [07:00 mon-sun]
+2026-03-03 13:03:19,550 [INFO]    📅 运维指标报告 [10:35 mon-sun]
+2026-03-03 13:03:19,550 [INFO]    📅 arXiv 论文精选 [07:00 mon-sun]
+2026-03-03 13:03:19,550 [INFO]    📅 美股收盘复盘 [08:00 tue-sat]
+2026-03-03 13:03:19,550 [INFO]    📅 信息流简报 07:00 [07:00 mon-sun]
+2026-03-03 13:03:19,550 [INFO]    📅 信息流简报 09:00 [09:00 mon-sun]
+2026-03-03 13:03:19,550 [INFO]    📅 信息流简报 11:00 [11:00 mon-sun]
+2026-03-03 13:03:19,550 [INFO]    📅 信息流简报 13:00 [13:00 mon-sun]
+2026-03-03 13:03:19,550 [INFO]    📅 信息流简报 15:00 [15:00 mon-sun]
+2026-03-03 13:03:19,550 [INFO]    📅 信息流简报 17:00 [17:00 mon-sun]
+2026-03-03 13:03:19,550 [INFO]    📅 信息流简报 19:00 [19:00 mon-sun]
+2026-03-03 13:03:19,550 [INFO]    📅 信息流简报 21:00 [21:00 mon-sun]
+2026-03-03 13:03:19,550 [INFO]    📅 美股开盘播报 [21:00 mon-fri]
+2026-03-03 13:03:19,551 [INFO]    📅 日志滚动（10MB/5版本） [03:00 mon-sun]
+2026-03-03 13:03:19,551 [INFO]    📅 知识管线分类 [23:00 mon-sun]
+13:03:21 [INFO] ==================================================
+2026-03-03 13:03:21,122 [INFO] ==================================================
+13:03:21 [INFO] 🤖 知微定时任务系统 v3.4 启动
+2026-03-03 13:03:21,122 [INFO] 🤖 知微定时任务系统 v3.4 启动
+13:03:21 [INFO]    架构: 调度器 → Agent(LLM) → 推送
+2026-03-03 13:03:21,122 [INFO]    架构: 调度器 → Agent(LLM) → 推送
+13:03:21 [INFO]    特性: Prompt 外部化、重试机制、触发器监听 (v3.4)
+2026-03-03 13:03:21,122 [INFO]    特性: Prompt 外部化、重试机制、触发器监听 (v3.4)
+13:03:21 [INFO] ==================================================
+2026-03-03 13:03:21,122 [INFO] ==================================================
+13:03:21 [WARNING] ⚠️ 触发器监听器启动失败: cannot access local variable 'scheduler' where it is not associated with a value
+2026-03-03 13:03:21,122 [WARNING] ⚠️ 触发器监听器启动失败: cannot access local variable 'scheduler' where it is not associated with a value
+13:03:21 [WARNING]    主定时任务不受影响
+2026-03-03 13:03:21,122 [WARNING]    主定时任务不受影响
+13:03:21 [INFO]    📅 系统巡检 [07:00 mon-sun]
+2026-03-03 13:03:21,122 [INFO]    📅 系统巡检 [07:00 mon-sun]
+13:03:21 [INFO]    📅 运维指标报告 [10:35 mon-sun]
+2026-03-03 13:03:21,122 [INFO]    📅 运维指标报告 [10:35 mon-sun]
+13:03:21 [INFO]    📅 arXiv 论文精选 [07:00 mon-sun]
+2026-03-03 13:03:21,122 [INFO]    📅 arXiv 论文精选 [07:00 mon-sun]
+13:03:21 [INFO]    📅 美股收盘复盘 [08:00 tue-sat]
+2026-03-03 13:03:21,122 [INFO]    📅 美股收盘复盘 [08:00 tue-sat]
+13:03:21 [INFO]    📅 信息流简报 07:00 [07:00 mon-sun]
+2026-03-03 13:03:21,122 [INFO]    📅 信息流简报 07:00 [07:00 mon-sun]
+13:03:21 [INFO]    📅 信息流简报 09:00 [09:00 mon-sun]
+2026-03-03 13:03:21,122 [INFO]    📅 信息流简报 09:00 [09:00 mon-sun]
+13:03:21 [INFO]    📅 信息流简报 11:00 [11:00 mon-sun]
+2026-03-03 13:03:21,122 [INFO]    📅 信息流简报 11:00 [11:00 mon-sun]
+13:03:21 [INFO]    📅 信息流简报 13:00 [13:00 mon-sun]
+2026-03-03 13:03:21,123 [INFO]    📅 信息流简报 13:00 [13:00 mon-sun]
+13:03:21 [INFO]    📅 信息流简报 15:00 [15:00 mon-sun]
+2026-03-03 13:03:21,123 [INFO]    📅 信息流简报 15:00 [15:00 mon-sun]
+13:03:21 [INFO]    📅 信息流简报 17:00 [17:00 mon-sun]
+2026-03-03 13:03:21,123 [INFO]    📅 信息流简报 17:00 [17:00 mon-sun]
+13:03:21 [INFO]    📅 信息流简报 19:00 [19:00 mon-sun]
+2026-03-03 13:03:21,123 [INFO]    📅 信息流简报 19:00 [19:00 mon-sun]
+13:03:21 [INFO]    📅 信息流简报 21:00 [21:00 mon-sun]
+2026-03-03 13:03:21,123 [INFO]    📅 信息流简报 21:00 [21:00 mon-sun]
+13:03:21 [INFO]    📅 美股开盘播报 [21:00 mon-fri]
+2026-03-03 13:03:21,123 [INFO]    📅 美股开盘播报 [21:00 mon-fri]
+13:03:21 [INFO]    📅 日志滚动（10MB/5版本） [03:00 mon-sun]
+2026-03-03 13:03:21,123 [INFO]    📅 日志滚动（10MB/5版本） [03:00 mon-sun]
+13:03:21 [INFO]    📅 知识管线分类 [23:00 mon-sun]
+2026-03-03 13:03:21,123 [INFO]    📅 知识管线分类 [23:00 mon-sun]
+2026-03-03 14:00:01,253 [INFO] 重试任务开始，队列状态: {'pending': 0, 'processing': 0, 'sent_today': 6, 'sent_total': 20, 'failed': 1}
+2026-03-03 14:00:01,255 [INFO] 重试完成: 重新入队 0 个, 成功推送 0 个
+2026-03-03 14:00:01,255 [INFO] 当前队列状态: {'pending': 0, 'processing': 0, 'sent_today': 6, 'sent_total': 20, 'failed': 1}
+15:00:00 [INFO] 📰 === 信息流简报 15:00 ===
+2026-03-03 15:00:00,147 [INFO] 📰 === 信息流简报 15:00 ===
+2026-03-03 15:00:00,203 [INFO] 📰 === 信息流简报 15:00 ===
+2026-03-03 15:00:01,503 [INFO] 重试任务开始，队列状态: {'pending': 0, 'processing': 0, 'sent_today': 6, 'sent_total': 20, 'failed': 1}
+2026-03-03 15:00:01,507 [INFO] 重试完成: 重新入队 0 个, 成功推送 0 个
+2026-03-03 15:00:01,507 [INFO] 当前队列状态: {'pending': 0, 'processing': 0, 'sent_today': 6, 'sent_total': 20, 'failed': 1}
+2026-03-03 15:04:04,846 [INFO] 📋 新闻无变化，跳过推送
+2026-03-03 15:04:04,849 [INFO] 💾 输出已保存: info_brief_15_2026-03-03.md
+2026-03-03 15:04:04,851 [DEBUG] 📊 任务指标已记录: info_brief_15
+2026-03-03 15:04:15,188 [INFO] ✅ 钉钉推送成功: 🚨 系统任务执行异常 (Immediate Alert)
+2026-03-03 15:04:15,192 [INFO] ✅ 推送成功: alert_info_brief_15:2026-03-03
+2026-03-03 15:04:15,192 [INFO] ✅ 告警已发送: info_brief_15
+2026-03-03 15:04:15,193 [INFO] ✅ 任务完成: info_brief_15
+15:04:30 [ERROR] ❌ Agent 调用超时
+2026-03-03 15:04:30,162 [ERROR] ❌ Agent 调用超时
+15:09:00 [ERROR] ❌ Agent 调用超时
+2026-03-03 15:09:00,188 [ERROR] ❌ Agent 调用超时
+15:09:00 [DEBUG] 📊 任务指标已记录: info_brief_15
+2026-03-03 15:09:00,193 [DEBUG] 📊 任务指标已记录: info_brief_15
+15:09:06 [INFO] ✅ 钉钉推送成功: 🚨 系统任务执行异常 (Immediate Alert)
+2026-03-03 15:09:06,008 [INFO] ✅ 钉钉推送成功: 🚨 系统任务执行异常 (Immediate Alert)
+15:09:06 [INFO] ✅ 推送成功: alert_info_brief_15:2026-03-03
+2026-03-03 15:09:06,010 [INFO] ✅ 推送成功: alert_info_brief_15:2026-03-03
+15:09:06 [INFO] ✅ 告警已发送: info_brief_15
+2026-03-03 15:09:06,010 [INFO] ✅ 告警已发送: info_brief_15
+Job "信息流简报 15:00 (trigger: cron[day_of_week='mon-sun', hour='15', minute='0'], next run at: 2026-03-04 15:00:00 CST)" raised an exception
+Traceback (most recent call last):
+  File "/opt/homebrew/lib/python3.14/site-packages/apscheduler/executors/base.py", line 131, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "/Users/liufang/zhiwei-scheduler/scheduler.py", line 1031, in <lambda>
+    job_map[job_name] = lambda h=hour: job_info_brief(h)
+                                       ~~~~~~~~~~~~~~^^^
+  File "/Users/liufang/zhiwei-scheduler/scheduler.py", line 620, in job_info_brief
+    _run()
+    ~~~~^^
+  File "/Users/liufang/zhiwei-scheduler/scheduler.py", line 580, in _run
+    raise Exception(f"Agent 执行失败: {content}")
+Exception: Agent 执行失败: Agent 调用失败，请检查 Docker 或网络连接
+15:09:06 [ERROR] ❌ 任务异常: info_brief_15
+2026-03-03 15:09:06,021 [ERROR] ❌ 任务异常: info_brief_15
+15:09:11 [INFO] ✅ 钉钉推送成功: 🚨 系统任务执行异常 (Immediate Alert)
+2026-03-03 15:09:11,091 [INFO] ✅ 钉钉推送成功: 🚨 系统任务执行异常 (Immediate Alert)
+15:09:11 [INFO] ✅ 推送成功: alert_info_brief_15:2026-03-03
+2026-03-03 15:09:11,096 [INFO] ✅ 推送成功: alert_info_brief_15:2026-03-03
+15:09:11 [INFO] ✅ 告警已发送: info_brief_15
+2026-03-03 15:09:11,096 [INFO] ✅ 告警已发送: info_brief_15
+15:09:11 [WARNING] 🔄 安排重试 [info_brief_15]: 1/3
+2026-03-03 15:09:11,097 [WARNING] 🔄 安排重试 [info_brief_15]: 1/3
+15:11:11 [INFO] ✅ 任务完成: info_brief_15_retry_1
+2026-03-03 15:11:11,105 [INFO] ✅ 任务完成: info_brief_15_retry_1
+2026-03-03 16:00:00,507 [INFO] 重试任务开始，队列状态: {'pending': 0, 'processing': 0, 'sent_today': 7, 'sent_total': 21, 'failed': 1}
+2026-03-03 16:00:00,508 [INFO] 重试完成: 重新入队 0 个, 成功推送 0 个
+2026-03-03 16:00:00,508 [INFO] 当前队列状态: {'pending': 0, 'processing': 0, 'sent_today': 7, 'sent_total': 21, 'failed': 1}
+17:00:00 [INFO] 📰 === 信息流简报 17:00 ===
+2026-03-03 17:00:00,080 [INFO] 📰 === 信息流简报 17:00 ===
+2026-03-03 17:00:00,165 [INFO] 📰 === 信息流简报 17:00 ===
+2026-03-03 17:00:00,585 [INFO] 重试任务开始，队列状态: {'pending': 0, 'processing': 0, 'sent_today': 7, 'sent_total': 21, 'failed': 1}
+2026-03-03 17:00:00,586 [INFO] 重试完成: 重新入队 0 个, 成功推送 0 个
+2026-03-03 17:00:00,586 [INFO] 当前队列状态: {'pending': 0, 'processing': 0, 'sent_today': 7, 'sent_total': 21, 'failed': 1}
+17:04:04 [INFO] 📋 新闻无变化，跳过推送
+2026-03-03 17:04:04,884 [INFO] 📋 新闻无变化，跳过推送
+17:04:04 [INFO] 💾 输出已保存: info_brief_17_2026-03-03.md
+2026-03-03 17:04:04,895 [INFO] 💾 输出已保存: info_brief_17_2026-03-03.md
+17:04:04 [DEBUG] 📊 任务指标已记录: info_brief_17
+2026-03-03 17:04:04,896 [DEBUG] 📊 任务指标已记录: info_brief_17
+17:04:10 [INFO] ✅ 钉钉推送成功: 🚨 系统任务执行异常 (Immediate Alert)
+2026-03-03 17:04:10,196 [INFO] ✅ 钉钉推送成功: 🚨 系统任务执行异常 (Immediate Alert)
+17:04:10 [INFO] ✅ 推送成功: alert_info_brief_17:2026-03-03
+2026-03-03 17:04:10,205 [INFO] ✅ 推送成功: alert_info_brief_17:2026-03-03
+17:04:10 [INFO] ✅ 告警已发送: info_brief_17
+2026-03-03 17:04:10,205 [INFO] ✅ 告警已发送: info_brief_17
+17:04:10 [INFO] ✅ 任务完成: info_brief_17
+2026-03-03 17:04:10,206 [INFO] ✅ 任务完成: info_brief_17
+2026-03-03 17:04:30,242 [ERROR] ❌ Agent 调用超时
+2026-03-03 17:09:00,307 [ERROR] ❌ Agent 调用超时
+2026-03-03 17:09:00,392 [DEBUG] 📊 任务指标已记录: info_brief_17
+2026-03-03 17:09:14,068 [INFO] ✅ 钉钉推送成功: 🚨 系统任务执行异常 (Immediate Alert)
+2026-03-03 17:09:14,084 [INFO] ✅ 推送成功: alert_info_brief_17:2026-03-03
+2026-03-03 17:09:14,084 [INFO] ✅ 告警已发送: info_brief_17
+2026-03-03 17:09:14,104 [ERROR] ❌ 任务异常: info_brief_17
+2026-03-03 17:09:17,358 [INFO] ✅ 钉钉推送成功: 🚨 系统任务执行异常 (Immediate Alert)
+2026-03-03 17:09:17,362 [INFO] ✅ 推送成功: alert_info_brief_17:2026-03-03
+2026-03-03 17:09:17,362 [INFO] ✅ 告警已发送: info_brief_17
+2026-03-03 17:09:17,362 [WARNING] 🔄 安排重试 [info_brief_17]: 1/3
+2026-03-03 17:11:17,439 [INFO] ✅ 任务完成: info_brief_17_retry_1
+2026-03-03 18:00:00,582 [INFO] 重试任务开始，队列状态: {'pending': 0, 'processing': 0, 'sent_today': 8, 'sent_total': 22, 'failed': 1}
+2026-03-03 18:00:00,584 [INFO] 重试完成: 重新入队 0 个, 成功推送 0 个
+2026-03-03 18:00:00,584 [INFO] 当前队列状态: {'pending': 0, 'processing': 0, 'sent_today': 8, 'sent_total': 22, 'failed': 1}
+2026-03-03 22:00:01,232 [INFO] 重试任务开始，队列状态: {'pending': 0, 'processing': 0, 'sent_today': 8, 'sent_total': 22, 'failed': 1}
+2026-03-03 22:00:01,233 [INFO] 重试完成: 重新入队 0 个, 成功推送 0 个
+2026-03-03 22:00:01,233 [INFO] 当前队列状态: {'pending': 0, 'processing': 0, 'sent_today': 8, 'sent_total': 22, 'failed': 1}
+Run time of job "信息流简报 21:00 (trigger: cron[day_of_week='mon-sun', hour='21', minute='0'], next run at: 2026-03-03 21:00:00 CST)" was missed by 1:42:09.020648
+Run time of job "信息流简报 19:00 (trigger: cron[day_of_week='mon-sun', hour='19', minute='0'], next run at: 2026-03-04 19:00:00 CST)" was missed by 3:42:09.022003
+Run time of job "美股开盘播报 (trigger: cron[day_of_week='mon-fri', hour='21', minute='0'], next run at: 2026-03-04 21:00:00 CST)" was missed by 1:42:09.022761
+23:00:00 [INFO] 📚 === 知识分类 ===
+2026-03-03 23:00:00,014 [INFO] 📚 === 知识分类 ===
+2026-03-03 23:00:00,049 [INFO] 📚 === 知识分类 ===
+23:00:00 [INFO] 📚 知识分类完成:
+
+2026-03-03 23:00:00,128 [INFO] 📚 知识分类完成:
+
+23:00:00 [INFO] ✅ 任务完成: knowledge_classify
+2026-03-03 23:00:00,129 [INFO] ✅ 任务完成: knowledge_classify
+2026-03-03 23:00:00,883 [INFO] 重试任务开始，队列状态: {'pending': 0, 'processing': 0, 'sent_today': 8, 'sent_total': 22, 'failed': 1}
+2026-03-03 23:00:00,885 [INFO] 重试完成: 重新入队 0 个, 成功推送 0 个
+2026-03-03 23:00:00,885 [INFO] 当前队列状态: {'pending': 0, 'processing': 0, 'sent_today': 8, 'sent_total': 22, 'failed': 1}
+2026-03-03 23:00:05,903 [INFO] 📚 知识分类完成:
+
+2026-03-03 23:00:05,904 [INFO] ✅ 任务完成: knowledge_classify

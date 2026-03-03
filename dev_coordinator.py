@@ -13,8 +13,16 @@ import os
 import subprocess
 from pathlib import Path
 from datetime import datetime
+
+# 导入新模块
+import sys
+sys.path.append(str(Path(__file__).parent))
+sys.path.append(str(Path(__file__).parent / "scripts"))
+
 from dev_state import DevLock, DevState, git_auto_commit, git_revert_last
 from claude_runner import ClaudeRunner, run_architect, run_executor
+from smart_prompt import inject_context
+from dev_memory import record as record_memory, search as search_memory
 
 
 class DevCoordinator:
@@ -33,9 +41,21 @@ class DevCoordinator:
         self.context_file = Path.home() / "CONTEXT_RESUME.md"
         self.claude_md = Path.home() / "CLAUDE.md"
 
+        # 会话目录
+        self.session_dir = Path.home() / "zhiwei-scheduler" / "sessions"
+        self.session_dir.mkdir(parents=True, exist_ok=True)
+
+    def _extract_tags(self, task: str) -> list:
+        """从任务描述提取标签"""
+        keywords = ['websocket', 'timeout', 'async', 'obsidian', 'scheduler',
+                    'agent', 'memory', 'feishu', 'dingtalk', 'error', 'fix',
+                    'bug', 'optimization', 'refactor', 'upgrade', 'integration',
+                    'performance', 'stability', 'reliability', 'security']
+        return [k for k in keywords if k.lower() in task.lower()]
+
     def process_task(self, task: str, source: str = "cli") -> dict:
         """
-        处理开发任务（带锁和状态管理）
+        处理开发任务（v27.0 增强版）（带锁和状态管理）
 
         Args:
             task: 任务描述
@@ -44,7 +64,7 @@ class DevCoordinator:
         Returns:
             {
                 "task_id": str,
-                "status": "success" | "failed" | "partial" | "queued",
+                "status": "success" | "failed" | "partial" | "queued" | "context_low",
                 "steps": [...],
                 "summary": str,
                 "duration_ms": int
@@ -78,13 +98,37 @@ class DevCoordinator:
             git_success, git_msg = git_auto_commit(f"[dev] 任务开始前快照: {task_id}")
             print(f"📸 Git 快照: {git_msg}")
 
-            # === 3. 获取上下文注入 ===
+            # === 3. 检索相关经验（新增）===
+            print("🔍 检索相关开发经验...")
+            memories = search_memory(task, top_k=3)
+            if memories:
+                print(f"📚 找到 {len(memories)} 条相关经验")
+                # 记录到步骤日志
+                steps.append({
+                    "step": "memory_search",
+                    "success": True,
+                    "result": f"找到 {len(memories)} 条相关经验",
+                    "details": memories
+                })
+            else:
+                print("📝 未找到相关开发经验")
+                steps.append({
+                    "step": "memory_search",
+                    "success": True,
+                    "result": "未找到相关开发经验"
+                })
+
+            # === 4. 构建增强 Prompt（新增）===
+            print("🔧 构建增强上下文...")
+            enhanced_prompt = inject_context(task)
+
+            # === 5. 获取原始上下文注入 ===
             context_prompt = state.get_context_for_prompt()
 
-            # === 4. 架构师分析 ===
+            # === 6. 架构师分析 ===
             print("🏗️  架构师分析中...")
             architect_prompt = f"""
-{context_prompt}
+{enhanced_prompt}
 
 ## 当前任务
 {task}
@@ -109,18 +153,26 @@ class DevCoordinator:
                 "result": analysis["result"][:500]
             })
 
-            # === 5. 解析执行计划 ===
+            # === 7. 解析执行计划 ===
             plan = self._parse_plan(analysis["result"])
 
-            # === 6. 执行任务 ===
+            # === 8. 执行任务 ===
             if plan["action"] == "direct_execute":
                 # 简单任务，直接执行
                 print("⚙️  执微执行中...")
                 exec_result = self.executor.run(
-                    f"{context_prompt}\n\n任务：{task}\n\n架构师指令：{plan.get('content', '')}",
+                    f"{enhanced_prompt}\n\n任务：{task}\n\n架构师指令：{plan.get('content', '')}",
                     timeout=600,
                     skip_permissions=True
                 )
+
+                # 检查上下文是否不足
+                if exec_result.get("context_low", False):
+                    print("⚠️  检测到执微上下文不足，正在保存进度...")
+                    self._save_session_and_notify(task, steps, task_id)
+                    return self._build_result(task_id, "context_low", steps, start_time,
+                                              "执微上下文不足，已保存进度，请开新窗口继续")
+
                 steps.append({
                     "step": "executor_run",
                     "success": exec_result["success"],
@@ -132,10 +184,18 @@ class DevCoordinator:
                 for i, step in enumerate(plan.get("steps", []), 1):
                     print(f"⚙️  执微执行步骤 {i}/{len(plan.get('steps', []))}...")
                     exec_result = self.executor.run(
-                        f"{context_prompt}\n\n当前步骤：{step}\n\n整体任务：{task}",
+                        f"{enhanced_prompt}\n\n当前步骤：{step}\n\n整体任务：{task}",
                         timeout=600,
                         skip_permissions=True
                     )
+
+                    # 检查上下文是否不足
+                    if exec_result.get("context_low", False):
+                        print(f"⚠️  检测到执微上下文不足，正在保存进度... (执行到第{i}步)")
+                        self._save_session_and_notify(task, steps, task_id, remaining_steps=plan.get("steps", [])[i:])
+                        return self._build_result(task_id, "context_low", steps, start_time,
+                                                  f"执微上下文不足，已保存进度到第{i}步，请开新窗口继续")
+
                     steps.append({
                         "step": f"executor_step_{i}",
                         "content": step,
@@ -145,12 +205,35 @@ class DevCoordinator:
                     if not exec_result["success"]:
                         break
 
-            # === 7. 任务完成 + Git 提交 ===
-            success = all(s["success"] for s in steps)
-
+            # === 9. 任务完成后记录经验（新增）===
+            success = all(s["success"] for s in steps if s["step"] not in ["memory_search"])
             # 收集修改的文件
             modified_files = self._get_modified_files()
 
+            if success:
+                print("✅ 任务成功完成，记录经验...")
+                record_memory(
+                    task=task,
+                    tags=self._extract_tags(task),
+                    problem="",  # 可能需要从结果中提取问题描述
+                    solution="", # 可能需要从结果中提取解决方案
+                    files=modified_files,
+                    status='success'
+                )
+                print("📝 开发经验已记录")
+            else:
+                print("❌ 任务失败，仍记录经验...")
+                record_memory(
+                    task=task,
+                    tags=self._extract_tags(task),
+                    problem="任务执行失败",
+                    solution="需要进一步排查问题",
+                    files=modified_files,
+                    status='failed'
+                )
+                print("📝 开发经验已记录（失败任务）")
+
+            # === 10. 任务完成 + Git 提交 ===
             if success:
                 git_auto_commit(f"[dev] 任务完成: {task_id} - {task[:30]}")
 
@@ -160,6 +243,63 @@ class DevCoordinator:
 
         finally:
             lock.release()
+
+    def _save_session_and_notify(self, task: str, completed_steps: list, task_id: str, remaining_steps: list = None):
+        """
+        保存当前会话并通知用户
+        """
+        # 生成 session 文件
+        timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
+        session_filename = f"session_{timestamp}.md"
+        session_path = self.session_dir / session_filename
+
+        # 收集修改的文件
+        modified_files = self._get_modified_files()
+
+        # 创建会话内容
+        session_content = f"""# 开发任务会话续接 {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}
+
+## 原始任务
+{task}
+
+## 已完成步骤
+{len(completed_steps)} 步骤已完成
+
+{chr(10).join([f"- {step.get('step', 'Step')} - {'✓' if step.get('success', False) else '✗'}" for step in completed_steps])}
+
+## 待续步骤
+{len(remaining_steps) if remaining_steps else 0} 步骤待续
+
+{chr(10).join([f"- {step}" for step in remaining_steps]) if remaining_steps else '无'}
+
+## 已修改文件
+{chr(10).join(['- ' + f for f in modified_files]) if modified_files else '无'}
+
+## 当前时间
+{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}
+
+## 说明
+执微上下文不足，已自动保存当前进度。请新开窗口继续任务。
+"""
+
+        # 写入会话文件
+        with open(session_path, 'w', encoding='utf-8') as f:
+            f.write(session_content)
+
+        print(f"💾 会话已保存至: {session_path}")
+
+        # 发送通知到控制台和日志
+        continuation_message = f"""⚠️ 执微上下文不足，已保存进度，请开新窗口继续
+
+当前会话已保存到: {session_path}
+请打开新窗口并继续处理剩余任务。
+继续命令示例:
+cd ~/zhiwei-scheduler && python3 dev_coordinator.py "{task}"
+"""
+        print(continuation_message)
+
+        # 如果来源是飞书，也需要发送飞书通知（这里只打印，实际实现需要集成飞书推送）
+        print("📝 通知: 执微上下文不足，进度已保存")
 
     def _get_modified_files(self) -> list:
         """获取最近修改的文件"""

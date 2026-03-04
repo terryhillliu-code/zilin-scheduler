@@ -870,12 +870,50 @@ def job_arxiv():
         )
 
 
+def log_health_status():
+    """记录系统健康状况"""
+    global logger
+    try:
+        import psutil
+        import platform
+
+        # 获取系统信息
+        cpu_percent = psutil.cpu_percent(interval=1)
+        memory = psutil.virtual_memory()
+        disk_usage = psutil.disk_usage('/')
+
+        # 获取进程信息
+        current_process = psutil.Process()
+        process_memory = current_process.memory_info().rss / 1024 / 1024  # MB
+
+        health_info = (
+            f"🖥️ 系统健康状况 - "
+            f"CPU: {cpu_percent}%, "
+            f"内存: {memory.percent}%, "
+            f"磁盘: {disk_usage.percent}%, "
+            f"调度器进程内存: {process_memory:.2f}MB"
+        )
+
+        logger.info(f"🏥 系统健康检查: {health_info}")
+
+        # 检查是否有异常值
+        if cpu_percent > 90 or memory.percent > 90 or disk_usage.percent > 90:
+            logger.warning(f"⚠️ 系统资源使用率过高: CPU={cpu_percent}%, 内存={memory.percent}%, 磁盘={disk_usage.percent}%")
+
+    except ImportError:
+        logger.info("🏥 系统健康检查: 未安装psutil模块，无法获取详细系统信息")
+    except Exception as e:
+        logger.error(f"🏥 系统健康检查失败: {e}")
+
+
 def job_system_check():
     """系统巡检 09:00"""
     global logger  # 声明使用全局 logger 变量
     logger.info("🔧 === 系统巡检 ===")
-    
+
     def _run():
+        # 添加系统健康检查日志
+        log_health_status()
         prompt = load_prompt("system_check")
 
         # 系统巡检用 operator Agent，失败则用 main
@@ -1106,6 +1144,9 @@ def main():
     logger.info("   特性: Prompt 外部化、重试机制、触发器监听 (v3.4)")
     logger.info("=" * 50)
 
+    # 记录启动时的健康状态
+    log_health_status()
+
     tz = config.get("system", {}).get("timezone", "Asia/Shanghai")
     scheduler = BlockingScheduler(timezone=tz)
 
@@ -1183,6 +1224,19 @@ def main():
     # ============ 失败重试机制 (max_retries=3, 2分钟后首次重试) ============
     MAX_RETRIES = 3
     RETRY_DELAY_MINUTES = 2  # 首次重试2分钟，后续指数增长
+
+    # 添加定期健康检查
+    def health_check_job():
+        log_health_status()
+
+    # 每小时执行一次健康检查
+    scheduler.add_job(
+        health_check_job,
+        CronTrigger(minute=0, timezone=tz),  # 每小时整点执行
+        id="health_check",
+        name="系统健康检查"
+    )
+    logger.info("   💚 系统健康检查已启用 [每小时]")
 
     def schedule_retry(job_id: str):
         """安排重试任务（遵守 quiet_hours）"""

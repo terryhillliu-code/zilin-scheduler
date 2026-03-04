@@ -1,4 +1,3 @@
-from openclaw_api import OpenClawClient
 #!/usr/bin/env python3
 """
 知微定时任务调度器 v3.4 (2026-03-01 Phase 2)

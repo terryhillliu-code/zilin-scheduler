@@ -1,0 +1,15 @@
+{
+  "job_id": "us_market_open:2026-03-04",
+  "task": "us_market_open",
+  "content": "我将为您获取美股数据并生成开盘播报。",
+  "push_targets": [
+    "dingtalk",
+    "feishu"
+  ],
+  "created_at": "2026-03-04T13:03:04.061990+00:00",
+  "retries": 0,
+  "last_error": null,
+  "metadata": {
+    "agent": "researcher"
+  }
+}

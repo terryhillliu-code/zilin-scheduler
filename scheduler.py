@@ -293,6 +293,7 @@ KLIB_ENRICHMENT = {
     "arxiv_papers": ["芯片架构", "HBM", "CoWoS", "MoE", "分布式训练"],
     "morning_brief": ["半导体", "封装", "推理加速"],
     "noon_brief": ["AI", "大模型", "GPU"],
+    "info_brief": ["全球资讯", "经济动态", "科技前沿", "市场观察"],
 }
 
 
@@ -399,11 +400,16 @@ def enrich_with_klib(task_name: str, prompt_text: str) -> str:
     使用本地知识库增强 prompt (T-017)
     根据任务名称查询相关关键词，将结果注入 prompt
     """
-    if task_name not in KLIB_ENRICHMENT:
+    # 对于 info_brief_XX 类型的任务，使用 info_brief 作为键
+    lookup_key = task_name
+    if task_name.startswith("info_brief_"):
+        lookup_key = "info_brief"
+
+    if lookup_key not in KLIB_ENRICHMENT:
         return prompt_text
 
     try:
-        keywords = KLIB_ENRICHMENT[task_name]
+        keywords = KLIB_ENRICHMENT[lookup_key]
         results = []
 
         for kw in keywords:
@@ -625,7 +631,7 @@ def job_info_brief(hour: int):
         # ============ RAG 增强 (T-017) ============
         prompt = enrich_with_klib(task_name, prompt)
 
-        ok, content = call_agent("researcher", prompt, timeout=360)
+        ok, content = call_agent("researcher", prompt, timeout=600)
         if not ok:
             raise Exception(f"Agent 执行失败: {content}")
 

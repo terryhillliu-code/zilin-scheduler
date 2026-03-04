@@ -17,6 +17,13 @@ import threading
 from datetime import datetime, timedelta
 from pathlib import Path
 
+# 直接初始化 logger（不再是 None）
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+)
+logger = logging.getLogger(__name__)
+
 import yaml
 from apscheduler.schedulers.blocking import BlockingScheduler
 from apscheduler.triggers.cron import CronTrigger
@@ -27,6 +34,10 @@ BASE_DIR = Path(__file__).parent
 PROMPT_DIR = BASE_DIR / "prompts"
 TRIGGER_DIR = BASE_DIR / "triggers"
 sys.path.insert(0, str(BASE_DIR))
+
+# 初始化模块级别的全局变量，防止未定义错误
+config = None
+push_manager = None
 
 from pusher import PushManager
 from scheduler_queue import save_result, try_push, save_result_safe
@@ -105,7 +116,10 @@ def log_task_metrics(
     with open(JSON_LOG_PATH, "a", encoding="utf-8") as f:
         f.write(json.dumps(log_entry, ensure_ascii=False) + "\n")
 
-    logger.debug(f"📊 任务指标已记录: {task_name}")
+    # 安全地记录调试日志
+    global logger
+    if logger:
+        logger.debug(f"📊 任务指标已记录: {task_name}")
 
     # T-016.3: 如果任务失败，发送告警
     if not success:
@@ -118,6 +132,7 @@ def send_failure_alert(task_name: str, error_msg: str = None):
     """
     发送任务失败告警到钉钉/飞书
     """
+    global logger  # 声明使用全局 logger（必须在函数开头）
     try:
         current_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
@@ -163,17 +178,21 @@ def send_failure_alert(task_name: str, error_msg: str = None):
         # 立即推送
         success = try_push(file_path, push_manager, logger, return_status=True)
         if success and success.get("dingtalk"):
-            logger.info(f"✅ 告警已发送: {task_name}")
+            if logger:
+                logger.info(f"✅ 告警已发送: {task_name}")
         else:
-            logger.warning(f"⚠️ 告警发送失败: {task_name}")
+            if logger:
+                logger.warning(f"⚠️ 告警发送失败: {task_name}")
 
     except Exception as e:
-        logger.error(f"❌ 告警发送异常: {e}")
+        if logger:
+            logger.error(f"❌ 告警发送异常: {e}")
 
 
 # ============ 日志 ============
 
 def setup_logging(log_dir: str = "logs", retention_days: int = 30):
+    global logger  # 声明使用全局 logger
     log_path = BASE_DIR / log_dir
     log_path.mkdir(exist_ok=True)
 
@@ -462,7 +481,14 @@ def fetch_rag_context(query: str, top_k: int = 2) -> str:
 
 def job_morning_brief():
     """每日早报 09:30"""
-    logger.info("📰 === 每日早报 ===")
+    global logger, config, push_manager  # 声明使用全局变量
+    if not config or not push_manager:
+        if logger:
+            logger.error(f"❌ 配置未初始化，请先运行主程序")
+        return
+
+    if logger:
+        logger.info("📰 === 每日早报 ===")
     task_name = "morning_brief"
     start_time = time.time()
     push_status = {"dingtalk": False, "feishu": False}
@@ -512,8 +538,15 @@ def job_morning_brief():
 
 def job_noon_brief():
     """每日午报 14:30"""
-    logger.info("🌤 === 每日午报 ===")
-    
+    global logger, config, push_manager  # 声明使用全局变量
+    if not config or not push_manager:
+        if logger:
+            logger.error(f"❌ 配置未初始化，请先运行主程序")
+        return
+
+    if logger:
+        logger.info("🌤 === 每日午报 ===")
+
     def _run():
         now = datetime.now()
         # Phase 2: 从文件加载 Prompt
@@ -528,27 +561,37 @@ def job_noon_brief():
 
         save_output("noon_brief", content)
         channels = config["jobs"]["noon_brief"].get("push_to", ["dingtalk", "feishu"])
-        
+
         file_path = save_result(
             task="noon_brief",
             content=content,
             targets=channels,
             metadata={"agent": "researcher"}
         )
-        logger.info(f"📦 结果已保存: {file_path}")
-        
+        if logger:
+            logger.info(f"📦 结果已保存: {file_path}")
+
         success = try_push(file_path, push_manager, logger)
         if not success:
-            logger.warning("推送失败，已进入重试队列")
+            if logger:
+                logger.warning("推送失败，已进入重试队列")
         else:
-            logger.info("✅ 午报推送完成")
+            if logger:
+                logger.info("✅ 午报推送完成")
 
     _run()
 
 
 def job_info_brief(hour: int):
     """信息流简报 (每2小时: 07, 09, 11, 13, 15, 17, 19, 21)"""
-    logger.info(f"📰 === 信息流简报 {hour:02d}:00 ===")
+    global logger, config, push_manager  # 声明使用全局变量
+    if not config or not push_manager:
+        if logger:
+            logger.error(f"❌ 配置未初始化，请先运行主程序")
+        return
+
+    if logger:
+        logger.info(f"📰 === 信息流简报 {hour:02d}:00 ===")
     task_name = f"info_brief_{hour:02d}"
     start_time = time.time()
     push_status = {"dingtalk": False, "feishu": False}
@@ -556,7 +599,8 @@ def job_info_brief(hour: int):
     # 检查是否在静默时段（23:00-06:30）
     now = datetime.now()
     if is_quiet_hours(now):
-        logger.info(f"🛑 当前在静默时段（23:00-06:30），跳过推送")
+        if logger:
+            logger.info(f"🛑 当前在静默时段（23:00-06:30），跳过推送")
         return
 
     def _run():
@@ -623,17 +667,21 @@ def job_info_brief(hour: int):
             titles = extract_titles_from_content(content)
             if titles:
                 record_sent(titles)
-                logger.info(f"✅ 记录 {len(titles)} 条已推送新闻")
-            logger.info("✅ 信息流简报推送完成")
+                if logger:
+                    logger.info(f"✅ 记录 {len(titles)} 条已推送新闻")
+            if logger:
+                logger.info("✅ 信息流简报推送完成")
         else:
-            logger.warning("推送失败，已进入重试队列")
+            if logger:
+                logger.warning("推送失败，已进入重试队列")
 
     error_msg = None
     try:
         _run()
     except Exception as e:
         error_msg = str(e)
-        logger.error(f"❌ info_brief_{hour:02d} 失败: {error_msg}")
+        if logger:
+            logger.error(f"❌ info_brief_{hour:02d} 失败: {error_msg}")
     finally:
         end_time = time.time()
         log_task_metrics(
@@ -648,7 +696,14 @@ def job_info_brief(hour: int):
 
 def job_us_market_open():
     """美股开盘 21:30（工作日）"""
-    logger.info("🔔 === 美股开盘 ===")
+    global logger, config, push_manager  # 声明使用全局变量
+    if not config or not push_manager:
+        if logger:
+            logger.error(f"❌ 配置未初始化，请先运行主程序")
+        return
+
+    if logger:
+        logger.info("🔔 === 美股开盘 ===")
     
     def _run():
         prompt = load_prompt("us_market_open")
@@ -679,7 +734,14 @@ def job_us_market_open():
 
 def job_us_market_close():
     """美股收盘复盘 07:30（次日推送）"""
-    logger.info("📊 === 美股收盘复盘 ===")
+    global logger, config, push_manager  # 声明使用全局变量
+    if not config or not push_manager:
+        if logger:
+            logger.error(f"❌ 配置未初始化，请先运行主程序")
+        return
+
+    if logger:
+        logger.info("📊 === 美股收盘复盘 ===")
     
     def _run():
         prompt = load_prompt("us_market_close")
@@ -710,8 +772,15 @@ def job_us_market_close():
 
 def job_crypto(period: str = "morning"):
     """加密货币播报 08:00/20:00"""
+    global logger, config, push_manager  # 声明使用全局变量
+    if not config or not push_manager:
+        if logger:
+            logger.error(f"❌ 配置未初始化，请先运行主程序")
+        return
+
     label = "早" if period == "morning" else "晚"
-    logger.info(f"🪙 === 加密货币{label}报 ===")
+    if logger:
+        logger.info(f"🪙 === 加密货币{label}报 ===")
     
     def _run():
         ds = config.get("data_sources", {}).get("crypto", {})
@@ -748,6 +817,7 @@ def job_crypto(period: str = "morning"):
 
 def job_arxiv():
     """arXiv 论文追踪 10:30"""
+    global logger  # 声明使用全局 logger 变量
     logger.info("📄 === arXiv 论文精选 ===")
     task_name = "arxiv_papers"
     start_time = time.time()
@@ -802,6 +872,7 @@ def job_arxiv():
 
 def job_system_check():
     """系统巡检 09:00"""
+    global logger  # 声明使用全局 logger 变量
     logger.info("🔧 === 系统巡检 ===")
     
     def _run():
@@ -842,6 +913,7 @@ def job_system_check():
 
 def job_system_metrics_report():
     """每日运维指标报告 10:35"""
+    global logger  # 声明使用全局 logger 变量
     logger.info("📊 === 运维指标报告 ===")
     task_name = "system_metrics"
     start_time = time.time()
@@ -909,6 +981,7 @@ def job_system_metrics_report():
 
 def job_obsidian_sync():
     """Obsidian 笔记同步到 ChromaDB 02:00"""
+    global logger  # 声明使用全局 logger 变量
     logger.info("🔄 === Obsidian 笔记同步 ===")
 
     def _run():
@@ -926,6 +999,7 @@ def job_obsidian_sync():
 
 def job_fail_test():
     """T-016.3 测试用 - 故意抛异常验证告警"""
+    global logger  # 声明使用全局 logger 变量
     logger.info("🧪 === 故障注入测试 ===")
 
     # 故意抛出异常
@@ -934,6 +1008,7 @@ def job_fail_test():
 
 def job_log_rotate():
     """T-016.5 日志滚动任务"""
+    global logger  # 声明使用全局 logger 变量
     logger.info("📦 === 日志滚动 ===")
     import subprocess
     script = Path.home() / "scripts" / "rotate_logs.sh"
@@ -945,6 +1020,7 @@ def job_log_rotate():
 
 def job_knowledge_classify():
     """T-076 知识管线分类任务"""
+    global logger  # 声明使用全局 logger 变量
     logger.info("📚 === 知识分类 ===")
     import subprocess
     script = BASE_DIR / "knowledge_pipeline.py"
@@ -1030,6 +1106,9 @@ def main():
     logger.info("   特性: Prompt 外部化、重试机制、触发器监听 (v3.4)")
     logger.info("=" * 50)
 
+    tz = config.get("system", {}).get("timezone", "Asia/Shanghai")
+    scheduler = BlockingScheduler(timezone=tz)
+
     # ============ 启动触发器监听器 (隔离保护) ============
     try:
         trigger_listener.init(scheduler, logger)
@@ -1038,9 +1117,6 @@ def main():
     except Exception as e:
         logger.warning(f"⚠️ 触发器监听器启动失败: {e}")
         logger.warning("   主定时任务不受影响")
-
-    tz = config.get("system", {}).get("timezone", "Asia/Shanghai")
-    scheduler = BlockingScheduler(timezone=tz)
 
     job_map = {
         "morning_brief":   job_morning_brief,

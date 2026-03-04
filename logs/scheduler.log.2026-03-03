@@ -583,3 +583,11 @@ Run time of job "美股开盘播报 (trigger: cron[day_of_week='mon-fri', hour='
 2026-03-04 07:07:21,869 [DEBUG] 📊 任务指标已记录: arxiv_papers
 07:07:21 [INFO] ✅ 任务完成: arxiv_papers
 2026-03-04 07:07:21,870 [INFO] ✅ 任务完成: arxiv_papers
+Run time of job "美股收盘复盘 (trigger: cron[day_of_week='tue-sat', hour='8', minute='0'], next run at: 2026-03-05 08:00:00 CST)" was missed by 1:10:33.907094
+Run time of job "信息流简报 09:00 (trigger: cron[day_of_week='mon-sun', hour='9', minute='0'], next run at: 2026-03-05 09:00:00 CST)" was missed by 0:10:33.909068
+10:16:20 [INFO] 📛 收到退出信号
+2026-03-04 10:16:20,977 [INFO] 📛 收到退出信号
+10:16:20 [INFO] 📛 调度器已关闭
+2026-03-04 10:16:20,980 [INFO] 📛 调度器已关闭
+2026-03-04 10:16:21,018 [INFO] 📛 收到退出信号
+2026-03-04 10:16:21,064 [INFO] 📛 调度器已关闭

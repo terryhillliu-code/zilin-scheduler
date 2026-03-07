@@ -12,6 +12,20 @@ from pathlib import Path
 from datetime import datetime
 from typing import Optional
 
+# 机构关键词名单（用于研报二级分类）
+INSTITUTIONS = [
+    "中金", "中信", "海通", "国泰君安", "华泰", "广发", "招商", "申万", "光大",
+    "兴业", "天风", "方正", "国信", "中银", "麦肯锡", "贝恩", "波士顿", "高盛",
+    "摩根", "瑞银", "花旗", "东吴", "银河", "国盛", "民生", "德勤", "普华永道", "安永", "毕马威"
+]
+
+def extract_institution(filename: str) -> Optional[str]:
+    """提取文件名中的机构名称"""
+    for inst in INSTITUTIONS:
+        if inst in filename:
+            return inst
+    return None
+
 # 配置
 INBOX_DIR = Path.home() / "knowledge-inbox"
 UNSORTED_DIR = INBOX_DIR / "unsorted"
@@ -153,6 +167,13 @@ def process_unsorted() -> dict:
             
             # 分类
             target_dir_name = classify_file(filepath, rules_config)
+            
+            # 二级分类：如果目标是研报，尝试提取投研机构
+            if target_dir_name == "reports":
+                inst = extract_institution(filepath.name)
+                if inst:
+                    target_dir_name = f"reports/{inst}"
+            
             target_dir = INBOX_DIR / target_dir_name
             
             # 确保目标目录存在

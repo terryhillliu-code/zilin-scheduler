@@ -16,6 +16,11 @@ import threading
 from datetime import datetime, timedelta
 from pathlib import Path
 
+# 新增业务跳过异常类
+class TaskSkippedException(Exception):
+    pass
+
+
 # 直接初始化 logger（不再是 None）
 logging.basicConfig(
     level=logging.INFO,
@@ -92,7 +97,8 @@ def log_task_metrics(
     success: bool,
     push_status: dict = None,
     token_usage: dict = None,
-    error_msg: str = None
+    error_msg: str = None,
+    is_skipped: bool = False
 ):
     """
     将任务指标写入 JSONL 日志
@@ -105,6 +111,7 @@ def log_task_metrics(
         "end_time": datetime.fromtimestamp(end_time).isoformat(),
         "latency_seconds": round(end_time - start_time, 2),
         "success": success,
+        "is_skipped": is_skipped,
         "push_status": push_status or {},
         "token_usage": token_usage or {},
         "error_msg": error_msg
@@ -120,8 +127,8 @@ def log_task_metrics(
     if logger:
         logger.debug(f"📊 任务指标已记录: {task_name}")
 
-    # T-016.3: 如果任务失败，发送告警
-    if not success:
+    # T-016.3: 如果任务失败（且不是跳过），发送告警
+    if not success and not is_skipped:
         send_failure_alert(task_name, error_msg)
 
 
@@ -241,9 +248,40 @@ def load_prompt(template_name: str, **kwargs) -> str:
 
 # ============ Agent 调用 ============
 
+def call_llm_direct(message: str, timeout: int = 180) -> tuple[bool, str]:
+    """
+    绕过 OpenClaw，直接调用本地代理 (8045)
+    用于解决 Agent/模型工具冲突时的降级方案
+    """
+    import http.client
+    import json
+    
+    try:
+        payload = json.dumps({
+            "model": "gpt-4o",
+            "messages": [{"role": "user", "content": message}],
+            "temperature": 0.7
+        })
+        
+        conn = http.client.HTTPConnection("127.0.0.1", 8045, timeout=timeout)
+        conn.request("POST", "/v1/chat/completions", body=payload, headers={"Content-Type": "application/json"})
+        resp = conn.getresponse()
+        data = json.loads(resp.read().decode())
+        conn.close()
+        
+        if resp.status == 200:
+            content = data.get("choices", [{}])[0].get("message", {}).get("content", "")
+            return True, content
+        else:
+            err = data.get("error", {}).get("message", "Unknown error")
+            return False, f"LLM Direct Error {resp.status}: {err}"
+    except Exception as e:
+        return False, f"LLM Direct Exception: {e}"
+
+
 def call_agent(agent_id: str, message: str, timeout: int = 180) -> tuple[bool, str]:
     """
-    通过 OpenClaw 调用 Agent
+    通过 OpenClaw 调用 Agent，并在工具冲突时自动降级
     """
     cmd = [
         "docker", "exec", CONTAINER,
@@ -258,17 +296,33 @@ def call_agent(agent_id: str, message: str, timeout: int = 180) -> tuple[bool, s
     for attempt in range(2):
         try:
             result = subprocess.run(cmd, capture_output=True, text=True, timeout=timeout + 30)
+            
+            # 处理 Docker 命令本身的错误
             if result.returncode != 0:
                 err = result.stderr.strip()[:300]
-                logger.warning(f"⚠️ Agent 调用警告 (第{attempt+1}次): {err}")
+                logger.warning(f"⚠️ Agent 调用告警 (第{attempt+1}次): {err}")
                 continue
 
             # 解析 JSON 响应
             data = json.loads(result.stdout)
+            
+            # 检查是否成功
             if data.get("status") == "ok":
                 payloads = data.get("result", {}).get("payloads", [])
                 if payloads:
                     text = payloads[0].get("text", "")
+                    
+                    # 核验内容是否包含 400 错误（模型层工具调用冲突）
+                    if "Multiple tools are supported" in text or "400 {" in text:
+                        logger.warning(f"⚠️ 检测到模型工具冲突错误，正在尝试降级直接调用...")
+                        ok_direct, text_direct = call_llm_direct(message, timeout)
+                        if ok_direct:
+                            return True, text_direct
+                        else:
+                            logger.error(f"❌ 降级直接调用也失败: {text_direct}")
+                            # 继续重试
+                            continue
+                            
                     return True, text
 
             logger.warning(f"⚠️ Agent 返回异常 (第{attempt+1}次): {result.stdout[:100]}")
@@ -280,8 +334,9 @@ def call_agent(agent_id: str, message: str, timeout: int = 180) -> tuple[bool, s
         except Exception as e:
             logger.error(f"❌ Agent 调用异常: {e}")
 
-    logger.error(f"❌ Agent {agent_id} 2次尝试均失败，放弃")
-    return False, "Agent 调用失败，请检查 Docker 或网络连接"
+    # 如果 OpenClaw 彻底失败，尝试最后一次直接降级
+    logger.warning("🔄 OpenClaw 尝试均失败，执行最终降级调用...")
+    return call_llm_direct(message, timeout)
 
 
 
@@ -394,11 +449,26 @@ def run_ab_test(test_id: str):
     )
 
 
-def enrich_with_klib(task_name: str, prompt_text: str) -> str:
+# ============ GraphRAG 并发保护 (Phase 5+) ============
+# 限制同时运行的 GraphRAG 子进程数量，防止线程/内存压爆
+graphrag_semaphore = threading.Semaphore(2)  # 最多允许 2 个并发查询
+
+def enrich_with_graphrag(task_name: str, prompt_text: str) -> str:
     """
-    使用本地知识库增强 prompt (T-017)
+    使用 GraphRAG (LightRAG) 增强 prompt (Phase 4c - T-407)
     根据任务名称查询相关关键词，将结果注入 prompt
     """
+    # Phase 4c: 使用子进程查询 GraphRAG，彻底解决事件循环冲突
+    import subprocess
+    import os
+    import threading 
+    from pathlib import Path
+
+    cli_path = BASE_DIR / "graph_query_cli.py"
+    if not cli_path.exists():
+        logger.warning(f"⚠️ 找不到 GraphRAG CLI: {cli_path}")
+        return prompt_text
+
     # 对于 info_brief_XX 类型的任务，使用 info_brief 作为键
     lookup_key = task_name
     if task_name.startswith("info_brief_"):
@@ -410,33 +480,58 @@ def enrich_with_klib(task_name: str, prompt_text: str) -> str:
     try:
         keywords = KLIB_ENRICHMENT[lookup_key]
         results = []
+        seen_paragraphs = set() # 用于语义去重（简单段落级）
+
+        # 知识衰减：注入当前日期上下文
+        current_date = datetime.now().strftime("%Y-%m-%d")
+        decay_prompt = f"请优先参考2025-2026年的最新知识。当前日期是 {current_date}。"
 
         for kw in keywords:
-            cmd = [
-                "docker", "exec", "clawdbot", "python3",
-                "/root/workspace/skills/knowledge-search/search.py",
-                "keyword", "--query", kw, "--top_k", "2"
-            ]
-            output = subprocess.run(
-                cmd, capture_output=True, text=True, timeout=30
-            )
-            if output.returncode == 0 and output.stdout.strip():
-                stdout = output.stdout.strip()
-                # 过滤无效结果：包含"未找到"或结果过短（仅状态提示）
-                if "未找到" not in stdout and len(stdout) > 50:
-                    results.append(stdout)
+            # 申请信号量，受限并发
+            with graphrag_semaphore:
+                try:
+                    logger.info(f"🔍 正在通过 GraphRAG 子进程查询: {kw} (Semaphore 保护中)")
+                    env = os.environ.copy()
+                    python_exe = sys.executable or "python3"
+                    
+                    # 注入 user_prompt 实现知识衰减
+                    cmd = [python_exe, str(cli_path), "--query", kw, "--mode", "hybrid", "--user_prompt", decay_prompt]
+                    result = subprocess.run(cmd, capture_output=True, text=True, timeout=60, env=env)
+                    
+                    if result.returncode == 0:
+                        res = result.stdout.strip()
+                        # 只有当结果足够丰富（非空且不是报错）时才注入
+                        if res and len(res) > 50 and "抱歉" not in res and "ERROR" not in res:
+                            # 简单的段落级去重逻辑
+                            unique_paragraphs = []
+                            for para in res.split("\n\n"):
+                                para_stripped = para.strip()
+                                if not para_stripped: continue
+                                # 如果该段落已有 80% 相似（这里简化为全文匹配或包含）则跳过
+                                if para_stripped[:100] not in seen_paragraphs:
+                                    unique_paragraphs.append(para_stripped)
+                                    seen_paragraphs.add(para_stripped[:100])
+                            
+                            if unique_paragraphs:
+                                results.append(f"【{kw} 领域图谱分析】\n" + "\n\n".join(unique_paragraphs))
+                    else:
+                        logger.warning(f"⚠️ GraphRAG CLI 执行失败 ({kw}): {result.stderr.strip()[:100]}")
+                except Exception as e:
+                    logger.warning(f"⚠️ GraphRAG 进程调用异常 ({kw}): {e}")
 
         if not results:
             return prompt_text
 
-        enrichment = "\n---\n[本地知识库参考]\n以下是用户知识库中与本次主题相关的内容，请在分析中适当引用：\n" + "\n".join(results) + "\n---\n"
-        logger.info(f"✅ 已注入知识库上下文 (task: {task_name}, keywords: {keywords})")
+        enrichment = "\n---\n[GraphRAG 深度知识库参考]\n以下是系统知识图谱中萃取的深层分析视角，已根据当前日期（{0}）进行时效性加权并去重：\n\n".format(current_date) + "\n\n".join(results) + "\n---\n"
+        logger.info(f"✅ 已注入 GraphRAG 增强上下文 (task: {task_name}, keywords: {keywords})")
         return prompt_text + enrichment
 
     except Exception as e:
-        logger.warning(f"⚠️ 知识库增强失败 ({task_name}): {e}")
+        logger.error(f"❌ enrich_with_graphrag 顶层异常: {e}")
         return prompt_text
 
+# 兼容旧的方法调用名
+enrich_with_klib = enrich_with_graphrag
 
 def fetch_rag_context(query: str, top_k: int = 2) -> str:
     """
@@ -495,6 +590,12 @@ def job_morning_brief():
     if logger:
         logger.info("📰 === 每日早报 ===")
     task_name = "morning_brief"
+    
+    # T-016.4: 任务互斥锁
+    if not acquire_lock(task_name):
+        if logger:
+            logger.warning(f"⏩ {task_name} 正在执行中，跳过本次触发")
+        return
     start_time = time.time()
     push_status = {"dingtalk": False, "feishu": False}
 
@@ -511,7 +612,8 @@ def job_morning_brief():
             raise Exception(f"Agent 执行失败: {content}")
 
         save_output("morning_brief", content)
-        channels = config["jobs"]["morning_brief"].get("push_to", ["dingtalk", "feishu"])
+        job_conf = config.get("jobs", {}).get("morning_brief", {})
+        channels = job_conf.get("push_to", ["dingtalk", "feishu"])
 
         file_path = save_result(
             task="morning_brief",
@@ -536,7 +638,9 @@ def job_morning_brief():
             task_name=task_name,
             start_time=start_time,
             end_time=end_time,
-            success=push_status.get("dingtalk") or push_status.get("feishu"),
+            success=push_status.get("dingtalk") or 
+                    push_status.get("feishu") or 
+                    push_status.get("_skipped_by_concurrency"),
             push_status=push_status
         )
 
@@ -551,6 +655,15 @@ def job_noon_brief():
 
     if logger:
         logger.info("🌤 === 每日午报 ===")
+    task_name = "noon_brief"
+
+    # T-016.4: 任务互斥锁
+    if not acquire_lock(task_name):
+        if logger:
+            logger.warning(f"⏩ {task_name} 正在执行中，跳过本次触发")
+        return
+    start_time = time.time()
+    push_status = {"dingtalk": False, "feishu": False}
 
     def _run():
         now = datetime.now()
@@ -565,7 +678,8 @@ def job_noon_brief():
             raise Exception(f"Agent 执行失败: {content}")
 
         save_output("noon_brief", content)
-        channels = config["jobs"]["noon_brief"].get("push_to", ["dingtalk", "feishu"])
+        job_conf = config.get("jobs", {}).get("noon_brief", {})
+        channels = job_conf.get("push_to", ["dingtalk", "feishu"])
 
         file_path = save_result(
             task="noon_brief",
@@ -576,7 +690,8 @@ def job_noon_brief():
         if logger:
             logger.info(f"📦 结果已保存: {file_path}")
 
-        success = try_push(file_path, push_manager, logger)
+        success = try_push(file_path, push_manager, logger, return_status=True)
+        push_status.update(success or {})
         if not success:
             if logger:
                 logger.warning("推送失败，已进入重试队列")
@@ -584,7 +699,19 @@ def job_noon_brief():
             if logger:
                 logger.info("✅ 午报推送完成")
 
-    _run()
+    try:
+        _run()
+    finally:
+        end_time = time.time()
+        log_task_metrics(
+            task_name=task_name,
+            start_time=start_time,
+            end_time=end_time,
+            success=push_status.get("dingtalk") or 
+                    push_status.get("feishu") or 
+                    push_status.get("_skipped_by_concurrency"),
+            push_status=push_status
+        )
 
 
 def job_info_brief(hour: int):
@@ -598,6 +725,12 @@ def job_info_brief(hour: int):
     if logger:
         logger.info(f"📰 === 信息流简报 {hour:02d}:00 ===")
     task_name = f"info_brief_{hour:02d}"
+
+    # T-016.4: 任务互斥锁，防止并发执行
+    if not acquire_lock(task_name):
+        if logger:
+            logger.warning(f"⏩ {task_name} 正在执行中，跳过本次触发")
+        return
     start_time = time.time()
     push_status = {"dingtalk": False, "feishu": False}
 
@@ -638,20 +771,20 @@ def job_info_brief(hour: int):
         if "EXEC_ALL_FAILED" in content:
             logger.warning("⚠️ 所有数据源获取失败，跳过本次推送")
             save_output(task_name, content)
-            return
+            raise TaskSkippedException("EXEC_ALL_FAILED")
 
         # ============ 新闻去重检查 ============
         # 检查是否有新内容（至少2条新的）
         if "NO_NEW_CONTENT" in content:
             logger.info(f"📋 无新内容，跳过推送")
             save_output(task_name, content)
-            return
+            raise TaskSkippedException("NO_NEW_CONTENT")
 
         # 检查是否应该推送
         if not should_push(content):
             logger.info(f"📋 新闻无变化，跳过推送")
             save_output(task_name, content)
-            return
+            raise TaskSkippedException("NO_NEW_CONTENT")
 
         save_output(task_name, content)
         channels = config["jobs"].get(task_name, {}).get("push_to", ["dingtalk", "feishu"])
@@ -681,21 +814,40 @@ def job_info_brief(hour: int):
                 logger.warning("推送失败，已进入重试队列")
 
     error_msg = None
+    is_skipped = False
     try:
         _run()
+    except TaskSkippedException as e:
+        is_skipped = True
+        if logger:
+            logger.info(f"ℹ️ info_brief_{hour:02d} 已确认业务跳过: {e}")
     except Exception as e:
         error_msg = str(e)
         if logger:
             logger.error(f"❌ info_brief_{hour:02d} 失败: {error_msg}")
+        
+        # 兼容旧代码里抛出普通Exception也可能带这些字眼的情况
+        if "NO_NEW_CONTENT" in error_msg or "NO_NEWS" in error_msg.upper():
+            is_skipped = True
+            if logger:
+                logger.info(f"ℹ️ info_brief_{hour:02d} 已确认业务跳过")
+
     finally:
         end_time = time.time()
+        # 只要不是 Exception 抛出且完成了推送，或者明确标记为 skipped，就不告警
+        success_final = (
+            push_status.get("dingtalk") or 
+            push_status.get("feishu") or 
+            push_status.get("_skipped_by_concurrency")
+        )
         log_task_metrics(
             task_name=task_name,
             start_time=start_time,
             end_time=end_time,
-            success=push_status.get("dingtalk") or push_status.get("feishu"),
+            success=success_final,
             push_status=push_status,
-            error_msg=error_msg
+            error_msg=error_msg,
+            is_skipped=is_skipped
         )
 
 
@@ -709,32 +861,58 @@ def job_us_market_open():
 
     if logger:
         logger.info("🔔 === 美股开盘 ===")
+    task_name = "us_market_open"
     
+    # T-016.4: 任务互斥锁
+    if not acquire_lock(task_name):
+        if logger:
+            logger.warning(f"⏩ {task_name} 正在执行中，跳过本次触发")
+        return
+    start_time = time.time()
+    push_status = {"dingtalk": False, "feishu": False}
+
     def _run():
         prompt = load_prompt("us_market_open")
-
         ok, content = call_agent("researcher", prompt, timeout=180)
         if not ok:
             raise Exception(f"Agent 执行失败: {content}")
 
-        save_output("us_market_open", content)
-        channels = config["jobs"]["us_market_open"].get("push_to", ["dingtalk", "feishu"])
+        save_output(task_name, content)
+        channels = config["jobs"][task_name].get("push_to", ["dingtalk", "feishu"])
         
         file_path = save_result(
-            task="us_market_open",
+            task=task_name,
             content=content,
             targets=channels,
             metadata={"agent": "researcher"}
         )
         logger.info(f"📦 结果已保存: {file_path}")
         
-        success = try_push(file_path, push_manager, logger)
+        success = try_push(file_path, push_manager, logger, return_status=True)
+        push_status.update(success or {})
         if not success:
             logger.warning("推送失败，已进入重试队列")
         else:
-            logger.info("✅ 美股开盘推送完成")
+            logger.info(f"✅ {task_name} 推送成功")
 
-    _run()
+    error_msg = None
+    try:
+        _run()
+    except Exception as e:
+        error_msg = str(e)
+        logger.error(f"❌ {task_name} 失败: {error_msg}")
+    finally:
+        end_time = time.time()
+        log_task_metrics(
+            task_name=task_name,
+            start_time=start_time,
+            end_time=end_time,
+            success=push_status.get("dingtalk") or 
+                    push_status.get("feishu") or 
+                    push_status.get("_skipped_by_concurrency"),
+            push_status=push_status,
+            error_msg=error_msg
+        )
 
 
 def job_us_market_close():
@@ -747,32 +925,58 @@ def job_us_market_close():
 
     if logger:
         logger.info("📊 === 美股收盘复盘 ===")
-    
+    task_name = "us_market_close"
+
+    # T-016.4: 任务互斥锁
+    if not acquire_lock(task_name):
+        if logger:
+            logger.warning(f"⏩ {task_name} 正在执行中，跳过本次触发")
+        return
+    start_time = time.time()
+    push_status = {"dingtalk": False, "feishu": False}
+
     def _run():
         prompt = load_prompt("us_market_close")
-
         ok, content = call_agent("researcher", prompt, timeout=180)
         if not ok:
             raise Exception(f"Agent 执行失败: {content}")
 
-        save_output("us_market_close", content)
-        channels = config["jobs"]["us_market_close"].get("push_to", ["dingtalk", "feishu"])
+        save_output(task_name, content)
+        channels = config["jobs"][task_name].get("push_to", ["dingtalk", "feishu"])
         
         file_path = save_result(
-            task="us_market_close",
+            task=task_name,
             content=content,
             targets=channels,
             metadata={"agent": "researcher"}
         )
         logger.info(f"📦 结果已保存: {file_path}")
         
-        success = try_push(file_path, push_manager, logger)
+        success = try_push(file_path, push_manager, logger, return_status=True)
+        push_status.update(success or {})
         if not success:
             logger.warning("推送失败，已进入重试队列")
         else:
-            logger.info("✅ 美股收盘推送完成")
+            logger.info(f"✅ {task_name} 推送成功")
 
-    _run()
+    error_msg = None
+    try:
+        _run()
+    except Exception as e:
+        error_msg = str(e)
+        logger.error(f"❌ {task_name} 失败: {error_msg}")
+    finally:
+        end_time = time.time()
+        log_task_metrics(
+            task_name=task_name,
+            start_time=start_time,
+            end_time=end_time,
+            success=push_status.get("dingtalk") or 
+                    push_status.get("feishu") or 
+                    push_status.get("_skipped_by_concurrency"),
+            push_status=push_status,
+            error_msg=error_msg
+        )
 
 
 def job_crypto(period: str = "morning"):
@@ -786,92 +990,137 @@ def job_crypto(period: str = "morning"):
     label = "早" if period == "morning" else "晚"
     if logger:
         logger.info(f"🪙 === 加密货币{label}报 ===")
-    
+    task_name = f"crypto_{period}"
+
+    # T-016.4: 任务互斥锁
+    if not acquire_lock(task_name):
+        if logger:
+            logger.warning(f"⏩ {task_name} 正在执行中，跳过本次触发")
+        return
+    start_time = time.time()
+    push_status = {"dingtalk": False, "feishu": False}
+
     def _run():
         ds = config.get("data_sources", {}).get("crypto", {})
         threshold = ds.get("alert_threshold", 5)
         
         # Phase 2: 从文件加载 Prompt
         prompt = load_prompt("crypto", label=label, threshold=threshold)
-
         ok, content = call_agent("researcher", prompt, timeout=120)
         if not ok:
             raise Exception(f"Agent 执行失败: {content}")
 
-        save_output(f"crypto_{period}", content)
-        
-        job_key = f"crypto_{period}"
-        channels = config["jobs"].get(job_key, {}).get("push_to", ["dingtalk", "feishu"])
+        save_output(task_name, content)
+        channels = config["jobs"].get(task_name, {}).get("push_to", ["dingtalk", "feishu"])
         
         file_path = save_result(
-            task=f"crypto_{period}",
+            task=task_name,
             content=content,
             targets=channels,
             metadata={"agent": "researcher", "period": period}
         )
         logger.info(f"📦 结果已保存: {file_path}")
         
-        success = try_push(file_path, push_manager, logger)
-        if not success:
-            logger.warning("推送失败，已进入重试队列")
-        else:
-            logger.info(f"✅ 加密货币{label}报推送完成")
-
-    _run()
-
-
-def job_arxiv():
-    """arXiv 论文追踪 10:30"""
-    global logger  # 声明使用全局 logger 变量
-    logger.info("📄 === arXiv 论文精选 ===")
-    task_name = "arxiv_papers"
-    start_time = time.time()
-    push_status = {"dingtalk": False, "feishu": False}
-
-    def _run():
-        ds = config.get("data_sources", {}).get("arxiv", {})
-        categories = ",".join(ds.get("categories", ["cs.AI", "cs.LG"]))
-        min_score = ds.get("min_score", 2)
-        limit = ds.get("max_results", 10)
-
-        # Phase 2: 从文件加载 Prompt
-        prompt = load_prompt("arxiv", categories=categories, min_score=min_score, limit=limit)
-
-        # ============ RAG 增强 (T-017) - enrich_with_klib ============
-        prompt = enrich_with_klib("arxiv_papers", prompt)
-
-        ok, content = call_agent("researcher", prompt, timeout=240)
-        if not ok:
-            raise Exception(f"Agent 执行失败: {content}")
-
-        save_output("arxiv", content)
-        channels = config["jobs"]["arxiv_papers"].get("push_to", ["dingtalk", "feishu"])
-
-        file_path = save_result(
-            task="arxiv_papers",
-            content=content,
-            targets=channels,
-            metadata={"agent": "researcher"}
-        )
-        logger.info(f"📦 结果已保存: {file_path}")
-
         success = try_push(file_path, push_manager, logger, return_status=True)
         push_status.update(success or {})
         if not success:
             logger.warning("推送失败，已进入重试队列")
         else:
-            logger.info("✅ arXiv 论文推送完成")
+            logger.info(f"✅ 加密货币{label}报推送完成")
 
+    error_msg = None
     try:
         _run()
+    except Exception as e:
+        error_msg = str(e)
+        logger.error(f"❌ {task_name} 失败: {error_msg}")
     finally:
         end_time = time.time()
         log_task_metrics(
             task_name=task_name,
             start_time=start_time,
             end_time=end_time,
-            success=push_status.get("dingtalk") or push_status.get("feishu"),
-            push_status=push_status
+            success=push_status.get("dingtalk") or 
+                    push_status.get("feishu") or 
+                    push_status.get("_skipped_by_concurrency"),
+            push_status=push_status,
+            error_msg=error_msg
+        )
+
+
+def job_arxiv():
+    """arXiv 论文追踪 10:30"""
+    global logger, config, push_manager
+    if not config or not push_manager:
+        if logger:
+            logger.error(f"❌ 配置未初始化，请先运行主程序")
+        return
+
+    if logger:
+        logger.info("📄 === arXiv 论文精选 ===")
+    task_name = "arxiv_papers"
+
+    # T-016.4: 任务互斥锁
+    if not acquire_lock(task_name):
+        if logger:
+            logger.warning(f"⏩ {task_name} 正在执行中，跳过本次触发")
+        return
+    start_time = time.time()
+    push_status = {"dingtalk": False, "feishu": False}
+
+    def _run():
+        ds = config.get("data_sources", {}).get("arxiv", {})
+        categories = ds.get("categories", ["cs.AI", "cs.LG", "cs.CL", "cs.CV"])
+        min_score = ds.get("min_score", 2)
+        limit = ds.get("max_results", 15)
+
+        # Phase 2: 从文件加载 Prompt
+        prompt = load_prompt(
+            "arxiv",
+            categories=",".join(categories),
+            min_score=min_score,
+            limit=limit
+        )
+
+        ok, content = call_agent("researcher", prompt, timeout=300)
+        if not ok:
+            raise Exception(f"Agent 执行失败: {content}")
+
+        save_output(task_name, content)
+        channels = config["jobs"].get(task_name, {}).get("push_to", ["dingtalk", "feishu"])
+        
+        file_path = save_result(
+            task=task_name,
+            content=content,
+            targets=channels,
+            metadata={"agent": "researcher"}
+        )
+        logger.info(f"📦 结果已保存: {file_path}")
+        
+        success = try_push(file_path, push_manager, logger, return_status=True)
+        push_status.update(success or {})
+        if not success:
+            logger.warning("推送失败，已进入重试队列")
+        else:
+            logger.info(f"✅ {task_name} 推送成功")
+
+    error_msg = None
+    try:
+        _run()
+    except Exception as e:
+        error_msg = str(e)
+        logger.error(f"❌ {task_name} 失败: {error_msg}")
+    finally:
+        end_time = time.time()
+        log_task_metrics(
+            task_name=task_name,
+            start_time=start_time,
+            end_time=end_time,
+            success=push_status.get("dingtalk") or 
+                    push_status.get("feishu") or 
+                    push_status.get("_skipped_by_concurrency"),
+            push_status=push_status,
+            error_msg=error_msg
         )
 
 
@@ -890,13 +1139,17 @@ def log_health_status():
         # 获取进程信息
         current_process = psutil.Process()
         process_memory = current_process.memory_info().rss / 1024 / 1024  # MB
+        num_threads = current_process.num_threads()
+        open_files = len(current_process.open_files())
 
         health_info = (
             f"🖥️ 系统健康状况 - "
             f"CPU: {cpu_percent}%, "
             f"内存: {memory.percent}%, "
             f"磁盘: {disk_usage.percent}%, "
-            f"调度器进程内存: {process_memory:.2f}MB"
+            f"调度器进程内存: {process_memory:.2f}MB, "
+            f"线程数: {num_threads}, "
+            f"打开文件数: {open_files}"
         )
 
         logger.info(f"🏥 系统健康检查: {health_info}")
@@ -968,7 +1221,7 @@ def job_system_metrics_report():
 
         try:
             result = subprocess.run(
-                ["python3", str(Path.home() / "scripts" / "analyze_metrics.py"), "--hours", "24"],
+                ["python3", str(Path(__file__).resolve().parent / "scripts" / "analyze_metrics.py"), "--hours", "24"],
                 capture_output=True,
                 text=True,
                 timeout=30,
@@ -1054,7 +1307,7 @@ def job_log_rotate():
     global logger  # 声明使用全局 logger 变量
     logger.info("📦 === 日志滚动 ===")
     import subprocess
-    script = Path.home() / "scripts" / "rotate_logs.sh"
+    script = Path(__file__).resolve().parent / "scripts" / "rotate_logs.sh"
     result = subprocess.run(["bash", str(script)], capture_output=True, text=True)
     logger.info(f"📦 日志滚动结果:\n{result.stdout}")
     if result.returncode != 0:
@@ -1079,6 +1332,26 @@ def job_knowledge_classify():
         logger.info(f"📚 知识分类完成:\n{result.stdout}")
     else:
         logger.error(f"📚 知识分类失败: {result.stderr}")
+
+
+def job_research_pipeline():
+    """Phase 4a: PDF研报扫描与向量化入库"""
+    global logger
+    logger.info("📄 === 研报扫描流水线 ===")
+    import subprocess
+    script = BASE_DIR / "research_pipeline.py"
+    if not script.exists():
+        logger.warning("📄 research_pipeline.py 不存在，跳过")
+        return
+
+    result = subprocess.run(
+        ["python3", str(script)],
+        capture_output=True, text=True, timeout=1200
+    )
+    if result.returncode == 0:
+        logger.info(f"📄 研报流水线完成:\n{result.stdout[-1000:]}")
+    else:
+        logger.error(f"📄 研报流水线失败: {result.stderr}")
 
 
 def save_output(job_name: str, content: str):
@@ -1132,6 +1405,45 @@ def load_config() -> dict:
 
 # ============ 主程序 ============
 
+def job_graph_maintenance():
+    """知识图谱自动化维护任务 (Phase 5b)"""
+    global logger
+    task_name = "graph_maintenance"
+    if not acquire_lock(task_name):
+        logger.warning(f"⏩ {task_name} 正在执行中，跳过本次触发")
+        return
+
+    logger.info("🛠️ === 启动知识图谱自动化维护 (GraphRAG Indexing) ===")
+    start_time = time.time()
+    
+    try:
+        env = os.environ.copy()
+        python_exe = sys.executable or "python3"
+        cli_path = BASE_DIR / "graph_index_cli.py"
+        
+        if not cli_path.exists():
+            raise FileNotFoundError(f"找不到索引 CLI: {cli_path}")
+            
+        # 执行索引子进程
+        result = subprocess.run([python_exe, str(cli_path)], capture_output=True, text=True, timeout=1800, env=env)
+        
+        if result.returncode == 0:
+            output = result.stdout.strip()
+            if "SUCCESS:" in output:
+                hotspots = output.split("SUCCESS:")[1]
+                logger.info(f"✅ 知识图谱索引完成。热点更新数: {hotspots}")
+            else:
+                logger.info(f"✅ 知识图谱索引完成。{output}")
+        else:
+            logger.error(f"❌ 知识图谱索引失败: {result.stderr}")
+            
+    except Exception as e:
+        logger.error(f"❌ 知识图谱维护异常: {e}")
+    finally:
+        release_lock(task_name)
+        end_time = time.time()
+        log_task_metrics(task_name, start_time, end_time, success=True) # 索引不影响推送，标记为成功
+
 def main():
     global config, push_manager, logger
 
@@ -1178,6 +1490,8 @@ def main():
         "fail_test":       job_fail_test,  # T-016.3 (test only)
         "log_rotate":      job_log_rotate,  # T-016.5
         "knowledge_classify": job_knowledge_classify,  # T-076
+        "research_pipeline": job_research_pipeline,  # Phase 4a (T-411)
+        "graph_maintenance": job_graph_maintenance,  # Phase 5b (T-501)
     }
 
     # 动态添加 info_brief_XX 任务映射 (07, 09, 11, 13, 15, 17, 19, 21)

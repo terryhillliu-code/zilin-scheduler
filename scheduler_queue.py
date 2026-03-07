@@ -4,8 +4,13 @@
 
 import json
 import os
+import sys
 from pathlib import Path
 from datetime import datetime, timezone
+
+# 引入 MessageBus
+sys.path.insert(0, os.path.expanduser("~/zhiwei-dev"))
+from message_bus import MessageBus
 
 # 队列目录
 QUEUE_BASE = Path(__file__).parent / "outputs" / "artifacts"
@@ -76,9 +81,9 @@ def claim_file(source: Path, dest_dir: Path):
         return None
 
 
-def try_push(file_path: Path, push_manager, logger=None, return_status: bool = False):
+def try_push(file_path: Path, push_manager=None, logger=None, return_status: bool = False):
     """
-    尝试推送单个 artifact（并发安全）
+    尝试推送到 MessageBus（并发安全）
 
     Args:
         return_status: 如果为 True，返回包含各渠道状态的字典
@@ -86,46 +91,57 @@ def try_push(file_path: Path, push_manager, logger=None, return_status: bool = F
     # Step 1: 原子领取到 processing
     processing_path = claim_file(file_path, PROCESSING)
     if processing_path is None:
-        return False if not return_status else {}
+        # 如果已经被领走，说明其他进程处理中，不应计为错误
+        return {"_skipped_by_concurrency": True} if return_status else True
 
-    push_results = {}  # 记录各渠道推送结果
+    push_results = {}  # 记录各渠道推送请求的发送状态
 
     try:
-        # Step 2: 读取并推送
+        # Step 2: 读取原始文件
         data = json.loads(processing_path.read_text())
         content = data["content"]
+        task_name = data["task"]
 
-        # 提取标题（跳过空行，取第一个非空行的前50字符）
+        # 提取标题
         lines = [ln for ln in content.split('\n') if ln.strip()]
-        title = lines[0][:50] if lines else data["task"]
+        title = lines[0][:50] if lines else task_name
         title = title.lstrip('#').strip()
 
+        # Step 3: 投递至统一消息总线 (MessageBus)
+        targets = data.get("push_targets", ["dingtalk", "feishu"])
         errors = {}
-        for target in data["push_targets"]:
-            try:
-                if target == "dingtalk":
-                    result = push_manager.pushers["dingtalk"].send_markdown(title, content)
-                    if result.get("errcode") != 0:
-                        errors[target] = str(result)
-                        push_results[target] = False
-                    else:
-                        push_results[target] = True
-                elif target == "feishu":
-                    result = push_manager.pushers["feishu"].send_markdown(title, content)
-                    if result.get("code") != 0:
-                        errors[target] = str(result)
-                        push_results[target] = False
-                    else:
-                        push_results[target] = True
-            except Exception as e:
+
+        try:
+            if logger:
+                logger.info(f"📡 正在向统一消息总线投递任务: {task_name} | {targets}")
+            
+            mb = MessageBus()
+            # 这里的 topic 设为 notification 即可，由 UnifiedPusher 负责下发
+            mb.publish(
+                sender="zhiwei-scheduler",
+                topic="notification",
+                content=content,
+                metadata={
+                    "task": task_name,
+                    "title": title,
+                    "targets": targets,
+                    "refine": True  # 明确要求 Agent 润色
+                }
+            )
+            for target in targets:
+                push_results[target] = True
+        except Exception as e:
+            if logger:
+                logger.error(f"❌ 投递至 MessageBus 失败: {e}")
+            for target in targets:
                 errors[target] = str(e)
                 push_results[target] = False
 
-        # Step 3: 根据结果移动文件
+        # Step 4: 根据发送 MessageBus 的结果移动文件
         if not errors:
             processing_path.rename(SENT / processing_path.name)
             if logger:
-                logger.info(f"✅ 推送成功: {data['job_id']}")
+                logger.info(f"✅ 已投递至 MessageBus: {data['job_id']}")
             return True if not return_status else push_results
         else:
             data["retries"] = data.get("retries", 0) + 1
@@ -133,17 +149,16 @@ def try_push(file_path: Path, push_manager, logger=None, return_status: bool = F
             atomic_write_json(FAILED / processing_path.name, data)
             processing_path.unlink(missing_ok=True)
             if logger:
-                logger.warning(f"❌ 推送失败: {data['job_id']}, 错误: {errors}")
+                logger.warning(f"❌ 投递 MessageBus 失败: {data['job_id']}, 错误: {errors}")
             return False if not return_status else push_results
 
     except Exception as e:
-        # 异常处理
         try:
             processing_path.rename(FAILED / processing_path.name)
         except:
             pass
         if logger:
-            logger.error(f"❌ 推送异常: {e}")
+            logger.error(f"❌ 投递异常: {e}")
         return False if not return_status else {}
 
 

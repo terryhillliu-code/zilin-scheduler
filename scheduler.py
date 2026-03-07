@@ -56,6 +56,15 @@ import trigger_listener
 
 CONTAINER = "clawdbot"
 
+# 尝试导入新的 RAG 桥接
+try:
+    from rag_bridge import enrich_with_rag, is_available as rag_is_available
+    RAG_AVAILABLE = rag_is_available()
+except ImportError:
+    RAG_AVAILABLE = False
+    def enrich_with_rag(query, top_k=5):
+        return ""
+
 # ============ 指数退避重试配置 ============
 RETRY_DELAYS = [120, 300, 600]  # 2min, 5min, 10min
 
@@ -530,8 +539,37 @@ def enrich_with_graphrag(task_name: str, prompt_text: str) -> str:
         logger.error(f"❌ enrich_with_graphrag 顶层异常: {e}")
         return prompt_text
 
-# 兼容旧的方法调用名
-enrich_with_klib = enrich_with_graphrag
+# 兼容旧的方法调用名 (改为 legacy)
+enrich_with_klib_legacy = enrich_with_graphrag
+
+def enrich_with_klib(task_name: str, prompt_text: str, top_k: int = 5) -> str:
+    """
+    增强版知识库检索
+    优先使用 zhiwei-rag (三轨融合+精排)，降级到 GraphRAG (旧)
+    """
+    # 尝试新 RAG
+    if RAG_AVAILABLE:
+        try:
+            # 对于 info_brief_XX 类型的任务，提取关键词作为查询
+            query = task_name
+            if task_name.startswith("info_brief_"):
+                query = "最近全球重要资讯和科技动态" # 默认查询
+                if task_name in KLIB_ENRICHMENT:
+                    query = ", ".join(KLIB_ENRICHMENT[task_name])
+            elif task_name in KLIB_ENRICHMENT:
+                query = ", ".join(KLIB_ENRICHMENT[task_name])
+            
+            context = enrich_with_rag(query, top_k=top_k)
+            if context and len(context) > 100:
+                logger.info(f"🚀 [Scheduler] 使用 zhiwei-rag 增强 (Recall/Rerank)，上下文 {len(context)} 字符")
+                # 注入到 Prompt
+                enrichment = f"\n---\n[zhiwei-rag 检索参考]\n以下是从 300+ 份研报及知识库中检索到的相关资料（已通过 Reranker 精排）：\n\n{context}\n---\n"
+                return prompt_text + enrichment
+        except Exception as e:
+            logger.warning(f"⚠️ zhiwei-rag 失败，降级到 GraphRAG: {e}")
+    
+    # 降级到旧方案 (GraphRAG)
+    return enrich_with_klib_legacy(task_name, prompt_text)
 
 def fetch_rag_context(query: str, top_k: int = 2) -> str:
     """

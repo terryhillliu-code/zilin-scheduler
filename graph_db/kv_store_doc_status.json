@@ -1,0 +1,207 @@
+{
+  "doc-546dfa6e8a446972d5dc6ae34a64ce0a": {
+    "status": "failed",
+    "error_msg": "Error code: 401 - {'error': {'message': 'Incorrect API key provided. For details, see: https://help.aliyun.com/zh/model-studio/error-code#apikey-error', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}, 'request_id': 'e9a14ae8-5d5a-9d99-b063-2492c8d2ca2b'}",
+    "content_summary": "半导体行业最新趋势：\n    1. 2nm 节点竞争激烈，台积电与三星均在加速研发。\n    2. 先进封装技术如 CoWoS 产能持续紧缺，成为 AI 芯片出货的瓶颈。\n    3. 推理加速领域，NVIDIA 的 TensorRT-LLM 提供了显著的性能提升。\n    4. HBM3e 内存已成为高端 GPU 的标配。",
+    "content_length": 163,
+    "created_at": "2026-03-06T16:35:49.441001+00:00",
+    "updated_at": "2026-03-06T16:57:35.302765+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260307_003549_5979b4cd",
+    "metadata": {
+      "processing_start_time": 1772816252,
+      "processing_end_time": 1772816255
+    },
+    "chunks_list": []
+  },
+  "doc-3087d9b4a9b15d2f774062ddbfd04e9a": {
+    "status": "failed",
+    "error_msg": "Error code: 401 - {'error': {'message': 'Incorrect API key provided. For details, see: https://help.aliyun.com/zh/model-studio/error-code#apikey-error', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}, 'request_id': 'f1ab3ac6-9a40-94c5-a2b6-ff8188c78f0e'}",
+    "content_summary": "# 测试笔记\n\n这是为验证 ZhiweiVault 配置而创建的测试笔记。\n\n时间: Wed Mar  4 09:52:56 CST 2026\n\nObsidian Vault 配置已成功更新为 ZhiweiVault。",
+    "content_length": 109,
+    "created_at": "2026-03-06T16:55:01.123904+00:00",
+    "updated_at": "2026-03-06T16:57:35.302704+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260307_005501_87e27c96",
+    "metadata": {
+      "processing_start_time": 1772816252,
+      "processing_end_time": 1772816255
+    },
+    "chunks_list": []
+  },
+  "doc-400a555f5d5834d5ffa5771be077ebcd": {
+    "status": "failed",
+    "error_msg": "Error code: 401 - {'error': {'message': 'Incorrect API key provided. For details, see: https://help.aliyun.com/zh/model-studio/error-code#apikey-error', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}, 'request_id': '394c019a-c004-9187-beae-51aa2c1ed7f3'}",
+    "content_summary": "# 知微系统集成测试\n\n这是一个用于测试知微系统与 Obsidian 集成的笔记。",
+    "content_length": 41,
+    "created_at": "2026-03-06T16:55:04.294767+00:00",
+    "updated_at": "2026-03-06T16:57:37.180614+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260307_005504_de3b03e0",
+    "metadata": {
+      "processing_start_time": 1772816255,
+      "processing_end_time": 1772816257
+    },
+    "chunks_list": []
+  },
+  "dup-f0df0b3f090c302002e3c011f8aa8fdb": {
+    "status": "failed",
+    "content_summary": "[DUPLICATE] Original document: doc-3087d9b4a9b15d2f774062ddbfd04e9a",
+    "content_length": 109,
+    "created_at": "2026-03-06T16:55:34.687324+00:00",
+    "updated_at": "2026-03-06T16:55:34.687328+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260307_005534_69ffe121",
+    "error_msg": "Content already exists. Original doc_id: doc-3087d9b4a9b15d2f774062ddbfd04e9a, Status: failed",
+    "metadata": {
+      "is_duplicate": true,
+      "original_doc_id": "doc-3087d9b4a9b15d2f774062ddbfd04e9a",
+      "original_track_id": "insert_20260307_005501_87e27c96"
+    },
+    "chunks_list": []
+  },
+  "dup-1d6e47104aa3d10365a169797dfab439": {
+    "status": "failed",
+    "content_summary": "[DUPLICATE] Original document: doc-400a555f5d5834d5ffa5771be077ebcd",
+    "content_length": 41,
+    "created_at": "2026-03-06T16:55:45.730595+00:00",
+    "updated_at": "2026-03-06T16:55:45.730598+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260307_005545_29a4543d",
+    "error_msg": "Content already exists. Original doc_id: doc-400a555f5d5834d5ffa5771be077ebcd, Status: DocStatus.FAILED",
+    "metadata": {
+      "is_duplicate": true,
+      "original_doc_id": "doc-400a555f5d5834d5ffa5771be077ebcd",
+      "original_track_id": "insert_20260307_005504_de3b03e0"
+    },
+    "chunks_list": []
+  },
+  "dup-731dc44773c53464b79950348f282015": {
+    "status": "failed",
+    "content_summary": "[DUPLICATE] Original document: doc-3087d9b4a9b15d2f774062ddbfd04e9a",
+    "content_length": 109,
+    "created_at": "2026-03-06T16:56:22.477094+00:00",
+    "updated_at": "2026-03-06T16:56:22.477098+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260307_005622_18322b46",
+    "error_msg": "Content already exists. Original doc_id: doc-3087d9b4a9b15d2f774062ddbfd04e9a, Status: failed",
+    "metadata": {
+      "is_duplicate": true,
+      "original_doc_id": "doc-3087d9b4a9b15d2f774062ddbfd04e9a",
+      "original_track_id": "insert_20260307_005501_87e27c96"
+    },
+    "chunks_list": []
+  },
+  "dup-ae468349ee935da5eaa34bfc8e47b3ee": {
+    "status": "failed",
+    "content_summary": "[DUPLICATE] Original document: doc-400a555f5d5834d5ffa5771be077ebcd",
+    "content_length": 41,
+    "created_at": "2026-03-06T16:56:28.421803+00:00",
+    "updated_at": "2026-03-06T16:56:28.421808+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260307_005628_c8194668",
+    "error_msg": "Content already exists. Original doc_id: doc-400a555f5d5834d5ffa5771be077ebcd, Status: DocStatus.FAILED",
+    "metadata": {
+      "is_duplicate": true,
+      "original_doc_id": "doc-400a555f5d5834d5ffa5771be077ebcd",
+      "original_track_id": "insert_20260307_005504_de3b03e0"
+    },
+    "chunks_list": []
+  },
+  "dup-29bc00860d8abc7e731fe95e44cf2b64": {
+    "status": "failed",
+    "content_summary": "[DUPLICATE] Original document: doc-3087d9b4a9b15d2f774062ddbfd04e9a",
+    "content_length": 109,
+    "created_at": "2026-03-06T16:56:45.027347+00:00",
+    "updated_at": "2026-03-06T16:56:45.027352+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260307_005645_fcfa49ab",
+    "error_msg": "Content already exists. Original doc_id: doc-3087d9b4a9b15d2f774062ddbfd04e9a, Status: failed",
+    "metadata": {
+      "is_duplicate": true,
+      "original_doc_id": "doc-3087d9b4a9b15d2f774062ddbfd04e9a",
+      "original_track_id": "insert_20260307_005501_87e27c96"
+    },
+    "chunks_list": []
+  },
+  "dup-551ec48cfec235f28de5530854548312": {
+    "status": "failed",
+    "content_summary": "[DUPLICATE] Original document: doc-400a555f5d5834d5ffa5771be077ebcd",
+    "content_length": 41,
+    "created_at": "2026-03-06T16:56:54.783538+00:00",
+    "updated_at": "2026-03-06T16:56:54.783544+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260307_005654_23523446",
+    "error_msg": "Content already exists. Original doc_id: doc-400a555f5d5834d5ffa5771be077ebcd, Status: DocStatus.FAILED",
+    "metadata": {
+      "is_duplicate": true,
+      "original_doc_id": "doc-400a555f5d5834d5ffa5771be077ebcd",
+      "original_track_id": "insert_20260307_005504_de3b03e0"
+    },
+    "chunks_list": []
+  },
+  "dup-ca03494a6a0ef5d55d7d6538df3970f2": {
+    "status": "failed",
+    "content_summary": "[DUPLICATE] Original document: doc-3087d9b4a9b15d2f774062ddbfd04e9a",
+    "content_length": 109,
+    "created_at": "2026-03-06T16:57:03.811969+00:00",
+    "updated_at": "2026-03-06T16:57:03.811973+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260307_005703_ee619ab1",
+    "error_msg": "Content already exists. Original doc_id: doc-3087d9b4a9b15d2f774062ddbfd04e9a, Status: failed",
+    "metadata": {
+      "is_duplicate": true,
+      "original_doc_id": "doc-3087d9b4a9b15d2f774062ddbfd04e9a",
+      "original_track_id": "insert_20260307_005501_87e27c96"
+    },
+    "chunks_list": []
+  },
+  "dup-f3a915a57cb94fe93e80c90658a6d4bc": {
+    "status": "failed",
+    "content_summary": "[DUPLICATE] Original document: doc-400a555f5d5834d5ffa5771be077ebcd",
+    "content_length": 41,
+    "created_at": "2026-03-06T16:57:10.710128+00:00",
+    "updated_at": "2026-03-06T16:57:10.710132+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260307_005710_a1662ead",
+    "error_msg": "Content already exists. Original doc_id: doc-400a555f5d5834d5ffa5771be077ebcd, Status: DocStatus.FAILED",
+    "metadata": {
+      "is_duplicate": true,
+      "original_doc_id": "doc-400a555f5d5834d5ffa5771be077ebcd",
+      "original_track_id": "insert_20260307_005504_de3b03e0"
+    },
+    "chunks_list": []
+  },
+  "dup-5f41460d66bd1aac6f7baaf91bb07bbf": {
+    "status": "failed",
+    "content_summary": "[DUPLICATE] Original document: doc-3087d9b4a9b15d2f774062ddbfd04e9a",
+    "content_length": 109,
+    "created_at": "2026-03-06T16:57:26.261305+00:00",
+    "updated_at": "2026-03-06T16:57:26.261310+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260307_005726_7612a06e",
+    "error_msg": "Content already exists. Original doc_id: doc-3087d9b4a9b15d2f774062ddbfd04e9a, Status: failed",
+    "metadata": {
+      "is_duplicate": true,
+      "original_doc_id": "doc-3087d9b4a9b15d2f774062ddbfd04e9a",
+      "original_track_id": "insert_20260307_005501_87e27c96"
+    },
+    "chunks_list": []
+  },
+  "dup-001de7993d1f0f65a197db752f63cbb5": {
+    "status": "failed",
+    "content_summary": "[DUPLICATE] Original document: doc-400a555f5d5834d5ffa5771be077ebcd",
+    "content_length": 41,
+    "created_at": "2026-03-06T16:57:32.177391+00:00",
+    "updated_at": "2026-03-06T16:57:32.177397+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260307_005732_df4a8a5e",
+    "error_msg": "Content already exists. Original doc_id: doc-400a555f5d5834d5ffa5771be077ebcd, Status: DocStatus.FAILED",
+    "metadata": {
+      "is_duplicate": true,
+      "original_doc_id": "doc-400a555f5d5834d5ffa5771be077ebcd",
+      "original_track_id": "insert_20260307_005504_de3b03e0"
+    },
+    "chunks_list": []
+  }
+}

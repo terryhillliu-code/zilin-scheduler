@@ -1,0 +1,15 @@
+{
+  "job_id": "alert_arxiv_papers:2026-03-07",
+  "task": "alert_arxiv_papers",
+  "content": "## 🚨 系统任务执行异常 (Immediate Alert)\n\n**任务名称**: arxiv_papers\n\n**发生时间**: 2026-03-07 07:00:22\n\n**异常摘要**:\n```\n未知异常\n```\n\n**建议**: 请查看 ~/logs/scheduler.jsonl 获取详细堆栈信息。\n",
+  "push_targets": [
+    "dingtalk"
+  ],
+  "created_at": "2026-03-06T23:00:22.569477+00:00",
+  "retries": 0,
+  "last_error": null,
+  "metadata": {
+    "type": "alert",
+    "level": "critical"
+  }
+}

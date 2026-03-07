@@ -1,0 +1,23 @@
+{
+  "doc-546dfa6e8a446972d5dc6ae34a64ce0a": {
+    "content": "半导体行业最新趋势：\n    1. 2nm 节点竞争激烈，台积电与三星均在加速研发。\n    2. 先进封装技术如 CoWoS 产能持续紧缺，成为 AI 芯片出货的瓶颈。\n    3. 推理加速领域，NVIDIA 的 TensorRT-LLM 提供了显著的性能提升。\n    4. HBM3e 内存已成为高端 GPU 的标配。",
+    "file_path": "unknown_source",
+    "create_time": 1772814949,
+    "update_time": 1772814949,
+    "_id": "doc-546dfa6e8a446972d5dc6ae34a64ce0a"
+  },
+  "doc-3087d9b4a9b15d2f774062ddbfd04e9a": {
+    "content": "# 测试笔记\n\n这是为验证 ZhiweiVault 配置而创建的测试笔记。\n\n时间: Wed Mar  4 09:52:56 CST 2026\n\nObsidian Vault 配置已成功更新为 ZhiweiVault。",
+    "file_path": "unknown_source",
+    "create_time": 1772816101,
+    "update_time": 1772816101,
+    "_id": "doc-3087d9b4a9b15d2f774062ddbfd04e9a"
+  },
+  "doc-400a555f5d5834d5ffa5771be077ebcd": {
+    "content": "# 知微系统集成测试\n\n这是一个用于测试知微系统与 Obsidian 集成的笔记。",
+    "file_path": "unknown_source",
+    "create_time": 1772816104,
+    "update_time": 1772816104,
+    "_id": "doc-400a555f5d5834d5ffa5771be077ebcd"
+  }
+}

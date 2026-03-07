@@ -1,0 +1,15 @@
+{
+  "job_id": "alert_info_brief_07:2026-03-05",
+  "task": "alert_info_brief_07",
+  "content": "## 🚨 系统任务执行异常 (Immediate Alert)\n\n**任务名称**: info_brief_07\n\n**发生时间**: 2026-03-05 07:01:54\n\n**异常摘要**:\n```\n未知异常\n```\n\n**建议**: 请查看 ~/logs/scheduler.jsonl 获取详细堆栈信息。\n",
+  "push_targets": [
+    "dingtalk"
+  ],
+  "created_at": "2026-03-04T23:01:54.252734+00:00",
+  "retries": 0,
+  "last_error": null,
+  "metadata": {
+    "type": "alert",
+    "level": "critical"
+  }
+}

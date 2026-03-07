@@ -1,0 +1,15 @@
+{
+  "job_id": "alert_us_market_open:2026-03-06",
+  "task": "alert_us_market_open",
+  "content": "## 🚨 系统任务执行异常 (Immediate Alert)\n\n**任务名称**: us_market_open\n\n**发生时间**: 2026-03-06 18:03:24\n\n**异常摘要**:\n```\nAgent 执行失败: LLM Direct Exception: Expecting value: line 1 column 1 (char 0)\n```\n\n**建议**: 请查看 ~/logs/scheduler.jsonl 获取详细堆栈信息。\n",
+  "push_targets": [
+    "dingtalk"
+  ],
+  "created_at": "2026-03-06T10:03:24.512289+00:00",
+  "retries": 0,
+  "last_error": null,
+  "metadata": {
+    "type": "alert",
+    "level": "critical"
+  }
+}

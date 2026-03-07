@@ -1334,6 +1334,41 @@ def job_knowledge_classify():
         logger.error(f"📚 知识分类失败: {result.stderr}")
 
 
+def job_klib_sync():
+    """每日凌晨自动整理知识库: scan -> organize -> vectorize"""
+    global logger
+    logger.info("📚 === 知识库凌晨自动整理流水线 ===")
+    
+    base_dir = Path.home() / "Documents" / "Library"
+    scripts = ["klib_scan.py", "klib_organize.py", "klib_vectorize.py"]
+    
+    for script_name in scripts:
+        script_path = base_dir / script_name
+        if not script_path.exists():
+            logger.warning(f"⚠️ {script_name} 不存在，跳过")
+            continue
+            
+        logger.info(f"⏳ 正在执行: {script_name} ...")
+        try:
+            result = subprocess.run(
+                ["python3", str(script_path)],
+                cwd=str(base_dir),
+                capture_output=True, text=True, timeout=600
+            )
+            if result.returncode == 0:
+                logger.info(f"✅ {script_name} 执行成功:\n{result.stdout.strip()}")
+            else:
+                logger.error(f"❌ {script_name} 执行报错: {result.stderr.strip()}")
+                break # 失败则立刻终端整个流水线
+        except subprocess.TimeoutExpired:
+            logger.error(f"❌ {script_name} 执行超时 (10 分钟)")
+            break
+        except Exception as e:
+            logger.error(f"❌ {script_name} 发生异常: {e}")
+            break
+    logger.info("📚 === 知识库自动整理完成 ===")
+
+
 def job_research_pipeline():
     """Phase 4a: PDF研报扫描与向量化入库"""
     global logger
@@ -1487,6 +1522,7 @@ def main():
         "system_check":    job_system_check,
         "system_metrics":  job_system_metrics_report,  # T-016.2
         "obsidian_sync":   job_obsidian_sync,  # Phase 2: Obsidian 笔记同步
+        "klib_sync":       job_klib_sync, # KLib 每日自动整理知识库
         "fail_test":       job_fail_test,  # T-016.3 (test only)
         "log_rotate":      job_log_rotate,  # T-016.5
         "knowledge_classify": job_knowledge_classify,  # T-076

@@ -222,3 +222,12 @@ data_sources:
     alert_threshold: 5
 # Security Test
 # test
+
+  klib_sync:
+    enabled: true
+    hour: 3
+    minute: 0
+    day_of_week: "mon-sun"
+    description: "每日凌晨3点整理个人知识文档结构 (scan->organize->vectorize)"
+    push_to: []
+    retry: { max_attempts: 1, delay_seconds: 60 }

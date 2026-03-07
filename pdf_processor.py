@@ -44,8 +44,9 @@ MARKET_RESEARCH_PROMPT = """
 
 def parse_pdf_to_md(pdf_path: Path, output_dir: Path) -> str:
     """使用 marker 将 PDF 转换为 Markdown"""
-    # 安装 marker-pdf 后，CLI 工具为 'marker_single'
-    cmd = ["marker_single", str(pdf_path), str(output_dir)]
+    # 使用宿主机 venv 中的 marker-pdf (针对 1.0+ 版本)
+    marker_bin = str(Path.home() / "zhiwei-scheduler" / "venv_marker" / "bin" / "marker_single")
+    cmd = [marker_bin, str(pdf_path), "--output_dir", str(output_dir)]
     logger.info(f"运行 marker 转换: {' '.join(cmd)}")
     
     # 此处可能因为首次运行需要下载模型文件而很慢

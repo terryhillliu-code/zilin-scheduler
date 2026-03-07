@@ -2,10 +2,18 @@
 
 获取数据的底层服务已经就绪，你的任务是按以下工具/技能通道提取数据，并**完全用你自己的口吻**整合成最终的早报文档（如果某个渠道数据获取失败，允许跳过或提供基于系统已知历史背景的内容）。
 
-**【可用数据获取路径】**：
+**【可用数据获取与知识挖掘工具】**：
 1. `exec python3 /root/workspace/skills/daily-brief/brief.py weather --city 杭州`
 2. `exec python3 /root/workspace/skills/situation-report/sitrep.py news --topic china --limit 8 --timeout 20`
 3. `exec python3 /root/workspace/skills/situation-report/sitrep.py crypto --timeout 15`
+4. `exec python3 /root/workspace/skills/knowledge-search/search.py {mode} --query "关键词" --top_k 5` (支持 `keyword` 或 `vector` 模式)
+
+### 🚀 增强检索：迭代检索模式 (Iterative Retrieval Pattern)
+如果预置数据或初次 `exec` 结果不足以精准概括今日趋势，请通过以下循环提取更多知识：
+- **DISPATCH**：使用广义关键词初探。
+- **EVALUATE**：对返回内容打分并识别背景信息缺失点（GAP）。
+- **REFINE**：根据初探中发现的新术语或上下文关键词，精调参数重搜。
+- **LOOP**：循环上述 3 次，直到获取核心内容片段，再整合输出。
 
 ### 📝 输出结构要求：
 - **标题**：`## 📰 知微早报 {date}`

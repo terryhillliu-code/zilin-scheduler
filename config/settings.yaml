@@ -210,6 +210,14 @@ jobs:
     description: "Obsidian 笔记同步到 ChromaDB"
     push_to: []
     retry: { max_attempts: 2, delay_seconds: 30 }
+  klib_sync:
+    enabled: true
+    hour: 3
+    minute: 0
+    day_of_week: "mon-sun"
+    description: "每日凌晨3点整理个人知识文档结构 (scan->organize->vectorize)"
+    push_to: []
+    retry: { max_attempts: 1, delay_seconds: 60 }
 
 data_sources:
   weather:
@@ -220,14 +228,3 @@ data_sources:
     min_score: 2
   crypto:
     alert_threshold: 5
-# Security Test
-# test
-
-  klib_sync:
-    enabled: true
-    hour: 3
-    minute: 0
-    day_of_week: "mon-sun"
-    description: "每日凌晨3点整理个人知识文档结构 (scan->organize->vectorize)"
-    push_to: []
-    retry: { max_attempts: 1, delay_seconds: 60 }

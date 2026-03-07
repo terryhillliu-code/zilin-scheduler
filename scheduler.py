@@ -1337,36 +1337,50 @@ def job_knowledge_classify():
 def job_klib_sync():
     """每日凌晨自动整理知识库: scan -> organize -> vectorize"""
     global logger
+    task_name = "klib_sync"
+    
+    if not acquire_lock(task_name):
+        logger.warning(f"⏩ {task_name} 正在执行中，跳过本次触发")
+        return
+        
+    start_time = time.time()
+    success = False
     logger.info("📚 === 知识库凌晨自动整理流水线 ===")
     
-    base_dir = Path.home() / "Documents" / "Library"
-    scripts = ["klib_scan.py", "klib_organize.py", "klib_vectorize.py"]
-    
-    for script_name in scripts:
-        script_path = base_dir / script_name
-        if not script_path.exists():
-            logger.warning(f"⚠️ {script_name} 不存在，跳过")
-            continue
-            
-        logger.info(f"⏳ 正在执行: {script_name} ...")
-        try:
+    try:
+        base_dir = Path.home() / "Documents" / "Library"
+        scripts = ["klib_scan.py", "klib_organize.py", "klib_sync_obsidian.py", "klib_vectorize.py"]
+        
+        for script_name in scripts:
+            script_path = base_dir / script_name
+            if not script_path.exists():
+                logger.warning(f"⚠️ {script_name} 不存在，跳过")
+                continue
+                
+            logger.info(f"⏳ 正在执行: {script_name} ...")
             result = subprocess.run(
                 ["python3", str(script_path)],
                 cwd=str(base_dir),
-                capture_output=True, text=True, timeout=600
+                capture_output=True, text=True, timeout=1200 # 向量化可能耗时，给 20 分钟
             )
             if result.returncode == 0:
-                logger.info(f"✅ {script_name} 执行成功:\n{result.stdout.strip()}")
+                logger.info(f"✅ {script_name} 执行成功:\n{result.stdout.strip()[:500]}")
             else:
                 logger.error(f"❌ {script_name} 执行报错: {result.stderr.strip()}")
-                break # 失败则立刻终端整个流水线
-        except subprocess.TimeoutExpired:
-            logger.error(f"❌ {script_name} 执行超时 (10 分钟)")
-            break
-        except Exception as e:
-            logger.error(f"❌ {script_name} 发生异常: {e}")
-            break
-    logger.info("📚 === 知识库自动整理完成 ===")
+                return # 失败则立刻终端整个流水线
+        
+        success = True
+        logger.info("📚 === 知识库自动整理完成 ===")
+    except Exception as e:
+        logger.error(f"❌ {task_name} 发生非预期异常: {e}")
+    finally:
+        end_time = time.time()
+        log_task_metrics(
+            task_name=task_name,
+            start_time=start_time,
+            end_time=end_time,
+            success=success
+        )
 
 
 def job_research_pipeline():

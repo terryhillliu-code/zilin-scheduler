@@ -1396,8 +1396,14 @@ def job_klib_sync():
                 continue
                 
             logger.info(f"⏳ 正在执行: {script_name} ...")
+            
+            # klib_organize.py 需要提供源目录参数
+            cmd_args = ["python3", str(script_path)]
+            if script_name == "klib_organize.py":
+                cmd_args.append(str(base_dir / "【待整理】"))
+                
             result = subprocess.run(
-                ["python3", str(script_path)],
+                cmd_args,
                 cwd=str(base_dir),
                 capture_output=True, text=True, timeout=1200 # 向量化可能耗时，给 20 分钟
             )

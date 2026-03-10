@@ -1,0 +1,69 @@
+2026-03-08 00:00:00,977 [INFO] 重试任务开始，队列状态: {'pending': 0, 'processing': 0, 'sent_today': 0, 'sent_total': 49, 'failed': 0}
+2026-03-08 00:00:00,979 [INFO] 重试完成: 重新入队 0 个, 成功推送 0 个
+2026-03-08 00:00:00,979 [INFO] 当前队列状态: {'pending': 0, 'processing': 0, 'sent_today': 0, 'sent_total': 49, 'failed': 0}
+2026-03-08 01:00:00,523 [INFO] 重试任务开始，队列状态: {'pending': 0, 'processing': 0, 'sent_today': 0, 'sent_total': 49, 'failed': 0}
+2026-03-08 01:00:00,532 [INFO] 重试完成: 重新入队 0 个, 成功推送 0 个
+2026-03-08 01:00:00,532 [INFO] 当前队列状态: {'pending': 0, 'processing': 0, 'sent_today': 0, 'sent_total': 49, 'failed': 0}
+2026-03-08 02:00:02,189 [INFO] 重试任务开始，队列状态: {'pending': 0, 'processing': 0, 'sent_today': 0, 'sent_total': 49, 'failed': 0}
+2026-03-08 02:00:02,191 [INFO] 重试完成: 重新入队 0 个, 成功推送 0 个
+2026-03-08 02:00:02,191 [INFO] 当前队列状态: {'pending': 0, 'processing': 0, 'sent_today': 0, 'sent_total': 49, 'failed': 0}
+2026-03-08 03:00:00,658 [INFO] 重试任务开始，队列状态: {'pending': 0, 'processing': 0, 'sent_today': 1, 'sent_total': 50, 'failed': 0}
+2026-03-08 03:00:00,660 [INFO] 重试完成: 重新入队 0 个, 成功推送 0 个
+2026-03-08 03:00:00,660 [INFO] 当前队列状态: {'pending': 0, 'processing': 0, 'sent_today': 1, 'sent_total': 50, 'failed': 0}
+2026-03-08 04:00:01,099 [INFO] 重试任务开始，队列状态: {'pending': 0, 'processing': 0, 'sent_today': 2, 'sent_total': 51, 'failed': 0}
+2026-03-08 04:00:01,101 [INFO] 重试完成: 重新入队 0 个, 成功推送 0 个
+2026-03-08 04:00:01,101 [INFO] 当前队列状态: {'pending': 0, 'processing': 0, 'sent_today': 2, 'sent_total': 51, 'failed': 0}
+2026-03-08 05:00:01,375 [INFO] 重试任务开始，队列状态: {'pending': 0, 'processing': 0, 'sent_today': 2, 'sent_total': 51, 'failed': 0}
+2026-03-08 05:00:01,377 [INFO] 重试完成: 重新入队 0 个, 成功推送 0 个
+2026-03-08 05:00:01,377 [INFO] 当前队列状态: {'pending': 0, 'processing': 0, 'sent_today': 2, 'sent_total': 51, 'failed': 0}
+2026-03-08 06:00:00,620 [INFO] 重试任务开始，队列状态: {'pending': 0, 'processing': 0, 'sent_today': 2, 'sent_total': 51, 'failed': 0}
+2026-03-08 06:00:00,623 [INFO] 重试完成: 重新入队 0 个, 成功推送 0 个
+2026-03-08 06:00:00,623 [INFO] 当前队列状态: {'pending': 0, 'processing': 0, 'sent_today': 2, 'sent_total': 51, 'failed': 0}
+2026-03-08 07:00:01,069 [INFO] 重试任务开始，队列状态: {'pending': 0, 'processing': 0, 'sent_today': 3, 'sent_total': 52, 'failed': 0}
+2026-03-08 07:00:01,071 [INFO] 重试完成: 重新入队 0 个, 成功推送 0 个
+2026-03-08 07:00:01,071 [INFO] 当前队列状态: {'pending': 0, 'processing': 0, 'sent_today': 3, 'sent_total': 52, 'failed': 0}
+2026-03-08 08:00:01,311 [INFO] 重试任务开始，队列状态: {'pending': 0, 'processing': 0, 'sent_today': 4, 'sent_total': 53, 'failed': 0}
+2026-03-08 08:00:01,313 [INFO] 重试完成: 重新入队 0 个, 成功推送 0 个
+2026-03-08 08:00:01,313 [INFO] 当前队列状态: {'pending': 0, 'processing': 0, 'sent_today': 4, 'sent_total': 53, 'failed': 0}
+2026-03-08 09:00:00,604 [INFO] 重试任务开始，队列状态: {'pending': 0, 'processing': 0, 'sent_today': 4, 'sent_total': 53, 'failed': 0}
+2026-03-08 09:00:00,606 [INFO] 重试完成: 重新入队 0 个, 成功推送 0 个
+2026-03-08 09:00:00,606 [INFO] 当前队列状态: {'pending': 0, 'processing': 0, 'sent_today': 4, 'sent_total': 53, 'failed': 0}
+2026-03-08 10:00:01,260 [INFO] 重试任务开始，队列状态: {'pending': 0, 'processing': 0, 'sent_today': 5, 'sent_total': 54, 'failed': 0}
+2026-03-08 10:00:01,263 [INFO] 重试完成: 重新入队 0 个, 成功推送 0 个
+2026-03-08 10:00:01,263 [INFO] 当前队列状态: {'pending': 0, 'processing': 0, 'sent_today': 5, 'sent_total': 54, 'failed': 0}
+2026-03-08 11:00:00,976 [INFO] 重试任务开始，队列状态: {'pending': 0, 'processing': 0, 'sent_today': 6, 'sent_total': 55, 'failed': 0}
+2026-03-08 11:00:00,978 [INFO] 重试完成: 重新入队 0 个, 成功推送 0 个
+2026-03-08 11:00:00,978 [INFO] 当前队列状态: {'pending': 0, 'processing': 0, 'sent_today': 6, 'sent_total': 55, 'failed': 0}
+2026-03-08 12:00:16,713 [INFO] 重试任务开始，队列状态: {'pending': 0, 'processing': 0, 'sent_today': 6, 'sent_total': 55, 'failed': 0}
+2026-03-08 12:00:16,789 [INFO] 重试完成: 重新入队 0 个, 成功推送 0 个
+2026-03-08 12:00:16,789 [INFO] 当前队列状态: {'pending': 0, 'processing': 0, 'sent_today': 6, 'sent_total': 55, 'failed': 0}
+2026-03-08 13:00:01,259 [INFO] 重试任务开始，队列状态: {'pending': 0, 'processing': 0, 'sent_today': 6, 'sent_total': 55, 'failed': 0}
+2026-03-08 13:00:01,261 [INFO] 重试完成: 重新入队 0 个, 成功推送 0 个
+2026-03-08 13:00:01,261 [INFO] 当前队列状态: {'pending': 0, 'processing': 0, 'sent_today': 6, 'sent_total': 55, 'failed': 0}
+2026-03-08 14:00:00,740 [INFO] 重试任务开始，队列状态: {'pending': 0, 'processing': 0, 'sent_today': 6, 'sent_total': 55, 'failed': 0}
+2026-03-08 14:00:00,741 [INFO] 重试完成: 重新入队 0 个, 成功推送 0 个
+2026-03-08 14:00:00,742 [INFO] 当前队列状态: {'pending': 0, 'processing': 0, 'sent_today': 6, 'sent_total': 55, 'failed': 0}
+2026-03-08 15:00:00,873 [INFO] 重试任务开始，队列状态: {'pending': 0, 'processing': 0, 'sent_today': 7, 'sent_total': 56, 'failed': 0}
+2026-03-08 15:00:00,875 [INFO] 重试完成: 重新入队 0 个, 成功推送 0 个
+2026-03-08 15:00:00,875 [INFO] 当前队列状态: {'pending': 0, 'processing': 0, 'sent_today': 7, 'sent_total': 56, 'failed': 0}
+2026-03-08 16:00:00,828 [INFO] 重试任务开始，队列状态: {'pending': 0, 'processing': 0, 'sent_today': 7, 'sent_total': 56, 'failed': 0}
+2026-03-08 16:00:00,830 [INFO] 重试完成: 重新入队 0 个, 成功推送 0 个
+2026-03-08 16:00:00,830 [INFO] 当前队列状态: {'pending': 0, 'processing': 0, 'sent_today': 7, 'sent_total': 56, 'failed': 0}
+2026-03-08 17:00:01,229 [INFO] 重试任务开始，队列状态: {'pending': 0, 'processing': 0, 'sent_today': 7, 'sent_total': 56, 'failed': 0}
+2026-03-08 17:00:01,230 [INFO] 重试完成: 重新入队 0 个, 成功推送 0 个
+2026-03-08 17:00:01,231 [INFO] 当前队列状态: {'pending': 0, 'processing': 0, 'sent_today': 7, 'sent_total': 56, 'failed': 0}
+2026-03-08 18:00:01,220 [INFO] 重试任务开始，队列状态: {'pending': 0, 'processing': 0, 'sent_today': 7, 'sent_total': 56, 'failed': 0}
+2026-03-08 18:00:01,222 [INFO] 重试完成: 重新入队 0 个, 成功推送 0 个
+2026-03-08 18:00:01,222 [INFO] 当前队列状态: {'pending': 0, 'processing': 0, 'sent_today': 7, 'sent_total': 56, 'failed': 0}
+2026-03-08 19:00:00,970 [INFO] 重试任务开始，队列状态: {'pending': 0, 'processing': 0, 'sent_today': 7, 'sent_total': 56, 'failed': 0}
+2026-03-08 19:00:00,972 [INFO] 重试完成: 重新入队 0 个, 成功推送 0 个
+2026-03-08 19:00:00,972 [INFO] 当前队列状态: {'pending': 0, 'processing': 0, 'sent_today': 7, 'sent_total': 56, 'failed': 0}
+2026-03-08 20:00:00,822 [INFO] 重试任务开始，队列状态: {'pending': 0, 'processing': 0, 'sent_today': 7, 'sent_total': 56, 'failed': 0}
+2026-03-08 20:00:00,824 [INFO] 重试完成: 重新入队 0 个, 成功推送 0 个
+2026-03-08 20:00:00,824 [INFO] 当前队列状态: {'pending': 0, 'processing': 0, 'sent_today': 7, 'sent_total': 56, 'failed': 0}
+2026-03-08 22:00:00,779 [INFO] 重试任务开始，队列状态: {'pending': 0, 'processing': 0, 'sent_today': 7, 'sent_total': 56, 'failed': 0}
+2026-03-08 22:00:00,781 [INFO] 重试完成: 重新入队 0 个, 成功推送 0 个
+2026-03-08 22:00:00,781 [INFO] 当前队列状态: {'pending': 0, 'processing': 0, 'sent_today': 7, 'sent_total': 56, 'failed': 0}
+2026-03-08 23:00:01,020 [INFO] 重试任务开始，队列状态: {'pending': 0, 'processing': 0, 'sent_today': 7, 'sent_total': 56, 'failed': 0}
+2026-03-08 23:00:01,023 [INFO] 重试完成: 重新入队 0 个, 成功推送 0 个
+2026-03-08 23:00:01,023 [INFO] 当前队列状态: {'pending': 0, 'processing': 0, 'sent_today': 7, 'sent_total': 56, 'failed': 0}

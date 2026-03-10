@@ -1,0 +1,242 @@
+2026-03-09 00:00:01,419 [INFO] 重试任务开始，队列状态: {'pending': 0, 'processing': 0, 'sent_today': 0, 'sent_total': 56, 'failed': 0}
+2026-03-09 00:00:01,421 [INFO] 重试完成: 重新入队 0 个, 成功推送 0 个
+2026-03-09 00:00:01,421 [INFO] 当前队列状态: {'pending': 0, 'processing': 0, 'sent_today': 0, 'sent_total': 56, 'failed': 0}
+2026-03-09 01:00:01,082 [INFO] 重试任务开始，队列状态: {'pending': 0, 'processing': 0, 'sent_today': 0, 'sent_total': 56, 'failed': 0}
+2026-03-09 01:00:01,083 [INFO] 重试完成: 重新入队 0 个, 成功推送 0 个
+2026-03-09 01:00:01,083 [INFO] 当前队列状态: {'pending': 0, 'processing': 0, 'sent_today': 0, 'sent_total': 56, 'failed': 0}
+2026-03-09 02:00:02,598 [INFO] 重试任务开始，队列状态: {'pending': 0, 'processing': 0, 'sent_today': 0, 'sent_total': 56, 'failed': 0}
+2026-03-09 02:00:02,600 [INFO] 重试完成: 重新入队 0 个, 成功推送 0 个
+2026-03-09 02:00:02,600 [INFO] 当前队列状态: {'pending': 0, 'processing': 0, 'sent_today': 0, 'sent_total': 56, 'failed': 0}
+2026-03-09 03:00:00,780 [INFO] 重试任务开始，队列状态: {'pending': 0, 'processing': 0, 'sent_today': 1, 'sent_total': 57, 'failed': 0}
+2026-03-09 03:00:00,781 [INFO] 重试完成: 重新入队 0 个, 成功推送 0 个
+2026-03-09 03:00:00,781 [INFO] 当前队列状态: {'pending': 0, 'processing': 0, 'sent_today': 1, 'sent_total': 57, 'failed': 0}
+2026-03-09 04:00:00,795 [INFO] 重试任务开始，队列状态: {'pending': 0, 'processing': 0, 'sent_today': 2, 'sent_total': 58, 'failed': 0}
+2026-03-09 04:00:00,797 [INFO] 重试完成: 重新入队 0 个, 成功推送 0 个
+2026-03-09 04:00:00,797 [INFO] 当前队列状态: {'pending': 0, 'processing': 0, 'sent_today': 2, 'sent_total': 58, 'failed': 0}
+2026-03-09 05:00:00,789 [INFO] 重试任务开始，队列状态: {'pending': 0, 'processing': 0, 'sent_today': 2, 'sent_total': 58, 'failed': 0}
+2026-03-09 05:00:00,791 [INFO] 重试完成: 重新入队 0 个, 成功推送 0 个
+2026-03-09 05:00:00,791 [INFO] 当前队列状态: {'pending': 0, 'processing': 0, 'sent_today': 2, 'sent_total': 58, 'failed': 0}
+2026-03-09 06:00:01,327 [INFO] 重试任务开始，队列状态: {'pending': 0, 'processing': 0, 'sent_today': 2, 'sent_total': 58, 'failed': 0}
+2026-03-09 06:00:01,329 [INFO] 重试完成: 重新入队 0 个, 成功推送 0 个
+2026-03-09 06:00:01,329 [INFO] 当前队列状态: {'pending': 0, 'processing': 0, 'sent_today': 2, 'sent_total': 58, 'failed': 0}
+2026-03-09 07:00:00,615 [INFO] 重试任务开始，队列状态: {'pending': 0, 'processing': 0, 'sent_today': 3, 'sent_total': 59, 'failed': 0}
+2026-03-09 07:00:00,616 [INFO] 重试完成: 重新入队 0 个, 成功推送 0 个
+2026-03-09 07:00:00,616 [INFO] 当前队列状态: {'pending': 0, 'processing': 0, 'sent_today': 3, 'sent_total': 59, 'failed': 0}
+2026-03-09 08:00:01,387 [INFO] 重试任务开始，队列状态: {'pending': 0, 'processing': 0, 'sent_today': 4, 'sent_total': 60, 'failed': 0}
+2026-03-09 08:00:01,389 [INFO] 重试完成: 重新入队 0 个, 成功推送 0 个
+2026-03-09 08:00:01,389 [INFO] 当前队列状态: {'pending': 0, 'processing': 0, 'sent_today': 4, 'sent_total': 60, 'failed': 0}
+2026-03-09 10:00:01,140 [INFO] 重试任务开始，队列状态: {'pending': 0, 'processing': 0, 'sent_today': 4, 'sent_total': 60, 'failed': 0}
+2026-03-09 10:00:01,142 [INFO] 重试完成: 重新入队 0 个, 成功推送 0 个
+2026-03-09 10:00:01,142 [INFO] 当前队列状态: {'pending': 0, 'processing': 0, 'sent_today': 4, 'sent_total': 60, 'failed': 0}
+2026-03-09 11:00:00,977 [INFO] 重试任务开始，队列状态: {'pending': 0, 'processing': 0, 'sent_today': 5, 'sent_total': 61, 'failed': 0}
+2026-03-09 11:00:00,980 [INFO] 重试完成: 重新入队 0 个, 成功推送 0 个
+2026-03-09 11:00:00,980 [INFO] 当前队列状态: {'pending': 0, 'processing': 0, 'sent_today': 5, 'sent_total': 61, 'failed': 0}
+2026-03-09 12:00:00,549 [INFO] 重试任务开始，队列状态: {'pending': 0, 'processing': 0, 'sent_today': 5, 'sent_total': 61, 'failed': 0}
+2026-03-09 12:00:00,577 [INFO] 重试完成: 重新入队 0 个, 成功推送 0 个
+2026-03-09 12:00:00,578 [INFO] 当前队列状态: {'pending': 0, 'processing': 0, 'sent_today': 5, 'sent_total': 61, 'failed': 0}
+2026-03-09 13:00:01,101 [INFO] 重试任务开始，队列状态: {'pending': 0, 'processing': 0, 'sent_today': 5, 'sent_total': 61, 'failed': 0}
+2026-03-09 13:00:01,103 [INFO] 重试完成: 重新入队 0 个, 成功推送 0 个
+2026-03-09 13:00:01,103 [INFO] 当前队列状态: {'pending': 0, 'processing': 0, 'sent_today': 5, 'sent_total': 61, 'failed': 0}
+2026-03-09 14:00:01,033 [INFO] 重试任务开始，队列状态: {'pending': 0, 'processing': 0, 'sent_today': 5, 'sent_total': 61, 'failed': 0}
+2026-03-09 14:00:01,034 [INFO] 重试完成: 重新入队 0 个, 成功推送 0 个
+2026-03-09 14:00:01,034 [INFO] 当前队列状态: {'pending': 0, 'processing': 0, 'sent_today': 5, 'sent_total': 61, 'failed': 0}
+2026-03-09 15:00:01,528 [INFO] 重试任务开始，队列状态: {'pending': 0, 'processing': 0, 'sent_today': 6, 'sent_total': 62, 'failed': 0}
+2026-03-09 15:00:01,529 [INFO] 重试完成: 重新入队 0 个, 成功推送 0 个
+2026-03-09 15:00:01,529 [INFO] 当前队列状态: {'pending': 0, 'processing': 0, 'sent_today': 6, 'sent_total': 62, 'failed': 0}
+2026-03-09 16:00:00,937 [INFO] 重试任务开始，队列状态: {'pending': 0, 'processing': 0, 'sent_today': 6, 'sent_total': 62, 'failed': 0}
+2026-03-09 16:00:00,939 [INFO] 重试完成: 重新入队 0 个, 成功推送 0 个
+2026-03-09 16:00:00,939 [INFO] 当前队列状态: {'pending': 0, 'processing': 0, 'sent_today': 6, 'sent_total': 62, 'failed': 0}
+2026-03-09 17:00:00,765 [INFO] 重试任务开始，队列状态: {'pending': 0, 'processing': 0, 'sent_today': 6, 'sent_total': 62, 'failed': 0}
+2026-03-09 17:00:00,766 [INFO] 重试完成: 重新入队 0 个, 成功推送 0 个
+2026-03-09 17:00:00,766 [INFO] 当前队列状态: {'pending': 0, 'processing': 0, 'sent_today': 6, 'sent_total': 62, 'failed': 0}
+2026-03-09 18:00:00,909 [INFO] 重试任务开始，队列状态: {'pending': 0, 'processing': 0, 'sent_today': 6, 'sent_total': 62, 'failed': 0}
+2026-03-09 18:00:00,910 [INFO] 重试完成: 重新入队 0 个, 成功推送 0 个
+2026-03-09 18:00:00,910 [INFO] 当前队列状态: {'pending': 0, 'processing': 0, 'sent_today': 6, 'sent_total': 62, 'failed': 0}
+2026-03-09 19:00:00,699 [INFO] 重试任务开始，队列状态: {'pending': 0, 'processing': 0, 'sent_today': 6, 'sent_total': 62, 'failed': 0}
+2026-03-09 19:00:00,700 [INFO] 重试完成: 重新入队 0 个, 成功推送 0 个
+2026-03-09 19:00:00,700 [INFO] 当前队列状态: {'pending': 0, 'processing': 0, 'sent_today': 6, 'sent_total': 62, 'failed': 0}
+2026-03-09 21:00:01,516 [INFO] 重试任务开始，队列状态: {'pending': 0, 'processing': 0, 'sent_today': 6, 'sent_total': 62, 'failed': 0}
+2026-03-09 21:00:01,517 [INFO] 重试完成: 重新入队 0 个, 成功推送 0 个
+2026-03-09 21:00:01,517 [INFO] 当前队列状态: {'pending': 0, 'processing': 0, 'sent_today': 6, 'sent_total': 62, 'failed': 0}
+2026-03-09 22:00:00,893 [INFO] 重试任务开始，队列状态: {'pending': 0, 'processing': 0, 'sent_today': 6, 'sent_total': 62, 'failed': 0}
+2026-03-09 22:00:00,894 [INFO] 重试完成: 重新入队 0 个, 成功推送 0 个
+2026-03-09 22:00:00,894 [INFO] 当前队列状态: {'pending': 0, 'processing': 0, 'sent_today': 6, 'sent_total': 62, 'failed': 0}
+2026-03-09 22:52:18,587 [INFO] ==================================================
+2026-03-09 22:52:18,588 [INFO] 🤖 知微定时任务系统 v3.4 启动
+2026-03-09 22:52:18,588 [INFO]    架构: 调度器 → Agent(LLM) → 推送
+2026-03-09 22:52:18,588 [INFO]    特性: Prompt 外部化、重试机制、触发器监听 (v3.4)
+2026-03-09 22:52:18,588 [INFO] ==================================================
+2026-03-09 22:52:19,965 [INFO] 🏥 系统健康检查: 🖥️ 系统健康状况 - CPU: 63.4%, 内存: 67.8%, 磁盘: 5.5%, 调度器进程内存: 36.14MB, 线程数: 1, 打开文件数: 3
+2026-03-09 22:52:20,106 [INFO] 👀 触发器监听器已启动 (间隔 5s)
+2026-03-09 22:52:20,106 [WARNING] ⚠️ 未知触发器: manual_retry.run
+2026-03-09 22:52:20,106 [INFO]    监控目录: /Users/liufang/zhiwei-scheduler/triggers
+2026-03-09 22:52:20,106 [INFO]    支持触发器: ['tanwei.run', 'arxiv.run', 'system.run', 'morning.run', 'noon.run']
+2026-03-09 22:52:20,106 [INFO] 👀 触发器监听器已启动
+2026-03-09 22:52:20,106 [INFO]    📅 系统巡检 [06:30 mon-sun]
+2026-03-09 22:52:20,107 [INFO]    📅 运维指标报告 [10:35 mon-sun]
+2026-03-09 22:52:20,107 [INFO]    📅 arXiv 论文精选 [07:00 mon-sun]
+2026-03-09 22:52:20,107 [INFO]    📅 美股收盘复盘 [08:00 tue-sat]
+2026-03-09 22:52:20,107 [INFO]    📅 每日早报 [09:30 mon-sun]
+2026-03-09 22:52:20,107 [INFO]    📅 每日午报 [14:30 mon-sun]
+2026-03-09 22:52:20,107 [INFO]    📅 美股开盘播报 [21:00 mon-fri]
+2026-03-09 22:52:20,107 [INFO]    📅 日志滚动（10MB/5版本） [03:00 mon-sun]
+2026-03-09 22:52:20,107 [INFO]    📅 知识管线分类 [23:00 mon-sun]
+2026-03-09 22:52:20,108 [INFO]    📅 PDF 研报扫描与向量化入库 [23:30 mon-sun]
+2026-03-09 22:52:20,108 [INFO]    📅 知识图谱自动化维护 (GraphRAG Indexing) [02:30 mon-sun]
+2026-03-09 22:52:20,108 [INFO]    📅 Obsidian 笔记同步到 ChromaDB [02:00 mon-sun]
+2026-03-09 22:52:20,108 [INFO]    📅 每日凌晨3点整理个人知识文档结构 (scan->organize->vectorize) [03:00 mon-sun]
+2026-03-09 22:52:20,108 [INFO]    💚 系统健康检查已启用 [每小时]
+2026-03-09 23:00:00,131 [INFO] 📚 === 知识分类 ===
+2026-03-09 23:00:00,802 [INFO] 重试任务开始，队列状态: {'pending': 0, 'processing': 0, 'sent_today': 6, 'sent_total': 62, 'failed': 0}
+2026-03-09 23:00:00,803 [INFO] 重试完成: 重新入队 0 个, 成功推送 0 个
+2026-03-09 23:00:00,803 [INFO] 当前队列状态: {'pending': 0, 'processing': 0, 'sent_today': 6, 'sent_total': 62, 'failed': 0}
+2026-03-09 23:00:01,202 [INFO] 🏥 系统健康检查: 🖥️ 系统健康状况 - CPU: 17.8%, 内存: 64.3%, 磁盘: 5.4%, 调度器进程内存: 19.48MB, 线程数: 4, 打开文件数: 3
+2026-03-09 23:00:01,203 [INFO] ✅ 任务完成: health_check
+2026-03-09 23:00:05,493 [INFO] 📚 知识分类完成:
+
+2026-03-09 23:00:05,494 [INFO] ✅ 任务完成: knowledge_classify
+2026-03-09 23:30:00,124 [INFO] 📄 === 研报扫描流水线 ===
+2026-03-09 23:30:13,836 [INFO] 📄 研报流水线完成:
+📊 ChromaDB 中已有 519 个文档
+
+2026-03-09 23:30:13,838 [INFO] ✅ 任务完成: research_pipeline
+2026-03-10 00:00:01,247 [INFO] 🏥 系统健康检查: 🖥️ 系统健康状况 - CPU: 36.9%, 内存: 81.5%, 磁盘: 5.6%, 调度器进程内存: 12.89MB, 线程数: 4, 打开文件数: 3
+2026-03-10 00:00:01,251 [INFO] ✅ 任务完成: health_check
+2026-03-10 01:00:01,227 [INFO] 🏥 系统健康检查: 🖥️ 系统健康状况 - CPU: 21.9%, 内存: 80.8%, 磁盘: 5.6%, 调度器进程内存: 13.02MB, 线程数: 4, 打开文件数: 3
+2026-03-10 01:00:01,229 [INFO] ✅ 任务完成: health_check
+2026-03-10 02:00:00,148 [INFO] 🔄 === Obsidian 笔记同步 ===
+2026-03-10 02:00:01,275 [INFO] 🏥 系统健康检查: 🖥️ 系统健康状况 - CPU: 29.8%, 内存: 77.9%, 磁盘: 5.6%, 调度器进程内存: 21.77MB, 线程数: 4, 打开文件数: 3
+2026-03-10 02:00:01,276 [INFO] ✅ 任务完成: health_check
+2026-03-10 02:00:28,243 [INFO] ✅ Obsidian 笔记同步完成
+2026-03-10 02:00:28,247 [INFO] ✅ 任务完成: obsidian_sync
+2026-03-10 02:30:00,149 [INFO] 🛠️ === 启动知识图谱自动化维护 (GraphRAG Indexing) ===
+2026-03-10 03:00:00,144 [INFO] 📚 === 知识库凌晨自动整理流水线 ===
+2026-03-10 03:00:00,145 [INFO] 📦 === 日志滚动 ===
+2026-03-10 03:00:00,152 [INFO] ⏳ 正在执行: klib_scan.py ...
+2026-03-10 03:00:00,192 [INFO] ✅ 任务完成: cleanup
+2026-03-10 03:00:00,228 [ERROR] ❌ 知识图谱维护异常: Command '['/Users/liufang/zhiwei-scheduler/venv/bin/python3', '/Users/liufang/zhiwei-scheduler/graph_index_cli.py']' timed out after 1800 seconds
+2026-03-10 03:00:00,244 [ERROR] ❌ 任务异常: graph_maintenance
+2026-03-10 03:00:00,253 [INFO] 📡 正在向统一消息总线投递任务: alert_graph_maintenance | ['dingtalk']
+2026-03-10 03:00:00,258 [INFO] ✅ 已投递至 MessageBus: alert_graph_maintenance:2026-03-10
+2026-03-10 03:00:00,258 [INFO] ✅ 告警已发送: graph_maintenance
+2026-03-10 03:00:00,258 [WARNING] 🔄 安排重试 [graph_maintenance]: 1/3
+2026-03-10 03:00:00,312 [INFO] 📦 日志滚动结果:
+=== 2026-03-10 03:00:00 日志滚动检查 ===
+  ✓ /Users/liufang/logs/backup.log (1MB) 无需滚动
+  ✓ /Users/liufang/logs/cleanup.log (1MB) 无需滚动
+  ✓ /Users/liufang/logs/connection_monitor.log (1MB) 无需滚动
+  ✓ /Users/liufang/logs/dev-worker.error.log (1MB) 无需滚动
+  ✓ /Users/liufang/logs/dev-worker.log (1MB) 无需滚动
+  ✓ /Users/liufang/logs/dispatcher.error.log (2MB) 无需滚动
+  ✓ /Users/liufang/logs/dispatcher.log (1MB) 无需滚动
+  ✓ /Users/liufang/logs/executor_stderr.log (1MB) 无需滚动
+  ✓ /Users/liufang/logs/executor_stdout.log (0MB) 无需滚动
+  ✓ /Users/liufang/logs/feishu_bot.log (1MB) 无需滚动
+  ✓ /Users/liufang/logs/knowledge_pipeline.log (1MB) 无需滚动
+  ✓ /Users/liufang/logs/retry.log (1MB) 无需滚动
+  ✓ /Users/liufang/logs/scheduler.log (1MB) 无需滚动
+  ✓ /Users/liufang/logs/task_executor.log (1MB) 无需滚动
+  ✓ /Users/liufang/logs/task_orchestrator.log (0MB) 无需滚动
+  ✓ /Users/liufang/logs/validation_20260304.log (1MB) 无需滚动
+  ✓ /Users/liufang/logs/vectorize.log (1MB) 无需滚动
+  ✓ /Users/liufang/logs/vectorize_core.log (1MB) 无需滚动
+  ✓ /Users/liufang/logs/vectorize_important.log (1MB) 无需滚动
+  ✓ /Users/liufang/logs/vectorize_important_v2.log (0MB) 无需滚动
+  ✓ /Users/liufang/logs/vectorize_important_v3.log (0MB) 无需滚动
+  ✓ /Users/liufang/logs/watchdog.log (1MB) 无需滚动
+  ✓ /Users/liufang/logs/weekly.log (1MB) 无需滚动
+  ✓ /Users/liufang/logs/zhiwei-bot.error.log (1MB) 无需滚动
+  ✓ /Users/liufang/logs/zhiwei-bot.log (3MB) 无需滚动
+  ✓ /Users/liufang/logs/zhiwei-scheduler.error.log (1MB) 无需滚动
+  ✓ /Users/liufang/logs/zhiwei-scheduler.log (1MB) 无需滚动
+  ✓ /Users/liufang/logs/dev_tasks.jsonl (1MB) 无需滚动
+  ✓ /Users/liufang/logs/doc_archive_log.jsonl (1MB) 无需滚动
+  ✓ /Users/liufang/logs/llm_usage.jsonl (1MB) 无需滚动
+  ✓ /Users/liufang/logs/scheduler.jsonl (1MB) 无需滚动
+=== 日志滚动完成 ===
+
+2026-03-10 03:00:00,312 [INFO] ✅ 任务完成: log_rotate
+2026-03-10 03:00:01,311 [INFO] 🏥 系统健康检查: 🖥️ 系统健康状况 - CPU: 33.8%, 内存: 78.7%, 磁盘: 5.6%, 调度器进程内存: 34.27MB, 线程数: 8, 打开文件数: 7
+2026-03-10 03:00:01,312 [INFO] ✅ 任务完成: health_check
+2026-03-10 03:00:03,093 [INFO] ✅ klib_scan.py 执行成功:
+📚 扫描目录: /Users/liufang/Documents/Library
+📦 数据库: /Users/liufang/Documents/Library/klib.db
+--------------------------------------------------
+  ⚪ large_files_report [待整理]
+  ⚠️  Hash重复: GenAI on Google Cloud (for . .) (Ayo Adedeji, Lavi Nigam etc.).epub
+      已有: 1772083683 GenAI on Google Cloud (for . .) (Ayo Adedeji, Lavi Nigam etc.).epub
+  ⚠️  Hash重复: AI Agents The Definitive Guide (Nicole Koenigstein).pdf
+      已有: 1772084756 AI Agents The Definitive Guide (Nicole Koenigstein).pdf
+  ⚠️  Hash重复:
+2026-03-10 03:00:03,093 [INFO] ⏳ 正在执行: klib_organize.py ...
+2026-03-10 03:00:04,284 [INFO] ✅ klib_organize.py 执行成功:
+📂 整理目录: /Users/liufang/Documents/Library/【待整理】
+📚 目标库: /Users/liufang/Documents/Library
+🔧 模式: 执行模式
+--------------------------------------------------
+  ⏭️  归档重复项: [2025]_20250807 SSDT 302 1 Bhat 08 07 15.33.17 copy.pdf
+      Hash重复: [2025]_20250807 SSDT 302 1 Bhat 08 07 15.33.17 copy.pdf -> 【重复归档】/
+  ⏭️  归档重复项: [2025]_20250805 DCTR 102 1 Stenfort copy.pdf
+      Hash重复: [2025]_20250805 DCTR 102 1 Stenfort copy.pdf -> 【重复归档】/
+  ⏭️  归档重复项: [2025]_20250806 AIML 201 1 Mishra 08 05 16.52.40 copy.pdf
+  
+2026-03-10 03:00:04,284 [INFO] ⏳ 正在执行: klib_sync_obsidian.py ...
+2026-03-10 03:00:04,438 [INFO] ✅ klib_sync_obsidian.py 执行成功:
+🔄 开始同步 klib 索引到 Obsidian: /Users/liufang/Documents/ZhiweiVault/10_Knowledge_Base/Reports
+✅ 同步完成!
+   - 新创建卡片: 719
+   - 跳过已存在: 0
+   - 错误数量:   0
+2026-03-10 03:00:04,439 [INFO] ⏳ 正在执行: klib_vectorize.py ...
+2026-03-10 03:00:04,599 [ERROR] ❌ klib_vectorize.py 执行报错: 
+2026-03-10 03:00:04,600 [DEBUG] 📊 任务指标已记录: klib_sync
+2026-03-10 03:00:04,601 [INFO] 📡 正在向统一消息总线投递任务: alert_klib_sync | ['dingtalk']
+2026-03-10 03:00:04,602 [INFO] ✅ 已投递至 MessageBus: alert_klib_sync:2026-03-10
+2026-03-10 03:00:04,602 [INFO] ✅ 告警已发送: klib_sync
+2026-03-10 03:00:04,602 [INFO] ✅ 任务完成: klib_sync
+2026-03-10 04:00:01,195 [INFO] 🏥 系统健康检查: 🖥️ 系统健康状况 - CPU: 21.4%, 内存: 79.9%, 磁盘: 5.6%, 调度器进程内存: 19.14MB, 线程数: 8, 打开文件数: 9
+2026-03-10 04:00:01,197 [INFO] ✅ 任务完成: health_check
+2026-03-10 05:00:01,275 [INFO] 🏥 系统健康检查: 🖥️ 系统健康状况 - CPU: 20.4%, 内存: 76.6%, 磁盘: 5.6%, 调度器进程内存: 19.17MB, 线程数: 8, 打开文件数: 9
+2026-03-10 05:00:01,278 [INFO] ✅ 任务完成: health_check
+2026-03-10 06:00:01,282 [INFO] 🏥 系统健康检查: 🖥️ 系统健康状况 - CPU: 19.7%, 内存: 76.7%, 磁盘: 5.6%, 调度器进程内存: 19.08MB, 线程数: 8, 打开文件数: 9
+2026-03-10 06:00:01,285 [INFO] ✅ 任务完成: health_check
+2026-03-10 06:30:00,144 [INFO] 🔧 === 系统巡检 ===
+2026-03-10 06:30:01,303 [INFO] 🏥 系统健康检查: 🖥️ 系统健康状况 - CPU: 15.6%, 内存: 76.3%, 磁盘: 5.6%, 调度器进程内存: 19.61MB, 线程数: 8, 打开文件数: 9
+2026-03-10 06:30:36,235 [INFO] 💾 输出已保存: system_check_2026-03-10.md
+2026-03-10 06:30:36,239 [INFO] 📦 结果已保存: /Users/liufang/zhiwei-scheduler/outputs/artifacts/pending/system_check_2026-03-10.json
+2026-03-10 06:30:36,240 [INFO] 📡 正在向统一消息总线投递任务: system_check | ['dingtalk', 'feishu']
+2026-03-10 06:30:36,242 [INFO] ✅ 已投递至 MessageBus: system_check:2026-03-10
+2026-03-10 06:30:36,242 [INFO] ✅ 系统巡检完成 ✅
+2026-03-10 06:30:36,243 [INFO] ✅ 任务完成: system_check
+2026-03-10 07:00:00,154 [INFO] 📄 === arXiv 论文精选 ===
+2026-03-10 07:00:01,308 [INFO] 🏥 系统健康检查: 🖥️ 系统健康状况 - CPU: 26.4%, 内存: 76.0%, 磁盘: 5.6%, 调度器进程内存: 21.66MB, 线程数: 8, 打开文件数: 11
+2026-03-10 07:00:01,309 [INFO] ✅ 任务完成: health_check
+2026-03-10 07:05:03,591 [INFO] 💾 输出已保存: arxiv_papers_2026-03-10.md
+2026-03-10 07:05:03,596 [INFO] 📦 结果已保存: /Users/liufang/zhiwei-scheduler/outputs/artifacts/pending/arxiv_papers_2026-03-10.json
+2026-03-10 07:05:03,597 [INFO] 📡 正在向统一消息总线投递任务: arxiv_papers | ['dingtalk', 'feishu']
+2026-03-10 07:05:03,599 [INFO] ✅ 已投递至 MessageBus: arxiv_papers:2026-03-10
+2026-03-10 07:05:03,599 [INFO] ✅ arxiv_papers 推送成功
+2026-03-10 07:05:03,600 [DEBUG] 📊 任务指标已记录: arxiv_papers
+2026-03-10 07:05:03,601 [INFO] ✅ 任务完成: arxiv_papers
+2026-03-10 10:35:00,089 [INFO] 📊 === 运维指标报告 ===
+2026-03-10 10:35:01,697 [INFO] 💾 输出已保存: system_metrics_2026-03-10.md
+2026-03-10 10:35:01,701 [INFO] 📦 结果已保存: /Users/liufang/zhiwei-scheduler/outputs/artifacts/pending/system_metrics_2026-03-10.json
+2026-03-10 10:35:01,702 [INFO] 📡 正在向统一消息总线投递任务: system_metrics | ['dingtalk']
+2026-03-10 10:35:01,708 [ERROR] ❌ 投递至 MessageBus 失败: file is not a database
+2026-03-10 10:35:01,710 [WARNING] ❌ 投递 MessageBus 失败: system_metrics:2026-03-10, 错误: {'dingtalk': 'file is not a database'}
+2026-03-10 10:35:01,710 [INFO] ✅ 运维指标报告推送完成
+2026-03-10 10:35:01,711 [DEBUG] 📊 任务指标已记录: system_metrics
+2026-03-10 10:35:01,713 [INFO] 📡 正在向统一消息总线投递任务: alert_system_metrics | ['dingtalk']
+2026-03-10 10:35:01,714 [ERROR] ❌ 投递至 MessageBus 失败: file is not a database
+2026-03-10 10:35:01,715 [WARNING] ❌ 投递 MessageBus 失败: alert_system_metrics:2026-03-10, 错误: {'dingtalk': 'file is not a database'}
+2026-03-10 10:35:01,715 [WARNING] ⚠️ 告警发送失败: system_metrics
+2026-03-10 10:35:01,716 [INFO] ✅ 任务完成: system_metrics
+2026-03-10 11:00:01,253 [INFO] 🏥 系统健康检查: 🖥️ 系统健康状况 - CPU: 12.8%, 内存: 68.5%, 磁盘: 5.7%, 调度器进程内存: 15.84MB, 线程数: 8, 打开文件数: 16
+2026-03-10 11:00:01,255 [INFO] ✅ 任务完成: health_check
+2026-03-10 12:00:01,237 [INFO] 🏥 系统健康检查: 🖥️ 系统健康状况 - CPU: 86.9%, 内存: 79.1%, 磁盘: 5.6%, 调度器进程内存: 15.55MB, 线程数: 8, 打开文件数: 16
+2026-03-10 12:00:01,239 [INFO] ✅ 任务完成: health_check
+2026-03-10 13:00:01,139 [INFO] 🏥 系统健康检查: 🖥️ 系统健康状况 - CPU: 74.2%, 内存: 77.6%, 磁盘: 5.6%, 调度器进程内存: 14.98MB, 线程数: 8, 打开文件数: 16
+2026-03-10 13:00:01,141 [INFO] ✅ 任务完成: health_check
+2026-03-10 14:00:01,157 [INFO] 🏥 系统健康检查: 🖥️ 系统健康状况 - CPU: 100.0%, 内存: 77.2%, 磁盘: 5.6%, 调度器进程内存: 15.05MB, 线程数: 8, 打开文件数: 16
+2026-03-10 14:00:01,158 [WARNING] ⚠️ 系统资源使用率过高: CPU=100.0%, 内存=77.2%, 磁盘=5.6%
+2026-03-10 14:00:01,161 [INFO] ✅ 任务完成: health_check

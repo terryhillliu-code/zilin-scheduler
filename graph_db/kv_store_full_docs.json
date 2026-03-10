@@ -19,5 +19,341 @@
     "create_time": 1772816104,
     "update_time": 1772816104,
     "_id": "doc-400a555f5d5834d5ffa5771be077ebcd"
+  },
+  "doc-d1c6054a6d87cf6975db5c63bd96f9cd": {
+    "content": "---\ntitle: \"7801 - Efficient AI Serving at Scale- Processing Near Memory Acceleration for LLMs and Vector Search_v2_v2\"\nauthor: \"未知\"\ndate: 2026-03-07\ntype: report\nformat: \".pdf\"\npriority: \"core\"\nvectorized: 未向量化\ntags:\n  - 研报库/核心】服务器架构\n  - 优先级/核心\n---\n\n\n# 7801 - Efficient AI Serving at Scale- Processing Near Memory Acceleration for LLMs and Vector Search_v2_v2\n\n🔗 **原文链接**: [点击打开本地文档](file:///Users/liufang/Documents/Library/【核心】服务器架构/7801%20-%20Efficient%20AI%20Serving%20at%20Scale-%20Processing%20Near%20Memory%20Acceleration%20for%20LLMs%20and%20Vector%20Search_v2_v2.pdf)\n\n> [!info] 文档信息\n> - **格式**: `.pdf`\n> - **文件大小**: `1.77 MB`\n> - **入库时间**: `2026-03-07 19:05:23`\n\n---\n\n## AI 深度摘要\n*(等待向量化及摘要提取后自动写入)*",
+    "file_path": "unknown_source",
+    "create_time": 1772908201,
+    "update_time": 1772908201,
+    "_id": "doc-d1c6054a6d87cf6975db5c63bd96f9cd"
+  },
+  "doc-1547ad065c68b2f6fec2e3b6eb6a9099": {
+    "content": "---\ntitle: \"10.00 - Towards memory efficient RAG pipelines with CXL technology_v2\"\nauthor: \"未知\"\ndate: 2026-03-07\ntype: report\nformat: \".pdf\"\npriority: \"core\"\nvectorized: 未向量化\ntags:\n  - 研报库/核心】服务器架构\n  - 优先级/核心\n---\n\n\n# 10.00 - Towards memory efficient RAG pipelines with CXL technology_v2\n\n🔗 **原文链接**: [点击打开本地文档](file:///Users/liufang/Documents/Library/【核心】服务器架构/10.00%20-%20Towards%20memory%20efficient%20RAG%20pipelines%20with%20CXL%20technology_v2.pdf)\n\n> [!info] 文档信息\n> - **格式**: `.pdf`\n> - **文件大小**: `0.58 MB`\n> - **入库时间**: `2026-03-07 19:05:21`\n\n---\n\n## AI 深度摘要\n*(等待向量化及摘要提取后自动写入)*",
+    "file_path": "unknown_source",
+    "create_time": 1772908208,
+    "update_time": 1772908208,
+    "_id": "doc-1547ad065c68b2f6fec2e3b6eb6a9099"
+  },
+  "doc-17e8fab522b31c893a3a7ef21633d42a": {
+    "content": "---\ntitle: \"7300 - End-to-End Management of a CXL-enabled Datacenter Memory Fabric_v2\"\nauthor: \"未知\"\ndate: 2026-03-07\ntype: report\nformat: \".pdf\"\npriority: \"core\"\nvectorized: 未向量化\ntags:\n  - 研报库/核心】服务器架构\n  - 优先级/核心\n---\n\n\n# 7300 - End-to-End Management of a CXL-enabled Datacenter Memory Fabric_v2\n\n🔗 **原文链接**: [点击打开本地文档](file:///Users/liufang/Documents/Library/【核心】服务器架构/7300%20-%20End-to-End%20Management%20of%20a%20CXL-enabled%20Datacenter%20Memory%20Fabric_v2.pdf)\n\n> [!info] 文档信息\n> - **格式**: `.pdf`\n> - **文件大小**: `2.92 MB`\n> - **入库时间**: `2026-03-07 19:05:19`\n\n---\n\n## AI 深度摘要\n*(等待向量化及摘要提取后自动写入)*",
+    "file_path": "unknown_source",
+    "create_time": 1772908217,
+    "update_time": 1772908217,
+    "_id": "doc-17e8fab522b31c893a3a7ef21633d42a"
+  },
+  "doc-954e8ea4f501064d07fa47f0e5affaeb": {
+    "content": "---\ntitle: \"7819 - Advancing PLDM- Structured Sensors Scalable Modeling and the Server Host SoC PLDM Specification_v2\"\nauthor: \"未知\"\ndate: 2026-03-07\ntype: report\nformat: \".pdf\"\npriority: \"core\"\nvectorized: 未向量化\ntags:\n  - 研报库/核心】服务器架构\n  - 优先级/核心\n---\n\n\n# 7819 - Advancing PLDM- Structured Sensors Scalable Modeling and the Server Host SoC PLDM Specification_v2\n\n🔗 **原文链接**: [点击打开本地文档](file:///Users/liufang/Documents/Library/【核心】服务器架构/7819%20-%20Advancing%20PLDM-%20Structured%20Sensors%20Scalable%20Modeling%20and%20the%20Server%20Host%20SoC%20PLDM%20Specification_v2.pdf)\n\n> [!info] 文档信息\n> - **格式**: `.pdf`\n> - **文件大小**: `1.15 MB`\n> - **入库时间**: `2026-03-07 19:05:22`\n\n---\n\n## AI 深度摘要\n*(等待向量化及摘要提取后自动写入)*",
+    "file_path": "unknown_source",
+    "create_time": 1772908225,
+    "update_time": 1772908225,
+    "_id": "doc-954e8ea4f501064d07fa47f0e5affaeb"
+  },
+  "doc-7cb819bd8f7ecd3c6e4efa0548627c2f": {
+    "content": "---\ntitle: \"7246 - OCP Composable Memory Systems CMS  Sub-Project Technical Update_v2_v2\"\nauthor: \"未知\"\ndate: 2026-03-07\ntype: report\nformat: \".pdf\"\npriority: \"core\"\nvectorized: 未向量化\ntags:\n  - 研报库/核心】服务器架构\n  - 优先级/核心\n---\n\n\n# 7246 - OCP Composable Memory Systems CMS  Sub-Project Technical Update_v2_v2\n\n🔗 **原文链接**: [点击打开本地文档](file:///Users/liufang/Documents/Library/【核心】服务器架构/7246%20-%20OCP%20Composable%20Memory%20Systems%20CMS%20%20Sub-Project%20Technical%20Update_v2_v2.pdf)\n\n> [!info] 文档信息\n> - **格式**: `.pdf`\n> - **文件大小**: `1.18 MB`\n> - **入库时间**: `2026-03-07 19:05:21`\n\n---\n\n## AI 深度摘要\n*(等待向量化及摘要提取后自动写入)*",
+    "file_path": "unknown_source",
+    "create_time": 1772908235,
+    "update_time": 1772908235,
+    "_id": "doc-7cb819bd8f7ecd3c6e4efa0548627c2f"
+  },
+  "doc-93d5d66acecc3b09726280461a1741c7": {
+    "content": "---\ntitle: \"7337 - Memory technology optimized for at-scale AI systems- Bandwidth Capacity and Connectivity_v2_v2_v2\"\nauthor: \"未知\"\ndate: 2026-03-07\ntype: report\nformat: \".pdf\"\npriority: \"core\"\nvectorized: 未向量化\ntags:\n  - 研报库/核心】服务器架构\n  - 优先级/核心\n---\n\n\n# 7337 - Memory technology optimized for at-scale AI systems- Bandwidth Capacity and Connectivity_v2_v2_v2\n\n🔗 **原文链接**: [点击打开本地文档](file:///Users/liufang/Documents/Library/【核心】服务器架构/7337%20-%20Memory%20technology%20optimized%20for%20at-scale%20AI%20systems-%20Bandwidth%20Capacity%20and%20Connectivity_v2_v2_v2.pdf)\n\n> [!info] 文档信息\n> - **格式**: `.pdf`\n> - **文件大小**: `2.69 MB`\n> - **入库时间**: `2026-03-07 19:05:23`\n\n---\n\n## AI 深度摘要\n*(等待向量化及摘要提取后自动写入)*",
+    "file_path": "unknown_source",
+    "create_time": 1772908247,
+    "update_time": 1772908247,
+    "_id": "doc-93d5d66acecc3b09726280461a1741c7"
+  },
+  "doc-2fda2d54a8413eca19fea985df0ff580": {
+    "content": "---\ntitle: \"7470 - DC-Stack- Google Server Manufacturing SDK Lessons Learned_v2\"\nauthor: \"未知\"\ndate: 2026-03-07\ntype: report\nformat: \".pdf\"\npriority: \"core\"\nvectorized: 未向量化\ntags:\n  - 研报库/核心】服务器架构\n  - 优先级/核心\n---\n\n\n# 7470 - DC-Stack- Google Server Manufacturing SDK Lessons Learned_v2\n\n🔗 **原文链接**: [点击打开本地文档](file:///Users/liufang/Documents/Library/【核心】服务器架构/7470%20-%20DC-Stack-%20Google%20Server%20Manufacturing%20SDK%20Lessons%20Learned_v2.pdf)\n\n> [!info] 文档信息\n> - **格式**: `.pdf`\n> - **文件大小**: `0.75 MB`\n> - **入库时间**: `2026-03-07 19:05:21`\n\n---\n\n## AI 深度摘要\n*(等待向量化及摘要提取后自动写入)*",
+    "file_path": "unknown_source",
+    "create_time": 1772908260,
+    "update_time": 1772908260,
+    "_id": "doc-2fda2d54a8413eca19fea985df0ff580"
+  },
+  "doc-49a4b3d9e081e0db5971a564684cb895": {
+    "content": "---\ntitle: \"7033 - Manage and Secure your PCIe Infrastructure using eSFI and PCIe-MI\"\nauthor: \"未知\"\ndate: 2026-03-07\ntype: report\nformat: \".pdf\"\npriority: \"core\"\nvectorized: 未向量化\ntags:\n  - 研报库/核心】服务器架构\n  - 优先级/核心\n---\n\n\n# 7033 - Manage and Secure your PCIe Infrastructure using eSFI and PCIe-MI\n\n🔗 **原文链接**: [点击打开本地文档](file:///Users/liufang/Documents/Library/【核心】服务器架构/7033%20-%20Manage%20and%20Secure%20your%20PCIe%20Infrastructure%20using%20eSFI%20and%20PCIe-MI.pdf)\n\n> [!info] 文档信息\n> - **格式**: `.pdf`\n> - **文件大小**: `1.03 MB`\n> - **入库时间**: `2026-03-07 19:05:21`\n\n---\n\n## AI 深度摘要\n*(等待向量化及摘要提取后自动写入)*",
+    "file_path": "unknown_source",
+    "create_time": 1772908275,
+    "update_time": 1772908275,
+    "_id": "doc-49a4b3d9e081e0db5971a564684cb895"
+  },
+  "doc-4bea655fda74f25913c082a3a09d1a75": {
+    "content": "---\ntitle: \"174 - Mixing PCIe 5 and PCIe 6 in AI Platforms-Benefits and Challenges_v2_v2\"\nauthor: \"未知\"\ndate: 2026-03-07\ntype: report\nformat: \".pdf\"\npriority: \"core\"\nvectorized: 未向量化\ntags:\n  - 研报库/核心】服务器架构\n  - 优先级/核心\n---\n\n\n# 174 - Mixing PCIe 5 and PCIe 6 in AI Platforms-Benefits and Challenges_v2_v2\n\n🔗 **原文链接**: [点击打开本地文档](file:///Users/liufang/Documents/Library/【核心】服务器架构/174%20-%20Mixing%20PCIe%205%20and%20PCIe%206%20in%20AI%20Platforms-Benefits%20and%20Challenges_v2_v2.pdf)\n\n> [!info] 文档信息\n> - **格式**: `.pdf`\n> - **文件大小**: `1.92 MB`\n> - **入库时间**: `2026-03-07 19:05:21`\n\n---\n\n## AI 深度摘要\n*(等待向量化及摘要提取后自动写入)*",
+    "file_path": "unknown_source",
+    "create_time": 1772908291,
+    "update_time": 1772908291,
+    "_id": "doc-4bea655fda74f25913c082a3a09d1a75"
+  },
+  "doc-147c4db7a4ce5872858a38c1ac58af56": {
+    "content": "---\ntitle: \"74 - APEC Advanced PCIe Enclosure Compatible for future HSIO interconnection_v2\"\nauthor: \"未知\"\ndate: 2026-03-07\ntype: report\nformat: \".pdf\"\npriority: \"core\"\nvectorized: 未向量化\ntags:\n  - 研报库/核心】服务器架构\n  - 优先级/核心\n---\n\n\n# 74 - APEC Advanced PCIe Enclosure Compatible for future HSIO interconnection_v2\n\n🔗 **原文链接**: [点击打开本地文档](file:///Users/liufang/Documents/Library/【核心】服务器架构/74%20-%20APEC%20Advanced%20PCIe%20Enclosure%20Compatible%20for%20future%20HSIO%20interconnection_v2.pdf)\n\n> [!info] 文档信息\n> - **格式**: `.pdf`\n> - **文件大小**: `1.24 MB`\n> - **入库时间**: `2026-03-07 19:05:22`\n\n---\n\n## AI 深度摘要\n*(等待向量化及摘要提取后自动写入)*",
+    "file_path": "unknown_source",
+    "create_time": 1772908306,
+    "update_time": 1772908306,
+    "_id": "doc-147c4db7a4ce5872858a38c1ac58af56"
+  },
+  "doc-2c984e299ac9432c7e312cc7b398b600": {
+    "content": "---\ntitle: \"65 - Rack Architecture for Next Generation AI Server_v2\"\nauthor: \"未知\"\ndate: 2026-03-07\ntype: report\nformat: \".pdf\"\npriority: \"core\"\nvectorized: 未向量化\ntags:\n  - 研报库/核心】服务器架构\n  - 优先级/核心\n---\n\n\n# 65 - Rack Architecture for Next Generation AI Server_v2\n\n🔗 **原文链接**: [点击打开本地文档](file:///Users/liufang/Documents/Library/【核心】服务器架构/65%20-%20Rack%20Architecture%20for%20Next%20Generation%20AI%20Server_v2.pdf)\n\n> [!info] 文档信息\n> - **格式**: `.pdf`\n> - **文件大小**: `1.72 MB`\n> - **入库时间**: `2026-03-07 19:05:20`\n\n---\n\n## AI 深度摘要\n*(等待向量化及摘要提取后自动写入)*",
+    "file_path": "unknown_source",
+    "create_time": 1772908324,
+    "update_time": 1772908324,
+    "_id": "doc-2c984e299ac9432c7e312cc7b398b600"
+  },
+  "doc-33ad961ca189b1cec80569bbd0809873": {
+    "content": "---\ntitle: \"135 - Flash Memory Chiplet Implementation and Applications_v2_v2\"\nauthor: \"未知\"\ndate: 2026-03-07\ntype: report\nformat: \".pdf\"\npriority: \"core\"\nvectorized: 未向量化\ntags:\n  - 研报库/核心】服务器架构\n  - 优先级/核心\n---\n\n\n# 135 - Flash Memory Chiplet Implementation and Applications_v2_v2\n\n🔗 **原文链接**: [点击打开本地文档](file:///Users/liufang/Documents/Library/【核心】服务器架构/135%20-%20Flash%20Memory%20Chiplet%20Implementation%20and%20Applications_v2_v2.pdf)\n\n> [!info] 文档信息\n> - **格式**: `.pdf`\n> - **文件大小**: `2.04 MB`\n> - **入库时间**: `2026-03-07 19:05:23`\n\n---\n\n## AI 深度摘要\n*(等待向量化及摘要提取后自动写入)*",
+    "file_path": "unknown_source",
+    "create_time": 1772908346,
+    "update_time": 1772908346,
+    "_id": "doc-33ad961ca189b1cec80569bbd0809873"
+  },
+  "doc-22d5697b8505125995b91427be92e6d2": {
+    "content": "---\ntitle: \"7521 - Latest Academic Research for Composable Memory_v2_v2\"\nauthor: \"未知\"\ndate: 2026-03-07\ntype: report\nformat: \".pdf\"\npriority: \"core\"\nvectorized: 未向量化\ntags:\n  - 研报库/核心】服务器架构\n  - 优先级/核心\n---\n\n\n# 7521 - Latest Academic Research for Composable Memory_v2_v2\n\n🔗 **原文链接**: [点击打开本地文档](file:///Users/liufang/Documents/Library/【核心】服务器架构/7521%20-%20Latest%20Academic%20Research%20for%20Composable%20Memory_v2_v2.pdf)\n\n> [!info] 文档信息\n> - **格式**: `.pdf`\n> - **文件大小**: `1.44 MB`\n> - **入库时间**: `2026-03-07 19:05:19`\n\n---\n\n## AI 深度摘要\n*(等待向量化及摘要提取后自动写入)*",
+    "file_path": "unknown_source",
+    "create_time": 1772908367,
+    "update_time": 1772908367,
+    "_id": "doc-22d5697b8505125995b91427be92e6d2"
+  },
+  "doc-04159a2e6b1c0a304c8cab9dc130201f": {
+    "content": "---\ntitle: \"7505 - Evaluating Component Level Compatibility and Reliability of Memory and Storage Products for Immersion Applications\"\nauthor: \"未知\"\ndate: 2026-03-07\ntype: report\nformat: \".pdf\"\npriority: \"core\"\nvectorized: 未向量化\ntags:\n  - 研报库/核心】服务器架构\n  - 优先级/核心\n---\n\n\n# 7505 - Evaluating Component Level Compatibility and Reliability of Memory and Storage Products for Immersion Applications\n\n🔗 **原文链接**: [点击打开本地文档](file:///Users/liufang/Documents/Library/【核心】服务器架构/7505%20-%20Evaluating%20Component%20Level%20Compatibility%20and%20Reliability%20of%20Memory%20and%20Storage%20Products%20for%20Immersion%20Applications.pdf)\n\n> [!info] 文档信息\n> - **格式**: `.pdf`\n> - **文件大小**: `2.72 MB`\n> - **入库时间**: `2026-03-07 19:05:18`\n\n---\n\n## AI 深度摘要\n*(等待向量化及摘要提取后自动写入)*",
+    "file_path": "unknown_source",
+    "create_time": 1772908389,
+    "update_time": 1772908389,
+    "_id": "doc-04159a2e6b1c0a304c8cab9dc130201f"
+  },
+  "doc-ecc05e1389a9315c30e68199bddd8d73": {
+    "content": "---\ntitle: \"9.40 - Next-Gen AI-HPC Server Performance with CXL3.1 Tiered Memory and MRDIMM solution_v2_v2\"\nauthor: \"未知\"\ndate: 2026-03-07\ntype: report\nformat: \".pdf\"\npriority: \"core\"\nvectorized: 未向量化\ntags:\n  - 研报库/核心】服务器架构\n  - 优先级/核心\n---\n\n\n# 9.40 - Next-Gen AI-HPC Server Performance with CXL3.1 Tiered Memory and MRDIMM solution_v2_v2\n\n🔗 **原文链接**: [点击打开本地文档](file:///Users/liufang/Documents/Library/【核心】服务器架构/9.40%20-%20Next-Gen%20AI-HPC%20Server%20Performance%20with%20CXL3.1%20Tiered%20Memory%20and%20MRDIMM%20solution_v2_v2.pdf)\n\n> [!info] 文档信息\n> - **格式**: `.pdf`\n> - **文件大小**: `7.37 MB`\n> - **入库时间**: `2026-03-07 19:05:20`\n\n---\n\n## AI 深度摘要\n*(等待向量化及摘要提取后自动写入)*",
+    "file_path": "unknown_source",
+    "create_time": 1772908412,
+    "update_time": 1772908412,
+    "_id": "doc-ecc05e1389a9315c30e68199bddd8d73"
+  },
+  "doc-f3556e182081aed4b9613c75949ed570": {
+    "content": "---\ntitle: \"7446 - Large CXL Memory Expansion Systems and Workloads_v2_v2\"\nauthor: \"未知\"\ndate: 2026-03-07\ntype: report\nformat: \".pdf\"\npriority: \"core\"\nvectorized: 未向量化\ntags:\n  - 研报库/核心】服务器架构\n  - 优先级/核心\n---\n\n\n# 7446 - Large CXL Memory Expansion Systems and Workloads_v2_v2\n\n🔗 **原文链接**: [点击打开本地文档](file:///Users/liufang/Documents/Library/【核心】服务器架构/7446%20-%20Large%20CXL%20Memory%20Expansion%20Systems%20and%20Workloads_v2_v2.pdf)\n\n> [!info] 文档信息\n> - **格式**: `.pdf`\n> - **文件大小**: `3.46 MB`\n> - **入库时间**: `2026-03-07 19:05:20`\n\n---\n\n## AI 深度摘要\n*(等待向量化及摘要提取后自动写入)*",
+    "file_path": "unknown_source",
+    "create_time": 1772908436,
+    "update_time": 1772908436,
+    "_id": "doc-f3556e182081aed4b9613c75949ed570"
+  },
+  "doc-c0b6845c9f5c77a0f3f30fa98403d8fe": {
+    "content": "---\ntitle: \"7547 - Orchestrating Confidential Compute using OCP Secure Boot Attestation and CXL IDE TSP DMTF SPDM Specs_v2_v2\"\nauthor: \"未知\"\ndate: 2026-03-07\ntype: report\nformat: \".pdf\"\npriority: \"core\"\nvectorized: 未向量化\ntags:\n  - 研报库/核心】服务器架构\n  - 优先级/核心\n---\n\n\n# 7547 - Orchestrating Confidential Compute using OCP Secure Boot Attestation and CXL IDE TSP DMTF SPDM Specs_v2_v2\n\n🔗 **原文链接**: [点击打开本地文档](file:///Users/liufang/Documents/Library/【核心】服务器架构/7547%20-%20Orchestrating%20Confidential%20Compute%20using%20OCP%20Secure%20Boot%20Attestation%20and%20CXL%20IDE%20TSP%20DMTF%20SPDM%20Specs_v2_v2.pdf)\n\n> [!info] 文档信息\n> - **格式**: `.pdf`\n> - **文件大小**: `2.07 MB`\n> - **入库时间**: `2026-03-07 19:05:20`\n\n---\n\n## AI 深度摘要\n*(等待向量化及摘要提取后自动写入)*",
+    "file_path": "unknown_source",
+    "create_time": 1772908462,
+    "update_time": 1772908462,
+    "_id": "doc-c0b6845c9f5c77a0f3f30fa98403d8fe"
+  },
+  "doc-ba1d69c721849ac582b1a53a58646ef1": {
+    "content": "---\ntitle: \"6967 - Towards memory efficient RAG pipelines with CXL technology_v2\"\nauthor: \"未知\"\ndate: 2026-03-07\ntype: report\nformat: \".pdf\"\npriority: \"core\"\nvectorized: 未向量化\ntags:\n  - 研报库/核心】服务器架构\n  - 优先级/核心\n---\n\n\n# 6967 - Towards memory efficient RAG pipelines with CXL technology_v2\n\n🔗 **原文链接**: [点击打开本地文档](file:///Users/liufang/Documents/Library/【核心】服务器架构/6967%20-%20Towards%20memory%20efficient%20RAG%20pipelines%20with%20CXL%20technology_v2.pdf)\n\n> [!info] 文档信息\n> - **格式**: `.pdf`\n> - **文件大小**: `2.76 MB`\n> - **入库时间**: `2026-03-07 19:05:21`\n\n---\n\n## AI 深度摘要\n*(等待向量化及摘要提取后自动写入)*",
+    "file_path": "unknown_source",
+    "create_time": 1772908488,
+    "update_time": 1772908488,
+    "_id": "doc-ba1d69c721849ac582b1a53a58646ef1"
+  },
+  "doc-d337eca5c11c950a864764401f37ceaf": {
+    "content": "---\ntitle: \"7653 - Astera Labs- Scaling AI with PCIe Ethernet and UALink Retimers_v2_v2\"\nauthor: \"未知\"\ndate: 2026-03-07\ntype: report\nformat: \".pdf\"\npriority: \"core\"\nvectorized: 未向量化\ntags:\n  - 研报库/核心】服务器架构\n  - 优先级/核心\n---\n\n\n# 7653 - Astera Labs- Scaling AI with PCIe Ethernet and UALink Retimers_v2_v2\n\n🔗 **原文链接**: [点击打开本地文档](file:///Users/liufang/Documents/Library/【核心】服务器架构/7653%20-%20Astera%20Labs-%20Scaling%20AI%20with%20PCIe%20Ethernet%20and%20UALink%20Retimers_v2_v2.pdf)\n\n> [!info] 文档信息\n> - **格式**: `.pdf`\n> - **文件大小**: `4.35 MB`\n> - **入库时间**: `2026-03-07 19:05:19`\n\n---\n\n## AI 深度摘要\n*(等待向量化及摘要提取后自动写入)*",
+    "file_path": "unknown_source",
+    "create_time": 1772908517,
+    "update_time": 1772908517,
+    "_id": "doc-d337eca5c11c950a864764401f37ceaf"
+  },
+  "doc-805ed11febeca1bfd1bdea057549e4ce": {
+    "content": "---\ntitle: \"7800 - The Journey of CXL-PNM Research- Architecture Evolution and Software Environment_v2\"\nauthor: \"未知\"\ndate: 2026-03-07\ntype: report\nformat: \".pdf\"\npriority: \"core\"\nvectorized: 未向量化\ntags:\n  - 研报库/核心】服务器架构\n  - 优先级/核心\n---\n\n\n# 7800 - The Journey of CXL-PNM Research- Architecture Evolution and Software Environment_v2\n\n🔗 **原文链接**: [点击打开本地文档](file:///Users/liufang/Documents/Library/【核心】服务器架构/7800%20-%20The%20Journey%20of%20CXL-PNM%20Research-%20Architecture%20Evolution%20and%20Software%20Environment_v2.pdf)\n\n> [!info] 文档信息\n> - **格式**: `.pdf`\n> - **文件大小**: `2.53 MB`\n> - **入库时间**: `2026-03-07 19:05:21`\n\n---\n\n## AI 深度摘要\n*(等待向量化及摘要提取后自动写入)*",
+    "file_path": "unknown_source",
+    "create_time": 1772908549,
+    "update_time": 1772908549,
+    "_id": "doc-805ed11febeca1bfd1bdea057549e4ce"
+  },
+  "doc-e24b7488a587cd1f8bf6573d12f1c75a": {
+    "content": "---\ntitle: \"91 - Panel-Architecting the Future-Server Design in the Age of AI_v2\"\nauthor: \"未知\"\ndate: 2026-03-07\ntype: report\nformat: \".pdf\"\npriority: \"core\"\nvectorized: 未向量化\ntags:\n  - 研报库/核心】服务器架构\n  - 优先级/核心\n---\n\n\n# 91 - Panel-Architecting the Future-Server Design in the Age of AI_v2\n\n🔗 **原文链接**: [点击打开本地文档](file:///Users/liufang/Documents/Library/【核心】服务器架构/91%20-%20Panel-Architecting%20the%20Future-Server%20Design%20in%20the%20Age%20of%20AI_v2.pdf)\n\n> [!info] 文档信息\n> - **格式**: `.pdf`\n> - **文件大小**: `3.48 MB`\n> - **入库时间**: `2026-03-07 19:05:22`\n\n---\n\n## AI 深度摘要\n*(等待向量化及摘要提取后自动写入)*",
+    "file_path": "unknown_source",
+    "create_time": 1772908580,
+    "update_time": 1772908580,
+    "_id": "doc-e24b7488a587cd1f8bf6573d12f1c75a"
+  },
+  "doc-6d829808f9b4093bb903d5990d12a27c": {
+    "content": "---\ntitle: \"7430 - Smashing Memory  I-O Limits- Architectures for the GenAI Era_v2_v2\"\nauthor: \"未知\"\ndate: 2026-03-07\ntype: report\nformat: \".pdf\"\npriority: \"core\"\nvectorized: 未向量化\ntags:\n  - 研报库/核心】服务器架构\n  - 优先级/核心\n---\n\n\n# 7430 - Smashing Memory  I-O Limits- Architectures for the GenAI Era_v2_v2\n\n🔗 **原文链接**: [点击打开本地文档](file:///Users/liufang/Documents/Library/【核心】服务器架构/7430%20-%20Smashing%20Memory%20%20I-O%20Limits-%20Architectures%20for%20the%20GenAI%20Era_v2_v2.pdf)\n\n> [!info] 文档信息\n> - **格式**: `.pdf`\n> - **文件大小**: `2.50 MB`\n> - **入库时间**: `2026-03-07 19:05:23`\n\n---\n\n## AI 深度摘要\n*(等待向量化及摘要提取后自动写入)*",
+    "file_path": "unknown_source",
+    "create_time": 1772908619,
+    "update_time": 1772908619,
+    "_id": "doc-6d829808f9b4093bb903d5990d12a27c"
+  },
+  "doc-df115efbf3bc71602047949ae3dbbdf0": {
+    "content": "---\ntitle: \"18 - Super Fluid Technology Application in High Density Server Product_v2\"\nauthor: \"未知\"\ndate: 2026-03-07\ntype: report\nformat: \".pdf\"\npriority: \"core\"\nvectorized: 未向量化\ntags:\n  - 研报库/核心】服务器架构\n  - 优先级/核心\n---\n\n\n# 18 - Super Fluid Technology Application in High Density Server Product_v2\n\n🔗 **原文链接**: [点击打开本地文档](file:///Users/liufang/Documents/Library/【核心】服务器架构/18%20-%20Super%20Fluid%20Technology%20Application%20in%20High%20Density%20Server%20Product_v2.pdf)\n\n> [!info] 文档信息\n> - **格式**: `.pdf`\n> - **文件大小**: `0.88 MB`\n> - **入库时间**: `2026-03-07 19:05:22`\n\n---\n\n## AI 深度摘要\n*(等待向量化及摘要提取后自动写入)*",
+    "file_path": "unknown_source",
+    "create_time": 1772908660,
+    "update_time": 1772908660,
+    "_id": "doc-df115efbf3bc71602047949ae3dbbdf0"
+  },
+  "doc-15484e8b32164d9fb60eeef755439770": {
+    "content": "---\ntitle: \"7361 - Hyperscale CPU Impactless Firmware Updates_v2\"\nauthor: \"未知\"\ndate: 2026-03-07\ntype: report\nformat: \".pdf\"\npriority: \"core\"\nvectorized: 未向量化\ntags:\n  - 研报库/核心】服务器架构\n  - 优先级/核心\n---\n\n\n# 7361 - Hyperscale CPU Impactless Firmware Updates_v2\n\n🔗 **原文链接**: [点击打开本地文档](file:///Users/liufang/Documents/Library/【核心】服务器架构/7361%20-%20Hyperscale%20CPU%20Impactless%20Firmware%20Updates_v2.pdf)\n\n> [!info] 文档信息\n> - **格式**: `.pdf`\n> - **文件大小**: `0.88 MB`\n> - **入库时间**: `2026-03-07 19:05:23`\n\n---\n\n## AI 深度摘要\n*(等待向量化及摘要提取后自动写入)*",
+    "file_path": "unknown_source",
+    "create_time": 1772908695,
+    "update_time": 1772908695,
+    "_id": "doc-15484e8b32164d9fb60eeef755439770"
+  },
+  "doc-46bc26dff317560becba9a0a6fa7a441": {
+    "content": "---\ntitle: \"7837 - Short-reach Optical Interface Scale Connectivity for Optimized Data-movement Through Memory for AI-ML Applications_v2_v2\"\nauthor: \"未知\"\ndate: 2026-03-07\ntype: report\nformat: \".pdf\"\npriority: \"core\"\nvectorized: 未向量化\ntags:\n  - 研报库/核心】服务器架构\n  - 优先级/核心\n---\n\n\n# 7837 - Short-reach Optical Interface Scale Connectivity for Optimized Data-movement Through Memory for AI-ML Applications_v2_v2\n\n🔗 **原文链接**: [点击打开本地文档](file:///Users/liufang/Documents/Library/【核心】服务器架构/7837%20-%20Short-reach%20Optical%20Interface%20Scale%20Connectivity%20for%20Optimized%20Data-movement%20Through%20Memory%20for%20AI-ML%20Applications_v2_v2.pdf)\n\n> [!info] 文档信息\n> - **格式**: `.pdf`\n> - **文件大小**: `1.80 MB`\n> - **入库时间**: `2026-03-07 19:05:19`\n\n---\n\n## AI 深度摘要\n*(等待向量化及摘要提取后自动写入)*",
+    "file_path": "unknown_source",
+    "create_time": 1772908731,
+    "update_time": 1772908731,
+    "_id": "doc-46bc26dff317560becba9a0a6fa7a441"
+  },
+  "doc-3993cd0b737e3130edf76f25d51050ff": {
+    "content": "---\ntitle: \"7479 - Trust at 64 GT-s- Security Considerations for PCIe 6 Switch Deployments_v2\"\nauthor: \"未知\"\ndate: 2026-03-07\ntype: report\nformat: \".pdf\"\npriority: \"core\"\nvectorized: 未向量化\ntags:\n  - 研报库/核心】服务器架构\n  - 优先级/核心\n---\n\n\n# 7479 - Trust at 64 GT-s- Security Considerations for PCIe 6 Switch Deployments_v2\n\n🔗 **原文链接**: [点击打开本地文档](file:///Users/liufang/Documents/Library/【核心】服务器架构/7479%20-%20Trust%20at%2064%20GT-s-%20Security%20Considerations%20for%20PCIe%206%20Switch%20Deployments_v2.pdf)\n\n> [!info] 文档信息\n> - **格式**: `.pdf`\n> - **文件大小**: `0.98 MB`\n> - **入库时间**: `2026-03-07 19:05:23`\n\n---\n\n## AI 深度摘要\n*(等待向量化及摘要提取后自动写入)*",
+    "file_path": "unknown_source",
+    "create_time": 1772908770,
+    "update_time": 1772908770,
+    "_id": "doc-3993cd0b737e3130edf76f25d51050ff"
+  },
+  "doc-5642f5d2398a5cb6600146cb1001b0ec": {
+    "content": "---\ntitle: \"7062 - Next-Gen AI-HPC Server Performance with CXL3.1 Tiered Memory and MRDIMM solution_v2_v2\"\nauthor: \"未知\"\ndate: 2026-03-07\ntype: report\nformat: \".pdf\"\npriority: \"core\"\nvectorized: 未向量化\ntags:\n  - 研报库/核心】服务器架构\n  - 优先级/核心\n---\n\n\n# 7062 - Next-Gen AI-HPC Server Performance with CXL3.1 Tiered Memory and MRDIMM solution_v2_v2\n\n🔗 **原文链接**: [点击打开本地文档](file:///Users/liufang/Documents/Library/【核心】服务器架构/7062%20-%20Next-Gen%20AI-HPC%20Server%20Performance%20with%20CXL3.1%20Tiered%20Memory%20and%20MRDIMM%20solution_v2_v2.pdf)\n\n> [!info] 文档信息\n> - **格式**: `.pdf`\n> - **文件大小**: `5.05 MB`\n> - **入库时间**: `2026-03-07 19:05:19`\n\n---\n\n## AI 深度摘要\n*(等待向量化及摘要提取后自动写入)*",
+    "file_path": "unknown_source",
+    "create_time": 1772908806,
+    "update_time": 1772908806,
+    "_id": "doc-5642f5d2398a5cb6600146cb1001b0ec"
+  },
+  "doc-9ac5324873bf771cb665a450ec9794d8": {
+    "content": "---\ntitle: \"6860 - Community Panel - Enabling Immersion by Design- Aligning Server and Cooling Communities\"\nauthor: \"未知\"\ndate: 2026-03-07\ntype: report\nformat: \".pdf\"\npriority: \"core\"\nvectorized: 未向量化\ntags:\n  - 研报库/核心】服务器架构\n  - 优先级/核心\n---\n\n\n# 6860 - Community Panel - Enabling Immersion by Design- Aligning Server and Cooling Communities\n\n🔗 **原文链接**: [点击打开本地文档](file:///Users/liufang/Documents/Library/【核心】服务器架构/6860%20-%20Community%20Panel%20-%20Enabling%20Immersion%20by%20Design-%20Aligning%20Server%20and%20Cooling%20Communities.pdf)\n\n> [!info] 文档信息\n> - **格式**: `.pdf`\n> - **文件大小**: `0.75 MB`\n> - **入库时间**: `2026-03-07 19:05:18`\n\n---\n\n## AI 深度摘要\n*(等待向量化及摘要提取后自动写入)*",
+    "file_path": "unknown_source",
+    "create_time": 1772908847,
+    "update_time": 1772908847,
+    "_id": "doc-9ac5324873bf771cb665a450ec9794d8"
+  },
+  "doc-9a23f58ae4463735de6f1b117591592c": {
+    "content": "---\ntitle: \"7 - Lifecycle System Monitoring with Arm’s System Monitoring Control Framework  SMCF  and proteanTecs_v2\"\nauthor: \"未知\"\ndate: 2026-03-07\ntype: report\nformat: \".pdf\"\npriority: \"core\"\nvectorized: 未向量化\ntags:\n  - 研报库/核心】服务器架构\n  - 优先级/核心\n---\n\n\n# 7 - Lifecycle System Monitoring with Arm’s System Monitoring Control Framework  SMCF  and proteanTecs_v2\n\n🔗 **原文链接**: [点击打开本地文档](file:///Users/liufang/Documents/Library/【核心】服务器架构/7%20-%20Lifecycle%20System%20Monitoring%20with%20Arm’s%20System%20Monitoring%20Control%20Framework%20%20SMCF%20%20and%20proteanTecs_v2.pdf)\n\n> [!info] 文档信息\n> - **格式**: `.pdf`\n> - **文件大小**: `1.45 MB`\n> - **入库时间**: `2026-03-07 19:05:21`\n\n---\n\n## AI 深度摘要\n*(等待向量化及摘要提取后自动写入)*",
+    "file_path": "unknown_source",
+    "create_time": 1772908888,
+    "update_time": 1772908888,
+    "_id": "doc-9a23f58ae4463735de6f1b117591592c"
+  },
+  "doc-d542a9101cecae9b9250937b2605dee2": {
+    "content": "---\ntitle: \"OCP2025_DAY TWO TUESDAY - 2.Arm_v2\"\nauthor: \"未知\"\ndate: 2026-03-07\ntype: report\nformat: \".pdf\"\npriority: \"core\"\nvectorized: 未向量化\ntags:\n  - 研报库/核心】服务器架构\n  - 优先级/核心\n---\n\n\n# OCP2025_DAY TWO TUESDAY - 2.Arm_v2\n\n🔗 **原文链接**: [点击打开本地文档](file:///Users/liufang/Documents/Library/【核心】服务器架构/OCP2025_DAY%20TWO%20TUESDAY%20-%202.Arm_v2.pdf)\n\n> [!info] 文档信息\n> - **格式**: `.pdf`\n> - **文件大小**: `3.02 MB`\n> - **入库时间**: `2026-03-07 19:05:22`\n\n---\n\n## AI 深度摘要\n*(等待向量化及摘要提取后自动写入)*",
+    "file_path": "unknown_source",
+    "create_time": 1772908933,
+    "update_time": 1772908933,
+    "_id": "doc-d542a9101cecae9b9250937b2605dee2"
+  },
+  "doc-1f1a30530b2b434213d044c2a8466044": {
+    "content": "---\ntitle: \"7693 - Co-Designing for AI- Open Standards and Ecosystems Driving the Future of Infrastructure presented by Arm_v2_v2\"\nauthor: \"未知\"\ndate: 2026-03-07\ntype: report\nformat: \".pdf\"\npriority: \"core\"\nvectorized: 未向量化\ntags:\n  - 研报库/核心】服务器架构\n  - 优先级/核心\n---\n\n\n# 7693 - Co-Designing for AI- Open Standards and Ecosystems Driving the Future of Infrastructure presented by Arm_v2_v2\n\n🔗 **原文链接**: [点击打开本地文档](file:///Users/liufang/Documents/Library/【核心】服务器架构/7693%20-%20Co-Designing%20for%20AI-%20Open%20Standards%20and%20Ecosystems%20Driving%20the%20Future%20of%20Infrastructure%20presented%20by%20Arm_v2_v2.pdf)\n\n> [!info] 文档信息\n> - **格式**: `.pdf`\n> - **文件大小**: `4.32 MB`\n> - **入库时间**: `2026-03-07 19:05:21`\n\n---\n\n## AI 深度摘要\n*(等待向量化及摘要提取后自动写入)*",
+    "file_path": "unknown_source",
+    "create_time": 1772908978,
+    "update_time": 1772908978,
+    "_id": "doc-1f1a30530b2b434213d044c2a8466044"
+  },
+  "doc-61f77d89f092ff5cd7c6ea81d31cfeb6": {
+    "content": "---\ntitle: \"7026 - Emerging Software Patterns for Programming New Memory Devices and Interfaces_v2_v2\"\nauthor: \"未知\"\ndate: 2026-03-07\ntype: report\nformat: \".pdf\"\npriority: \"core\"\nvectorized: 未向量化\ntags:\n  - 研报库/核心】服务器架构\n  - 优先级/核心\n---\n\n\n# 7026 - Emerging Software Patterns for Programming New Memory Devices and Interfaces_v2_v2\n\n🔗 **原文链接**: [点击打开本地文档](file:///Users/liufang/Documents/Library/【核心】服务器架构/7026%20-%20Emerging%20Software%20Patterns%20for%20Programming%20New%20Memory%20Devices%20and%20Interfaces_v2_v2.pdf)\n\n> [!info] 文档信息\n> - **格式**: `.pdf`\n> - **文件大小**: `1.43 MB`\n> - **入库时间**: `2026-03-07 19:05:22`\n\n---\n\n## AI 深度摘要\n*(等待向量化及摘要提取后自动写入)*",
+    "file_path": "unknown_source",
+    "create_time": 1772909022,
+    "update_time": 1772909022,
+    "_id": "doc-61f77d89f092ff5cd7c6ea81d31cfeb6"
+  },
+  "doc-2c8929bd6af5efae83044622ffa3faac": {
+    "content": "---\ntitle: \"7456 - Centralized System Security Hub for Server Platforms_v2\"\nauthor: \"未知\"\ndate: 2026-03-07\ntype: report\nformat: \".pdf\"\npriority: \"core\"\nvectorized: 未向量化\ntags:\n  - 研报库/核心】服务器架构\n  - 优先级/核心\n---\n\n\n# 7456 - Centralized System Security Hub for Server Platforms_v2\n\n🔗 **原文链接**: [点击打开本地文档](file:///Users/liufang/Documents/Library/【核心】服务器架构/7456%20-%20Centralized%20System%20Security%20Hub%20for%20Server%20Platforms_v2.pdf)\n\n> [!info] 文档信息\n> - **格式**: `.pdf`\n> - **文件大小**: `0.91 MB`\n> - **入库时间**: `2026-03-07 19:05:23`\n\n---\n\n## AI 深度摘要\n*(等待向量化及摘要提取后自动写入)*",
+    "file_path": "unknown_source",
+    "create_time": 1772909069,
+    "update_time": 1772909069,
+    "_id": "doc-2c8929bd6af5efae83044622ffa3faac"
+  },
+  "doc-10dc48654563b9bb58e4fbbbb7645eb8": {
+    "content": "---\ntitle: \"7525 - Meta AI-ML System Error Handling Improvements - PCIe Completion Timeout error handling using RPPIO error reporting_v2_v2\"\nauthor: \"未知\"\ndate: 2026-03-07\ntype: report\nformat: \".pdf\"\npriority: \"core\"\nvectorized: 未向量化\ntags:\n  - 研报库/核心】服务器架构\n  - 优先级/核心\n---\n\n\n# 7525 - Meta AI-ML System Error Handling Improvements - PCIe Completion Timeout error handling using RPPIO error reporting_v2_v2\n\n🔗 **原文链接**: [点击打开本地文档](file:///Users/liufang/Documents/Library/【核心】服务器架构/7525%20-%20Meta%20AI-ML%20System%20Error%20Handling%20Improvements%20-%20PCIe%20Completion%20Timeout%20error%20handling%20using%20RPPIO%20error%20reporting_v2_v2.pdf)\n\n> [!info] 文档信息\n> - **格式**: `.pdf`\n> - **文件大小**: `1.72 MB`\n> - **入库时间**: `2026-03-07 19:05:20`\n\n---\n\n## AI 深度摘要\n*(等待向量化及摘要提取后自动写入)*",
+    "file_path": "unknown_source",
+    "create_time": 1772909117,
+    "update_time": 1772909117,
+    "_id": "doc-10dc48654563b9bb58e4fbbbb7645eb8"
+  },
+  "doc-f1c174d3bf65d5024ebe4ad7cbd8c5e2": {
+    "content": "---\ntitle: \"6832 - Heterogeneous Memory Opportunity with Agentic AI and Memory Centric Computing_v2_v2\"\nauthor: \"未知\"\ndate: 2026-03-07\ntype: report\nformat: \".pdf\"\npriority: \"core\"\nvectorized: 未向量化\ntags:\n  - 研报库/核心】服务器架构\n  - 优先级/核心\n---\n\n\n# 6832 - Heterogeneous Memory Opportunity with Agentic AI and Memory Centric Computing_v2_v2\n\n🔗 **原文链接**: [点击打开本地文档](file:///Users/liufang/Documents/Library/【核心】服务器架构/6832%20-%20Heterogeneous%20Memory%20Opportunity%20with%20Agentic%20AI%20and%20Memory%20Centric%20Computing_v2_v2.pdf)\n\n> [!info] 文档信息\n> - **格式**: `.pdf`\n> - **文件大小**: `1.99 MB`\n> - **入库时间**: `2026-03-07 19:05:23`\n\n---\n\n## AI 深度摘要\n*(等待向量化及摘要提取后自动写入)*",
+    "file_path": "unknown_source",
+    "create_time": 1772909167,
+    "update_time": 1772909167,
+    "_id": "doc-f1c174d3bf65d5024ebe4ad7cbd8c5e2"
+  },
+  "doc-9e88d373c00da121b8868d08bdceb9cf": {
+    "content": "---\ntitle: \"7205 - Power Conversion Solutions for future Server Boards operating directly from HV DC\"\nauthor: \"未知\"\ndate: 2026-03-07\ntype: report\nformat: \".pdf\"\npriority: \"core\"\nvectorized: 未向量化\ntags:\n  - 研报库/核心】服务器架构\n  - 优先级/核心\n---\n\n\n# 7205 - Power Conversion Solutions for future Server Boards operating directly from HV DC\n\n🔗 **原文链接**: [点击打开本地文档](file:///Users/liufang/Documents/Library/【核心】服务器架构/7205%20-%20Power%20Conversion%20Solutions%20for%20future%20Server%20Boards%20operating%20directly%20from%20HV%20DC.pdf)\n\n> [!info] 文档信息\n> - **格式**: `.pdf`\n> - **文件大小**: `2.63 MB`\n> - **入库时间**: `2026-03-07 19:05:20`\n\n---\n\n## AI 深度摘要\n*(等待向量化及摘要提取后自动写入)*",
+    "file_path": "unknown_source",
+    "create_time": 1772909220,
+    "update_time": 1772909220,
+    "_id": "doc-9e88d373c00da121b8868d08bdceb9cf"
+  },
+  "doc-32749bfe06ebb4fd503585308b574af7": {
+    "content": "---\ntitle: \"6974 - NVMe Interoperable Migration of PCIe virtual SSDs_v2\"\nauthor: \"未知\"\ndate: 2026-03-07\ntype: report\nformat: \".pdf\"\npriority: \"core\"\nvectorized: 未向量化\ntags:\n  - 研报库/核心】服务器架构\n  - 优先级/核心\n---\n\n\n# 6974 - NVMe Interoperable Migration of PCIe virtual SSDs_v2\n\n🔗 **原文链接**: [点击打开本地文档](file:///Users/liufang/Documents/Library/【核心】服务器架构/6974%20-%20NVMe%20Interoperable%20Migration%20of%20PCIe%20virtual%20SSDs_v2.pdf)\n\n> [!info] 文档信息\n> - **格式**: `.pdf`\n> - **文件大小**: `0.98 MB`\n> - **入库时间**: `2026-03-07 19:05:21`\n\n---\n\n## AI 深度摘要\n*(等待向量化及摘要提取后自动写入)*",
+    "file_path": "unknown_source",
+    "create_time": 1772909273,
+    "update_time": 1772909273,
+    "_id": "doc-32749bfe06ebb4fd503585308b574af7"
+  },
+  "doc-207b0823e90b60e301db1f919be31b9c": {
+    "content": "---\ntitle: \"6875 - BMC and AMC Open Platform Firmware Development on Arm Servers- From Simulation to Hardware_v2\"\nauthor: \"未知\"\ndate: 2026-03-07\ntype: report\nformat: \".pdf\"\npriority: \"core\"\nvectorized: 未向量化\ntags:\n  - 研报库/核心】服务器架构\n  - 优先级/核心\n---\n\n\n# 6875 - BMC and AMC Open Platform Firmware Development on Arm Servers- From Simulation to Hardware_v2\n\n🔗 **原文链接**: [点击打开本地文档](file:///Users/liufang/Documents/Library/【核心】服务器架构/6875%20-%20BMC%20and%20AMC%20Open%20Platform%20Firmware%20Development%20on%20Arm%20Servers-%20From%20Simulation%20to%20Hardware_v2.pdf)\n\n> [!info] 文档信息\n> - **格式**: `.pdf`\n> - **文件大小**: `5.23 MB`\n> - **入库时间**: `2026-03-07 19:05:23`\n\n---\n\n## AI 深度摘要\n*(等待向量化及摘要提取后自动写入)*",
+    "file_path": "unknown_source",
+    "create_time": 1772909328,
+    "update_time": 1772909328,
+    "_id": "doc-207b0823e90b60e301db1f919be31b9c"
+  },
+  "doc-58b2d80c0b2a8b0ee53bae05070f0c93": {
+    "content": "---\ntitle: \"6878 - Advancing Timing Resilience in Edge-to-Core Systems- From White Rabbit to PCIe_v2\"\nauthor: \"未知\"\ndate: 2026-03-07\ntype: report\nformat: \".pdf\"\npriority: \"core\"\nvectorized: 未向量化\ntags:\n  - 研报库/核心】服务器架构\n  - 优先级/核心\n---\n\n\n# 6878 - Advancing Timing Resilience in Edge-to-Core Systems- From White Rabbit to PCIe_v2\n\n🔗 **原文链接**: [点击打开本地文档](file:///Users/liufang/Documents/Library/【核心】服务器架构/6878%20-%20Advancing%20Timing%20Resilience%20in%20Edge-to-Core%20Systems-%20From%20White%20Rabbit%20to%20PCIe_v2.pdf)\n\n> [!info] 文档信息\n> - **格式**: `.pdf`\n> - **文件大小**: `1.69 MB`\n> - **入库时间**: `2026-03-07 19:05:20`\n\n---\n\n## AI 深度摘要\n*(等待向量化及摘要提取后自动写入)*",
+    "file_path": "unknown_source",
+    "create_time": 1772909386,
+    "update_time": 1772909386,
+    "_id": "doc-58b2d80c0b2a8b0ee53bae05070f0c93"
+  },
+  "doc-cf00ccbe9715d44dfa602d3da7162666": {
+    "content": "---\ntitle: \"93 - Use Cases for CXL RAS Firmware-First Error Handling_v2\"\nauthor: \"未知\"\ndate: 2026-03-07\ntype: report\nformat: \".pdf\"\npriority: \"core\"\nvectorized: 未向量化\ntags:\n  - 研报库/核心】服务器架构\n  - 优先级/核心\n---\n\n\n# 93 - Use Cases for CXL RAS Firmware-First Error Handling_v2\n\n🔗 **原文链接**: [点击打开本地文档](file:///Users/liufang/Documents/Library/【核心】服务器架构/93%20-%20Use%20Cases%20for%20CXL%20RAS%20Firmware-First%20Error%20Handling_v2.pdf)\n\n> [!info] 文档信息\n> - **格式**: `.pdf`\n> - **文件大小**: `0.65 MB`\n> - **入库时间**: `2026-03-07 19:05:23`\n\n---\n\n## AI 深度摘要\n*(等待向量化及摘要提取后自动写入)*",
+    "file_path": "unknown_source",
+    "create_time": 1772909442,
+    "update_time": 1772909442,
+    "_id": "doc-cf00ccbe9715d44dfa602d3da7162666"
+  },
+  "doc-ef5a1dc3d7c28f0190c5185e1c92732b": {
+    "content": "---\ntitle: \"7396 - Co-Designing for Scale- CXL-Based Memory Solution for Data-Centric Workloads_v2_v2\"\nauthor: \"未知\"\ndate: 2026-03-07\ntype: report\nformat: \".pdf\"\npriority: \"core\"\nvectorized: 未向量化\ntags:\n  - 研报库/核心】服务器架构\n  - 优先级/核心\n---\n\n\n# 7396 - Co-Designing for Scale- CXL-Based Memory Solution for Data-Centric Workloads_v2_v2\n\n🔗 **原文链接**: [点击打开本地文档](file:///Users/liufang/Documents/Library/【核心】服务器架构/7396%20-%20Co-Designing%20for%20Scale-%20CXL-Based%20Memory%20Solution%20for%20Data-Centric%20Workloads_v2_v2.pdf)\n\n> [!info] 文档信息\n> - **格式**: `.pdf`\n> - **文件大小**: `3.76 MB`\n> - **入库时间**: `2026-03-07 19:05:22`\n\n---\n\n## AI 深度摘要\n*(等待向量化及摘要提取后自动写入)*",
+    "file_path": "unknown_source",
+    "create_time": 1772909497,
+    "update_time": 1772909497,
+    "_id": "doc-ef5a1dc3d7c28f0190c5185e1c92732b"
+  },
+  "doc-7b48c48f2f7c3877c03d05218cfb8c20": {
+    "content": "---\ntitle: \"7249 - Composable Memory Fabric Architecture- Enabling Scalable Memory Management for AI and General Purpose Compute_v2_v2_v2\"\nauthor: \"未知\"\ndate: 2026-03-07\ntype: report\nformat: \".pdf\"\npriority: \"core\"\nvectorized: 未向量化\ntags:\n  - 研报库/核心】服务器架构\n  - 优先级/核心\n---\n\n\n# 7249 - Composable Memory Fabric Architecture- Enabling Scalable Memory Management for AI and General Purpose Compute_v2_v2_v2\n\n🔗 **原文链接**: [点击打开本地文档](file:///Users/liufang/Documents/Library/【核心】服务器架构/7249%20-%20Composable%20Memory%20Fabric%20Architecture-%20Enabling%20Scalable%20Memory%20Management%20for%20AI%20and%20General%20Purpose%20Compute_v2_v2_v2.pdf)\n\n> [!info] 文档信息\n> - **格式**: `.pdf`\n> - **文件大小**: `1.56 MB`\n> - **入库时间**: `2026-03-07 19:05:23`\n\n---\n\n## AI 深度摘要\n*(等待向量化及摘要提取后自动写入)*",
+    "file_path": "unknown_source",
+    "create_time": 1772909558,
+    "update_time": 1772909558,
+    "_id": "doc-7b48c48f2f7c3877c03d05218cfb8c20"
+  },
+  "doc-3ae046aa80e7382953f272a3870f099b": {
+    "content": "---\ntitle: \"73 - Advanced Server Management on Arm to track-Latest Technological Advances in General Server Architecture\"\nauthor: \"未知\"\ndate: 2026-03-07\ntype: report\nformat: \".pdf\"\npriority: \"core\"\nvectorized: 未向量化\ntags:\n  - 研报库/核心】服务器架构\n  - 优先级/核心\n---\n\n\n# 73 - Advanced Server Management on Arm to track-Latest Technological Advances in General Server Architecture\n\n🔗 **原文链接**: [点击打开本地文档](file:///Users/liufang/Documents/Library/【核心】服务器架构/73%20-%20Advanced%20Server%20Management%20on%20Arm%20to%20track-Latest%20Technological%20Advances%20in%20General%20Server%20Architecture.pdf)\n\n> [!info] 文档信息\n> - **格式**: `.pdf`\n> - **文件大小**: `1.80 MB`\n> - **入库时间**: `2026-03-07 19:05:20`\n\n---\n\n## AI 深度摘要\n*(等待向量化及摘要提取后自动写入)*",
+    "file_path": "unknown_source",
+    "create_time": 1772909620,
+    "update_time": 1772909620,
+    "_id": "doc-3ae046aa80e7382953f272a3870f099b"
+  },
+  "doc-14a5b27abffb227913c4a16ac75887ca": {
+    "content": "---\ntitle: \"75 - Architecting the AI Fabric-Scalable Networking for Next-Generation AI Servers-Racks-and Clusters_v2_v2\"\nauthor: \"未知\"\ndate: 2026-03-07\ntype: report\nformat: \".pdf\"\npriority: \"core\"\nvectorized: 未向量化\ntags:\n  - 研报库/核心】服务器架构\n  - 优先级/核心\n---\n\n\n# 75 - Architecting the AI Fabric-Scalable Networking for Next-Generation AI Servers-Racks-and Clusters_v2_v2\n\n🔗 **原文链接**: [点击打开本地文档](file:///Users/liufang/Documents/Library/【核心】服务器架构/75%20-%20Architecting%20the%20AI%20Fabric-Scalable%20Networking%20for%20Next-Generation%20AI%20Servers-Racks-and%20Clusters_v2_v2.pdf)\n\n> [!info] 文档信息\n> - **格式**: `.pdf`\n> - **文件大小**: `3.31 MB`\n> - **入库时间**: `2026-03-07 19:05:20`\n\n---\n\n## AI 深度摘要\n*(等待向量化及摘要提取后自动写入)*",
+    "file_path": "unknown_source",
+    "create_time": 1772909680,
+    "update_time": 1772909680,
+    "_id": "doc-14a5b27abffb227913c4a16ac75887ca"
+  },
+  "doc-c199ec006c1f0210255474d03892899b": {
+    "content": "---\ntitle: \"7137 - Server Scale-Up Interconnect Technologies - UALink SuperNode and CXL Memory Pool_v2\"\nauthor: \"未知\"\ndate: 2026-03-07\ntype: report\nformat: \".pdf\"\npriority: \"core\"\nvectorized: 未向量化\ntags:\n  - 研报库/核心】服务器架构\n  - 优先级/核心\n---\n\n\n# 7137 - Server Scale-Up Interconnect Technologies - UALink SuperNode and CXL Memory Pool_v2\n\n🔗 **原文链接**: [点击打开本地文档](file:///Users/liufang/Documents/Library/【核心】服务器架构/7137%20-%20Server%20Scale-Up%20Interconnect%20Technologies%20-%20UALink%20SuperNode%20and%20CXL%20Memory%20Pool_v2.pdf)\n\n> [!info] 文档信息\n> - **格式**: `.pdf`\n> - **文件大小**: `2.75 MB`\n> - **入库时间**: `2026-03-07 19:05:20`\n\n---\n\n## AI 深度摘要\n*(等待向量化及摘要提取后自动写入)*",
+    "file_path": "unknown_source",
+    "create_time": 1772909777,
+    "update_time": 1772909777,
+    "_id": "doc-c199ec006c1f0210255474d03892899b"
+  },
+  "doc-46b1cb6c7cb6838091250f07aa58cb19": {
+    "content": "---\ntitle: \"72 - Meeting AI Workload Demands with Arm CSA and Chiplet_v2_v2\"\nauthor: \"未知\"\ndate: 2026-03-07\ntype: report\nformat: \".pdf\"\npriority: \"core\"\nvectorized: 未向量化\ntags:\n  - 研报库/核心】服务器架构\n  - 优先级/核心\n---\n\n\n# 72 - Meeting AI Workload Demands with Arm CSA and Chiplet_v2_v2\n\n🔗 **原文链接**: [点击打开本地文档](file:///Users/liufang/Documents/Library/【核心】服务器架构/72%20-%20Meeting%20AI%20Workload%20Demands%20with%20Arm%20CSA%20and%20Chiplet_v2_v2.pdf)\n\n> [!info] 文档信息\n> - **格式**: `.pdf`\n> - **文件大小**: `1.33 MB`\n> - **入库时间**: `2026-03-07 19:05:19`\n\n---\n\n## AI 深度摘要\n*(等待向量化及摘要提取后自动写入)*",
+    "file_path": "unknown_source",
+    "create_time": 1772909856,
+    "update_time": 1772909856,
+    "_id": "doc-46b1cb6c7cb6838091250f07aa58cb19"
+  },
+  "doc-99116bb42021db2c45f55b65671842c0": {
+    "content": "---\ntitle: \"7532 - Multi-Headed Composable Memory Appliance MHCMA Next-Gen_v2_v2\"\nauthor: \"未知\"\ndate: 2026-03-07\ntype: report\nformat: \".pdf\"\npriority: \"core\"\nvectorized: 未向量化\ntags:\n  - 研报库/核心】服务器架构\n  - 优先级/核心\n---\n\n\n# 7532 - Multi-Headed Composable Memory Appliance MHCMA Next-Gen_v2_v2\n\n🔗 **原文链接**: [点击打开本地文档](file:///Users/liufang/Documents/Library/【核心】服务器架构/7532%20-%20Multi-Headed%20Composable%20Memory%20Appliance%20MHCMA%20Next-Gen_v2_v2.pdf)\n\n> [!info] 文档信息\n> - **格式**: `.pdf`\n> - **文件大小**: `1.72 MB`\n> - **入库时间**: `2026-03-07 19:05:21`\n\n---\n\n## AI 深度摘要\n*(等待向量化及摘要提取后自动写入)*",
+    "file_path": "unknown_source",
+    "create_time": 1772909931,
+    "update_time": 1772909931,
+    "_id": "doc-99116bb42021db2c45f55b65671842c0"
+  },
+  "doc-e4173aa4ed70cd6d625ee79aebe2a677": {
+    "content": "---\ntitle: \"7402 - Use of eSFI and PCIe-MI for Security Quarantine_v2\"\nauthor: \"未知\"\ndate: 2026-03-07\ntype: report\nformat: \".pdf\"\npriority: \"core\"\nvectorized: 未向量化\ntags:\n  - 研报库/核心】服务器架构\n  - 优先级/核心\n---\n\n\n# 7402 - Use of eSFI and PCIe-MI for Security Quarantine_v2\n\n🔗 **原文链接**: [点击打开本地文档](file:///Users/liufang/Documents/Library/【核心】服务器架构/7402%20-%20Use%20of%20eSFI%20and%20PCIe-MI%20for%20Security%20Quarantine_v2.pdf)\n\n> [!info] 文档信息\n> - **格式**: `.pdf`\n> - **文件大小**: `1.40 MB`\n> - **入库时间**: `2026-03-07 19:05:23`\n\n---\n\n## AI 深度摘要\n*(等待向量化及摘要提取后自动写入)*",
+    "file_path": "unknown_source",
+    "create_time": 1772996391,
+    "update_time": 1772996391,
+    "_id": "doc-e4173aa4ed70cd6d625ee79aebe2a677"
   }
 }

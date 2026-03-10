@@ -14,7 +14,9 @@ async def run_query():
     parser = argparse.ArgumentParser(description="GraphRAG CLI")
     parser.add_argument("--query", type=str, required=True)
     parser.add_argument("--mode", type=str, default="hybrid")
+    parser.add_argument("--top-k", type=int, default=5)
     parser.add_argument("--user_prompt", type=str, default=None)
+    parser.add_argument("--output", type=str, default="text", choices=["text", "json"])
     args = parser.parse_args()
 
     # 抑制其他库的日志，只输出结果
@@ -25,8 +27,24 @@ async def run_query():
     try:
         # aquery 是异步的
         result = await query_graph(args.query, mode=args.mode, user_prompt=args.user_prompt)
-        # 只打印结果到 stdout，方便父进程解析
-        print(result)
+        
+        if args.output == "json":
+            import json
+            # 目前 LightRAG 的 aquery 返回的是纯字符串回复
+            # 为了对接 GraphTrack，我们将其封装
+            json_output = {
+                "results": [
+                    {
+                        "content": result,
+                        "source": "graph",
+                        "score": 1.0
+                    }
+                ]
+            }
+            print(json.dumps(json_output, ensure_ascii=False))
+        else:
+            # 只打印结果到 stdout，方便解析
+            print(result)
     except Exception as e:
         print(f"ERROR: {e}", file=sys.stderr)
         sys.exit(1)

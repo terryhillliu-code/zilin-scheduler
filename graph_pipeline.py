@@ -13,21 +13,41 @@ from lightrag import LightRAG, QueryParam
 from lightrag.llm.openai import openai_complete_if_cache, openai_embed
 from lightrag.llm.openai import wrap_embedding_func_with_attrs
 
-# 环境变量配置 (优先从环境读取，其次从 .secrets 读取)
+# 环境变量配置 (优先从环境读取，其次从各个预设的 .env/secrets 读取)
 def _load_env_secrets():
+    """
+    优先级: 
+    1. 进程已有的环境变量
+    2. 项目本地 .env (如果存在)
+    3. ~/zhiwei-bot/.env (生产环境配置)
+    4. ~/.secrets/zhiwei.env (兜底快照)
+    """
     key = os.getenv("DASHSCOPE_API_KEY")
-    if not key:
-        env_path = Path.home() / ".secrets" / "zhiwei.env"
+    if key and key.startswith("sk-"):
+        return key
+
+    # 扫描路径列表
+    search_paths = [
+        Path(__file__).parent / ".env",
+        Path("/Users/liufang/zhiwei-bot/.env"),
+        Path.home() / ".secrets" / "zhiwei.env"
+    ]
+
+    for env_path in search_paths:
         if env_path.exists():
-            with open(env_path, "r") as f:
-                for line in f:
-                    line = line.strip()
-                    if line.startswith("DASHSCOPE_API_KEY="):
-                        key = line.split("=", 1)[1].strip()
-                        # 去除可能的引号
-                        key = key.strip("'").strip('"')
-                        os.environ["DASHSCOPE_API_KEY"] = key
-                        break
+            try:
+                with open(env_path, "r") as f:
+                    for line in f:
+                        line = line.strip()
+                        if line.startswith("DASHSCOPE_API_KEY="):
+                            key = line.split("=", 1)[1].strip()
+                            # 去除可能的引号
+                            key = key.strip("'").strip('"')
+                            if key.startswith("sk-"):
+                                os.environ["DASHSCOPE_API_KEY"] = key
+                                return key
+            except Exception as e:
+                pass
     return key
 
 DASHSCOPE_API_KEY = _load_env_secrets()
@@ -55,7 +75,6 @@ async def llm_model_if_cache(
         "qwen-plus", # 使用通义千问 Plus 作为逻辑提取模型
         prompt,
         system_prompt=system_prompt,
-        history=history,
         base_url=DASHSCOPE_API_URL,
         api_key=api_key,
         **gen_conf,
@@ -65,7 +84,8 @@ async def llm_model_if_cache(
 async def embedding_func(texts: list[str]) -> list[list[float]]:
     """基于百炼的 Embedding 接口封装"""
     api_key = DASHSCOPE_API_KEY or os.getenv("DASHSCOPE_API_KEY")
-    return await openai_embed(
+    # 使用 .func 绕过 openai_embed 默认自带的 1536 维度校验装饰器
+    return await openai_embed.func(
         texts,
         model="text-embedding-v3",
         base_url=DASHSCOPE_API_URL,
@@ -85,7 +105,7 @@ async def get_rag():
                 working_dir=str(GRAPH_WORKING_DIR),
                 llm_model_func=llm_model_if_cache,
                 embedding_func=wrap_embedding_func_with_attrs(
-                    embedding_dim=1536,
+                    embedding_dim=1024,
                     max_token_size=2048,
                 )(embedding_func)
             )

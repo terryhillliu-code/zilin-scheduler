@@ -13,23 +13,34 @@ from lightrag import LightRAG, QueryParam
 from lightrag.llm.openai import openai_complete_if_cache, openai_embed
 from lightrag.llm.openai import wrap_embedding_func_with_attrs
 
-# 环境变量配置 (优先从环境读取，其次从各个预设的 .env/secrets 读取)
+# 环境变量配置 (优先从统一来源 zhiwei-bot/.env 加载)
 def _load_env_secrets():
     """
-    优先级: 
-    1. 进程已有的环境变量
-    2. 项目本地 .env (如果存在)
-    3. ~/zhiwei-bot/.env (生产环境配置)
-    4. ~/.secrets/zhiwei.env (兜底快照)
+    优先级 (v39.1 修正):
+    1. ~/zhiwei-bot/.env (统一来源，override=True 覆盖环境变量)
+    2. 进程已有的环境变量
+    3. ~/.secrets/zhiwei.env (兜底快照)
     """
+    try:
+        from dotenv import load_dotenv
+        # 优先从 zhiwei-bot/.env 加载，覆盖现有环境变量
+        bot_env = Path("/Users/liufang/zhiwei-bot/.env")
+        if bot_env.exists():
+            load_dotenv(bot_env, override=True)
+            key = os.getenv("DASHSCOPE_API_KEY")
+            if key and key.startswith("sk-"):
+                return key
+    except ImportError:
+        pass
+    
+    # 降级：直接读取文件
     key = os.getenv("DASHSCOPE_API_KEY")
     if key and key.startswith("sk-"):
         return key
-
-    # 扫描路径列表
+    
+    # 兜底：扫描其他 .env 路径
     search_paths = [
         Path(__file__).parent / ".env",
-        Path("/Users/liufang/zhiwei-bot/.env"),
         Path.home() / ".secrets" / "zhiwei.env"
     ]
 
@@ -41,12 +52,11 @@ def _load_env_secrets():
                         line = line.strip()
                         if line.startswith("DASHSCOPE_API_KEY="):
                             key = line.split("=", 1)[1].strip()
-                            # 去除可能的引号
                             key = key.strip("'").strip('"')
                             if key.startswith("sk-"):
                                 os.environ["DASHSCOPE_API_KEY"] = key
                                 return key
-            except Exception as e:
+            except Exception:
                 pass
     return key
 

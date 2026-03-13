@@ -67,3 +67,45 @@
 2026-03-13 10:25:48,745 [INFO]    📅 Obsidian 笔记同步到 ChromaDB [02:00 mon-sun]
 2026-03-13 10:25:48,745 [INFO]    📅 每日凌晨3点整理个人知识文档结构 (scan->organize->vectorize) [03:00 mon-sun]
 2026-03-13 10:25:48,745 [INFO]    💚 系统健康检查已启用 [每小时]
+2026-03-13 10:35:00,066 [INFO] 📊 === 运维指标报告 ===
+2026-03-13 10:35:03,714 [INFO] 💾 输出已保存: system_metrics_2026-03-13.md
+2026-03-13 10:35:03,716 [INFO] 📦 结果已保存: /Users/liufang/zhiwei-scheduler/outputs/artifacts/pending/system_metrics_2026-03-13.json
+2026-03-13 10:35:03,717 [INFO] 📡 正在向统一消息总线投递任务: system_metrics | ['dingtalk']
+2026-03-13 10:35:03,721 [INFO] ✅ 已投递至 MessageBus: system_metrics:2026-03-13
+2026-03-13 10:35:03,722 [INFO] ✅ 运维指标报告推送完成
+2026-03-13 10:35:03,722 [DEBUG] 📊 任务指标已记录: system_metrics
+2026-03-13 10:35:03,723 [INFO] ✅ 任务完成: system_metrics
+2026-03-13 11:00:00,685 [INFO] 重试任务开始，队列状态: {'pending': 0, 'processing': 0, 'sent_today': 8, 'sent_total': 74, 'failed': 0}
+2026-03-13 11:00:00,687 [INFO] 重试完成: 重新入队 0 个, 成功推送 0 个
+2026-03-13 11:00:00,687 [INFO] 当前队列状态: {'pending': 0, 'processing': 0, 'sent_today': 8, 'sent_total': 74, 'failed': 0}
+2026-03-13 11:00:01,174 [INFO] 🏥 系统健康检查: 🖥️ 系统健康状况 - CPU: 40.2%, 内存: 77.5%, 磁盘: 6.2%, 调度器进程内存: 16.25MB, 线程数: 3, 打开文件数: 7
+2026-03-13 11:00:01,181 [INFO] ✅ 任务完成: health_check
+2026-03-13 12:00:01,265 [INFO] 🏥 系统健康检查: 🖥️ 系统健康状况 - CPU: 64.3%, 内存: 83.1%, 磁盘: 6.1%, 调度器进程内存: 15.66MB, 线程数: 3, 打开文件数: 7
+2026-03-13 12:00:01,267 [INFO] ✅ 任务完成: health_check
+2026-03-13 12:00:01,405 [INFO] 重试任务开始，队列状态: {'pending': 0, 'processing': 0, 'sent_today': 8, 'sent_total': 74, 'failed': 0}
+2026-03-13 12:00:01,406 [INFO] 重试完成: 重新入队 0 个, 成功推送 0 个
+2026-03-13 12:00:01,406 [INFO] 当前队列状态: {'pending': 0, 'processing': 0, 'sent_today': 8, 'sent_total': 74, 'failed': 0}
+2026-03-13 13:00:01,307 [INFO] 🏥 系统健康检查: 🖥️ 系统健康状况 - CPU: 36.3%, 内存: 78.7%, 磁盘: 6.1%, 调度器进程内存: 15.61MB, 线程数: 3, 打开文件数: 7
+2026-03-13 13:00:01,383 [INFO] ✅ 任务完成: health_check
+2026-03-13 13:00:01,721 [INFO] 重试任务开始，队列状态: {'pending': 0, 'processing': 0, 'sent_today': 8, 'sent_total': 74, 'failed': 0}
+2026-03-13 13:00:01,722 [INFO] 重试完成: 重新入队 0 个, 成功推送 0 个
+2026-03-13 13:00:01,722 [INFO] 当前队列状态: {'pending': 0, 'processing': 0, 'sent_today': 8, 'sent_total': 74, 'failed': 0}
+2026-03-13 14:00:01,001 [INFO] 重试任务开始，队列状态: {'pending': 0, 'processing': 0, 'sent_today': 8, 'sent_total': 74, 'failed': 0}
+2026-03-13 14:00:01,003 [INFO] 重试完成: 重新入队 0 个, 成功推送 0 个
+2026-03-13 14:00:01,003 [INFO] 当前队列状态: {'pending': 0, 'processing': 0, 'sent_today': 8, 'sent_total': 74, 'failed': 0}
+2026-03-13 14:00:01,149 [INFO] 🏥 系统健康检查: 🖥️ 系统健康状况 - CPU: 32.8%, 内存: 80.2%, 磁盘: 6.1%, 调度器进程内存: 15.11MB, 线程数: 3, 打开文件数: 7
+2026-03-13 14:00:01,150 [INFO] ✅ 任务完成: health_check
+2026-03-13 14:30:00,117 [INFO] 🌤 === 每日午报 ===
+2026-03-13 14:30:52,278 [INFO] 🚀 [Scheduler] 使用 zhiwei-rag 增强 (Recall/Rerank)，上下文 2544 字符
+2026-03-13 14:32:27,523 [INFO] 💾 输出已保存: noon_brief_2026-03-13.md
+2026-03-13 14:32:27,538 [INFO] 📦 结果已保存: /Users/liufang/zhiwei-scheduler/outputs/artifacts/pending/noon_brief_2026-03-13.json
+2026-03-13 14:32:27,540 [INFO] 📡 正在向统一消息总线投递任务: noon_brief | ['dingtalk', 'feishu']
+2026-03-13 14:32:27,556 [INFO] ✅ 已投递至 MessageBus: noon_brief:2026-03-13
+2026-03-13 14:32:27,556 [INFO] ✅ 午报推送完成
+2026-03-13 14:32:27,558 [DEBUG] 📊 任务指标已记录: noon_brief
+2026-03-13 14:32:27,560 [INFO] ✅ 任务完成: noon_brief
+2026-03-13 15:00:00,819 [INFO] 重试任务开始，队列状态: {'pending': 0, 'processing': 0, 'sent_today': 9, 'sent_total': 75, 'failed': 0}
+2026-03-13 15:00:00,821 [INFO] 重试完成: 重新入队 0 个, 成功推送 0 个
+2026-03-13 15:00:00,821 [INFO] 当前队列状态: {'pending': 0, 'processing': 0, 'sent_today': 9, 'sent_total': 75, 'failed': 0}
+2026-03-13 15:00:01,150 [INFO] 🏥 系统健康检查: 🖥️ 系统健康状况 - CPU: 58.5%, 内存: 81.5%, 磁盘: 6.1%, 调度器进程内存: 15.25MB, 线程数: 3, 打开文件数: 9
+2026-03-13 15:00:01,151 [INFO] ✅ 任务完成: health_check

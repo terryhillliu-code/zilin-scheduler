@@ -102,16 +102,30 @@ class ZhiweiCore:
     def publish_message(self, topic: str, content: str, sender: str = "謀微", metadata: dict = None):
         """向消息中台投递消息"""
         import json
+        import time
         meta_str = json.dumps(metadata, ensure_ascii=False) if metadata else None
-        
-        # 直接写入 messages.db (保持极简，不依赖外部类)
-        with sqlite3.connect(self.msg_bus_path, timeout=15.0) as m_conn:
-            m_conn.execute("PRAGMA journal_mode=WAL;")
-            m_conn.execute("""
-                INSERT INTO messages (sender, topic, content, metadata) 
-                VALUES (?, ?, ?, ?)
-            """, (sender, topic, content, meta_str))
-            m_conn.commit()
+
+        # 重试机制
+        MAX_RETRIES = 3
+        RETRY_DELAY = 0.5
+        BUSY_TIMEOUT = 30000
+
+        for attempt in range(MAX_RETRIES):
+            try:
+                with sqlite3.connect(self.msg_bus_path, timeout=30.0) as m_conn:
+                    m_conn.execute("PRAGMA journal_mode=WAL;")
+                    m_conn.execute(f"PRAGMA busy_timeout={BUSY_TIMEOUT};")
+                    m_conn.execute("""
+                        INSERT INTO messages (sender, topic, content, metadata)
+                        VALUES (?, ?, ?, ?)
+                    """, (sender, topic, content, meta_str))
+                    m_conn.commit()
+                return  # 成功则返回
+            except sqlite3.OperationalError as e:
+                if attempt < MAX_RETRIES - 1:
+                    time.sleep(RETRY_DELAY)
+                else:
+                    raise
             
     def store_memory(self, key: str, value: Any):
         """存储记忆"""

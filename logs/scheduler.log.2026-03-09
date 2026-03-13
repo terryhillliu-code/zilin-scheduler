@@ -760,3 +760,5 @@
 2026-03-13 08:00:46,370 [WARNING] ❌ 投递 MessageBus 失败: alert_us_market_close:2026-03-13, 错误: {'dingtalk': 'file is not a database'}
 2026-03-13 08:00:46,371 [WARNING] ⚠️ 告警发送失败: us_market_close
 2026-03-13 08:00:46,372 [INFO] ✅ 任务完成: us_market_close
+2026-03-13 10:25:47,002 [INFO] 📛 收到退出信号
+2026-03-13 10:25:47,035 [INFO] 📛 调度器已关闭

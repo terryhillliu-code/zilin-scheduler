@@ -65,6 +65,16 @@ except ImportError:
     def enrich_with_rag(query, top_k=5):
         return ""
 
+# 导入 LLM 客户端 (V2-102: 替代 OpenClaw)
+sys.path.insert(0, str(Path.home() / "zhiwei-bot"))
+try:
+    from llm_client import llm_client, LLMClient
+    LLM_CLIENT_AVAILABLE = True
+except ImportError:
+    LLM_CLIENT_AVAILABLE = False
+    llm_client = None
+    logger.warning("⚠️ llm_client 导入失败，将使用降级模式")
+
 # ============ 指数退避重试配置 ============
 RETRY_DELAYS = [120, 300, 600]  # 2min, 5min, 10min
 
@@ -290,61 +300,41 @@ def call_llm_direct(message: str, timeout: int = 180) -> tuple[bool, str]:
 
 def call_agent(agent_id: str, message: str, timeout: int = 180) -> tuple[bool, str]:
     """
-    通过 OpenClaw 调用 Agent，并在工具冲突时自动降级
+    调用 LLM Agent（直连百炼 API，不再依赖 OpenClaw/Docker）
+
+    V2-102 重构：
+    - 使用 llm_client 直连百炼 API
+    - 移除 Docker 依赖
+    - 保留降级逻辑
+
+    Args:
+        agent_id: Agent ID (main/researcher/operator)
+        message: 用户消息
+        timeout: 超时时间（秒）
+
+    Returns:
+        (success, content) 元组
     """
-    cmd = [
-        "docker", "exec", CONTAINER,
-        "openclaw", "agent",
-        "--agent", agent_id,
-        "--message", message,
-        "--json",
-        "--timeout", str(timeout)
-    ]
-
-    # 简单的内部重试，防止网络抖动
-    for attempt in range(2):
+    # 优先使用 llm_client（直连百炼）
+    if LLM_CLIENT_AVAILABLE and llm_client:
         try:
-            result = subprocess.run(cmd, capture_output=True, text=True, timeout=timeout + 30)
-            
-            # 处理 Docker 命令本身的错误
-            if result.returncode != 0:
-                err = result.stderr.strip()[:300]
-                logger.warning(f"⚠️ Agent 调用告警 (第{attempt+1}次): {err}")
-                continue
-
-            # 解析 JSON 响应
-            data = json.loads(result.stdout)
-            
-            # 检查是否成功
-            if data.get("status") == "ok":
-                payloads = data.get("result", {}).get("payloads", [])
-                if payloads:
-                    text = payloads[0].get("text", "")
-                    
-                    # 核验内容是否包含 400 错误（模型层工具调用冲突）
-                    if "Multiple tools are supported" in text or "400 {" in text:
-                        logger.warning(f"⚠️ 检测到模型工具冲突错误，正在尝试降级直接调用...")
-                        ok_direct, text_direct = call_llm_direct(message, timeout)
-                        if ok_direct:
-                            return True, text_direct
-                        else:
-                            logger.error(f"❌ 降级直接调用也失败: {text_direct}")
-                            # 继续重试
-                            continue
-                            
-                    return True, text
-
-            logger.warning(f"⚠️ Agent 返回异常 (第{attempt+1}次): {result.stdout[:100]}")
-
-        except subprocess.TimeoutExpired:
-            logger.error(f"❌ Agent 调用超时")
-        except json.JSONDecodeError as e:
-            logger.error(f"❌ Agent 响应解析失败: {e}")
+            # agent_id 直接作为 role 使用（llm_client 已映射）
+            success, content = llm_client.call(
+                role=agent_id,
+                message=message,
+                timeout=timeout
+            )
+            if success:
+                logger.info(f"✅ LLM 调用成功: {agent_id}, {len(content)} 字符")
+                return True, content
+            else:
+                logger.warning(f"⚠️ LLM 调用失败: {content}")
+                # 继续尝试降级
         except Exception as e:
-            logger.error(f"❌ Agent 调用异常: {e}")
+            logger.error(f"❌ LLM 客户端异常: {e}")
 
-    # 如果 OpenClaw 彻底失败，尝试最后一次直接降级
-    logger.warning("🔄 OpenClaw 尝试均失败，执行最终降级调用...")
+    # 降级：使用原有的 call_llm_direct
+    logger.warning("🔄 LLM 客户端不可用，降级到本地代理...")
     return call_llm_direct(message, timeout)
 
 

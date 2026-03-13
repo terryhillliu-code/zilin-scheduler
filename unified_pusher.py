@@ -27,6 +27,15 @@ sys.path.insert(0, str(DEV_DIR))
 from pusher import PushManager
 from message_bus import MessageBus
 
+# V2-103: 导入 LLM 客户端替代 OpenClaw
+sys.path.insert(0, str(Path.home() / "zhiwei-bot"))
+try:
+    from llm_client import llm_client
+    LLM_CLIENT_AVAILABLE = True
+except ImportError:
+    LLM_CLIENT_AVAILABLE = False
+    llm_client = None
+
 # 日志配置
 logging.basicConfig(
     level=logging.INFO,
@@ -85,28 +94,23 @@ class UnifiedPusher:
             f"原始标题: {title}\n"
             f"原始内容:\n{content}"
         )
-        
-        cmd = [
-            "docker", "exec", CONTAINER,
-            "openclaw", "agent", "--agent", "operator",
-            "--message", prompt, "--json", "--timeout", "120"
-        ]
-        
-        try:
-            result = subprocess.run(cmd, capture_output=True, text=True, timeout=150)
-            if result.returncode == 0:
-                data = json.loads(result.stdout)
-                if data.get("status") == "ok":
-                    text = data.get("result", {}).get("payloads", [{}])[0].get("text", "")
-                    if "Multiple tools" not in text and "400 {" not in text:
-                        return text
-            
-            logger.warning("⚠️ Agent 调用异常或工具冲突，执行降级润色...")
-            ok, text = self.call_llm_direct(prompt)
-            return text if ok else content
-        except Exception as e:
-            logger.error(f"❌ 润色失败: {e}")
-            return content
+
+        # V2-103: 使用 llm_client 替代 Docker 调用
+        if LLM_CLIENT_AVAILABLE and llm_client:
+            try:
+                success, text = llm_client.call("operator", prompt, timeout=120)
+                if success:
+                    logger.info(f"✅ LLM 润色成功，{len(text)} 字符")
+                    return text
+                else:
+                    logger.warning(f"⚠️ LLM 润色失败: {text}")
+            except Exception as e:
+                logger.error(f"❌ LLM 润色异常: {e}")
+
+        # 降级：使用本地代理
+        logger.warning("⚠️ LLM 客户端不可用，执行降级润色...")
+        ok, text = self.call_llm_direct(prompt)
+        return text if ok else content
 
     def process_message(self, msg: dict):
         msg_id = msg['id']

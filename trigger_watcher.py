@@ -17,6 +17,15 @@ import subprocess
 from pathlib import Path
 from datetime import datetime
 
+# V2-103: 导入 LLM 客户端替代 OpenClaw
+sys.path.insert(0, str(Path.home() / "zhiwei-bot"))
+try:
+    from llm_client import llm_client
+    LLM_CLIENT_AVAILABLE = True
+except ImportError:
+    LLM_CLIENT_AVAILABLE = False
+    llm_client = None
+
 TRIGGER_DIR = Path(__file__).parent / "triggers"
 
 # 触发器配置
@@ -38,27 +47,22 @@ TRIGGER_JOBS = {
     }
 }
 
-CONTAINER = "clawdbot"
-
-
 def call_agent(agent_id: str, message: str, timeout: int = 300) -> tuple[bool, str]:
-    """调用 OpenClaw Agent"""
-    cmd = [
-        "docker", "exec", CONTAINER,
-        "openclaw", "agent",
-        "--agent", agent_id,
-        "--message", message,
-        "--json",
-        "--timeout", str(timeout)
-    ]
+    """
+    调用 LLM Agent（直连百炼 API，V2-103 重构）
+    """
+    if LLM_CLIENT_AVAILABLE and llm_client:
+        try:
+            success, content = llm_client.call(agent_id, message, timeout=timeout)
+            if success:
+                return True, content
+            else:
+                return False, content
+        except Exception as e:
+            return False, str(e)
 
-    try:
-        result = subprocess.run(cmd, capture_output=True, text=True, timeout=timeout + 30)
-        if result.returncode == 0:
-            return True, result.stdout
-        return False, result.stderr[:500]
-    except Exception as e:
-        return False, str(e)
+    # 降级：返回错误
+    return False, "LLM 客户端不可用"
 
 
 def execute_trigger(trigger_file: str):

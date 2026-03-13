@@ -1,0 +1,4041 @@
+{
+  "7062 - Next-Gen AI-HPC Server Performance with CXL3.1 Tiered Memory and MRDIMM solution_v2_v2": {
+    "chunk_ids": [
+      "chunk-5642f5d2398a5cb6600146cb1001b0ec"
+    ],
+    "count": 1,
+    "create_time": 1773167424,
+    "update_time": 1773167424,
+    "_id": "7062 - Next-Gen AI-HPC Server Performance with CXL3.1 Tiered Memory and MRDIMM solution_v2_v2"
+  },
+  "CXL 3.1": {
+    "chunk_ids": [
+      "chunk-5642f5d2398a5cb6600146cb1001b0ec",
+      "chunk-ecc05e1389a9315c30e68199bddd8d73"
+    ],
+    "count": 2,
+    "update_time": 1773167653,
+    "_id": "CXL 3.1"
+  },
+  "MRDIMM": {
+    "chunk_ids": [
+      "chunk-5642f5d2398a5cb6600146cb1001b0ec",
+      "chunk-ecc05e1389a9315c30e68199bddd8d73"
+    ],
+    "count": 2,
+    "update_time": 1773167653,
+    "_id": "MRDIMM"
+  },
+  "AI-HPC Server": {
+    "chunk_ids": [
+      "chunk-5642f5d2398a5cb6600146cb1001b0ec",
+      "chunk-ecc05e1389a9315c30e68199bddd8d73"
+    ],
+    "count": 2,
+    "update_time": 1773167653,
+    "_id": "AI-HPC Server"
+  },
+  "Tiered Memory": {
+    "chunk_ids": [
+      "chunk-5642f5d2398a5cb6600146cb1001b0ec",
+      "chunk-ecc05e1389a9315c30e68199bddd8d73"
+    ],
+    "count": 2,
+    "update_time": 1773167653,
+    "_id": "Tiered Memory"
+  },
+  "Unknown Author": {
+    "chunk_ids": [
+      "chunk-5642f5d2398a5cb6600146cb1001b0ec",
+      "chunk-3993cd0b737e3130edf76f25d51050ff",
+      "chunk-d1c6054a6d87cf6975db5c63bd96f9cd",
+      "chunk-1547ad065c68b2f6fec2e3b6eb6a9099",
+      "chunk-17e8fab522b31c893a3a7ef21633d42a",
+      "chunk-93d5d66acecc3b09726280461a1741c7",
+      "chunk-2fda2d54a8413eca19fea985df0ff580",
+      "chunk-49a4b3d9e081e0db5971a564684cb895",
+      "chunk-2c984e299ac9432c7e312cc7b398b600",
+      "chunk-33ad961ca189b1cec80569bbd0809873",
+      "chunk-22d5697b8505125995b91427be92e6d2",
+      "chunk-04159a2e6b1c0a304c8cab9dc130201f",
+      "chunk-c0b6845c9f5c77a0f3f30fa98403d8fe",
+      "chunk-d337eca5c11c950a864764401f37ceaf",
+      "chunk-e24b7488a587cd1f8bf6573d12f1c75a",
+      "chunk-6d829808f9b4093bb903d5990d12a27c",
+      "chunk-df115efbf3bc71602047949ae3dbbdf0",
+      "chunk-15484e8b32164d9fb60eeef755439770",
+      "chunk-46bc26dff317560becba9a0a6fa7a441",
+      "chunk-61f77d89f092ff5cd7c6ea81d31cfeb6",
+      "chunk-2c8929bd6af5efae83044622ffa3faac",
+      "chunk-9e88d373c00da121b8868d08bdceb9cf",
+      "chunk-32749bfe06ebb4fd503585308b574af7",
+      "chunk-58b2d80c0b2a8b0ee53bae05070f0c93",
+      "chunk-ef5a1dc3d7c28f0190c5185e1c92732b",
+      "chunk-7b48c48f2f7c3877c03d05218cfb8c20",
+      "chunk-3ae046aa80e7382953f272a3870f099b",
+      "chunk-14a5b27abffb227913c4a16ac75887ca",
+      "chunk-c199ec006c1f0210255474d03892899b",
+      "chunk-e4173aa4ed70cd6d625ee79aebe2a677",
+      "chunk-99116bb42021db2c45f55b65671842c0",
+      "chunk-71812bc0fbded857fe0a4b82f5223b84",
+      "chunk-75a98834e3066a94c413caadb98ef3bd",
+      "chunk-97525ceaf715f1ad94448c8abc5642db",
+      "chunk-0559e293569f15eabf0cd28fac35d14f",
+      "chunk-c461db61ef0a922e7d7292d8516c1147",
+      "chunk-11fbfb718c91a1cacf50d05e7bcc41bf",
+      "chunk-b29d2932bdd25f9f58a553637e48ab19",
+      "chunk-e0849f10e95d7677ebed5f2a29c650a2",
+      "chunk-e43b9c7c8f30976446ff07cfb8acd723",
+      "chunk-7480ef95765b1d3cb3e7cc5a73e67e91",
+      "chunk-f023cd84d3e2ed9cf707d62efd5ddbb9",
+      "chunk-87108b0686e8d70e6c11c7ad5b493573",
+      "chunk-55f9a5f9dbd8556e5eeb84b9bb117c15",
+      "chunk-25afa8d829c71db97875281976c4e594",
+      "chunk-266b57d952795e78de135dd7ea0d1822",
+      "chunk-57adc984bf533daad96d70c0a73d33e0",
+      "chunk-1bf489aadb0f21630c59b8361f23e8f3",
+      "chunk-81d317b0bc2c9a54d84d534d33e7b288",
+      "chunk-41e5bcd0e2dad86fc34ddddd1afe3ac0",
+      "chunk-60ca18023b7448fb4ddf9aa784ef1a65",
+      "chunk-c7fd39ddee62a6682cc2d3e58c3b66ed"
+    ],
+    "count": 52,
+    "update_time": 1773169184,
+    "_id": "Unknown Author"
+  },
+  "2026-03-07": {
+    "chunk_ids": [
+      "chunk-5642f5d2398a5cb6600146cb1001b0ec",
+      "chunk-d1c6054a6d87cf6975db5c63bd96f9cd",
+      "chunk-1547ad065c68b2f6fec2e3b6eb6a9099",
+      "chunk-17e8fab522b31c893a3a7ef21633d42a",
+      "chunk-7cb819bd8f7ecd3c6e4efa0548627c2f",
+      "chunk-93d5d66acecc3b09726280461a1741c7",
+      "chunk-2fda2d54a8413eca19fea985df0ff580",
+      "chunk-2c984e299ac9432c7e312cc7b398b600",
+      "chunk-33ad961ca189b1cec80569bbd0809873",
+      "chunk-22d5697b8505125995b91427be92e6d2",
+      "chunk-04159a2e6b1c0a304c8cab9dc130201f",
+      "chunk-c0b6845c9f5c77a0f3f30fa98403d8fe",
+      "chunk-ba1d69c721849ac582b1a53a58646ef1",
+      "chunk-805ed11febeca1bfd1bdea057549e4ce",
+      "chunk-e24b7488a587cd1f8bf6573d12f1c75a",
+      "chunk-6d829808f9b4093bb903d5990d12a27c",
+      "chunk-df115efbf3bc71602047949ae3dbbdf0",
+      "chunk-15484e8b32164d9fb60eeef755439770",
+      "chunk-46bc26dff317560becba9a0a6fa7a441",
+      "chunk-61f77d89f092ff5cd7c6ea81d31cfeb6",
+      "chunk-2c8929bd6af5efae83044622ffa3faac",
+      "chunk-9e88d373c00da121b8868d08bdceb9cf",
+      "chunk-32749bfe06ebb4fd503585308b574af7",
+      "chunk-cf00ccbe9715d44dfa602d3da7162666",
+      "chunk-ef5a1dc3d7c28f0190c5185e1c92732b",
+      "chunk-7b48c48f2f7c3877c03d05218cfb8c20",
+      "chunk-3ae046aa80e7382953f272a3870f099b",
+      "chunk-14a5b27abffb227913c4a16ac75887ca",
+      "chunk-e4173aa4ed70cd6d625ee79aebe2a677",
+      "chunk-99116bb42021db2c45f55b65671842c0",
+      "chunk-c461db61ef0a922e7d7292d8516c1147",
+      "chunk-538e9be43efc9f4740b1699a18d33882",
+      "chunk-7480ef95765b1d3cb3e7cc5a73e67e91",
+      "chunk-f023cd84d3e2ed9cf707d62efd5ddbb9",
+      "chunk-87108b0686e8d70e6c11c7ad5b493573",
+      "chunk-01a392db9d8bb576ab6ed5aff9f9d578",
+      "chunk-1fc91c144f09ce8648b8a92d03b6a031",
+      "chunk-266b57d952795e78de135dd7ea0d1822",
+      "chunk-fde36569763e8e63f5879815d072c123",
+      "chunk-1d28fc57f74bd152b123d626835823bc",
+      "chunk-60ca18023b7448fb4ddf9aa784ef1a65",
+      "chunk-33d6bc980e862376c11685a00bf22ca3",
+      "chunk-e27f03ec1e126815641b4755ece051c6",
+      "chunk-968fbcf059982c556b4bcc6944efa36b",
+      "chunk-f3b581e41172762e088bcf3b7f03c6a4",
+      "chunk-df273047e67bbcef8888ccc637f02f26"
+    ],
+    "count": 46,
+    "update_time": 1773341691,
+    "_id": "2026-03-07"
+  },
+  "PDF Format": {
+    "chunk_ids": [
+      "chunk-5642f5d2398a5cb6600146cb1001b0ec",
+      "chunk-3993cd0b737e3130edf76f25d51050ff",
+      "chunk-1547ad065c68b2f6fec2e3b6eb6a9099",
+      "chunk-2fda2d54a8413eca19fea985df0ff580",
+      "chunk-2c984e299ac9432c7e312cc7b398b600",
+      "chunk-22d5697b8505125995b91427be92e6d2",
+      "chunk-04159a2e6b1c0a304c8cab9dc130201f",
+      "chunk-c0b6845c9f5c77a0f3f30fa98403d8fe",
+      "chunk-e24b7488a587cd1f8bf6573d12f1c75a",
+      "chunk-1f1a30530b2b434213d044c2a8466044",
+      "chunk-2c8929bd6af5efae83044622ffa3faac",
+      "chunk-f1c174d3bf65d5024ebe4ad7cbd8c5e2",
+      "chunk-9e88d373c00da121b8868d08bdceb9cf",
+      "chunk-32749bfe06ebb4fd503585308b574af7",
+      "chunk-3ae046aa80e7382953f272a3870f099b",
+      "chunk-71812bc0fbded857fe0a4b82f5223b84",
+      "chunk-0559e293569f15eabf0cd28fac35d14f",
+      "chunk-c461db61ef0a922e7d7292d8516c1147",
+      "chunk-11fbfb718c91a1cacf50d05e7bcc41bf",
+      "chunk-7480ef95765b1d3cb3e7cc5a73e67e91",
+      "chunk-87108b0686e8d70e6c11c7ad5b493573",
+      "chunk-01a392db9d8bb576ab6ed5aff9f9d578",
+      "chunk-41e5bcd0e2dad86fc34ddddd1afe3ac0"
+    ],
+    "count": 23,
+    "update_time": 1773168991,
+    "_id": "PDF Format"
+  },
+  "Core Research Report Library": {
+    "chunk_ids": [
+      "chunk-5642f5d2398a5cb6600146cb1001b0ec",
+      "chunk-e24b7488a587cd1f8bf6573d12f1c75a",
+      "chunk-7b48c48f2f7c3877c03d05218cfb8c20",
+      "chunk-1d26679a5c7d4be95dc3163cdd74635d"
+    ],
+    "count": 4,
+    "update_time": 1773169067,
+    "_id": "Core Research Report Library"
+  },
+  "7479 - Trust at 64 GT-s- Security Considerations for PCIe 6 Switch Deployments_v2": {
+    "chunk_ids": [
+      "chunk-3993cd0b737e3130edf76f25d51050ff"
+    ],
+    "count": 1,
+    "create_time": 1773167426,
+    "update_time": 1773167426,
+    "_id": "7479 - Trust at 64 GT-s- Security Considerations for PCIe 6 Switch Deployments_v2"
+  },
+  "PCIe 6 Switch": {
+    "chunk_ids": [
+      "chunk-3993cd0b737e3130edf76f25d51050ff",
+      "chunk-538e9be43efc9f4740b1699a18d33882"
+    ],
+    "count": 2,
+    "update_time": 1773168368,
+    "_id": "PCIe 6 Switch"
+  },
+  "Server Architecture": {
+    "chunk_ids": [
+      "chunk-3993cd0b737e3130edf76f25d51050ff",
+      "chunk-7cb819bd8f7ecd3c6e4efa0548627c2f",
+      "chunk-147c4db7a4ce5872858a38c1ac58af56",
+      "chunk-2c984e299ac9432c7e312cc7b398b600",
+      "chunk-f3556e182081aed4b9613c75949ed570",
+      "chunk-ba1d69c721849ac582b1a53a58646ef1",
+      "chunk-805ed11febeca1bfd1bdea057549e4ce",
+      "chunk-e24b7488a587cd1f8bf6573d12f1c75a",
+      "chunk-46bc26dff317560becba9a0a6fa7a441",
+      "chunk-d542a9101cecae9b9250937b2605dee2",
+      "chunk-1f1a30530b2b434213d044c2a8466044",
+      "chunk-10dc48654563b9bb58e4fbbbb7645eb8",
+      "chunk-9e88d373c00da121b8868d08bdceb9cf",
+      "chunk-207b0823e90b60e301db1f919be31b9c",
+      "chunk-ef5a1dc3d7c28f0190c5185e1c92732b",
+      "chunk-7b48c48f2f7c3877c03d05218cfb8c20",
+      "chunk-3ae046aa80e7382953f272a3870f099b",
+      "chunk-e4173aa4ed70cd6d625ee79aebe2a677",
+      "chunk-7dd14306d9061dddba8b150d9c7d98b0",
+      "chunk-97525ceaf715f1ad94448c8abc5642db",
+      "chunk-0559e293569f15eabf0cd28fac35d14f",
+      "chunk-ef9903a22739411840df5a1652b687d5",
+      "chunk-c461db61ef0a922e7d7292d8516c1147",
+      "chunk-03978f9015d72cc2c030ac8e6447fed7",
+      "chunk-538e9be43efc9f4740b1699a18d33882",
+      "chunk-e0849f10e95d7677ebed5f2a29c650a2",
+      "chunk-e43b9c7c8f30976446ff07cfb8acd723",
+      "chunk-63f83f5a5cef6dac282d861fd6da9e77",
+      "chunk-900ad8221a96dafc212eef7868a063e8",
+      "chunk-7480ef95765b1d3cb3e7cc5a73e67e91",
+      "chunk-f023cd84d3e2ed9cf707d62efd5ddbb9",
+      "chunk-54b80862fb010b672af4957bef254768",
+      "chunk-b71eacebd07cf22c28bd1377859a2954",
+      "chunk-55f9a5f9dbd8556e5eeb84b9bb117c15",
+      "chunk-fde36569763e8e63f5879815d072c123",
+      "chunk-1bf489aadb0f21630c59b8361f23e8f3",
+      "chunk-41e5bcd0e2dad86fc34ddddd1afe3ac0",
+      "chunk-fa73bfb5833304f96f036b9a9653ece2",
+      "chunk-1d28fc57f74bd152b123d626835823bc",
+      "chunk-1d26679a5c7d4be95dc3163cdd74635d",
+      "chunk-846347bde485db03ead56cd986ba9001",
+      "chunk-d7bc46115f13aecdbbcd6e7398ee9691",
+      "chunk-33d6bc980e862376c11685a00bf22ca3",
+      "chunk-e27f03ec1e126815641b4755ece051c6",
+      "chunk-3bef51647317cfab8fd98c2182da0b1c",
+      "chunk-968fbcf059982c556b4bcc6944efa36b",
+      "chunk-f3b581e41172762e088bcf3b7f03c6a4",
+      "chunk-635a8270f90d4ad369e34ef96c6f284f",
+      "chunk-230764380b33557b5524bd06ee945029",
+      "chunk-62991649d9ddbddbdd87eed4b8473959",
+      "chunk-bac65798eb982eaec66217171974d32c",
+      "chunk-1b7fcd9c795c3ffe5951ea1b509567b7",
+      "chunk-ec101ba502a70816a33b6a1e26f6054f",
+      "chunk-df273047e67bbcef8888ccc637f02f26"
+    ],
+    "count": 54,
+    "update_time": 1773341690,
+    "_id": "Server Architecture"
+  },
+  "Trust": {
+    "chunk_ids": [
+      "chunk-3993cd0b737e3130edf76f25d51050ff"
+    ],
+    "count": 1,
+    "create_time": 1773167426,
+    "update_time": 1773167426,
+    "_id": "Trust"
+  },
+  "Security Considerations": {
+    "chunk_ids": [
+      "chunk-3993cd0b737e3130edf76f25d51050ff"
+    ],
+    "count": 1,
+    "create_time": 1773167426,
+    "update_time": 1773167426,
+    "_id": "Security Considerations"
+  },
+  "64 GT/s": {
+    "chunk_ids": [
+      "chunk-3993cd0b737e3130edf76f25d51050ff"
+    ],
+    "count": 1,
+    "create_time": 1773167426,
+    "update_time": 1773167426,
+    "_id": "64 GT/s"
+  },
+  "Core Priority": {
+    "chunk_ids": [
+      "chunk-3993cd0b737e3130edf76f25d51050ff",
+      "chunk-17e8fab522b31c893a3a7ef21633d42a",
+      "chunk-49a4b3d9e081e0db5971a564684cb895",
+      "chunk-147c4db7a4ce5872858a38c1ac58af56",
+      "chunk-c0b6845c9f5c77a0f3f30fa98403d8fe",
+      "chunk-6d829808f9b4093bb903d5990d12a27c",
+      "chunk-df115efbf3bc71602047949ae3dbbdf0",
+      "chunk-15484e8b32164d9fb60eeef755439770",
+      "chunk-1f1a30530b2b434213d044c2a8466044",
+      "chunk-2c8929bd6af5efae83044622ffa3faac",
+      "chunk-99116bb42021db2c45f55b65671842c0",
+      "chunk-71812bc0fbded857fe0a4b82f5223b84",
+      "chunk-97525ceaf715f1ad94448c8abc5642db",
+      "chunk-f023cd84d3e2ed9cf707d62efd5ddbb9",
+      "chunk-fed70deae9eaf1b4120dec7d0e6498bd",
+      "chunk-266b57d952795e78de135dd7ea0d1822",
+      "chunk-41e5bcd0e2dad86fc34ddddd1afe3ac0",
+      "chunk-1d28fc57f74bd152b123d626835823bc",
+      "chunk-60ca18023b7448fb4ddf9aa784ef1a65",
+      "chunk-c7fd39ddee62a6682cc2d3e58c3b66ed",
+      "chunk-3bef51647317cfab8fd98c2182da0b1c",
+      "chunk-f3b581e41172762e088bcf3b7f03c6a4",
+      "chunk-1b7fcd9c795c3ffe5951ea1b509567b7",
+      "chunk-ec101ba502a70816a33b6a1e26f6054f"
+    ],
+    "count": 24,
+    "update_time": 1773341508,
+    "_id": "Core Priority"
+  },
+  "Research Report Library": {
+    "chunk_ids": [
+      "chunk-3993cd0b737e3130edf76f25d51050ff",
+      "chunk-f3556e182081aed4b9613c75949ed570",
+      "chunk-3ae046aa80e7382953f272a3870f099b",
+      "chunk-c199ec006c1f0210255474d03892899b",
+      "chunk-97525ceaf715f1ad94448c8abc5642db",
+      "chunk-0559e293569f15eabf0cd28fac35d14f",
+      "chunk-900ad8221a96dafc212eef7868a063e8",
+      "chunk-1bf489aadb0f21630c59b8361f23e8f3",
+      "chunk-41e5bcd0e2dad86fc34ddddd1afe3ac0",
+      "chunk-d7bc46115f13aecdbbcd6e7398ee9691",
+      "chunk-33d6bc980e862376c11685a00bf22ca3",
+      "chunk-e27f03ec1e126815641b4755ece051c6",
+      "chunk-3bef51647317cfab8fd98c2182da0b1c",
+      "chunk-968fbcf059982c556b4bcc6944efa36b",
+      "chunk-f3b581e41172762e088bcf3b7f03c6a4",
+      "chunk-635a8270f90d4ad369e34ef96c6f284f",
+      "chunk-230764380b33557b5524bd06ee945029",
+      "chunk-62991649d9ddbddbdd87eed4b8473959",
+      "chunk-1b7fcd9c795c3ffe5951ea1b509567b7",
+      "chunk-ec101ba502a70816a33b6a1e26f6054f",
+      "chunk-df273047e67bbcef8888ccc637f02f26"
+    ],
+    "count": 21,
+    "update_time": 1773341690,
+    "_id": "Research Report Library"
+  },
+  "ZhiweiVault": {
+    "chunk_ids": [
+      "chunk-3087d9b4a9b15d2f774062ddbfd04e9a"
+    ],
+    "count": 1,
+    "create_time": 1773167441,
+    "update_time": 1773167441,
+    "_id": "ZhiweiVault"
+  },
+  "Obsidian Vault": {
+    "chunk_ids": [
+      "chunk-3087d9b4a9b15d2f774062ddbfd04e9a"
+    ],
+    "count": 1,
+    "create_time": 1773167441,
+    "update_time": 1773167441,
+    "_id": "Obsidian Vault"
+  },
+  "Test Note": {
+    "chunk_ids": [
+      "chunk-3087d9b4a9b15d2f774062ddbfd04e9a"
+    ],
+    "count": 1,
+    "create_time": 1773167441,
+    "update_time": 1773167441,
+    "_id": "Test Note"
+  },
+  "CST": {
+    "chunk_ids": [
+      "chunk-3087d9b4a9b15d2f774062ddbfd04e9a"
+    ],
+    "count": 1,
+    "create_time": 1773167441,
+    "update_time": 1773167441,
+    "_id": "CST"
+  },
+  "Wed Mar  4 09:52:56 CST 2026": {
+    "chunk_ids": [
+      "chunk-3087d9b4a9b15d2f774062ddbfd04e9a"
+    ],
+    "count": 1,
+    "create_time": 1773167441,
+    "update_time": 1773167441,
+    "_id": "Wed Mar  4 09:52:56 CST 2026"
+  },
+  "Zhiwei System": {
+    "chunk_ids": [
+      "chunk-400a555f5d5834d5ffa5771be077ebcd"
+    ],
+    "count": 1,
+    "create_time": 1773167452,
+    "update_time": 1773167452,
+    "_id": "Zhiwei System"
+  },
+  "Obsidian": {
+    "chunk_ids": [
+      "chunk-400a555f5d5834d5ffa5771be077ebcd"
+    ],
+    "count": 1,
+    "create_time": 1773167452,
+    "update_time": 1773167452,
+    "_id": "Obsidian"
+  },
+  "Integration Test": {
+    "chunk_ids": [
+      "chunk-400a555f5d5834d5ffa5771be077ebcd"
+    ],
+    "count": 1,
+    "create_time": 1773167452,
+    "update_time": 1773167452,
+    "_id": "Integration Test"
+  },
+  "Zhiwei System Integration Test": {
+    "chunk_ids": [
+      "chunk-400a555f5d5834d5ffa5771be077ebcd"
+    ],
+    "count": 1,
+    "create_time": 1773167452,
+    "update_time": 1773167452,
+    "_id": "Zhiwei System Integration Test"
+  },
+  "Semiconductor Industry": {
+    "chunk_ids": [
+      "chunk-546dfa6e8a446972d5dc6ae34a64ce0a"
+    ],
+    "count": 1,
+    "create_time": 1773167462,
+    "update_time": 1773167462,
+    "_id": "Semiconductor Industry"
+  },
+  "2nm Node": {
+    "chunk_ids": [
+      "chunk-546dfa6e8a446972d5dc6ae34a64ce0a"
+    ],
+    "count": 1,
+    "create_time": 1773167462,
+    "update_time": 1773167462,
+    "_id": "2nm Node"
+  },
+  "TSMC": {
+    "chunk_ids": [
+      "chunk-546dfa6e8a446972d5dc6ae34a64ce0a"
+    ],
+    "count": 1,
+    "create_time": 1773167462,
+    "update_time": 1773167462,
+    "_id": "TSMC"
+  },
+  "Samsung": {
+    "chunk_ids": [
+      "chunk-546dfa6e8a446972d5dc6ae34a64ce0a"
+    ],
+    "count": 1,
+    "create_time": 1773167462,
+    "update_time": 1773167462,
+    "_id": "Samsung"
+  },
+  "Advanced Packaging": {
+    "chunk_ids": [
+      "chunk-546dfa6e8a446972d5dc6ae34a64ce0a"
+    ],
+    "count": 1,
+    "create_time": 1773167462,
+    "update_time": 1773167462,
+    "_id": "Advanced Packaging"
+  },
+  "CoWoS": {
+    "chunk_ids": [
+      "chunk-546dfa6e8a446972d5dc6ae34a64ce0a"
+    ],
+    "count": 1,
+    "create_time": 1773167462,
+    "update_time": 1773167462,
+    "_id": "CoWoS"
+  },
+  "AI Chip": {
+    "chunk_ids": [
+      "chunk-546dfa6e8a446972d5dc6ae34a64ce0a"
+    ],
+    "count": 1,
+    "create_time": 1773167462,
+    "update_time": 1773167462,
+    "_id": "AI Chip"
+  },
+  "Inference Acceleration": {
+    "chunk_ids": [
+      "chunk-546dfa6e8a446972d5dc6ae34a64ce0a"
+    ],
+    "count": 1,
+    "create_time": 1773167462,
+    "update_time": 1773167462,
+    "_id": "Inference Acceleration"
+  },
+  "NVIDIA": {
+    "chunk_ids": [
+      "chunk-546dfa6e8a446972d5dc6ae34a64ce0a"
+    ],
+    "count": 1,
+    "create_time": 1773167463,
+    "update_time": 1773167463,
+    "_id": "NVIDIA"
+  },
+  "TensorRT-LLM": {
+    "chunk_ids": [
+      "chunk-546dfa6e8a446972d5dc6ae34a64ce0a"
+    ],
+    "count": 1,
+    "create_time": 1773167463,
+    "update_time": 1773167463,
+    "_id": "TensorRT-LLM"
+  },
+  "HBM3e Memory": {
+    "chunk_ids": [
+      "chunk-546dfa6e8a446972d5dc6ae34a64ce0a"
+    ],
+    "count": 1,
+    "create_time": 1773167463,
+    "update_time": 1773167463,
+    "_id": "HBM3e Memory"
+  },
+  "GPU": {
+    "chunk_ids": [
+      "chunk-546dfa6e8a446972d5dc6ae34a64ce0a"
+    ],
+    "count": 1,
+    "create_time": 1773167463,
+    "update_time": 1773167463,
+    "_id": "GPU"
+  },
+  "7801 - Efficient AI Serving at Scale- Processing Near Memory Acceleration for LLMs and Vector Search_v2_v2": {
+    "chunk_ids": [
+      "chunk-d1c6054a6d87cf6975db5c63bd96f9cd"
+    ],
+    "count": 1,
+    "create_time": 1773167482,
+    "update_time": 1773167482,
+    "_id": "7801 - Efficient AI Serving at Scale- Processing Near Memory Acceleration for LLMs and Vector Search_v2_v2"
+  },
+  "PDF": {
+    "chunk_ids": [
+      "chunk-d1c6054a6d87cf6975db5c63bd96f9cd",
+      "chunk-17e8fab522b31c893a3a7ef21633d42a",
+      "chunk-954e8ea4f501064d07fa47f0e5affaeb",
+      "chunk-7cb819bd8f7ecd3c6e4efa0548627c2f",
+      "chunk-93d5d66acecc3b09726280461a1741c7",
+      "chunk-4bea655fda74f25913c082a3a09d1a75",
+      "chunk-147c4db7a4ce5872858a38c1ac58af56",
+      "chunk-33ad961ca189b1cec80569bbd0809873",
+      "chunk-f3556e182081aed4b9613c75949ed570",
+      "chunk-d337eca5c11c950a864764401f37ceaf",
+      "chunk-805ed11febeca1bfd1bdea057549e4ce",
+      "chunk-6d829808f9b4093bb903d5990d12a27c",
+      "chunk-df115efbf3bc71602047949ae3dbbdf0",
+      "chunk-15484e8b32164d9fb60eeef755439770",
+      "chunk-46bc26dff317560becba9a0a6fa7a441",
+      "chunk-9a23f58ae4463735de6f1b117591592c",
+      "chunk-61f77d89f092ff5cd7c6ea81d31cfeb6",
+      "chunk-10dc48654563b9bb58e4fbbbb7645eb8",
+      "chunk-cf00ccbe9715d44dfa602d3da7162666",
+      "chunk-ef5a1dc3d7c28f0190c5185e1c92732b",
+      "chunk-7b48c48f2f7c3877c03d05218cfb8c20",
+      "chunk-c199ec006c1f0210255474d03892899b",
+      "chunk-46b1cb6c7cb6838091250f07aa58cb19",
+      "chunk-99116bb42021db2c45f55b65671842c0",
+      "chunk-7dd14306d9061dddba8b150d9c7d98b0",
+      "chunk-75a98834e3066a94c413caadb98ef3bd",
+      "chunk-97525ceaf715f1ad94448c8abc5642db",
+      "chunk-ef9903a22739411840df5a1652b687d5",
+      "chunk-b29d2932bdd25f9f58a553637e48ab19",
+      "chunk-538e9be43efc9f4740b1699a18d33882",
+      "chunk-e0849f10e95d7677ebed5f2a29c650a2",
+      "chunk-e43b9c7c8f30976446ff07cfb8acd723",
+      "chunk-900ad8221a96dafc212eef7868a063e8",
+      "chunk-f023cd84d3e2ed9cf707d62efd5ddbb9",
+      "chunk-fed70deae9eaf1b4120dec7d0e6498bd",
+      "chunk-4fad482b7206fdfbdc48ed9c3de6c7af",
+      "chunk-b71eacebd07cf22c28bd1377859a2954",
+      "chunk-25afa8d829c71db97875281976c4e594",
+      "chunk-266b57d952795e78de135dd7ea0d1822",
+      "chunk-fde36569763e8e63f5879815d072c123",
+      "chunk-1bbafe9a71a73e07d029b3bfa3f85791",
+      "chunk-1bf489aadb0f21630c59b8361f23e8f3",
+      "chunk-1d26679a5c7d4be95dc3163cdd74635d",
+      "chunk-60ca18023b7448fb4ddf9aa784ef1a65",
+      "chunk-846347bde485db03ead56cd986ba9001",
+      "chunk-c7fd39ddee62a6682cc2d3e58c3b66ed",
+      "chunk-d7bc46115f13aecdbbcd6e7398ee9691",
+      "chunk-33d6bc980e862376c11685a00bf22ca3",
+      "chunk-e27f03ec1e126815641b4755ece051c6",
+      "chunk-968fbcf059982c556b4bcc6944efa36b",
+      "chunk-635a8270f90d4ad369e34ef96c6f284f",
+      "chunk-230764380b33557b5524bd06ee945029",
+      "chunk-62991649d9ddbddbdd87eed4b8473959",
+      "chunk-bac65798eb982eaec66217171974d32c",
+      "chunk-1b7fcd9c795c3ffe5951ea1b509567b7",
+      "chunk-ec101ba502a70816a33b6a1e26f6054f",
+      "chunk-df273047e67bbcef8888ccc637f02f26"
+    ],
+    "count": 57,
+    "update_time": 1773341690,
+    "_id": "PDF"
+  },
+  "Core Report": {
+    "chunk_ids": [
+      "chunk-d1c6054a6d87cf6975db5c63bd96f9cd",
+      "chunk-1547ad065c68b2f6fec2e3b6eb6a9099",
+      "chunk-93d5d66acecc3b09726280461a1741c7",
+      "chunk-04159a2e6b1c0a304c8cab9dc130201f",
+      "chunk-46bc26dff317560becba9a0a6fa7a441",
+      "chunk-9e88d373c00da121b8868d08bdceb9cf",
+      "chunk-3ae046aa80e7382953f272a3870f099b",
+      "chunk-63f83f5a5cef6dac282d861fd6da9e77",
+      "chunk-7480ef95765b1d3cb3e7cc5a73e67e91"
+    ],
+    "count": 9,
+    "update_time": 1773168495,
+    "_id": "Core Report"
+  },
+  "Server Architecture Research Repository": {
+    "chunk_ids": [
+      "chunk-d1c6054a6d87cf6975db5c63bd96f9cd"
+    ],
+    "count": 1,
+    "create_time": 1773167482,
+    "update_time": 1773167482,
+    "_id": "Server Architecture Research Repository"
+  },
+  "Near-Memory Acceleration": {
+    "chunk_ids": [
+      "chunk-d1c6054a6d87cf6975db5c63bd96f9cd"
+    ],
+    "count": 1,
+    "create_time": 1773167482,
+    "update_time": 1773167482,
+    "_id": "Near-Memory Acceleration"
+  },
+  "Large Language Models": {
+    "chunk_ids": [
+      "chunk-d1c6054a6d87cf6975db5c63bd96f9cd"
+    ],
+    "count": 1,
+    "create_time": 1773167482,
+    "update_time": 1773167482,
+    "_id": "Large Language Models"
+  },
+  "Vector Search": {
+    "chunk_ids": [
+      "chunk-d1c6054a6d87cf6975db5c63bd96f9cd",
+      "chunk-df273047e67bbcef8888ccc637f02f26"
+    ],
+    "count": 2,
+    "update_time": 1773341690,
+    "_id": "Vector Search"
+  },
+  "Liufang": {
+    "chunk_ids": [
+      "chunk-d1c6054a6d87cf6975db5c63bd96f9cd",
+      "chunk-954e8ea4f501064d07fa47f0e5affaeb",
+      "chunk-7cb819bd8f7ecd3c6e4efa0548627c2f",
+      "chunk-4bea655fda74f25913c082a3a09d1a75",
+      "chunk-147c4db7a4ce5872858a38c1ac58af56",
+      "chunk-2c984e299ac9432c7e312cc7b398b600",
+      "chunk-22d5697b8505125995b91427be92e6d2",
+      "chunk-ecc05e1389a9315c30e68199bddd8d73",
+      "chunk-f3556e182081aed4b9613c75949ed570",
+      "chunk-ba1d69c721849ac582b1a53a58646ef1",
+      "chunk-805ed11febeca1bfd1bdea057549e4ce",
+      "chunk-e24b7488a587cd1f8bf6573d12f1c75a",
+      "chunk-6d829808f9b4093bb903d5990d12a27c",
+      "chunk-df115efbf3bc71602047949ae3dbbdf0",
+      "chunk-46bc26dff317560becba9a0a6fa7a441",
+      "chunk-9ac5324873bf771cb665a450ec9794d8",
+      "chunk-9a23f58ae4463735de6f1b117591592c",
+      "chunk-d542a9101cecae9b9250937b2605dee2",
+      "chunk-10dc48654563b9bb58e4fbbbb7645eb8",
+      "chunk-2c8929bd6af5efae83044622ffa3faac",
+      "chunk-f1c174d3bf65d5024ebe4ad7cbd8c5e2",
+      "chunk-32749bfe06ebb4fd503585308b574af7",
+      "chunk-7b48c48f2f7c3877c03d05218cfb8c20",
+      "chunk-c199ec006c1f0210255474d03892899b",
+      "chunk-46b1cb6c7cb6838091250f07aa58cb19",
+      "chunk-71812bc0fbded857fe0a4b82f5223b84",
+      "chunk-97525ceaf715f1ad94448c8abc5642db",
+      "chunk-0559e293569f15eabf0cd28fac35d14f",
+      "chunk-ef9903a22739411840df5a1652b687d5",
+      "chunk-11fbfb718c91a1cacf50d05e7bcc41bf",
+      "chunk-b29d2932bdd25f9f58a553637e48ab19",
+      "chunk-e0849f10e95d7677ebed5f2a29c650a2",
+      "chunk-e43b9c7c8f30976446ff07cfb8acd723",
+      "chunk-54b80862fb010b672af4957bef254768",
+      "chunk-fed70deae9eaf1b4120dec7d0e6498bd",
+      "chunk-4fad482b7206fdfbdc48ed9c3de6c7af",
+      "chunk-b71eacebd07cf22c28bd1377859a2954",
+      "chunk-25afa8d829c71db97875281976c4e594",
+      "chunk-01a392db9d8bb576ab6ed5aff9f9d578",
+      "chunk-fa73bfb5833304f96f036b9a9653ece2",
+      "chunk-1d28fc57f74bd152b123d626835823bc",
+      "chunk-1d26679a5c7d4be95dc3163cdd74635d",
+      "chunk-846347bde485db03ead56cd986ba9001",
+      "chunk-d7bc46115f13aecdbbcd6e7398ee9691",
+      "chunk-33d6bc980e862376c11685a00bf22ca3",
+      "chunk-e27f03ec1e126815641b4755ece051c6",
+      "chunk-3bef51647317cfab8fd98c2182da0b1c",
+      "chunk-968fbcf059982c556b4bcc6944efa36b",
+      "chunk-f3b581e41172762e088bcf3b7f03c6a4",
+      "chunk-635a8270f90d4ad369e34ef96c6f284f",
+      "chunk-230764380b33557b5524bd06ee945029",
+      "chunk-62991649d9ddbddbdd87eed4b8473959",
+      "chunk-1b7fcd9c795c3ffe5951ea1b509567b7",
+      "chunk-b794cfeb2829ca445d838fe2fb1cd165",
+      "chunk-ec101ba502a70816a33b6a1e26f6054f",
+      "chunk-df273047e67bbcef8888ccc637f02f26"
+    ],
+    "count": 56,
+    "update_time": 1773341690,
+    "_id": "Liufang"
+  },
+  "File Path": {
+    "chunk_ids": [
+      "chunk-d1c6054a6d87cf6975db5c63bd96f9cd",
+      "chunk-1547ad065c68b2f6fec2e3b6eb6a9099",
+      "chunk-93d5d66acecc3b09726280461a1741c7",
+      "chunk-2c984e299ac9432c7e312cc7b398b600",
+      "chunk-33ad961ca189b1cec80569bbd0809873",
+      "chunk-df115efbf3bc71602047949ae3dbbdf0",
+      "chunk-46bc26dff317560becba9a0a6fa7a441",
+      "chunk-9ac5324873bf771cb665a450ec9794d8",
+      "chunk-cf00ccbe9715d44dfa602d3da7162666",
+      "chunk-14a5b27abffb227913c4a16ac75887ca",
+      "chunk-c199ec006c1f0210255474d03892899b",
+      "chunk-75a98834e3066a94c413caadb98ef3bd",
+      "chunk-0559e293569f15eabf0cd28fac35d14f",
+      "chunk-b29d2932bdd25f9f58a553637e48ab19",
+      "chunk-7480ef95765b1d3cb3e7cc5a73e67e91",
+      "chunk-b71eacebd07cf22c28bd1377859a2954",
+      "chunk-01a392db9d8bb576ab6ed5aff9f9d578",
+      "chunk-57adc984bf533daad96d70c0a73d33e0",
+      "chunk-fa73bfb5833304f96f036b9a9653ece2",
+      "chunk-60ca18023b7448fb4ddf9aa784ef1a65"
+    ],
+    "count": 20,
+    "update_time": 1773169109,
+    "_id": "File Path"
+  },
+  "10.00 - Towards Memory Efficient RAG Pipelines With CXL Technology_v2": {
+    "chunk_ids": [
+      "chunk-1547ad065c68b2f6fec2e3b6eb6a9099"
+    ],
+    "count": 1,
+    "create_time": 1773167486,
+    "update_time": 1773167486,
+    "_id": "10.00 - Towards Memory Efficient RAG Pipelines With CXL Technology_v2"
+  },
+  "CXL Technology": {
+    "chunk_ids": [
+      "chunk-1547ad065c68b2f6fec2e3b6eb6a9099",
+      "chunk-ba1d69c721849ac582b1a53a58646ef1"
+    ],
+    "count": 2,
+    "update_time": 1773167707,
+    "_id": "CXL Technology"
+  },
+  "RAG Pipelines": {
+    "chunk_ids": [
+      "chunk-1547ad065c68b2f6fec2e3b6eb6a9099",
+      "chunk-ba1d69c721849ac582b1a53a58646ef1"
+    ],
+    "count": 2,
+    "update_time": 1773167707,
+    "_id": "RAG Pipelines"
+  },
+  "Server Architecture Research Library": {
+    "chunk_ids": [
+      "chunk-1547ad065c68b2f6fec2e3b6eb6a9099",
+      "chunk-17e8fab522b31c893a3a7ef21633d42a",
+      "chunk-93d5d66acecc3b09726280461a1741c7",
+      "chunk-49a4b3d9e081e0db5971a564684cb895",
+      "chunk-4bea655fda74f25913c082a3a09d1a75",
+      "chunk-33ad961ca189b1cec80569bbd0809873",
+      "chunk-22d5697b8505125995b91427be92e6d2",
+      "chunk-04159a2e6b1c0a304c8cab9dc130201f",
+      "chunk-c0b6845c9f5c77a0f3f30fa98403d8fe",
+      "chunk-6d829808f9b4093bb903d5990d12a27c",
+      "chunk-df115efbf3bc71602047949ae3dbbdf0",
+      "chunk-15484e8b32164d9fb60eeef755439770",
+      "chunk-9ac5324873bf771cb665a450ec9794d8",
+      "chunk-9a23f58ae4463735de6f1b117591592c",
+      "chunk-61f77d89f092ff5cd7c6ea81d31cfeb6",
+      "chunk-1f1a30530b2b434213d044c2a8466044",
+      "chunk-2c8929bd6af5efae83044622ffa3faac",
+      "chunk-f1c174d3bf65d5024ebe4ad7cbd8c5e2",
+      "chunk-32749bfe06ebb4fd503585308b574af7",
+      "chunk-58b2d80c0b2a8b0ee53bae05070f0c93",
+      "chunk-cf00ccbe9715d44dfa602d3da7162666",
+      "chunk-46b1cb6c7cb6838091250f07aa58cb19",
+      "chunk-99116bb42021db2c45f55b65671842c0",
+      "chunk-75a98834e3066a94c413caadb98ef3bd",
+      "chunk-fed70deae9eaf1b4120dec7d0e6498bd",
+      "chunk-87108b0686e8d70e6c11c7ad5b493573",
+      "chunk-4fad482b7206fdfbdc48ed9c3de6c7af",
+      "chunk-25afa8d829c71db97875281976c4e594",
+      "chunk-266b57d952795e78de135dd7ea0d1822",
+      "chunk-81d317b0bc2c9a54d84d534d33e7b288",
+      "chunk-60ca18023b7448fb4ddf9aa784ef1a65",
+      "chunk-c7fd39ddee62a6682cc2d3e58c3b66ed"
+    ],
+    "count": 32,
+    "update_time": 1773169184,
+    "_id": "Server Architecture Research Library"
+  },
+  "7300 - End-to-End Management of a CXL-enabled Datacenter Memory Fabric_v2": {
+    "chunk_ids": [
+      "chunk-17e8fab522b31c893a3a7ef21633d42a"
+    ],
+    "count": 1,
+    "create_time": 1773167509,
+    "update_time": 1773167509,
+    "_id": "7300 - End-to-End Management of a CXL-enabled Datacenter Memory Fabric_v2"
+  },
+  "CXL": {
+    "chunk_ids": [
+      "chunk-17e8fab522b31c893a3a7ef21633d42a",
+      "chunk-ef5a1dc3d7c28f0190c5185e1c92732b",
+      "chunk-f023cd84d3e2ed9cf707d62efd5ddbb9",
+      "chunk-3bef51647317cfab8fd98c2182da0b1c"
+    ],
+    "count": 4,
+    "update_time": 1773254510,
+    "_id": "CXL"
+  },
+  "Datacenter Memory Fabric": {
+    "chunk_ids": [
+      "chunk-17e8fab522b31c893a3a7ef21633d42a",
+      "chunk-f023cd84d3e2ed9cf707d62efd5ddbb9"
+    ],
+    "count": 2,
+    "update_time": 1773168540,
+    "_id": "Datacenter Memory Fabric"
+  },
+  "Report": {
+    "chunk_ids": [
+      "chunk-17e8fab522b31c893a3a7ef21633d42a",
+      "chunk-954e8ea4f501064d07fa47f0e5affaeb",
+      "chunk-7cb819bd8f7ecd3c6e4efa0548627c2f",
+      "chunk-2fda2d54a8413eca19fea985df0ff580",
+      "chunk-4bea655fda74f25913c082a3a09d1a75",
+      "chunk-147c4db7a4ce5872858a38c1ac58af56",
+      "chunk-ecc05e1389a9315c30e68199bddd8d73",
+      "chunk-df115efbf3bc71602047949ae3dbbdf0",
+      "chunk-15484e8b32164d9fb60eeef755439770",
+      "chunk-207b0823e90b60e301db1f919be31b9c",
+      "chunk-e4173aa4ed70cd6d625ee79aebe2a677",
+      "chunk-7dd14306d9061dddba8b150d9c7d98b0",
+      "chunk-c461db61ef0a922e7d7292d8516c1147",
+      "chunk-03978f9015d72cc2c030ac8e6447fed7",
+      "chunk-538e9be43efc9f4740b1699a18d33882",
+      "chunk-f023cd84d3e2ed9cf707d62efd5ddbb9",
+      "chunk-4fad482b7206fdfbdc48ed9c3de6c7af",
+      "chunk-b71eacebd07cf22c28bd1377859a2954",
+      "chunk-55f9a5f9dbd8556e5eeb84b9bb117c15",
+      "chunk-01a392db9d8bb576ab6ed5aff9f9d578",
+      "chunk-1fc91c144f09ce8648b8a92d03b6a031",
+      "chunk-57adc984bf533daad96d70c0a73d33e0",
+      "chunk-fde36569763e8e63f5879815d072c123",
+      "chunk-c7fd39ddee62a6682cc2d3e58c3b66ed",
+      "chunk-33d6bc980e862376c11685a00bf22ca3",
+      "chunk-968fbcf059982c556b4bcc6944efa36b",
+      "chunk-230764380b33557b5524bd06ee945029"
+    ],
+    "count": 27,
+    "update_time": 1773340409,
+    "_id": "Report"
+  },
+  "7819 - Advancing PLDM- Structured Sensors Scalable Modeling and the Server Host SoC PLDM Specification_v2": {
+    "chunk_ids": [
+      "chunk-954e8ea4f501064d07fa47f0e5affaeb"
+    ],
+    "count": 1,
+    "create_time": 1773167513,
+    "update_time": 1773167513,
+    "_id": "7819 - Advancing PLDM- Structured Sensors Scalable Modeling and the Server Host SoC PLDM Specification_v2"
+  },
+  "PLDM": {
+    "chunk_ids": [
+      "chunk-954e8ea4f501064d07fa47f0e5affaeb"
+    ],
+    "count": 1,
+    "create_time": 1773167513,
+    "update_time": 1773167513,
+    "_id": "PLDM"
+  },
+  "Server Host SoC PLDM Specification": {
+    "chunk_ids": [
+      "chunk-954e8ea4f501064d07fa47f0e5affaeb"
+    ],
+    "count": 1,
+    "create_time": 1773167513,
+    "update_time": 1773167513,
+    "_id": "Server Host SoC PLDM Specification"
+  },
+  "Structured Sensors": {
+    "chunk_ids": [
+      "chunk-954e8ea4f501064d07fa47f0e5affaeb"
+    ],
+    "count": 1,
+    "create_time": 1773167513,
+    "update_time": 1773167513,
+    "_id": "Structured Sensors"
+  },
+  "Scalable Modeling": {
+    "chunk_ids": [
+      "chunk-954e8ea4f501064d07fa47f0e5affaeb"
+    ],
+    "count": 1,
+    "create_time": 1773167513,
+    "update_time": 1773167513,
+    "_id": "Scalable Modeling"
+  },
+  "【核心】服务器架构": {
+    "chunk_ids": [
+      "chunk-954e8ea4f501064d07fa47f0e5affaeb"
+    ],
+    "count": 1,
+    "create_time": 1773167513,
+    "update_time": 1773167513,
+    "_id": "【核心】服务器架构"
+  },
+  "OCP Composable Memory Systems CMS Sub-Project": {
+    "chunk_ids": [
+      "chunk-7cb819bd8f7ecd3c6e4efa0548627c2f"
+    ],
+    "count": 1,
+    "create_time": 1773167532,
+    "update_time": 1773167532,
+    "_id": "OCP Composable Memory Systems CMS Sub-Project"
+  },
+  "Open Compute Project": {
+    "chunk_ids": [
+      "chunk-7cb819bd8f7ecd3c6e4efa0548627c2f",
+      "chunk-c0b6845c9f5c77a0f3f30fa98403d8fe",
+      "chunk-d542a9101cecae9b9250937b2605dee2",
+      "chunk-01a392db9d8bb576ab6ed5aff9f9d578",
+      "chunk-1fc91c144f09ce8648b8a92d03b6a031",
+      "chunk-1bbafe9a71a73e07d029b3bfa3f85791",
+      "chunk-1d28fc57f74bd152b123d626835823bc"
+    ],
+    "count": 7,
+    "update_time": 1773169046,
+    "_id": "Open Compute Project"
+  },
+  "7246 - OCP Composable Memory Systems CMS Sub-Project Technical Update_v2_v2": {
+    "chunk_ids": [
+      "chunk-7cb819bd8f7ecd3c6e4efa0548627c2f"
+    ],
+    "count": 1,
+    "create_time": 1773167532,
+    "update_time": 1773167532,
+    "_id": "7246 - OCP Composable Memory Systems CMS Sub-Project Technical Update_v2_v2"
+  },
+  "7337 - Memory Technology Optimized For At-Scale AI Systems- Bandwidth Capacity And Connectivity V2 V2 V2": {
+    "chunk_ids": [
+      "chunk-93d5d66acecc3b09726280461a1741c7"
+    ],
+    "count": 1,
+    "create_time": 1773167539,
+    "update_time": 1773167539,
+    "_id": "7337 - Memory Technology Optimized For At-Scale AI Systems- Bandwidth Capacity And Connectivity V2 V2 V2"
+  },
+  "Local Document Link": {
+    "chunk_ids": [
+      "chunk-93d5d66acecc3b09726280461a1741c7",
+      "chunk-e24b7488a587cd1f8bf6573d12f1c75a",
+      "chunk-61f77d89f092ff5cd7c6ea81d31cfeb6",
+      "chunk-2c8929bd6af5efae83044622ffa3faac",
+      "chunk-3ae046aa80e7382953f272a3870f099b",
+      "chunk-71812bc0fbded857fe0a4b82f5223b84",
+      "chunk-11fbfb718c91a1cacf50d05e7bcc41bf",
+      "chunk-266b57d952795e78de135dd7ea0d1822",
+      "chunk-41e5bcd0e2dad86fc34ddddd1afe3ac0"
+    ],
+    "count": 9,
+    "update_time": 1773168991,
+    "_id": "Local Document Link"
+  },
+  "7470 - DC-Stack- Google Server Manufacturing SDK Lessons Learned_v2": {
+    "chunk_ids": [
+      "chunk-2fda2d54a8413eca19fea985df0ff580"
+    ],
+    "count": 1,
+    "create_time": 1773167556,
+    "update_time": 1773167556,
+    "_id": "7470 - DC-Stack- Google Server Manufacturing SDK Lessons Learned_v2"
+  },
+  "Google": {
+    "chunk_ids": [
+      "chunk-2fda2d54a8413eca19fea985df0ff580"
+    ],
+    "count": 1,
+    "create_time": 1773167556,
+    "update_time": 1773167556,
+    "_id": "Google"
+  },
+  "DC-Stack": {
+    "chunk_ids": [
+      "chunk-2fda2d54a8413eca19fea985df0ff580"
+    ],
+    "count": 1,
+    "create_time": 1773167556,
+    "update_time": 1773167556,
+    "_id": "DC-Stack"
+  },
+  "Server Manufacturing SDK": {
+    "chunk_ids": [
+      "chunk-2fda2d54a8413eca19fea985df0ff580"
+    ],
+    "count": 1,
+    "create_time": 1773167556,
+    "update_time": 1773167556,
+    "_id": "Server Manufacturing SDK"
+  },
+  "Research Library": {
+    "chunk_ids": [
+      "chunk-2fda2d54a8413eca19fea985df0ff580",
+      "chunk-147c4db7a4ce5872858a38c1ac58af56",
+      "chunk-9e88d373c00da121b8868d08bdceb9cf",
+      "chunk-ef5a1dc3d7c28f0190c5185e1c92732b",
+      "chunk-7480ef95765b1d3cb3e7cc5a73e67e91"
+    ],
+    "count": 5,
+    "update_time": 1773168495,
+    "_id": "Research Library"
+  },
+  "7033 - Manage and Secure your PCIe Infrastructure using eSFI and PCIe-MI": {
+    "chunk_ids": [
+      "chunk-49a4b3d9e081e0db5971a564684cb895"
+    ],
+    "count": 1,
+    "create_time": 1773167562,
+    "update_time": 1773167562,
+    "_id": "7033 - Manage and Secure your PCIe Infrastructure using eSFI and PCIe-MI"
+  },
+  "eSFI": {
+    "chunk_ids": [
+      "chunk-49a4b3d9e081e0db5971a564684cb895",
+      "chunk-e4173aa4ed70cd6d625ee79aebe2a677",
+      "chunk-c461db61ef0a922e7d7292d8516c1147"
+    ],
+    "count": 3,
+    "update_time": 1773168266,
+    "_id": "eSFI"
+  },
+  "PCIe-MI": {
+    "chunk_ids": [
+      "chunk-49a4b3d9e081e0db5971a564684cb895",
+      "chunk-e4173aa4ed70cd6d625ee79aebe2a677"
+    ],
+    "count": 2,
+    "update_time": 1773168102,
+    "_id": "PCIe-MI"
+  },
+  "PCIe Infrastructure": {
+    "chunk_ids": [
+      "chunk-49a4b3d9e081e0db5971a564684cb895",
+      "chunk-c461db61ef0a922e7d7292d8516c1147"
+    ],
+    "count": 2,
+    "update_time": 1773168266,
+    "_id": "PCIe Infrastructure"
+  },
+  "Report 7033": {
+    "chunk_ids": [
+      "chunk-49a4b3d9e081e0db5971a564684cb895"
+    ],
+    "count": 1,
+    "create_time": 1773167562,
+    "update_time": 1773167562,
+    "_id": "Report 7033"
+  },
+  "PCIe 5": {
+    "chunk_ids": [
+      "chunk-4bea655fda74f25913c082a3a09d1a75",
+      "chunk-fde36569763e8e63f5879815d072c123"
+    ],
+    "count": 2,
+    "update_time": 1773168889,
+    "_id": "PCIe 5"
+  },
+  "PCIe 6": {
+    "chunk_ids": [
+      "chunk-4bea655fda74f25913c082a3a09d1a75",
+      "chunk-fde36569763e8e63f5879815d072c123"
+    ],
+    "count": 2,
+    "update_time": 1773168889,
+    "_id": "PCIe 6"
+  },
+  "AI Platforms": {
+    "chunk_ids": [
+      "chunk-4bea655fda74f25913c082a3a09d1a75",
+      "chunk-fde36569763e8e63f5879815d072c123"
+    ],
+    "count": 2,
+    "update_time": 1773168889,
+    "_id": "AI Platforms"
+  },
+  "174 - Mixing PCIe 5 and PCIe 6 in AI Platforms-Benefits and Challenges_v2_v2": {
+    "chunk_ids": [
+      "chunk-4bea655fda74f25913c082a3a09d1a75"
+    ],
+    "count": 1,
+    "create_time": 1773167580,
+    "update_time": 1773167580,
+    "_id": "174 - Mixing PCIe 5 and PCIe 6 in AI Platforms-Benefits and Challenges_v2_v2"
+  },
+  "APEC Advanced PCIe Enclosure Compatible for Future HSIO Interconnection_v2": {
+    "chunk_ids": [
+      "chunk-147c4db7a4ce5872858a38c1ac58af56"
+    ],
+    "count": 1,
+    "create_time": 1773167596,
+    "update_time": 1773167596,
+    "_id": "APEC Advanced PCIe Enclosure Compatible for Future HSIO Interconnection_v2"
+  },
+  "PCIe": {
+    "chunk_ids": [
+      "chunk-147c4db7a4ce5872858a38c1ac58af56",
+      "chunk-54b80862fb010b672af4957bef254768"
+    ],
+    "count": 2,
+    "update_time": 1773168561,
+    "_id": "PCIe"
+  },
+  "HSIO": {
+    "chunk_ids": [
+      "chunk-147c4db7a4ce5872858a38c1ac58af56"
+    ],
+    "count": 1,
+    "create_time": 1773167596,
+    "update_time": 1773167596,
+    "_id": "HSIO"
+  },
+  "APEC": {
+    "chunk_ids": [
+      "chunk-147c4db7a4ce5872858a38c1ac58af56",
+      "chunk-54b80862fb010b672af4957bef254768"
+    ],
+    "count": 2,
+    "update_time": 1773168561,
+    "_id": "APEC"
+  },
+  "65 - Rack Architecture for Next Generation AI Server_v2": {
+    "chunk_ids": [
+      "chunk-2c984e299ac9432c7e312cc7b398b600"
+    ],
+    "count": 1,
+    "create_time": 1773167601,
+    "update_time": 1773167601,
+    "_id": "65 - Rack Architecture for Next Generation AI Server_v2"
+  },
+  "Core Research Report Repository": {
+    "chunk_ids": [
+      "chunk-2c984e299ac9432c7e312cc7b398b600"
+    ],
+    "count": 1,
+    "create_time": 1773167601,
+    "update_time": 1773167601,
+    "_id": "Core Research Report Repository"
+  },
+  "135 - Flash Memory Chiplet Implementation and Applications_v2_v2": {
+    "chunk_ids": [
+      "chunk-33ad961ca189b1cec80569bbd0809873"
+    ],
+    "count": 1,
+    "create_time": 1773167617,
+    "update_time": 1773167617,
+    "_id": "135 - Flash Memory Chiplet Implementation and Applications_v2_v2"
+  },
+  "Flash Memory Chiplet": {
+    "chunk_ids": [
+      "chunk-33ad961ca189b1cec80569bbd0809873"
+    ],
+    "count": 1,
+    "create_time": 1773167617,
+    "update_time": 1773167617,
+    "_id": "Flash Memory Chiplet"
+  },
+  "7521 - Latest Academic Research for Composable Memory_v2_v2": {
+    "chunk_ids": [
+      "chunk-22d5697b8505125995b91427be92e6d2"
+    ],
+    "count": 1,
+    "create_time": 1773167628,
+    "update_time": 1773167628,
+    "_id": "7521 - Latest Academic Research for Composable Memory_v2_v2"
+  },
+  "Composable Memory": {
+    "chunk_ids": [
+      "chunk-22d5697b8505125995b91427be92e6d2"
+    ],
+    "count": 1,
+    "create_time": 1773167628,
+    "update_time": 1773167628,
+    "_id": "Composable Memory"
+  },
+  "7505 - Evaluating Component Level Compatibility and Reliability of Memory and Storage Products for Immersion Applications": {
+    "chunk_ids": [
+      "chunk-04159a2e6b1c0a304c8cab9dc130201f"
+    ],
+    "count": 1,
+    "create_time": 1773167653,
+    "update_time": 1773167653,
+    "_id": "7505 - Evaluating Component Level Compatibility and Reliability of Memory and Storage Products for Immersion Applications"
+  },
+  "Immersion Applications": {
+    "chunk_ids": [
+      "chunk-04159a2e6b1c0a304c8cab9dc130201f"
+    ],
+    "count": 1,
+    "create_time": 1773167653,
+    "update_time": 1773167653,
+    "_id": "Immersion Applications"
+  },
+  "Memory and Storage Products": {
+    "chunk_ids": [
+      "chunk-04159a2e6b1c0a304c8cab9dc130201f"
+    ],
+    "count": 1,
+    "create_time": 1773167653,
+    "update_time": 1773167653,
+    "_id": "Memory and Storage Products"
+  },
+  "9.40 - Next-Gen AI-HPC Server Performance with CXL3.1 Tiered Memory and MRDIMM solution_v2_v2": {
+    "chunk_ids": [
+      "chunk-ecc05e1389a9315c30e68199bddd8d73"
+    ],
+    "count": 1,
+    "create_time": 1773167653,
+    "update_time": 1773167653,
+    "_id": "9.40 - Next-Gen AI-HPC Server Performance with CXL3.1 Tiered Memory and MRDIMM solution_v2_v2"
+  },
+  "Unknown": {
+    "chunk_ids": [
+      "chunk-ecc05e1389a9315c30e68199bddd8d73",
+      "chunk-f3556e182081aed4b9613c75949ed570",
+      "chunk-cf00ccbe9715d44dfa602d3da7162666",
+      "chunk-538e9be43efc9f4740b1699a18d33882",
+      "chunk-900ad8221a96dafc212eef7868a063e8",
+      "chunk-fed70deae9eaf1b4120dec7d0e6498bd",
+      "chunk-01a392db9d8bb576ab6ed5aff9f9d578",
+      "chunk-968fbcf059982c556b4bcc6944efa36b",
+      "chunk-bac65798eb982eaec66217171974d32c",
+      "chunk-df273047e67bbcef8888ccc637f02f26"
+    ],
+    "count": 10,
+    "update_time": 1773341691,
+    "_id": "Unknown"
+  },
+  "File Link": {
+    "chunk_ids": [
+      "chunk-04159a2e6b1c0a304c8cab9dc130201f",
+      "chunk-87108b0686e8d70e6c11c7ad5b493573",
+      "chunk-1bf489aadb0f21630c59b8361f23e8f3"
+    ],
+    "count": 3,
+    "update_time": 1773168931,
+    "_id": "File Link"
+  },
+  "AI Deep Summary": {
+    "chunk_ids": [
+      "chunk-04159a2e6b1c0a304c8cab9dc130201f",
+      "chunk-15484e8b32164d9fb60eeef755439770",
+      "chunk-61f77d89f092ff5cd7c6ea81d31cfeb6",
+      "chunk-266b57d952795e78de135dd7ea0d1822",
+      "chunk-968fbcf059982c556b4bcc6944efa36b",
+      "chunk-bac65798eb982eaec66217171974d32c",
+      "chunk-1b7fcd9c795c3ffe5951ea1b509567b7"
+    ],
+    "count": 7,
+    "update_time": 1773341118,
+    "_id": "AI Deep Summary"
+  },
+  "7446 - Large CXL Memory Expansion Systems and Workloads_v2_v2": {
+    "chunk_ids": [
+      "chunk-f3556e182081aed4b9613c75949ed570"
+    ],
+    "count": 1,
+    "create_time": 1773167682,
+    "update_time": 1773167682,
+    "_id": "7446 - Large CXL Memory Expansion Systems and Workloads_v2_v2"
+  },
+  "CXL Memory Expansion Systems": {
+    "chunk_ids": [
+      "chunk-f3556e182081aed4b9613c75949ed570",
+      "chunk-33d6bc980e862376c11685a00bf22ca3"
+    ],
+    "count": 2,
+    "update_time": 1773254124,
+    "_id": "CXL Memory Expansion Systems"
+  },
+  "Compute Express Link": {
+    "chunk_ids": [
+      "chunk-f3556e182081aed4b9613c75949ed570",
+      "chunk-cf00ccbe9715d44dfa602d3da7162666"
+    ],
+    "count": 2,
+    "update_time": 1773167986,
+    "_id": "Compute Express Link"
+  },
+  "7547 - Orchestrating Confidential Compute using OCP Secure Boot Attestation and CXL IDE TSP DMTF SPDM Specs_v2_v2": {
+    "chunk_ids": [
+      "chunk-c0b6845c9f5c77a0f3f30fa98403d8fe"
+    ],
+    "count": 1,
+    "create_time": 1773167696,
+    "update_time": 1773167696,
+    "_id": "7547 - Orchestrating Confidential Compute using OCP Secure Boot Attestation and CXL IDE TSP DMTF SPDM Specs_v2_v2"
+  },
+  "OCP Secure Boot Attestation": {
+    "chunk_ids": [
+      "chunk-c0b6845c9f5c77a0f3f30fa98403d8fe",
+      "chunk-3bef51647317cfab8fd98c2182da0b1c"
+    ],
+    "count": 2,
+    "update_time": 1773254510,
+    "_id": "OCP Secure Boot Attestation"
+  },
+  "CXL IDE": {
+    "chunk_ids": [
+      "chunk-c0b6845c9f5c77a0f3f30fa98403d8fe",
+      "chunk-3bef51647317cfab8fd98c2182da0b1c"
+    ],
+    "count": 2,
+    "update_time": 1773254510,
+    "_id": "CXL IDE"
+  },
+  "TSP": {
+    "chunk_ids": [
+      "chunk-c0b6845c9f5c77a0f3f30fa98403d8fe",
+      "chunk-3bef51647317cfab8fd98c2182da0b1c"
+    ],
+    "count": 2,
+    "update_time": 1773254512,
+    "_id": "TSP"
+  },
+  "DMTF SPDM": {
+    "chunk_ids": [
+      "chunk-c0b6845c9f5c77a0f3f30fa98403d8fe",
+      "chunk-3bef51647317cfab8fd98c2182da0b1c"
+    ],
+    "count": 2,
+    "update_time": 1773254510,
+    "_id": "DMTF SPDM"
+  },
+  "Confidential Compute": {
+    "chunk_ids": [
+      "chunk-c0b6845c9f5c77a0f3f30fa98403d8fe",
+      "chunk-3bef51647317cfab8fd98c2182da0b1c"
+    ],
+    "count": 2,
+    "update_time": 1773254510,
+    "_id": "Confidential Compute"
+  },
+  "Distributed Management Task Force": {
+    "chunk_ids": [
+      "chunk-c0b6845c9f5c77a0f3f30fa98403d8fe"
+    ],
+    "count": 1,
+    "create_time": 1773167696,
+    "update_time": 1773167696,
+    "_id": "Distributed Management Task Force"
+  },
+  "6967 - Towards Memory Efficient RAG Pipelines With CXL Technology V2": {
+    "chunk_ids": [
+      "chunk-ba1d69c721849ac582b1a53a58646ef1"
+    ],
+    "count": 1,
+    "create_time": 1773167707,
+    "update_time": 1773167707,
+    "_id": "6967 - Towards Memory Efficient RAG Pipelines With CXL Technology V2"
+  },
+  "Core Research Report": {
+    "chunk_ids": [
+      "chunk-ba1d69c721849ac582b1a53a58646ef1",
+      "chunk-54b80862fb010b672af4957bef254768",
+      "chunk-87108b0686e8d70e6c11c7ad5b493573"
+    ],
+    "count": 3,
+    "update_time": 1773168605,
+    "_id": "Core Research Report"
+  },
+  "PDF Document": {
+    "chunk_ids": [
+      "chunk-ba1d69c721849ac582b1a53a58646ef1",
+      "chunk-9ac5324873bf771cb665a450ec9794d8",
+      "chunk-d542a9101cecae9b9250937b2605dee2",
+      "chunk-63f83f5a5cef6dac282d861fd6da9e77",
+      "chunk-54b80862fb010b672af4957bef254768",
+      "chunk-1d28fc57f74bd152b123d626835823bc"
+    ],
+    "count": 6,
+    "update_time": 1773169046,
+    "_id": "PDF Document"
+  },
+  "2.76 MB": {
+    "chunk_ids": [
+      "chunk-ba1d69c721849ac582b1a53a58646ef1"
+    ],
+    "count": 1,
+    "create_time": 1773167707,
+    "update_time": 1773167707,
+    "_id": "2.76 MB"
+  },
+  "Astera Labs": {
+    "chunk_ids": [
+      "chunk-d337eca5c11c950a864764401f37ceaf",
+      "chunk-03978f9015d72cc2c030ac8e6447fed7"
+    ],
+    "count": 2,
+    "update_time": 1773168312,
+    "_id": "Astera Labs"
+  },
+  "PCIe Ethernet": {
+    "chunk_ids": [
+      "chunk-d337eca5c11c950a864764401f37ceaf",
+      "chunk-03978f9015d72cc2c030ac8e6447fed7"
+    ],
+    "count": 2,
+    "update_time": 1773168312,
+    "_id": "PCIe Ethernet"
+  },
+  "UALink Retimers": {
+    "chunk_ids": [
+      "chunk-d337eca5c11c950a864764401f37ceaf",
+      "chunk-03978f9015d72cc2c030ac8e6447fed7"
+    ],
+    "count": 2,
+    "update_time": 1773168312,
+    "_id": "UALink Retimers"
+  },
+  "AI Scaling": {
+    "chunk_ids": [
+      "chunk-d337eca5c11c950a864764401f37ceaf",
+      "chunk-03978f9015d72cc2c030ac8e6447fed7"
+    ],
+    "count": 2,
+    "update_time": 1773168312,
+    "_id": "AI Scaling"
+  },
+  "7653 - Astera Labs- Scaling AI with PCIe Ethernet and UALink Retimers_v2_v2": {
+    "chunk_ids": [
+      "chunk-d337eca5c11c950a864764401f37ceaf"
+    ],
+    "count": 1,
+    "create_time": 1773167725,
+    "update_time": 1773167725,
+    "_id": "7653 - Astera Labs- Scaling AI with PCIe Ethernet and UALink Retimers_v2_v2"
+  },
+  "7800 - The Journey of CXL-PNM Research- Architecture Evolution and Software Environment_v2": {
+    "chunk_ids": [
+      "chunk-805ed11febeca1bfd1bdea057549e4ce"
+    ],
+    "count": 1,
+    "create_time": 1773167728,
+    "update_time": 1773167728,
+    "_id": "7800 - The Journey of CXL-PNM Research- Architecture Evolution and Software Environment_v2"
+  },
+  "CXL-PNM": {
+    "chunk_ids": [
+      "chunk-805ed11febeca1bfd1bdea057549e4ce"
+    ],
+    "count": 1,
+    "create_time": 1773167728,
+    "update_time": 1773167728,
+    "_id": "CXL-PNM"
+  },
+  "Research Report": {
+    "chunk_ids": [
+      "chunk-805ed11febeca1bfd1bdea057549e4ce"
+    ],
+    "count": 1,
+    "create_time": 1773167728,
+    "update_time": 1773167728,
+    "_id": "Research Report"
+  },
+  "91 - Panel-Architecting the Future-Server Design in the Age of AI_v2": {
+    "chunk_ids": [
+      "chunk-e24b7488a587cd1f8bf6573d12f1c75a"
+    ],
+    "count": 1,
+    "create_time": 1773167749,
+    "update_time": 1773167749,
+    "_id": "91 - Panel-Architecting the Future-Server Design in the Age of AI_v2"
+  },
+  "Artificial Intelligence": {
+    "chunk_ids": [
+      "chunk-e24b7488a587cd1f8bf6573d12f1c75a"
+    ],
+    "count": 1,
+    "create_time": 1773167749,
+    "update_time": 1773167749,
+    "_id": "Artificial Intelligence"
+  },
+  "7430 - Smashing Memory I-O Limits- Architectures for the GenAI Era_v2_v2": {
+    "chunk_ids": [
+      "chunk-6d829808f9b4093bb903d5990d12a27c"
+    ],
+    "count": 1,
+    "create_time": 1773167749,
+    "update_time": 1773167749,
+    "_id": "7430 - Smashing Memory I-O Limits- Architectures for the GenAI Era_v2_v2"
+  },
+  "GenAI Era": {
+    "chunk_ids": [
+      "chunk-6d829808f9b4093bb903d5990d12a27c"
+    ],
+    "count": 1,
+    "create_time": 1773167749,
+    "update_time": 1773167749,
+    "_id": "GenAI Era"
+  },
+  "Super Fluid Technology Application in High Density Server Product_v2": {
+    "chunk_ids": [
+      "chunk-df115efbf3bc71602047949ae3dbbdf0"
+    ],
+    "count": 1,
+    "create_time": 1773167779,
+    "update_time": 1773167779,
+    "_id": "Super Fluid Technology Application in High Density Server Product_v2"
+  },
+  "High-Density Server": {
+    "chunk_ids": [
+      "chunk-df115efbf3bc71602047949ae3dbbdf0"
+    ],
+    "count": 1,
+    "create_time": 1773167779,
+    "update_time": 1773167779,
+    "_id": "High-Density Server"
+  },
+  "Super Fluid Technology": {
+    "chunk_ids": [
+      "chunk-df115efbf3bc71602047949ae3dbbdf0"
+    ],
+    "count": 1,
+    "create_time": 1773167780,
+    "update_time": 1773167780,
+    "_id": "Super Fluid Technology"
+  },
+  "7361 - Hyperscale CPU Impactless Firmware Updates_v2": {
+    "chunk_ids": [
+      "chunk-15484e8b32164d9fb60eeef755439770"
+    ],
+    "count": 1,
+    "create_time": 1773167783,
+    "update_time": 1773167783,
+    "_id": "7361 - Hyperscale CPU Impactless Firmware Updates_v2"
+  },
+  "Hyperscale CPU": {
+    "chunk_ids": [
+      "chunk-15484e8b32164d9fb60eeef755439770"
+    ],
+    "count": 1,
+    "create_time": 1773167783,
+    "update_time": 1773167783,
+    "_id": "Hyperscale CPU"
+  },
+  "Impactless Firmware Updates": {
+    "chunk_ids": [
+      "chunk-15484e8b32164d9fb60eeef755439770"
+    ],
+    "count": 1,
+    "create_time": 1773167783,
+    "update_time": 1773167783,
+    "_id": "Impactless Firmware Updates"
+  },
+  "File Size 0.88 MB": {
+    "chunk_ids": [
+      "chunk-15484e8b32164d9fb60eeef755439770"
+    ],
+    "count": 1,
+    "create_time": 1773167783,
+    "update_time": 1773167783,
+    "_id": "File Size 0.88 MB"
+  },
+  "Ingestion Time 2026-03-07 19:05:23": {
+    "chunk_ids": [
+      "chunk-15484e8b32164d9fb60eeef755439770"
+    ],
+    "count": 1,
+    "create_time": 1773167783,
+    "update_time": 1773167783,
+    "_id": "Ingestion Time 2026-03-07 19:05:23"
+  },
+  "7837 - Short-reach Optical Interface Scale Connectivity for Optimized Data-movement Through Memory for AI-ML Applications_v2_v2": {
+    "chunk_ids": [
+      "chunk-46bc26dff317560becba9a0a6fa7a441"
+    ],
+    "count": 1,
+    "create_time": 1773167815,
+    "update_time": 1773167815,
+    "_id": "7837 - Short-reach Optical Interface Scale Connectivity for Optimized Data-movement Through Memory for AI-ML Applications_v2_v2"
+  },
+  "Short-Reach Optical Interface": {
+    "chunk_ids": [
+      "chunk-46bc26dff317560becba9a0a6fa7a441"
+    ],
+    "count": 1,
+    "create_time": 1773167815,
+    "update_time": 1773167815,
+    "_id": "Short-Reach Optical Interface"
+  },
+  "AI-ML Applications": {
+    "chunk_ids": [
+      "chunk-46bc26dff317560becba9a0a6fa7a441"
+    ],
+    "count": 1,
+    "create_time": 1773167815,
+    "update_time": 1773167815,
+    "_id": "AI-ML Applications"
+  },
+  "6860 - Community Panel - Enabling Immersion by Design- Aligning Server and Cooling Communities": {
+    "chunk_ids": [
+      "chunk-9ac5324873bf771cb665a450ec9794d8"
+    ],
+    "count": 1,
+    "create_time": 1773167815,
+    "update_time": 1773167815,
+    "_id": "6860 - Community Panel - Enabling Immersion by Design- Aligning Server and Cooling Communities"
+  },
+  "Core Priority Report": {
+    "chunk_ids": [
+      "chunk-9ac5324873bf771cb665a450ec9794d8"
+    ],
+    "count": 1,
+    "create_time": 1773167815,
+    "update_time": 1773167815,
+    "_id": "Core Priority Report"
+  },
+  "Server Community": {
+    "chunk_ids": [
+      "chunk-9ac5324873bf771cb665a450ec9794d8"
+    ],
+    "count": 1,
+    "create_time": 1773167815,
+    "update_time": 1773167815,
+    "_id": "Server Community"
+  },
+  "Cooling Community": {
+    "chunk_ids": [
+      "chunk-9ac5324873bf771cb665a450ec9794d8"
+    ],
+    "count": 1,
+    "create_time": 1773167815,
+    "update_time": 1773167815,
+    "_id": "Cooling Community"
+  },
+  "Immersion by Design": {
+    "chunk_ids": [
+      "chunk-9ac5324873bf771cb665a450ec9794d8"
+    ],
+    "count": 1,
+    "create_time": 1773167815,
+    "update_time": 1773167815,
+    "_id": "Immersion by Design"
+  },
+  "Arms System Monitoring Control Framework SMCF": {
+    "chunk_ids": [
+      "chunk-9a23f58ae4463735de6f1b117591592c",
+      "chunk-fa73bfb5833304f96f036b9a9653ece2"
+    ],
+    "count": 2,
+    "update_time": 1773169023,
+    "_id": "Arms System Monitoring Control Framework SMCF"
+  },
+  "proteanTecs_v2": {
+    "chunk_ids": [
+      "chunk-9a23f58ae4463735de6f1b117591592c"
+    ],
+    "count": 1,
+    "create_time": 1773167842,
+    "update_time": 1773167842,
+    "_id": "proteanTecs_v2"
+  },
+  "7 - Lifecycle System Monitoring with Arms System Monitoring Control Framework SMCF and proteanTecs_v2": {
+    "chunk_ids": [
+      "chunk-9a23f58ae4463735de6f1b117591592c"
+    ],
+    "count": 1,
+    "create_time": 1773167842,
+    "update_time": 1773167842,
+    "_id": "7 - Lifecycle System Monitoring with Arms System Monitoring Control Framework SMCF and proteanTecs_v2"
+  },
+  "Arm": {
+    "chunk_ids": [
+      "chunk-9a23f58ae4463735de6f1b117591592c",
+      "chunk-1f1a30530b2b434213d044c2a8466044",
+      "chunk-7dd14306d9061dddba8b150d9c7d98b0",
+      "chunk-fa73bfb5833304f96f036b9a9653ece2",
+      "chunk-1d26679a5c7d4be95dc3163cdd74635d"
+    ],
+    "count": 5,
+    "update_time": 1773169067,
+    "_id": "Arm"
+  },
+  "OCP2025_DAY TWO TUESDAY - 2.Arm_v2": {
+    "chunk_ids": [
+      "chunk-d542a9101cecae9b9250937b2605dee2"
+    ],
+    "count": 1,
+    "create_time": 1773167846,
+    "update_time": 1773167846,
+    "_id": "OCP2025_DAY TWO TUESDAY - 2.Arm_v2"
+  },
+  "ARM Architecture": {
+    "chunk_ids": [
+      "chunk-d542a9101cecae9b9250937b2605dee2"
+    ],
+    "count": 1,
+    "create_time": 1773167846,
+    "update_time": 1773167846,
+    "_id": "ARM Architecture"
+  },
+  "OCP2025": {
+    "chunk_ids": [
+      "chunk-d542a9101cecae9b9250937b2605dee2"
+    ],
+    "count": 1,
+    "create_time": 1773167846,
+    "update_time": 1773167846,
+    "_id": "OCP2025"
+  },
+  "7026 - Emerging Software Patterns for Programming New Memory Devices and Interfaces_v2_v2": {
+    "chunk_ids": [
+      "chunk-61f77d89f092ff5cd7c6ea81d31cfeb6"
+    ],
+    "count": 1,
+    "create_time": 1773167867,
+    "update_time": 1773167867,
+    "_id": "7026 - Emerging Software Patterns for Programming New Memory Devices and Interfaces_v2_v2"
+  },
+  "7693 - Co-Designing for AI- Open Standards and Ecosystems Driving the Future of Infrastructure presented by Arm_v2_v2": {
+    "chunk_ids": [
+      "chunk-1f1a30530b2b434213d044c2a8466044"
+    ],
+    "count": 1,
+    "create_time": 1773167871,
+    "update_time": 1773167871,
+    "_id": "7693 - Co-Designing for AI- Open Standards and Ecosystems Driving the Future of Infrastructure presented by Arm_v2_v2"
+  },
+  "AI Infrastructure": {
+    "chunk_ids": [
+      "chunk-1f1a30530b2b434213d044c2a8466044"
+    ],
+    "count": 1,
+    "create_time": 1773167871,
+    "update_time": 1773167871,
+    "_id": "AI Infrastructure"
+  },
+  "Open Standards": {
+    "chunk_ids": [
+      "chunk-1f1a30530b2b434213d044c2a8466044"
+    ],
+    "count": 1,
+    "create_time": 1773167871,
+    "update_time": 1773167871,
+    "_id": "Open Standards"
+  },
+  "Ecosystems": {
+    "chunk_ids": [
+      "chunk-1f1a30530b2b434213d044c2a8466044"
+    ],
+    "count": 1,
+    "create_time": 1773167871,
+    "update_time": 1773167871,
+    "_id": "Ecosystems"
+  },
+  "Co-Design": {
+    "chunk_ids": [
+      "chunk-1f1a30530b2b434213d044c2a8466044"
+    ],
+    "count": 1,
+    "create_time": 1773167871,
+    "update_time": 1773167871,
+    "_id": "Co-Design"
+  },
+  "Report 7693": {
+    "chunk_ids": [
+      "chunk-1f1a30530b2b434213d044c2a8466044"
+    ],
+    "count": 1,
+    "create_time": 1773167871,
+    "update_time": 1773167871,
+    "_id": "Report 7693"
+  },
+  "Meta AI-ML System": {
+    "chunk_ids": [
+      "chunk-10dc48654563b9bb58e4fbbbb7645eb8"
+    ],
+    "count": 1,
+    "create_time": 1773167898,
+    "update_time": 1773167898,
+    "_id": "Meta AI-ML System"
+  },
+  "PCIe Completion Timeout Error": {
+    "chunk_ids": [
+      "chunk-10dc48654563b9bb58e4fbbbb7645eb8",
+      "chunk-63f83f5a5cef6dac282d861fd6da9e77"
+    ],
+    "count": 2,
+    "update_time": 1773168439,
+    "_id": "PCIe Completion Timeout Error"
+  },
+  "RPPIO Error Reporting": {
+    "chunk_ids": [
+      "chunk-10dc48654563b9bb58e4fbbbb7645eb8",
+      "chunk-63f83f5a5cef6dac282d861fd6da9e77"
+    ],
+    "count": 2,
+    "update_time": 1773168439,
+    "_id": "RPPIO Error Reporting"
+  },
+  "7525 Report": {
+    "chunk_ids": [
+      "chunk-10dc48654563b9bb58e4fbbbb7645eb8"
+    ],
+    "count": 1,
+    "create_time": 1773167898,
+    "update_time": 1773167898,
+    "_id": "7525 Report"
+  },
+  "Meta": {
+    "chunk_ids": [
+      "chunk-10dc48654563b9bb58e4fbbbb7645eb8",
+      "chunk-63f83f5a5cef6dac282d861fd6da9e77"
+    ],
+    "count": 2,
+    "update_time": 1773168439,
+    "_id": "Meta"
+  },
+  "7456 - Centralized System Security Hub for Server Platforms_v2": {
+    "chunk_ids": [
+      "chunk-2c8929bd6af5efae83044622ffa3faac"
+    ],
+    "count": 1,
+    "create_time": 1773167898,
+    "update_time": 1773167898,
+    "_id": "7456 - Centralized System Security Hub for Server Platforms_v2"
+  },
+  "Centralized System Security Hub": {
+    "chunk_ids": [
+      "chunk-2c8929bd6af5efae83044622ffa3faac"
+    ],
+    "count": 1,
+    "create_time": 1773167898,
+    "update_time": 1773167898,
+    "_id": "Centralized System Security Hub"
+  },
+  "6832 - Heterogeneous Memory Opportunity with Agentic AI and Memory Centric Computing_v2_v2": {
+    "chunk_ids": [
+      "chunk-f1c174d3bf65d5024ebe4ad7cbd8c5e2"
+    ],
+    "count": 1,
+    "create_time": 1773167919,
+    "update_time": 1773167919,
+    "_id": "6832 - Heterogeneous Memory Opportunity with Agentic AI and Memory Centric Computing_v2_v2"
+  },
+  "Agentic AI": {
+    "chunk_ids": [
+      "chunk-f1c174d3bf65d5024ebe4ad7cbd8c5e2",
+      "chunk-4fad482b7206fdfbdc48ed9c3de6c7af"
+    ],
+    "count": 2,
+    "update_time": 1773168636,
+    "_id": "Agentic AI"
+  },
+  "Memory-Centric Computing": {
+    "chunk_ids": [
+      "chunk-f1c174d3bf65d5024ebe4ad7cbd8c5e2",
+      "chunk-4fad482b7206fdfbdc48ed9c3de6c7af"
+    ],
+    "count": 2,
+    "update_time": 1773168636,
+    "_id": "Memory-Centric Computing"
+  },
+  "Heterogeneous Memory": {
+    "chunk_ids": [
+      "chunk-f1c174d3bf65d5024ebe4ad7cbd8c5e2",
+      "chunk-4fad482b7206fdfbdc48ed9c3de6c7af"
+    ],
+    "count": 2,
+    "update_time": 1773168636,
+    "_id": "Heterogeneous Memory"
+  },
+  "Report 6832": {
+    "chunk_ids": [
+      "chunk-f1c174d3bf65d5024ebe4ad7cbd8c5e2"
+    ],
+    "count": 1,
+    "create_time": 1773167919,
+    "update_time": 1773167919,
+    "_id": "Report 6832"
+  },
+  "7205 - Power Conversion Solutions for future Server Boards operating directly from HV DC": {
+    "chunk_ids": [
+      "chunk-9e88d373c00da121b8868d08bdceb9cf"
+    ],
+    "count": 1,
+    "create_time": 1773167922,
+    "update_time": 1773167922,
+    "_id": "7205 - Power Conversion Solutions for future Server Boards operating directly from HV DC"
+  },
+  "Server Boards": {
+    "chunk_ids": [
+      "chunk-9e88d373c00da121b8868d08bdceb9cf"
+    ],
+    "count": 1,
+    "create_time": 1773167922,
+    "update_time": 1773167922,
+    "_id": "Server Boards"
+  },
+  "HV DC": {
+    "chunk_ids": [
+      "chunk-9e88d373c00da121b8868d08bdceb9cf"
+    ],
+    "count": 1,
+    "create_time": 1773167922,
+    "update_time": 1773167922,
+    "_id": "HV DC"
+  },
+  "6974 - NVMe Interoperable Migration of PCIe virtual SSDs_v2": {
+    "chunk_ids": [
+      "chunk-32749bfe06ebb4fd503585308b574af7"
+    ],
+    "count": 1,
+    "create_time": 1773167942,
+    "update_time": 1773167942,
+    "_id": "6974 - NVMe Interoperable Migration of PCIe virtual SSDs_v2"
+  },
+  "PCIe Virtual SSDs": {
+    "chunk_ids": [
+      "chunk-32749bfe06ebb4fd503585308b574af7"
+    ],
+    "count": 1,
+    "create_time": 1773167942,
+    "update_time": 1773167942,
+    "_id": "PCIe Virtual SSDs"
+  },
+  "NVMe Interoperability": {
+    "chunk_ids": [
+      "chunk-32749bfe06ebb4fd503585308b574af7"
+    ],
+    "count": 1,
+    "create_time": 1773167942,
+    "update_time": 1773167942,
+    "_id": "NVMe Interoperability"
+  },
+  "2026-03-07 19:05:21": {
+    "chunk_ids": [
+      "chunk-32749bfe06ebb4fd503585308b574af7",
+      "chunk-99116bb42021db2c45f55b65671842c0"
+    ],
+    "count": 2,
+    "update_time": 1773168104,
+    "_id": "2026-03-07 19:05:21"
+  },
+  "BMC": {
+    "chunk_ids": [
+      "chunk-207b0823e90b60e301db1f919be31b9c",
+      "chunk-167d10816e778536b830e1f0aa4bd8fb"
+    ],
+    "count": 2,
+    "update_time": 1773169129,
+    "_id": "BMC"
+  },
+  "AMC": {
+    "chunk_ids": [
+      "chunk-207b0823e90b60e301db1f919be31b9c",
+      "chunk-167d10816e778536b830e1f0aa4bd8fb"
+    ],
+    "count": 2,
+    "update_time": 1773169129,
+    "_id": "AMC"
+  },
+  "Arm Servers": {
+    "chunk_ids": [
+      "chunk-207b0823e90b60e301db1f919be31b9c",
+      "chunk-167d10816e778536b830e1f0aa4bd8fb"
+    ],
+    "count": 2,
+    "update_time": 1773169129,
+    "_id": "Arm Servers"
+  },
+  "Open Platform Firmware": {
+    "chunk_ids": [
+      "chunk-207b0823e90b60e301db1f919be31b9c",
+      "chunk-167d10816e778536b830e1f0aa4bd8fb"
+    ],
+    "count": 2,
+    "update_time": 1773169129,
+    "_id": "Open Platform Firmware"
+  },
+  "Firmware Development": {
+    "chunk_ids": [
+      "chunk-207b0823e90b60e301db1f919be31b9c",
+      "chunk-167d10816e778536b830e1f0aa4bd8fb"
+    ],
+    "count": 2,
+    "update_time": 1773169129,
+    "_id": "Firmware Development"
+  },
+  "Simulation": {
+    "chunk_ids": [
+      "chunk-207b0823e90b60e301db1f919be31b9c",
+      "chunk-167d10816e778536b830e1f0aa4bd8fb"
+    ],
+    "count": 2,
+    "update_time": 1773169129,
+    "_id": "Simulation"
+  },
+  "Hardware": {
+    "chunk_ids": [
+      "chunk-207b0823e90b60e301db1f919be31b9c",
+      "chunk-167d10816e778536b830e1f0aa4bd8fb"
+    ],
+    "count": 2,
+    "update_time": 1773169129,
+    "_id": "Hardware"
+  },
+  "6875 - BMC and AMC Open Platform Firmware Development on Arm Servers- From Simulation to Hardware_v2": {
+    "chunk_ids": [
+      "chunk-207b0823e90b60e301db1f919be31b9c"
+    ],
+    "count": 1,
+    "create_time": 1773167959,
+    "update_time": 1773167959,
+    "_id": "6875 - BMC and AMC Open Platform Firmware Development on Arm Servers- From Simulation to Hardware_v2"
+  },
+  "6875": {
+    "chunk_ids": [
+      "chunk-207b0823e90b60e301db1f919be31b9c"
+    ],
+    "count": 1,
+    "create_time": 1773167960,
+    "update_time": 1773167960,
+    "_id": "6875"
+  },
+  "6878 - Advancing Timing Resilience in Edge-to-Core Systems- From White Rabbit to PCIe_v2": {
+    "chunk_ids": [
+      "chunk-58b2d80c0b2a8b0ee53bae05070f0c93"
+    ],
+    "count": 1,
+    "create_time": 1773167973,
+    "update_time": 1773167973,
+    "_id": "6878 - Advancing Timing Resilience in Edge-to-Core Systems- From White Rabbit to PCIe_v2"
+  },
+  "White Rabbit": {
+    "chunk_ids": [
+      "chunk-58b2d80c0b2a8b0ee53bae05070f0c93"
+    ],
+    "count": 1,
+    "create_time": 1773167973,
+    "update_time": 1773167973,
+    "_id": "White Rabbit"
+  },
+  "PCIe_v2": {
+    "chunk_ids": [
+      "chunk-58b2d80c0b2a8b0ee53bae05070f0c93"
+    ],
+    "count": 1,
+    "create_time": 1773167973,
+    "update_time": 1773167973,
+    "_id": "PCIe_v2"
+  },
+  "Edge-to-Core Systems": {
+    "chunk_ids": [
+      "chunk-58b2d80c0b2a8b0ee53bae05070f0c93"
+    ],
+    "count": 1,
+    "create_time": 1773167973,
+    "update_time": 1773167973,
+    "_id": "Edge-to-Core Systems"
+  },
+  "Report 6878": {
+    "chunk_ids": [
+      "chunk-58b2d80c0b2a8b0ee53bae05070f0c93"
+    ],
+    "count": 1,
+    "create_time": 1773167973,
+    "update_time": 1773167973,
+    "_id": "Report 6878"
+  },
+  "CXL RAS Firmware-First Error Handling": {
+    "chunk_ids": [
+      "chunk-cf00ccbe9715d44dfa602d3da7162666"
+    ],
+    "count": 1,
+    "create_time": 1773167986,
+    "update_time": 1773167986,
+    "_id": "CXL RAS Firmware-First Error Handling"
+  },
+  "93 - Use Cases for CXL RAS Firmware-First Error Handling_v2": {
+    "chunk_ids": [
+      "chunk-cf00ccbe9715d44dfa602d3da7162666"
+    ],
+    "count": 1,
+    "create_time": 1773167986,
+    "update_time": 1773167986,
+    "_id": "93 - Use Cases for CXL RAS Firmware-First Error Handling_v2"
+  },
+  "7396 - Co-Designing for Scale- CXL-Based Memory Solution for Data-Centric Workloads_v2_v2": {
+    "chunk_ids": [
+      "chunk-ef5a1dc3d7c28f0190c5185e1c92732b"
+    ],
+    "count": 1,
+    "create_time": 1773167998,
+    "update_time": 1773167998,
+    "_id": "7396 - Co-Designing for Scale- CXL-Based Memory Solution for Data-Centric Workloads_v2_v2"
+  },
+  "Data-Centric Workloads": {
+    "chunk_ids": [
+      "chunk-ef5a1dc3d7c28f0190c5185e1c92732b"
+    ],
+    "count": 1,
+    "create_time": 1773167998,
+    "update_time": 1773167998,
+    "_id": "Data-Centric Workloads"
+  },
+  "7249 - Composable Memory Fabric Architecture- Enabling Scalable Memory Management for AI and General Purpose Compute_v2_v2_v2": {
+    "chunk_ids": [
+      "chunk-7b48c48f2f7c3877c03d05218cfb8c20"
+    ],
+    "count": 1,
+    "create_time": 1773168013,
+    "update_time": 1773168013,
+    "_id": "7249 - Composable Memory Fabric Architecture- Enabling Scalable Memory Management for AI and General Purpose Compute_v2_v2_v2"
+  },
+  "Composable Memory Fabric Architecture": {
+    "chunk_ids": [
+      "chunk-7b48c48f2f7c3877c03d05218cfb8c20",
+      "chunk-c7fd39ddee62a6682cc2d3e58c3b66ed"
+    ],
+    "count": 2,
+    "update_time": 1773169184,
+    "_id": "Composable Memory Fabric Architecture"
+  },
+  "Scalable Memory Management": {
+    "chunk_ids": [
+      "chunk-7b48c48f2f7c3877c03d05218cfb8c20",
+      "chunk-c7fd39ddee62a6682cc2d3e58c3b66ed"
+    ],
+    "count": 2,
+    "update_time": 1773169184,
+    "_id": "Scalable Memory Management"
+  },
+  "73 - Advanced Server Management on Arm to track-Latest Technological Advances in General Server Architecture": {
+    "chunk_ids": [
+      "chunk-3ae046aa80e7382953f272a3870f099b"
+    ],
+    "count": 1,
+    "create_time": 1773168029,
+    "update_time": 1773168029,
+    "_id": "73 - Advanced Server Management on Arm to track-Latest Technological Advances in General Server Architecture"
+  },
+  "Arm Architecture": {
+    "chunk_ids": [
+      "chunk-3ae046aa80e7382953f272a3870f099b"
+    ],
+    "count": 1,
+    "create_time": 1773168029,
+    "update_time": 1773168029,
+    "_id": "Arm Architecture"
+  },
+  "75 - Architecting the AI Fabric-Scalable Networking for Next-Generation AI Servers-Racks-and Clusters_v2_v2": {
+    "chunk_ids": [
+      "chunk-14a5b27abffb227913c4a16ac75887ca"
+    ],
+    "count": 1,
+    "create_time": 1773168049,
+    "update_time": 1773168049,
+    "_id": "75 - Architecting the AI Fabric-Scalable Networking for Next-Generation AI Servers-Racks-and Clusters_v2_v2"
+  },
+  "Racks": {
+    "chunk_ids": [
+      "chunk-14a5b27abffb227913c4a16ac75887ca"
+    ],
+    "count": 1,
+    "create_time": 1773168049,
+    "update_time": 1773168049,
+    "_id": "Racks"
+  },
+  "Clusters": {
+    "chunk_ids": [
+      "chunk-14a5b27abffb227913c4a16ac75887ca"
+    ],
+    "count": 1,
+    "create_time": 1773168049,
+    "update_time": 1773168049,
+    "_id": "Clusters"
+  },
+  "AI Fabric": {
+    "chunk_ids": [
+      "chunk-14a5b27abffb227913c4a16ac75887ca"
+    ],
+    "count": 1,
+    "create_time": 1773168049,
+    "update_time": 1773168049,
+    "_id": "AI Fabric"
+  },
+  "Next-Generation AI Servers": {
+    "chunk_ids": [
+      "chunk-14a5b27abffb227913c4a16ac75887ca"
+    ],
+    "count": 1,
+    "create_time": 1773168049,
+    "update_time": 1773168049,
+    "_id": "Next-Generation AI Servers"
+  },
+  "Scalable Networking": {
+    "chunk_ids": [
+      "chunk-14a5b27abffb227913c4a16ac75887ca"
+    ],
+    "count": 1,
+    "create_time": 1773168049,
+    "update_time": 1773168049,
+    "_id": "Scalable Networking"
+  },
+  "3.31 MB": {
+    "chunk_ids": [
+      "chunk-14a5b27abffb227913c4a16ac75887ca"
+    ],
+    "count": 1,
+    "create_time": 1773168049,
+    "update_time": 1773168049,
+    "_id": "3.31 MB"
+  },
+  "2026-03-07 19:05:20": {
+    "chunk_ids": [
+      "chunk-14a5b27abffb227913c4a16ac75887ca",
+      "chunk-33d6bc980e862376c11685a00bf22ca3"
+    ],
+    "count": 2,
+    "update_time": 1773254125,
+    "_id": "2026-03-07 19:05:20"
+  },
+  "7137 - Server Scale-Up Interconnect Technologies - UALink SuperNode and CXL Memory Pool_v2": {
+    "chunk_ids": [
+      "chunk-c199ec006c1f0210255474d03892899b"
+    ],
+    "count": 1,
+    "create_time": 1773168066,
+    "update_time": 1773168066,
+    "_id": "7137 - Server Scale-Up Interconnect Technologies - UALink SuperNode and CXL Memory Pool_v2"
+  },
+  "UALink SuperNode": {
+    "chunk_ids": [
+      "chunk-c199ec006c1f0210255474d03892899b"
+    ],
+    "count": 1,
+    "create_time": 1773168066,
+    "update_time": 1773168066,
+    "_id": "UALink SuperNode"
+  },
+  "CXL Memory Pool": {
+    "chunk_ids": [
+      "chunk-c199ec006c1f0210255474d03892899b"
+    ],
+    "count": 1,
+    "create_time": 1773168066,
+    "update_time": 1773168066,
+    "_id": "CXL Memory Pool"
+  },
+  "Server Scale-Up Interconnect Technologies": {
+    "chunk_ids": [
+      "chunk-c199ec006c1f0210255474d03892899b"
+    ],
+    "count": 1,
+    "create_time": 1773168066,
+    "update_time": 1773168066,
+    "_id": "Server Scale-Up Interconnect Technologies"
+  },
+  "Core Server Architecture": {
+    "chunk_ids": [
+      "chunk-c199ec006c1f0210255474d03892899b",
+      "chunk-57adc984bf533daad96d70c0a73d33e0"
+    ],
+    "count": 2,
+    "update_time": 1773168858,
+    "_id": "Core Server Architecture"
+  },
+  "Arm CSA": {
+    "chunk_ids": [
+      "chunk-46b1cb6c7cb6838091250f07aa58cb19",
+      "chunk-7dd14306d9061dddba8b150d9c7d98b0"
+    ],
+    "count": 2,
+    "update_time": 1773168149,
+    "_id": "Arm CSA"
+  },
+  "Chiplet_v2_v2": {
+    "chunk_ids": [
+      "chunk-46b1cb6c7cb6838091250f07aa58cb19"
+    ],
+    "count": 1,
+    "create_time": 1773168071,
+    "update_time": 1773168071,
+    "_id": "Chiplet_v2_v2"
+  },
+  "AI Workload Demands": {
+    "chunk_ids": [
+      "chunk-46b1cb6c7cb6838091250f07aa58cb19"
+    ],
+    "count": 1,
+    "create_time": 1773168071,
+    "update_time": 1773168071,
+    "_id": "AI Workload Demands"
+  },
+  "72 - Meeting AI Workload Demands with Arm CSA and Chiplet_v2_v2": {
+    "chunk_ids": [
+      "chunk-46b1cb6c7cb6838091250f07aa58cb19"
+    ],
+    "count": 1,
+    "create_time": 1773168071,
+    "update_time": 1773168071,
+    "_id": "72 - Meeting AI Workload Demands with Arm CSA and Chiplet_v2_v2"
+  },
+  "7402 - Use of eSFI and PCIe-MI for Security Quarantine_v2": {
+    "chunk_ids": [
+      "chunk-e4173aa4ed70cd6d625ee79aebe2a677"
+    ],
+    "count": 1,
+    "create_time": 1773168102,
+    "update_time": 1773168102,
+    "_id": "7402 - Use of eSFI and PCIe-MI for Security Quarantine_v2"
+  },
+  "Security Quarantine": {
+    "chunk_ids": [
+      "chunk-e4173aa4ed70cd6d625ee79aebe2a677"
+    ],
+    "count": 1,
+    "create_time": 1773168102,
+    "update_time": 1773168102,
+    "_id": "Security Quarantine"
+  },
+  "PDF File": {
+    "chunk_ids": [
+      "chunk-e4173aa4ed70cd6d625ee79aebe2a677",
+      "chunk-3bef51647317cfab8fd98c2182da0b1c"
+    ],
+    "count": 2,
+    "update_time": 1773254511,
+    "_id": "PDF File"
+  },
+  "7532 - Multi-Headed Composable Memory Appliance MHCMA Next-Gen_v2_v2": {
+    "chunk_ids": [
+      "chunk-99116bb42021db2c45f55b65671842c0"
+    ],
+    "count": 1,
+    "create_time": 1773168104,
+    "update_time": 1773168104,
+    "_id": "7532 - Multi-Headed Composable Memory Appliance MHCMA Next-Gen_v2_v2"
+  },
+  "1.72 MB": {
+    "chunk_ids": [
+      "chunk-99116bb42021db2c45f55b65671842c0"
+    ],
+    "count": 1,
+    "create_time": 1773168104,
+    "update_time": 1773168104,
+    "_id": "1.72 MB"
+  },
+  "Multi-Headed Composable Memory Appliance MHCMA": {
+    "chunk_ids": [
+      "chunk-99116bb42021db2c45f55b65671842c0"
+    ],
+    "count": 1,
+    "create_time": 1773168104,
+    "update_time": 1773168104,
+    "_id": "Multi-Headed Composable Memory Appliance MHCMA"
+  },
+  "HarDNet": {
+    "chunk_ids": [
+      "chunk-71812bc0fbded857fe0a4b82f5223b84"
+    ],
+    "count": 1,
+    "create_time": 1773168130,
+    "update_time": 1773168130,
+    "_id": "HarDNet"
+  },
+  "Report on HarDNet": {
+    "chunk_ids": [
+      "chunk-71812bc0fbded857fe0a4b82f5223b84"
+    ],
+    "count": 1,
+    "create_time": 1773168130,
+    "update_time": 1773168130,
+    "_id": "Report on HarDNet"
+  },
+  "2019 HarDNet A Low Memory Traffic Network.pdf": {
+    "chunk_ids": [
+      "chunk-71812bc0fbded857fe0a4b82f5223b84"
+    ],
+    "count": 1,
+    "create_time": 1773168130,
+    "update_time": 1773168130,
+    "_id": "2019 HarDNet A Low Memory Traffic Network.pdf"
+  },
+  "Chiplet": {
+    "chunk_ids": [
+      "chunk-7dd14306d9061dddba8b150d9c7d98b0"
+    ],
+    "count": 1,
+    "create_time": 1773168149,
+    "update_time": 1773168149,
+    "_id": "Chiplet"
+  },
+  "AI Workload": {
+    "chunk_ids": [
+      "chunk-7dd14306d9061dddba8b150d9c7d98b0"
+    ],
+    "count": 1,
+    "create_time": 1773168149,
+    "update_time": 1773168149,
+    "_id": "AI Workload"
+  },
+  "Meeting AI Workload Demands with Arm CSA and Chiplet": {
+    "chunk_ids": [
+      "chunk-7dd14306d9061dddba8b150d9c7d98b0"
+    ],
+    "count": 1,
+    "create_time": 1773168149,
+    "update_time": 1773168149,
+    "_id": "Meeting AI Workload Demands with Arm CSA and Chiplet"
+  },
+  "20250807 DRAM 304 1 An": {
+    "chunk_ids": [
+      "chunk-75a98834e3066a94c413caadb98ef3bd"
+    ],
+    "count": 1,
+    "create_time": 1773168168,
+    "update_time": 1773168168,
+    "_id": "20250807 DRAM 304 1 An"
+  },
+  "2026-03-08": {
+    "chunk_ids": [
+      "chunk-75a98834e3066a94c413caadb98ef3bd",
+      "chunk-97525ceaf715f1ad94448c8abc5642db",
+      "chunk-0559e293569f15eabf0cd28fac35d14f",
+      "chunk-11fbfb718c91a1cacf50d05e7bcc41bf",
+      "chunk-e0849f10e95d7677ebed5f2a29c650a2",
+      "chunk-e43b9c7c8f30976446ff07cfb8acd723",
+      "chunk-55f9a5f9dbd8556e5eeb84b9bb117c15",
+      "chunk-25afa8d829c71db97875281976c4e594",
+      "chunk-57adc984bf533daad96d70c0a73d33e0",
+      "chunk-1bf489aadb0f21630c59b8361f23e8f3",
+      "chunk-81d317b0bc2c9a54d84d534d33e7b288",
+      "chunk-41e5bcd0e2dad86fc34ddddd1afe3ac0",
+      "chunk-d7bc46115f13aecdbbcd6e7398ee9691",
+      "chunk-635a8270f90d4ad369e34ef96c6f284f",
+      "chunk-230764380b33557b5524bd06ee945029"
+    ],
+    "count": 15,
+    "update_time": 1773340408,
+    "_id": "2026-03-08"
+  },
+  "DRAM": {
+    "chunk_ids": [
+      "chunk-75a98834e3066a94c413caadb98ef3bd",
+      "chunk-97525ceaf715f1ad94448c8abc5642db",
+      "chunk-e0849f10e95d7677ebed5f2a29c650a2",
+      "chunk-e43b9c7c8f30976446ff07cfb8acd723",
+      "chunk-25afa8d829c71db97875281976c4e594",
+      "chunk-d7bc46115f13aecdbbcd6e7398ee9691",
+      "chunk-230764380b33557b5524bd06ee945029",
+      "chunk-bac65798eb982eaec66217171974d32c"
+    ],
+    "count": 8,
+    "update_time": 1773340896,
+    "_id": "DRAM"
+  },
+  "20250807 DRAM 304 1 SO": {
+    "chunk_ids": [
+      "chunk-97525ceaf715f1ad94448c8abc5642db"
+    ],
+    "count": 1,
+    "create_time": 1773168192,
+    "update_time": 1773168192,
+    "_id": "20250807 DRAM 304 1 SO"
+  },
+  "20250806 CXLT 203 1 Kim Updated Copy": {
+    "chunk_ids": [
+      "chunk-0559e293569f15eabf0cd28fac35d14f"
+    ],
+    "count": 1,
+    "create_time": 1773168215,
+    "update_time": 1773168215,
+    "_id": "20250806 CXLT 203 1 Kim Updated Copy"
+  },
+  "20250806 INDA 202 1 CXL Consortium": {
+    "chunk_ids": [
+      "chunk-ef9903a22739411840df5a1652b687d5"
+    ],
+    "count": 1,
+    "create_time": 1773168236,
+    "update_time": 1773168236,
+    "_id": "20250806 INDA 202 1 CXL Consortium"
+  },
+  "CXL Consortium": {
+    "chunk_ids": [
+      "chunk-ef9903a22739411840df5a1652b687d5"
+    ],
+    "count": 1,
+    "create_time": 1773168236,
+    "update_time": 1773168236,
+    "_id": "CXL Consortium"
+  },
+  "INDA 202": {
+    "chunk_ids": [
+      "chunk-ef9903a22739411840df5a1652b687d5"
+    ],
+    "count": 1,
+    "create_time": 1773168236,
+    "update_time": 1773168236,
+    "_id": "INDA 202"
+  },
+  "20250806": {
+    "chunk_ids": [
+      "chunk-ef9903a22739411840df5a1652b687d5"
+    ],
+    "count": 1,
+    "create_time": 1773168236,
+    "update_time": 1773168236,
+    "_id": "20250806"
+  },
+  "PCIe MI": {
+    "chunk_ids": [
+      "chunk-c461db61ef0a922e7d7292d8516c1147"
+    ],
+    "count": 1,
+    "create_time": 1773168266,
+    "update_time": 1773168266,
+    "_id": "PCIe MI"
+  },
+  "Manage and Secure your PCIe Infrastructure using eSFI and PCIe MI": {
+    "chunk_ids": [
+      "chunk-c461db61ef0a922e7d7292d8516c1147"
+    ],
+    "count": 1,
+    "create_time": 1773168266,
+    "update_time": 1773168266,
+    "_id": "Manage and Secure your PCIe Infrastructure using eSFI and PCIe MI"
+  },
+  "Dynamic Memory Networks for Visual and Textual Question Answering": {
+    "chunk_ids": [
+      "chunk-11fbfb718c91a1cacf50d05e7bcc41bf"
+    ],
+    "count": 1,
+    "create_time": 1773168293,
+    "update_time": 1773168293,
+    "_id": "Dynamic Memory Networks for Visual and Textual Question Answering"
+  },
+  "Research Report Repository": {
+    "chunk_ids": [
+      "chunk-11fbfb718c91a1cacf50d05e7bcc41bf"
+    ],
+    "count": 1,
+    "create_time": 1773168293,
+    "update_time": 1773168293,
+    "_id": "Research Report Repository"
+  },
+  "Dynamic Memory Networks": {
+    "chunk_ids": [
+      "chunk-11fbfb718c91a1cacf50d05e7bcc41bf"
+    ],
+    "count": 1,
+    "create_time": 1773168293,
+    "update_time": 1773168293,
+    "_id": "Dynamic Memory Networks"
+  },
+  "Astera Labs Scaling AI with PCIe Ethernet and UALink Retimers": {
+    "chunk_ids": [
+      "chunk-03978f9015d72cc2c030ac8e6447fed7"
+    ],
+    "count": 1,
+    "create_time": 1773168312,
+    "update_time": 1773168312,
+    "_id": "Astera Labs Scaling AI with PCIe Ethernet and UALink Retimers"
+  },
+  "20250807 CXLT 302 1 Pan copy": {
+    "chunk_ids": [
+      "chunk-b29d2932bdd25f9f58a553637e48ab19"
+    ],
+    "count": 1,
+    "create_time": 1773168335,
+    "update_time": 1773168335,
+    "_id": "20250807 CXLT 302 1 Pan copy"
+  },
+  "Server Architecture Research Report Library": {
+    "chunk_ids": [
+      "chunk-b29d2932bdd25f9f58a553637e48ab19"
+    ],
+    "count": 1,
+    "create_time": 1773168335,
+    "update_time": 1773168335,
+    "_id": "Server Architecture Research Report Library"
+  },
+  "Core Priority Tag": {
+    "chunk_ids": [
+      "chunk-b29d2932bdd25f9f58a553637e48ab19"
+    ],
+    "count": 1,
+    "create_time": 1773168335,
+    "update_time": 1773168335,
+    "_id": "Core Priority Tag"
+  },
+  "Trust at 64 GT/s Security Considerations for PCIe 6 Switch Deployments": {
+    "chunk_ids": [
+      "chunk-538e9be43efc9f4740b1699a18d33882"
+    ],
+    "count": 1,
+    "create_time": 1773168368,
+    "update_time": 1773168368,
+    "_id": "Trust at 64 GT/s Security Considerations for PCIe 6 Switch Deployments"
+  },
+  "20250807 DRAM 303 1 Kamath Copy": {
+    "chunk_ids": [
+      "chunk-e0849f10e95d7677ebed5f2a29c650a2"
+    ],
+    "count": 1,
+    "create_time": 1773168399,
+    "update_time": 1773168399,
+    "_id": "20250807 DRAM 303 1 Kamath Copy"
+  },
+  "Core Report Library": {
+    "chunk_ids": [
+      "chunk-e0849f10e95d7677ebed5f2a29c650a2"
+    ],
+    "count": 1,
+    "create_time": 1773168399,
+    "update_time": 1773168399,
+    "_id": "Core Report Library"
+  },
+  "20250807 DRAM 303 1 Potter copy": {
+    "chunk_ids": [
+      "chunk-e43b9c7c8f30976446ff07cfb8acd723"
+    ],
+    "count": 1,
+    "create_time": 1773168421,
+    "update_time": 1773168421,
+    "_id": "20250807 DRAM 303 1 Potter copy"
+  },
+  "1.38 MB": {
+    "chunk_ids": [
+      "chunk-e43b9c7c8f30976446ff07cfb8acd723"
+    ],
+    "count": 1,
+    "create_time": 1773168421,
+    "update_time": 1773168421,
+    "_id": "1.38 MB"
+  },
+  "Meta AI ML System": {
+    "chunk_ids": [
+      "chunk-63f83f5a5cef6dac282d861fd6da9e77"
+    ],
+    "count": 1,
+    "create_time": 1773168439,
+    "update_time": 1773168439,
+    "_id": "Meta AI ML System"
+  },
+  "20250807 CXLT 304 1 PoChunWang copy": {
+    "chunk_ids": [
+      "chunk-900ad8221a96dafc212eef7868a063e8"
+    ],
+    "count": 1,
+    "create_time": 1773168463,
+    "update_time": 1773168463,
+    "_id": "20250807 CXLT 304 1 PoChunWang copy"
+  },
+  "PoChunWang": {
+    "chunk_ids": [
+      "chunk-900ad8221a96dafc212eef7868a063e8"
+    ],
+    "count": 1,
+    "create_time": 1773168463,
+    "update_time": 1773168463,
+    "_id": "PoChunWang"
+  },
+  "Mt. Diablo Server Scope": {
+    "chunk_ids": [
+      "chunk-7480ef95765b1d3cb3e7cc5a73e67e91"
+    ],
+    "count": 1,
+    "create_time": 1773168495,
+    "update_time": 1773168495,
+    "_id": "Mt. Diablo Server Scope"
+  },
+  "Mt. Diablo": {
+    "chunk_ids": [
+      "chunk-7480ef95765b1d3cb3e7cc5a73e67e91"
+    ],
+    "count": 1,
+    "create_time": 1773168495,
+    "update_time": 1773168495,
+    "_id": "Mt. Diablo"
+  },
+  "End to End Management of a CXL Enabled Datacenter Memory Fabric": {
+    "chunk_ids": [
+      "chunk-f023cd84d3e2ed9cf707d62efd5ddbb9"
+    ],
+    "count": 1,
+    "create_time": 1773168540,
+    "update_time": 1773168540,
+    "_id": "End to End Management of a CXL Enabled Datacenter Memory Fabric"
+  },
+  "Vectorized": {
+    "chunk_ids": [
+      "chunk-f023cd84d3e2ed9cf707d62efd5ddbb9",
+      "chunk-d7bc46115f13aecdbbcd6e7398ee9691",
+      "chunk-e27f03ec1e126815641b4755ece051c6",
+      "chunk-968fbcf059982c556b4bcc6944efa36b",
+      "chunk-bac65798eb982eaec66217171974d32c",
+      "chunk-df273047e67bbcef8888ccc637f02f26"
+    ],
+    "count": 6,
+    "update_time": 1773341692,
+    "_id": "Vectorized"
+  },
+  "APEC Advanced PCIe Enclosure": {
+    "chunk_ids": [
+      "chunk-54b80862fb010b672af4957bef254768"
+    ],
+    "count": 1,
+    "create_time": 1773168561,
+    "update_time": 1773168561,
+    "_id": "APEC Advanced PCIe Enclosure"
+  },
+  "HSIO Interconnection": {
+    "chunk_ids": [
+      "chunk-54b80862fb010b672af4957bef254768"
+    ],
+    "count": 1,
+    "create_time": 1773168561,
+    "update_time": 1773168561,
+    "_id": "HSIO Interconnection"
+  },
+  "Community Panel Enabling Immersion by Design Aligning Server and Cooling Communities": {
+    "chunk_ids": [
+      "chunk-fed70deae9eaf1b4120dec7d0e6498bd"
+    ],
+    "count": 1,
+    "create_time": 1773168576,
+    "update_time": 1773168576,
+    "_id": "Community Panel Enabling Immersion by Design Aligning Server and Cooling Communities"
+  },
+  "Emerging Software Patterns for Programming New Memory Devices and Interfaces": {
+    "chunk_ids": [
+      "chunk-87108b0686e8d70e6c11c7ad5b493573"
+    ],
+    "count": 1,
+    "create_time": 1773168605,
+    "update_time": 1773168605,
+    "_id": "Emerging Software Patterns for Programming New Memory Devices and Interfaces"
+  },
+  "1.43 MB": {
+    "chunk_ids": [
+      "chunk-87108b0686e8d70e6c11c7ad5b493573"
+    ],
+    "count": 1,
+    "create_time": 1773168605,
+    "update_time": 1773168605,
+    "_id": "1.43 MB"
+  },
+  "2026-03-07 19:05:22": {
+    "chunk_ids": [
+      "chunk-87108b0686e8d70e6c11c7ad5b493573"
+    ],
+    "count": 1,
+    "create_time": 1773168605,
+    "update_time": 1773168605,
+    "_id": "2026-03-07 19:05:22"
+  },
+  "Heterogeneous Memory Opportunity with Agentic AI and Memory Centric Computing": {
+    "chunk_ids": [
+      "chunk-4fad482b7206fdfbdc48ed9c3de6c7af"
+    ],
+    "count": 1,
+    "create_time": 1773168636,
+    "update_time": 1773168636,
+    "_id": "Heterogeneous Memory Opportunity with Agentic AI and Memory Centric Computing"
+  },
+  "Interconnects and Connectivity for At Scale AI Shaping the Future of Interconnects and Memory Fabric for Open AI Systems": {
+    "chunk_ids": [
+      "chunk-b71eacebd07cf22c28bd1377859a2954"
+    ],
+    "count": 1,
+    "create_time": 1773168678,
+    "update_time": 1773168678,
+    "_id": "Interconnects and Connectivity for At Scale AI Shaping the Future of Interconnects and Memory Fabric for Open AI Systems"
+  },
+  "Memory Fabric": {
+    "chunk_ids": [
+      "chunk-b71eacebd07cf22c28bd1377859a2954"
+    ],
+    "count": 1,
+    "create_time": 1773168678,
+    "update_time": 1773168678,
+    "_id": "Memory Fabric"
+  },
+  "Open AI Systems": {
+    "chunk_ids": [
+      "chunk-b71eacebd07cf22c28bd1377859a2954"
+    ],
+    "count": 1,
+    "create_time": 1773168678,
+    "update_time": 1773168678,
+    "_id": "Open AI Systems"
+  },
+  "AI Interconnects": {
+    "chunk_ids": [
+      "chunk-b71eacebd07cf22c28bd1377859a2954"
+    ],
+    "count": 1,
+    "create_time": 1773168678,
+    "update_time": 1773168678,
+    "_id": "AI Interconnects"
+  },
+  "Harmonia Algorithm Hardware Co Design for Memory and Compute Efficient BFP based LLM Inference": {
+    "chunk_ids": [
+      "chunk-55f9a5f9dbd8556e5eeb84b9bb117c15"
+    ],
+    "count": 1,
+    "create_time": 1773168701,
+    "update_time": 1773168701,
+    "_id": "Harmonia Algorithm Hardware Co Design for Memory and Compute Efficient BFP based LLM Inference"
+  },
+  "BFP": {
+    "chunk_ids": [
+      "chunk-55f9a5f9dbd8556e5eeb84b9bb117c15"
+    ],
+    "count": 1,
+    "create_time": 1773168701,
+    "update_time": 1773168701,
+    "_id": "BFP"
+  },
+  "LLM Inference": {
+    "chunk_ids": [
+      "chunk-55f9a5f9dbd8556e5eeb84b9bb117c15"
+    ],
+    "count": 1,
+    "create_time": 1773168701,
+    "update_time": 1773168701,
+    "_id": "LLM Inference"
+  },
+  "Harmonia": {
+    "chunk_ids": [
+      "chunk-55f9a5f9dbd8556e5eeb84b9bb117c15"
+    ],
+    "count": 1,
+    "create_time": 1773168701,
+    "update_time": 1773168701,
+    "_id": "Harmonia"
+  },
+  "20250807 DRAM 303 1 Sharovar copy": {
+    "chunk_ids": [
+      "chunk-25afa8d829c71db97875281976c4e594"
+    ],
+    "count": 1,
+    "create_time": 1773168725,
+    "update_time": 1773168725,
+    "_id": "20250807 DRAM 303 1 Sharovar copy"
+  },
+  "Sharovar": {
+    "chunk_ids": [
+      "chunk-25afa8d829c71db97875281976c4e594"
+    ],
+    "count": 1,
+    "create_time": 1773168725,
+    "update_time": 1773168725,
+    "_id": "Sharovar"
+  },
+  "DC Memory Fabric Management": {
+    "chunk_ids": [
+      "chunk-01a392db9d8bb576ab6ed5aff9f9d578"
+    ],
+    "count": 1,
+    "create_time": 1773168763,
+    "update_time": 1773168763,
+    "_id": "DC Memory Fabric Management"
+  },
+  "K8s OCP Reference Implementation": {
+    "chunk_ids": [
+      "chunk-01a392db9d8bb576ab6ed5aff9f9d578"
+    ],
+    "count": 1,
+    "create_time": 1773168763,
+    "update_time": 1773168763,
+    "_id": "K8s OCP Reference Implementation"
+  },
+  "Kubernetes": {
+    "chunk_ids": [
+      "chunk-01a392db9d8bb576ab6ed5aff9f9d578"
+    ],
+    "count": 1,
+    "create_time": 1773168763,
+    "update_time": 1773168763,
+    "_id": "Kubernetes"
+  },
+  "1.20 MB": {
+    "chunk_ids": [
+      "chunk-01a392db9d8bb576ab6ed5aff9f9d578"
+    ],
+    "count": 1,
+    "create_time": 1773168763,
+    "update_time": 1773168763,
+    "_id": "1.20 MB"
+  },
+  "2026-03-07 19:05:23": {
+    "chunk_ids": [
+      "chunk-01a392db9d8bb576ab6ed5aff9f9d578",
+      "chunk-60ca18023b7448fb4ddf9aa784ef1a65",
+      "chunk-968fbcf059982c556b4bcc6944efa36b"
+    ],
+    "count": 3,
+    "update_time": 1773254711,
+    "_id": "2026-03-07 19:05:23"
+  },
+  "PCIe 7.0": {
+    "chunk_ids": [
+      "chunk-1fc91c144f09ce8648b8a92d03b6a031"
+    ],
+    "count": 1,
+    "create_time": 1773168798,
+    "update_time": 1773168798,
+    "_id": "PCIe 7.0"
+  },
+  "OCP Server Infrastructure": {
+    "chunk_ids": [
+      "chunk-1fc91c144f09ce8648b8a92d03b6a031"
+    ],
+    "count": 1,
+    "create_time": 1773168798,
+    "update_time": 1773168798,
+    "_id": "OCP Server Infrastructure"
+  },
+  "PCIe 7.0 Enhancements for High Speed I/O Connectivity for OCP Server Infrastructure": {
+    "chunk_ids": [
+      "chunk-1fc91c144f09ce8648b8a92d03b6a031"
+    ],
+    "count": 1,
+    "create_time": 1773168798,
+    "update_time": 1773168798,
+    "_id": "PCIe 7.0 Enhancements for High Speed I/O Connectivity for OCP Server Infrastructure"
+  },
+  "File Size": {
+    "chunk_ids": [
+      "chunk-1fc91c144f09ce8648b8a92d03b6a031",
+      "chunk-57adc984bf533daad96d70c0a73d33e0"
+    ],
+    "count": 2,
+    "update_time": 1773168858,
+    "_id": "File Size"
+  },
+  "入库时间": {
+    "chunk_ids": [
+      "chunk-1fc91c144f09ce8648b8a92d03b6a031"
+    ],
+    "count": 1,
+    "create_time": 1773168798,
+    "update_time": 1773168798,
+    "_id": "入库时间"
+  },
+  "研报库/核心】服务器架构": {
+    "chunk_ids": [
+      "chunk-1fc91c144f09ce8648b8a92d03b6a031"
+    ],
+    "count": 1,
+    "create_time": 1773168798,
+    "update_time": 1773168798,
+    "_id": "研报库/核心】服务器架构"
+  },
+  "优先级/核心": {
+    "chunk_ids": [
+      "chunk-1fc91c144f09ce8648b8a92d03b6a031"
+    ],
+    "count": 1,
+    "create_time": 1773168798,
+    "update_time": 1773168798,
+    "_id": "优先级/核心"
+  },
+  "Super Fluid Technology Application in High Density Server Product": {
+    "chunk_ids": [
+      "chunk-266b57d952795e78de135dd7ea0d1822"
+    ],
+    "count": 1,
+    "create_time": 1773168818,
+    "update_time": 1773168818,
+    "_id": "Super Fluid Technology Application in High Density Server Product"
+  },
+  "02 02谈谈大模型架构的演进之路, The Art of memory.": {
+    "chunk_ids": [
+      "chunk-57adc984bf533daad96d70c0a73d33e0"
+    ],
+    "count": 1,
+    "create_time": 1773168857,
+    "update_time": 1773168857,
+    "_id": "02 02谈谈大模型架构的演进之路, The Art of memory."
+  },
+  "Markdown Format": {
+    "chunk_ids": [
+      "chunk-57adc984bf533daad96d70c0a73d33e0",
+      "chunk-81d317b0bc2c9a54d84d534d33e7b288"
+    ],
+    "count": 2,
+    "update_time": 1773168965,
+    "_id": "Markdown Format"
+  },
+  "Core Research Repository": {
+    "chunk_ids": [
+      "chunk-57adc984bf533daad96d70c0a73d33e0"
+    ],
+    "count": 1,
+    "create_time": 1773168857,
+    "update_time": 1773168857,
+    "_id": "Core Research Repository"
+  },
+  "Vectorization": {
+    "chunk_ids": [
+      "chunk-57adc984bf533daad96d70c0a73d33e0",
+      "chunk-1bf489aadb0f21630c59b8361f23e8f3",
+      "chunk-62991649d9ddbddbdd87eed4b8473959"
+    ],
+    "count": 3,
+    "update_time": 1773340626,
+    "_id": "Vectorization"
+  },
+  "Ingestion Time": {
+    "chunk_ids": [
+      "chunk-57adc984bf533daad96d70c0a73d33e0",
+      "chunk-3bef51647317cfab8fd98c2182da0b1c"
+    ],
+    "count": 2,
+    "update_time": 1773254513,
+    "_id": "Ingestion Time"
+  },
+  "Mixing PCIe 5 and PCIe 6 in AI Platforms Benefits and Challenges": {
+    "chunk_ids": [
+      "chunk-fde36569763e8e63f5879815d072c123"
+    ],
+    "count": 1,
+    "create_time": 1773168889,
+    "update_time": 1773168889,
+    "_id": "Mixing PCIe 5 and PCIe 6 in AI Platforms Benefits and Challenges"
+  },
+  "M.2": {
+    "chunk_ids": [
+      "chunk-1bbafe9a71a73e07d029b3bfa3f85791"
+    ],
+    "count": 1,
+    "create_time": 1773168908,
+    "update_time": 1773168908,
+    "_id": "M.2"
+  },
+  "EDSFF": {
+    "chunk_ids": [
+      "chunk-1bbafe9a71a73e07d029b3bfa3f85791"
+    ],
+    "count": 1,
+    "create_time": 1773168908,
+    "update_time": 1773168908,
+    "_id": "EDSFF"
+  },
+  "NVMe": {
+    "chunk_ids": [
+      "chunk-1bbafe9a71a73e07d029b3bfa3f85791"
+    ],
+    "count": 1,
+    "create_time": 1773168908,
+    "update_time": 1773168908,
+    "_id": "NVMe"
+  },
+  "OCP Compute Servers": {
+    "chunk_ids": [
+      "chunk-1bbafe9a71a73e07d029b3bfa3f85791"
+    ],
+    "count": 1,
+    "create_time": 1773168908,
+    "update_time": 1773168908,
+    "_id": "OCP Compute Servers"
+  },
+  "From M.2 to EDSFF Evolving NVMe Form Factors in OCP Compute Servers": {
+    "chunk_ids": [
+      "chunk-1bbafe9a71a73e07d029b3bfa3f85791"
+    ],
+    "count": 1,
+    "create_time": 1773168908,
+    "update_time": 1773168908,
+    "_id": "From M.2 to EDSFF Evolving NVMe Form Factors in OCP Compute Servers"
+  },
+  "20250807 CXLT 301 1 LEE v2 copy": {
+    "chunk_ids": [
+      "chunk-1bf489aadb0f21630c59b8361f23e8f3"
+    ],
+    "count": 1,
+    "create_time": 1773168930,
+    "update_time": 1773168930,
+    "_id": "20250807 CXLT 301 1 LEE v2 copy"
+  },
+  "DeepSeek Engram Conditional Memory": {
+    "chunk_ids": [
+      "chunk-81d317b0bc2c9a54d84d534d33e7b288"
+    ],
+    "count": 1,
+    "create_time": 1773168965,
+    "update_time": 1773168965,
+    "_id": "DeepSeek Engram Conditional Memory"
+  },
+  "Report on DeepSeek Engram Conditional Memory": {
+    "chunk_ids": [
+      "chunk-81d317b0bc2c9a54d84d534d33e7b288"
+    ],
+    "count": 1,
+    "create_time": 1773168965,
+    "update_time": 1773168965,
+    "_id": "Report on DeepSeek Engram Conditional Memory"
+  },
+  "Local Document File": {
+    "chunk_ids": [
+      "chunk-81d317b0bc2c9a54d84d534d33e7b288"
+    ],
+    "count": 1,
+    "create_time": 1773168965,
+    "update_time": 1773168965,
+    "_id": "Local Document File"
+  },
+  "File Size 0.07 MB": {
+    "chunk_ids": [
+      "chunk-81d317b0bc2c9a54d84d534d33e7b288"
+    ],
+    "count": 1,
+    "create_time": 1773168965,
+    "update_time": 1773168965,
+    "_id": "File Size 0.07 MB"
+  },
+  "Ingestion Time 2026-03-08 18:48:45": {
+    "chunk_ids": [
+      "chunk-81d317b0bc2c9a54d84d534d33e7b288"
+    ],
+    "count": 1,
+    "create_time": 1773168966,
+    "update_time": 1773168966,
+    "_id": "Ingestion Time 2026-03-08 18:48:45"
+  },
+  "End To End Memory Networks": {
+    "chunk_ids": [
+      "chunk-41e5bcd0e2dad86fc34ddddd1afe3ac0"
+    ],
+    "count": 1,
+    "create_time": 1773168991,
+    "update_time": 1773168991,
+    "_id": "End To End Memory Networks"
+  },
+  "0.62 MB": {
+    "chunk_ids": [
+      "chunk-41e5bcd0e2dad86fc34ddddd1afe3ac0"
+    ],
+    "count": 1,
+    "create_time": 1773168991,
+    "update_time": 1773168991,
+    "_id": "0.62 MB"
+  },
+  "2026-03-08 12:00:45": {
+    "chunk_ids": [
+      "chunk-41e5bcd0e2dad86fc34ddddd1afe3ac0"
+    ],
+    "count": 1,
+    "create_time": 1773168992,
+    "update_time": 1773168992,
+    "_id": "2026-03-08 12:00:45"
+  },
+  "proteanTecs": {
+    "chunk_ids": [
+      "chunk-fa73bfb5833304f96f036b9a9653ece2"
+    ],
+    "count": 1,
+    "create_time": 1773169023,
+    "update_time": 1773169023,
+    "_id": "proteanTecs"
+  },
+  "Lifecycle System Monitoring": {
+    "chunk_ids": [
+      "chunk-fa73bfb5833304f96f036b9a9653ece2"
+    ],
+    "count": 1,
+    "create_time": 1773169023,
+    "update_time": 1773169023,
+    "_id": "Lifecycle System Monitoring"
+  },
+  "PDF Report": {
+    "chunk_ids": [
+      "chunk-fa73bfb5833304f96f036b9a9653ece2"
+    ],
+    "count": 1,
+    "create_time": 1773169023,
+    "update_time": 1773169023,
+    "_id": "PDF Report"
+  },
+  "OCP Composable Memory Systems CMS Sub Project": {
+    "chunk_ids": [
+      "chunk-1d28fc57f74bd152b123d626835823bc"
+    ],
+    "count": 1,
+    "create_time": 1773169046,
+    "update_time": 1773169046,
+    "_id": "OCP Composable Memory Systems CMS Sub Project"
+  },
+  "Composable Memory Systems": {
+    "chunk_ids": [
+      "chunk-1d28fc57f74bd152b123d626835823bc"
+    ],
+    "count": 1,
+    "create_time": 1773169046,
+    "update_time": 1773169046,
+    "_id": "Composable Memory Systems"
+  },
+  "Technical Update": {
+    "chunk_ids": [
+      "chunk-1d28fc57f74bd152b123d626835823bc"
+    ],
+    "count": 1,
+    "create_time": 1773169046,
+    "update_time": 1773169046,
+    "_id": "Technical Update"
+  },
+  "Advanced Server Management on Arm to Track Latest Technological Advances in General Server Architecture": {
+    "chunk_ids": [
+      "chunk-1d26679a5c7d4be95dc3163cdd74635d"
+    ],
+    "count": 1,
+    "create_time": 1773169067,
+    "update_time": 1773169067,
+    "_id": "Advanced Server Management on Arm to Track Latest Technological Advances in General Server Architecture"
+  },
+  "General Server Architecture": {
+    "chunk_ids": [
+      "chunk-1d26679a5c7d4be95dc3163cdd74635d"
+    ],
+    "count": 1,
+    "create_time": 1773169067,
+    "update_time": 1773169067,
+    "_id": "General Server Architecture"
+  },
+  "Server Management": {
+    "chunk_ids": [
+      "chunk-1d26679a5c7d4be95dc3163cdd74635d"
+    ],
+    "count": 1,
+    "create_time": 1773169067,
+    "update_time": 1773169067,
+    "_id": "Server Management"
+  },
+  "Memory Technology Optimized For At Scale AI Systems Bandwidth Capacity And Connectivity": {
+    "chunk_ids": [
+      "chunk-60ca18023b7448fb4ddf9aa784ef1a65"
+    ],
+    "count": 1,
+    "create_time": 1773169109,
+    "update_time": 1773169109,
+    "_id": "Memory Technology Optimized For At Scale AI Systems Bandwidth Capacity And Connectivity"
+  },
+  "2.69 MB": {
+    "chunk_ids": [
+      "chunk-60ca18023b7448fb4ddf9aa784ef1a65"
+    ],
+    "count": 1,
+    "create_time": 1773169109,
+    "update_time": 1773169109,
+    "_id": "2.69 MB"
+  },
+  "BMC and AMC Open Platform Firmware Development on Arm Servers From Simulation to Hardware": {
+    "chunk_ids": [
+      "chunk-167d10816e778536b830e1f0aa4bd8fb"
+    ],
+    "count": 1,
+    "create_time": 1773169129,
+    "update_time": 1773169129,
+    "_id": "BMC and AMC Open Platform Firmware Development on Arm Servers From Simulation to Hardware"
+  },
+  "20250806 CXLT 203 1 Saluja Fnl Copy": {
+    "chunk_ids": [
+      "chunk-846347bde485db03ead56cd986ba9001"
+    ],
+    "count": 1,
+    "create_time": 1773169151,
+    "update_time": 1773169151,
+    "_id": "20250806 CXLT 203 1 Saluja Fnl Copy"
+  },
+  "Saluja": {
+    "chunk_ids": [
+      "chunk-846347bde485db03ead56cd986ba9001"
+    ],
+    "count": 1,
+    "create_time": 1773169151,
+    "update_time": 1773169151,
+    "_id": "Saluja"
+  },
+  "Core Research Library": {
+    "chunk_ids": [
+      "chunk-846347bde485db03ead56cd986ba9001"
+    ],
+    "count": 1,
+    "create_time": 1773169151,
+    "update_time": 1773169151,
+    "_id": "Core Research Library"
+  },
+  "20250806 CXLT 203 1 Saluja Fnl Copy PDF": {
+    "chunk_ids": [
+      "chunk-846347bde485db03ead56cd986ba9001"
+    ],
+    "count": 1,
+    "create_time": 1773169151,
+    "update_time": 1773169151,
+    "_id": "20250806 CXLT 203 1 Saluja Fnl Copy PDF"
+  },
+  "AI": {
+    "chunk_ids": [
+      "chunk-c7fd39ddee62a6682cc2d3e58c3b66ed"
+    ],
+    "count": 1,
+    "create_time": 1773169184,
+    "update_time": 1773169184,
+    "_id": "AI"
+  },
+  "General Purpose Compute": {
+    "chunk_ids": [
+      "chunk-c7fd39ddee62a6682cc2d3e58c3b66ed"
+    ],
+    "count": 1,
+    "create_time": 1773169184,
+    "update_time": 1773169184,
+    "_id": "General Purpose Compute"
+  },
+  "20250807 DRAM 304 1 Jeongdong Choe Short Version": {
+    "chunk_ids": [
+      "chunk-d7bc46115f13aecdbbcd6e7398ee9691"
+    ],
+    "count": 1,
+    "create_time": 1773253942,
+    "update_time": 1773253942,
+    "_id": "20250807 DRAM 304 1 Jeongdong Choe Short Version"
+  },
+  "Jeongdong Choe": {
+    "chunk_ids": [
+      "chunk-d7bc46115f13aecdbbcd6e7398ee9691"
+    ],
+    "count": 1,
+    "create_time": 1773253942,
+    "update_time": 1773253942,
+    "_id": "Jeongdong Choe"
+  },
+  "20250807": {
+    "chunk_ids": [
+      "chunk-d7bc46115f13aecdbbcd6e7398ee9691"
+    ],
+    "count": 1,
+    "create_time": 1773253943,
+    "update_time": 1773253943,
+    "_id": "20250807"
+  },
+  "4.22 MB": {
+    "chunk_ids": [
+      "chunk-d7bc46115f13aecdbbcd6e7398ee9691"
+    ],
+    "count": 1,
+    "create_time": 1773253943,
+    "update_time": 1773253943,
+    "_id": "4.22 MB"
+  },
+  "Core": {
+    "chunk_ids": [
+      "chunk-d7bc46115f13aecdbbcd6e7398ee9691",
+      "chunk-33d6bc980e862376c11685a00bf22ca3",
+      "chunk-e27f03ec1e126815641b4755ece051c6",
+      "chunk-968fbcf059982c556b4bcc6944efa36b",
+      "chunk-635a8270f90d4ad369e34ef96c6f284f",
+      "chunk-230764380b33557b5524bd06ee945029",
+      "chunk-df273047e67bbcef8888ccc637f02f26"
+    ],
+    "count": 7,
+    "update_time": 1773341692,
+    "_id": "Core"
+  },
+  "Large CXL Memory Expansion Systems and Workloads": {
+    "chunk_ids": [
+      "chunk-33d6bc980e862376c11685a00bf22ca3"
+    ],
+    "count": 1,
+    "create_time": 1773254124,
+    "update_time": 1773254124,
+    "_id": "Large CXL Memory Expansion Systems and Workloads"
+  },
+  "3.46 MB": {
+    "chunk_ids": [
+      "chunk-33d6bc980e862376c11685a00bf22ca3"
+    ],
+    "count": 1,
+    "create_time": 1773254124,
+    "update_time": 1773254124,
+    "_id": "3.46 MB"
+  },
+  "Local File Path": {
+    "chunk_ids": [
+      "chunk-33d6bc980e862376c11685a00bf22ca3",
+      "chunk-bac65798eb982eaec66217171974d32c"
+    ],
+    "count": 2,
+    "update_time": 1773340896,
+    "_id": "Local File Path"
+  },
+  "Vectorized Status": {
+    "chunk_ids": [
+      "chunk-33d6bc980e862376c11685a00bf22ca3",
+      "chunk-3bef51647317cfab8fd98c2182da0b1c",
+      "chunk-f3b581e41172762e088bcf3b7f03c6a4",
+      "chunk-1b7fcd9c795c3ffe5951ea1b509567b7",
+      "chunk-ec101ba502a70816a33b6a1e26f6054f"
+    ],
+    "count": 5,
+    "update_time": 1773341508,
+    "_id": "Vectorized Status"
+  },
+  "Scaling The Next Generation Of Inference Servers With PCIe Gen6": {
+    "chunk_ids": [
+      "chunk-e27f03ec1e126815641b4755ece051c6"
+    ],
+    "count": 1,
+    "create_time": 1773254315,
+    "update_time": 1773254315,
+    "_id": "Scaling The Next Generation Of Inference Servers With PCIe Gen6"
+  },
+  "PCIe Gen6": {
+    "chunk_ids": [
+      "chunk-e27f03ec1e126815641b4755ece051c6"
+    ],
+    "count": 1,
+    "create_time": 1773254315,
+    "update_time": 1773254315,
+    "_id": "PCIe Gen6"
+  },
+  "Inference Servers": {
+    "chunk_ids": [
+      "chunk-e27f03ec1e126815641b4755ece051c6"
+    ],
+    "count": 1,
+    "create_time": 1773254315,
+    "update_time": 1773254315,
+    "_id": "Inference Servers"
+  },
+  "2.74 MB": {
+    "chunk_ids": [
+      "chunk-e27f03ec1e126815641b4755ece051c6"
+    ],
+    "count": 1,
+    "create_time": 1773254315,
+    "update_time": 1773254315,
+    "_id": "2.74 MB"
+  },
+  "Orchestrating Confidential Compute Report": {
+    "chunk_ids": [
+      "chunk-3bef51647317cfab8fd98c2182da0b1c"
+    ],
+    "count": 1,
+    "create_time": 1773254510,
+    "update_time": 1773254510,
+    "_id": "Orchestrating Confidential Compute Report"
+  },
+  "OCP": {
+    "chunk_ids": [
+      "chunk-3bef51647317cfab8fd98c2182da0b1c"
+    ],
+    "count": 1,
+    "create_time": 1773254510,
+    "update_time": 1773254510,
+    "_id": "OCP"
+  },
+  "DMTF": {
+    "chunk_ids": [
+      "chunk-3bef51647317cfab8fd98c2182da0b1c"
+    ],
+    "count": 1,
+    "create_time": 1773254510,
+    "update_time": 1773254510,
+    "_id": "DMTF"
+  },
+  "Secure Boot": {
+    "chunk_ids": [
+      "chunk-3bef51647317cfab8fd98c2182da0b1c"
+    ],
+    "count": 1,
+    "create_time": 1773254512,
+    "update_time": 1773254512,
+    "_id": "Secure Boot"
+  },
+  "2.07 MB": {
+    "chunk_ids": [
+      "chunk-3bef51647317cfab8fd98c2182da0b1c"
+    ],
+    "count": 1,
+    "create_time": 1773254513,
+    "update_time": 1773254513,
+    "_id": "2.07 MB"
+  },
+  "Flash Memory Chiplet Implementation And Applications": {
+    "chunk_ids": [
+      "chunk-968fbcf059982c556b4bcc6944efa36b"
+    ],
+    "count": 1,
+    "create_time": 1773254710,
+    "update_time": 1773254710,
+    "_id": "Flash Memory Chiplet Implementation And Applications"
+  },
+  "Library": {
+    "chunk_ids": [
+      "chunk-968fbcf059982c556b4bcc6944efa36b"
+    ],
+    "count": 1,
+    "create_time": 1773254710,
+    "update_time": 1773254710,
+    "_id": "Library"
+  },
+  "2.04 MB": {
+    "chunk_ids": [
+      "chunk-968fbcf059982c556b4bcc6944efa36b"
+    ],
+    "count": 1,
+    "create_time": 1773254710,
+    "update_time": 1773254710,
+    "_id": "2.04 MB"
+  },
+  "Document File Path": {
+    "chunk_ids": [
+      "chunk-968fbcf059982c556b4bcc6944efa36b"
+    ],
+    "count": 1,
+    "create_time": 1773254711,
+    "update_time": 1773254711,
+    "_id": "Document File Path"
+  },
+  "Thermal Design Considerations For High Density Dimm System In Dual Socket Datacenter Server Platforms": {
+    "chunk_ids": [
+      "chunk-f3b581e41172762e088bcf3b7f03c6a4"
+    ],
+    "count": 1,
+    "create_time": 1773255011,
+    "update_time": 1773255011,
+    "_id": "Thermal Design Considerations For High Density Dimm System In Dual Socket Datacenter Server Platforms"
+  },
+  "High Density Dimm System": {
+    "chunk_ids": [
+      "chunk-f3b581e41172762e088bcf3b7f03c6a4"
+    ],
+    "count": 1,
+    "create_time": 1773255011,
+    "update_time": 1773255011,
+    "_id": "High Density Dimm System"
+  },
+  "Dual Socket Datacenter Server Platforms": {
+    "chunk_ids": [
+      "chunk-f3b581e41172762e088bcf3b7f03c6a4"
+    ],
+    "count": 1,
+    "create_time": 1773255011,
+    "update_time": 1773255011,
+    "_id": "Dual Socket Datacenter Server Platforms"
+  },
+  "Pdf Document": {
+    "chunk_ids": [
+      "chunk-f3b581e41172762e088bcf3b7f03c6a4"
+    ],
+    "count": 1,
+    "create_time": 1773255011,
+    "update_time": 1773255011,
+    "_id": "Pdf Document"
+  },
+  "0.55 MB": {
+    "chunk_ids": [
+      "chunk-f3b581e41172762e088bcf3b7f03c6a4"
+    ],
+    "count": 1,
+    "create_time": 1773255012,
+    "update_time": 1773255012,
+    "_id": "0.55 MB"
+  },
+  "2026-03-07 19:05:19": {
+    "chunk_ids": [
+      "chunk-f3b581e41172762e088bcf3b7f03c6a4"
+    ],
+    "count": 1,
+    "create_time": 1773255012,
+    "update_time": 1773255012,
+    "_id": "2026-03-07 19:05:19"
+  },
+  "20250807 CXLT 301 1 Kim 07 27 01.00.16 Copy": {
+    "chunk_ids": [
+      "chunk-635a8270f90d4ad369e34ef96c6f284f"
+    ],
+    "count": 1,
+    "create_time": 1773255217,
+    "update_time": 1773255217,
+    "_id": "20250807 CXLT 301 1 Kim 07 27 01.00.16 Copy"
+  },
+  "Kim": {
+    "chunk_ids": [
+      "chunk-635a8270f90d4ad369e34ef96c6f284f"
+    ],
+    "count": 1,
+    "create_time": 1773255217,
+    "update_time": 1773255217,
+    "_id": "Kim"
+  },
+  "CXLT": {
+    "chunk_ids": [
+      "chunk-635a8270f90d4ad369e34ef96c6f284f"
+    ],
+    "count": 1,
+    "create_time": 1773255217,
+    "update_time": 1773255217,
+    "_id": "CXLT"
+  },
+  "1.34 MB": {
+    "chunk_ids": [
+      "chunk-635a8270f90d4ad369e34ef96c6f284f"
+    ],
+    "count": 1,
+    "create_time": 1773255218,
+    "update_time": 1773255218,
+    "_id": "1.34 MB"
+  },
+  "20250806 DRAM 203 1 Olgun Copy": {
+    "chunk_ids": [
+      "chunk-230764380b33557b5524bd06ee945029"
+    ],
+    "count": 1,
+    "create_time": 1773340408,
+    "update_time": 1773340408,
+    "_id": "20250806 DRAM 203 1 Olgun Copy"
+  },
+  "12.35 MB": {
+    "chunk_ids": [
+      "chunk-230764380b33557b5524bd06ee945029"
+    ],
+    "count": 1,
+    "create_time": 1773340408,
+    "update_time": 1773340408,
+    "_id": "12.35 MB"
+  },
+  "Olgun": {
+    "chunk_ids": [
+      "chunk-230764380b33557b5524bd06ee945029"
+    ],
+    "count": 1,
+    "create_time": 1773340409,
+    "update_time": 1773340409,
+    "_id": "Olgun"
+  },
+  "Eetop.cn_T2 - Fundamentals of DRAM I O Standards and Circuits": {
+    "chunk_ids": [
+      "chunk-62991649d9ddbddbdd87eed4b8473959"
+    ],
+    "count": 1,
+    "create_time": 1773340625,
+    "update_time": 1773340625,
+    "_id": "Eetop.cn_T2 - Fundamentals of DRAM I O Standards and Circuits"
+  },
+  "DRAM I O Standards and Circuits": {
+    "chunk_ids": [
+      "chunk-62991649d9ddbddbdd87eed4b8473959"
+    ],
+    "count": 1,
+    "create_time": 1773340625,
+    "update_time": 1773340625,
+    "_id": "DRAM I O Standards and Circuits"
+  },
+  "Eetop.cn": {
+    "chunk_ids": [
+      "chunk-62991649d9ddbddbdd87eed4b8473959"
+    ],
+    "count": 1,
+    "create_time": 1773340625,
+    "update_time": 1773340625,
+    "_id": "Eetop.cn"
+  },
+  "2026-03-11": {
+    "chunk_ids": [
+      "chunk-62991649d9ddbddbdd87eed4b8473959",
+      "chunk-bac65798eb982eaec66217171974d32c",
+      "chunk-1b7fcd9c795c3ffe5951ea1b509567b7",
+      "chunk-b794cfeb2829ca445d838fe2fb1cd165",
+      "chunk-ec101ba502a70816a33b6a1e26f6054f"
+    ],
+    "count": 5,
+    "update_time": 1773341507,
+    "_id": "2026-03-11"
+  },
+  "Local Document Library": {
+    "chunk_ids": [
+      "chunk-62991649d9ddbddbdd87eed4b8473959"
+    ],
+    "count": 1,
+    "create_time": 1773340625,
+    "update_time": 1773340625,
+    "_id": "Local Document Library"
+  },
+  "3.66 MB": {
+    "chunk_ids": [
+      "chunk-62991649d9ddbddbdd87eed4b8473959"
+    ],
+    "count": 1,
+    "create_time": 1773340626,
+    "update_time": 1773340626,
+    "_id": "3.66 MB"
+  },
+  "Session 30 Nonvolatile Memory And DRAM": {
+    "chunk_ids": [
+      "chunk-bac65798eb982eaec66217171974d32c"
+    ],
+    "count": 1,
+    "create_time": 1773340896,
+    "update_time": 1773340896,
+    "_id": "Session 30 Nonvolatile Memory And DRAM"
+  },
+  "Nonvolatile Memory": {
+    "chunk_ids": [
+      "chunk-bac65798eb982eaec66217171974d32c"
+    ],
+    "count": 1,
+    "create_time": 1773340896,
+    "update_time": 1773340896,
+    "_id": "Nonvolatile Memory"
+  },
+  "16.12 MB": {
+    "chunk_ids": [
+      "chunk-bac65798eb982eaec66217171974d32c"
+    ],
+    "count": 1,
+    "create_time": 1773340896,
+    "update_time": 1773340896,
+    "_id": "16.12 MB"
+  },
+  "Liu Fang": {
+    "chunk_ids": [
+      "chunk-bac65798eb982eaec66217171974d32c"
+    ],
+    "count": 1,
+    "create_time": 1773340897,
+    "update_time": 1773340897,
+    "_id": "Liu Fang"
+  },
+  "2026-03-11 12:57:04": {
+    "chunk_ids": [
+      "chunk-bac65798eb982eaec66217171974d32c"
+    ],
+    "count": 1,
+    "create_time": 1773340897,
+    "update_time": 1773340897,
+    "_id": "2026-03-11 12:57:04"
+  },
+  "Research Report Library Core Server Architecture": {
+    "chunk_ids": [
+      "chunk-bac65798eb982eaec66217171974d32c"
+    ],
+    "count": 1,
+    "create_time": 1773340897,
+    "update_time": 1773340897,
+    "_id": "Research Report Library Core Server Architecture"
+  },
+  "Priority Core": {
+    "chunk_ids": [
+      "chunk-bac65798eb982eaec66217171974d32c"
+    ],
+    "count": 1,
+    "create_time": 1773340897,
+    "update_time": 1773340897,
+    "_id": "Priority Core"
+  },
+  "Session 16 Efficient Compute In Memory Based Processors For ML": {
+    "chunk_ids": [
+      "chunk-1b7fcd9c795c3ffe5951ea1b509567b7"
+    ],
+    "count": 1,
+    "create_time": 1773341118,
+    "update_time": 1773341118,
+    "_id": "Session 16 Efficient Compute In Memory Based Processors For ML"
+  },
+  "32.65 MB": {
+    "chunk_ids": [
+      "chunk-1b7fcd9c795c3ffe5951ea1b509567b7"
+    ],
+    "count": 1,
+    "create_time": 1773341118,
+    "update_time": 1773341118,
+    "_id": "32.65 MB"
+  },
+  "Report Type": {
+    "chunk_ids": [
+      "chunk-1b7fcd9c795c3ffe5951ea1b509567b7",
+      "chunk-ec101ba502a70816a33b6a1e26f6054f"
+    ],
+    "count": 2,
+    "update_time": 1773341508,
+    "_id": "Report Type"
+  },
+  "Storage Timestamp": {
+    "chunk_ids": [
+      "chunk-1b7fcd9c795c3ffe5951ea1b509567b7"
+    ],
+    "count": 1,
+    "create_time": 1773341120,
+    "update_time": 1773341120,
+    "_id": "Storage Timestamp"
+  },
+  "Digital File Path": {
+    "chunk_ids": [
+      "chunk-1b7fcd9c795c3ffe5951ea1b509567b7"
+    ],
+    "count": 1,
+    "create_time": 1773341121,
+    "update_time": 1773341121,
+    "_id": "Digital File Path"
+  },
+  "浩云长盛": {
+    "chunk_ids": [
+      "chunk-b794cfeb2829ca445d838fe2fb1cd165"
+    ],
+    "count": 1,
+    "create_time": 1773341308,
+    "update_time": 1773341308,
+    "_id": "浩云长盛"
+  },
+  "超节点服务器": {
+    "chunk_ids": [
+      "chunk-b794cfeb2829ca445d838fe2fb1cd165"
+    ],
+    "count": 1,
+    "create_time": 1773341308,
+    "update_time": 1773341308,
+    "_id": "超节点服务器"
+  },
+  "智算中心": {
+    "chunk_ids": [
+      "chunk-b794cfeb2829ca445d838fe2fb1cd165"
+    ],
+    "count": 1,
+    "create_time": 1773341308,
+    "update_time": 1773341308,
+    "_id": "智算中心"
+  },
+  "浩云长盛：超节点服务器对智算中心基础设施影响": {
+    "chunk_ids": [
+      "chunk-b794cfeb2829ca445d838fe2fb1cd165"
+    ],
+    "count": 1,
+    "create_time": 1773341308,
+    "update_time": 1773341308,
+    "_id": "浩云长盛：超节点服务器对智算中心基础设施影响"
+  },
+  "服务器架构": {
+    "chunk_ids": [
+      "chunk-b794cfeb2829ca445d838fe2fb1cd165"
+    ],
+    "count": 1,
+    "create_time": 1773341308,
+    "update_time": 1773341308,
+    "_id": "服务器架构"
+  },
+  "研报库": {
+    "chunk_ids": [
+      "chunk-b794cfeb2829ca445d838fe2fb1cd165"
+    ],
+    "count": 1,
+    "create_time": 1773341308,
+    "update_time": 1773341308,
+    "_id": "研报库"
+  },
+  "未知": {
+    "chunk_ids": [
+      "chunk-b794cfeb2829ca445d838fe2fb1cd165"
+    ],
+    "count": 1,
+    "create_time": 1773341308,
+    "update_time": 1773341308,
+    "_id": "未知"
+  },
+  "7.08 MB": {
+    "chunk_ids": [
+      "chunk-b794cfeb2829ca445d838fe2fb1cd165"
+    ],
+    "count": 1,
+    "create_time": 1773341309,
+    "update_time": 1773341309,
+    "_id": "7.08 MB"
+  },
+  "file:///Users/liufang/Documents/Library/【核心】服务器架构/浩云长盛：超节点服务器对智算中心基础设施影响.pdf": {
+    "chunk_ids": [
+      "chunk-b794cfeb2829ca445d838fe2fb1cd165"
+    ],
+    "count": 1,
+    "create_time": 1773341309,
+    "update_time": 1773341309,
+    "_id": "file:///Users/liufang/Documents/Library/【核心】服务器架构/浩云长盛：超节点服务器对智算中心基础设施影响.pdf"
+  },
+  "AI深度摘要": {
+    "chunk_ids": [
+      "chunk-b794cfeb2829ca445d838fe2fb1cd165"
+    ],
+    "count": 1,
+    "create_time": 1773341310,
+    "update_time": 1773341310,
+    "_id": "AI深度摘要"
+  },
+  "Session_33_NonVolatile_Memory_And_ComputeInMemory": {
+    "chunk_ids": [
+      "chunk-ec101ba502a70816a33b6a1e26f6054f"
+    ],
+    "count": 1,
+    "create_time": 1773341507,
+    "update_time": 1773341507,
+    "_id": "Session_33_NonVolatile_Memory_And_ComputeInMemory"
+  },
+  "NonVolatile Memory": {
+    "chunk_ids": [
+      "chunk-ec101ba502a70816a33b6a1e26f6054f"
+    ],
+    "count": 1,
+    "create_time": 1773341507,
+    "update_time": 1773341507,
+    "_id": "NonVolatile Memory"
+  },
+  "Compute In Memory": {
+    "chunk_ids": [
+      "chunk-ec101ba502a70816a33b6a1e26f6054f"
+    ],
+    "count": 1,
+    "create_time": 1773341507,
+    "update_time": 1773341507,
+    "_id": "Compute In Memory"
+  },
+  "14.96 MB": {
+    "chunk_ids": [
+      "chunk-ec101ba502a70816a33b6a1e26f6054f"
+    ],
+    "count": 1,
+    "create_time": 1773341508,
+    "update_time": 1773341508,
+    "_id": "14.96 MB"
+  },
+  "Efficient AI Serving At Scale Processing Near Memory Acceleration For LLMs And Vector Search": {
+    "chunk_ids": [
+      "chunk-df273047e67bbcef8888ccc637f02f26"
+    ],
+    "count": 1,
+    "create_time": 1773341690,
+    "update_time": 1773341690,
+    "_id": "Efficient AI Serving At Scale Processing Near Memory Acceleration For LLMs And Vector Search"
+  },
+  "LLMs": {
+    "chunk_ids": [
+      "chunk-df273047e67bbcef8888ccc637f02f26"
+    ],
+    "count": 1,
+    "create_time": 1773341690,
+    "update_time": 1773341690,
+    "_id": "LLMs"
+  },
+  "Processing Near Memory Acceleration": {
+    "chunk_ids": [
+      "chunk-df273047e67bbcef8888ccc637f02f26"
+    ],
+    "count": 1,
+    "create_time": 1773341690,
+    "update_time": 1773341690,
+    "_id": "Processing Near Memory Acceleration"
+  },
+  "Digital Storage Location": {
+    "chunk_ids": [
+      "chunk-df273047e67bbcef8888ccc637f02f26"
+    ],
+    "count": 1,
+    "create_time": 1773341691,
+    "update_time": 1773341691,
+    "_id": "Digital Storage Location"
+  },
+  "1.77 MB": {
+    "chunk_ids": [
+      "chunk-df273047e67bbcef8888ccc637f02f26"
+    ],
+    "count": 1,
+    "create_time": 1773341691,
+    "update_time": 1773341691,
+    "_id": "1.77 MB"
+  },
+  "Storage Time": {
+    "chunk_ids": [
+      "chunk-df273047e67bbcef8888ccc637f02f26"
+    ],
+    "count": 1,
+    "create_time": 1773341692,
+    "update_time": 1773341692,
+    "_id": "Storage Time"
+  },
+  "File Uri": {
+    "chunk_ids": [
+      "chunk-df273047e67bbcef8888ccc637f02f26"
+    ],
+    "count": 1,
+    "create_time": 1773341692,
+    "update_time": 1773341692,
+    "_id": "File Uri"
+  }
+}

@@ -1,0 +1,4142 @@
+{
+  "doc-5642f5d2398a5cb6600146cb1001b0ec": {
+    "relation_pairs": [
+      [
+        "7062 - Next-Gen AI-HPC Server Performance with CXL3.1 Tiered Memory and MRDIMM solution_v2_v2",
+        "CXL 3.1"
+      ],
+      [
+        "7062 - Next-Gen AI-HPC Server Performance with CXL3.1 Tiered Memory and MRDIMM solution_v2_v2",
+        "PDF Format"
+      ],
+      [
+        "7062 - Next-Gen AI-HPC Server Performance with CXL3.1 Tiered Memory and MRDIMM solution_v2_v2",
+        "Tiered Memory"
+      ],
+      [
+        "7062 - Next-Gen AI-HPC Server Performance with CXL3.1 Tiered Memory and MRDIMM solution_v2_v2",
+        "MRDIMM"
+      ],
+      [
+        "7062 - Next-Gen AI-HPC Server Performance with CXL3.1 Tiered Memory and MRDIMM solution_v2_v2",
+        "Core Research Report Library"
+      ],
+      [
+        "7062 - Next-Gen AI-HPC Server Performance with CXL3.1 Tiered Memory and MRDIMM solution_v2_v2",
+        "AI-HPC Server"
+      ],
+      [
+        "7062 - Next-Gen AI-HPC Server Performance with CXL3.1 Tiered Memory and MRDIMM solution_v2_v2",
+        "Unknown Author"
+      ]
+    ],
+    "count": 7,
+    "create_time": 1773167427,
+    "update_time": 1773167427,
+    "_id": "doc-5642f5d2398a5cb6600146cb1001b0ec"
+  },
+  "doc-3993cd0b737e3130edf76f25d51050ff": {
+    "relation_pairs": [
+      [
+        "PCIe 6 Switch",
+        "Server Architecture"
+      ],
+      [
+        "7479 - Trust at 64 GT-s- Security Considerations for PCIe 6 Switch Deployments_v2",
+        "PDF Format"
+      ],
+      [
+        "7479 - Trust at 64 GT-s- Security Considerations for PCIe 6 Switch Deployments_v2",
+        "Trust"
+      ],
+      [
+        "64 GT/s",
+        "PCIe 6 Switch"
+      ],
+      [
+        "7479 - Trust at 64 GT-s- Security Considerations for PCIe 6 Switch Deployments_v2",
+        "Security Considerations"
+      ],
+      [
+        "7479 - Trust at 64 GT-s- Security Considerations for PCIe 6 Switch Deployments_v2",
+        "PCIe 6 Switch"
+      ],
+      [
+        "7479 - Trust at 64 GT-s- Security Considerations for PCIe 6 Switch Deployments_v2",
+        "Research Report Library"
+      ],
+      [
+        "7479 - Trust at 64 GT-s- Security Considerations for PCIe 6 Switch Deployments_v2",
+        "Unknown Author"
+      ],
+      [
+        "7479 - Trust at 64 GT-s- Security Considerations for PCIe 6 Switch Deployments_v2",
+        "Core Priority"
+      ]
+    ],
+    "count": 9,
+    "create_time": 1773167429,
+    "update_time": 1773167429,
+    "_id": "doc-3993cd0b737e3130edf76f25d51050ff"
+  },
+  "doc-3087d9b4a9b15d2f774062ddbfd04e9a": {
+    "relation_pairs": [
+      [
+        "Obsidian Vault",
+        "ZhiweiVault"
+      ],
+      [
+        "Test Note",
+        "ZhiweiVault"
+      ],
+      [
+        "CST",
+        "Wed Mar  4 09:52:56 CST 2026"
+      ],
+      [
+        "Test Note",
+        "Wed Mar  4 09:52:56 CST 2026"
+      ]
+    ],
+    "count": 4,
+    "create_time": 1773167442,
+    "update_time": 1773167442,
+    "_id": "doc-3087d9b4a9b15d2f774062ddbfd04e9a"
+  },
+  "doc-400a555f5d5834d5ffa5771be077ebcd": {
+    "relation_pairs": [
+      [
+        "Obsidian",
+        "Zhiwei System Integration Test"
+      ],
+      [
+        "Integration Test",
+        "Zhiwei System"
+      ],
+      [
+        "Zhiwei System",
+        "Zhiwei System Integration Test"
+      ],
+      [
+        "Obsidian",
+        "Zhiwei System"
+      ]
+    ],
+    "count": 4,
+    "create_time": 1773167453,
+    "update_time": 1773167453,
+    "_id": "doc-400a555f5d5834d5ffa5771be077ebcd"
+  },
+  "doc-546dfa6e8a446972d5dc6ae34a64ce0a": {
+    "relation_pairs": [
+      [
+        "AI Chip",
+        "CoWoS"
+      ],
+      [
+        "2nm Node",
+        "Samsung"
+      ],
+      [
+        "GPU",
+        "HBM3e Memory"
+      ],
+      [
+        "Inference Acceleration",
+        "TensorRT-LLM"
+      ],
+      [
+        "NVIDIA",
+        "TensorRT-LLM"
+      ],
+      [
+        "2nm Node",
+        "TSMC"
+      ]
+    ],
+    "count": 6,
+    "create_time": 1773167464,
+    "update_time": 1773167464,
+    "_id": "doc-546dfa6e8a446972d5dc6ae34a64ce0a"
+  },
+  "doc-d1c6054a6d87cf6975db5c63bd96f9cd": {
+    "relation_pairs": [
+      [
+        "7801 - Efficient AI Serving at Scale- Processing Near Memory Acceleration for LLMs and Vector Search_v2_v2",
+        "Vector Search"
+      ],
+      [
+        "7801 - Efficient AI Serving at Scale- Processing Near Memory Acceleration for LLMs and Vector Search_v2_v2",
+        "Near-Memory Acceleration"
+      ],
+      [
+        "7801 - Efficient AI Serving at Scale- Processing Near Memory Acceleration for LLMs and Vector Search_v2_v2",
+        "PDF"
+      ],
+      [
+        "7801 - Efficient AI Serving at Scale- Processing Near Memory Acceleration for LLMs and Vector Search_v2_v2",
+        "Core Report"
+      ],
+      [
+        "7801 - Efficient AI Serving at Scale- Processing Near Memory Acceleration for LLMs and Vector Search_v2_v2",
+        "Server Architecture Research Repository"
+      ],
+      [
+        "File Path",
+        "Liufang"
+      ],
+      [
+        "7801 - Efficient AI Serving at Scale- Processing Near Memory Acceleration for LLMs and Vector Search_v2_v2",
+        "Unknown Author"
+      ],
+      [
+        "7801 - Efficient AI Serving at Scale- Processing Near Memory Acceleration for LLMs and Vector Search_v2_v2",
+        "Large Language Models"
+      ],
+      [
+        "7801 - Efficient AI Serving at Scale- Processing Near Memory Acceleration for LLMs and Vector Search_v2_v2",
+        "File Path"
+      ],
+      [
+        "2026-03-07",
+        "7801 - Efficient AI Serving at Scale- Processing Near Memory Acceleration for LLMs and Vector Search_v2_v2"
+      ]
+    ],
+    "count": 10,
+    "create_time": 1773167486,
+    "update_time": 1773167486,
+    "_id": "doc-d1c6054a6d87cf6975db5c63bd96f9cd"
+  },
+  "doc-1547ad065c68b2f6fec2e3b6eb6a9099": {
+    "relation_pairs": [
+      [
+        "10.00 - Towards Memory Efficient RAG Pipelines With CXL Technology_v2",
+        "File Path"
+      ],
+      [
+        "10.00 - Towards Memory Efficient RAG Pipelines With CXL Technology_v2",
+        "Server Architecture Research Library"
+      ],
+      [
+        "10.00 - Towards Memory Efficient RAG Pipelines With CXL Technology_v2",
+        "Core Report"
+      ],
+      [
+        "10.00 - Towards Memory Efficient RAG Pipelines With CXL Technology_v2",
+        "PDF Format"
+      ],
+      [
+        "10.00 - Towards Memory Efficient RAG Pipelines With CXL Technology_v2",
+        "RAG Pipelines"
+      ],
+      [
+        "10.00 - Towards Memory Efficient RAG Pipelines With CXL Technology_v2",
+        "CXL Technology"
+      ],
+      [
+        "10.00 - Towards Memory Efficient RAG Pipelines With CXL Technology_v2",
+        "Unknown Author"
+      ]
+    ],
+    "count": 7,
+    "create_time": 1773167489,
+    "update_time": 1773167489,
+    "_id": "doc-1547ad065c68b2f6fec2e3b6eb6a9099"
+  },
+  "doc-17e8fab522b31c893a3a7ef21633d42a": {
+    "relation_pairs": [
+      [
+        "7300 - End-to-End Management of a CXL-enabled Datacenter Memory Fabric_v2",
+        "Core Priority"
+      ],
+      [
+        "7300 - End-to-End Management of a CXL-enabled Datacenter Memory Fabric_v2",
+        "CXL"
+      ],
+      [
+        "7300 - End-to-End Management of a CXL-enabled Datacenter Memory Fabric_v2",
+        "Unknown Author"
+      ],
+      [
+        "7300 - End-to-End Management of a CXL-enabled Datacenter Memory Fabric_v2",
+        "Datacenter Memory Fabric"
+      ],
+      [
+        "7300 - End-to-End Management of a CXL-enabled Datacenter Memory Fabric_v2",
+        "Server Architecture Research Library"
+      ],
+      [
+        "7300 - End-to-End Management of a CXL-enabled Datacenter Memory Fabric_v2",
+        "PDF"
+      ],
+      [
+        "2026-03-07",
+        "7300 - End-to-End Management of a CXL-enabled Datacenter Memory Fabric_v2"
+      ],
+      [
+        "7300 - End-to-End Management of a CXL-enabled Datacenter Memory Fabric_v2",
+        "Report"
+      ]
+    ],
+    "count": 8,
+    "create_time": 1773167512,
+    "update_time": 1773167512,
+    "_id": "doc-17e8fab522b31c893a3a7ef21633d42a"
+  },
+  "doc-954e8ea4f501064d07fa47f0e5affaeb": {
+    "relation_pairs": [
+      [
+        "7819 - Advancing PLDM- Structured Sensors Scalable Modeling and the Server Host SoC PLDM Specification_v2",
+        "Report"
+      ],
+      [
+        "7819 - Advancing PLDM- Structured Sensors Scalable Modeling and the Server Host SoC PLDM Specification_v2",
+        "Liufang"
+      ],
+      [
+        "7819 - Advancing PLDM- Structured Sensors Scalable Modeling and the Server Host SoC PLDM Specification_v2",
+        "Structured Sensors"
+      ],
+      [
+        "7819 - Advancing PLDM- Structured Sensors Scalable Modeling and the Server Host SoC PLDM Specification_v2",
+        "【核心】服务器架构"
+      ],
+      [
+        "7819 - Advancing PLDM- Structured Sensors Scalable Modeling and the Server Host SoC PLDM Specification_v2",
+        "Scalable Modeling"
+      ],
+      [
+        "7819 - Advancing PLDM- Structured Sensors Scalable Modeling and the Server Host SoC PLDM Specification_v2",
+        "Server Host SoC PLDM Specification"
+      ],
+      [
+        "7819 - Advancing PLDM- Structured Sensors Scalable Modeling and the Server Host SoC PLDM Specification_v2",
+        "PDF"
+      ],
+      [
+        "7819 - Advancing PLDM- Structured Sensors Scalable Modeling and the Server Host SoC PLDM Specification_v2",
+        "PLDM"
+      ]
+    ],
+    "count": 8,
+    "create_time": 1773167517,
+    "update_time": 1773167517,
+    "_id": "doc-954e8ea4f501064d07fa47f0e5affaeb"
+  },
+  "doc-7cb819bd8f7ecd3c6e4efa0548627c2f": {
+    "relation_pairs": [
+      [
+        "7246 - OCP Composable Memory Systems CMS Sub-Project Technical Update_v2_v2",
+        "Server Architecture"
+      ],
+      [
+        "OCP Composable Memory Systems CMS Sub-Project",
+        "Open Compute Project"
+      ],
+      [
+        "2026-03-07",
+        "7246 - OCP Composable Memory Systems CMS Sub-Project Technical Update_v2_v2"
+      ],
+      [
+        "7246 - OCP Composable Memory Systems CMS Sub-Project Technical Update_v2_v2",
+        "PDF"
+      ],
+      [
+        "7246 - OCP Composable Memory Systems CMS Sub-Project Technical Update_v2_v2",
+        "Liufang"
+      ],
+      [
+        "7246 - OCP Composable Memory Systems CMS Sub-Project Technical Update_v2_v2",
+        "OCP Composable Memory Systems CMS Sub-Project"
+      ]
+    ],
+    "count": 6,
+    "create_time": 1773167534,
+    "update_time": 1773167534,
+    "_id": "doc-7cb819bd8f7ecd3c6e4efa0548627c2f"
+  },
+  "doc-93d5d66acecc3b09726280461a1741c7": {
+    "relation_pairs": [
+      [
+        "7337 - Memory Technology Optimized For At-Scale AI Systems- Bandwidth Capacity And Connectivity V2 V2 V2",
+        "Unknown Author"
+      ],
+      [
+        "7337 - Memory Technology Optimized For At-Scale AI Systems- Bandwidth Capacity And Connectivity V2 V2 V2",
+        "Local Document Link"
+      ],
+      [
+        "7337 - Memory Technology Optimized For At-Scale AI Systems- Bandwidth Capacity And Connectivity V2 V2 V2",
+        "File Path"
+      ],
+      [
+        "7337 - Memory Technology Optimized For At-Scale AI Systems- Bandwidth Capacity And Connectivity V2 V2 V2",
+        "Server Architecture Research Library"
+      ],
+      [
+        "7337 - Memory Technology Optimized For At-Scale AI Systems- Bandwidth Capacity And Connectivity V2 V2 V2",
+        "PDF"
+      ],
+      [
+        "7337 - Memory Technology Optimized For At-Scale AI Systems- Bandwidth Capacity And Connectivity V2 V2 V2",
+        "Core Report"
+      ],
+      [
+        "2026-03-07",
+        "7337 - Memory Technology Optimized For At-Scale AI Systems- Bandwidth Capacity And Connectivity V2 V2 V2"
+      ]
+    ],
+    "count": 7,
+    "create_time": 1773167542,
+    "update_time": 1773167542,
+    "_id": "doc-93d5d66acecc3b09726280461a1741c7"
+  },
+  "doc-2fda2d54a8413eca19fea985df0ff580": {
+    "relation_pairs": [
+      [
+        "7470 - DC-Stack- Google Server Manufacturing SDK Lessons Learned_v2",
+        "DC-Stack"
+      ],
+      [
+        "7470 - DC-Stack- Google Server Manufacturing SDK Lessons Learned_v2",
+        "PDF Format"
+      ],
+      [
+        "7470 - DC-Stack- Google Server Manufacturing SDK Lessons Learned_v2",
+        "Research Library"
+      ],
+      [
+        "7470 - DC-Stack- Google Server Manufacturing SDK Lessons Learned_v2",
+        "Server Manufacturing SDK"
+      ],
+      [
+        "7470 - DC-Stack- Google Server Manufacturing SDK Lessons Learned_v2",
+        "Report"
+      ],
+      [
+        "7470 - DC-Stack- Google Server Manufacturing SDK Lessons Learned_v2",
+        "Google"
+      ],
+      [
+        "2026-03-07",
+        "7470 - DC-Stack- Google Server Manufacturing SDK Lessons Learned_v2"
+      ],
+      [
+        "7470 - DC-Stack- Google Server Manufacturing SDK Lessons Learned_v2",
+        "Unknown Author"
+      ]
+    ],
+    "count": 8,
+    "create_time": 1773167559,
+    "update_time": 1773167559,
+    "_id": "doc-2fda2d54a8413eca19fea985df0ff580"
+  },
+  "doc-49a4b3d9e081e0db5971a564684cb895": {
+    "relation_pairs": [
+      [
+        "7033 - Manage and Secure your PCIe Infrastructure using eSFI and PCIe-MI",
+        "eSFI"
+      ],
+      [
+        "7033 - Manage and Secure your PCIe Infrastructure using eSFI and PCIe-MI",
+        "Core Priority"
+      ],
+      [
+        "7033 - Manage and Secure your PCIe Infrastructure using eSFI and PCIe-MI",
+        "PCIe Infrastructure"
+      ],
+      [
+        "7033 - Manage and Secure your PCIe Infrastructure using eSFI and PCIe-MI",
+        "Unknown Author"
+      ],
+      [
+        "7033 - Manage and Secure your PCIe Infrastructure using eSFI and PCIe-MI",
+        "Server Architecture Research Library"
+      ],
+      [
+        "7033 - Manage and Secure your PCIe Infrastructure using eSFI and PCIe-MI",
+        "Report 7033"
+      ],
+      [
+        "7033 - Manage and Secure your PCIe Infrastructure using eSFI and PCIe-MI",
+        "PCIe-MI"
+      ]
+    ],
+    "count": 7,
+    "create_time": 1773167570,
+    "update_time": 1773167570,
+    "_id": "doc-49a4b3d9e081e0db5971a564684cb895"
+  },
+  "doc-4bea655fda74f25913c082a3a09d1a75": {
+    "relation_pairs": [
+      [
+        "174 - Mixing PCIe 5 and PCIe 6 in AI Platforms-Benefits and Challenges_v2_v2",
+        "PCIe 5"
+      ],
+      [
+        "AI Platforms",
+        "PCIe 5"
+      ],
+      [
+        "174 - Mixing PCIe 5 and PCIe 6 in AI Platforms-Benefits and Challenges_v2_v2",
+        "PCIe 6"
+      ],
+      [
+        "AI Platforms",
+        "PCIe 6"
+      ],
+      [
+        "174 - Mixing PCIe 5 and PCIe 6 in AI Platforms-Benefits and Challenges_v2_v2",
+        "Server Architecture Research Library"
+      ],
+      [
+        "174 - Mixing PCIe 5 and PCIe 6 in AI Platforms-Benefits and Challenges_v2_v2",
+        "PDF"
+      ],
+      [
+        "174 - Mixing PCIe 5 and PCIe 6 in AI Platforms-Benefits and Challenges_v2_v2",
+        "Liufang"
+      ]
+    ],
+    "count": 7,
+    "create_time": 1773167582,
+    "update_time": 1773167582,
+    "_id": "doc-4bea655fda74f25913c082a3a09d1a75"
+  },
+  "doc-147c4db7a4ce5872858a38c1ac58af56": {
+    "relation_pairs": [
+      [
+        "APEC",
+        "APEC Advanced PCIe Enclosure Compatible for Future HSIO Interconnection_v2"
+      ],
+      [
+        "APEC Advanced PCIe Enclosure Compatible for Future HSIO Interconnection_v2",
+        "Research Library"
+      ],
+      [
+        "APEC Advanced PCIe Enclosure Compatible for Future HSIO Interconnection_v2",
+        "PCIe"
+      ],
+      [
+        "APEC Advanced PCIe Enclosure Compatible for Future HSIO Interconnection_v2",
+        "PDF"
+      ],
+      [
+        "APEC Advanced PCIe Enclosure Compatible for Future HSIO Interconnection_v2",
+        "HSIO"
+      ],
+      [
+        "APEC Advanced PCIe Enclosure Compatible for Future HSIO Interconnection_v2",
+        "Report"
+      ],
+      [
+        "APEC Advanced PCIe Enclosure Compatible for Future HSIO Interconnection_v2",
+        "Liufang"
+      ],
+      [
+        "APEC Advanced PCIe Enclosure Compatible for Future HSIO Interconnection_v2",
+        "Core Priority"
+      ],
+      [
+        "APEC Advanced PCIe Enclosure Compatible for Future HSIO Interconnection_v2",
+        "Server Architecture"
+      ]
+    ],
+    "count": 9,
+    "create_time": 1773167600,
+    "update_time": 1773167600,
+    "_id": "doc-147c4db7a4ce5872858a38c1ac58af56"
+  },
+  "doc-2c984e299ac9432c7e312cc7b398b600": {
+    "relation_pairs": [
+      [
+        "2026-03-07",
+        "65 - Rack Architecture for Next Generation AI Server_v2"
+      ],
+      [
+        "65 - Rack Architecture for Next Generation AI Server_v2",
+        "File Path"
+      ],
+      [
+        "65 - Rack Architecture for Next Generation AI Server_v2",
+        "PDF Format"
+      ],
+      [
+        "65 - Rack Architecture for Next Generation AI Server_v2",
+        "Core Research Report Repository"
+      ],
+      [
+        "File Path",
+        "Liufang"
+      ],
+      [
+        "65 - Rack Architecture for Next Generation AI Server_v2",
+        "Server Architecture"
+      ],
+      [
+        "65 - Rack Architecture for Next Generation AI Server_v2",
+        "Unknown Author"
+      ]
+    ],
+    "count": 7,
+    "create_time": 1773167611,
+    "update_time": 1773167611,
+    "_id": "doc-2c984e299ac9432c7e312cc7b398b600"
+  },
+  "doc-33ad961ca189b1cec80569bbd0809873": {
+    "relation_pairs": [
+      [
+        "135 - Flash Memory Chiplet Implementation and Applications_v2_v2",
+        "Unknown Author"
+      ],
+      [
+        "135 - Flash Memory Chiplet Implementation and Applications_v2_v2",
+        "File Path"
+      ],
+      [
+        "135 - Flash Memory Chiplet Implementation and Applications_v2_v2",
+        "Server Architecture Research Library"
+      ],
+      [
+        "135 - Flash Memory Chiplet Implementation and Applications_v2_v2",
+        "PDF"
+      ],
+      [
+        "135 - Flash Memory Chiplet Implementation and Applications_v2_v2",
+        "2026-03-07"
+      ],
+      [
+        "135 - Flash Memory Chiplet Implementation and Applications_v2_v2",
+        "Flash Memory Chiplet"
+      ]
+    ],
+    "count": 6,
+    "create_time": 1773167627,
+    "update_time": 1773167627,
+    "_id": "doc-33ad961ca189b1cec80569bbd0809873"
+  },
+  "doc-22d5697b8505125995b91427be92e6d2": {
+    "relation_pairs": [
+      [
+        "7521 - Latest Academic Research for Composable Memory_v2_v2",
+        "Liufang"
+      ],
+      [
+        "7521 - Latest Academic Research for Composable Memory_v2_v2",
+        "Unknown Author"
+      ],
+      [
+        "7521 - Latest Academic Research for Composable Memory_v2_v2",
+        "Composable Memory"
+      ],
+      [
+        "2026-03-07",
+        "7521 - Latest Academic Research for Composable Memory_v2_v2"
+      ],
+      [
+        "7521 - Latest Academic Research for Composable Memory_v2_v2",
+        "Server Architecture Research Library"
+      ],
+      [
+        "7521 - Latest Academic Research for Composable Memory_v2_v2",
+        "PDF Format"
+      ]
+    ],
+    "count": 6,
+    "create_time": 1773167630,
+    "update_time": 1773167630,
+    "_id": "doc-22d5697b8505125995b91427be92e6d2"
+  },
+  "doc-ecc05e1389a9315c30e68199bddd8d73": {
+    "relation_pairs": [
+      [
+        "9.40 - Next-Gen AI-HPC Server Performance with CXL3.1 Tiered Memory and MRDIMM solution_v2_v2",
+        "CXL 3.1"
+      ],
+      [
+        "9.40 - Next-Gen AI-HPC Server Performance with CXL3.1 Tiered Memory and MRDIMM solution_v2_v2",
+        "Tiered Memory"
+      ],
+      [
+        "9.40 - Next-Gen AI-HPC Server Performance with CXL3.1 Tiered Memory and MRDIMM solution_v2_v2",
+        "Report"
+      ],
+      [
+        "9.40 - Next-Gen AI-HPC Server Performance with CXL3.1 Tiered Memory and MRDIMM solution_v2_v2",
+        "Liufang"
+      ],
+      [
+        "9.40 - Next-Gen AI-HPC Server Performance with CXL3.1 Tiered Memory and MRDIMM solution_v2_v2",
+        "MRDIMM"
+      ],
+      [
+        "9.40 - Next-Gen AI-HPC Server Performance with CXL3.1 Tiered Memory and MRDIMM solution_v2_v2",
+        "Unknown"
+      ],
+      [
+        "9.40 - Next-Gen AI-HPC Server Performance with CXL3.1 Tiered Memory and MRDIMM solution_v2_v2",
+        "AI-HPC Server"
+      ]
+    ],
+    "count": 7,
+    "create_time": 1773167662,
+    "update_time": 1773167662,
+    "_id": "doc-ecc05e1389a9315c30e68199bddd8d73"
+  },
+  "doc-04159a2e6b1c0a304c8cab9dc130201f": {
+    "relation_pairs": [
+      [
+        "7505 - Evaluating Component Level Compatibility and Reliability of Memory and Storage Products for Immersion Applications",
+        "Unknown Author"
+      ],
+      [
+        "7505 - Evaluating Component Level Compatibility and Reliability of Memory and Storage Products for Immersion Applications",
+        "Memory and Storage Products"
+      ],
+      [
+        "7505 - Evaluating Component Level Compatibility and Reliability of Memory and Storage Products for Immersion Applications",
+        "Server Architecture Research Library"
+      ],
+      [
+        "2026-03-07",
+        "7505 - Evaluating Component Level Compatibility and Reliability of Memory and Storage Products for Immersion Applications"
+      ],
+      [
+        "7505 - Evaluating Component Level Compatibility and Reliability of Memory and Storage Products for Immersion Applications",
+        "Core Report"
+      ],
+      [
+        "7505 - Evaluating Component Level Compatibility and Reliability of Memory and Storage Products for Immersion Applications",
+        "PDF Format"
+      ],
+      [
+        "7505 - Evaluating Component Level Compatibility and Reliability of Memory and Storage Products for Immersion Applications",
+        "AI Deep Summary"
+      ],
+      [
+        "7505 - Evaluating Component Level Compatibility and Reliability of Memory and Storage Products for Immersion Applications",
+        "Immersion Applications"
+      ],
+      [
+        "7505 - Evaluating Component Level Compatibility and Reliability of Memory and Storage Products for Immersion Applications",
+        "File Link"
+      ]
+    ],
+    "count": 9,
+    "create_time": 1773167663,
+    "update_time": 1773167663,
+    "_id": "doc-04159a2e6b1c0a304c8cab9dc130201f"
+  },
+  "doc-f3556e182081aed4b9613c75949ed570": {
+    "relation_pairs": [
+      [
+        "7446 - Large CXL Memory Expansion Systems and Workloads_v2_v2",
+        "PDF"
+      ],
+      [
+        "7446 - Large CXL Memory Expansion Systems and Workloads_v2_v2",
+        "Liufang"
+      ],
+      [
+        "7446 - Large CXL Memory Expansion Systems and Workloads_v2_v2",
+        "Server Architecture"
+      ],
+      [
+        "7446 - Large CXL Memory Expansion Systems and Workloads_v2_v2",
+        "Unknown"
+      ],
+      [
+        "7446 - Large CXL Memory Expansion Systems and Workloads_v2_v2",
+        "Research Report Library"
+      ],
+      [
+        "7446 - Large CXL Memory Expansion Systems and Workloads_v2_v2",
+        "Compute Express Link"
+      ],
+      [
+        "7446 - Large CXL Memory Expansion Systems and Workloads_v2_v2",
+        "CXL Memory Expansion Systems"
+      ]
+    ],
+    "count": 7,
+    "create_time": 1773167685,
+    "update_time": 1773167685,
+    "_id": "doc-f3556e182081aed4b9613c75949ed570"
+  },
+  "doc-c0b6845c9f5c77a0f3f30fa98403d8fe": {
+    "relation_pairs": [
+      [
+        "OCP Secure Boot Attestation",
+        "Open Compute Project"
+      ],
+      [
+        "7547 - Orchestrating Confidential Compute using OCP Secure Boot Attestation and CXL IDE TSP DMTF SPDM Specs_v2_v2",
+        "PDF Format"
+      ],
+      [
+        "7547 - Orchestrating Confidential Compute using OCP Secure Boot Attestation and CXL IDE TSP DMTF SPDM Specs_v2_v2",
+        "OCP Secure Boot Attestation"
+      ],
+      [
+        "DMTF SPDM",
+        "Distributed Management Task Force"
+      ],
+      [
+        "2026-03-07",
+        "7547 - Orchestrating Confidential Compute using OCP Secure Boot Attestation and CXL IDE TSP DMTF SPDM Specs_v2_v2"
+      ],
+      [
+        "7547 - Orchestrating Confidential Compute using OCP Secure Boot Attestation and CXL IDE TSP DMTF SPDM Specs_v2_v2",
+        "Core Priority"
+      ],
+      [
+        "7547 - Orchestrating Confidential Compute using OCP Secure Boot Attestation and CXL IDE TSP DMTF SPDM Specs_v2_v2",
+        "Confidential Compute"
+      ],
+      [
+        "7547 - Orchestrating Confidential Compute using OCP Secure Boot Attestation and CXL IDE TSP DMTF SPDM Specs_v2_v2",
+        "DMTF SPDM"
+      ],
+      [
+        "7547 - Orchestrating Confidential Compute using OCP Secure Boot Attestation and CXL IDE TSP DMTF SPDM Specs_v2_v2",
+        "CXL IDE"
+      ],
+      [
+        "7547 - Orchestrating Confidential Compute using OCP Secure Boot Attestation and CXL IDE TSP DMTF SPDM Specs_v2_v2",
+        "Unknown Author"
+      ],
+      [
+        "7547 - Orchestrating Confidential Compute using OCP Secure Boot Attestation and CXL IDE TSP DMTF SPDM Specs_v2_v2",
+        "TSP"
+      ],
+      [
+        "7547 - Orchestrating Confidential Compute using OCP Secure Boot Attestation and CXL IDE TSP DMTF SPDM Specs_v2_v2",
+        "Server Architecture Research Library"
+      ]
+    ],
+    "count": 12,
+    "create_time": 1773167707,
+    "update_time": 1773167707,
+    "_id": "doc-c0b6845c9f5c77a0f3f30fa98403d8fe"
+  },
+  "doc-ba1d69c721849ac582b1a53a58646ef1": {
+    "relation_pairs": [
+      [
+        "6967 - Towards Memory Efficient RAG Pipelines With CXL Technology V2",
+        "Server Architecture"
+      ],
+      [
+        "6967 - Towards Memory Efficient RAG Pipelines With CXL Technology V2",
+        "CXL Technology"
+      ],
+      [
+        "6967 - Towards Memory Efficient RAG Pipelines With CXL Technology V2",
+        "Liufang"
+      ],
+      [
+        "6967 - Towards Memory Efficient RAG Pipelines With CXL Technology V2",
+        "RAG Pipelines"
+      ],
+      [
+        "6967 - Towards Memory Efficient RAG Pipelines With CXL Technology V2",
+        "PDF Document"
+      ],
+      [
+        "2.76 MB",
+        "6967 - Towards Memory Efficient RAG Pipelines With CXL Technology V2"
+      ],
+      [
+        "6967 - Towards Memory Efficient RAG Pipelines With CXL Technology V2",
+        "Core Research Report"
+      ],
+      [
+        "2026-03-07",
+        "6967 - Towards Memory Efficient RAG Pipelines With CXL Technology V2"
+      ]
+    ],
+    "count": 8,
+    "create_time": 1773167711,
+    "update_time": 1773167711,
+    "_id": "doc-ba1d69c721849ac582b1a53a58646ef1"
+  },
+  "doc-d337eca5c11c950a864764401f37ceaf": {
+    "relation_pairs": [
+      [
+        "Astera Labs",
+        "UALink Retimers"
+      ],
+      [
+        "7653 - Astera Labs- Scaling AI with PCIe Ethernet and UALink Retimers_v2_v2",
+        "Astera Labs"
+      ],
+      [
+        "AI Scaling",
+        "PCIe Ethernet"
+      ],
+      [
+        "7653 - Astera Labs- Scaling AI with PCIe Ethernet and UALink Retimers_v2_v2",
+        "Unknown Author"
+      ],
+      [
+        "Astera Labs",
+        "PCIe Ethernet"
+      ],
+      [
+        "AI Scaling",
+        "UALink Retimers"
+      ],
+      [
+        "7653 - Astera Labs- Scaling AI with PCIe Ethernet and UALink Retimers_v2_v2",
+        "PDF"
+      ]
+    ],
+    "count": 7,
+    "create_time": 1773167727,
+    "update_time": 1773167727,
+    "_id": "doc-d337eca5c11c950a864764401f37ceaf"
+  },
+  "doc-805ed11febeca1bfd1bdea057549e4ce": {
+    "relation_pairs": [
+      [
+        "7800 - The Journey of CXL-PNM Research- Architecture Evolution and Software Environment_v2",
+        "Research Report"
+      ],
+      [
+        "7800 - The Journey of CXL-PNM Research- Architecture Evolution and Software Environment_v2",
+        "PDF"
+      ],
+      [
+        "2026-03-07",
+        "7800 - The Journey of CXL-PNM Research- Architecture Evolution and Software Environment_v2"
+      ],
+      [
+        "7800 - The Journey of CXL-PNM Research- Architecture Evolution and Software Environment_v2",
+        "CXL-PNM"
+      ],
+      [
+        "7800 - The Journey of CXL-PNM Research- Architecture Evolution and Software Environment_v2",
+        "Liufang"
+      ],
+      [
+        "7800 - The Journey of CXL-PNM Research- Architecture Evolution and Software Environment_v2",
+        "Server Architecture"
+      ]
+    ],
+    "count": 6,
+    "create_time": 1773167730,
+    "update_time": 1773167730,
+    "_id": "doc-805ed11febeca1bfd1bdea057549e4ce"
+  },
+  "doc-e24b7488a587cd1f8bf6573d12f1c75a": {
+    "relation_pairs": [
+      [
+        "91 - Panel-Architecting the Future-Server Design in the Age of AI_v2",
+        "Artificial Intelligence"
+      ],
+      [
+        "91 - Panel-Architecting the Future-Server Design in the Age of AI_v2",
+        "Local Document Link"
+      ],
+      [
+        "91 - Panel-Architecting the Future-Server Design in the Age of AI_v2",
+        "PDF Format"
+      ],
+      [
+        "91 - Panel-Architecting the Future-Server Design in the Age of AI_v2",
+        "Core Research Report Library"
+      ],
+      [
+        "Liufang",
+        "Local Document Link"
+      ],
+      [
+        "2026-03-07",
+        "91 - Panel-Architecting the Future-Server Design in the Age of AI_v2"
+      ],
+      [
+        "91 - Panel-Architecting the Future-Server Design in the Age of AI_v2",
+        "Server Architecture"
+      ],
+      [
+        "91 - Panel-Architecting the Future-Server Design in the Age of AI_v2",
+        "Unknown Author"
+      ]
+    ],
+    "count": 8,
+    "create_time": 1773167759,
+    "update_time": 1773167759,
+    "_id": "doc-e24b7488a587cd1f8bf6573d12f1c75a"
+  },
+  "doc-6d829808f9b4093bb903d5990d12a27c": {
+    "relation_pairs": [
+      [
+        "7430 - Smashing Memory I-O Limits- Architectures for the GenAI Era_v2_v2",
+        "Server Architecture Research Library"
+      ],
+      [
+        "7430 - Smashing Memory I-O Limits- Architectures for the GenAI Era_v2_v2",
+        "PDF"
+      ],
+      [
+        "7430 - Smashing Memory I-O Limits- Architectures for the GenAI Era_v2_v2",
+        "GenAI Era"
+      ],
+      [
+        "7430 - Smashing Memory I-O Limits- Architectures for the GenAI Era_v2_v2",
+        "Liufang"
+      ],
+      [
+        "2026-03-07",
+        "7430 - Smashing Memory I-O Limits- Architectures for the GenAI Era_v2_v2"
+      ],
+      [
+        "7430 - Smashing Memory I-O Limits- Architectures for the GenAI Era_v2_v2",
+        "Core Priority"
+      ]
+    ],
+    "count": 6,
+    "create_time": 1773167759,
+    "update_time": 1773167759,
+    "_id": "doc-6d829808f9b4093bb903d5990d12a27c"
+  },
+  "doc-df115efbf3bc71602047949ae3dbbdf0": {
+    "relation_pairs": [
+      [
+        "High-Density Server",
+        "Super Fluid Technology Application in High Density Server Product_v2"
+      ],
+      [
+        "Liufang",
+        "Super Fluid Technology Application in High Density Server Product_v2"
+      ],
+      [
+        "PDF",
+        "Super Fluid Technology Application in High Density Server Product_v2"
+      ],
+      [
+        "Server Architecture Research Library",
+        "Super Fluid Technology Application in High Density Server Product_v2"
+      ],
+      [
+        "Core Priority",
+        "Super Fluid Technology Application in High Density Server Product_v2"
+      ],
+      [
+        "Super Fluid Technology",
+        "Super Fluid Technology Application in High Density Server Product_v2"
+      ],
+      [
+        "File Path",
+        "Super Fluid Technology Application in High Density Server Product_v2"
+      ]
+    ],
+    "count": 7,
+    "create_time": 1773167789,
+    "update_time": 1773167789,
+    "_id": "doc-df115efbf3bc71602047949ae3dbbdf0"
+  },
+  "doc-15484e8b32164d9fb60eeef755439770": {
+    "relation_pairs": [
+      [
+        "7361 - Hyperscale CPU Impactless Firmware Updates_v2",
+        "Server Architecture Research Library"
+      ],
+      [
+        "7361 - Hyperscale CPU Impactless Firmware Updates_v2",
+        "PDF"
+      ],
+      [
+        "7361 - Hyperscale CPU Impactless Firmware Updates_v2",
+        "AI Deep Summary"
+      ],
+      [
+        "7361 - Hyperscale CPU Impactless Firmware Updates_v2",
+        "Impactless Firmware Updates"
+      ],
+      [
+        "7361 - Hyperscale CPU Impactless Firmware Updates_v2",
+        "Core Priority"
+      ],
+      [
+        "7361 - Hyperscale CPU Impactless Firmware Updates_v2",
+        "Ingestion Time 2026-03-07 19:05:23"
+      ],
+      [
+        "7361 - Hyperscale CPU Impactless Firmware Updates_v2",
+        "File Size 0.88 MB"
+      ],
+      [
+        "7361 - Hyperscale CPU Impactless Firmware Updates_v2",
+        "Hyperscale CPU"
+      ]
+    ],
+    "count": 8,
+    "create_time": 1773167792,
+    "update_time": 1773167792,
+    "_id": "doc-15484e8b32164d9fb60eeef755439770"
+  },
+  "doc-9ac5324873bf771cb665a450ec9794d8": {
+    "relation_pairs": [
+      [
+        "6860 - Community Panel - Enabling Immersion by Design- Aligning Server and Cooling Communities",
+        "Immersion by Design"
+      ],
+      [
+        "6860 - Community Panel - Enabling Immersion by Design- Aligning Server and Cooling Communities",
+        "Core Priority Report"
+      ],
+      [
+        "Cooling Community",
+        "Server Community"
+      ],
+      [
+        "6860 - Community Panel - Enabling Immersion by Design- Aligning Server and Cooling Communities",
+        "File Path"
+      ],
+      [
+        "6860 - Community Panel - Enabling Immersion by Design- Aligning Server and Cooling Communities",
+        "Server Architecture Research Library"
+      ],
+      [
+        "6860 - Community Panel - Enabling Immersion by Design- Aligning Server and Cooling Communities",
+        "PDF Document"
+      ],
+      [
+        "6860 - Community Panel - Enabling Immersion by Design- Aligning Server and Cooling Communities",
+        "Liufang"
+      ]
+    ],
+    "count": 7,
+    "create_time": 1773167826,
+    "update_time": 1773167826,
+    "_id": "doc-9ac5324873bf771cb665a450ec9794d8"
+  },
+  "doc-46bc26dff317560becba9a0a6fa7a441": {
+    "relation_pairs": [
+      [
+        "7837 - Short-reach Optical Interface Scale Connectivity for Optimized Data-movement Through Memory for AI-ML Applications_v2_v2",
+        "Unknown Author"
+      ],
+      [
+        "7837 - Short-reach Optical Interface Scale Connectivity for Optimized Data-movement Through Memory for AI-ML Applications_v2_v2",
+        "AI-ML Applications"
+      ],
+      [
+        "7837 - Short-reach Optical Interface Scale Connectivity for Optimized Data-movement Through Memory for AI-ML Applications_v2_v2",
+        "PDF"
+      ],
+      [
+        "7837 - Short-reach Optical Interface Scale Connectivity for Optimized Data-movement Through Memory for AI-ML Applications_v2_v2",
+        "File Path"
+      ],
+      [
+        "7837 - Short-reach Optical Interface Scale Connectivity for Optimized Data-movement Through Memory for AI-ML Applications_v2_v2",
+        "Core Report"
+      ],
+      [
+        "File Path",
+        "Liufang"
+      ],
+      [
+        "7837 - Short-reach Optical Interface Scale Connectivity for Optimized Data-movement Through Memory for AI-ML Applications_v2_v2",
+        "Short-Reach Optical Interface"
+      ],
+      [
+        "7837 - Short-reach Optical Interface Scale Connectivity for Optimized Data-movement Through Memory for AI-ML Applications_v2_v2",
+        "Server Architecture"
+      ]
+    ],
+    "count": 8,
+    "create_time": 1773167828,
+    "update_time": 1773167828,
+    "_id": "doc-46bc26dff317560becba9a0a6fa7a441"
+  },
+  "doc-9a23f58ae4463735de6f1b117591592c": {
+    "relation_pairs": [
+      [
+        "7 - Lifecycle System Monitoring with Arms System Monitoring Control Framework SMCF and proteanTecs_v2",
+        "Arms System Monitoring Control Framework SMCF"
+      ],
+      [
+        "7 - Lifecycle System Monitoring with Arms System Monitoring Control Framework SMCF and proteanTecs_v2",
+        "Server Architecture Research Library"
+      ],
+      [
+        "Arm",
+        "Arms System Monitoring Control Framework SMCF"
+      ],
+      [
+        "7 - Lifecycle System Monitoring with Arms System Monitoring Control Framework SMCF and proteanTecs_v2",
+        "PDF"
+      ],
+      [
+        "7 - Lifecycle System Monitoring with Arms System Monitoring Control Framework SMCF and proteanTecs_v2",
+        "proteanTecs_v2"
+      ]
+    ],
+    "count": 5,
+    "create_time": 1773167844,
+    "update_time": 1773167844,
+    "_id": "doc-9a23f58ae4463735de6f1b117591592c"
+  },
+  "doc-d542a9101cecae9b9250937b2605dee2": {
+    "relation_pairs": [
+      [
+        "ARM Architecture",
+        "OCP2025_DAY TWO TUESDAY - 2.Arm_v2"
+      ],
+      [
+        "OCP2025_DAY TWO TUESDAY - 2.Arm_v2",
+        "PDF Document"
+      ],
+      [
+        "OCP2025",
+        "OCP2025_DAY TWO TUESDAY - 2.Arm_v2"
+      ],
+      [
+        "Liufang",
+        "OCP2025_DAY TWO TUESDAY - 2.Arm_v2"
+      ],
+      [
+        "OCP2025_DAY TWO TUESDAY - 2.Arm_v2",
+        "Open Compute Project"
+      ],
+      [
+        "OCP2025_DAY TWO TUESDAY - 2.Arm_v2",
+        "Server Architecture"
+      ]
+    ],
+    "count": 6,
+    "create_time": 1773167849,
+    "update_time": 1773167849,
+    "_id": "doc-d542a9101cecae9b9250937b2605dee2"
+  },
+  "doc-1f1a30530b2b434213d044c2a8466044": {
+    "relation_pairs": [
+      [
+        "Report 7693",
+        "Server Architecture Research Library"
+      ],
+      [
+        "7693 - Co-Designing for AI- Open Standards and Ecosystems Driving the Future of Infrastructure presented by Arm_v2_v2",
+        "AI Infrastructure"
+      ],
+      [
+        "PDF Format",
+        "Report 7693"
+      ],
+      [
+        "7693 - Co-Designing for AI- Open Standards and Ecosystems Driving the Future of Infrastructure presented by Arm_v2_v2",
+        "Ecosystems"
+      ],
+      [
+        "Core Priority",
+        "Report 7693"
+      ],
+      [
+        "7693 - Co-Designing for AI- Open Standards and Ecosystems Driving the Future of Infrastructure presented by Arm_v2_v2",
+        "Arm"
+      ],
+      [
+        "7693 - Co-Designing for AI- Open Standards and Ecosystems Driving the Future of Infrastructure presented by Arm_v2_v2",
+        "Co-Design"
+      ],
+      [
+        "7693 - Co-Designing for AI- Open Standards and Ecosystems Driving the Future of Infrastructure presented by Arm_v2_v2",
+        "Open Standards"
+      ],
+      [
+        "7693 - Co-Designing for AI- Open Standards and Ecosystems Driving the Future of Infrastructure presented by Arm_v2_v2",
+        "Server Architecture"
+      ]
+    ],
+    "count": 9,
+    "create_time": 1773167879,
+    "update_time": 1773167879,
+    "_id": "doc-1f1a30530b2b434213d044c2a8466044"
+  },
+  "doc-61f77d89f092ff5cd7c6ea81d31cfeb6": {
+    "relation_pairs": [
+      [
+        "7026 - Emerging Software Patterns for Programming New Memory Devices and Interfaces_v2_v2",
+        "Unknown Author"
+      ],
+      [
+        "2026-03-07",
+        "7026 - Emerging Software Patterns for Programming New Memory Devices and Interfaces_v2_v2"
+      ],
+      [
+        "7026 - Emerging Software Patterns for Programming New Memory Devices and Interfaces_v2_v2",
+        "Local Document Link"
+      ],
+      [
+        "7026 - Emerging Software Patterns for Programming New Memory Devices and Interfaces_v2_v2",
+        "Server Architecture Research Library"
+      ],
+      [
+        "7026 - Emerging Software Patterns for Programming New Memory Devices and Interfaces_v2_v2",
+        "PDF"
+      ],
+      [
+        "7026 - Emerging Software Patterns for Programming New Memory Devices and Interfaces_v2_v2",
+        "AI Deep Summary"
+      ]
+    ],
+    "count": 6,
+    "create_time": 1773167879,
+    "update_time": 1773167879,
+    "_id": "doc-61f77d89f092ff5cd7c6ea81d31cfeb6"
+  },
+  "doc-10dc48654563b9bb58e4fbbbb7645eb8": {
+    "relation_pairs": [
+      [
+        "7525 Report",
+        "Server Architecture"
+      ],
+      [
+        "7525 Report",
+        "Meta AI-ML System"
+      ],
+      [
+        "7525 Report",
+        "PDF"
+      ],
+      [
+        "Meta",
+        "Meta AI-ML System"
+      ],
+      [
+        "7525 Report",
+        "PCIe Completion Timeout Error"
+      ],
+      [
+        "7525 Report",
+        "Liufang"
+      ],
+      [
+        "7525 Report",
+        "RPPIO Error Reporting"
+      ]
+    ],
+    "count": 7,
+    "create_time": 1773167901,
+    "update_time": 1773167901,
+    "_id": "doc-10dc48654563b9bb58e4fbbbb7645eb8"
+  },
+  "doc-2c8929bd6af5efae83044622ffa3faac": {
+    "relation_pairs": [
+      [
+        "7456 - Centralized System Security Hub for Server Platforms_v2",
+        "Server Architecture Research Library"
+      ],
+      [
+        "7456 - Centralized System Security Hub for Server Platforms_v2",
+        "Core Priority"
+      ],
+      [
+        "7456 - Centralized System Security Hub for Server Platforms_v2",
+        "Centralized System Security Hub"
+      ],
+      [
+        "Liufang",
+        "Local Document Link"
+      ],
+      [
+        "2026-03-07",
+        "7456 - Centralized System Security Hub for Server Platforms_v2"
+      ],
+      [
+        "7456 - Centralized System Security Hub for Server Platforms_v2",
+        "Unknown Author"
+      ],
+      [
+        "7456 - Centralized System Security Hub for Server Platforms_v2",
+        "PDF Format"
+      ]
+    ],
+    "count": 7,
+    "create_time": 1773167901,
+    "update_time": 1773167901,
+    "_id": "doc-2c8929bd6af5efae83044622ffa3faac"
+  },
+  "doc-f1c174d3bf65d5024ebe4ad7cbd8c5e2": {
+    "relation_pairs": [
+      [
+        "6832 - Heterogeneous Memory Opportunity with Agentic AI and Memory Centric Computing_v2_v2",
+        "PDF Format"
+      ],
+      [
+        "6832 - Heterogeneous Memory Opportunity with Agentic AI and Memory Centric Computing_v2_v2",
+        "Liufang"
+      ],
+      [
+        "6832 - Heterogeneous Memory Opportunity with Agentic AI and Memory Centric Computing_v2_v2",
+        "Agentic AI"
+      ],
+      [
+        "6832 - Heterogeneous Memory Opportunity with Agentic AI and Memory Centric Computing_v2_v2",
+        "Memory-Centric Computing"
+      ],
+      [
+        "Report 6832",
+        "Server Architecture Research Library"
+      ],
+      [
+        "6832 - Heterogeneous Memory Opportunity with Agentic AI and Memory Centric Computing_v2_v2",
+        "Heterogeneous Memory"
+      ]
+    ],
+    "count": 6,
+    "create_time": 1773167921,
+    "update_time": 1773167921,
+    "_id": "doc-f1c174d3bf65d5024ebe4ad7cbd8c5e2"
+  },
+  "doc-9e88d373c00da121b8868d08bdceb9cf": {
+    "relation_pairs": [
+      [
+        "7205 - Power Conversion Solutions for future Server Boards operating directly from HV DC",
+        "Research Library"
+      ],
+      [
+        "7205 - Power Conversion Solutions for future Server Boards operating directly from HV DC",
+        "HV DC"
+      ],
+      [
+        "7205 - Power Conversion Solutions for future Server Boards operating directly from HV DC",
+        "Server Architecture"
+      ],
+      [
+        "7205 - Power Conversion Solutions for future Server Boards operating directly from HV DC",
+        "Unknown Author"
+      ],
+      [
+        "2026-03-07",
+        "7205 - Power Conversion Solutions for future Server Boards operating directly from HV DC"
+      ],
+      [
+        "7205 - Power Conversion Solutions for future Server Boards operating directly from HV DC",
+        "Server Boards"
+      ],
+      [
+        "7205 - Power Conversion Solutions for future Server Boards operating directly from HV DC",
+        "Core Report"
+      ],
+      [
+        "7205 - Power Conversion Solutions for future Server Boards operating directly from HV DC",
+        "PDF Format"
+      ]
+    ],
+    "count": 8,
+    "create_time": 1773167933,
+    "update_time": 1773167933,
+    "_id": "doc-9e88d373c00da121b8868d08bdceb9cf"
+  },
+  "doc-32749bfe06ebb4fd503585308b574af7": {
+    "relation_pairs": [
+      [
+        "6974 - NVMe Interoperable Migration of PCIe virtual SSDs_v2",
+        "PDF Format"
+      ],
+      [
+        "6974 - NVMe Interoperable Migration of PCIe virtual SSDs_v2",
+        "PCIe Virtual SSDs"
+      ],
+      [
+        "6974 - NVMe Interoperable Migration of PCIe virtual SSDs_v2",
+        "Server Architecture Research Library"
+      ],
+      [
+        "6974 - NVMe Interoperable Migration of PCIe virtual SSDs_v2",
+        "Liufang"
+      ],
+      [
+        "6974 - NVMe Interoperable Migration of PCIe virtual SSDs_v2",
+        "NVMe Interoperability"
+      ],
+      [
+        "2026-03-07 19:05:21",
+        "6974 - NVMe Interoperable Migration of PCIe virtual SSDs_v2"
+      ],
+      [
+        "6974 - NVMe Interoperable Migration of PCIe virtual SSDs_v2",
+        "Unknown Author"
+      ]
+    ],
+    "count": 7,
+    "create_time": 1773167954,
+    "update_time": 1773167954,
+    "_id": "doc-32749bfe06ebb4fd503585308b574af7"
+  },
+  "doc-207b0823e90b60e301db1f919be31b9c": {
+    "relation_pairs": [
+      [
+        "Firmware Development",
+        "Hardware"
+      ],
+      [
+        "Firmware Development",
+        "Simulation"
+      ],
+      [
+        "6875 - BMC and AMC Open Platform Firmware Development on Arm Servers- From Simulation to Hardware_v2",
+        "Server Architecture"
+      ],
+      [
+        "6875 - BMC and AMC Open Platform Firmware Development on Arm Servers- From Simulation to Hardware_v2",
+        "Arm Servers"
+      ],
+      [
+        "6875",
+        "6875 - BMC and AMC Open Platform Firmware Development on Arm Servers- From Simulation to Hardware_v2"
+      ],
+      [
+        "BMC",
+        "Open Platform Firmware"
+      ],
+      [
+        "6875 - BMC and AMC Open Platform Firmware Development on Arm Servers- From Simulation to Hardware_v2",
+        "BMC"
+      ],
+      [
+        "Arm Servers",
+        "Open Platform Firmware"
+      ],
+      [
+        "AMC",
+        "Open Platform Firmware"
+      ],
+      [
+        "6875 - BMC and AMC Open Platform Firmware Development on Arm Servers- From Simulation to Hardware_v2",
+        "Report"
+      ],
+      [
+        "6875 - BMC and AMC Open Platform Firmware Development on Arm Servers- From Simulation to Hardware_v2",
+        "AMC"
+      ]
+    ],
+    "count": 11,
+    "create_time": 1773167963,
+    "update_time": 1773167963,
+    "_id": "doc-207b0823e90b60e301db1f919be31b9c"
+  },
+  "doc-58b2d80c0b2a8b0ee53bae05070f0c93": {
+    "relation_pairs": [
+      [
+        "6878 - Advancing Timing Resilience in Edge-to-Core Systems- From White Rabbit to PCIe_v2",
+        "White Rabbit"
+      ],
+      [
+        "6878 - Advancing Timing Resilience in Edge-to-Core Systems- From White Rabbit to PCIe_v2",
+        "Report 6878"
+      ],
+      [
+        "6878 - Advancing Timing Resilience in Edge-to-Core Systems- From White Rabbit to PCIe_v2",
+        "Unknown Author"
+      ],
+      [
+        "6878 - Advancing Timing Resilience in Edge-to-Core Systems- From White Rabbit to PCIe_v2",
+        "Edge-to-Core Systems"
+      ],
+      [
+        "6878 - Advancing Timing Resilience in Edge-to-Core Systems- From White Rabbit to PCIe_v2",
+        "Server Architecture Research Library"
+      ],
+      [
+        "6878 - Advancing Timing Resilience in Edge-to-Core Systems- From White Rabbit to PCIe_v2",
+        "PCIe_v2"
+      ]
+    ],
+    "count": 6,
+    "create_time": 1773167976,
+    "update_time": 1773167976,
+    "_id": "doc-58b2d80c0b2a8b0ee53bae05070f0c93"
+  },
+  "doc-cf00ccbe9715d44dfa602d3da7162666": {
+    "relation_pairs": [
+      [
+        "CXL RAS Firmware-First Error Handling",
+        "Compute Express Link"
+      ],
+      [
+        "93 - Use Cases for CXL RAS Firmware-First Error Handling_v2",
+        "Unknown"
+      ],
+      [
+        "2026-03-07",
+        "93 - Use Cases for CXL RAS Firmware-First Error Handling_v2"
+      ],
+      [
+        "93 - Use Cases for CXL RAS Firmware-First Error Handling_v2",
+        "File Path"
+      ],
+      [
+        "93 - Use Cases for CXL RAS Firmware-First Error Handling_v2",
+        "CXL RAS Firmware-First Error Handling"
+      ],
+      [
+        "93 - Use Cases for CXL RAS Firmware-First Error Handling_v2",
+        "PDF"
+      ],
+      [
+        "93 - Use Cases for CXL RAS Firmware-First Error Handling_v2",
+        "Server Architecture Research Library"
+      ]
+    ],
+    "count": 7,
+    "create_time": 1773167988,
+    "update_time": 1773167988,
+    "_id": "doc-cf00ccbe9715d44dfa602d3da7162666"
+  },
+  "doc-ef5a1dc3d7c28f0190c5185e1c92732b": {
+    "relation_pairs": [
+      [
+        "2026-03-07",
+        "7396 - Co-Designing for Scale- CXL-Based Memory Solution for Data-Centric Workloads_v2_v2"
+      ],
+      [
+        "7396 - Co-Designing for Scale- CXL-Based Memory Solution for Data-Centric Workloads_v2_v2",
+        "Unknown Author"
+      ],
+      [
+        "7396 - Co-Designing for Scale- CXL-Based Memory Solution for Data-Centric Workloads_v2_v2",
+        "Server Architecture"
+      ],
+      [
+        "7396 - Co-Designing for Scale- CXL-Based Memory Solution for Data-Centric Workloads_v2_v2",
+        "CXL"
+      ],
+      [
+        "7396 - Co-Designing for Scale- CXL-Based Memory Solution for Data-Centric Workloads_v2_v2",
+        "Research Library"
+      ],
+      [
+        "7396 - Co-Designing for Scale- CXL-Based Memory Solution for Data-Centric Workloads_v2_v2",
+        "Data-Centric Workloads"
+      ],
+      [
+        "7396 - Co-Designing for Scale- CXL-Based Memory Solution for Data-Centric Workloads_v2_v2",
+        "PDF"
+      ]
+    ],
+    "count": 7,
+    "create_time": 1773168008,
+    "update_time": 1773168008,
+    "_id": "doc-ef5a1dc3d7c28f0190c5185e1c92732b"
+  },
+  "doc-7b48c48f2f7c3877c03d05218cfb8c20": {
+    "relation_pairs": [
+      [
+        "2026-03-07",
+        "7249 - Composable Memory Fabric Architecture- Enabling Scalable Memory Management for AI and General Purpose Compute_v2_v2_v2"
+      ],
+      [
+        "7249 - Composable Memory Fabric Architecture- Enabling Scalable Memory Management for AI and General Purpose Compute_v2_v2_v2",
+        "PDF"
+      ],
+      [
+        "7249 - Composable Memory Fabric Architecture- Enabling Scalable Memory Management for AI and General Purpose Compute_v2_v2_v2",
+        "Scalable Memory Management"
+      ],
+      [
+        "7249 - Composable Memory Fabric Architecture- Enabling Scalable Memory Management for AI and General Purpose Compute_v2_v2_v2",
+        "Core Research Report Library"
+      ],
+      [
+        "7249 - Composable Memory Fabric Architecture- Enabling Scalable Memory Management for AI and General Purpose Compute_v2_v2_v2",
+        "Liufang"
+      ],
+      [
+        "7249 - Composable Memory Fabric Architecture- Enabling Scalable Memory Management for AI and General Purpose Compute_v2_v2_v2",
+        "Unknown Author"
+      ],
+      [
+        "7249 - Composable Memory Fabric Architecture- Enabling Scalable Memory Management for AI and General Purpose Compute_v2_v2_v2",
+        "Server Architecture"
+      ],
+      [
+        "7249 - Composable Memory Fabric Architecture- Enabling Scalable Memory Management for AI and General Purpose Compute_v2_v2_v2",
+        "Composable Memory Fabric Architecture"
+      ]
+    ],
+    "count": 8,
+    "create_time": 1773168017,
+    "update_time": 1773168017,
+    "_id": "doc-7b48c48f2f7c3877c03d05218cfb8c20"
+  },
+  "doc-3ae046aa80e7382953f272a3870f099b": {
+    "relation_pairs": [
+      [
+        "73 - Advanced Server Management on Arm to track-Latest Technological Advances in General Server Architecture",
+        "Arm Architecture"
+      ],
+      [
+        "73 - Advanced Server Management on Arm to track-Latest Technological Advances in General Server Architecture",
+        "Server Architecture"
+      ],
+      [
+        "73 - Advanced Server Management on Arm to track-Latest Technological Advances in General Server Architecture",
+        "Research Report Library"
+      ],
+      [
+        "2026-03-07",
+        "73 - Advanced Server Management on Arm to track-Latest Technological Advances in General Server Architecture"
+      ],
+      [
+        "73 - Advanced Server Management on Arm to track-Latest Technological Advances in General Server Architecture",
+        "Unknown Author"
+      ],
+      [
+        "73 - Advanced Server Management on Arm to track-Latest Technological Advances in General Server Architecture",
+        "PDF Format"
+      ],
+      [
+        "73 - Advanced Server Management on Arm to track-Latest Technological Advances in General Server Architecture",
+        "Local Document Link"
+      ],
+      [
+        "73 - Advanced Server Management on Arm to track-Latest Technological Advances in General Server Architecture",
+        "Core Report"
+      ]
+    ],
+    "count": 8,
+    "create_time": 1773168042,
+    "update_time": 1773168042,
+    "_id": "doc-3ae046aa80e7382953f272a3870f099b"
+  },
+  "doc-14a5b27abffb227913c4a16ac75887ca": {
+    "relation_pairs": [
+      [
+        "75 - Architecting the AI Fabric-Scalable Networking for Next-Generation AI Servers-Racks-and Clusters_v2_v2",
+        "Racks"
+      ],
+      [
+        "75 - Architecting the AI Fabric-Scalable Networking for Next-Generation AI Servers-Racks-and Clusters_v2_v2",
+        "Next-Generation AI Servers"
+      ],
+      [
+        "3.31 MB",
+        "75 - Architecting the AI Fabric-Scalable Networking for Next-Generation AI Servers-Racks-and Clusters_v2_v2"
+      ],
+      [
+        "75 - Architecting the AI Fabric-Scalable Networking for Next-Generation AI Servers-Racks-and Clusters_v2_v2",
+        "Unknown Author"
+      ],
+      [
+        "2026-03-07 19:05:20",
+        "75 - Architecting the AI Fabric-Scalable Networking for Next-Generation AI Servers-Racks-and Clusters_v2_v2"
+      ],
+      [
+        "75 - Architecting the AI Fabric-Scalable Networking for Next-Generation AI Servers-Racks-and Clusters_v2_v2",
+        "AI Fabric"
+      ],
+      [
+        "75 - Architecting the AI Fabric-Scalable Networking for Next-Generation AI Servers-Racks-and Clusters_v2_v2",
+        "File Path"
+      ],
+      [
+        "75 - Architecting the AI Fabric-Scalable Networking for Next-Generation AI Servers-Racks-and Clusters_v2_v2",
+        "Clusters"
+      ],
+      [
+        "2026-03-07",
+        "75 - Architecting the AI Fabric-Scalable Networking for Next-Generation AI Servers-Racks-and Clusters_v2_v2"
+      ],
+      [
+        "AI Fabric",
+        "Scalable Networking"
+      ]
+    ],
+    "count": 10,
+    "create_time": 1773168052,
+    "update_time": 1773168052,
+    "_id": "doc-14a5b27abffb227913c4a16ac75887ca"
+  },
+  "doc-46b1cb6c7cb6838091250f07aa58cb19": {
+    "relation_pairs": [
+      [
+        "72 - Meeting AI Workload Demands with Arm CSA and Chiplet_v2_v2",
+        "Server Architecture Research Library"
+      ],
+      [
+        "72 - Meeting AI Workload Demands with Arm CSA and Chiplet_v2_v2",
+        "PDF"
+      ],
+      [
+        "AI Workload Demands",
+        "Arm CSA"
+      ],
+      [
+        "72 - Meeting AI Workload Demands with Arm CSA and Chiplet_v2_v2",
+        "Arm CSA"
+      ],
+      [
+        "72 - Meeting AI Workload Demands with Arm CSA and Chiplet_v2_v2",
+        "Liufang"
+      ],
+      [
+        "AI Workload Demands",
+        "Chiplet_v2_v2"
+      ],
+      [
+        "72 - Meeting AI Workload Demands with Arm CSA and Chiplet_v2_v2",
+        "Chiplet_v2_v2"
+      ]
+    ],
+    "count": 7,
+    "create_time": 1773168081,
+    "update_time": 1773168081,
+    "_id": "doc-46b1cb6c7cb6838091250f07aa58cb19"
+  },
+  "doc-c199ec006c1f0210255474d03892899b": {
+    "relation_pairs": [
+      [
+        "7137 - Server Scale-Up Interconnect Technologies - UALink SuperNode and CXL Memory Pool_v2",
+        "Unknown Author"
+      ],
+      [
+        "7137 - Server Scale-Up Interconnect Technologies - UALink SuperNode and CXL Memory Pool_v2",
+        "PDF"
+      ],
+      [
+        "7137 - Server Scale-Up Interconnect Technologies - UALink SuperNode and CXL Memory Pool_v2",
+        "File Path"
+      ],
+      [
+        "7137 - Server Scale-Up Interconnect Technologies - UALink SuperNode and CXL Memory Pool_v2",
+        "Server Scale-Up Interconnect Technologies"
+      ],
+      [
+        "7137 - Server Scale-Up Interconnect Technologies - UALink SuperNode and CXL Memory Pool_v2",
+        "CXL Memory Pool"
+      ],
+      [
+        "7137 - Server Scale-Up Interconnect Technologies - UALink SuperNode and CXL Memory Pool_v2",
+        "UALink SuperNode"
+      ],
+      [
+        "7137 - Server Scale-Up Interconnect Technologies - UALink SuperNode and CXL Memory Pool_v2",
+        "Liufang"
+      ],
+      [
+        "7137 - Server Scale-Up Interconnect Technologies - UALink SuperNode and CXL Memory Pool_v2",
+        "Research Report Library"
+      ]
+    ],
+    "count": 8,
+    "create_time": 1773168082,
+    "update_time": 1773168082,
+    "_id": "doc-c199ec006c1f0210255474d03892899b"
+  },
+  "doc-e4173aa4ed70cd6d625ee79aebe2a677": {
+    "relation_pairs": [
+      [
+        "7402 - Use of eSFI and PCIe-MI for Security Quarantine_v2",
+        "eSFI"
+      ],
+      [
+        "2026-03-07",
+        "7402 - Use of eSFI and PCIe-MI for Security Quarantine_v2"
+      ],
+      [
+        "7402 - Use of eSFI and PCIe-MI for Security Quarantine_v2",
+        "PDF File"
+      ],
+      [
+        "7402 - Use of eSFI and PCIe-MI for Security Quarantine_v2",
+        "Unknown Author"
+      ],
+      [
+        "7402 - Use of eSFI and PCIe-MI for Security Quarantine_v2",
+        "Server Architecture"
+      ],
+      [
+        "7402 - Use of eSFI and PCIe-MI for Security Quarantine_v2",
+        "Security Quarantine"
+      ],
+      [
+        "7402 - Use of eSFI and PCIe-MI for Security Quarantine_v2",
+        "PCIe-MI"
+      ]
+    ],
+    "count": 7,
+    "create_time": 1773168113,
+    "update_time": 1773168113,
+    "_id": "doc-e4173aa4ed70cd6d625ee79aebe2a677"
+  },
+  "doc-99116bb42021db2c45f55b65671842c0": {
+    "relation_pairs": [
+      [
+        "7532 - Multi-Headed Composable Memory Appliance MHCMA Next-Gen_v2_v2",
+        "Unknown Author"
+      ],
+      [
+        "7532 - Multi-Headed Composable Memory Appliance MHCMA Next-Gen_v2_v2",
+        "Multi-Headed Composable Memory Appliance MHCMA"
+      ],
+      [
+        "2026-03-07 19:05:21",
+        "7532 - Multi-Headed Composable Memory Appliance MHCMA Next-Gen_v2_v2"
+      ],
+      [
+        "1.72 MB",
+        "7532 - Multi-Headed Composable Memory Appliance MHCMA Next-Gen_v2_v2"
+      ],
+      [
+        "7532 - Multi-Headed Composable Memory Appliance MHCMA Next-Gen_v2_v2",
+        "PDF"
+      ],
+      [
+        "7532 - Multi-Headed Composable Memory Appliance MHCMA Next-Gen_v2_v2",
+        "Server Architecture Research Library"
+      ],
+      [
+        "7532 - Multi-Headed Composable Memory Appliance MHCMA Next-Gen_v2_v2",
+        "Core Priority"
+      ]
+    ],
+    "count": 7,
+    "create_time": 1773168114,
+    "update_time": 1773168114,
+    "_id": "doc-99116bb42021db2c45f55b65671842c0"
+  },
+  "doc-71812bc0fbded857fe0a4b82f5223b84": {
+    "relation_pairs": [
+      [
+        "2019 HarDNet A Low Memory Traffic Network.pdf",
+        "Report on HarDNet"
+      ],
+      [
+        "PDF Format",
+        "Report on HarDNet"
+      ],
+      [
+        "Report on HarDNet",
+        "Unknown Author"
+      ],
+      [
+        "Core Priority",
+        "Report on HarDNet"
+      ],
+      [
+        "Liufang",
+        "Local Document Link"
+      ],
+      [
+        "HarDNet",
+        "Report on HarDNet"
+      ],
+      [
+        "Local Document Link",
+        "Report on HarDNet"
+      ]
+    ],
+    "count": 7,
+    "create_time": 1773168133,
+    "update_time": 1773168133,
+    "_id": "doc-71812bc0fbded857fe0a4b82f5223b84"
+  },
+  "doc-7dd14306d9061dddba8b150d9c7d98b0": {
+    "relation_pairs": [
+      [
+        "AI Workload",
+        "Arm CSA"
+      ],
+      [
+        "Meeting AI Workload Demands with Arm CSA and Chiplet",
+        "Server Architecture"
+      ],
+      [
+        "AI Workload",
+        "Chiplet"
+      ],
+      [
+        "Meeting AI Workload Demands with Arm CSA and Chiplet",
+        "PDF"
+      ],
+      [
+        "Meeting AI Workload Demands with Arm CSA and Chiplet",
+        "Report"
+      ],
+      [
+        "Arm",
+        "Arm CSA"
+      ]
+    ],
+    "count": 6,
+    "create_time": 1773168150,
+    "update_time": 1773168150,
+    "_id": "doc-7dd14306d9061dddba8b150d9c7d98b0"
+  },
+  "doc-75a98834e3066a94c413caadb98ef3bd": {
+    "relation_pairs": [
+      [
+        "20250807 DRAM 304 1 An",
+        "Server Architecture Research Library"
+      ],
+      [
+        "20250807 DRAM 304 1 An",
+        "2026-03-08"
+      ],
+      [
+        "20250807 DRAM 304 1 An",
+        "DRAM"
+      ],
+      [
+        "20250807 DRAM 304 1 An",
+        "Unknown Author"
+      ],
+      [
+        "20250807 DRAM 304 1 An",
+        "File Path"
+      ],
+      [
+        "20250807 DRAM 304 1 An",
+        "PDF"
+      ]
+    ],
+    "count": 6,
+    "create_time": 1773168171,
+    "update_time": 1773168171,
+    "_id": "doc-75a98834e3066a94c413caadb98ef3bd"
+  },
+  "doc-97525ceaf715f1ad94448c8abc5642db": {
+    "relation_pairs": [
+      [
+        "20250807 DRAM 304 1 SO",
+        "Core Priority"
+      ],
+      [
+        "20250807 DRAM 304 1 SO",
+        "Research Report Library"
+      ],
+      [
+        "20250807 DRAM 304 1 SO",
+        "Unknown Author"
+      ],
+      [
+        "20250807 DRAM 304 1 SO",
+        "PDF"
+      ],
+      [
+        "20250807 DRAM 304 1 SO",
+        "2026-03-08"
+      ],
+      [
+        "20250807 DRAM 304 1 SO",
+        "Liufang"
+      ],
+      [
+        "20250807 DRAM 304 1 SO",
+        "DRAM"
+      ],
+      [
+        "20250807 DRAM 304 1 SO",
+        "Server Architecture"
+      ]
+    ],
+    "count": 8,
+    "create_time": 1773168195,
+    "update_time": 1773168195,
+    "_id": "doc-97525ceaf715f1ad94448c8abc5642db"
+  },
+  "doc-0559e293569f15eabf0cd28fac35d14f": {
+    "relation_pairs": [
+      [
+        "20250806 CXLT 203 1 Kim Updated Copy",
+        "2026-03-08"
+      ],
+      [
+        "20250806 CXLT 203 1 Kim Updated Copy",
+        "Liufang"
+      ],
+      [
+        "20250806 CXLT 203 1 Kim Updated Copy",
+        "Research Report Library"
+      ],
+      [
+        "20250806 CXLT 203 1 Kim Updated Copy",
+        "Server Architecture"
+      ],
+      [
+        "20250806 CXLT 203 1 Kim Updated Copy",
+        "File Path"
+      ],
+      [
+        "20250806 CXLT 203 1 Kim Updated Copy",
+        "PDF Format"
+      ]
+    ],
+    "count": 6,
+    "create_time": 1773168217,
+    "update_time": 1773168217,
+    "_id": "doc-0559e293569f15eabf0cd28fac35d14f"
+  },
+  "doc-ef9903a22739411840df5a1652b687d5": {
+    "relation_pairs": [
+      [
+        "20250806 INDA 202 1 CXL Consortium",
+        "INDA 202"
+      ],
+      [
+        "20250806 INDA 202 1 CXL Consortium",
+        "Liufang"
+      ],
+      [
+        "20250806 INDA 202 1 CXL Consortium",
+        "Server Architecture"
+      ],
+      [
+        "20250806 INDA 202 1 CXL Consortium",
+        "CXL Consortium"
+      ],
+      [
+        "20250806 INDA 202 1 CXL Consortium",
+        "PDF"
+      ],
+      [
+        "20250806",
+        "20250806 INDA 202 1 CXL Consortium"
+      ]
+    ],
+    "count": 6,
+    "create_time": 1773168248,
+    "update_time": 1773168248,
+    "_id": "doc-ef9903a22739411840df5a1652b687d5"
+  },
+  "doc-c461db61ef0a922e7d7292d8516c1147": {
+    "relation_pairs": [
+      [
+        "PCIe Infrastructure",
+        "PCIe MI"
+      ],
+      [
+        "Manage and Secure your PCIe Infrastructure using eSFI and PCIe MI",
+        "Unknown Author"
+      ],
+      [
+        "PCIe Infrastructure",
+        "eSFI"
+      ],
+      [
+        "Manage and Secure your PCIe Infrastructure using eSFI and PCIe MI",
+        "PDF Format"
+      ],
+      [
+        "Manage and Secure your PCIe Infrastructure using eSFI and PCIe MI",
+        "Report"
+      ],
+      [
+        "2026-03-07",
+        "Manage and Secure your PCIe Infrastructure using eSFI and PCIe MI"
+      ],
+      [
+        "Manage and Secure your PCIe Infrastructure using eSFI and PCIe MI",
+        "Server Architecture"
+      ]
+    ],
+    "count": 7,
+    "create_time": 1773168276,
+    "update_time": 1773168276,
+    "_id": "doc-c461db61ef0a922e7d7292d8516c1147"
+  },
+  "doc-11fbfb718c91a1cacf50d05e7bcc41bf": {
+    "relation_pairs": [
+      [
+        "2026-03-08",
+        "Dynamic Memory Networks for Visual and Textual Question Answering"
+      ],
+      [
+        "Dynamic Memory Networks for Visual and Textual Question Answering",
+        "PDF Format"
+      ],
+      [
+        "Dynamic Memory Networks for Visual and Textual Question Answering",
+        "Local Document Link"
+      ],
+      [
+        "Dynamic Memory Networks",
+        "Dynamic Memory Networks for Visual and Textual Question Answering"
+      ],
+      [
+        "Dynamic Memory Networks for Visual and Textual Question Answering",
+        "Research Report Repository"
+      ],
+      [
+        "Liufang",
+        "Local Document Link"
+      ],
+      [
+        "Dynamic Memory Networks for Visual and Textual Question Answering",
+        "Unknown Author"
+      ]
+    ],
+    "count": 7,
+    "create_time": 1773168295,
+    "update_time": 1773168295,
+    "_id": "doc-11fbfb718c91a1cacf50d05e7bcc41bf"
+  },
+  "doc-03978f9015d72cc2c030ac8e6447fed7": {
+    "relation_pairs": [
+      [
+        "Astera Labs",
+        "UALink Retimers"
+      ],
+      [
+        "AI Scaling",
+        "Server Architecture"
+      ],
+      [
+        "AI Scaling",
+        "PCIe Ethernet"
+      ],
+      [
+        "Astera Labs",
+        "Astera Labs Scaling AI with PCIe Ethernet and UALink Retimers"
+      ],
+      [
+        "Astera Labs",
+        "PCIe Ethernet"
+      ],
+      [
+        "AI Scaling",
+        "UALink Retimers"
+      ],
+      [
+        "Astera Labs Scaling AI with PCIe Ethernet and UALink Retimers",
+        "Server Architecture"
+      ]
+    ],
+    "count": 7,
+    "create_time": 1773168314,
+    "update_time": 1773168314,
+    "_id": "doc-03978f9015d72cc2c030ac8e6447fed7"
+  },
+  "doc-b29d2932bdd25f9f58a553637e48ab19": {
+    "relation_pairs": [
+      [
+        "20250807 CXLT 302 1 Pan copy",
+        "Liufang"
+      ],
+      [
+        "20250807 CXLT 302 1 Pan copy",
+        "Server Architecture Research Report Library"
+      ],
+      [
+        "20250807 CXLT 302 1 Pan copy",
+        "Unknown Author"
+      ],
+      [
+        "20250807 CXLT 302 1 Pan copy",
+        "File Path"
+      ],
+      [
+        "20250807 CXLT 302 1 Pan copy",
+        "PDF"
+      ],
+      [
+        "20250807 CXLT 302 1 Pan copy",
+        "Core Priority Tag"
+      ]
+    ],
+    "count": 6,
+    "create_time": 1773168352,
+    "update_time": 1773168352,
+    "_id": "doc-b29d2932bdd25f9f58a553637e48ab19"
+  },
+  "doc-538e9be43efc9f4740b1699a18d33882": {
+    "relation_pairs": [
+      [
+        "Report",
+        "Trust at 64 GT/s Security Considerations for PCIe 6 Switch Deployments"
+      ],
+      [
+        "Trust at 64 GT/s Security Considerations for PCIe 6 Switch Deployments",
+        "Unknown"
+      ],
+      [
+        "2026-03-07",
+        "Trust at 64 GT/s Security Considerations for PCIe 6 Switch Deployments"
+      ],
+      [
+        "Server Architecture",
+        "Trust at 64 GT/s Security Considerations for PCIe 6 Switch Deployments"
+      ],
+      [
+        "PCIe 6 Switch",
+        "Trust at 64 GT/s Security Considerations for PCIe 6 Switch Deployments"
+      ],
+      [
+        "PDF",
+        "Trust at 64 GT/s Security Considerations for PCIe 6 Switch Deployments"
+      ]
+    ],
+    "count": 6,
+    "create_time": 1773168379,
+    "update_time": 1773168379,
+    "_id": "doc-538e9be43efc9f4740b1699a18d33882"
+  },
+  "doc-e0849f10e95d7677ebed5f2a29c650a2": {
+    "relation_pairs": [
+      [
+        "20250807 DRAM 303 1 Kamath Copy",
+        "PDF"
+      ],
+      [
+        "20250807 DRAM 303 1 Kamath Copy",
+        "2026-03-08"
+      ],
+      [
+        "20250807 DRAM 303 1 Kamath Copy",
+        "Core Report Library"
+      ],
+      [
+        "20250807 DRAM 303 1 Kamath Copy",
+        "Liufang"
+      ],
+      [
+        "20250807 DRAM 303 1 Kamath Copy",
+        "DRAM"
+      ],
+      [
+        "20250807 DRAM 303 1 Kamath Copy",
+        "Unknown Author"
+      ],
+      [
+        "20250807 DRAM 303 1 Kamath Copy",
+        "Server Architecture"
+      ]
+    ],
+    "count": 7,
+    "create_time": 1773168402,
+    "update_time": 1773168402,
+    "_id": "doc-e0849f10e95d7677ebed5f2a29c650a2"
+  },
+  "doc-e43b9c7c8f30976446ff07cfb8acd723": {
+    "relation_pairs": [
+      [
+        "20250807 DRAM 303 1 Potter copy",
+        "Liufang"
+      ],
+      [
+        "20250807 DRAM 303 1 Potter copy",
+        "DRAM"
+      ],
+      [
+        "20250807 DRAM 303 1 Potter copy",
+        "Server Architecture"
+      ],
+      [
+        "1.38 MB",
+        "20250807 DRAM 303 1 Potter copy"
+      ],
+      [
+        "20250807 DRAM 303 1 Potter copy",
+        "Unknown Author"
+      ],
+      [
+        "20250807 DRAM 303 1 Potter copy",
+        "PDF"
+      ],
+      [
+        "20250807 DRAM 303 1 Potter copy",
+        "2026-03-08"
+      ]
+    ],
+    "count": 7,
+    "create_time": 1773168424,
+    "update_time": 1773168424,
+    "_id": "doc-e43b9c7c8f30976446ff07cfb8acd723"
+  },
+  "doc-63f83f5a5cef6dac282d861fd6da9e77": {
+    "relation_pairs": [
+      [
+        "Core Report",
+        "Server Architecture"
+      ],
+      [
+        "PCIe Completion Timeout Error",
+        "Server Architecture"
+      ],
+      [
+        "Meta",
+        "Meta AI ML System"
+      ],
+      [
+        "Meta AI ML System",
+        "PDF Document"
+      ],
+      [
+        "Meta AI ML System",
+        "PCIe Completion Timeout Error"
+      ],
+      [
+        "Meta AI ML System",
+        "RPPIO Error Reporting"
+      ]
+    ],
+    "count": 6,
+    "create_time": 1773168447,
+    "update_time": 1773168447,
+    "_id": "doc-63f83f5a5cef6dac282d861fd6da9e77"
+  },
+  "doc-900ad8221a96dafc212eef7868a063e8": {
+    "relation_pairs": [
+      [
+        "20250807 CXLT 304 1 PoChunWang copy",
+        "Unknown"
+      ],
+      [
+        "20250807 CXLT 304 1 PoChunWang copy",
+        "PoChunWang"
+      ],
+      [
+        "20250807 CXLT 304 1 PoChunWang copy",
+        "Research Report Library"
+      ],
+      [
+        "20250807 CXLT 304 1 PoChunWang copy",
+        "Server Architecture"
+      ],
+      [
+        "20250807 CXLT 304 1 PoChunWang copy",
+        "PDF"
+      ]
+    ],
+    "count": 5,
+    "create_time": 1773168475,
+    "update_time": 1773168475,
+    "_id": "doc-900ad8221a96dafc212eef7868a063e8"
+  },
+  "doc-7480ef95765b1d3cb3e7cc5a73e67e91": {
+    "relation_pairs": [
+      [
+        "Mt. Diablo",
+        "Mt. Diablo Server Scope"
+      ],
+      [
+        "Mt. Diablo Server Scope",
+        "Unknown Author"
+      ],
+      [
+        "Mt. Diablo Server Scope",
+        "Server Architecture"
+      ],
+      [
+        "File Path",
+        "Mt. Diablo Server Scope"
+      ],
+      [
+        "2026-03-07",
+        "Mt. Diablo Server Scope"
+      ],
+      [
+        "Mt. Diablo Server Scope",
+        "PDF Format"
+      ],
+      [
+        "Mt. Diablo Server Scope",
+        "Research Library"
+      ],
+      [
+        "Core Report",
+        "Mt. Diablo Server Scope"
+      ]
+    ],
+    "count": 8,
+    "create_time": 1773168516,
+    "update_time": 1773168516,
+    "_id": "doc-7480ef95765b1d3cb3e7cc5a73e67e91"
+  },
+  "doc-f023cd84d3e2ed9cf707d62efd5ddbb9": {
+    "relation_pairs": [
+      [
+        "End to End Management of a CXL Enabled Datacenter Memory Fabric",
+        "Report"
+      ],
+      [
+        "CXL",
+        "End to End Management of a CXL Enabled Datacenter Memory Fabric"
+      ],
+      [
+        "End to End Management of a CXL Enabled Datacenter Memory Fabric",
+        "Unknown Author"
+      ],
+      [
+        "End to End Management of a CXL Enabled Datacenter Memory Fabric",
+        "Server Architecture"
+      ],
+      [
+        "Datacenter Memory Fabric",
+        "End to End Management of a CXL Enabled Datacenter Memory Fabric"
+      ],
+      [
+        "Core Priority",
+        "End to End Management of a CXL Enabled Datacenter Memory Fabric"
+      ],
+      [
+        "End to End Management of a CXL Enabled Datacenter Memory Fabric",
+        "Vectorized"
+      ],
+      [
+        "End to End Management of a CXL Enabled Datacenter Memory Fabric",
+        "PDF"
+      ],
+      [
+        "2026-03-07",
+        "End to End Management of a CXL Enabled Datacenter Memory Fabric"
+      ]
+    ],
+    "count": 9,
+    "create_time": 1773168544,
+    "update_time": 1773168544,
+    "_id": "doc-f023cd84d3e2ed9cf707d62efd5ddbb9"
+  },
+  "doc-54b80862fb010b672af4957bef254768": {
+    "relation_pairs": [
+      [
+        "Liufang",
+        "PDF Document"
+      ],
+      [
+        "APEC Advanced PCIe Enclosure",
+        "HSIO Interconnection"
+      ],
+      [
+        "APEC",
+        "APEC Advanced PCIe Enclosure"
+      ],
+      [
+        "Core Research Report",
+        "PDF Document"
+      ],
+      [
+        "APEC Advanced PCIe Enclosure",
+        "PCIe"
+      ],
+      [
+        "Core Research Report",
+        "Server Architecture"
+      ]
+    ],
+    "count": 6,
+    "create_time": 1773168562,
+    "update_time": 1773168562,
+    "_id": "doc-54b80862fb010b672af4957bef254768"
+  },
+  "doc-fed70deae9eaf1b4120dec7d0e6498bd": {
+    "relation_pairs": [
+      [
+        "Community Panel Enabling Immersion by Design Aligning Server and Cooling Communities",
+        "Liufang"
+      ],
+      [
+        "Community Panel Enabling Immersion by Design Aligning Server and Cooling Communities",
+        "Core Priority"
+      ],
+      [
+        "Community Panel Enabling Immersion by Design Aligning Server and Cooling Communities",
+        "Unknown"
+      ],
+      [
+        "Community Panel Enabling Immersion by Design Aligning Server and Cooling Communities",
+        "Server Architecture Research Library"
+      ],
+      [
+        "Community Panel Enabling Immersion by Design Aligning Server and Cooling Communities",
+        "PDF"
+      ]
+    ],
+    "count": 5,
+    "create_time": 1773168585,
+    "update_time": 1773168585,
+    "_id": "doc-fed70deae9eaf1b4120dec7d0e6498bd"
+  },
+  "doc-87108b0686e8d70e6c11c7ad5b493573": {
+    "relation_pairs": [
+      [
+        "Emerging Software Patterns for Programming New Memory Devices and Interfaces",
+        "PDF Format"
+      ],
+      [
+        "1.43 MB",
+        "Emerging Software Patterns for Programming New Memory Devices and Interfaces"
+      ],
+      [
+        "Core Research Report",
+        "Emerging Software Patterns for Programming New Memory Devices and Interfaces"
+      ],
+      [
+        "Emerging Software Patterns for Programming New Memory Devices and Interfaces",
+        "File Link"
+      ],
+      [
+        "2026-03-07",
+        "Emerging Software Patterns for Programming New Memory Devices and Interfaces"
+      ],
+      [
+        "Emerging Software Patterns for Programming New Memory Devices and Interfaces",
+        "Unknown Author"
+      ],
+      [
+        "2026-03-07 19:05:22",
+        "Emerging Software Patterns for Programming New Memory Devices and Interfaces"
+      ],
+      [
+        "Emerging Software Patterns for Programming New Memory Devices and Interfaces",
+        "Server Architecture Research Library"
+      ]
+    ],
+    "count": 8,
+    "create_time": 1773168617,
+    "update_time": 1773168617,
+    "_id": "doc-87108b0686e8d70e6c11c7ad5b493573"
+  },
+  "doc-4fad482b7206fdfbdc48ed9c3de6c7af": {
+    "relation_pairs": [
+      [
+        "Heterogeneous Memory Opportunity with Agentic AI and Memory Centric Computing",
+        "PDF"
+      ],
+      [
+        "Report",
+        "Server Architecture Research Library"
+      ],
+      [
+        "Heterogeneous Memory Opportunity with Agentic AI and Memory Centric Computing",
+        "Report"
+      ],
+      [
+        "Agentic AI",
+        "Heterogeneous Memory Opportunity with Agentic AI and Memory Centric Computing"
+      ],
+      [
+        "Heterogeneous Memory",
+        "Heterogeneous Memory Opportunity with Agentic AI and Memory Centric Computing"
+      ],
+      [
+        "Heterogeneous Memory Opportunity with Agentic AI and Memory Centric Computing",
+        "Liufang"
+      ],
+      [
+        "Heterogeneous Memory Opportunity with Agentic AI and Memory Centric Computing",
+        "Memory-Centric Computing"
+      ]
+    ],
+    "count": 7,
+    "create_time": 1773168653,
+    "update_time": 1773168653,
+    "_id": "doc-4fad482b7206fdfbdc48ed9c3de6c7af"
+  },
+  "doc-b71eacebd07cf22c28bd1377859a2954": {
+    "relation_pairs": [
+      [
+        "Interconnects and Connectivity for At Scale AI Shaping the Future of Interconnects and Memory Fabric for Open AI Systems",
+        "Open AI Systems"
+      ],
+      [
+        "Interconnects and Connectivity for At Scale AI Shaping the Future of Interconnects and Memory Fabric for Open AI Systems",
+        "Server Architecture"
+      ],
+      [
+        "File Path",
+        "Interconnects and Connectivity for At Scale AI Shaping the Future of Interconnects and Memory Fabric for Open AI Systems"
+      ],
+      [
+        "Interconnects and Connectivity for At Scale AI Shaping the Future of Interconnects and Memory Fabric for Open AI Systems",
+        "Memory Fabric"
+      ],
+      [
+        "File Path",
+        "Liufang"
+      ],
+      [
+        "Interconnects and Connectivity for At Scale AI Shaping the Future of Interconnects and Memory Fabric for Open AI Systems",
+        "Report"
+      ],
+      [
+        "AI Interconnects",
+        "Interconnects and Connectivity for At Scale AI Shaping the Future of Interconnects and Memory Fabric for Open AI Systems"
+      ],
+      [
+        "PDF",
+        "Report"
+      ]
+    ],
+    "count": 8,
+    "create_time": 1773168680,
+    "update_time": 1773168680,
+    "_id": "doc-b71eacebd07cf22c28bd1377859a2954"
+  },
+  "doc-55f9a5f9dbd8556e5eeb84b9bb117c15": {
+    "relation_pairs": [
+      [
+        "Harmonia Algorithm Hardware Co Design for Memory and Compute Efficient BFP based LLM Inference",
+        "Server Architecture"
+      ],
+      [
+        "BFP",
+        "Harmonia"
+      ],
+      [
+        "Harmonia Algorithm Hardware Co Design for Memory and Compute Efficient BFP based LLM Inference",
+        "Unknown Author"
+      ],
+      [
+        "Harmonia Algorithm Hardware Co Design for Memory and Compute Efficient BFP based LLM Inference",
+        "LLM Inference"
+      ],
+      [
+        "BFP",
+        "Harmonia Algorithm Hardware Co Design for Memory and Compute Efficient BFP based LLM Inference"
+      ],
+      [
+        "2026-03-08",
+        "Harmonia Algorithm Hardware Co Design for Memory and Compute Efficient BFP based LLM Inference"
+      ],
+      [
+        "Harmonia Algorithm Hardware Co Design for Memory and Compute Efficient BFP based LLM Inference",
+        "Report"
+      ]
+    ],
+    "count": 7,
+    "create_time": 1773168703,
+    "update_time": 1773168703,
+    "_id": "doc-55f9a5f9dbd8556e5eeb84b9bb117c15"
+  },
+  "doc-25afa8d829c71db97875281976c4e594": {
+    "relation_pairs": [
+      [
+        "20250807 DRAM 303 1 Sharovar copy",
+        "Server Architecture Research Library"
+      ],
+      [
+        "20250807 DRAM 303 1 Sharovar copy",
+        "PDF"
+      ],
+      [
+        "20250807 DRAM 303 1 Sharovar copy",
+        "Sharovar"
+      ],
+      [
+        "20250807 DRAM 303 1 Sharovar copy",
+        "Liufang"
+      ],
+      [
+        "20250807 DRAM 303 1 Sharovar copy",
+        "2026-03-08"
+      ],
+      [
+        "20250807 DRAM 303 1 Sharovar copy",
+        "DRAM"
+      ],
+      [
+        "20250807 DRAM 303 1 Sharovar copy",
+        "Unknown Author"
+      ]
+    ],
+    "count": 7,
+    "create_time": 1773168734,
+    "update_time": 1773168734,
+    "_id": "doc-25afa8d829c71db97875281976c4e594"
+  },
+  "doc-01a392db9d8bb576ab6ed5aff9f9d578": {
+    "relation_pairs": [
+      [
+        "PDF Format",
+        "Report"
+      ],
+      [
+        "2026-03-07 19:05:23",
+        "Report"
+      ],
+      [
+        "K8s OCP Reference Implementation",
+        "Open Compute Project"
+      ],
+      [
+        "K8s OCP Reference Implementation",
+        "Kubernetes"
+      ],
+      [
+        "1.20 MB",
+        "Report"
+      ],
+      [
+        "File Path",
+        "Report"
+      ],
+      [
+        "2026-03-07",
+        "Report"
+      ],
+      [
+        "DC Memory Fabric Management",
+        "K8s OCP Reference Implementation"
+      ],
+      [
+        "Report",
+        "Unknown"
+      ],
+      [
+        "K8s OCP Reference Implementation",
+        "Report"
+      ],
+      [
+        "DC Memory Fabric Management",
+        "Report"
+      ]
+    ],
+    "count": 11,
+    "create_time": 1773168777,
+    "update_time": 1773168777,
+    "_id": "doc-01a392db9d8bb576ab6ed5aff9f9d578"
+  },
+  "doc-1fc91c144f09ce8648b8a92d03b6a031": {
+    "relation_pairs": [
+      [
+        "PCIe 7.0",
+        "Report"
+      ],
+      [
+        "File Size",
+        "Report"
+      ],
+      [
+        "OCP Server Infrastructure",
+        "PCIe 7.0"
+      ],
+      [
+        "Open Compute Project",
+        "Report"
+      ],
+      [
+        "Report",
+        "研报库/核心】服务器架构"
+      ],
+      [
+        "Report",
+        "入库时间"
+      ],
+      [
+        "Report",
+        "优先级/核心"
+      ],
+      [
+        "OCP Server Infrastructure",
+        "Report"
+      ]
+    ],
+    "count": 8,
+    "create_time": 1773168801,
+    "update_time": 1773168801,
+    "_id": "doc-1fc91c144f09ce8648b8a92d03b6a031"
+  },
+  "doc-266b57d952795e78de135dd7ea0d1822": {
+    "relation_pairs": [
+      [
+        "AI Deep Summary",
+        "Super Fluid Technology Application in High Density Server Product"
+      ],
+      [
+        "PDF",
+        "Super Fluid Technology Application in High Density Server Product"
+      ],
+      [
+        "Server Architecture Research Library",
+        "Super Fluid Technology Application in High Density Server Product"
+      ],
+      [
+        "Core Priority",
+        "Super Fluid Technology Application in High Density Server Product"
+      ],
+      [
+        "Super Fluid Technology Application in High Density Server Product",
+        "Unknown Author"
+      ],
+      [
+        "Local Document Link",
+        "Super Fluid Technology Application in High Density Server Product"
+      ]
+    ],
+    "count": 6,
+    "create_time": 1773168830,
+    "update_time": 1773168830,
+    "_id": "doc-266b57d952795e78de135dd7ea0d1822"
+  },
+  "doc-57adc984bf533daad96d70c0a73d33e0": {
+    "relation_pairs": [
+      [
+        "02 02谈谈大模型架构的演进之路, The Art of memory.",
+        "Unknown Author"
+      ],
+      [
+        "02 02谈谈大模型架构的演进之路, The Art of memory.",
+        "Core Server Architecture"
+      ],
+      [
+        "02 02谈谈大模型架构的演进之路, The Art of memory.",
+        "File Path"
+      ],
+      [
+        "02 02谈谈大模型架构的演进之路, The Art of memory.",
+        "Vectorization"
+      ],
+      [
+        "02 02谈谈大模型架构的演进之路, The Art of memory.",
+        "Core Research Repository"
+      ],
+      [
+        "02 02谈谈大模型架构的演进之路, The Art of memory.",
+        "Report"
+      ],
+      [
+        "02 02谈谈大模型架构的演进之路, The Art of memory.",
+        "2026-03-08"
+      ],
+      [
+        "02 02谈谈大模型架构的演进之路, The Art of memory.",
+        "Markdown Format"
+      ],
+      [
+        "02 02谈谈大模型架构的演进之路, The Art of memory.",
+        "Ingestion Time"
+      ],
+      [
+        "02 02谈谈大模型架构的演进之路, The Art of memory.",
+        "File Size"
+      ]
+    ],
+    "count": 10,
+    "create_time": 1773168871,
+    "update_time": 1773168871,
+    "_id": "doc-57adc984bf533daad96d70c0a73d33e0"
+  },
+  "doc-fde36569763e8e63f5879815d072c123": {
+    "relation_pairs": [
+      [
+        "Mixing PCIe 5 and PCIe 6 in AI Platforms Benefits and Challenges",
+        "PDF"
+      ],
+      [
+        "AI Platforms",
+        "PCIe 5"
+      ],
+      [
+        "Mixing PCIe 5 and PCIe 6 in AI Platforms Benefits and Challenges",
+        "Report"
+      ],
+      [
+        "AI Platforms",
+        "PCIe 6"
+      ],
+      [
+        "Mixing PCIe 5 and PCIe 6 in AI Platforms Benefits and Challenges",
+        "Server Architecture"
+      ],
+      [
+        "2026-03-07",
+        "Mixing PCIe 5 and PCIe 6 in AI Platforms Benefits and Challenges"
+      ]
+    ],
+    "count": 6,
+    "create_time": 1773168891,
+    "update_time": 1773168891,
+    "_id": "doc-fde36569763e8e63f5879815d072c123"
+  },
+  "doc-1bbafe9a71a73e07d029b3bfa3f85791": {
+    "relation_pairs": [
+      [
+        "M.2",
+        "NVMe"
+      ],
+      [
+        "OCP Compute Servers",
+        "Open Compute Project"
+      ],
+      [
+        "From M.2 to EDSFF Evolving NVMe Form Factors in OCP Compute Servers",
+        "OCP Compute Servers"
+      ],
+      [
+        "From M.2 to EDSFF Evolving NVMe Form Factors in OCP Compute Servers",
+        "PDF"
+      ],
+      [
+        "EDSFF",
+        "NVMe"
+      ],
+      [
+        "EDSFF",
+        "M.2"
+      ]
+    ],
+    "count": 6,
+    "create_time": 1773168910,
+    "update_time": 1773168910,
+    "_id": "doc-1bbafe9a71a73e07d029b3bfa3f85791"
+  },
+  "doc-1bf489aadb0f21630c59b8361f23e8f3": {
+    "relation_pairs": [
+      [
+        "20250807 CXLT 301 1 LEE v2 copy",
+        "File Link"
+      ],
+      [
+        "20250807 CXLT 301 1 LEE v2 copy",
+        "Research Report Library"
+      ],
+      [
+        "20250807 CXLT 301 1 LEE v2 copy",
+        "PDF"
+      ],
+      [
+        "20250807 CXLT 301 1 LEE v2 copy",
+        "Vectorization"
+      ],
+      [
+        "20250807 CXLT 301 1 LEE v2 copy",
+        "2026-03-08"
+      ],
+      [
+        "20250807 CXLT 301 1 LEE v2 copy",
+        "Server Architecture"
+      ]
+    ],
+    "count": 6,
+    "create_time": 1773168942,
+    "update_time": 1773168942,
+    "_id": "doc-1bf489aadb0f21630c59b8361f23e8f3"
+  },
+  "doc-81d317b0bc2c9a54d84d534d33e7b288": {
+    "relation_pairs": [
+      [
+        "DeepSeek Engram Conditional Memory",
+        "Report on DeepSeek Engram Conditional Memory"
+      ],
+      [
+        "File Size 0.07 MB",
+        "Report on DeepSeek Engram Conditional Memory"
+      ],
+      [
+        "Local Document File",
+        "Report on DeepSeek Engram Conditional Memory"
+      ],
+      [
+        "2026-03-08",
+        "Report on DeepSeek Engram Conditional Memory"
+      ],
+      [
+        "Markdown Format",
+        "Report on DeepSeek Engram Conditional Memory"
+      ],
+      [
+        "Report on DeepSeek Engram Conditional Memory",
+        "Unknown Author"
+      ],
+      [
+        "Ingestion Time 2026-03-08 18:48:45",
+        "Report on DeepSeek Engram Conditional Memory"
+      ],
+      [
+        "Report on DeepSeek Engram Conditional Memory",
+        "Server Architecture Research Library"
+      ]
+    ],
+    "count": 8,
+    "create_time": 1773168969,
+    "update_time": 1773168969,
+    "_id": "doc-81d317b0bc2c9a54d84d534d33e7b288"
+  },
+  "doc-41e5bcd0e2dad86fc34ddddd1afe3ac0": {
+    "relation_pairs": [
+      [
+        "End To End Memory Networks",
+        "Local Document Link"
+      ],
+      [
+        "End To End Memory Networks",
+        "PDF Format"
+      ],
+      [
+        "Core Priority",
+        "End To End Memory Networks"
+      ],
+      [
+        "End To End Memory Networks",
+        "Research Report Library"
+      ],
+      [
+        "2026-03-08 12:00:45",
+        "End To End Memory Networks"
+      ],
+      [
+        "0.62 MB",
+        "End To End Memory Networks"
+      ],
+      [
+        "End To End Memory Networks",
+        "Server Architecture"
+      ],
+      [
+        "2026-03-08",
+        "End To End Memory Networks"
+      ],
+      [
+        "End To End Memory Networks",
+        "Unknown Author"
+      ]
+    ],
+    "count": 9,
+    "create_time": 1773169003,
+    "update_time": 1773169003,
+    "_id": "doc-41e5bcd0e2dad86fc34ddddd1afe3ac0"
+  },
+  "doc-fa73bfb5833304f96f036b9a9653ece2": {
+    "relation_pairs": [
+      [
+        "Arms System Monitoring Control Framework SMCF",
+        "Lifecycle System Monitoring"
+      ],
+      [
+        "Arms System Monitoring Control Framework SMCF",
+        "PDF Report"
+      ],
+      [
+        "PDF Report",
+        "Server Architecture"
+      ],
+      [
+        "File Path",
+        "PDF Report"
+      ],
+      [
+        "Arm",
+        "Arms System Monitoring Control Framework SMCF"
+      ],
+      [
+        "File Path",
+        "Liufang"
+      ],
+      [
+        "Lifecycle System Monitoring",
+        "proteanTecs"
+      ],
+      [
+        "PDF Report",
+        "proteanTecs"
+      ]
+    ],
+    "count": 8,
+    "create_time": 1773169025,
+    "update_time": 1773169025,
+    "_id": "doc-fa73bfb5833304f96f036b9a9653ece2"
+  },
+  "doc-1d28fc57f74bd152b123d626835823bc": {
+    "relation_pairs": [
+      [
+        "Liufang",
+        "PDF Document"
+      ],
+      [
+        "2026-03-07",
+        "Technical Update"
+      ],
+      [
+        "PDF Document",
+        "Technical Update"
+      ],
+      [
+        "OCP Composable Memory Systems CMS Sub Project",
+        "Open Compute Project"
+      ],
+      [
+        "Composable Memory Systems",
+        "OCP Composable Memory Systems CMS Sub Project"
+      ],
+      [
+        "OCP Composable Memory Systems CMS Sub Project",
+        "Server Architecture"
+      ],
+      [
+        "Core Priority",
+        "Technical Update"
+      ],
+      [
+        "OCP Composable Memory Systems CMS Sub Project",
+        "Technical Update"
+      ]
+    ],
+    "count": 8,
+    "create_time": 1773169048,
+    "update_time": 1773169048,
+    "_id": "doc-1d28fc57f74bd152b123d626835823bc"
+  },
+  "doc-1d26679a5c7d4be95dc3163cdd74635d": {
+    "relation_pairs": [
+      [
+        "Advanced Server Management on Arm to Track Latest Technological Advances in General Server Architecture",
+        "Arm"
+      ],
+      [
+        "Advanced Server Management on Arm to Track Latest Technological Advances in General Server Architecture",
+        "Core Research Report Library"
+      ],
+      [
+        "General Server Architecture",
+        "Server Architecture"
+      ],
+      [
+        "Advanced Server Management on Arm to Track Latest Technological Advances in General Server Architecture",
+        "General Server Architecture"
+      ],
+      [
+        "Advanced Server Management on Arm to Track Latest Technological Advances in General Server Architecture",
+        "Server Management"
+      ],
+      [
+        "Advanced Server Management on Arm to Track Latest Technological Advances in General Server Architecture",
+        "PDF"
+      ],
+      [
+        "Advanced Server Management on Arm to Track Latest Technological Advances in General Server Architecture",
+        "Liufang"
+      ]
+    ],
+    "count": 7,
+    "create_time": 1773169087,
+    "update_time": 1773169087,
+    "_id": "doc-1d26679a5c7d4be95dc3163cdd74635d"
+  },
+  "doc-60ca18023b7448fb4ddf9aa784ef1a65": {
+    "relation_pairs": [
+      [
+        "2026-03-07",
+        "Memory Technology Optimized For At Scale AI Systems Bandwidth Capacity And Connectivity"
+      ],
+      [
+        "Memory Technology Optimized For At Scale AI Systems Bandwidth Capacity And Connectivity",
+        "Unknown Author"
+      ],
+      [
+        "Memory Technology Optimized For At Scale AI Systems Bandwidth Capacity And Connectivity",
+        "PDF"
+      ],
+      [
+        "Memory Technology Optimized For At Scale AI Systems Bandwidth Capacity And Connectivity",
+        "Server Architecture Research Library"
+      ],
+      [
+        "2.69 MB",
+        "Memory Technology Optimized For At Scale AI Systems Bandwidth Capacity And Connectivity"
+      ],
+      [
+        "2026-03-07 19:05:23",
+        "Memory Technology Optimized For At Scale AI Systems Bandwidth Capacity And Connectivity"
+      ],
+      [
+        "Core Priority",
+        "Memory Technology Optimized For At Scale AI Systems Bandwidth Capacity And Connectivity"
+      ],
+      [
+        "File Path",
+        "Memory Technology Optimized For At Scale AI Systems Bandwidth Capacity And Connectivity"
+      ]
+    ],
+    "count": 8,
+    "create_time": 1773169112,
+    "update_time": 1773169112,
+    "_id": "doc-60ca18023b7448fb4ddf9aa784ef1a65"
+  },
+  "doc-167d10816e778536b830e1f0aa4bd8fb": {
+    "relation_pairs": [
+      [
+        "Firmware Development",
+        "Hardware"
+      ],
+      [
+        "Firmware Development",
+        "Simulation"
+      ],
+      [
+        "BMC",
+        "Open Platform Firmware"
+      ],
+      [
+        "Arm Servers",
+        "Open Platform Firmware"
+      ],
+      [
+        "AMC",
+        "Open Platform Firmware"
+      ],
+      [
+        "BMC and AMC Open Platform Firmware Development on Arm Servers From Simulation to Hardware",
+        "Open Platform Firmware"
+      ]
+    ],
+    "count": 6,
+    "create_time": 1773169131,
+    "update_time": 1773169131,
+    "_id": "doc-167d10816e778536b830e1f0aa4bd8fb"
+  },
+  "doc-846347bde485db03ead56cd986ba9001": {
+    "relation_pairs": [
+      [
+        "20250806 CXLT 203 1 Saluja Fnl Copy",
+        "20250806 CXLT 203 1 Saluja Fnl Copy PDF"
+      ],
+      [
+        "20250806 CXLT 203 1 Saluja Fnl Copy",
+        "PDF"
+      ],
+      [
+        "20250806 CXLT 203 1 Saluja Fnl Copy",
+        "Saluja"
+      ],
+      [
+        "20250806 CXLT 203 1 Saluja Fnl Copy",
+        "Core Research Library"
+      ],
+      [
+        "20250806 CXLT 203 1 Saluja Fnl Copy",
+        "Liufang"
+      ],
+      [
+        "20250806 CXLT 203 1 Saluja Fnl Copy",
+        "Server Architecture"
+      ]
+    ],
+    "count": 6,
+    "create_time": 1773169164,
+    "update_time": 1773169164,
+    "_id": "doc-846347bde485db03ead56cd986ba9001"
+  },
+  "doc-c7fd39ddee62a6682cc2d3e58c3b66ed": {
+    "relation_pairs": [
+      [
+        "AI",
+        "Composable Memory Fabric Architecture"
+      ],
+      [
+        "Report",
+        "Server Architecture Research Library"
+      ],
+      [
+        "Composable Memory Fabric Architecture",
+        "Report"
+      ],
+      [
+        "Composable Memory Fabric Architecture",
+        "General Purpose Compute"
+      ],
+      [
+        "Core Priority",
+        "Report"
+      ],
+      [
+        "Composable Memory Fabric Architecture",
+        "Scalable Memory Management"
+      ],
+      [
+        "Report",
+        "Unknown Author"
+      ],
+      [
+        "PDF",
+        "Report"
+      ]
+    ],
+    "count": 8,
+    "create_time": 1773169186,
+    "update_time": 1773169186,
+    "_id": "doc-c7fd39ddee62a6682cc2d3e58c3b66ed"
+  },
+  "doc-d7bc46115f13aecdbbcd6e7398ee9691": {
+    "relation_pairs": [
+      [
+        "20250807 DRAM 304 1 Jeongdong Choe Short Version",
+        "Vectorized"
+      ],
+      [
+        "20250807",
+        "20250807 DRAM 304 1 Jeongdong Choe Short Version"
+      ],
+      [
+        "20250807 DRAM 304 1 Jeongdong Choe Short Version",
+        "Research Report Library"
+      ],
+      [
+        "20250807 DRAM 304 1 Jeongdong Choe Short Version",
+        "Core"
+      ],
+      [
+        "20250807 DRAM 304 1 Jeongdong Choe Short Version",
+        "Jeongdong Choe"
+      ],
+      [
+        "20250807 DRAM 304 1 Jeongdong Choe Short Version",
+        "Liufang"
+      ],
+      [
+        "20250807 DRAM 304 1 Jeongdong Choe Short Version",
+        "Server Architecture"
+      ],
+      [
+        "20250807 DRAM 304 1 Jeongdong Choe Short Version",
+        "2026-03-08"
+      ],
+      [
+        "20250807 DRAM 304 1 Jeongdong Choe Short Version",
+        "PDF"
+      ],
+      [
+        "20250807 DRAM 304 1 Jeongdong Choe Short Version",
+        "4.22 MB"
+      ],
+      [
+        "20250807 DRAM 304 1 Jeongdong Choe Short Version",
+        "DRAM"
+      ]
+    ],
+    "count": 11,
+    "create_time": 1773253963,
+    "update_time": 1773253963,
+    "_id": "doc-d7bc46115f13aecdbbcd6e7398ee9691"
+  },
+  "doc-33d6bc980e862376c11685a00bf22ca3": {
+    "relation_pairs": [
+      [
+        "Large CXL Memory Expansion Systems and Workloads",
+        "Server Architecture"
+      ],
+      [
+        "2026-03-07 19:05:20",
+        "Large CXL Memory Expansion Systems and Workloads"
+      ],
+      [
+        "Large CXL Memory Expansion Systems and Workloads",
+        "Local File Path"
+      ],
+      [
+        "Large CXL Memory Expansion Systems and Workloads",
+        "PDF"
+      ],
+      [
+        "CXL Memory Expansion Systems",
+        "Large CXL Memory Expansion Systems and Workloads"
+      ],
+      [
+        "Large CXL Memory Expansion Systems and Workloads",
+        "Research Report Library"
+      ],
+      [
+        "Core",
+        "Large CXL Memory Expansion Systems and Workloads"
+      ],
+      [
+        "2026-03-07",
+        "Large CXL Memory Expansion Systems and Workloads"
+      ],
+      [
+        "Large CXL Memory Expansion Systems and Workloads",
+        "Vectorized Status"
+      ],
+      [
+        "3.46 MB",
+        "Large CXL Memory Expansion Systems and Workloads"
+      ],
+      [
+        "Large CXL Memory Expansion Systems and Workloads",
+        "Liufang"
+      ],
+      [
+        "Large CXL Memory Expansion Systems and Workloads",
+        "Report"
+      ]
+    ],
+    "count": 12,
+    "create_time": 1773254174,
+    "update_time": 1773254174,
+    "_id": "doc-33d6bc980e862376c11685a00bf22ca3"
+  },
+  "doc-e27f03ec1e126815641b4755ece051c6": {
+    "relation_pairs": [
+      [
+        "Scaling The Next Generation Of Inference Servers With PCIe Gen6",
+        "Vectorized"
+      ],
+      [
+        "PCIe Gen6",
+        "Scaling The Next Generation Of Inference Servers With PCIe Gen6"
+      ],
+      [
+        "2026-03-07",
+        "Scaling The Next Generation Of Inference Servers With PCIe Gen6"
+      ],
+      [
+        "Core",
+        "Scaling The Next Generation Of Inference Servers With PCIe Gen6"
+      ],
+      [
+        "Scaling The Next Generation Of Inference Servers With PCIe Gen6",
+        "Server Architecture"
+      ],
+      [
+        "Research Report Library",
+        "Scaling The Next Generation Of Inference Servers With PCIe Gen6"
+      ],
+      [
+        "2.74 MB",
+        "Scaling The Next Generation Of Inference Servers With PCIe Gen6"
+      ],
+      [
+        "Liufang",
+        "Scaling The Next Generation Of Inference Servers With PCIe Gen6"
+      ],
+      [
+        "PDF",
+        "Scaling The Next Generation Of Inference Servers With PCIe Gen6"
+      ],
+      [
+        "Inference Servers",
+        "Scaling The Next Generation Of Inference Servers With PCIe Gen6"
+      ]
+    ],
+    "count": 10,
+    "create_time": 1773254369,
+    "update_time": 1773254369,
+    "_id": "doc-e27f03ec1e126815641b4755ece051c6"
+  },
+  "doc-3bef51647317cfab8fd98c2182da0b1c": {
+    "relation_pairs": [
+      [
+        "Orchestrating Confidential Compute Report",
+        "Research Report Library"
+      ],
+      [
+        "DMTF SPDM",
+        "Orchestrating Confidential Compute Report"
+      ],
+      [
+        "Core Priority",
+        "Orchestrating Confidential Compute Report"
+      ],
+      [
+        "OCP",
+        "OCP Secure Boot Attestation"
+      ],
+      [
+        "Orchestrating Confidential Compute Report",
+        "Vectorized Status"
+      ],
+      [
+        "2.07 MB",
+        "PDF File"
+      ],
+      [
+        "OCP Secure Boot Attestation",
+        "Secure Boot"
+      ],
+      [
+        "Orchestrating Confidential Compute Report",
+        "Server Architecture"
+      ],
+      [
+        "CXL",
+        "CXL IDE"
+      ],
+      [
+        "Liufang",
+        "PDF File"
+      ],
+      [
+        "DMTF",
+        "DMTF SPDM"
+      ],
+      [
+        "CXL IDE",
+        "TSP"
+      ],
+      [
+        "Confidential Compute",
+        "Orchestrating Confidential Compute Report"
+      ],
+      [
+        "DMTF SPDM",
+        "TSP"
+      ],
+      [
+        "OCP Secure Boot Attestation",
+        "Orchestrating Confidential Compute Report"
+      ],
+      [
+        "Orchestrating Confidential Compute Report",
+        "PDF File"
+      ],
+      [
+        "CXL IDE",
+        "Orchestrating Confidential Compute Report"
+      ],
+      [
+        "Ingestion Time",
+        "Orchestrating Confidential Compute Report"
+      ]
+    ],
+    "count": 18,
+    "create_time": 1773254534,
+    "update_time": 1773254534,
+    "_id": "doc-3bef51647317cfab8fd98c2182da0b1c"
+  },
+  "doc-968fbcf059982c556b4bcc6944efa36b": {
+    "relation_pairs": [
+      [
+        "Flash Memory Chiplet Implementation And Applications",
+        "Vectorized"
+      ],
+      [
+        "Flash Memory Chiplet Implementation And Applications",
+        "Research Report Library"
+      ],
+      [
+        "2026-03-07 19:05:23",
+        "Flash Memory Chiplet Implementation And Applications"
+      ],
+      [
+        "Flash Memory Chiplet Implementation And Applications",
+        "Unknown"
+      ],
+      [
+        "Flash Memory Chiplet Implementation And Applications",
+        "Liufang"
+      ],
+      [
+        "Flash Memory Chiplet Implementation And Applications",
+        "Report"
+      ],
+      [
+        "2.04 MB",
+        "Flash Memory Chiplet Implementation And Applications"
+      ],
+      [
+        "Flash Memory Chiplet Implementation And Applications",
+        "Server Architecture"
+      ],
+      [
+        "Flash Memory Chiplet Implementation And Applications",
+        "Library"
+      ],
+      [
+        "Document File Path",
+        "Flash Memory Chiplet Implementation And Applications"
+      ],
+      [
+        "Core",
+        "Flash Memory Chiplet Implementation And Applications"
+      ],
+      [
+        "Flash Memory Chiplet Implementation And Applications",
+        "PDF"
+      ],
+      [
+        "2026-03-07",
+        "Flash Memory Chiplet Implementation And Applications"
+      ],
+      [
+        "AI Deep Summary",
+        "Flash Memory Chiplet Implementation And Applications"
+      ]
+    ],
+    "count": 14,
+    "create_time": 1773254809,
+    "update_time": 1773254809,
+    "_id": "doc-968fbcf059982c556b4bcc6944efa36b"
+  },
+  "doc-f3b581e41172762e088bcf3b7f03c6a4": {
+    "relation_pairs": [
+      [
+        "High Density Dimm System",
+        "Thermal Design Considerations For High Density Dimm System In Dual Socket Datacenter Server Platforms"
+      ],
+      [
+        "Pdf Document",
+        "Thermal Design Considerations For High Density Dimm System In Dual Socket Datacenter Server Platforms"
+      ],
+      [
+        "2026-03-07",
+        "Thermal Design Considerations For High Density Dimm System In Dual Socket Datacenter Server Platforms"
+      ],
+      [
+        "Server Architecture",
+        "Thermal Design Considerations For High Density Dimm System In Dual Socket Datacenter Server Platforms"
+      ],
+      [
+        "Dual Socket Datacenter Server Platforms",
+        "Thermal Design Considerations For High Density Dimm System In Dual Socket Datacenter Server Platforms"
+      ],
+      [
+        "Research Report Library",
+        "Thermal Design Considerations For High Density Dimm System In Dual Socket Datacenter Server Platforms"
+      ],
+      [
+        "2026-03-07 19:05:19",
+        "Thermal Design Considerations For High Density Dimm System In Dual Socket Datacenter Server Platforms"
+      ],
+      [
+        "0.55 MB",
+        "Thermal Design Considerations For High Density Dimm System In Dual Socket Datacenter Server Platforms"
+      ],
+      [
+        "Liufang",
+        "Pdf Document"
+      ],
+      [
+        "Core Priority",
+        "Thermal Design Considerations For High Density Dimm System In Dual Socket Datacenter Server Platforms"
+      ],
+      [
+        "Thermal Design Considerations For High Density Dimm System In Dual Socket Datacenter Server Platforms",
+        "Vectorized Status"
+      ]
+    ],
+    "count": 11,
+    "create_time": 1773255071,
+    "update_time": 1773255071,
+    "_id": "doc-f3b581e41172762e088bcf3b7f03c6a4"
+  },
+  "doc-635a8270f90d4ad369e34ef96c6f284f": {
+    "relation_pairs": [
+      [
+        "20250807 CXLT 301 1 Kim 07 27 01.00.16 Copy",
+        "Research Report Library"
+      ],
+      [
+        "20250807 CXLT 301 1 Kim 07 27 01.00.16 Copy",
+        "Kim"
+      ],
+      [
+        "20250807 CXLT 301 1 Kim 07 27 01.00.16 Copy",
+        "Core"
+      ],
+      [
+        "20250807 CXLT 301 1 Kim 07 27 01.00.16 Copy",
+        "Liufang"
+      ],
+      [
+        "1.34 MB",
+        "20250807 CXLT 301 1 Kim 07 27 01.00.16 Copy"
+      ],
+      [
+        "20250807 CXLT 301 1 Kim 07 27 01.00.16 Copy",
+        "Server Architecture"
+      ],
+      [
+        "20250807 CXLT 301 1 Kim 07 27 01.00.16 Copy",
+        "2026-03-08"
+      ],
+      [
+        "20250807 CXLT 301 1 Kim 07 27 01.00.16 Copy",
+        "PDF"
+      ],
+      [
+        "20250807 CXLT 301 1 Kim 07 27 01.00.16 Copy",
+        "CXLT"
+      ]
+    ],
+    "count": 9,
+    "create_time": 1773255282,
+    "update_time": 1773255282,
+    "_id": "doc-635a8270f90d4ad369e34ef96c6f284f"
+  },
+  "doc-230764380b33557b5524bd06ee945029": {
+    "relation_pairs": [
+      [
+        "20250806 DRAM 203 1 Olgun Copy",
+        "Report"
+      ],
+      [
+        "20250806 DRAM 203 1 Olgun Copy",
+        "DRAM"
+      ],
+      [
+        "20250806 DRAM 203 1 Olgun Copy",
+        "2026-03-08"
+      ],
+      [
+        "20250806 DRAM 203 1 Olgun Copy",
+        "Research Report Library"
+      ],
+      [
+        "20250806 DRAM 203 1 Olgun Copy",
+        "Server Architecture"
+      ],
+      [
+        "20250806 DRAM 203 1 Olgun Copy",
+        "Olgun"
+      ],
+      [
+        "20250806 DRAM 203 1 Olgun Copy",
+        "Core"
+      ],
+      [
+        "12.35 MB",
+        "20250806 DRAM 203 1 Olgun Copy"
+      ],
+      [
+        "20250806 DRAM 203 1 Olgun Copy",
+        "PDF"
+      ],
+      [
+        "20250806 DRAM 203 1 Olgun Copy",
+        "Liufang"
+      ]
+    ],
+    "count": 10,
+    "create_time": 1773340465,
+    "update_time": 1773340465,
+    "_id": "doc-230764380b33557b5524bd06ee945029"
+  },
+  "doc-62991649d9ddbddbdd87eed4b8473959": {
+    "relation_pairs": [
+      [
+        "DRAM I O Standards and Circuits",
+        "Eetop.cn_T2 - Fundamentals of DRAM I O Standards and Circuits"
+      ],
+      [
+        "Eetop.cn_T2 - Fundamentals of DRAM I O Standards and Circuits",
+        "Vectorization"
+      ],
+      [
+        "3.66 MB",
+        "Eetop.cn_T2 - Fundamentals of DRAM I O Standards and Circuits"
+      ],
+      [
+        "Eetop.cn_T2 - Fundamentals of DRAM I O Standards and Circuits",
+        "PDF"
+      ],
+      [
+        "Eetop.cn_T2 - Fundamentals of DRAM I O Standards and Circuits",
+        "Local Document Library"
+      ],
+      [
+        "Liufang",
+        "Local Document Library"
+      ],
+      [
+        "Eetop.cn",
+        "Eetop.cn_T2 - Fundamentals of DRAM I O Standards and Circuits"
+      ],
+      [
+        "Eetop.cn_T2 - Fundamentals of DRAM I O Standards and Circuits",
+        "Server Architecture"
+      ],
+      [
+        "Eetop.cn_T2 - Fundamentals of DRAM I O Standards and Circuits",
+        "Research Report Library"
+      ],
+      [
+        "2026-03-11",
+        "Eetop.cn_T2 - Fundamentals of DRAM I O Standards and Circuits"
+      ]
+    ],
+    "count": 10,
+    "create_time": 1773340677,
+    "update_time": 1773340677,
+    "_id": "doc-62991649d9ddbddbdd87eed4b8473959"
+  },
+  "doc-bac65798eb982eaec66217171974d32c": {
+    "relation_pairs": [
+      [
+        "Session 30 Nonvolatile Memory And DRAM",
+        "Vectorized"
+      ],
+      [
+        "Liu Fang",
+        "Session 30 Nonvolatile Memory And DRAM"
+      ],
+      [
+        "2026-03-11",
+        "Session 30 Nonvolatile Memory And DRAM"
+      ],
+      [
+        "16.12 MB",
+        "Session 30 Nonvolatile Memory And DRAM"
+      ],
+      [
+        "AI Deep Summary",
+        "Session 30 Nonvolatile Memory And DRAM"
+      ],
+      [
+        "PDF",
+        "Session 30 Nonvolatile Memory And DRAM"
+      ],
+      [
+        "Session 30 Nonvolatile Memory And DRAM",
+        "Unknown"
+      ],
+      [
+        "Server Architecture",
+        "Session 30 Nonvolatile Memory And DRAM"
+      ],
+      [
+        "DRAM",
+        "Session 30 Nonvolatile Memory And DRAM"
+      ],
+      [
+        "Nonvolatile Memory",
+        "Session 30 Nonvolatile Memory And DRAM"
+      ],
+      [
+        "Priority Core",
+        "Session 30 Nonvolatile Memory And DRAM"
+      ],
+      [
+        "Local File Path",
+        "Session 30 Nonvolatile Memory And DRAM"
+      ],
+      [
+        "Research Report Library Core Server Architecture",
+        "Session 30 Nonvolatile Memory And DRAM"
+      ],
+      [
+        "2026-03-11 12:57:04",
+        "Session 30 Nonvolatile Memory And DRAM"
+      ]
+    ],
+    "count": 14,
+    "create_time": 1773340961,
+    "update_time": 1773340961,
+    "_id": "doc-bac65798eb982eaec66217171974d32c"
+  },
+  "doc-1b7fcd9c795c3ffe5951ea1b509567b7": {
+    "relation_pairs": [
+      [
+        "Core Priority",
+        "Session 16 Efficient Compute In Memory Based Processors For ML"
+      ],
+      [
+        "PDF",
+        "Session 16 Efficient Compute In Memory Based Processors For ML"
+      ],
+      [
+        "Digital File Path",
+        "Session 16 Efficient Compute In Memory Based Processors For ML"
+      ],
+      [
+        "Report Type",
+        "Session 16 Efficient Compute In Memory Based Processors For ML"
+      ],
+      [
+        "AI Deep Summary",
+        "Session 16 Efficient Compute In Memory Based Processors For ML"
+      ],
+      [
+        "32.65 MB",
+        "Session 16 Efficient Compute In Memory Based Processors For ML"
+      ],
+      [
+        "Session 16 Efficient Compute In Memory Based Processors For ML",
+        "Storage Timestamp"
+      ],
+      [
+        "Digital File Path",
+        "Liufang"
+      ],
+      [
+        "Session 16 Efficient Compute In Memory Based Processors For ML",
+        "Vectorized Status"
+      ],
+      [
+        "Server Architecture",
+        "Session 16 Efficient Compute In Memory Based Processors For ML"
+      ],
+      [
+        "2026-03-11",
+        "Session 16 Efficient Compute In Memory Based Processors For ML"
+      ],
+      [
+        "Research Report Library",
+        "Session 16 Efficient Compute In Memory Based Processors For ML"
+      ],
+      [
+        "Liufang",
+        "Session 16 Efficient Compute In Memory Based Processors For ML"
+      ]
+    ],
+    "count": 13,
+    "create_time": 1773341139,
+    "update_time": 1773341139,
+    "_id": "doc-1b7fcd9c795c3ffe5951ea1b509567b7"
+  },
+  "doc-b794cfeb2829ca445d838fe2fb1cd165": {
+    "relation_pairs": [
+      [
+        "浩云长盛：超节点服务器对智算中心基础设施影响",
+        "超节点服务器"
+      ],
+      [
+        "服务器架构",
+        "浩云长盛：超节点服务器对智算中心基础设施影响"
+      ],
+      [
+        "浩云长盛：超节点服务器对智算中心基础设施影响",
+        "研报库"
+      ],
+      [
+        "file:///Users/liufang/Documents/Library/【核心】服务器架构/浩云长盛：超节点服务器对智算中心基础设施影响.pdf",
+        "浩云长盛：超节点服务器对智算中心基础设施影响"
+      ],
+      [
+        "未知",
+        "浩云长盛：超节点服务器对智算中心基础设施影响"
+      ],
+      [
+        "7.08 MB",
+        "浩云长盛：超节点服务器对智算中心基础设施影响"
+      ],
+      [
+        "2026-03-11",
+        "浩云长盛：超节点服务器对智算中心基础设施影响"
+      ],
+      [
+        "智算中心",
+        "超节点服务器"
+      ],
+      [
+        "智算中心",
+        "浩云长盛：超节点服务器对智算中心基础设施影响"
+      ],
+      [
+        "浩云长盛",
+        "浩云长盛：超节点服务器对智算中心基础设施影响"
+      ],
+      [
+        "Liufang",
+        "浩云长盛：超节点服务器对智算中心基础设施影响"
+      ]
+    ],
+    "count": 11,
+    "create_time": 1773341322,
+    "update_time": 1773341322,
+    "_id": "doc-b794cfeb2829ca445d838fe2fb1cd165"
+  },
+  "doc-ec101ba502a70816a33b6a1e26f6054f": {
+    "relation_pairs": [
+      [
+        "Research Report Library",
+        "Session_33_NonVolatile_Memory_And_ComputeInMemory"
+      ],
+      [
+        "Liufang",
+        "Session_33_NonVolatile_Memory_And_ComputeInMemory"
+      ],
+      [
+        "Compute In Memory",
+        "Session_33_NonVolatile_Memory_And_ComputeInMemory"
+      ],
+      [
+        "Session_33_NonVolatile_Memory_And_ComputeInMemory",
+        "Vectorized Status"
+      ],
+      [
+        "Core Priority",
+        "Session_33_NonVolatile_Memory_And_ComputeInMemory"
+      ],
+      [
+        "Report Type",
+        "Session_33_NonVolatile_Memory_And_ComputeInMemory"
+      ],
+      [
+        "14.96 MB",
+        "Session_33_NonVolatile_Memory_And_ComputeInMemory"
+      ],
+      [
+        "NonVolatile Memory",
+        "Session_33_NonVolatile_Memory_And_ComputeInMemory"
+      ],
+      [
+        "2026-03-11",
+        "Session_33_NonVolatile_Memory_And_ComputeInMemory"
+      ],
+      [
+        "PDF",
+        "Session_33_NonVolatile_Memory_And_ComputeInMemory"
+      ],
+      [
+        "Server Architecture",
+        "Session_33_NonVolatile_Memory_And_ComputeInMemory"
+      ]
+    ],
+    "count": 11,
+    "create_time": 1773341524,
+    "update_time": 1773341524,
+    "_id": "doc-ec101ba502a70816a33b6a1e26f6054f"
+  },
+  "doc-df273047e67bbcef8888ccc637f02f26": {
+    "relation_pairs": [
+      [
+        "Efficient AI Serving At Scale Processing Near Memory Acceleration For LLMs And Vector Search",
+        "LLMs"
+      ],
+      [
+        "2026-03-07",
+        "Efficient AI Serving At Scale Processing Near Memory Acceleration For LLMs And Vector Search"
+      ],
+      [
+        "Core",
+        "Efficient AI Serving At Scale Processing Near Memory Acceleration For LLMs And Vector Search"
+      ],
+      [
+        "Efficient AI Serving At Scale Processing Near Memory Acceleration For LLMs And Vector Search",
+        "Vectorized"
+      ],
+      [
+        "Digital Storage Location",
+        "Liufang"
+      ],
+      [
+        "Efficient AI Serving At Scale Processing Near Memory Acceleration For LLMs And Vector Search",
+        "Unknown"
+      ],
+      [
+        "Efficient AI Serving At Scale Processing Near Memory Acceleration For LLMs And Vector Search",
+        "Storage Time"
+      ],
+      [
+        "1.77 MB",
+        "Efficient AI Serving At Scale Processing Near Memory Acceleration For LLMs And Vector Search"
+      ],
+      [
+        "Efficient AI Serving At Scale Processing Near Memory Acceleration For LLMs And Vector Search",
+        "Research Report Library"
+      ],
+      [
+        "Efficient AI Serving At Scale Processing Near Memory Acceleration For LLMs And Vector Search",
+        "Server Architecture"
+      ],
+      [
+        "Efficient AI Serving At Scale Processing Near Memory Acceleration For LLMs And Vector Search",
+        "Vector Search"
+      ],
+      [
+        "Efficient AI Serving At Scale Processing Near Memory Acceleration For LLMs And Vector Search",
+        "Processing Near Memory Acceleration"
+      ],
+      [
+        "Efficient AI Serving At Scale Processing Near Memory Acceleration For LLMs And Vector Search",
+        "File Uri"
+      ],
+      [
+        "Digital Storage Location",
+        "Efficient AI Serving At Scale Processing Near Memory Acceleration For LLMs And Vector Search"
+      ],
+      [
+        "Efficient AI Serving At Scale Processing Near Memory Acceleration For LLMs And Vector Search",
+        "PDF"
+      ]
+    ],
+    "count": 15,
+    "create_time": 1773341766,
+    "update_time": 1773341766,
+    "_id": "doc-df273047e67bbcef8888ccc637f02f26"
+  }
+}

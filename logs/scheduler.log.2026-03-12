@@ -1,0 +1,62 @@
+2026-03-12 00:00:01,006 [INFO] 重试任务开始，队列状态: {'pending': 0, 'processing': 0, 'sent_today': 0, 'sent_total': 77, 'failed': 0}
+2026-03-12 00:00:01,008 [INFO] 重试完成: 重新入队 0 个, 成功推送 0 个
+2026-03-12 00:00:01,008 [INFO] 当前队列状态: {'pending': 0, 'processing': 0, 'sent_today': 0, 'sent_total': 77, 'failed': 0}
+2026-03-12 01:00:00,969 [INFO] 重试任务开始，队列状态: {'pending': 0, 'processing': 0, 'sent_today': 0, 'sent_total': 77, 'failed': 0}
+2026-03-12 01:00:00,972 [INFO] 重试完成: 重新入队 0 个, 成功推送 0 个
+2026-03-12 01:00:00,972 [INFO] 当前队列状态: {'pending': 0, 'processing': 0, 'sent_today': 0, 'sent_total': 77, 'failed': 0}
+2026-03-12 02:00:00,899 [INFO] 重试任务开始，队列状态: {'pending': 0, 'processing': 0, 'sent_today': 0, 'sent_total': 77, 'failed': 0}
+2026-03-12 02:00:00,906 [INFO] 重试完成: 重新入队 0 个, 成功推送 0 个
+2026-03-12 02:00:00,906 [INFO] 当前队列状态: {'pending': 0, 'processing': 0, 'sent_today': 0, 'sent_total': 77, 'failed': 0}
+2026-03-12 03:00:01,816 [INFO] 重试任务开始，队列状态: {'pending': 0, 'processing': 0, 'sent_today': 0, 'sent_total': 77, 'failed': 1}
+2026-03-12 03:00:01,818 [INFO] 📡 正在向统一消息总线投递任务: alert_graph_maintenance | ['dingtalk']
+2026-03-12 03:00:01,820 [INFO] ✅ 已投递至 MessageBus: alert_graph_maintenance:2026-03-12
+2026-03-12 03:00:01,820 [INFO] 重试完成: 重新入队 1 个, 成功推送 1 个
+2026-03-12 03:00:01,821 [INFO] 当前队列状态: {'pending': 0, 'processing': 0, 'sent_today': 1, 'sent_total': 78, 'failed': 0}
+2026-03-12 04:00:00,999 [INFO] 重试任务开始，队列状态: {'pending': 0, 'processing': 0, 'sent_today': 1, 'sent_total': 78, 'failed': 1}
+2026-03-12 04:00:01,002 [INFO] 📡 正在向统一消息总线投递任务: alert_klib_sync | ['dingtalk']
+2026-03-12 04:00:01,003 [INFO] ✅ 已投递至 MessageBus: alert_klib_sync:2026-03-12
+2026-03-12 04:00:01,004 [INFO] 重试完成: 重新入队 1 个, 成功推送 1 个
+2026-03-12 04:00:01,004 [INFO] 当前队列状态: {'pending': 0, 'processing': 0, 'sent_today': 2, 'sent_total': 79, 'failed': 0}
+2026-03-12 05:00:01,218 [INFO] 重试任务开始，队列状态: {'pending': 0, 'processing': 0, 'sent_today': 2, 'sent_total': 70, 'failed': 0}
+2026-03-12 05:00:01,223 [INFO] 重试完成: 重新入队 0 个, 成功推送 0 个
+2026-03-12 05:00:01,223 [INFO] 当前队列状态: {'pending': 0, 'processing': 0, 'sent_today': 2, 'sent_total': 70, 'failed': 0}
+2026-03-12 06:00:00,737 [INFO] 重试任务开始，队列状态: {'pending': 0, 'processing': 0, 'sent_today': 2, 'sent_total': 70, 'failed': 0}
+2026-03-12 06:00:00,739 [INFO] 重试完成: 重新入队 0 个, 成功推送 0 个
+2026-03-12 06:00:00,739 [INFO] 当前队列状态: {'pending': 0, 'processing': 0, 'sent_today': 2, 'sent_total': 70, 'failed': 0}
+2026-03-12 07:00:01,329 [INFO] 重试任务开始，队列状态: {'pending': 0, 'processing': 0, 'sent_today': 2, 'sent_total': 70, 'failed': 1}
+2026-03-12 07:00:01,331 [INFO] 📡 正在向统一消息总线投递任务: system_check | ['dingtalk', 'feishu']
+2026-03-12 07:00:01,334 [INFO] ✅ 已投递至 MessageBus: system_check:2026-03-12
+2026-03-12 07:00:01,334 [INFO] 重试完成: 重新入队 1 个, 成功推送 1 个
+2026-03-12 07:00:01,334 [INFO] 当前队列状态: {'pending': 0, 'processing': 0, 'sent_today': 3, 'sent_total': 71, 'failed': 0}
+2026-03-12 13:00:00,805 [INFO] 重试任务开始，队列状态: {'pending': 0, 'processing': 0, 'sent_today': 3, 'sent_total': 71, 'failed': 2}
+2026-03-12 13:00:00,806 [INFO] 📡 正在向统一消息总线投递任务: alert_arxiv_papers | ['dingtalk']
+2026-03-12 13:00:00,808 [INFO] ✅ 已投递至 MessageBus: alert_arxiv_papers:2026-03-12
+2026-03-12 13:00:00,809 [INFO] 📡 正在向统一消息总线投递任务: arxiv_papers | ['dingtalk', 'feishu']
+2026-03-12 13:00:00,810 [INFO] ✅ 已投递至 MessageBus: arxiv_papers:2026-03-12
+2026-03-12 13:00:00,811 [INFO] 重试完成: 重新入队 2 个, 成功推送 2 个
+2026-03-12 13:00:00,811 [INFO] 当前队列状态: {'pending': 0, 'processing': 0, 'sent_today': 5, 'sent_total': 73, 'failed': 0}
+2026-03-12 14:00:01,334 [INFO] 重试任务开始，队列状态: {'pending': 0, 'processing': 0, 'sent_today': 5, 'sent_total': 73, 'failed': 0}
+2026-03-12 14:00:01,336 [INFO] 重试完成: 重新入队 0 个, 成功推送 0 个
+2026-03-12 14:00:01,336 [INFO] 当前队列状态: {'pending': 0, 'processing': 0, 'sent_today': 5, 'sent_total': 73, 'failed': 0}
+2026-03-12 15:00:01,510 [INFO] 重试任务开始，队列状态: {'pending': 0, 'processing': 0, 'sent_today': 5, 'sent_total': 73, 'failed': 2}
+2026-03-12 15:00:01,512 [INFO] 📡 正在向统一消息总线投递任务: alert_noon_brief | ['dingtalk']
+2026-03-12 15:00:01,515 [INFO] ✅ 已投递至 MessageBus: alert_noon_brief:2026-03-12
+2026-03-12 15:00:01,515 [INFO] 📡 正在向统一消息总线投递任务: noon_brief | ['dingtalk', 'feishu']
+2026-03-12 15:00:01,516 [INFO] ✅ 已投递至 MessageBus: noon_brief:2026-03-12
+2026-03-12 15:00:01,516 [INFO] 重试完成: 重新入队 2 个, 成功推送 2 个
+2026-03-12 15:00:01,516 [INFO] 当前队列状态: {'pending': 0, 'processing': 0, 'sent_today': 7, 'sent_total': 75, 'failed': 0}
+2026-03-12 16:00:01,279 [INFO] 重试任务开始，队列状态: {'pending': 0, 'processing': 0, 'sent_today': 7, 'sent_total': 75, 'failed': 0}
+2026-03-12 16:00:01,280 [INFO] 重试完成: 重新入队 0 个, 成功推送 0 个
+2026-03-12 16:00:01,281 [INFO] 当前队列状态: {'pending': 0, 'processing': 0, 'sent_today': 7, 'sent_total': 75, 'failed': 0}
+2026-03-12 17:00:00,494 [INFO] 重试任务开始，队列状态: {'pending': 0, 'processing': 0, 'sent_today': 7, 'sent_total': 75, 'failed': 0}
+2026-03-12 17:00:00,496 [INFO] 重试完成: 重新入队 0 个, 成功推送 0 个
+2026-03-12 17:00:00,496 [INFO] 当前队列状态: {'pending': 0, 'processing': 0, 'sent_today': 7, 'sent_total': 75, 'failed': 0}
+2026-03-12 18:00:01,144 [INFO] 重试任务开始，队列状态: {'pending': 0, 'processing': 0, 'sent_today': 7, 'sent_total': 75, 'failed': 0}
+2026-03-12 18:00:01,146 [INFO] 重试完成: 重新入队 0 个, 成功推送 0 个
+2026-03-12 18:00:01,146 [INFO] 当前队列状态: {'pending': 0, 'processing': 0, 'sent_today': 7, 'sent_total': 75, 'failed': 0}
+2026-03-12 22:00:01,402 [INFO] 重试任务开始，队列状态: {'pending': 0, 'processing': 0, 'sent_today': 7, 'sent_total': 75, 'failed': 0}
+2026-03-12 22:00:01,404 [INFO] 重试完成: 重新入队 0 个, 成功推送 0 个
+2026-03-12 22:00:01,404 [INFO] 当前队列状态: {'pending': 0, 'processing': 0, 'sent_today': 7, 'sent_total': 75, 'failed': 0}
+2026-03-12 23:00:00,470 [INFO] 重试任务开始，队列状态: {'pending': 0, 'processing': 0, 'sent_today': 7, 'sent_total': 75, 'failed': 0}
+2026-03-12 23:00:00,471 [INFO] 重试完成: 重新入队 0 个, 成功推送 0 个
+2026-03-12 23:00:00,471 [INFO] 当前队列状态: {'pending': 0, 'processing': 0, 'sent_today': 7, 'sent_total': 75, 'failed': 0}

@@ -1,0 +1,18 @@
+{
+  "job_id": "arxiv_papers:2026-03-11",
+  "task": "arxiv_papers",
+  "content": "我将为您获取今日arXiv论文并生成深度精选报告。",
+  "push_targets": [
+    "dingtalk",
+    "feishu"
+  ],
+  "created_at": "2026-03-10T23:05:03.230763+00:00",
+  "retries": 1,
+  "last_error": {
+    "dingtalk": "file is not a database",
+    "feishu": "file is not a database"
+  },
+  "metadata": {
+    "agent": "researcher"
+  }
+}

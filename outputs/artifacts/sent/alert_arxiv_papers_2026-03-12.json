@@ -1,0 +1,17 @@
+{
+  "job_id": "alert_arxiv_papers:2026-03-12",
+  "task": "alert_arxiv_papers",
+  "content": "## 🚨 系统任务执行异常 (Immediate Alert)\n\n**任务名称**: arxiv_papers\n\n**发生时间**: 2026-03-12 07:01:54\n\n**异常摘要**:\n```\n未知异常\n```\n\n**建议**: 请查看 ~/logs/scheduler.jsonl 获取详细堆栈信息。\n",
+  "push_targets": [
+    "dingtalk"
+  ],
+  "created_at": "2026-03-11T23:01:54.522124+00:00",
+  "retries": 1,
+  "last_error": {
+    "dingtalk": "file is not a database"
+  },
+  "metadata": {
+    "type": "alert",
+    "level": "critical"
+  }
+}

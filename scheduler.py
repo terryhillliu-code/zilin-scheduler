@@ -661,6 +661,19 @@ def job_morning_brief():
         )
         logger.info(f"📦 结果已保存: {file_path}")
 
+        # === Obsidian 归档 ===
+        try:
+            from obsidian_archive import archive_to_obsidian
+            obs_path = archive_to_obsidian(
+                content=content,
+                note_type="brief",
+                tags=["scheduler", "早报"],
+                task_name=task_name
+            )
+            logger.info(f"📝 已归档到 Obsidian: {obs_path.name}")
+        except Exception as e:
+            logger.warning(f"Obsidian 归档失败（不影响推送）: {e}")
+
         success = try_push(file_path, push_manager, logger, return_status=True)
         push_status.update(success or {})
         if not success:
@@ -727,6 +740,21 @@ def job_noon_brief():
         )
         if logger:
             logger.info(f"📦 结果已保存: {file_path}")
+
+        # === Obsidian 归档 ===
+        try:
+            from obsidian_archive import archive_to_obsidian
+            obs_path = archive_to_obsidian(
+                content=content,
+                note_type="brief",
+                tags=["scheduler", "午报"],
+                task_name=task_name
+            )
+            if logger:
+                logger.info(f"📝 已归档到 Obsidian: {obs_path.name}")
+        except Exception as e:
+            if logger:
+                logger.warning(f"Obsidian 归档失败（不影响推送）: {e}")
 
         success = try_push(file_path, push_manager, logger, return_status=True)
         push_status.update(success or {})
@@ -835,6 +863,19 @@ def job_info_brief(hour: int):
         )
         logger.info(f"📦 结果已保存: {file_path}")
 
+        # === Obsidian 归档 ===
+        try:
+            from obsidian_archive import archive_to_obsidian
+            obs_path = archive_to_obsidian(
+                content=content,
+                note_type="brief",
+                tags=["scheduler", "信息流"],
+                task_name=task_name
+            )
+            logger.info(f"📝 已归档到 Obsidian: {obs_path.name}")
+        except Exception as e:
+            logger.warning(f"Obsidian 归档失败（不影响推送）: {e}")
+
         success = try_push(file_path, push_manager, logger, return_status=True)
         push_status.update(success or {})
 
@@ -917,7 +958,7 @@ def job_us_market_open():
 
         save_output(task_name, content)
         channels = config["jobs"][task_name].get("push_to", ["dingtalk", "feishu"])
-        
+
         file_path = save_result(
             task=task_name,
             content=content,
@@ -925,7 +966,20 @@ def job_us_market_open():
             metadata={"agent": "researcher"}
         )
         logger.info(f"📦 结果已保存: {file_path}")
-        
+
+        # === Obsidian 归档 ===
+        try:
+            from obsidian_archive import archive_to_obsidian
+            obs_path = archive_to_obsidian(
+                content=content,
+                note_type="market",
+                tags=["scheduler", "美股开盘"],
+                task_name=task_name
+            )
+            logger.info(f"📝 已归档到 Obsidian: {obs_path.name}")
+        except Exception as e:
+            logger.warning(f"Obsidian 归档失败（不影响推送）: {e}")
+
         success = try_push(file_path, push_manager, logger, return_status=True)
         push_status.update(success or {})
         if not success:
@@ -981,7 +1035,7 @@ def job_us_market_close():
 
         save_output(task_name, content)
         channels = config["jobs"][task_name].get("push_to", ["dingtalk", "feishu"])
-        
+
         file_path = save_result(
             task=task_name,
             content=content,
@@ -989,7 +1043,20 @@ def job_us_market_close():
             metadata={"agent": "researcher"}
         )
         logger.info(f"📦 结果已保存: {file_path}")
-        
+
+        # === Obsidian 归档 ===
+        try:
+            from obsidian_archive import archive_to_obsidian
+            obs_path = archive_to_obsidian(
+                content=content,
+                note_type="market",
+                tags=["scheduler", "美股收盘"],
+                task_name=task_name
+            )
+            logger.info(f"📝 已归档到 Obsidian: {obs_path.name}")
+        except Exception as e:
+            logger.warning(f"Obsidian 归档失败（不影响推送）: {e}")
+
         success = try_push(file_path, push_manager, logger, return_status=True)
         push_status.update(success or {})
         if not success:
@@ -1126,7 +1193,7 @@ def job_arxiv():
 
         save_output(task_name, content)
         channels = config["jobs"].get(task_name, {}).get("push_to", ["dingtalk", "feishu"])
-        
+
         file_path = save_result(
             task=task_name,
             content=content,
@@ -1134,7 +1201,20 @@ def job_arxiv():
             metadata={"agent": "researcher"}
         )
         logger.info(f"📦 结果已保存: {file_path}")
-        
+
+        # === Obsidian 归档 ===
+        try:
+            from obsidian_archive import archive_to_obsidian
+            obs_path = archive_to_obsidian(
+                content=content,
+                note_type="arxiv",
+                tags=["scheduler", "论文"],
+                task_name=task_name
+            )
+            logger.info(f"📝 已归档到 Obsidian: {obs_path.name}")
+        except Exception as e:
+            logger.warning(f"Obsidian 归档失败（不影响推送）: {e}")
+
         success = try_push(file_path, push_manager, logger, return_status=True)
         push_status.update(success or {})
         if not success:

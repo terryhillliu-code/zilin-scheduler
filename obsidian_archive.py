@@ -23,9 +23,9 @@ class ObsidianArchiver:
     """将 AI 产出写入 Obsidian 结构化笔记"""
 
     DIRS = {
-        "brief": "AI-Briefs/Daily",
-        "arxiv": "AI-Briefs/ArXiv",
-        "market": "AI-Briefs/Market",
+        "brief": "40_AI_Briefs/Daily",
+        "arxiv": "40_AI_Briefs/ArXiv",
+        "market": "40_AI_Briefs/Market",
     }
 
     TYPE_NAMES = {
@@ -76,7 +76,7 @@ class ObsidianArchiver:
         time_str = now.strftime("%H:%M")
 
         # 确定子目录
-        subdir = self.DIRS.get(note_type, "AI-Briefs/Other")
+        subdir = self.DIRS.get(note_type, "40_AI_Briefs/Other")
         target_dir = self.vault / subdir
         target_dir.mkdir(parents=True, exist_ok=True)
 

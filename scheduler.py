@@ -50,7 +50,7 @@ from scheduler_queue import save_result, try_push, save_result_safe
 from news_dedup import should_push, load_sent_today, get_sent_titles, record_sent, extract_titles_from_content
 
 # 新增：锁管理、缓存、触发器
-from lock_manager import acquire_lock
+from lock_manager import acquire_lock, try_acquire_lock, release_lock
 from price_cache import has_price_changed, update_price_cache
 import trigger_listener
 
@@ -620,7 +620,7 @@ def job_morning_brief():
     task_name = "morning_brief"
     
     # T-016.4: 任务互斥锁
-    if not acquire_lock(task_name):
+    if not try_acquire_lock(task_name):
         if logger:
             logger.warning(f"⏩ {task_name} 正在执行中，跳过本次触发")
         return
@@ -674,6 +674,7 @@ def job_morning_brief():
     try:
         _run()
     finally:
+        release_lock(task_name)
         end_time = time.time()
         log_task_metrics(
             task_name=task_name,
@@ -699,7 +700,7 @@ def job_noon_brief():
     task_name = "noon_brief"
 
     # T-016.4: 任务互斥锁
-    if not acquire_lock(task_name):
+    if not try_acquire_lock(task_name):
         if logger:
             logger.warning(f"⏩ {task_name} 正在执行中，跳过本次触发")
         return
@@ -758,6 +759,7 @@ def job_noon_brief():
     try:
         _run()
     finally:
+        release_lock(task_name)
         end_time = time.time()
         log_task_metrics(
             task_name=task_name,
@@ -783,7 +785,7 @@ def job_info_brief(hour: int):
     task_name = f"info_brief_{hour:02d}"
 
     # T-016.4: 任务互斥锁，防止并发执行
-    if not acquire_lock(task_name):
+    if not try_acquire_lock(task_name):
         if logger:
             logger.warning(f"⏩ {task_name} 正在执行中，跳过本次触发")
         return
@@ -902,11 +904,12 @@ def job_info_brief(hour: int):
                 logger.info(f"ℹ️ info_brief_{hour:02d} 已确认业务跳过")
 
     finally:
+        release_lock(task_name)
         end_time = time.time()
         # 只要不是 Exception 抛出且完成了推送，或者明确标记为 skipped，就不告警
         success_final = (
-            push_status.get("dingtalk") or 
-            push_status.get("feishu") or 
+            push_status.get("dingtalk") or
+            push_status.get("feishu") or
             push_status.get("_skipped_by_concurrency")
         )
         log_task_metrics(
@@ -933,7 +936,7 @@ def job_us_market_open():
     task_name = "us_market_open"
     
     # T-016.4: 任务互斥锁
-    if not acquire_lock(task_name):
+    if not try_acquire_lock(task_name):
         if logger:
             logger.warning(f"⏩ {task_name} 正在执行中，跳过本次触发")
         return
@@ -984,13 +987,14 @@ def job_us_market_open():
         error_msg = str(e)
         logger.error(f"❌ {task_name} 失败: {error_msg}")
     finally:
+        release_lock(task_name)
         end_time = time.time()
         log_task_metrics(
             task_name=task_name,
             start_time=start_time,
             end_time=end_time,
-            success=push_status.get("dingtalk") or 
-                    push_status.get("feishu") or 
+            success=push_status.get("dingtalk") or
+                    push_status.get("feishu") or
                     push_status.get("_skipped_by_concurrency"),
             push_status=push_status,
             error_msg=error_msg
@@ -1010,7 +1014,7 @@ def job_us_market_close():
     task_name = "us_market_close"
 
     # T-016.4: 任务互斥锁
-    if not acquire_lock(task_name):
+    if not try_acquire_lock(task_name):
         if logger:
             logger.warning(f"⏩ {task_name} 正在执行中，跳过本次触发")
         return
@@ -1061,13 +1065,14 @@ def job_us_market_close():
         error_msg = str(e)
         logger.error(f"❌ {task_name} 失败: {error_msg}")
     finally:
+        release_lock(task_name)
         end_time = time.time()
         log_task_metrics(
             task_name=task_name,
             start_time=start_time,
             end_time=end_time,
-            success=push_status.get("dingtalk") or 
-                    push_status.get("feishu") or 
+            success=push_status.get("dingtalk") or
+                    push_status.get("feishu") or
                     push_status.get("_skipped_by_concurrency"),
             push_status=push_status,
             error_msg=error_msg
@@ -1088,7 +1093,7 @@ def job_crypto(period: str = "morning"):
     task_name = f"crypto_{period}"
 
     # T-016.4: 任务互斥锁
-    if not acquire_lock(task_name):
+    if not try_acquire_lock(task_name):
         if logger:
             logger.warning(f"⏩ {task_name} 正在执行中，跳过本次触发")
         return
@@ -1130,13 +1135,14 @@ def job_crypto(period: str = "morning"):
         error_msg = str(e)
         logger.error(f"❌ {task_name} 失败: {error_msg}")
     finally:
+        release_lock(task_name)
         end_time = time.time()
         log_task_metrics(
             task_name=task_name,
             start_time=start_time,
             end_time=end_time,
-            success=push_status.get("dingtalk") or 
-                    push_status.get("feishu") or 
+            success=push_status.get("dingtalk") or
+                    push_status.get("feishu") or
                     push_status.get("_skipped_by_concurrency"),
             push_status=push_status,
             error_msg=error_msg
@@ -1156,7 +1162,7 @@ def job_arxiv():
     task_name = "arxiv_papers"
 
     # T-016.4: 任务互斥锁
-    if not acquire_lock(task_name):
+    if not try_acquire_lock(task_name):
         if logger:
             logger.warning(f"⏩ {task_name} 正在执行中，跳过本次触发")
         return
@@ -1219,13 +1225,14 @@ def job_arxiv():
         error_msg = str(e)
         logger.error(f"❌ {task_name} 失败: {error_msg}")
     finally:
+        release_lock(task_name)
         end_time = time.time()
         log_task_metrics(
             task_name=task_name,
             start_time=start_time,
             end_time=end_time,
-            success=push_status.get("dingtalk") or 
-                    push_status.get("feishu") or 
+            success=push_status.get("dingtalk") or
+                    push_status.get("feishu") or
                     push_status.get("_skipped_by_concurrency"),
             push_status=push_status,
             error_msg=error_msg
@@ -1373,6 +1380,7 @@ def job_system_metrics_report():
     try:
         _run()
     finally:
+        release_lock(task_name)
         end_time = time.time()
         log_task_metrics(
             task_name=task_name,
@@ -1447,7 +1455,7 @@ def job_klib_sync():
     global logger
     task_name = "klib_sync"
     
-    if not acquire_lock(task_name):
+    if not try_acquire_lock(task_name):
         logger.warning(f"⏩ {task_name} 正在执行中，跳过本次触发")
         return
         
@@ -1488,6 +1496,7 @@ def job_klib_sync():
     except Exception as e:
         logger.error(f"❌ {task_name} 发生非预期异常: {e}")
     finally:
+        release_lock(task_name)
         end_time = time.time()
         log_task_metrics(
             task_name=task_name,
@@ -1572,7 +1581,7 @@ def job_graph_maintenance():
     """知识图谱自动化维护任务 (Phase 5b)"""
     global logger
     task_name = "graph_maintenance"
-    if not acquire_lock(task_name):
+    if not try_acquire_lock(task_name):
         logger.warning(f"⏩ {task_name} 正在执行中，跳过本次触发")
         return
 

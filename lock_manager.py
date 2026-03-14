@@ -4,6 +4,7 @@
 防止调度任务并发执行，确保同一时间同一任务只有一个实例
 
 使用示例：
+    # 方式1: 上下文管理器（推荐）
     from lock_manager import acquire_lock
 
     with acquire_lock("researcher") as locked:
@@ -11,6 +12,15 @@
             print("获取锁成功，执行任务")
         else:
             print("任务已在执行中，跳过")
+
+    # 方式2: 简单调用（用于非上下文场景）
+    from lock_manager import try_acquire_lock, release_lock
+
+    if not try_acquire_lock("my_task"):
+        print("任务已在执行中")
+        return
+    # ... 执行任务 ...
+    release_lock("my_task")
 """
 
 import os
@@ -34,6 +44,72 @@ AGENT_LOCKS = {
     "builder": {"max_hold_time": 900, "name": "筑微代码生成"},
     "reviewer": {"max_hold_time": 600, "name": "审微代码审查"},
 }
+
+
+def try_acquire_lock(lock_name: str) -> bool:
+    """
+    尝试获取锁（非阻塞）
+
+    Args:
+        lock_name: 锁名称
+
+    Returns:
+        True 表示获取成功，False 表示锁被占用
+    """
+    LOCK_DIR.mkdir(exist_ok=True)
+    lock_file = LOCK_DIR / f"{lock_name}.lock"
+
+    try:
+        # 检查是否有 stale 锁
+        if lock_file.exists():
+            if is_stale_lock(lock_file):
+                logger.warning(f"🧹 清理 stale 锁: {lock_name}")
+                force_unlock(lock_file)
+            else:
+                logger.debug(f"🔒 锁被占用: {lock_name}")
+                return False
+
+        # 创建锁文件
+        lock_fd = open(lock_file, 'w')
+        try:
+            fcntl.flock(lock_fd.fileno(), fcntl.LOCK_EX | fcntl.LOCK_NB)
+            lock_fd.write(str(os.getpid()))
+            lock_fd.flush()
+            os.fsync(lock_fd.fileno())
+            lock_fd.close()
+            logger.debug(f"🔓 获取锁: {lock_name} (PID: {os.getpid()})")
+            return True
+        except BlockingIOError:
+            lock_fd.close()
+            return False
+
+    except Exception as e:
+        logger.error(f"❌ 获取锁失败 [{lock_name}]: {e}")
+        return False
+
+
+def release_lock(lock_name: str) -> bool:
+    """
+    释放锁
+
+    Args:
+        lock_name: 锁名称
+
+    Returns:
+        是否成功释放
+    """
+    lock_file = LOCK_DIR / f"{lock_name}.lock"
+
+    try:
+        if lock_file.exists():
+            os.unlink(lock_file)
+            logger.debug(f"🔓 释放锁: {lock_name}")
+            return True
+    except Exception as e:
+        logger.error(f"❌ 释放锁失败 [{lock_name}]: {e}")
+        return False
+
+    return False
 
 
 @contextmanager

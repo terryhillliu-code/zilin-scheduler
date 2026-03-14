@@ -1607,6 +1607,46 @@ def job_graph_maintenance():
         end_time = time.time()
         log_task_metrics(task_name, start_time, end_time, success=True) # 索引不影响推送，标记为成功
 
+
+def job_ws_health_check():
+    """WebSocket 健康检查（每 5 分钟）"""
+    global logger
+    task_name = "ws_health_check"
+
+    try:
+        # 检查飞书服务进程
+        result = subprocess.run(
+            ["launchctl", "list"],
+            capture_output=True,
+            text=True,
+            timeout=5
+        )
+
+        bot_running = "com.zhiwei.bot" in result.stdout
+
+        if not bot_running:
+            logger.error("⚠️ 飞书服务掉线！com.zhiwei.bot 未运行")
+            # TODO: 发送告警通知（钉钉/飞书）
+            # 当前只记录日志，后续可接入推送
+        else:
+            logger.debug("💚 飞书服务正常")
+
+        # 检查最近消息时间（可选增强）
+        log_file = Path.home() / "logs" / "feishu_bot.log"
+        if log_file.exists():
+            import os
+            mtime = os.path.getmtime(log_file)
+            age_seconds = time.time() - mtime
+
+            if age_seconds > 600:  # 10 分钟无更新
+                logger.warning(f"⚠️ 飞书日志 {int(age_seconds/60)} 分钟无更新")
+
+    except subprocess.TimeoutExpired:
+        logger.error("⚠️ WebSocket 健康检查超时")
+    except Exception as e:
+        logger.error(f"⚠️ WebSocket 健康检查失败: {e}")
+
+
 def main():
     global config, push_manager, logger
 
@@ -1720,6 +1760,15 @@ def main():
         name="系统健康检查"
     )
     logger.info("   💚 系统健康检查已启用 [每小时]")
+
+    # WebSocket 健康检查（每 5 分钟）
+    scheduler.add_job(
+        job_ws_health_check,
+        CronTrigger(minute="*/5", timezone=tz),
+        id="ws_health_check",
+        name="WebSocket 健康检查"
+    )
+    logger.info("   💚 WebSocket 健康检查已启用 [每 5 分钟]")
 
     def schedule_retry(job_id: str):
         """安排重试任务（遵守 quiet_hours）"""

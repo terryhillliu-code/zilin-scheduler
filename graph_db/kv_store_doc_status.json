@@ -5385,7 +5385,7 @@
     "chunks_list": []
   },
   "doc-caffd63ee8599ae7be43759f1b96b861": {
-    "status": "processing",
+    "status": "processed",
     "chunks_count": 1,
     "chunks_list": [
       "chunk-caffd63ee8599ae7be43759f1b96b861"
@@ -5393,11 +5393,113 @@
     "content_summary": "---\ntitle: \"Evaluating CXL Based Composable Memory Solutions A TCO Framework for Datacenter Workloads\"\nauthor: \"未知\"\ndate: 2026-03-07\ntype: report\nformat: \".pdf\"\npriority: \"core\"\nvectorized: 已向量化\ntags:\n  - 研报库/核心】服务器架构\n  - 优先级/核心\n---\n\n\n# Evaluating CX...",
     "content_length": 649,
     "created_at": "2026-03-12T18:56:07.123203+00:00",
-    "updated_at": "2026-03-12T18:56:07.154334+00:00",
+    "updated_at": "2026-03-13T18:35:34.352051+00:00",
     "file_path": "unknown_source",
     "track_id": "insert_20260313_025607_98800107",
     "metadata": {
-      "processing_start_time": 1773341767
+      "processing_start_time": 1773426602,
+      "processing_end_time": 1773426934
+    }
+  },
+  "doc-f4f7f600f2ca98f707b1999fc4b9f540": {
+    "status": "processed",
+    "chunks_count": 1,
+    "chunks_list": [
+      "chunk-f4f7f600f2ca98f707b1999fc4b9f540"
+    ],
+    "content_summary": "---\ntitle: \"一年零代码实践复盘：从入门到AI Agent探索\"\nsource_url: \"https://v.douyin.com/zuXVO1BxGds\"\ndate: 2026-03-13\ntags: [\"零代码\", \"AI Agent\", \"Lovable\", \"Cloud Code\", \"个人开发者\"]\ntype: video_distill\nasr_source: \"dashscope_recognition\"\nnoise_tags: []\n---\n\n# 一年零代码实践复盘：...",
+    "content_length": 1541,
+    "created_at": "2026-03-13T18:30:02.433296+00:00",
+    "updated_at": "2026-03-13T18:36:33.181647+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260314_023002_d45ae224",
+    "metadata": {
+      "processing_start_time": 1773426602,
+      "processing_end_time": 1773426993
+    }
+  },
+  "doc-13553145d3f41af0c13bdd91235f3ff3": {
+    "status": "processed",
+    "chunks_count": 1,
+    "chunks_list": [
+      "chunk-13553145d3f41af0c13bdd91235f3ff3"
+    ],
+    "content_summary": "---\ntitle: \"7833 - Thinking Outside the Rack- Scaling Up with Optical Interconnects\"\nauthor: \"未知\"\ndate: \"2026-03-07\"\ntype: \"report\"\nformat: \".pdf\"\npriority: \"reference\"\nvectorized: \"未向量化\"\ntags: \"\"\ncategory: \"Personal\"\nsource: \"obsidian\"\ncreated: \"202...",
+    "content_length": 893,
+    "created_at": "2026-03-13T18:36:33.434782+00:00",
+    "updated_at": "2026-03-13T18:41:40.636914+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260314_023633_5787c648",
+    "metadata": {
+      "processing_start_time": 1773426993,
+      "processing_end_time": 1773427300
+    }
+  },
+  "doc-784d4585ebe0819ccbc35184946098ac": {
+    "status": "processed",
+    "chunks_count": 1,
+    "chunks_list": [
+      "chunk-784d4585ebe0819ccbc35184946098ac"
+    ],
+    "content_summary": "---\ntitle: \"02 04 ReThinker Scientific Reasoning by Rethinking with Guided Reflection and Confidence Control\"\nauthor: \"未知\"\ndate: \"2026-03-08\"\ntype: \"report\"\nformat: \".pdf\"\npriority: \"reference\"\nvectorized: \"未向量化\"\ntags: \"\"\ncategory: \"Personal\"\nsource:...",
+    "content_length": 982,
+    "created_at": "2026-03-13T18:41:40.810240+00:00",
+    "updated_at": "2026-03-13T18:45:52.579170+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260314_024140_3e14d0e9",
+    "metadata": {
+      "processing_start_time": 1773427300,
+      "processing_end_time": 1773427552
+    }
+  },
+  "doc-de484dab9dc735b91436af3e79491149": {
+    "status": "processed",
+    "chunks_count": 1,
+    "chunks_list": [
+      "chunk-de484dab9dc735b91436af3e79491149"
+    ],
+    "content_summary": "---\ntitle: \"Thinking Outside the Rack Scaling Up with Optical Interconnects\"\nauthor: \"未知\"\ndate: \"2026-03-07\"\ntype: \"report\"\nformat: \".pdf\"\npriority: \"reference\"\nvectorized: \"未向量化\"\ntags: \"\"\ncategory: \"Personal\"\nsource: \"obsidian\"\ncreated: \"2026-03-13\"...",
+    "content_length": 610,
+    "created_at": "2026-03-13T18:45:52.793065+00:00",
+    "updated_at": "2026-03-13T18:51:10.429748+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260314_024552_309ed4e5",
+    "metadata": {
+      "processing_start_time": 1773427552,
+      "processing_end_time": 1773427870
+    }
+  },
+  "doc-e4a307af220b383886bf52906f7d65bf": {
+    "status": "processed",
+    "chunks_count": 1,
+    "chunks_list": [
+      "chunk-e4a307af220b383886bf52906f7d65bf"
+    ],
+    "content_summary": "---\ntitle: \"ISSCC 2026可穿戴与无线生物医学系统合集（202页PPT）\"\nauthor: \"未知\"\ndate: \"2026-03-11\"\ntype: \"report\"\nformat: \".pdf\"\npriority: \"reference\"\nvectorized: \"未向量化\"\ntags: \"\"\ncategory: \"Frontier-Tech\"\nsource: \"obsidian\"\ncreated: \"2026-03-13\"\n---\n# ISSCC 2026可穿戴与无线生物...",
+    "content_length": 512,
+    "created_at": "2026-03-13T18:51:10.619589+00:00",
+    "updated_at": "2026-03-13T18:56:51.342377+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260314_025110_bf20082f",
+    "metadata": {
+      "processing_start_time": 1773427870,
+      "processing_end_time": 1773428211
+    }
+  },
+  "doc-311e0cb6a0fba237f123c1105d717672": {
+    "status": "processing",
+    "chunks_count": 1,
+    "chunks_list": [
+      "chunk-311e0cb6a0fba237f123c1105d717672"
+    ],
+    "content_summary": "---\ntitle: \"ISSCC 2026 神经与生物医学接口合集（438页PPT）\"\nauthor: \"未知\"\ndate: \"2026-03-11\"\ntype: \"report\"\nformat: \".pdf\"\npriority: \"reference\"\nvectorized: \"未向量化\"\ntags: \"\"\ncategory: \"Frontier-Tech\"\nsource: \"obsidian\"\ncreated: \"2026-03-13\"\n---\n# ISSCC 2026 神经与生物医学接口...",
+    "content_length": 508,
+    "created_at": "2026-03-13T18:56:51.531103+00:00",
+    "updated_at": "2026-03-13T18:56:51.554598+00:00",
+    "file_path": "unknown_source",
+    "track_id": "insert_20260314_025651_26cb3eb6",
+    "metadata": {
+      "processing_start_time": 1773428211
     }
   }
 }

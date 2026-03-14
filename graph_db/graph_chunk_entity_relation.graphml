@@ -76,10 +76,10 @@ The term carries no implication of authorial intent, collaborative authorship, o
       <data key="d1">data</data>
       <data key="d2">The entity 2026-03-07 denotes the specific calendar date of March 7, 2026. It functions primarily as a structured, machine-readable temporal metadata attribute within document management or library systems. Across all provided descriptions, this date is consistently identified as marking a report's formal publication, ingestion, or addition to a repository. This ingestion process is referred to in Chinese as“入库” (rùkù), meaning“entry into storage.”The date represents a system-level archival milestone rather than the report's drafting or authorship date, though one description notes the possibility of it indicating creation time; this interpretation is explicitly subordinate to the dominant consensus that 2026-03-07 signifies official availability within the system. Its presence in the report's metadata ensures standardized cataloging, version control, and retrieval across digital library environments.
 
-All sources concur that 2026-03-07 is explicitly declared in the metadata schema—not inferred or derived—and thus operates as a definitive, authoritative point-in-time marker for the report's lifecycle. While several descriptions generically refer to it as indicating“creation or publication,”the most detailed account clarifies that its primary and unambiguous role is to denote formal publication and ingestion. The date is associated with specific technical reports in varying contexts. In one instance, it is specifically linked to the Mt. Diablo Server Scope report. In another instance, 2026-03-07 is identified as the publication date of the report on PCIe 7.0 enhancements. Regardless of the specific document context, every description affirms the date's role as a formal, system-recorded indicator of the report's publication or archival status within the library infrastructure.&lt;SEP&gt;The date associated with the report creation or storage.&lt;SEP&gt;The date listed for the report and storage time.&lt;SEP&gt;The date associated with the report creation or入库time.</data>
-      <data key="d3">chunk-5642f5d2398a5cb6600146cb1001b0ec&lt;SEP&gt;chunk-d1c6054a6d87cf6975db5c63bd96f9cd&lt;SEP&gt;chunk-1547ad065c68b2f6fec2e3b6eb6a9099&lt;SEP&gt;chunk-17e8fab522b31c893a3a7ef21633d42a&lt;SEP&gt;chunk-7cb819bd8f7ecd3c6e4efa0548627c2f&lt;SEP&gt;chunk-93d5d66acecc3b09726280461a1741c7&lt;SEP&gt;chunk-2fda2d54a8413eca19fea985df0ff580&lt;SEP&gt;chunk-2c984e299ac9432c7e312cc7b398b600&lt;SEP&gt;chunk-33ad961ca189b1cec80569bbd0809873&lt;SEP&gt;chunk-22d5697b8505125995b91427be92e6d2&lt;SEP&gt;chunk-04159a2e6b1c0a304c8cab9dc130201f&lt;SEP&gt;chunk-c0b6845c9f5c77a0f3f30fa98403d8fe&lt;SEP&gt;chunk-ba1d69c721849ac582b1a53a58646ef1&lt;SEP&gt;chunk-805ed11febeca1bfd1bdea057549e4ce&lt;SEP&gt;chunk-e24b7488a587cd1f8bf6573d12f1c75a&lt;SEP&gt;chunk-6d829808f9b4093bb903d5990d12a27c&lt;SEP&gt;chunk-df115efbf3bc71602047949ae3dbbdf0&lt;SEP&gt;chunk-15484e8b32164d9fb60eeef755439770&lt;SEP&gt;chunk-46bc26dff317560becba9a0a6fa7a441&lt;SEP&gt;chunk-61f77d89f092ff5cd7c6ea81d31cfeb6&lt;SEP&gt;chunk-2c8929bd6af5efae83044622ffa3faac&lt;SEP&gt;chunk-9e88d373c00da121b8868d08bdceb9cf&lt;SEP&gt;chunk-32749bfe06ebb4fd503585308b574af7&lt;SEP&gt;chunk-cf00ccbe9715d44dfa602d3da7162666&lt;SEP&gt;chunk-ef5a1dc3d7c28f0190c5185e1c92732b&lt;SEP&gt;chunk-7b48c48f2f7c3877c03d05218cfb8c20&lt;SEP&gt;chunk-3ae046aa80e7382953f272a3870f099b&lt;SEP&gt;chunk-14a5b27abffb227913c4a16ac75887ca&lt;SEP&gt;chunk-e4173aa4ed70cd6d625ee79aebe2a677&lt;SEP&gt;chunk-99116bb42021db2c45f55b65671842c0&lt;SEP&gt;chunk-c461db61ef0a922e7d7292d8516c1147&lt;SEP&gt;chunk-538e9be43efc9f4740b1699a18d33882&lt;SEP&gt;chunk-7480ef95765b1d3cb3e7cc5a73e67e91&lt;SEP&gt;chunk-f023cd84d3e2ed9cf707d62efd5ddbb9&lt;SEP&gt;chunk-87108b0686e8d70e6c11c7ad5b493573&lt;SEP&gt;chunk-01a392db9d8bb576ab6ed5aff9f9d578&lt;SEP&gt;chunk-1fc91c144f09ce8648b8a92d03b6a031&lt;SEP&gt;chunk-266b57d952795e78de135dd7ea0d1822&lt;SEP&gt;chunk-fde36569763e8e63f5879815d072c123&lt;SEP&gt;chunk-1d28fc57f74bd152b123d626835823bc&lt;SEP&gt;chunk-60ca18023b7448fb4ddf9aa784ef1a65&lt;SEP&gt;chunk-33d6bc980e862376c11685a00bf22ca3&lt;SEP&gt;chunk-e27f03ec1e126815641b4755ece051c6&lt;SEP&gt;chunk-968fbcf059982c556b4bcc6944efa36b&lt;SEP&gt;chunk-f3b581e41172762e088bcf3b7f03c6a4&lt;SEP&gt;chunk-df273047e67bbcef8888ccc637f02f26</data>
+All sources concur that 2026-03-07 is explicitly declared in the metadata schema—not inferred or derived—and thus operates as a definitive, authoritative point-in-time marker for the report's lifecycle. While several descriptions generically refer to it as indicating“creation or publication,”the most detailed account clarifies that its primary and unambiguous role is to denote formal publication and ingestion. The date is associated with specific technical reports in varying contexts. In one instance, it is specifically linked to the Mt. Diablo Server Scope report. In another instance, 2026-03-07 is identified as the publication date of the report on PCIe 7.0 enhancements. Regardless of the specific document context, every description affirms the date's role as a formal, system-recorded indicator of the report's publication or archival status within the library infrastructure.&lt;SEP&gt;The date associated with the report creation or storage.&lt;SEP&gt;The date listed for the report and storage time.&lt;SEP&gt;The date associated with the report creation or入库time.&lt;SEP&gt;The publication date specified in the report metadata.&lt;SEP&gt;The publication and storage date of the document.</data>
+      <data key="d3">chunk-5642f5d2398a5cb6600146cb1001b0ec&lt;SEP&gt;chunk-d1c6054a6d87cf6975db5c63bd96f9cd&lt;SEP&gt;chunk-1547ad065c68b2f6fec2e3b6eb6a9099&lt;SEP&gt;chunk-17e8fab522b31c893a3a7ef21633d42a&lt;SEP&gt;chunk-7cb819bd8f7ecd3c6e4efa0548627c2f&lt;SEP&gt;chunk-93d5d66acecc3b09726280461a1741c7&lt;SEP&gt;chunk-2fda2d54a8413eca19fea985df0ff580&lt;SEP&gt;chunk-2c984e299ac9432c7e312cc7b398b600&lt;SEP&gt;chunk-33ad961ca189b1cec80569bbd0809873&lt;SEP&gt;chunk-22d5697b8505125995b91427be92e6d2&lt;SEP&gt;chunk-04159a2e6b1c0a304c8cab9dc130201f&lt;SEP&gt;chunk-c0b6845c9f5c77a0f3f30fa98403d8fe&lt;SEP&gt;chunk-ba1d69c721849ac582b1a53a58646ef1&lt;SEP&gt;chunk-805ed11febeca1bfd1bdea057549e4ce&lt;SEP&gt;chunk-e24b7488a587cd1f8bf6573d12f1c75a&lt;SEP&gt;chunk-6d829808f9b4093bb903d5990d12a27c&lt;SEP&gt;chunk-df115efbf3bc71602047949ae3dbbdf0&lt;SEP&gt;chunk-15484e8b32164d9fb60eeef755439770&lt;SEP&gt;chunk-46bc26dff317560becba9a0a6fa7a441&lt;SEP&gt;chunk-61f77d89f092ff5cd7c6ea81d31cfeb6&lt;SEP&gt;chunk-2c8929bd6af5efae83044622ffa3faac&lt;SEP&gt;chunk-9e88d373c00da121b8868d08bdceb9cf&lt;SEP&gt;chunk-32749bfe06ebb4fd503585308b574af7&lt;SEP&gt;chunk-cf00ccbe9715d44dfa602d3da7162666&lt;SEP&gt;chunk-ef5a1dc3d7c28f0190c5185e1c92732b&lt;SEP&gt;chunk-7b48c48f2f7c3877c03d05218cfb8c20&lt;SEP&gt;chunk-3ae046aa80e7382953f272a3870f099b&lt;SEP&gt;chunk-14a5b27abffb227913c4a16ac75887ca&lt;SEP&gt;chunk-e4173aa4ed70cd6d625ee79aebe2a677&lt;SEP&gt;chunk-99116bb42021db2c45f55b65671842c0&lt;SEP&gt;chunk-c461db61ef0a922e7d7292d8516c1147&lt;SEP&gt;chunk-538e9be43efc9f4740b1699a18d33882&lt;SEP&gt;chunk-7480ef95765b1d3cb3e7cc5a73e67e91&lt;SEP&gt;chunk-f023cd84d3e2ed9cf707d62efd5ddbb9&lt;SEP&gt;chunk-87108b0686e8d70e6c11c7ad5b493573&lt;SEP&gt;chunk-01a392db9d8bb576ab6ed5aff9f9d578&lt;SEP&gt;chunk-1fc91c144f09ce8648b8a92d03b6a031&lt;SEP&gt;chunk-266b57d952795e78de135dd7ea0d1822&lt;SEP&gt;chunk-fde36569763e8e63f5879815d072c123&lt;SEP&gt;chunk-1d28fc57f74bd152b123d626835823bc&lt;SEP&gt;chunk-60ca18023b7448fb4ddf9aa784ef1a65&lt;SEP&gt;chunk-33d6bc980e862376c11685a00bf22ca3&lt;SEP&gt;chunk-e27f03ec1e126815641b4755ece051c6&lt;SEP&gt;chunk-968fbcf059982c556b4bcc6944efa36b&lt;SEP&gt;chunk-f3b581e41172762e088bcf3b7f03c6a4&lt;SEP&gt;chunk-df273047e67bbcef8888ccc637f02f26&lt;SEP&gt;chunk-caffd63ee8599ae7be43759f1b96b861&lt;SEP&gt;chunk-de484dab9dc735b91436af3e79491149</data>
       <data key="d4">unknown_source</data>
-      <data key="d5">1773341691</data>
+      <data key="d5">1773427791</data>
       <data key="d6" />
     </node>
     <node id="PDF Format">
@@ -125,10 +125,10 @@ The descriptions collectively document at least thirteen distinct instances of t
       <data key="d1">concept</data>
       <data key="d2">Server Architecture refers to the structural design and organization of server hardware and software systems, serving as both a foundational engineering discipline and a primary analytical taxonomy in computing infrastructure. It encompasses the integration, interconnection, and configuration of core components, including processors, memory subsystems with emphasis on scalable design and hierarchy, storage, I/O interfaces, and high-speed interconnect technologies such as PCIe and HSIO. Modern Server Architecture increasingly incorporates advanced features like hardware-enforced quarantine mechanisms enabled by eSFI and PCIe-MI, reflecting a strategic evolution toward security, reliability, adaptability, and workload-specific optimization—particularly for AI and machine learning applications. This includes tight coupling with AI-optimized hardware organization for large language model inference, utilizing low-latency communication and CXL-enabled memory fabrics.
 
-Beyond its technical definition, Server Architecture functions as a technical domain, design methodology, and classification framework within research documentation. It is consistently identified as a topic tag, technical domain tag, and category tag associated with report documents, indicating the technical focus area, content category, and relevance to server infrastructure. It is the primary subject matter and core topic for reports such as the Mt. Diablo Server Scope report, where it is categorized under the core research library. In Chinese-language technical report libraries, it is explicitly tagged as“研报库/核心】服务器架构”and“【核心】服务器架构”. The domain informs critical decisions in component selection and modular system design, guided by industry initiatives like the Open Compute Project's Component Management Sub-project (OCP CMS). Across all contexts, Server Architecture is affirmed as the unifying conceptual and practical foundation for research, development, and deployment of next-generation server systems.&lt;SEP&gt;The thematic category or tag assigned to the document.&lt;SEP&gt;A core topic tag associated with the document.&lt;SEP&gt;A tag category associated with the report.&lt;SEP&gt;A core topic category associated with the report, indicated by tags in the document metadata.</data>
-      <data key="d3">chunk-3993cd0b737e3130edf76f25d51050ff&lt;SEP&gt;chunk-7cb819bd8f7ecd3c6e4efa0548627c2f&lt;SEP&gt;chunk-147c4db7a4ce5872858a38c1ac58af56&lt;SEP&gt;chunk-2c984e299ac9432c7e312cc7b398b600&lt;SEP&gt;chunk-f3556e182081aed4b9613c75949ed570&lt;SEP&gt;chunk-ba1d69c721849ac582b1a53a58646ef1&lt;SEP&gt;chunk-805ed11febeca1bfd1bdea057549e4ce&lt;SEP&gt;chunk-e24b7488a587cd1f8bf6573d12f1c75a&lt;SEP&gt;chunk-46bc26dff317560becba9a0a6fa7a441&lt;SEP&gt;chunk-d542a9101cecae9b9250937b2605dee2&lt;SEP&gt;chunk-1f1a30530b2b434213d044c2a8466044&lt;SEP&gt;chunk-10dc48654563b9bb58e4fbbbb7645eb8&lt;SEP&gt;chunk-9e88d373c00da121b8868d08bdceb9cf&lt;SEP&gt;chunk-207b0823e90b60e301db1f919be31b9c&lt;SEP&gt;chunk-ef5a1dc3d7c28f0190c5185e1c92732b&lt;SEP&gt;chunk-7b48c48f2f7c3877c03d05218cfb8c20&lt;SEP&gt;chunk-3ae046aa80e7382953f272a3870f099b&lt;SEP&gt;chunk-e4173aa4ed70cd6d625ee79aebe2a677&lt;SEP&gt;chunk-7dd14306d9061dddba8b150d9c7d98b0&lt;SEP&gt;chunk-97525ceaf715f1ad94448c8abc5642db&lt;SEP&gt;chunk-0559e293569f15eabf0cd28fac35d14f&lt;SEP&gt;chunk-ef9903a22739411840df5a1652b687d5&lt;SEP&gt;chunk-c461db61ef0a922e7d7292d8516c1147&lt;SEP&gt;chunk-03978f9015d72cc2c030ac8e6447fed7&lt;SEP&gt;chunk-538e9be43efc9f4740b1699a18d33882&lt;SEP&gt;chunk-e0849f10e95d7677ebed5f2a29c650a2&lt;SEP&gt;chunk-e43b9c7c8f30976446ff07cfb8acd723&lt;SEP&gt;chunk-63f83f5a5cef6dac282d861fd6da9e77&lt;SEP&gt;chunk-900ad8221a96dafc212eef7868a063e8&lt;SEP&gt;chunk-7480ef95765b1d3cb3e7cc5a73e67e91&lt;SEP&gt;chunk-f023cd84d3e2ed9cf707d62efd5ddbb9&lt;SEP&gt;chunk-54b80862fb010b672af4957bef254768&lt;SEP&gt;chunk-b71eacebd07cf22c28bd1377859a2954&lt;SEP&gt;chunk-55f9a5f9dbd8556e5eeb84b9bb117c15&lt;SEP&gt;chunk-fde36569763e8e63f5879815d072c123&lt;SEP&gt;chunk-1bf489aadb0f21630c59b8361f23e8f3&lt;SEP&gt;chunk-41e5bcd0e2dad86fc34ddddd1afe3ac0&lt;SEP&gt;chunk-fa73bfb5833304f96f036b9a9653ece2&lt;SEP&gt;chunk-1d28fc57f74bd152b123d626835823bc&lt;SEP&gt;chunk-1d26679a5c7d4be95dc3163cdd74635d&lt;SEP&gt;chunk-846347bde485db03ead56cd986ba9001&lt;SEP&gt;chunk-d7bc46115f13aecdbbcd6e7398ee9691&lt;SEP&gt;chunk-33d6bc980e862376c11685a00bf22ca3&lt;SEP&gt;chunk-e27f03ec1e126815641b4755ece051c6&lt;SEP&gt;chunk-3bef51647317cfab8fd98c2182da0b1c&lt;SEP&gt;chunk-968fbcf059982c556b4bcc6944efa36b&lt;SEP&gt;chunk-f3b581e41172762e088bcf3b7f03c6a4&lt;SEP&gt;chunk-635a8270f90d4ad369e34ef96c6f284f&lt;SEP&gt;chunk-230764380b33557b5524bd06ee945029&lt;SEP&gt;chunk-62991649d9ddbddbdd87eed4b8473959&lt;SEP&gt;chunk-bac65798eb982eaec66217171974d32c&lt;SEP&gt;chunk-1b7fcd9c795c3ffe5951ea1b509567b7&lt;SEP&gt;chunk-ec101ba502a70816a33b6a1e26f6054f&lt;SEP&gt;chunk-df273047e67bbcef8888ccc637f02f26</data>
+Beyond its technical definition, Server Architecture functions as a technical domain, design methodology, and classification framework within research documentation. It is consistently identified as a topic tag, technical domain tag, and category tag associated with report documents, indicating the technical focus area, content category, and relevance to server infrastructure. It is the primary subject matter and core topic for reports such as the Mt. Diablo Server Scope report, where it is categorized under the core research library. In Chinese-language technical report libraries, it is explicitly tagged as“研报库/核心】服务器架构”and“【核心】服务器架构”. The domain informs critical decisions in component selection and modular system design, guided by industry initiatives like the Open Compute Project's Component Management Sub-project (OCP CMS). Across all contexts, Server Architecture is affirmed as the unifying conceptual and practical foundation for research, development, and deployment of next-generation server systems.&lt;SEP&gt;The thematic category or tag assigned to the document.&lt;SEP&gt;A core topic tag associated with the document.&lt;SEP&gt;A tag category associated with the report.&lt;SEP&gt;A core topic category associated with the report, indicated by tags in the document metadata.&lt;SEP&gt;Classification category for the report within the library.</data>
+      <data key="d3">chunk-3993cd0b737e3130edf76f25d51050ff&lt;SEP&gt;chunk-7cb819bd8f7ecd3c6e4efa0548627c2f&lt;SEP&gt;chunk-147c4db7a4ce5872858a38c1ac58af56&lt;SEP&gt;chunk-2c984e299ac9432c7e312cc7b398b600&lt;SEP&gt;chunk-f3556e182081aed4b9613c75949ed570&lt;SEP&gt;chunk-ba1d69c721849ac582b1a53a58646ef1&lt;SEP&gt;chunk-805ed11febeca1bfd1bdea057549e4ce&lt;SEP&gt;chunk-e24b7488a587cd1f8bf6573d12f1c75a&lt;SEP&gt;chunk-46bc26dff317560becba9a0a6fa7a441&lt;SEP&gt;chunk-d542a9101cecae9b9250937b2605dee2&lt;SEP&gt;chunk-1f1a30530b2b434213d044c2a8466044&lt;SEP&gt;chunk-10dc48654563b9bb58e4fbbbb7645eb8&lt;SEP&gt;chunk-9e88d373c00da121b8868d08bdceb9cf&lt;SEP&gt;chunk-207b0823e90b60e301db1f919be31b9c&lt;SEP&gt;chunk-ef5a1dc3d7c28f0190c5185e1c92732b&lt;SEP&gt;chunk-7b48c48f2f7c3877c03d05218cfb8c20&lt;SEP&gt;chunk-3ae046aa80e7382953f272a3870f099b&lt;SEP&gt;chunk-e4173aa4ed70cd6d625ee79aebe2a677&lt;SEP&gt;chunk-7dd14306d9061dddba8b150d9c7d98b0&lt;SEP&gt;chunk-97525ceaf715f1ad94448c8abc5642db&lt;SEP&gt;chunk-0559e293569f15eabf0cd28fac35d14f&lt;SEP&gt;chunk-ef9903a22739411840df5a1652b687d5&lt;SEP&gt;chunk-c461db61ef0a922e7d7292d8516c1147&lt;SEP&gt;chunk-03978f9015d72cc2c030ac8e6447fed7&lt;SEP&gt;chunk-538e9be43efc9f4740b1699a18d33882&lt;SEP&gt;chunk-e0849f10e95d7677ebed5f2a29c650a2&lt;SEP&gt;chunk-e43b9c7c8f30976446ff07cfb8acd723&lt;SEP&gt;chunk-63f83f5a5cef6dac282d861fd6da9e77&lt;SEP&gt;chunk-900ad8221a96dafc212eef7868a063e8&lt;SEP&gt;chunk-7480ef95765b1d3cb3e7cc5a73e67e91&lt;SEP&gt;chunk-f023cd84d3e2ed9cf707d62efd5ddbb9&lt;SEP&gt;chunk-54b80862fb010b672af4957bef254768&lt;SEP&gt;chunk-b71eacebd07cf22c28bd1377859a2954&lt;SEP&gt;chunk-55f9a5f9dbd8556e5eeb84b9bb117c15&lt;SEP&gt;chunk-fde36569763e8e63f5879815d072c123&lt;SEP&gt;chunk-1bf489aadb0f21630c59b8361f23e8f3&lt;SEP&gt;chunk-41e5bcd0e2dad86fc34ddddd1afe3ac0&lt;SEP&gt;chunk-fa73bfb5833304f96f036b9a9653ece2&lt;SEP&gt;chunk-1d28fc57f74bd152b123d626835823bc&lt;SEP&gt;chunk-1d26679a5c7d4be95dc3163cdd74635d&lt;SEP&gt;chunk-846347bde485db03ead56cd986ba9001&lt;SEP&gt;chunk-d7bc46115f13aecdbbcd6e7398ee9691&lt;SEP&gt;chunk-33d6bc980e862376c11685a00bf22ca3&lt;SEP&gt;chunk-e27f03ec1e126815641b4755ece051c6&lt;SEP&gt;chunk-3bef51647317cfab8fd98c2182da0b1c&lt;SEP&gt;chunk-968fbcf059982c556b4bcc6944efa36b&lt;SEP&gt;chunk-f3b581e41172762e088bcf3b7f03c6a4&lt;SEP&gt;chunk-635a8270f90d4ad369e34ef96c6f284f&lt;SEP&gt;chunk-230764380b33557b5524bd06ee945029&lt;SEP&gt;chunk-62991649d9ddbddbdd87eed4b8473959&lt;SEP&gt;chunk-bac65798eb982eaec66217171974d32c&lt;SEP&gt;chunk-1b7fcd9c795c3ffe5951ea1b509567b7&lt;SEP&gt;chunk-ec101ba502a70816a33b6a1e26f6054f&lt;SEP&gt;chunk-df273047e67bbcef8888ccc637f02f26&lt;SEP&gt;chunk-caffd63ee8599ae7be43759f1b96b861</data>
       <data key="d4">unknown_source</data>
-      <data key="d5">1773341690</data>
+      <data key="d5">1773426822</data>
       <data key="d6" />
     </node>
     <node id="Trust">
@@ -172,12 +172,12 @@ The Core Priority designation is embedded in the report's metadata rather than e
     <node id="Research Report Library">
       <data key="d0">Research Report Library</data>
       <data key="d1">concept</data>
-      <data key="d2">The Research Report Library is a curated, structured knowledge management system designed to function as a centralized repository for storing and organizing technical reports. It operates as a digital collection or library system where documents are systematically classified rather than passively aggregated. This system emphasizes deliberate selection and organization, serving as a logical category or tag group under which documents are classified. It supports domain-specific technical knowledge management, ensuring that reports are stored and categorized within a defined library or collection system.
+      <data key="d2">The Research Report Library is a curated, structured knowledge management system designed to function as a centralized repository for storing and organizing technical reports. Operating as a digital collection, it ensures documents are systematically classified rather than passively aggregated. This system emphasizes deliberate selection and organization, serving as a logical category or tag group under which documents are classified. It supports domain-specific technical knowledge management, ensuring that reports are stored and categorized within a defined library or collection system.
 
-Organization within the Research Report Library is achieved through hierarchical tagging and file path navigation, which serve as metadata identifiers signaling a document's placement within the library's taxonomy. Classification schemes include domain and priority levels, such as Core and Server Architecture. Specific tags derived from the system, such as the Chinese-language tag 研报库/核心 (Research Report Library/Core) and its expanded variant【核心】服务器架构 (Core Server Architecture), indicate both the broader collection and the precise subcategory. These tags assign the document to a core research report collection, confirming the library's role as a classification system indicated by tags and file paths where the document is categorized.&lt;SEP&gt;The collection category indicated by the document tags and file path.&lt;SEP&gt;Research Report Library is the collection category indicated in the document tags.&lt;SEP&gt;Research Report Library is a category tag indicating the document belongs to a collection of research reports.&lt;SEP&gt;A category tag indicating the document belongs to the research report library collection.&lt;SEP&gt;A tag category indicating the document belongs to a research report collection.&lt;SEP&gt;The library category where the report is stored, indicated by tags.</data>
-      <data key="d3">chunk-3993cd0b737e3130edf76f25d51050ff&lt;SEP&gt;chunk-f3556e182081aed4b9613c75949ed570&lt;SEP&gt;chunk-3ae046aa80e7382953f272a3870f099b&lt;SEP&gt;chunk-c199ec006c1f0210255474d03892899b&lt;SEP&gt;chunk-97525ceaf715f1ad94448c8abc5642db&lt;SEP&gt;chunk-0559e293569f15eabf0cd28fac35d14f&lt;SEP&gt;chunk-900ad8221a96dafc212eef7868a063e8&lt;SEP&gt;chunk-1bf489aadb0f21630c59b8361f23e8f3&lt;SEP&gt;chunk-41e5bcd0e2dad86fc34ddddd1afe3ac0&lt;SEP&gt;chunk-d7bc46115f13aecdbbcd6e7398ee9691&lt;SEP&gt;chunk-33d6bc980e862376c11685a00bf22ca3&lt;SEP&gt;chunk-e27f03ec1e126815641b4755ece051c6&lt;SEP&gt;chunk-3bef51647317cfab8fd98c2182da0b1c&lt;SEP&gt;chunk-968fbcf059982c556b4bcc6944efa36b&lt;SEP&gt;chunk-f3b581e41172762e088bcf3b7f03c6a4&lt;SEP&gt;chunk-635a8270f90d4ad369e34ef96c6f284f&lt;SEP&gt;chunk-230764380b33557b5524bd06ee945029&lt;SEP&gt;chunk-62991649d9ddbddbdd87eed4b8473959&lt;SEP&gt;chunk-1b7fcd9c795c3ffe5951ea1b509567b7&lt;SEP&gt;chunk-ec101ba502a70816a33b6a1e26f6054f&lt;SEP&gt;chunk-df273047e67bbcef8888ccc637f02f26</data>
+Organization within the Research Report Library is achieved through hierarchical tagging and file path navigation, which serve as metadata identifiers signaling a document's placement within the library's taxonomy. The entity functions as the collection category indicated by these document tags and file paths, acting as a category tag indicating the document belongs to a research report collection. Classification schemes include domain and priority levels, such as Core and Server Architecture. Specific tags derived from the system, such as the Chinese-language tag 研报库/核心 (Research Report Library/Core) and its expanded variant【核心】服务器架构 (Core Server Architecture), indicate both the broader collection and the precise subcategory. These tags assign the document to a core research report collection, confirming the library's role as the library category where the report is stored.</data>
+      <data key="d3">chunk-3993cd0b737e3130edf76f25d51050ff&lt;SEP&gt;chunk-f3556e182081aed4b9613c75949ed570&lt;SEP&gt;chunk-3ae046aa80e7382953f272a3870f099b&lt;SEP&gt;chunk-c199ec006c1f0210255474d03892899b&lt;SEP&gt;chunk-97525ceaf715f1ad94448c8abc5642db&lt;SEP&gt;chunk-0559e293569f15eabf0cd28fac35d14f&lt;SEP&gt;chunk-900ad8221a96dafc212eef7868a063e8&lt;SEP&gt;chunk-1bf489aadb0f21630c59b8361f23e8f3&lt;SEP&gt;chunk-41e5bcd0e2dad86fc34ddddd1afe3ac0&lt;SEP&gt;chunk-d7bc46115f13aecdbbcd6e7398ee9691&lt;SEP&gt;chunk-33d6bc980e862376c11685a00bf22ca3&lt;SEP&gt;chunk-e27f03ec1e126815641b4755ece051c6&lt;SEP&gt;chunk-3bef51647317cfab8fd98c2182da0b1c&lt;SEP&gt;chunk-968fbcf059982c556b4bcc6944efa36b&lt;SEP&gt;chunk-f3b581e41172762e088bcf3b7f03c6a4&lt;SEP&gt;chunk-635a8270f90d4ad369e34ef96c6f284f&lt;SEP&gt;chunk-230764380b33557b5524bd06ee945029&lt;SEP&gt;chunk-62991649d9ddbddbdd87eed4b8473959&lt;SEP&gt;chunk-1b7fcd9c795c3ffe5951ea1b509567b7&lt;SEP&gt;chunk-ec101ba502a70816a33b6a1e26f6054f&lt;SEP&gt;chunk-df273047e67bbcef8888ccc637f02f26&lt;SEP&gt;chunk-caffd63ee8599ae7be43759f1b96b861</data>
       <data key="d4">unknown_source</data>
-      <data key="d5">1773341690</data>
+      <data key="d5">1773426883</data>
       <data key="d6" />
     </node>
     <node id="ZhiweiVault">
@@ -236,11 +236,11 @@ Organization within the Research Report Library is achieved through hierarchical
     </node>
     <node id="Obsidian">
       <data key="d0">Obsidian</data>
-      <data key="d1">software</data>
-      <data key="d2">Obsidian is a note-taking and knowledge management application that the Zhiwei System is being integrated with.</data>
-      <data key="d3">chunk-400a555f5d5834d5ffa5771be077ebcd</data>
+      <data key="d1">artifact</data>
+      <data key="d2">Obsidian is a note-taking and knowledge management application that the Zhiwei System is being integrated with.&lt;SEP&gt;Source software where the report is stored.&lt;SEP&gt;The software source where the ReThinker document is stored and managed.&lt;SEP&gt;A note-taking software application used as the source for storing the document.&lt;SEP&gt;Obsidian is the software platform used as the source for storing and managing the document.</data>
+      <data key="d3">chunk-400a555f5d5834d5ffa5771be077ebcd&lt;SEP&gt;chunk-13553145d3f41af0c13bdd91235f3ff3&lt;SEP&gt;chunk-784d4585ebe0819ccbc35184946098ac&lt;SEP&gt;chunk-de484dab9dc735b91436af3e79491149&lt;SEP&gt;chunk-e4a307af220b383886bf52906f7d65bf</data>
       <data key="d4">unknown_source</data>
-      <data key="d5">1773167452</data>
+      <data key="d5">1773428116</data>
       <data key="d6" />
     </node>
     <node id="Integration Test">
@@ -300,10 +300,10 @@ Organization within the Research Report Library is achieved through hierarchical
     <node id="Advanced Packaging">
       <data key="d0">Advanced Packaging</data>
       <data key="d1">method</data>
-      <data key="d2">Advanced packaging refers to sophisticated interconnect and integration techniques used to enhance chip performance and functionality.</data>
-      <data key="d3">chunk-546dfa6e8a446972d5dc6ae34a64ce0a</data>
+      <data key="d2">Advanced packaging refers to sophisticated interconnect and integration techniques used to enhance chip performance and functionality.&lt;SEP&gt;Technology used alongside silicon photonics to implement optical interconnects.</data>
+      <data key="d3">chunk-546dfa6e8a446972d5dc6ae34a64ce0a&lt;SEP&gt;chunk-13553145d3f41af0c13bdd91235f3ff3</data>
       <data key="d4">unknown_source</data>
-      <data key="d5">1773167463</data>
+      <data key="d5">1773427245</data>
       <data key="d6" />
     </node>
     <node id="CoWoS">
@@ -385,10 +385,10 @@ Organization within the Research Report Library is achieved through hierarchical
 
 Documented file sizes for these PDF instances range widely from 0.13 MB to 38.01 MB. Specific recorded sizes include 0.13 MB, 0.26 MB, 0.65 MB, 0.75 MB, 0.88 MB, 0.94 MB, 1.15 MB, 1.18 MB, 1.20 MB, 1.24 MB, 1.33 MB, 1.38 MB, 1.43 MB, 1.45 MB, 1.56 MB, 1.72 MB, 1.77 MB, 1.80 MB, 1.92 MB, 1.99 MB, 2.04 MB, 2.34 MB, 2.53 MB, 2.69 MB, 2.75 MB, 2.92 MB, 2.94 MB, 3.46 MB, 3.69 MB, 3.76 MB, 4.35 MB, 4.57 MB, and 38.01 MB. Additionally, one specific record identifies a file size of 3.66 MB. Notable instances include the "7525 Report" and files identified as vectorized, with specific descriptions highlighting instances of 0.94 MB, 1.56 MB, and 2.69 MB.
 
-Ingestion timestamps indicate coordinated batch processing, with the majority of events occurring on 2026-03-07 between 19:05:19 and 19:05:23. Specific timestamps recorded include 19:05:19, 19:05:20, 19:05:21, 19:05:22, and 19:05:23. However, a discrepancy exists regarding the ingestion date, as one record specifies an ingestion on 2026-03-08 at 18:48:42. This variation suggests either a subsequent update cycle or distinct archival batches beyond the initial cluster. Collectively, these attributes affirm PDF's role as the stable, interoperable, and officially designated format for the OCP CMS technical documentation.</data>
-      <data key="d3">chunk-d1c6054a6d87cf6975db5c63bd96f9cd&lt;SEP&gt;chunk-17e8fab522b31c893a3a7ef21633d42a&lt;SEP&gt;chunk-954e8ea4f501064d07fa47f0e5affaeb&lt;SEP&gt;chunk-7cb819bd8f7ecd3c6e4efa0548627c2f&lt;SEP&gt;chunk-93d5d66acecc3b09726280461a1741c7&lt;SEP&gt;chunk-4bea655fda74f25913c082a3a09d1a75&lt;SEP&gt;chunk-147c4db7a4ce5872858a38c1ac58af56&lt;SEP&gt;chunk-33ad961ca189b1cec80569bbd0809873&lt;SEP&gt;chunk-f3556e182081aed4b9613c75949ed570&lt;SEP&gt;chunk-d337eca5c11c950a864764401f37ceaf&lt;SEP&gt;chunk-805ed11febeca1bfd1bdea057549e4ce&lt;SEP&gt;chunk-6d829808f9b4093bb903d5990d12a27c&lt;SEP&gt;chunk-df115efbf3bc71602047949ae3dbbdf0&lt;SEP&gt;chunk-15484e8b32164d9fb60eeef755439770&lt;SEP&gt;chunk-46bc26dff317560becba9a0a6fa7a441&lt;SEP&gt;chunk-9a23f58ae4463735de6f1b117591592c&lt;SEP&gt;chunk-61f77d89f092ff5cd7c6ea81d31cfeb6&lt;SEP&gt;chunk-10dc48654563b9bb58e4fbbbb7645eb8&lt;SEP&gt;chunk-cf00ccbe9715d44dfa602d3da7162666&lt;SEP&gt;chunk-ef5a1dc3d7c28f0190c5185e1c92732b&lt;SEP&gt;chunk-7b48c48f2f7c3877c03d05218cfb8c20&lt;SEP&gt;chunk-c199ec006c1f0210255474d03892899b&lt;SEP&gt;chunk-46b1cb6c7cb6838091250f07aa58cb19&lt;SEP&gt;chunk-99116bb42021db2c45f55b65671842c0&lt;SEP&gt;chunk-7dd14306d9061dddba8b150d9c7d98b0&lt;SEP&gt;chunk-75a98834e3066a94c413caadb98ef3bd&lt;SEP&gt;chunk-97525ceaf715f1ad94448c8abc5642db&lt;SEP&gt;chunk-ef9903a22739411840df5a1652b687d5&lt;SEP&gt;chunk-b29d2932bdd25f9f58a553637e48ab19&lt;SEP&gt;chunk-538e9be43efc9f4740b1699a18d33882&lt;SEP&gt;chunk-e0849f10e95d7677ebed5f2a29c650a2&lt;SEP&gt;chunk-e43b9c7c8f30976446ff07cfb8acd723&lt;SEP&gt;chunk-900ad8221a96dafc212eef7868a063e8&lt;SEP&gt;chunk-f023cd84d3e2ed9cf707d62efd5ddbb9&lt;SEP&gt;chunk-fed70deae9eaf1b4120dec7d0e6498bd&lt;SEP&gt;chunk-4fad482b7206fdfbdc48ed9c3de6c7af&lt;SEP&gt;chunk-b71eacebd07cf22c28bd1377859a2954&lt;SEP&gt;chunk-25afa8d829c71db97875281976c4e594&lt;SEP&gt;chunk-266b57d952795e78de135dd7ea0d1822&lt;SEP&gt;chunk-fde36569763e8e63f5879815d072c123&lt;SEP&gt;chunk-1bbafe9a71a73e07d029b3bfa3f85791&lt;SEP&gt;chunk-1bf489aadb0f21630c59b8361f23e8f3&lt;SEP&gt;chunk-1d26679a5c7d4be95dc3163cdd74635d&lt;SEP&gt;chunk-60ca18023b7448fb4ddf9aa784ef1a65&lt;SEP&gt;chunk-846347bde485db03ead56cd986ba9001&lt;SEP&gt;chunk-c7fd39ddee62a6682cc2d3e58c3b66ed&lt;SEP&gt;chunk-d7bc46115f13aecdbbcd6e7398ee9691&lt;SEP&gt;chunk-33d6bc980e862376c11685a00bf22ca3&lt;SEP&gt;chunk-e27f03ec1e126815641b4755ece051c6&lt;SEP&gt;chunk-968fbcf059982c556b4bcc6944efa36b&lt;SEP&gt;chunk-635a8270f90d4ad369e34ef96c6f284f&lt;SEP&gt;chunk-230764380b33557b5524bd06ee945029&lt;SEP&gt;chunk-62991649d9ddbddbdd87eed4b8473959&lt;SEP&gt;chunk-bac65798eb982eaec66217171974d32c&lt;SEP&gt;chunk-1b7fcd9c795c3ffe5951ea1b509567b7&lt;SEP&gt;chunk-ec101ba502a70816a33b6a1e26f6054f&lt;SEP&gt;chunk-df273047e67bbcef8888ccc637f02f26</data>
+Ingestion timestamps indicate coordinated batch processing, with the majority of events occurring on 2026-03-07 between 19:05:19 and 19:05:23. Specific timestamps recorded include 19:05:19, 19:05:20, 19:05:21, 19:05:22, and 19:05:23. However, a discrepancy exists regarding the ingestion date, as one record specifies an ingestion on 2026-03-08 at 18:48:42. This variation suggests either a subsequent update cycle or distinct archival batches beyond the initial cluster. Collectively, these attributes affirm PDF's role as the stable, interoperable, and officially designated format for the OCP CMS technical documentation.&lt;SEP&gt;File format of the report document.&lt;SEP&gt;File format of the report.&lt;SEP&gt;The file format of the document.&lt;SEP&gt;PDF is the file format of the document.</data>
+      <data key="d3">chunk-d1c6054a6d87cf6975db5c63bd96f9cd&lt;SEP&gt;chunk-17e8fab522b31c893a3a7ef21633d42a&lt;SEP&gt;chunk-954e8ea4f501064d07fa47f0e5affaeb&lt;SEP&gt;chunk-7cb819bd8f7ecd3c6e4efa0548627c2f&lt;SEP&gt;chunk-93d5d66acecc3b09726280461a1741c7&lt;SEP&gt;chunk-4bea655fda74f25913c082a3a09d1a75&lt;SEP&gt;chunk-147c4db7a4ce5872858a38c1ac58af56&lt;SEP&gt;chunk-33ad961ca189b1cec80569bbd0809873&lt;SEP&gt;chunk-f3556e182081aed4b9613c75949ed570&lt;SEP&gt;chunk-d337eca5c11c950a864764401f37ceaf&lt;SEP&gt;chunk-805ed11febeca1bfd1bdea057549e4ce&lt;SEP&gt;chunk-6d829808f9b4093bb903d5990d12a27c&lt;SEP&gt;chunk-df115efbf3bc71602047949ae3dbbdf0&lt;SEP&gt;chunk-15484e8b32164d9fb60eeef755439770&lt;SEP&gt;chunk-46bc26dff317560becba9a0a6fa7a441&lt;SEP&gt;chunk-9a23f58ae4463735de6f1b117591592c&lt;SEP&gt;chunk-61f77d89f092ff5cd7c6ea81d31cfeb6&lt;SEP&gt;chunk-10dc48654563b9bb58e4fbbbb7645eb8&lt;SEP&gt;chunk-cf00ccbe9715d44dfa602d3da7162666&lt;SEP&gt;chunk-ef5a1dc3d7c28f0190c5185e1c92732b&lt;SEP&gt;chunk-7b48c48f2f7c3877c03d05218cfb8c20&lt;SEP&gt;chunk-c199ec006c1f0210255474d03892899b&lt;SEP&gt;chunk-46b1cb6c7cb6838091250f07aa58cb19&lt;SEP&gt;chunk-99116bb42021db2c45f55b65671842c0&lt;SEP&gt;chunk-7dd14306d9061dddba8b150d9c7d98b0&lt;SEP&gt;chunk-75a98834e3066a94c413caadb98ef3bd&lt;SEP&gt;chunk-97525ceaf715f1ad94448c8abc5642db&lt;SEP&gt;chunk-ef9903a22739411840df5a1652b687d5&lt;SEP&gt;chunk-b29d2932bdd25f9f58a553637e48ab19&lt;SEP&gt;chunk-538e9be43efc9f4740b1699a18d33882&lt;SEP&gt;chunk-e0849f10e95d7677ebed5f2a29c650a2&lt;SEP&gt;chunk-e43b9c7c8f30976446ff07cfb8acd723&lt;SEP&gt;chunk-900ad8221a96dafc212eef7868a063e8&lt;SEP&gt;chunk-f023cd84d3e2ed9cf707d62efd5ddbb9&lt;SEP&gt;chunk-fed70deae9eaf1b4120dec7d0e6498bd&lt;SEP&gt;chunk-4fad482b7206fdfbdc48ed9c3de6c7af&lt;SEP&gt;chunk-b71eacebd07cf22c28bd1377859a2954&lt;SEP&gt;chunk-25afa8d829c71db97875281976c4e594&lt;SEP&gt;chunk-266b57d952795e78de135dd7ea0d1822&lt;SEP&gt;chunk-fde36569763e8e63f5879815d072c123&lt;SEP&gt;chunk-1bbafe9a71a73e07d029b3bfa3f85791&lt;SEP&gt;chunk-1bf489aadb0f21630c59b8361f23e8f3&lt;SEP&gt;chunk-1d26679a5c7d4be95dc3163cdd74635d&lt;SEP&gt;chunk-60ca18023b7448fb4ddf9aa784ef1a65&lt;SEP&gt;chunk-846347bde485db03ead56cd986ba9001&lt;SEP&gt;chunk-c7fd39ddee62a6682cc2d3e58c3b66ed&lt;SEP&gt;chunk-d7bc46115f13aecdbbcd6e7398ee9691&lt;SEP&gt;chunk-33d6bc980e862376c11685a00bf22ca3&lt;SEP&gt;chunk-e27f03ec1e126815641b4755ece051c6&lt;SEP&gt;chunk-968fbcf059982c556b4bcc6944efa36b&lt;SEP&gt;chunk-635a8270f90d4ad369e34ef96c6f284f&lt;SEP&gt;chunk-230764380b33557b5524bd06ee945029&lt;SEP&gt;chunk-62991649d9ddbddbdd87eed4b8473959&lt;SEP&gt;chunk-bac65798eb982eaec66217171974d32c&lt;SEP&gt;chunk-1b7fcd9c795c3ffe5951ea1b509567b7&lt;SEP&gt;chunk-ec101ba502a70816a33b6a1e26f6054f&lt;SEP&gt;chunk-df273047e67bbcef8888ccc637f02f26&lt;SEP&gt;chunk-caffd63ee8599ae7be43759f1b96b861&lt;SEP&gt;chunk-13553145d3f41af0c13bdd91235f3ff3&lt;SEP&gt;chunk-de484dab9dc735b91436af3e79491149&lt;SEP&gt;chunk-e4a307af220b383886bf52906f7d65bf</data>
       <data key="d4">unknown_source</data>
-      <data key="d5">1773341743</data>
+      <data key="d5">1773428116</data>
       <data key="d6" />
     </node>
     <node id="Core Report">
@@ -439,14 +439,14 @@ Ingestion timestamps indicate coordinated batch processing, with the majority of
     <node id="Liufang">
       <data key="d0">Liufang</data>
       <data key="d1">person</data>
-      <data key="d2">Liufang is an entity defined exclusively through a technical, file-system-based association with specific technical reports, most commonly identified as the 7525 Report or the HarDNet report. Rather than possessing biographical, institutional, geographic, or professional attributes, Liufang is identified solely through a local file path embedded within these documents, typically via a hyperlink labeled 原文链接 (original link). The recurring file path structure, specifically file:///Users/liufang/Documents/Library/... and the broader directory /Users/liufang/Documents/, explicitly anchors Liufang to the local file system of a macOS device. This indicates that the reports reside within what is functionally Liufang's personal user directory, marking Liufang as a user name found in the document file path.
+      <data key="d2">Liufang is an entity defined exclusively through a technical, file-system-based association with specific technical reports, commonly the 7525 Report or HarDNet report. Lacking biographical or professional attributes, Liufang is identified solely through a local file path embedded within these documents, typically via a hyperlink labeled 原文链接 (original link). The path structure, file:///Users/liufang/Documents/Library/, anchors Liufang to a macOS device's local file system. This indicates the reports reside within Liufang's personal user directory, marking Liufang as a user name found in the document file path.
 
-Across all descriptions, Liufang's role is strictly functional and relational, delineated by a custodial or administrative relationship to the file's storage location. This relationship is characterized variously as ownership, curation, custody, access rights, responsibility for maintenance, or authorship, but these formulations converge on the meaning that Liufang controls, maintains, possesses privileged access to, or is the designated point of control for the local instantiation of the report. Liufang is the user identified in the file path who stores, accesses, or owns the document on their local system. One concrete instance confirms Liufang as the owner of the local file path /Users/liufang/Documents/Library/【核心】服务器架构/[2025]_20250807%20CXLT%20302%201%20Pan%20copy.pdf.
+Liufang's role is strictly functional, delineated by a custodial relationship to the file's storage location. Characterized as ownership, curation, custody, or access rights, these formulations converge on Liufang controlling or maintaining the local instantiation of the report. Liufang is the user account owner associated with the file path where the document is stored. A concrete instance confirms Liufang as the owner of the path /Users/liufang/Documents/Library/【核心】服务器架构/[2025]_20250807%20CXLT%20302%201%20Pan%20copy.pdf. This establishes Liufang as the user owner of the digital storage location where the file is saved.
 
-The repeated emphasis on the local file URL underscores that Liufang's identity in this context is metadata-driven and context-dependent, emerging only through the document's referencing infrastructure. There is no evidence of multiple distinct individuals named Liufang; instead, the variations across descriptions reflect synonymous phrasings of the same functional role. Consequently, Liufang functions as a de facto custodial anchor, serving as the procedural, system-embedded identity that embodies the report's local presence rather than an independently described person with narrative or biographical dimensions. Liufang remains the user associated with the directory path where the report is stored.&lt;SEP&gt;Liufang is the user associated with the document storage path.&lt;SEP&gt;Liufang is the user identified in the local file path, indicating ownership of the document library.&lt;SEP&gt;The user identified in the document storage path.&lt;SEP&gt;Liufang is the user account owner associated with the file path where the document is stored.&lt;SEP&gt;A user name found in the document's file path.&lt;SEP&gt;The user owner of the digital storage location where the file is saved.</data>
-      <data key="d3">chunk-d1c6054a6d87cf6975db5c63bd96f9cd&lt;SEP&gt;chunk-954e8ea4f501064d07fa47f0e5affaeb&lt;SEP&gt;chunk-7cb819bd8f7ecd3c6e4efa0548627c2f&lt;SEP&gt;chunk-4bea655fda74f25913c082a3a09d1a75&lt;SEP&gt;chunk-147c4db7a4ce5872858a38c1ac58af56&lt;SEP&gt;chunk-2c984e299ac9432c7e312cc7b398b600&lt;SEP&gt;chunk-22d5697b8505125995b91427be92e6d2&lt;SEP&gt;chunk-ecc05e1389a9315c30e68199bddd8d73&lt;SEP&gt;chunk-f3556e182081aed4b9613c75949ed570&lt;SEP&gt;chunk-ba1d69c721849ac582b1a53a58646ef1&lt;SEP&gt;chunk-805ed11febeca1bfd1bdea057549e4ce&lt;SEP&gt;chunk-e24b7488a587cd1f8bf6573d12f1c75a&lt;SEP&gt;chunk-6d829808f9b4093bb903d5990d12a27c&lt;SEP&gt;chunk-df115efbf3bc71602047949ae3dbbdf0&lt;SEP&gt;chunk-46bc26dff317560becba9a0a6fa7a441&lt;SEP&gt;chunk-9ac5324873bf771cb665a450ec9794d8&lt;SEP&gt;chunk-9a23f58ae4463735de6f1b117591592c&lt;SEP&gt;chunk-d542a9101cecae9b9250937b2605dee2&lt;SEP&gt;chunk-10dc48654563b9bb58e4fbbbb7645eb8&lt;SEP&gt;chunk-2c8929bd6af5efae83044622ffa3faac&lt;SEP&gt;chunk-f1c174d3bf65d5024ebe4ad7cbd8c5e2&lt;SEP&gt;chunk-32749bfe06ebb4fd503585308b574af7&lt;SEP&gt;chunk-7b48c48f2f7c3877c03d05218cfb8c20&lt;SEP&gt;chunk-c199ec006c1f0210255474d03892899b&lt;SEP&gt;chunk-46b1cb6c7cb6838091250f07aa58cb19&lt;SEP&gt;chunk-71812bc0fbded857fe0a4b82f5223b84&lt;SEP&gt;chunk-97525ceaf715f1ad94448c8abc5642db&lt;SEP&gt;chunk-0559e293569f15eabf0cd28fac35d14f&lt;SEP&gt;chunk-ef9903a22739411840df5a1652b687d5&lt;SEP&gt;chunk-11fbfb718c91a1cacf50d05e7bcc41bf&lt;SEP&gt;chunk-b29d2932bdd25f9f58a553637e48ab19&lt;SEP&gt;chunk-e0849f10e95d7677ebed5f2a29c650a2&lt;SEP&gt;chunk-e43b9c7c8f30976446ff07cfb8acd723&lt;SEP&gt;chunk-54b80862fb010b672af4957bef254768&lt;SEP&gt;chunk-fed70deae9eaf1b4120dec7d0e6498bd&lt;SEP&gt;chunk-4fad482b7206fdfbdc48ed9c3de6c7af&lt;SEP&gt;chunk-b71eacebd07cf22c28bd1377859a2954&lt;SEP&gt;chunk-25afa8d829c71db97875281976c4e594&lt;SEP&gt;chunk-01a392db9d8bb576ab6ed5aff9f9d578&lt;SEP&gt;chunk-fa73bfb5833304f96f036b9a9653ece2&lt;SEP&gt;chunk-1d28fc57f74bd152b123d626835823bc&lt;SEP&gt;chunk-1d26679a5c7d4be95dc3163cdd74635d&lt;SEP&gt;chunk-846347bde485db03ead56cd986ba9001&lt;SEP&gt;chunk-d7bc46115f13aecdbbcd6e7398ee9691&lt;SEP&gt;chunk-33d6bc980e862376c11685a00bf22ca3&lt;SEP&gt;chunk-e27f03ec1e126815641b4755ece051c6&lt;SEP&gt;chunk-3bef51647317cfab8fd98c2182da0b1c&lt;SEP&gt;chunk-968fbcf059982c556b4bcc6944efa36b&lt;SEP&gt;chunk-f3b581e41172762e088bcf3b7f03c6a4&lt;SEP&gt;chunk-635a8270f90d4ad369e34ef96c6f284f&lt;SEP&gt;chunk-230764380b33557b5524bd06ee945029&lt;SEP&gt;chunk-62991649d9ddbddbdd87eed4b8473959&lt;SEP&gt;chunk-1b7fcd9c795c3ffe5951ea1b509567b7&lt;SEP&gt;chunk-b794cfeb2829ca445d838fe2fb1cd165&lt;SEP&gt;chunk-ec101ba502a70816a33b6a1e26f6054f&lt;SEP&gt;chunk-df273047e67bbcef8888ccc637f02f26</data>
+The emphasis on the local file URL underscores that Liufang's identity is metadata-driven and context-dependent. There is no evidence of multiple distinct individuals; variations reflect synonymous phrasings of the same functional role. Liufang functions as a de facto custodial anchor, embodying the report's local presence rather than an independent person. Liufang remains the user associated with the directory path where the report is stored on the local system, consistent with being the user identified in the document storage path.&lt;SEP&gt;Liufang is the user associated with the local file path where the document is stored.</data>
+      <data key="d3">chunk-d1c6054a6d87cf6975db5c63bd96f9cd&lt;SEP&gt;chunk-954e8ea4f501064d07fa47f0e5affaeb&lt;SEP&gt;chunk-7cb819bd8f7ecd3c6e4efa0548627c2f&lt;SEP&gt;chunk-4bea655fda74f25913c082a3a09d1a75&lt;SEP&gt;chunk-147c4db7a4ce5872858a38c1ac58af56&lt;SEP&gt;chunk-2c984e299ac9432c7e312cc7b398b600&lt;SEP&gt;chunk-22d5697b8505125995b91427be92e6d2&lt;SEP&gt;chunk-ecc05e1389a9315c30e68199bddd8d73&lt;SEP&gt;chunk-f3556e182081aed4b9613c75949ed570&lt;SEP&gt;chunk-ba1d69c721849ac582b1a53a58646ef1&lt;SEP&gt;chunk-805ed11febeca1bfd1bdea057549e4ce&lt;SEP&gt;chunk-e24b7488a587cd1f8bf6573d12f1c75a&lt;SEP&gt;chunk-6d829808f9b4093bb903d5990d12a27c&lt;SEP&gt;chunk-df115efbf3bc71602047949ae3dbbdf0&lt;SEP&gt;chunk-46bc26dff317560becba9a0a6fa7a441&lt;SEP&gt;chunk-9ac5324873bf771cb665a450ec9794d8&lt;SEP&gt;chunk-9a23f58ae4463735de6f1b117591592c&lt;SEP&gt;chunk-d542a9101cecae9b9250937b2605dee2&lt;SEP&gt;chunk-10dc48654563b9bb58e4fbbbb7645eb8&lt;SEP&gt;chunk-2c8929bd6af5efae83044622ffa3faac&lt;SEP&gt;chunk-f1c174d3bf65d5024ebe4ad7cbd8c5e2&lt;SEP&gt;chunk-32749bfe06ebb4fd503585308b574af7&lt;SEP&gt;chunk-7b48c48f2f7c3877c03d05218cfb8c20&lt;SEP&gt;chunk-c199ec006c1f0210255474d03892899b&lt;SEP&gt;chunk-46b1cb6c7cb6838091250f07aa58cb19&lt;SEP&gt;chunk-71812bc0fbded857fe0a4b82f5223b84&lt;SEP&gt;chunk-97525ceaf715f1ad94448c8abc5642db&lt;SEP&gt;chunk-0559e293569f15eabf0cd28fac35d14f&lt;SEP&gt;chunk-ef9903a22739411840df5a1652b687d5&lt;SEP&gt;chunk-11fbfb718c91a1cacf50d05e7bcc41bf&lt;SEP&gt;chunk-b29d2932bdd25f9f58a553637e48ab19&lt;SEP&gt;chunk-e0849f10e95d7677ebed5f2a29c650a2&lt;SEP&gt;chunk-e43b9c7c8f30976446ff07cfb8acd723&lt;SEP&gt;chunk-54b80862fb010b672af4957bef254768&lt;SEP&gt;chunk-fed70deae9eaf1b4120dec7d0e6498bd&lt;SEP&gt;chunk-4fad482b7206fdfbdc48ed9c3de6c7af&lt;SEP&gt;chunk-b71eacebd07cf22c28bd1377859a2954&lt;SEP&gt;chunk-25afa8d829c71db97875281976c4e594&lt;SEP&gt;chunk-01a392db9d8bb576ab6ed5aff9f9d578&lt;SEP&gt;chunk-fa73bfb5833304f96f036b9a9653ece2&lt;SEP&gt;chunk-1d28fc57f74bd152b123d626835823bc&lt;SEP&gt;chunk-1d26679a5c7d4be95dc3163cdd74635d&lt;SEP&gt;chunk-846347bde485db03ead56cd986ba9001&lt;SEP&gt;chunk-d7bc46115f13aecdbbcd6e7398ee9691&lt;SEP&gt;chunk-33d6bc980e862376c11685a00bf22ca3&lt;SEP&gt;chunk-e27f03ec1e126815641b4755ece051c6&lt;SEP&gt;chunk-3bef51647317cfab8fd98c2182da0b1c&lt;SEP&gt;chunk-968fbcf059982c556b4bcc6944efa36b&lt;SEP&gt;chunk-f3b581e41172762e088bcf3b7f03c6a4&lt;SEP&gt;chunk-635a8270f90d4ad369e34ef96c6f284f&lt;SEP&gt;chunk-230764380b33557b5524bd06ee945029&lt;SEP&gt;chunk-62991649d9ddbddbdd87eed4b8473959&lt;SEP&gt;chunk-1b7fcd9c795c3ffe5951ea1b509567b7&lt;SEP&gt;chunk-b794cfeb2829ca445d838fe2fb1cd165&lt;SEP&gt;chunk-ec101ba502a70816a33b6a1e26f6054f&lt;SEP&gt;chunk-df273047e67bbcef8888ccc637f02f26&lt;SEP&gt;chunk-de484dab9dc735b91436af3e79491149&lt;SEP&gt;chunk-e4a307af220b383886bf52906f7d65bf</data>
       <data key="d4">unknown_source</data>
-      <data key="d5">1773341690</data>
+      <data key="d5">1773428116</data>
       <data key="d6" />
     </node>
     <node id="File Path">
@@ -509,11 +509,11 @@ Although administrative ownership, hosting platform, or organizational affiliati
     </node>
     <node id="CXL">
       <data key="d0">CXL</data>
-      <data key="d1">organization</data>
-      <data key="d2">Compute Express Link (CXL) is an open interconnect standard enabling high-speed, low-latency communication between processors, memory, and accelerators in datacenters.&lt;SEP&gt;CXL (Compute Express Link) is an open interconnect standard enabling memory sharing and pooling across CPUs, GPUs, and accelerators, central to the report’s proposed memory solution.&lt;SEP&gt;Compute Express Link (CXL) is an open interconnect standard enabling high-speed, low-latency communication between processors, memory, and accelerators in datacenter environments.&lt;SEP&gt;An organization associated with the IDE specification.</data>
-      <data key="d3">chunk-17e8fab522b31c893a3a7ef21633d42a&lt;SEP&gt;chunk-ef5a1dc3d7c28f0190c5185e1c92732b&lt;SEP&gt;chunk-f023cd84d3e2ed9cf707d62efd5ddbb9&lt;SEP&gt;chunk-3bef51647317cfab8fd98c2182da0b1c</data>
+      <data key="d1">concept</data>
+      <data key="d2">Compute Express Link (CXL) is an open interconnect standard enabling high-speed, low-latency communication between processors, memory, and accelerators in datacenters.&lt;SEP&gt;CXL (Compute Express Link) is an open interconnect standard enabling memory sharing and pooling across CPUs, GPUs, and accelerators, central to the report’s proposed memory solution.&lt;SEP&gt;Compute Express Link (CXL) is an open interconnect standard enabling high-speed, low-latency communication between processors, memory, and accelerators in datacenter environments.&lt;SEP&gt;An organization associated with the IDE specification.&lt;SEP&gt;Compute Express Link technology used as a basis for composable memory solutions.</data>
+      <data key="d3">chunk-17e8fab522b31c893a3a7ef21633d42a&lt;SEP&gt;chunk-ef5a1dc3d7c28f0190c5185e1c92732b&lt;SEP&gt;chunk-f023cd84d3e2ed9cf707d62efd5ddbb9&lt;SEP&gt;chunk-3bef51647317cfab8fd98c2182da0b1c&lt;SEP&gt;chunk-caffd63ee8599ae7be43759f1b96b861</data>
       <data key="d4">unknown_source</data>
-      <data key="d5">1773254510</data>
+      <data key="d5">1773426822</data>
       <data key="d6" />
     </node>
     <node id="Datacenter Memory Fabric">
@@ -530,10 +530,10 @@ Although administrative ownership, hosting platform, or organizational affiliati
       <data key="d1">concept</data>
       <data key="d2">Report is a formal, structured document type used to present technical analysis, findings, specifications, and performance data—primarily within the domain of next-generation server architectures. It serves as a high-fidelity vehicle for research dissemination, conveying analytical depth, empirical data, architectural proposals, and actionable recommendations. As a document type, “Report” is explicitly encoded in metadata under the ‘type’ field and consistently associated with core priority, archival in the server architecture research library, and standardized documentation conventions. Its functional purpose spans multiple specialized technical contexts, including CXL-enabled memory management in datacenters, security considerations in PCIe 6 switch deployments, AI interconnects, memory fabric design, and OCP-aligned infrastructure enhancements—evidenced by distinct titles such as *“DC Memory Fabric management: An In Depth Review of the K8s OCP Reference Implementation”* and *“PCIe 7.0 Enhancements for high speed I/O connectivity for OCP server Infrastructure.”*
 
-The Report is predominantly distributed in PDF format (.pdf), though one description identifies a Markdown (.md) variant—indicating format flexibility while preserving structural rigor and core-priority classification. Metadata consistently includes title, author, date, format, priority, and subject-domain tags, with all instances categorized under “server architecture research” and designated as core-priority items in both ingestion and archival systems. Archival occurs in a vectorized research library, with ingestion timestamps recorded as 2026-03-07 at 19:05:20 (7.37 MB file size) and 2026-03-08 (23.88 MB file size); these discrepancies reflect version-specific finalization or ingestion events rather than contradictory publication dates. The March 2026 date appears across multiple entries and is best interpreted as the authoritative versioning timeframe for this cohort of reports. Collectively, these Reports constitute authoritative, metadata-rich artifacts designed for internal evaluation, cross-team technical alignment, and long-term reference in evolving hardware, interconnect, and system design domains.&lt;SEP&gt;The report is a structured document in PDF format, dated 2026-03-07, tagged under core server architecture, and vectorized for retrieval.&lt;SEP&gt;The report is a technical document titled "Composable Memory Fabric Architecture Enabling Scalable Memory Management for AI and General Purpose Compute", formatted as a PDF with priority designation "core".&lt;SEP&gt;The type of document identified in the metadata.&lt;SEP&gt;The document type is classified as a report.&lt;SEP&gt;Report is the document type specified in the metadata.</data>
-      <data key="d3">chunk-17e8fab522b31c893a3a7ef21633d42a&lt;SEP&gt;chunk-954e8ea4f501064d07fa47f0e5affaeb&lt;SEP&gt;chunk-7cb819bd8f7ecd3c6e4efa0548627c2f&lt;SEP&gt;chunk-2fda2d54a8413eca19fea985df0ff580&lt;SEP&gt;chunk-4bea655fda74f25913c082a3a09d1a75&lt;SEP&gt;chunk-147c4db7a4ce5872858a38c1ac58af56&lt;SEP&gt;chunk-ecc05e1389a9315c30e68199bddd8d73&lt;SEP&gt;chunk-df115efbf3bc71602047949ae3dbbdf0&lt;SEP&gt;chunk-15484e8b32164d9fb60eeef755439770&lt;SEP&gt;chunk-207b0823e90b60e301db1f919be31b9c&lt;SEP&gt;chunk-e4173aa4ed70cd6d625ee79aebe2a677&lt;SEP&gt;chunk-7dd14306d9061dddba8b150d9c7d98b0&lt;SEP&gt;chunk-c461db61ef0a922e7d7292d8516c1147&lt;SEP&gt;chunk-03978f9015d72cc2c030ac8e6447fed7&lt;SEP&gt;chunk-538e9be43efc9f4740b1699a18d33882&lt;SEP&gt;chunk-f023cd84d3e2ed9cf707d62efd5ddbb9&lt;SEP&gt;chunk-4fad482b7206fdfbdc48ed9c3de6c7af&lt;SEP&gt;chunk-b71eacebd07cf22c28bd1377859a2954&lt;SEP&gt;chunk-55f9a5f9dbd8556e5eeb84b9bb117c15&lt;SEP&gt;chunk-01a392db9d8bb576ab6ed5aff9f9d578&lt;SEP&gt;chunk-1fc91c144f09ce8648b8a92d03b6a031&lt;SEP&gt;chunk-57adc984bf533daad96d70c0a73d33e0&lt;SEP&gt;chunk-fde36569763e8e63f5879815d072c123&lt;SEP&gt;chunk-c7fd39ddee62a6682cc2d3e58c3b66ed&lt;SEP&gt;chunk-33d6bc980e862376c11685a00bf22ca3&lt;SEP&gt;chunk-968fbcf059982c556b4bcc6944efa36b&lt;SEP&gt;chunk-230764380b33557b5524bd06ee945029</data>
+The Report is predominantly distributed in PDF format (.pdf), though one description identifies a Markdown (.md) variant—indicating format flexibility while preserving structural rigor and core-priority classification. Metadata consistently includes title, author, date, format, priority, and subject-domain tags, with all instances categorized under “server architecture research” and designated as core-priority items in both ingestion and archival systems. Archival occurs in a vectorized research library, with ingestion timestamps recorded as 2026-03-07 at 19:05:20 (7.37 MB file size) and 2026-03-08 (23.88 MB file size); these discrepancies reflect version-specific finalization or ingestion events rather than contradictory publication dates. The March 2026 date appears across multiple entries and is best interpreted as the authoritative versioning timeframe for this cohort of reports. Collectively, these Reports constitute authoritative, metadata-rich artifacts designed for internal evaluation, cross-team technical alignment, and long-term reference in evolving hardware, interconnect, and system design domains.&lt;SEP&gt;The report is a structured document in PDF format, dated 2026-03-07, tagged under core server architecture, and vectorized for retrieval.&lt;SEP&gt;The report is a technical document titled "Composable Memory Fabric Architecture Enabling Scalable Memory Management for AI and General Purpose Compute", formatted as a PDF with priority designation "core".&lt;SEP&gt;The type of document identified in the metadata.&lt;SEP&gt;The document type is classified as a report.&lt;SEP&gt;Report is the document type specified in the metadata.&lt;SEP&gt;The type classification of the document indicating it is a report.</data>
+      <data key="d3">chunk-17e8fab522b31c893a3a7ef21633d42a&lt;SEP&gt;chunk-954e8ea4f501064d07fa47f0e5affaeb&lt;SEP&gt;chunk-7cb819bd8f7ecd3c6e4efa0548627c2f&lt;SEP&gt;chunk-2fda2d54a8413eca19fea985df0ff580&lt;SEP&gt;chunk-4bea655fda74f25913c082a3a09d1a75&lt;SEP&gt;chunk-147c4db7a4ce5872858a38c1ac58af56&lt;SEP&gt;chunk-ecc05e1389a9315c30e68199bddd8d73&lt;SEP&gt;chunk-df115efbf3bc71602047949ae3dbbdf0&lt;SEP&gt;chunk-15484e8b32164d9fb60eeef755439770&lt;SEP&gt;chunk-207b0823e90b60e301db1f919be31b9c&lt;SEP&gt;chunk-e4173aa4ed70cd6d625ee79aebe2a677&lt;SEP&gt;chunk-7dd14306d9061dddba8b150d9c7d98b0&lt;SEP&gt;chunk-c461db61ef0a922e7d7292d8516c1147&lt;SEP&gt;chunk-03978f9015d72cc2c030ac8e6447fed7&lt;SEP&gt;chunk-538e9be43efc9f4740b1699a18d33882&lt;SEP&gt;chunk-f023cd84d3e2ed9cf707d62efd5ddbb9&lt;SEP&gt;chunk-4fad482b7206fdfbdc48ed9c3de6c7af&lt;SEP&gt;chunk-b71eacebd07cf22c28bd1377859a2954&lt;SEP&gt;chunk-55f9a5f9dbd8556e5eeb84b9bb117c15&lt;SEP&gt;chunk-01a392db9d8bb576ab6ed5aff9f9d578&lt;SEP&gt;chunk-1fc91c144f09ce8648b8a92d03b6a031&lt;SEP&gt;chunk-57adc984bf533daad96d70c0a73d33e0&lt;SEP&gt;chunk-fde36569763e8e63f5879815d072c123&lt;SEP&gt;chunk-c7fd39ddee62a6682cc2d3e58c3b66ed&lt;SEP&gt;chunk-33d6bc980e862376c11685a00bf22ca3&lt;SEP&gt;chunk-968fbcf059982c556b4bcc6944efa36b&lt;SEP&gt;chunk-230764380b33557b5524bd06ee945029&lt;SEP&gt;chunk-de484dab9dc735b91436af3e79491149</data>
       <data key="d4">unknown_source</data>
-      <data key="d5">1773340409</data>
+      <data key="d5">1773427789</data>
       <data key="d6" />
     </node>
     <node id="7819 - Advancing PLDM- Structured Sensors Scalable Modeling and the Server Host SoC PLDM Specification_v2">
@@ -909,11 +909,13 @@ The designation of Unknown indicates that the author's identity is not specified
     </node>
     <node id="AI Deep Summary">
       <data key="d0">AI Deep Summary</data>
-      <data key="d1">concept</data>
-      <data key="d2">A placeholder section labeled "AI深度摘要" indicating an intended AI-generated summary, currently empty and pending vectorization and extraction.&lt;SEP&gt;A section title in the document labeled "AI深度摘要", indicating an AI-generated deep summary feature, currently pending execution.&lt;SEP&gt;A section titled "AI深度摘要" (AI Deep Summary) is present in the document, marked as pending vectorization and summary extraction.&lt;SEP&gt;A section titled "AI深度摘要" (AI Deep Summary) that is currently empty and marked as pending vectorization and summary extraction.&lt;SEP&gt;A section header indicating where an AI-generated summary will be placed.&lt;SEP&gt;A section within the document designated for AI-generated summaries.&lt;SEP&gt;A section header within the document waiting for summary extraction.</data>
-      <data key="d3">chunk-04159a2e6b1c0a304c8cab9dc130201f&lt;SEP&gt;chunk-15484e8b32164d9fb60eeef755439770&lt;SEP&gt;chunk-61f77d89f092ff5cd7c6ea81d31cfeb6&lt;SEP&gt;chunk-266b57d952795e78de135dd7ea0d1822&lt;SEP&gt;chunk-968fbcf059982c556b4bcc6944efa36b&lt;SEP&gt;chunk-bac65798eb982eaec66217171974d32c&lt;SEP&gt;chunk-1b7fcd9c795c3ffe5951ea1b509567b7</data>
+      <data key="d1">method</data>
+      <data key="d2">The entity known as AI Deep Summary refers to a specific section within a document structure, identified by the section title or header labeled "AI 深度摘要". This section is explicitly designated to house content generated by artificial intelligence, specifically serving as the location where an AI-generated deep summary will be placed. It functions as a dedicated area within the document for AI-generated summaries, ensuring that such content is organized under a distinct header.
+
+Currently, the AI Deep Summary section is empty and awaits further processing. It is marked as pending execution, indicating that the generation process has not yet occurred. The status involves pending vectorization and summary extraction, meaning the section is waiting for the necessary data processing steps to populate the content. Essentially, it functions as a placeholder waiting for the completion of the summary extraction workflow.&lt;SEP&gt;AI Deep Summary is a process waiting to be applied to the document for vectorization and extraction.</data>
+      <data key="d3">chunk-04159a2e6b1c0a304c8cab9dc130201f&lt;SEP&gt;chunk-15484e8b32164d9fb60eeef755439770&lt;SEP&gt;chunk-61f77d89f092ff5cd7c6ea81d31cfeb6&lt;SEP&gt;chunk-266b57d952795e78de135dd7ea0d1822&lt;SEP&gt;chunk-968fbcf059982c556b4bcc6944efa36b&lt;SEP&gt;chunk-bac65798eb982eaec66217171974d32c&lt;SEP&gt;chunk-1b7fcd9c795c3ffe5951ea1b509567b7&lt;SEP&gt;chunk-caffd63ee8599ae7be43759f1b96b861&lt;SEP&gt;chunk-e4a307af220b383886bf52906f7d65bf</data>
       <data key="d4">unknown_source</data>
-      <data key="d5">1773341118</data>
+      <data key="d5">1773428116</data>
       <data key="d6" />
     </node>
     <node id="7446 - Large CXL Memory Expansion Systems and Workloads_v2_v2">
@@ -1126,10 +1128,10 @@ The designation of Unknown indicates that the author's identity is not specified
     <node id="Artificial Intelligence">
       <data key="d0">Artificial Intelligence</data>
       <data key="d1">concept</data>
-      <data key="d2">A foundational domain shaping the requirements and innovations discussed in the report's focus on server design.</data>
-      <data key="d3">chunk-e24b7488a587cd1f8bf6573d12f1c75a</data>
+      <data key="d2">A foundational domain shaping the requirements and innovations discussed in the report's focus on server design.&lt;SEP&gt;Field with extreme demands for interconnect bandwidth.</data>
+      <data key="d3">chunk-e24b7488a587cd1f8bf6573d12f1c75a&lt;SEP&gt;chunk-13553145d3f41af0c13bdd91235f3ff3</data>
       <data key="d4">unknown_source</data>
-      <data key="d5">1773167749</data>
+      <data key="d5">1773427245</data>
       <data key="d6" />
     </node>
     <node id="7430 - Smashing Memory I-O Limits- Architectures for the GenAI Era_v2_v2">
@@ -2328,11 +2330,11 @@ The specific report addressing this technology carries the title "20250807 DRAM 
     </node>
     <node id="Vectorized">
       <data key="d0">Vectorized</data>
-      <data key="d1">concept</data>
-      <data key="d2">The report has been vectorized, meaning its content has been converted into numerical vector representations for AI processing and retrieval.&lt;SEP&gt;The processing status of the document, indicating it has been converted into vector embeddings for search or analysis.&lt;SEP&gt;The processing status of the document, indicating it has been vectorized.&lt;SEP&gt;The document status indicates it has been vectorized.&lt;SEP&gt;The processing status indicating the document has been converted into vector data.&lt;SEP&gt;The report metadata indicates that the vectorization process has been completed.</data>
-      <data key="d3">chunk-f023cd84d3e2ed9cf707d62efd5ddbb9&lt;SEP&gt;chunk-d7bc46115f13aecdbbcd6e7398ee9691&lt;SEP&gt;chunk-e27f03ec1e126815641b4755ece051c6&lt;SEP&gt;chunk-968fbcf059982c556b4bcc6944efa36b&lt;SEP&gt;chunk-bac65798eb982eaec66217171974d32c&lt;SEP&gt;chunk-df273047e67bbcef8888ccc637f02f26</data>
+      <data key="d1">method</data>
+      <data key="d2">The report has been vectorized, meaning its content has been converted into numerical vector representations for AI processing and retrieval.&lt;SEP&gt;The processing status of the document, indicating it has been converted into vector embeddings for search or analysis.&lt;SEP&gt;The processing status of the document, indicating it has been vectorized.&lt;SEP&gt;The document status indicates it has been vectorized.&lt;SEP&gt;The processing status indicating the document has been converted into vector data.&lt;SEP&gt;The report metadata indicates that the vectorization process has been completed.&lt;SEP&gt;The processing status indicating the document has been converted into vector embeddings.</data>
+      <data key="d3">chunk-f023cd84d3e2ed9cf707d62efd5ddbb9&lt;SEP&gt;chunk-d7bc46115f13aecdbbcd6e7398ee9691&lt;SEP&gt;chunk-e27f03ec1e126815641b4755ece051c6&lt;SEP&gt;chunk-968fbcf059982c556b4bcc6944efa36b&lt;SEP&gt;chunk-bac65798eb982eaec66217171974d32c&lt;SEP&gt;chunk-df273047e67bbcef8888ccc637f02f26&lt;SEP&gt;chunk-caffd63ee8599ae7be43759f1b96b861</data>
       <data key="d4">unknown_source</data>
-      <data key="d5">1773341692</data>
+      <data key="d5">1773426825</data>
       <data key="d6" />
     </node>
     <node id="APEC Advanced PCIe Enclosure">
@@ -2986,10 +2988,12 @@ The specific report addressing this technology carries the title "20250807 DRAM 
     <node id="Core">
       <data key="d0">Core</data>
       <data key="d1">concept</data>
-      <data key="d2">The priority level assigned to the document, indicating high importance within the library system.&lt;SEP&gt;The priority level assigned to the report, indicating high importance.&lt;SEP&gt;The priority level assigned to the report, indicated in the tags and priority field.&lt;SEP&gt;The priority level of the document is designated as core.&lt;SEP&gt;The priority level assigned to the document indicating high importance.&lt;SEP&gt;Core indicates the priority level of the document as specified in the metadata and tags.&lt;SEP&gt;The priority level assigned to the report is designated as core.</data>
-      <data key="d3">chunk-d7bc46115f13aecdbbcd6e7398ee9691&lt;SEP&gt;chunk-33d6bc980e862376c11685a00bf22ca3&lt;SEP&gt;chunk-e27f03ec1e126815641b4755ece051c6&lt;SEP&gt;chunk-968fbcf059982c556b4bcc6944efa36b&lt;SEP&gt;chunk-635a8270f90d4ad369e34ef96c6f284f&lt;SEP&gt;chunk-230764380b33557b5524bd06ee945029&lt;SEP&gt;chunk-df273047e67bbcef8888ccc637f02f26</data>
+      <data key="d2">Core represents a specific priority level assigned to both documents and reports, indicating a status of high importance within the library system. This designation is technically specified within the file's structure, appearing in the metadata, tags, and the dedicated priority field. When a document or report is designated as Core, it signals that the material holds elevated significance compared to standard entries. The classification ensures that these high-priority items are easily identifiable through their associated tags and metadata properties.
+
+The application of the Core label is consistent across different types of records, whether categorized broadly as documents or specifically as reports. By marking these items with this priority level, the system emphasizes their critical nature. Consequently, the Core designation serves as a unified indicator of importance, relying on explicit fields and tags to maintain clarity regarding the asset's value within the broader library system infrastructure.</data>
+      <data key="d3">chunk-d7bc46115f13aecdbbcd6e7398ee9691&lt;SEP&gt;chunk-33d6bc980e862376c11685a00bf22ca3&lt;SEP&gt;chunk-e27f03ec1e126815641b4755ece051c6&lt;SEP&gt;chunk-968fbcf059982c556b4bcc6944efa36b&lt;SEP&gt;chunk-635a8270f90d4ad369e34ef96c6f284f&lt;SEP&gt;chunk-230764380b33557b5524bd06ee945029&lt;SEP&gt;chunk-df273047e67bbcef8888ccc637f02f26&lt;SEP&gt;chunk-caffd63ee8599ae7be43759f1b96b861</data>
       <data key="d4">unknown_source</data>
-      <data key="d5">1773341692</data>
+      <data key="d5">1773426894</data>
       <data key="d6" />
     </node>
     <node id="Large CXL Memory Expansion Systems and Workloads">
@@ -3012,11 +3016,11 @@ The specific report addressing this technology carries the title "20250807 DRAM 
     </node>
     <node id="Local File Path">
       <data key="d0">Local File Path</data>
-      <data key="d1">location</data>
-      <data key="d2">The specific directory path where the PDF document is stored on the local system.&lt;SEP&gt;The digital storage location of the document on a local system.</data>
-      <data key="d3">chunk-33d6bc980e862376c11685a00bf22ca3&lt;SEP&gt;chunk-bac65798eb982eaec66217171974d32c</data>
+      <data key="d1">data</data>
+      <data key="d2">The specific directory path where the PDF document is stored on the local system.&lt;SEP&gt;The digital storage location of the document on a local system.&lt;SEP&gt;The specific digital path where the document file is stored locally.</data>
+      <data key="d3">chunk-33d6bc980e862376c11685a00bf22ca3&lt;SEP&gt;chunk-bac65798eb982eaec66217171974d32c&lt;SEP&gt;chunk-caffd63ee8599ae7be43759f1b96b861</data>
       <data key="d4">unknown_source</data>
-      <data key="d5">1773340896</data>
+      <data key="d5">1773426827</data>
       <data key="d6" />
     </node>
     <node id="Vectorized Status">
@@ -3193,10 +3197,10 @@ The specific report addressing this technology carries the title "20250807 DRAM 
     <node id="2026-03-07 19:05:19">
       <data key="d0">2026-03-07 19:05:19</data>
       <data key="d1">data</data>
-      <data key="d2">The specific storage time when the document was added to the library.</data>
-      <data key="d3">chunk-f3b581e41172762e088bcf3b7f03c6a4</data>
+      <data key="d2">The specific storage time when the document was added to the library.&lt;SEP&gt;The specific timestamp when the document was stored in the library.</data>
+      <data key="d3">chunk-f3b581e41172762e088bcf3b7f03c6a4&lt;SEP&gt;chunk-caffd63ee8599ae7be43759f1b96b861</data>
       <data key="d4">unknown_source</data>
-      <data key="d5">1773255012</data>
+      <data key="d5">1773426825</data>
       <data key="d6" />
     </node>
     <node id="20250807 CXLT 301 1 Kim 07 27 01.00.16 Copy">
@@ -3292,10 +3296,10 @@ The specific report addressing this technology carries the title "20250807 DRAM 
     <node id="2026-03-11">
       <data key="d0">2026-03-11</data>
       <data key="d1">data</data>
-      <data key="d2">The date associated with the document creation and storage入库time.&lt;SEP&gt;The date associated with the document creation or reporting.&lt;SEP&gt;The date specified in the document metadata and storage time.&lt;SEP&gt;2026-03-11 is the date associated with the report publication and storage time.&lt;SEP&gt;The date specified for the report creation and library entry.</data>
-      <data key="d3">chunk-62991649d9ddbddbdd87eed4b8473959&lt;SEP&gt;chunk-bac65798eb982eaec66217171974d32c&lt;SEP&gt;chunk-1b7fcd9c795c3ffe5951ea1b509567b7&lt;SEP&gt;chunk-b794cfeb2829ca445d838fe2fb1cd165&lt;SEP&gt;chunk-ec101ba502a70816a33b6a1e26f6054f</data>
+      <data key="d2">The date associated with the document creation and storage入库time.&lt;SEP&gt;The date associated with the document creation or reporting.&lt;SEP&gt;The date specified in the document metadata and storage time.&lt;SEP&gt;2026-03-11 is the date associated with the report publication and storage time.&lt;SEP&gt;The date specified for the report creation and library entry.&lt;SEP&gt;2026-03-11 is the date associated with the document's creation and storage入库time.</data>
+      <data key="d3">chunk-62991649d9ddbddbdd87eed4b8473959&lt;SEP&gt;chunk-bac65798eb982eaec66217171974d32c&lt;SEP&gt;chunk-1b7fcd9c795c3ffe5951ea1b509567b7&lt;SEP&gt;chunk-b794cfeb2829ca445d838fe2fb1cd165&lt;SEP&gt;chunk-ec101ba502a70816a33b6a1e26f6054f&lt;SEP&gt;chunk-e4a307af220b383886bf52906f7d65bf</data>
       <data key="d4">unknown_source</data>
-      <data key="d5">1773341507</data>
+      <data key="d5">1773428121</data>
       <data key="d6" />
     </node>
     <node id="Local Document Library">
@@ -3611,6 +3615,726 @@ The specific report addressing this technology carries the title "20250807 DRAM 
       <data key="d3">chunk-df273047e67bbcef8888ccc637f02f26</data>
       <data key="d4">unknown_source</data>
       <data key="d5">1773341692</data>
+      <data key="d6" />
+    </node>
+    <node id="Evaluating CXL Based Composable Memory Solutions A TCO Framework For Datacenter Workloads">
+      <data key="d0">Evaluating CXL Based Composable Memory Solutions A TCO Framework For Datacenter Workloads</data>
+      <data key="d1">content</data>
+      <data key="d2">A report evaluating composable memory solutions using a TCO framework for datacenter workloads.</data>
+      <data key="d3">chunk-caffd63ee8599ae7be43759f1b96b861</data>
+      <data key="d4">unknown_source</data>
+      <data key="d5">1773426822</data>
+      <data key="d6" />
+    </node>
+    <node id="Composable Memory Solutions">
+      <data key="d0">Composable Memory Solutions</data>
+      <data key="d1">concept</data>
+      <data key="d2">Technology solutions involving composable memory evaluated in the report.</data>
+      <data key="d3">chunk-caffd63ee8599ae7be43759f1b96b861</data>
+      <data key="d4">unknown_source</data>
+      <data key="d5">1773426822</data>
+      <data key="d6" />
+    </node>
+    <node id="TCO Framework">
+      <data key="d0">TCO Framework</data>
+      <data key="d1">method</data>
+      <data key="d2">Total Cost of Ownership framework used for evaluation in the report.</data>
+      <data key="d3">chunk-caffd63ee8599ae7be43759f1b96b861</data>
+      <data key="d4">unknown_source</data>
+      <data key="d5">1773426822</data>
+      <data key="d6" />
+    </node>
+    <node id="Datacenter Workloads">
+      <data key="d0">Datacenter Workloads</data>
+      <data key="d1">concept</data>
+      <data key="d2">Workloads in datacenters that are the target of the evaluation.</data>
+      <data key="d3">chunk-caffd63ee8599ae7be43759f1b96b861</data>
+      <data key="d4">unknown_source</data>
+      <data key="d5">1773426822</data>
+      <data key="d6" />
+    </node>
+    <node id="Local Document">
+      <data key="d0">Local Document</data>
+      <data key="d1">artifact</data>
+      <data key="d2">The specific digital file stored locally referenced by the file path.</data>
+      <data key="d3">chunk-caffd63ee8599ae7be43759f1b96b861</data>
+      <data key="d4">unknown_source</data>
+      <data key="d5">1773426824</data>
+      <data key="d6" />
+    </node>
+    <node id="1.81 MB">
+      <data key="d0">1.81 MB</data>
+      <data key="d1">data</data>
+      <data key="d2">The file size of the report document.</data>
+      <data key="d3">chunk-caffd63ee8599ae7be43759f1b96b861</data>
+      <data key="d4">unknown_source</data>
+      <data key="d5">1773426825</data>
+      <data key="d6" />
+    </node>
+    <node id="麻省理工长毛兔">
+      <data key="d0">麻省理工长毛兔</data>
+      <data key="d1">person</data>
+      <data key="d2">The creator and author who shares a one-year review of no-code practice and AI agent exploration on Douyin.</data>
+      <data key="d3">chunk-f4f7f600f2ca98f707b1999fc4b9f540</data>
+      <data key="d4">unknown_source</data>
+      <data key="d5">1773426933</data>
+      <data key="d6" />
+    </node>
+    <node id="No-Code">
+      <data key="d0">No-Code</data>
+      <data key="d1">concept</data>
+      <data key="d2">A development approach allowing creation of software without writing traditional code, central to the author's practice.</data>
+      <data key="d3">chunk-f4f7f600f2ca98f707b1999fc4b9f540</data>
+      <data key="d4">unknown_source</data>
+      <data key="d5">1773426933</data>
+      <data key="d6" />
+    </node>
+    <node id="Low-Code">
+      <data key="d0">Low-Code</data>
+      <data key="d1">concept</data>
+      <data key="d2">A development environment that allows application creation with minimal hand-coding, used alongside no-code tools.</data>
+      <data key="d3">chunk-f4f7f600f2ca98f707b1999fc4b9f540</data>
+      <data key="d4">unknown_source</data>
+      <data key="d5">1773426933</data>
+      <data key="d6" />
+    </node>
+    <node id="AI Agent">
+      <data key="d0">AI Agent</data>
+      <data key="d1">concept</data>
+      <data key="d2">Autonomous agents powered by AI, representing the advanced stage of the author's learning path.</data>
+      <data key="d3">chunk-f4f7f600f2ca98f707b1999fc4b9f540</data>
+      <data key="d4">unknown_source</data>
+      <data key="d5">1773426933</data>
+      <data key="d6" />
+    </node>
+    <node id="Lovable">
+      <data key="d0">Lovable</data>
+      <data key="d1">artifact</data>
+      <data key="d2">A no-code tool used for rapid prototyping and building products by the author.</data>
+      <data key="d3">chunk-f4f7f600f2ca98f707b1999fc4b9f540</data>
+      <data key="d4">unknown_source</data>
+      <data key="d5">1773426933</data>
+      <data key="d6" />
+    </node>
+    <node id="Cloud Code">
+      <data key="d0">Cloud Code</data>
+      <data key="d1">artifact</data>
+      <data key="d2">A tool used for logic extension and backend functionality in the author's tech stack.</data>
+      <data key="d3">chunk-f4f7f600f2ca98f707b1999fc4b9f540</data>
+      <data key="d4">unknown_source</data>
+      <data key="d5">1773426933</data>
+      <data key="d6" />
+    </node>
+    <node id="N8N">
+      <data key="d0">N8N</data>
+      <data key="d1">artifact</data>
+      <data key="d2">A workflow automation tool used by the author for building monitors and agents.</data>
+      <data key="d3">chunk-f4f7f600f2ca98f707b1999fc4b9f540</data>
+      <data key="d4">unknown_source</data>
+      <data key="d5">1773426933</data>
+      <data key="d6" />
+    </node>
+    <node id="Cursor">
+      <data key="d0">Cursor</data>
+      <data key="d1">artifact</data>
+      <data key="d2">A code editor used by the author during the cognitive upgrade phase.</data>
+      <data key="d3">chunk-f4f7f600f2ca98f707b1999fc4b9f540</data>
+      <data key="d4">unknown_source</data>
+      <data key="d5">1773426933</data>
+      <data key="d6" />
+    </node>
+    <node id="Object Party">
+      <data key="d0">Object Party</data>
+      <data key="d1">organization</data>
+      <data key="d2">An organization that proposed the White Co concept in February 2025.</data>
+      <data key="d3">chunk-f4f7f600f2ca98f707b1999fc4b9f540</data>
+      <data key="d4">unknown_source</data>
+      <data key="d5">1773426936</data>
+      <data key="d6" />
+    </node>
+    <node id="White Co">
+      <data key="d0">White Co</data>
+      <data key="d1">concept</data>
+      <data key="d2">A concept proposed by Object Party that influenced the author's learning stages.</data>
+      <data key="d3">chunk-f4f7f600f2ca98f707b1999fc4b9f540</data>
+      <data key="d4">unknown_source</data>
+      <data key="d5">1773426936</data>
+      <data key="d6" />
+    </node>
+    <node id="Base44">
+      <data key="d0">Base44</data>
+      <data key="d1">organization</data>
+      <data key="d2">A source of case studies and podcasts studied by the author for industry insights.</data>
+      <data key="d3">chunk-f4f7f600f2ca98f707b1999fc4b9f540</data>
+      <data key="d4">unknown_source</data>
+      <data key="d5">1773426936</data>
+      <data key="d6" />
+    </node>
+    <node id="Mary Maker">
+      <data key="d0">Mary Maker</data>
+      <data key="d1">person</data>
+      <data key="d2">An individual whose reports were studied by the author for industry insights.</data>
+      <data key="d3">chunk-f4f7f600f2ca98f707b1999fc4b9f540</data>
+      <data key="d4">unknown_source</data>
+      <data key="d5">1773426936</data>
+      <data key="d6" />
+    </node>
+    <node id="吴文达">
+      <data key="d0">吴文达</data>
+      <data key="d1">person</data>
+      <data key="d2">A professor whose speech inspired the author to take action during the learning journey.</data>
+      <data key="d3">chunk-f4f7f600f2ca98f707b1999fc4b9f540</data>
+      <data key="d4">unknown_source</data>
+      <data key="d5">1773426936</data>
+      <data key="d6" />
+    </node>
+    <node id="ASAT School">
+      <data key="d0">ASAT School</data>
+      <data key="d1">organization</data>
+      <data key="d2">The institution where Professor Wu Wenda delivered a speech.</data>
+      <data key="d3">chunk-f4f7f600f2ca98f707b1999fc4b9f540</data>
+      <data key="d4">unknown_source</data>
+      <data key="d5">1773426936</data>
+      <data key="d6" />
+    </node>
+    <node id="12 Months 12 Products">
+      <data key="d0">12 Months 12 Products</data>
+      <data key="d1">event</data>
+      <data key="d2">A challenge started by the author in September to build one product per month.</data>
+      <data key="d3">chunk-f4f7f600f2ca98f707b1999fc4b9f540</data>
+      <data key="d4">unknown_source</data>
+      <data key="d5">1773426936</data>
+      <data key="d6" />
+    </node>
+    <node id="Goal Tracker">
+      <data key="d0">Goal Tracker</data>
+      <data key="d1">artifact</data>
+      <data key="d2">The first product created by the author during the 12 Months 12 Products challenge.</data>
+      <data key="d3">chunk-f4f7f600f2ca98f707b1999fc4b9f540</data>
+      <data key="d4">unknown_source</data>
+      <data key="d5">1773426937</data>
+      <data key="d6" />
+    </node>
+    <node id="Brand Sentiment Monitor">
+      <data key="d0">Brand Sentiment Monitor</data>
+      <data key="d1">artifact</data>
+      <data key="d2">A product built using N8N to monitor brand sentiment during the challenge.</data>
+      <data key="d3">chunk-f4f7f600f2ca98f707b1999fc4b9f540</data>
+      <data key="d4">unknown_source</data>
+      <data key="d5">1773426938</data>
+      <data key="d6" />
+    </node>
+    <node id="VC Email Pre-Screen AI Agent">
+      <data key="d0">VC Email Pre-Screen AI Agent</data>
+      <data key="d1">artifact</data>
+      <data key="d2">An AI agent created to pre-screen VC emails during the challenge.</data>
+      <data key="d3">chunk-f4f7f600f2ca98f707b1999fc4b9f540</data>
+      <data key="d4">unknown_source</data>
+      <data key="d5">1773426938</data>
+      <data key="d6" />
+    </node>
+    <node id="Holiday Card Generator">
+      <data key="d0">Holiday Card Generator</data>
+      <data key="d1">artifact</data>
+      <data key="d2">A product released in December that gained over 2300 users.</data>
+      <data key="d3">chunk-f4f7f600f2ca98f707b1999fc4b9f540</data>
+      <data key="d4">unknown_source</data>
+      <data key="d5">1773426939</data>
+      <data key="d6" />
+    </node>
+    <node id="OpenAI">
+      <data key="d0">OpenAI</data>
+      <data key="d1">organization</data>
+      <data key="d2">A provider of large model APIs used in the recommended tech stack.</data>
+      <data key="d3">chunk-f4f7f600f2ca98f707b1999fc4b9f540</data>
+      <data key="d4">unknown_source</data>
+      <data key="d5">1773426939</data>
+      <data key="d6" />
+    </node>
+    <node id="抖音">
+      <data key="d0">抖音</data>
+      <data key="d1">organization</data>
+      <data key="d2">The video platform where the author shared the practice review.</data>
+      <data key="d3">chunk-f4f7f600f2ca98f707b1999fc4b9f540</data>
+      <data key="d4">unknown_source</data>
+      <data key="d5">1773426939</data>
+      <data key="d6" />
+    </node>
+    <node id="Web Coding">
+      <data key="d0">Web Coding</data>
+      <data key="d1">method</data>
+      <data key="d2">Traditional web development coding learned by the author via interest-driven non-professional means.</data>
+      <data key="d3">chunk-f4f7f600f2ca98f707b1999fc4b9f540</data>
+      <data key="d4">unknown_source</data>
+      <data key="d5">1773426939</data>
+      <data key="d6" />
+    </node>
+    <node id="TypeScript">
+      <data key="d0">TypeScript</data>
+      <data key="d1">method</data>
+      <data key="d2">A programming language introduced in the third stage for ToB direction.</data>
+      <data key="d3">chunk-f4f7f600f2ca98f707b1999fc4b9f540</data>
+      <data key="d4">unknown_source</data>
+      <data key="d5">1773426939</data>
+      <data key="d6" />
+    </node>
+    <node id="RAG">
+      <data key="d0">RAG</data>
+      <data key="d1">method</data>
+      <data key="d2">Retrieval-Augmented Generation method used with agents for code review and network analysis.</data>
+      <data key="d3">chunk-f4f7f600f2ca98f707b1999fc4b9f540</data>
+      <data key="d4">unknown_source</data>
+      <data key="d5">1773426940</data>
+      <data key="d6" />
+    </node>
+    <node id="Git">
+      <data key="d0">Git</data>
+      <data key="d1">method</data>
+      <data key="d2">A version control system basics mastered by the author during the cognitive upgrade.</data>
+      <data key="d3">chunk-f4f7f600f2ca98f707b1999fc4b9f540</data>
+      <data key="d4">unknown_source</data>
+      <data key="d5">1773426941</data>
+      <data key="d6" />
+    </node>
+    <node id="X Platform">
+      <data key="d0">X Platform</data>
+      <data key="d1">organization</data>
+      <data key="d2">A social media platform where an AI blogger graph was created.</data>
+      <data key="d3">chunk-f4f7f600f2ca98f707b1999fc4b9f540</data>
+      <data key="d4">unknown_source</data>
+      <data key="d5">1773426941</data>
+      <data key="d6" />
+    </node>
+    <node id="X Platform AI Blogger Graph">
+      <data key="d0">X Platform AI Blogger Graph</data>
+      <data key="d1">artifact</data>
+      <data key="d2">A tool created to map AI bloggers on the X Platform.</data>
+      <data key="d3">chunk-f4f7f600f2ca98f707b1999fc4b9f540</data>
+      <data key="d4">unknown_source</data>
+      <data key="d5">1773426941</data>
+      <data key="d6" />
+    </node>
+    <node id="Mindset">
+      <data key="d0">Mindset</data>
+      <data key="d1">concept</data>
+      <data key="d2">The thinking mode changed by no-code practice, enabling instant implementation of ideas.</data>
+      <data key="d3">chunk-f4f7f600f2ca98f707b1999fc4b9f540</data>
+      <data key="d4">unknown_source</data>
+      <data key="d5">1773426941</data>
+      <data key="d6" />
+    </node>
+    <node id="MVP">
+      <data key="d0">MVP</data>
+      <data key="d1">concept</data>
+      <data key="d2">Minimum Viable Product, recommended for beginners to build directly without pure theory.</data>
+      <data key="d3">chunk-f4f7f600f2ca98f707b1999fc4b9f540</data>
+      <data key="d4">unknown_source</data>
+      <data key="d5">1773426942</data>
+      <data key="d6" />
+    </node>
+    <node id="ToB">
+      <data key="d0">ToB</data>
+      <data key="d1">concept</data>
+      <data key="d2">Business-to-Business direction focused on in the third stage of learning.</data>
+      <data key="d3">chunk-f4f7f600f2ca98f707b1999fc4b9f540</data>
+      <data key="d4">unknown_source</data>
+      <data key="d5">1773426942</data>
+      <data key="d6" />
+    </node>
+    <node id="Webhook">
+      <data key="d0">Webhook</data>
+      <data key="d1">method</data>
+      <data key="d2">Used to call APIs in the third stage for ToB direction.</data>
+      <data key="d3">chunk-f4f7f600f2ca98f707b1999fc4b9f540</data>
+      <data key="d4">unknown_source</data>
+      <data key="d5">1773426942</data>
+      <data key="d6" />
+    </node>
+    <node id="Large Model API">
+      <data key="d0">Large Model API</data>
+      <data key="d1">artifact</data>
+      <data key="d2">Recommended part of the tech stack, such as OpenAI.</data>
+      <data key="d3">chunk-f4f7f600f2ca98f707b1999fc4b9f540</data>
+      <data key="d4">unknown_source</data>
+      <data key="d5">1773426943</data>
+      <data key="d6" />
+    </node>
+    <node id="3D Interaction Graph">
+      <data key="d0">3D Interaction Graph</data>
+      <data key="d1">artifact</data>
+      <data key="d2">An advanced AI Agent application created by the author involving 3D interaction.</data>
+      <data key="d3">chunk-f4f7f600f2ca98f707b1999fc4b9f540</data>
+      <data key="d4">unknown_source</data>
+      <data key="d5">1773426943</data>
+      <data key="d6" />
+    </node>
+    <node id="7833 - Thinking Outside The Rack- Scaling Up With Optical Interconnects">
+      <data key="d0">7833 - Thinking Outside The Rack- Scaling Up With Optical Interconnects</data>
+      <data key="d1">content</data>
+      <data key="d2">A report stored in Obsidian discussing scaling up with optical interconnects.</data>
+      <data key="d3">chunk-13553145d3f41af0c13bdd91235f3ff3</data>
+      <data key="d4">unknown_source</data>
+      <data key="d5">1773427245</data>
+      <data key="d6" />
+    </node>
+    <node id="Optical Interconnects">
+      <data key="d0">Optical Interconnects</data>
+      <data key="d1">concept</data>
+      <data key="d2">A core solution for cross-rack expansion featuring high bandwidth, low latency, and low power consumption.&lt;SEP&gt;A technology concept related to scaling up computing or networking systems, featured in the document title.</data>
+      <data key="d3">chunk-13553145d3f41af0c13bdd91235f3ff3&lt;SEP&gt;chunk-de484dab9dc735b91436af3e79491149</data>
+      <data key="d4">unknown_source</data>
+      <data key="d5">1773427789</data>
+      <data key="d6" />
+    </node>
+    <node id="Electrical Interconnects">
+      <data key="d0">Electrical Interconnects</data>
+      <data key="d1">method</data>
+      <data key="d2">Traditional interconnects facing bottlenecks in bandwidth and power consumption.</data>
+      <data key="d3">chunk-13553145d3f41af0c13bdd91235f3ff3</data>
+      <data key="d4">unknown_source</data>
+      <data key="d5">1773427245</data>
+      <data key="d6" />
+    </node>
+    <node id="Silicon Photonics">
+      <data key="d0">Silicon Photonics</data>
+      <data key="d1">method</data>
+      <data key="d2">Technology introduced to achieve high-speed optical communication between chips and racks.</data>
+      <data key="d3">chunk-13553145d3f41af0c13bdd91235f3ff3</data>
+      <data key="d4">unknown_source</data>
+      <data key="d5">1773427245</data>
+      <data key="d6" />
+    </node>
+    <node id="Data Centers">
+      <data key="d0">Data Centers</data>
+      <data key="d1">concept</data>
+      <data key="d2">Ultra-large scale facilities where the optical interconnect architecture provides a feasible path.</data>
+      <data key="d3">chunk-13553145d3f41af0c13bdd91235f3ff3</data>
+      <data key="d4">unknown_source</data>
+      <data key="d5">1773427245</data>
+      <data key="d6" />
+    </node>
+    <node id="Large Model Training">
+      <data key="d0">Large Model Training</data>
+      <data key="d1">concept</data>
+      <data key="d2">Activity requiring extreme interconnect bandwidth supported by the architecture.</data>
+      <data key="d3">chunk-13553145d3f41af0c13bdd91235f3ff3</data>
+      <data key="d4">unknown_source</data>
+      <data key="d5">1773427245</data>
+      <data key="d6" />
+    </node>
+    <node id="Optical Engine">
+      <data key="d0">Optical Engine</data>
+      <data key="d1">artifact</data>
+      <data key="d2">Component placed near compute units to reduce electrical transmission distance.</data>
+      <data key="d3">chunk-13553145d3f41af0c13bdd91235f3ff3</data>
+      <data key="d4">unknown_source</data>
+      <data key="d5">1773427248</data>
+      <data key="d6" />
+    </node>
+    <node id="Compute Unit">
+      <data key="d0">Compute Unit</data>
+      <data key="d1">artifact</data>
+      <data key="d2">Unit where the optical engine is placed near to improve energy efficiency.</data>
+      <data key="d3">chunk-13553145d3f41af0c13bdd91235f3ff3</data>
+      <data key="d4">unknown_source</data>
+      <data key="d5">1773427248</data>
+      <data key="d6" />
+    </node>
+    <node id="Bandwidth">
+      <data key="d0">Bandwidth</data>
+      <data key="d1">concept</data>
+      <data key="d2">Metric where traditional interconnects face bottlenecks and optical interconnects offer advantages.</data>
+      <data key="d3">chunk-13553145d3f41af0c13bdd91235f3ff3</data>
+      <data key="d4">unknown_source</data>
+      <data key="d5">1773427248</data>
+      <data key="d6" />
+    </node>
+    <node id="Power Consumption">
+      <data key="d0">Power Consumption</data>
+      <data key="d1">concept</data>
+      <data key="d2">Metric where traditional interconnects face bottlenecks and optical interconnects reduce energy consumption.</data>
+      <data key="d3">chunk-13553145d3f41af0c13bdd91235f3ff3</data>
+      <data key="d4">unknown_source</data>
+      <data key="d5">1773427248</data>
+      <data key="d6" />
+    </node>
+    <node id="Storage">
+      <data key="d0">Storage</data>
+      <data key="d1">artifact</data>
+      <data key="d2">Component decoupled from compute and memory in the proposed architecture.</data>
+      <data key="d3">chunk-13553145d3f41af0c13bdd91235f3ff3</data>
+      <data key="d4">unknown_source</data>
+      <data key="d5">1773427248</data>
+      <data key="d6" />
+    </node>
+    <node id="Memory">
+      <data key="d0">Memory</data>
+      <data key="d1">artifact</data>
+      <data key="d2">Component decoupled from compute and storage in the proposed architecture.</data>
+      <data key="d3">chunk-13553145d3f41af0c13bdd91235f3ff3</data>
+      <data key="d4">unknown_source</data>
+      <data key="d5">1773427249</data>
+      <data key="d6" />
+    </node>
+    <node id="Resource Pooling">
+      <data key="d0">Resource Pooling</data>
+      <data key="d1">concept</data>
+      <data key="d2">Architecture feature supported by optical interconnects allowing improved utilization.</data>
+      <data key="d3">chunk-13553145d3f41af0c13bdd91235f3ff3</data>
+      <data key="d4">unknown_source</data>
+      <data key="d5">1773427250</data>
+      <data key="d6" />
+    </node>
+    <node id="Standardized Interfaces">
+      <data key="d0">Standardized Interfaces</data>
+      <data key="d1">concept</data>
+      <data key="d2">Focus of future evolution for widespread deployment of optical interconnects.</data>
+      <data key="d3">chunk-13553145d3f41af0c13bdd91235f3ff3</data>
+      <data key="d4">unknown_source</data>
+      <data key="d5">1773427250</data>
+      <data key="d6" />
+    </node>
+    <node id="Cost Optimization">
+      <data key="d0">Cost Optimization</data>
+      <data key="d1">concept</data>
+      <data key="d2">Focus of future evolution alongside standardized interfaces.</data>
+      <data key="d3">chunk-13553145d3f41af0c13bdd91235f3ff3</data>
+      <data key="d4">unknown_source</data>
+      <data key="d5">1773427251</data>
+      <data key="d6" />
+    </node>
+    <node id="Signal Attenuation">
+      <data key="d0">Signal Attenuation</data>
+      <data key="d1">concept</data>
+      <data key="d2">Signal loss effectively reduced by optical interconnect technology.</data>
+      <data key="d3">chunk-13553145d3f41af0c13bdd91235f3ff3</data>
+      <data key="d4">unknown_source</data>
+      <data key="d5">1773427251</data>
+      <data key="d6" />
+    </node>
+    <node id="ReThinker Framework">
+      <data key="d0">ReThinker Framework</data>
+      <data key="d1">method</data>
+      <data key="d2">A framework combining guided reflection and confidence control to enhance scientific reasoning tasks.</data>
+      <data key="d3">chunk-784d4585ebe0819ccbc35184946098ac</data>
+      <data key="d4">unknown_source</data>
+      <data key="d5">1773427502</data>
+      <data key="d6" />
+    </node>
+    <node id="Scientific Reasoning">
+      <data key="d0">Scientific Reasoning</data>
+      <data key="d1">concept</data>
+      <data key="d2">A complex task involving multi-step derivation and logical deduction in scientific fields.</data>
+      <data key="d3">chunk-784d4585ebe0819ccbc35184946098ac</data>
+      <data key="d4">unknown_source</data>
+      <data key="d5">1773427502</data>
+      <data key="d6" />
+    </node>
+    <node id="Guided Reflection">
+      <data key="d0">Guided Reflection</data>
+      <data key="d1">method</data>
+      <data key="d2">A multi-stage process used within the ReThinker Framework to dynamically evaluate reasoning paths.</data>
+      <data key="d3">chunk-784d4585ebe0819ccbc35184946098ac</data>
+      <data key="d4">unknown_source</data>
+      <data key="d5">1773427502</data>
+      <data key="d6" />
+    </node>
+    <node id="Confidence Control">
+      <data key="d0">Confidence Control</data>
+      <data key="d1">method</data>
+      <data key="d2">A module that quantifies uncertainty and triggers correction processes for low reliability steps.</data>
+      <data key="d3">chunk-784d4585ebe0819ccbc35184946098ac</data>
+      <data key="d4">unknown_source</data>
+      <data key="d5">1773427502</data>
+      <data key="d6" />
+    </node>
+    <node id="ReThinker Scientific Reasoning Report">
+      <data key="d0">ReThinker Scientific Reasoning Report</data>
+      <data key="d1">content</data>
+      <data key="d2">A PDF document describing the ReThinker Framework, stored in Obsidian.</data>
+      <data key="d3">chunk-784d4585ebe0819ccbc35184946098ac</data>
+      <data key="d4">unknown_source</data>
+      <data key="d5">1773427502</data>
+      <data key="d6" />
+    </node>
+    <node id="AI Model">
+      <data key="d0">AI Model</data>
+      <data key="d1">artifact</data>
+      <data key="d2">The system empowered by the ReThinker Framework to perform rethinking and iterative optimization.</data>
+      <data key="d3">chunk-784d4585ebe0819ccbc35184946098ac</data>
+      <data key="d4">unknown_source</data>
+      <data key="d5">1773427502</data>
+      <data key="d6" />
+    </node>
+    <node id="Hallucination">
+      <data key="d0">Hallucination</data>
+      <data key="d1">concept</data>
+      <data key="d2">Logical errors or inaccuracies in model generation that the framework aims to suppress.</data>
+      <data key="d3">chunk-784d4585ebe0819ccbc35184946098ac</data>
+      <data key="d4">unknown_source</data>
+      <data key="d5">1773427502</data>
+      <data key="d6" />
+    </node>
+    <node id="Scientific Q&amp;A Scenarios">
+      <data key="d0">Scientific Q&amp;A Scenarios</data>
+      <data key="d1">concept</data>
+      <data key="d2">Application scenarios requiring high-precision logical derivation where the framework is suitable.</data>
+      <data key="d3">chunk-784d4585ebe0819ccbc35184946098ac</data>
+      <data key="d4">unknown_source</data>
+      <data key="d5">1773427504</data>
+      <data key="d6" />
+    </node>
+    <node id="Automatic Reasoning Systems">
+      <data key="d0">Automatic Reasoning Systems</data>
+      <data key="d1">artifact</data>
+      <data key="d2">Systems aimed at higher credibility and development through the ReThinker Framework.</data>
+      <data key="d3">chunk-784d4585ebe0819ccbc35184946098ac</data>
+      <data key="d4">unknown_source</data>
+      <data key="d5">1773427504</data>
+      <data key="d6" />
+    </node>
+    <node id="Iterative Optimization">
+      <data key="d0">Iterative Optimization</data>
+      <data key="d1">method</data>
+      <data key="d2">A process shift from single generation achieved by the ReThinker Framework.</data>
+      <data key="d3">chunk-784d4585ebe0819ccbc35184946098ac</data>
+      <data key="d4">unknown_source</data>
+      <data key="d5">1773427505</data>
+      <data key="d6" />
+    </node>
+    <node id="Self-Correction">
+      <data key="d0">Self-Correction</data>
+      <data key="d1">method</data>
+      <data key="d2">A key capability emphasized by the research for improving reliability in scientific fields.</data>
+      <data key="d3">chunk-784d4585ebe0819ccbc35184946098ac</data>
+      <data key="d4">unknown_source</data>
+      <data key="d5">1773427505</data>
+      <data key="d6" />
+    </node>
+    <node id="Uncertainty Quantification">
+      <data key="d0">Uncertainty Quantification</data>
+      <data key="d1">method</data>
+      <data key="d2">A key capability emphasized by the research alongside self-correction for rigorous scientific application.</data>
+      <data key="d3">chunk-784d4585ebe0819ccbc35184946098ac</data>
+      <data key="d4">unknown_source</data>
+      <data key="d5">1773427505</data>
+      <data key="d6" />
+    </node>
+    <node id="Logical Errors">
+      <data key="d0">Logical Errors</data>
+      <data key="d1">concept</data>
+      <data key="d2">Issues suppressed by the ReThinker Framework alongside hallucinations.</data>
+      <data key="d3">chunk-784d4585ebe0819ccbc35184946098ac</data>
+      <data key="d4">unknown_source</data>
+      <data key="d5">1773427505</data>
+      <data key="d6" />
+    </node>
+    <node id="Large Models">
+      <data key="d0">Large Models</data>
+      <data key="d1">artifact</data>
+      <data key="d2">Specific models for which the ReThinker Framework improves reasoning reliability.</data>
+      <data key="d3">chunk-784d4585ebe0819ccbc35184946098ac</data>
+      <data key="d4">unknown_source</data>
+      <data key="d5">1773427505</data>
+      <data key="d6" />
+    </node>
+    <node id="Robustness">
+      <data key="d0">Robustness</data>
+      <data key="d1">concept</data>
+      <data key="d2">An attribute significantly enhanced by the ReThinker Framework when handling multi-step derivation problems.</data>
+      <data key="d3">chunk-784d4585ebe0819ccbc35184946098ac</data>
+      <data key="d4">unknown_source</data>
+      <data key="d5">1773427505</data>
+      <data key="d6" />
+    </node>
+    <node id="Accuracy">
+      <data key="d0">Accuracy</data>
+      <data key="d1">concept</data>
+      <data key="d2">An attribute significantly enhanced by the ReThinker Framework when handling multi-step derivation problems.</data>
+      <data key="d3">chunk-784d4585ebe0819ccbc35184946098ac</data>
+      <data key="d4">unknown_source</data>
+      <data key="d5">1773427507</data>
+      <data key="d6" />
+    </node>
+    <node id="Thinking Outside The Rack Scaling Up With Optical Interconnects">
+      <data key="d0">Thinking Outside The Rack Scaling Up With Optical Interconnects</data>
+      <data key="d1">content</data>
+      <data key="d2">A report document discussing scaling up with optical interconnects, stored as a PDF file.</data>
+      <data key="d3">chunk-de484dab9dc735b91436af3e79491149</data>
+      <data key="d4">unknown_source</data>
+      <data key="d5">1773427789</data>
+      <data key="d6" />
+    </node>
+    <node id="1.45 MB">
+      <data key="d0">1.45 MB</data>
+      <data key="d1">data</data>
+      <data key="d2">The file size of the document is 1.45 MB.</data>
+      <data key="d3">chunk-de484dab9dc735b91436af3e79491149</data>
+      <data key="d4">unknown_source</data>
+      <data key="d5">1773427789</data>
+      <data key="d6" />
+    </node>
+    <node id="Personal">
+      <data key="d0">Personal</data>
+      <data key="d1">concept</data>
+      <data key="d2">The category classification of the document within the personal knowledge base.</data>
+      <data key="d3">chunk-de484dab9dc735b91436af3e79491149</data>
+      <data key="d4">unknown_source</data>
+      <data key="d5">1773427789</data>
+      <data key="d6" />
+    </node>
+    <node id="ISSCC 2026">
+      <data key="d0">ISSCC 2026</data>
+      <data key="d1">event</data>
+      <data key="d2">ISSCC 2026 is a conference event associated with the presented collection of systems.</data>
+      <data key="d3">chunk-e4a307af220b383886bf52906f7d65bf</data>
+      <data key="d4">unknown_source</data>
+      <data key="d5">1773428115</data>
+      <data key="d6" />
+    </node>
+    <node id="ISSCC 2026 Wearable And Wireless Biomedical Systems Collection">
+      <data key="d0">ISSCC 2026 Wearable And Wireless Biomedical Systems Collection</data>
+      <data key="d1">content</data>
+      <data key="d2">A 202-page PPT collection report regarding wearable and wireless biomedical systems from ISSCC 2026.</data>
+      <data key="d3">chunk-e4a307af220b383886bf52906f7d65bf</data>
+      <data key="d4">unknown_source</data>
+      <data key="d5">1773428115</data>
+      <data key="d6" />
+    </node>
+    <node id="Wearable And Wireless Biomedical Systems">
+      <data key="d0">Wearable And Wireless Biomedical Systems</data>
+      <data key="d1">concept</data>
+      <data key="d2">The subject matter topic covering wearable technology and wireless biomedical systems.</data>
+      <data key="d3">chunk-e4a307af220b383886bf52906f7d65bf</data>
+      <data key="d4">unknown_source</data>
+      <data key="d5">1773428115</data>
+      <data key="d6" />
+    </node>
+    <node id="Frontier-Tech">
+      <data key="d0">Frontier-Tech</data>
+      <data key="d1">concept</data>
+      <data key="d2">Frontier-Tech is the category classification assigned to the document.</data>
+      <data key="d3">chunk-e4a307af220b383886bf52906f7d65bf</data>
+      <data key="d4">unknown_source</data>
+      <data key="d5">1773428116</data>
+      <data key="d6" />
+    </node>
+    <node id="PPT">
+      <data key="d0">PPT</data>
+      <data key="d1">artifact</data>
+      <data key="d2">PPT refers to the PowerPoint presentation format contained within the PDF document.</data>
+      <data key="d3">chunk-e4a307af220b383886bf52906f7d65bf</data>
+      <data key="d4">unknown_source</data>
+      <data key="d5">1773428121</data>
+      <data key="d6" />
+    </node>
+    <node id="44.39 MB">
+      <data key="d0">44.39 MB</data>
+      <data key="d1">data</data>
+      <data key="d2">44.39 MB is the specific file size of the ISSCC 2026 Wearable And Wireless Biomedical Systems Collection document.</data>
+      <data key="d3">chunk-e4a307af220b383886bf52906f7d65bf</data>
+      <data key="d4">unknown_source</data>
+      <data key="d5">1773428121</data>
       <data key="d6" />
     </node>
     <edge source="7062 - Next-Gen AI-HPC Server Performance with CXL3.1 Tiered Memory and MRDIMM solution_v2_v2" target="CXL 3.1">
@@ -4459,6 +5183,24 @@ The specific report addressing this technology carries the title "20250807 DRAM 
       <data key="d12">1773341753</data>
       <data key="d13" />
     </edge>
+    <edge source="2026-03-07" target="Evaluating CXL Based Composable Memory Solutions A TCO Framework For Datacenter Workloads">
+      <data key="d7">1.0</data>
+      <data key="d8">The report was published or dated on 2026-03-07.</data>
+      <data key="d9">metadata,publication date</data>
+      <data key="d10">chunk-caffd63ee8599ae7be43759f1b96b861</data>
+      <data key="d11">unknown_source</data>
+      <data key="d12">1773426918</data>
+      <data key="d13" />
+    </edge>
+    <edge source="2026-03-07" target="Thinking Outside The Rack Scaling Up With Optical Interconnects">
+      <data key="d7">1.0</data>
+      <data key="d8">The document was dated and stored on 2026-03-07.</data>
+      <data key="d9">date,timestamp</data>
+      <data key="d10">chunk-de484dab9dc735b91436af3e79491149</data>
+      <data key="d11">unknown_source</data>
+      <data key="d12">1773427868</data>
+      <data key="d13" />
+    </edge>
     <edge source="PDF Format" target="7479 - Trust at 64 GT-s- Security Considerations for PCIe 6 Switch Deployments_v2">
       <data key="d7">1.0</data>
       <data key="d8">The report exists and is accessed in PDF format, which influences its portability, rendering, and potential security handling.</data>
@@ -5251,6 +5993,15 @@ The specific report addressing this technology carries the title "20250807 DRAM 
       <data key="d12">1773341745</data>
       <data key="d13" />
     </edge>
+    <edge source="Server Architecture" target="Evaluating CXL Based Composable Memory Solutions A TCO Framework For Datacenter Workloads">
+      <data key="d7">1.0</data>
+      <data key="d8">The report is categorized under server architecture.</data>
+      <data key="d9">categorization,classification</data>
+      <data key="d10">chunk-caffd63ee8599ae7be43759f1b96b861</data>
+      <data key="d11">unknown_source</data>
+      <data key="d12">1773426910</data>
+      <data key="d13" />
+    </edge>
     <edge source="Core Priority" target="7300 - End-to-End Management of a CXL-enabled Datacenter Memory Fabric_v2">
       <data key="d7">1.0</data>
       <data key="d8">The report is classified as having core priority, reflecting its significance in the technical domain.</data>
@@ -5638,6 +6389,15 @@ The specific report addressing this technology carries the title "20250807 DRAM 
       <data key="d12">1773341751</data>
       <data key="d13" />
     </edge>
+    <edge source="Research Report Library" target="Evaluating CXL Based Composable Memory Solutions A TCO Framework For Datacenter Workloads">
+      <data key="d7">1.0</data>
+      <data key="d8">The report is part of the research report library collection.</data>
+      <data key="d9">collection,storage location</data>
+      <data key="d10">chunk-caffd63ee8599ae7be43759f1b96b861</data>
+      <data key="d11">unknown_source</data>
+      <data key="d12">1773426913</data>
+      <data key="d13" />
+    </edge>
     <edge source="ZhiweiVault" target="Test Note">
       <data key="d7">1.0</data>
       <data key="d8">The Test Note was created to verify that the Obsidian Vault configuration has been correctly updated to ZhiweiVault.</data>
@@ -5710,6 +6470,42 @@ The specific report addressing this technology carries the title "20250807 DRAM 
       <data key="d12">1773167453</data>
       <data key="d13" />
     </edge>
+    <edge source="Obsidian" target="7833 - Thinking Outside The Rack- Scaling Up With Optical Interconnects">
+      <data key="d7">1.0</data>
+      <data key="d8">The report is stored in Obsidian.</data>
+      <data key="d9">software platform,storage location</data>
+      <data key="d10">chunk-13553145d3f41af0c13bdd91235f3ff3</data>
+      <data key="d11">unknown_source</data>
+      <data key="d12">1773427282</data>
+      <data key="d13" />
+    </edge>
+    <edge source="Obsidian" target="ReThinker Scientific Reasoning Report">
+      <data key="d7">1.0</data>
+      <data key="d8">Obsidian is the source software where the report is stored.</data>
+      <data key="d9">source,storage</data>
+      <data key="d10">chunk-784d4585ebe0819ccbc35184946098ac</data>
+      <data key="d11">unknown_source</data>
+      <data key="d12">1773427510</data>
+      <data key="d13" />
+    </edge>
+    <edge source="Obsidian" target="Thinking Outside The Rack Scaling Up With Optical Interconnects">
+      <data key="d7">1.0</data>
+      <data key="d8">The document is stored and managed within the Obsidian application.</data>
+      <data key="d9">software source,storage</data>
+      <data key="d10">chunk-de484dab9dc735b91436af3e79491149</data>
+      <data key="d11">unknown_source</data>
+      <data key="d12">1773427849</data>
+      <data key="d13" />
+    </edge>
+    <edge source="Obsidian" target="ISSCC 2026 Wearable And Wireless Biomedical Systems Collection">
+      <data key="d7">1.0</data>
+      <data key="d8">The document is stored and managed within the Obsidian software platform.</data>
+      <data key="d9">source system,storage platform</data>
+      <data key="d10">chunk-e4a307af220b383886bf52906f7d65bf</data>
+      <data key="d11">unknown_source</data>
+      <data key="d12">1773428190</data>
+      <data key="d13" />
+    </edge>
     <edge source="2nm Node" target="TSMC">
       <data key="d7">1.0</data>
       <data key="d8">TSMC is accelerating R&amp;D of the 2nm node to maintain leadership in semiconductor manufacturing.</data>
@@ -5726,6 +6522,15 @@ The specific report addressing this technology carries the title "20250807 DRAM 
       <data key="d10">chunk-546dfa6e8a446972d5dc6ae34a64ce0a</data>
       <data key="d11">unknown_source</data>
       <data key="d12">1773167464</data>
+      <data key="d13" />
+    </edge>
+    <edge source="Advanced Packaging" target="Optical Interconnects">
+      <data key="d7">1.0</data>
+      <data key="d8">Advanced packaging is used to implement optical interconnects.</data>
+      <data key="d9">implementation technology,integration</data>
+      <data key="d10">chunk-13553145d3f41af0c13bdd91235f3ff3</data>
+      <data key="d11">unknown_source</data>
+      <data key="d12">1773427262</data>
       <data key="d13" />
     </edge>
     <edge source="CoWoS" target="AI Chip">
@@ -6322,6 +7127,42 @@ The specific report addressing this technology carries the title "20250807 DRAM 
       <data key="d12">1773341749</data>
       <data key="d13" />
     </edge>
+    <edge source="PDF" target="Evaluating CXL Based Composable Memory Solutions A TCO Framework For Datacenter Workloads">
+      <data key="d7">1.0</data>
+      <data key="d8">The report is available in PDF format.</data>
+      <data key="d9">document type,file format</data>
+      <data key="d10">chunk-caffd63ee8599ae7be43759f1b96b861</data>
+      <data key="d11">unknown_source</data>
+      <data key="d12">1773426907</data>
+      <data key="d13" />
+    </edge>
+    <edge source="PDF" target="7833 - Thinking Outside The Rack- Scaling Up With Optical Interconnects">
+      <data key="d7">1.0</data>
+      <data key="d8">The report is stored in PDF format.</data>
+      <data key="d9">digital,file format</data>
+      <data key="d10">chunk-13553145d3f41af0c13bdd91235f3ff3</data>
+      <data key="d11">unknown_source</data>
+      <data key="d12">1773427285</data>
+      <data key="d13" />
+    </edge>
+    <edge source="PDF" target="Thinking Outside The Rack Scaling Up With Optical Interconnects">
+      <data key="d7">1.0</data>
+      <data key="d8">The document is saved in the PDF file format.</data>
+      <data key="d9">digital representation,file format</data>
+      <data key="d10">chunk-de484dab9dc735b91436af3e79491149</data>
+      <data key="d11">unknown_source</data>
+      <data key="d12">1773427857</data>
+      <data key="d13" />
+    </edge>
+    <edge source="PDF" target="ISSCC 2026 Wearable And Wireless Biomedical Systems Collection">
+      <data key="d7">1.0</data>
+      <data key="d8">The document is formatted as a PDF file.</data>
+      <data key="d9">document type,file format</data>
+      <data key="d10">chunk-e4a307af220b383886bf52906f7d65bf</data>
+      <data key="d11">unknown_source</data>
+      <data key="d12">1773428195</data>
+      <data key="d13" />
+    </edge>
     <edge source="Core Report" target="10.00 - Towards Memory Efficient RAG Pipelines With CXL Technology_v2">
       <data key="d7">1.0</data>
       <data key="d8">The report is explicitly classified as "core", reflecting its high-priority status in the server architecture research library.</data>
@@ -6815,6 +7656,24 @@ The specific report addressing this technology carries the title "20250807 DRAM 
       <data key="d10">chunk-df273047e67bbcef8888ccc637f02f26</data>
       <data key="d11">unknown_source</data>
       <data key="d12">1773341753</data>
+      <data key="d13" />
+    </edge>
+    <edge source="Liufang" target="Thinking Outside The Rack Scaling Up With Optical Interconnects">
+      <data key="d7">1.0</data>
+      <data key="d8">The document is located in Liufang's local user directory.</data>
+      <data key="d9">ownership,user association</data>
+      <data key="d10">chunk-de484dab9dc735b91436af3e79491149</data>
+      <data key="d11">unknown_source</data>
+      <data key="d12">1773427852</data>
+      <data key="d13" />
+    </edge>
+    <edge source="Liufang" target="ISSCC 2026 Wearable And Wireless Biomedical Systems Collection">
+      <data key="d7">1.0</data>
+      <data key="d8">Liufang stores the document collection in their local library path.</data>
+      <data key="d9">ownership,storage</data>
+      <data key="d10">chunk-e4a307af220b383886bf52906f7d65bf</data>
+      <data key="d11">unknown_source</data>
+      <data key="d12">1773428200</data>
       <data key="d13" />
     </edge>
     <edge source="File Path" target="10.00 - Towards Memory Efficient RAG Pipelines With CXL Technology_v2">
@@ -7357,6 +8216,15 @@ The specific report addressing this technology carries the title "20250807 DRAM 
       <data key="d12">1773254521</data>
       <data key="d13" />
     </edge>
+    <edge source="CXL" target="Evaluating CXL Based Composable Memory Solutions A TCO Framework For Datacenter Workloads">
+      <data key="d7">1.0</data>
+      <data key="d8">The report evaluates solutions based on CXL technology.</data>
+      <data key="d9">evaluation subject,technology basis</data>
+      <data key="d10">chunk-caffd63ee8599ae7be43759f1b96b861</data>
+      <data key="d11">unknown_source</data>
+      <data key="d12">1773426897</data>
+      <data key="d13" />
+    </edge>
     <edge source="Datacenter Memory Fabric" target="End to End Management of a CXL Enabled Datacenter Memory Fabric">
       <data key="d7">1.0</data>
       <data key="d8">The report's core subject is the end-to-end management of a CXL-enabled datacenter memory fabric.</data>
@@ -7634,6 +8502,15 @@ The specific report addressing this technology carries the title "20250807 DRAM 
       <data key="d10">chunk-230764380b33557b5524bd06ee945029</data>
       <data key="d11">unknown_source</data>
       <data key="d12">1773340461</data>
+      <data key="d13" />
+    </edge>
+    <edge source="Report" target="Thinking Outside The Rack Scaling Up With Optical Interconnects">
+      <data key="d7">1.0</data>
+      <data key="d8">The document is classified as a Report.</data>
+      <data key="d9">classification,type</data>
+      <data key="d10">chunk-de484dab9dc735b91436af3e79491149</data>
+      <data key="d11">unknown_source</data>
+      <data key="d12">1773427865</data>
       <data key="d13" />
     </edge>
     <edge source="7819 - Advancing PLDM- Structured Sensors Scalable Modeling and the Server Host SoC PLDM Specification_v2" target="PLDM">
@@ -8257,6 +9134,24 @@ The specific report addressing this technology carries the title "20250807 DRAM 
       <data key="d12">1773341129</data>
       <data key="d13" />
     </edge>
+    <edge source="AI Deep Summary" target="Evaluating CXL Based Composable Memory Solutions A TCO Framework For Datacenter Workloads">
+      <data key="d7">1.0</data>
+      <data key="d8">The report contains a section designated for an AI Deep Summary.</data>
+      <data key="d9">content structure,section</data>
+      <data key="d10">chunk-caffd63ee8599ae7be43759f1b96b861</data>
+      <data key="d11">unknown_source</data>
+      <data key="d12">1773426926</data>
+      <data key="d13" />
+    </edge>
+    <edge source="AI Deep Summary" target="ISSCC 2026 Wearable And Wireless Biomedical Systems Collection">
+      <data key="d7">1.0</data>
+      <data key="d8">The document is scheduled for AI Deep Summary processing after vectorization.</data>
+      <data key="d9">pending analysis,processing method</data>
+      <data key="d10">chunk-e4a307af220b383886bf52906f7d65bf</data>
+      <data key="d11">unknown_source</data>
+      <data key="d12">1773428198</data>
+      <data key="d13" />
+    </edge>
     <edge source="7446 - Large CXL Memory Expansion Systems and Workloads_v2_v2" target="CXL Memory Expansion Systems">
       <data key="d7">1.0</data>
       <data key="d8">The report specifically analyzes design, scalability, and performance of large CXL memory expansion systems.</data>
@@ -8588,6 +9483,15 @@ The specific report addressing this technology carries the title "20250807 DRAM 
       <data key="d10">chunk-e24b7488a587cd1f8bf6573d12f1c75a</data>
       <data key="d11">unknown_source</data>
       <data key="d12">1773167758</data>
+      <data key="d13" />
+    </edge>
+    <edge source="Artificial Intelligence" target="Optical Interconnects">
+      <data key="d7">1.0</data>
+      <data key="d8">Optical interconnects meet the extreme interconnect bandwidth needs of AI.</data>
+      <data key="d9">demand driver,support</data>
+      <data key="d10">chunk-13553145d3f41af0c13bdd91235f3ff3</data>
+      <data key="d11">unknown_source</data>
+      <data key="d12">1773427265</data>
       <data key="d13" />
     </edge>
     <edge source="7430 - Smashing Memory I-O Limits- Architectures for the GenAI Era_v2_v2" target="GenAI Era">
@@ -9796,6 +10700,15 @@ The specific report addressing this technology carries the title "20250807 DRAM 
       <data key="d12">1773341763</data>
       <data key="d13" />
     </edge>
+    <edge source="Vectorized" target="Evaluating CXL Based Composable Memory Solutions A TCO Framework For Datacenter Workloads">
+      <data key="d7">1.0</data>
+      <data key="d8">The report has undergone vectorization processing.</data>
+      <data key="d9">method,processing status</data>
+      <data key="d10">chunk-caffd63ee8599ae7be43759f1b96b861</data>
+      <data key="d11">unknown_source</data>
+      <data key="d12">1773426929</data>
+      <data key="d13" />
+    </edge>
     <edge source="APEC Advanced PCIe Enclosure" target="HSIO Interconnection">
       <data key="d7">1.0</data>
       <data key="d8">The APEC Advanced PCIe Enclosure is explicitly designed to be compatible with future HSIO interconnection standards.</data>
@@ -10282,6 +11195,15 @@ The specific report addressing this technology carries the title "20250807 DRAM 
       <data key="d12">1773341762</data>
       <data key="d13" />
     </edge>
+    <edge source="Core" target="Evaluating CXL Based Composable Memory Solutions A TCO Framework For Datacenter Workloads">
+      <data key="d7">1.0</data>
+      <data key="d8">The report is assigned a Core priority level.</data>
+      <data key="d9">classification,priority level</data>
+      <data key="d10">chunk-caffd63ee8599ae7be43759f1b96b861</data>
+      <data key="d11">unknown_source</data>
+      <data key="d12">1773426931</data>
+      <data key="d13" />
+    </edge>
     <edge source="Large CXL Memory Expansion Systems and Workloads" target="3.46 MB">
       <data key="d7">1.0</data>
       <data key="d8">The report has a file size of 3.46 MB.</data>
@@ -10316,6 +11238,15 @@ The specific report addressing this technology carries the title "20250807 DRAM 
       <data key="d10">chunk-bac65798eb982eaec66217171974d32c</data>
       <data key="d11">unknown_source</data>
       <data key="d12">1773340949</data>
+      <data key="d13" />
+    </edge>
+    <edge source="Local File Path" target="Local Document">
+      <data key="d7">1.0</data>
+      <data key="d8">The local document artifact is located at the specified file path.</data>
+      <data key="d9">digital address,storage location</data>
+      <data key="d10">chunk-caffd63ee8599ae7be43759f1b96b861</data>
+      <data key="d11">unknown_source</data>
+      <data key="d12">1773426918</data>
       <data key="d13" />
     </edge>
     <edge source="Vectorized Status" target="Orchestrating Confidential Compute Report">
@@ -10453,6 +11384,15 @@ The specific report addressing this technology carries the title "20250807 DRAM 
       <data key="d12">1773255068</data>
       <data key="d13" />
     </edge>
+    <edge source="2026-03-07 19:05:19" target="Evaluating CXL Based Composable Memory Solutions A TCO Framework For Datacenter Workloads">
+      <data key="d7">1.0</data>
+      <data key="d8">The report was stored in the library at this specific timestamp.</data>
+      <data key="d9">metadata,storage time</data>
+      <data key="d10">chunk-caffd63ee8599ae7be43759f1b96b861</data>
+      <data key="d11">unknown_source</data>
+      <data key="d12">1773426920</data>
+      <data key="d13" />
+    </edge>
     <edge source="20250807 CXLT 301 1 Kim 07 27 01.00.16 Copy" target="Kim">
       <data key="d7">1.0</data>
       <data key="d8">Kim is named in the title of the document, indicating involvement or authorship.</data>
@@ -10577,6 +11517,15 @@ The specific report addressing this technology carries the title "20250807 DRAM 
       <data key="d10">chunk-ec101ba502a70816a33b6a1e26f6054f</data>
       <data key="d11">unknown_source</data>
       <data key="d12">1773341518</data>
+      <data key="d13" />
+    </edge>
+    <edge source="2026-03-11" target="ISSCC 2026 Wearable And Wireless Biomedical Systems Collection">
+      <data key="d7">1.0</data>
+      <data key="d8">The document collection is associated with the date 2026-03-11 for creation and storage.</data>
+      <data key="d9">creation date,temporal attribute</data>
+      <data key="d10">chunk-e4a307af220b383886bf52906f7d65bf</data>
+      <data key="d11">unknown_source</data>
+      <data key="d12">1773428208</data>
       <data key="d13" />
     </edge>
     <edge source="Session 30 Nonvolatile Memory And DRAM" target="Nonvolatile Memory">
@@ -10838,6 +11787,600 @@ The specific report addressing this technology carries the title "20250807 DRAM 
       <data key="d10">chunk-df273047e67bbcef8888ccc637f02f26</data>
       <data key="d11">unknown_source</data>
       <data key="d12">1773341765</data>
+      <data key="d13" />
+    </edge>
+    <edge source="Evaluating CXL Based Composable Memory Solutions A TCO Framework For Datacenter Workloads" target="Composable Memory Solutions">
+      <data key="d7">1.0</data>
+      <data key="d8">The report focuses on evaluating composable memory solutions.</data>
+      <data key="d9">evaluation subject,technology focus</data>
+      <data key="d10">chunk-caffd63ee8599ae7be43759f1b96b861</data>
+      <data key="d11">unknown_source</data>
+      <data key="d12">1773426899</data>
+      <data key="d13" />
+    </edge>
+    <edge source="Evaluating CXL Based Composable Memory Solutions A TCO Framework For Datacenter Workloads" target="TCO Framework">
+      <data key="d7">1.0</data>
+      <data key="d8">The report utilizes a TCO framework for its evaluation.</data>
+      <data key="d9">evaluation tool,methodology</data>
+      <data key="d10">chunk-caffd63ee8599ae7be43759f1b96b861</data>
+      <data key="d11">unknown_source</data>
+      <data key="d12">1773426902</data>
+      <data key="d13" />
+    </edge>
+    <edge source="Evaluating CXL Based Composable Memory Solutions A TCO Framework For Datacenter Workloads" target="Datacenter Workloads">
+      <data key="d7">1.0</data>
+      <data key="d8">The evaluation is specific to datacenter workloads.</data>
+      <data key="d9">application scope,target environment</data>
+      <data key="d10">chunk-caffd63ee8599ae7be43759f1b96b861</data>
+      <data key="d11">unknown_source</data>
+      <data key="d12">1773426905</data>
+      <data key="d13" />
+    </edge>
+    <edge source="Evaluating CXL Based Composable Memory Solutions A TCO Framework For Datacenter Workloads" target="Local Document">
+      <data key="d7">1.0</data>
+      <data key="d8">The local document artifact contains the content of the report.</data>
+      <data key="d9">containment,digital representation</data>
+      <data key="d10">chunk-caffd63ee8599ae7be43759f1b96b861</data>
+      <data key="d11">unknown_source</data>
+      <data key="d12">1773426916</data>
+      <data key="d13" />
+    </edge>
+    <edge source="Evaluating CXL Based Composable Memory Solutions A TCO Framework For Datacenter Workloads" target="1.81 MB">
+      <data key="d7">1.0</data>
+      <data key="d8">The report document has a file size of 1.81 MB.</data>
+      <data key="d9">file size,physical attribute</data>
+      <data key="d10">chunk-caffd63ee8599ae7be43759f1b96b861</data>
+      <data key="d11">unknown_source</data>
+      <data key="d12">1773426923</data>
+      <data key="d13" />
+    </edge>
+    <edge source="麻省理工长毛兔" target="抖音">
+      <data key="d7">1.0</data>
+      <data key="d8">The author shares the no-code practice review video on the Douyin platform.</data>
+      <data key="d9">content sharing,platform</data>
+      <data key="d10">chunk-f4f7f600f2ca98f707b1999fc4b9f540</data>
+      <data key="d11">unknown_source</data>
+      <data key="d12">1773426946</data>
+      <data key="d13" />
+    </edge>
+    <edge source="麻省理工长毛兔" target="No-Code">
+      <data key="d7">1.0</data>
+      <data key="d8">The author practices and reviews one year of no-code development experiences.</data>
+      <data key="d9">exploration,practice</data>
+      <data key="d10">chunk-f4f7f600f2ca98f707b1999fc4b9f540</data>
+      <data key="d11">unknown_source</data>
+      <data key="d12">1773426949</data>
+      <data key="d13" />
+    </edge>
+    <edge source="麻省理工长毛兔" target="Lovable">
+      <data key="d7">1.0</data>
+      <data key="d8">The author uses Lovable for rapid prototyping and building products.</data>
+      <data key="d9">prototyping,tool usage</data>
+      <data key="d10">chunk-f4f7f600f2ca98f707b1999fc4b9f540</data>
+      <data key="d11">unknown_source</data>
+      <data key="d12">1773426952</data>
+      <data key="d13" />
+    </edge>
+    <edge source="麻省理工长毛兔" target="Cloud Code">
+      <data key="d7">1.0</data>
+      <data key="d8">The author uses Cloud Code for logic extension in the tech stack.</data>
+      <data key="d9">logic extension,tool usage</data>
+      <data key="d10">chunk-f4f7f600f2ca98f707b1999fc4b9f540</data>
+      <data key="d11">unknown_source</data>
+      <data key="d12">1773426955</data>
+      <data key="d13" />
+    </edge>
+    <edge source="麻省理工长毛兔" target="N8N">
+      <data key="d7">1.0</data>
+      <data key="d8">The author uses N8N for workflow automation and building monitors.</data>
+      <data key="d9">automation,tool usage</data>
+      <data key="d10">chunk-f4f7f600f2ca98f707b1999fc4b9f540</data>
+      <data key="d11">unknown_source</data>
+      <data key="d12">1773426958</data>
+      <data key="d13" />
+    </edge>
+    <edge source="麻省理工长毛兔" target="Cursor">
+      <data key="d7">1.0</data>
+      <data key="d8">The author migrated to Cursor during the cognitive upgrade phase.</data>
+      <data key="d9">migration,tool usage</data>
+      <data key="d10">chunk-f4f7f600f2ca98f707b1999fc4b9f540</data>
+      <data key="d11">unknown_source</data>
+      <data key="d12">1773426960</data>
+      <data key="d13" />
+    </edge>
+    <edge source="麻省理工长毛兔" target="12 Months 12 Products">
+      <data key="d7">1.0</data>
+      <data key="d8">The author started the 12 Months 12 Products challenge in September.</data>
+      <data key="d9">challenge participation,goal setting</data>
+      <data key="d10">chunk-f4f7f600f2ca98f707b1999fc4b9f540</data>
+      <data key="d11">unknown_source</data>
+      <data key="d12">1773426963</data>
+      <data key="d13" />
+    </edge>
+    <edge source="麻省理工长毛兔" target="Goal Tracker">
+      <data key="d7">1.0</data>
+      <data key="d8">The author created the Goal Tracker as the first product in the challenge.</data>
+      <data key="d9">first project,product creation</data>
+      <data key="d10">chunk-f4f7f600f2ca98f707b1999fc4b9f540</data>
+      <data key="d11">unknown_source</data>
+      <data key="d12">1773426965</data>
+      <data key="d13" />
+    </edge>
+    <edge source="麻省理工长毛兔" target="Brand Sentiment Monitor">
+      <data key="d7">1.0</data>
+      <data key="d8">The author built the Brand Sentiment Monitor using N8N.</data>
+      <data key="d9">monitoring,product creation</data>
+      <data key="d10">chunk-f4f7f600f2ca98f707b1999fc4b9f540</data>
+      <data key="d11">unknown_source</data>
+      <data key="d12">1773426968</data>
+      <data key="d13" />
+    </edge>
+    <edge source="麻省理工长毛兔" target="VC Email Pre-Screen AI Agent">
+      <data key="d7">1.0</data>
+      <data key="d8">The author created the VC Email Pre-Screen AI Agent during the challenge.</data>
+      <data key="d9">AI application,product creation</data>
+      <data key="d10">chunk-f4f7f600f2ca98f707b1999fc4b9f540</data>
+      <data key="d11">unknown_source</data>
+      <data key="d12">1773426971</data>
+      <data key="d13" />
+    </edge>
+    <edge source="麻省理工长毛兔" target="Holiday Card Generator">
+      <data key="d7">1.0</data>
+      <data key="d8">The author released the Holiday Card Generator which gained over 2300 users.</data>
+      <data key="d9">product creation,user growth</data>
+      <data key="d10">chunk-f4f7f600f2ca98f707b1999fc4b9f540</data>
+      <data key="d11">unknown_source</data>
+      <data key="d12">1773426973</data>
+      <data key="d13" />
+    </edge>
+    <edge source="麻省理工长毛兔" target="3D Interaction Graph">
+      <data key="d7">1.0</data>
+      <data key="d8">The author created a 3D interaction graph as an advanced AI Agent application.</data>
+      <data key="d9">advanced application,product creation</data>
+      <data key="d10">chunk-f4f7f600f2ca98f707b1999fc4b9f540</data>
+      <data key="d11">unknown_source</data>
+      <data key="d12">1773426976</data>
+      <data key="d13" />
+    </edge>
+    <edge source="麻省理工长毛兔" target="吴文达">
+      <data key="d7">1.0</data>
+      <data key="d8">Professor Wu Wenda's speech inspired the author to take action.</data>
+      <data key="d9">inspiration,motivation</data>
+      <data key="d10">chunk-f4f7f600f2ca98f707b1999fc4b9f540</data>
+      <data key="d11">unknown_source</data>
+      <data key="d12">1773426979</data>
+      <data key="d13" />
+    </edge>
+    <edge source="麻省理工长毛兔" target="Object Party">
+      <data key="d7">1.0</data>
+      <data key="d8">The author adopted the White Co concept proposed by Object Party.</data>
+      <data key="d9">concept adoption,learning</data>
+      <data key="d10">chunk-f4f7f600f2ca98f707b1999fc4b9f540</data>
+      <data key="d11">unknown_source</data>
+      <data key="d12">1773426982</data>
+      <data key="d13" />
+    </edge>
+    <edge source="麻省理工长毛兔" target="Base44">
+      <data key="d7">1.0</data>
+      <data key="d8">The author studied Base44 case studies for industry insights.</data>
+      <data key="d9">case study,learning resource</data>
+      <data key="d10">chunk-f4f7f600f2ca98f707b1999fc4b9f540</data>
+      <data key="d11">unknown_source</data>
+      <data key="d12">1773426985</data>
+      <data key="d13" />
+    </edge>
+    <edge source="麻省理工长毛兔" target="Mary Maker">
+      <data key="d7">1.0</data>
+      <data key="d8">The author studied Mary Maker's reports for industry insights.</data>
+      <data key="d9">learning resource,report</data>
+      <data key="d10">chunk-f4f7f600f2ca98f707b1999fc4b9f540</data>
+      <data key="d11">unknown_source</data>
+      <data key="d12">1773426988</data>
+      <data key="d13" />
+    </edge>
+    <edge source="麻省理工长毛兔" target="MVP">
+      <data key="d7">1.0</data>
+      <data key="d8">The author recommends building an MVP tool to solve pain points.</data>
+      <data key="d9">methodology,recommendation</data>
+      <data key="d10">chunk-f4f7f600f2ca98f707b1999fc4b9f540</data>
+      <data key="d11">unknown_source</data>
+      <data key="d12">1773426990</data>
+      <data key="d13" />
+    </edge>
+    <edge source="No-Code" target="Mindset">
+      <data key="d7">1.0</data>
+      <data key="d8">No-code practice changes the mindset enabling instant implementation of ideas.</data>
+      <data key="d9">empowerment,思维change</data>
+      <data key="d10">chunk-f4f7f600f2ca98f707b1999fc4b9f540</data>
+      <data key="d11">unknown_source</data>
+      <data key="d12">1773426976</data>
+      <data key="d13" />
+    </edge>
+    <edge source="AI Agent" target="RAG">
+      <data key="d7">1.0</data>
+      <data key="d8">RAG is used with Agent for code review and network analysis.</data>
+      <data key="d9">code review,technology integration</data>
+      <data key="d10">chunk-f4f7f600f2ca98f707b1999fc4b9f540</data>
+      <data key="d11">unknown_source</data>
+      <data key="d12">1773426976</data>
+      <data key="d13" />
+    </edge>
+    <edge source="Lovable" target="Cloud Code">
+      <data key="d7">1.0</data>
+      <data key="d8">Lovable and Cloud Code are recommended together for prototyping and logic extension.</data>
+      <data key="d9">complementarity,tech stack</data>
+      <data key="d10">chunk-f4f7f600f2ca98f707b1999fc4b9f540</data>
+      <data key="d11">unknown_source</data>
+      <data key="d12">1773426973</data>
+      <data key="d13" />
+    </edge>
+    <edge source="OpenAI" target="Large Model API">
+      <data key="d7">1.0</data>
+      <data key="d8">OpenAI is cited as an example of a Large Model API provider.</data>
+      <data key="d9">example,provider</data>
+      <data key="d10">chunk-f4f7f600f2ca98f707b1999fc4b9f540</data>
+      <data key="d11">unknown_source</data>
+      <data key="d12">1773426979</data>
+      <data key="d13" />
+    </edge>
+    <edge source="TypeScript" target="ToB">
+      <data key="d7">1.0</data>
+      <data key="d8">TypeScript was introduced for the ToB direction in the third stage.</data>
+      <data key="d9">direction,technology adoption</data>
+      <data key="d10">chunk-f4f7f600f2ca98f707b1999fc4b9f540</data>
+      <data key="d11">unknown_source</data>
+      <data key="d12">1773426979</data>
+      <data key="d13" />
+    </edge>
+    <edge source="7833 - Thinking Outside The Rack- Scaling Up With Optical Interconnects" target="Optical Interconnects">
+      <data key="d7">1.0</data>
+      <data key="d8">The report discusses scaling up with optical interconnects.</data>
+      <data key="d9">analysis,subject matter</data>
+      <data key="d10">chunk-13553145d3f41af0c13bdd91235f3ff3</data>
+      <data key="d11">unknown_source</data>
+      <data key="d12">1773427279</data>
+      <data key="d13" />
+    </edge>
+    <edge source="Optical Interconnects" target="Data Centers">
+      <data key="d7">1.0</data>
+      <data key="d8">Optical interconnects provide a feasible path for constructing ultra-large scale data centers.</data>
+      <data key="d9">application scenario,scalability</data>
+      <data key="d10">chunk-13553145d3f41af0c13bdd91235f3ff3</data>
+      <data key="d11">unknown_source</data>
+      <data key="d12">1773427254</data>
+      <data key="d13" />
+    </edge>
+    <edge source="Optical Interconnects" target="Electrical Interconnects">
+      <data key="d7">1.0</data>
+      <data key="d8">Optical interconnects overcome bottlenecks faced by traditional electrical interconnects.</data>
+      <data key="d9">performance comparison,technological replacement</data>
+      <data key="d10">chunk-13553145d3f41af0c13bdd91235f3ff3</data>
+      <data key="d11">unknown_source</data>
+      <data key="d12">1773427257</data>
+      <data key="d13" />
+    </edge>
+    <edge source="Optical Interconnects" target="Silicon Photonics">
+      <data key="d7">1.0</data>
+      <data key="d8">Silicon photonics is introduced to implement optical interconnects.</data>
+      <data key="d9">implementation technology,integration</data>
+      <data key="d10">chunk-13553145d3f41af0c13bdd91235f3ff3</data>
+      <data key="d11">unknown_source</data>
+      <data key="d12">1773427259</data>
+      <data key="d13" />
+    </edge>
+    <edge source="Optical Interconnects" target="Large Model Training">
+      <data key="d7">1.0</data>
+      <data key="d8">Optical interconnects meet the extreme interconnect bandwidth needs of large model training.</data>
+      <data key="d9">demand driver,support</data>
+      <data key="d10">chunk-13553145d3f41af0c13bdd91235f3ff3</data>
+      <data key="d11">unknown_source</data>
+      <data key="d12">1773427268</data>
+      <data key="d13" />
+    </edge>
+    <edge source="Optical Interconnects" target="Bandwidth">
+      <data key="d7">1.0</data>
+      <data key="d8">Optical interconnects offer high bandwidth advantages.</data>
+      <data key="d9">high capacity,performance advantage</data>
+      <data key="d10">chunk-13553145d3f41af0c13bdd91235f3ff3</data>
+      <data key="d11">unknown_source</data>
+      <data key="d12">1773427271</data>
+      <data key="d13" />
+    </edge>
+    <edge source="Optical Interconnects" target="Power Consumption">
+      <data key="d7">1.0</data>
+      <data key="d8">Optical interconnects reduce energy consumption.</data>
+      <data key="d9">energy efficiency,performance advantage</data>
+      <data key="d10">chunk-13553145d3f41af0c13bdd91235f3ff3</data>
+      <data key="d11">unknown_source</data>
+      <data key="d12">1773427275</data>
+      <data key="d13" />
+    </edge>
+    <edge source="Optical Interconnects" target="Optical Engine">
+      <data key="d7">1.0</data>
+      <data key="d8">Optical engines are part of the optical interconnect solution.</data>
+      <data key="d9">component composition,system architecture</data>
+      <data key="d10">chunk-13553145d3f41af0c13bdd91235f3ff3</data>
+      <data key="d11">unknown_source</data>
+      <data key="d12">1773427277</data>
+      <data key="d13" />
+    </edge>
+    <edge source="Optical Interconnects" target="Storage">
+      <data key="d7">1.0</data>
+      <data key="d8">Architecture allows storage to be decoupled from compute and memory.</data>
+      <data key="d9">architectural decoupling,resource management</data>
+      <data key="d10">chunk-13553145d3f41af0c13bdd91235f3ff3</data>
+      <data key="d11">unknown_source</data>
+      <data key="d12">1773427282</data>
+      <data key="d13" />
+    </edge>
+    <edge source="Optical Interconnects" target="Memory">
+      <data key="d7">1.0</data>
+      <data key="d8">Architecture allows memory to be decoupled from compute and storage.</data>
+      <data key="d9">architectural decoupling,resource management</data>
+      <data key="d10">chunk-13553145d3f41af0c13bdd91235f3ff3</data>
+      <data key="d11">unknown_source</data>
+      <data key="d12">1773427285</data>
+      <data key="d13" />
+    </edge>
+    <edge source="Optical Interconnects" target="Compute Unit">
+      <data key="d7">1.0</data>
+      <data key="d8">Architecture allows compute units to be decoupled from storage and memory.</data>
+      <data key="d9">architectural decoupling,resource management</data>
+      <data key="d10">chunk-13553145d3f41af0c13bdd91235f3ff3</data>
+      <data key="d11">unknown_source</data>
+      <data key="d12">1773427287</data>
+      <data key="d13" />
+    </edge>
+    <edge source="Optical Interconnects" target="Resource Pooling">
+      <data key="d7">1.0</data>
+      <data key="d8">Optical interconnect architecture supports resource pooling to improve utilization.</data>
+      <data key="d9">architectural support,efficiency</data>
+      <data key="d10">chunk-13553145d3f41af0c13bdd91235f3ff3</data>
+      <data key="d11">unknown_source</data>
+      <data key="d12">1773427290</data>
+      <data key="d13" />
+    </edge>
+    <edge source="Optical Interconnects" target="Signal Attenuation">
+      <data key="d7">1.0</data>
+      <data key="d8">Optical interconnects effectively reduce signal attenuation.</data>
+      <data key="d9">performance improvement,reduction</data>
+      <data key="d10">chunk-13553145d3f41af0c13bdd91235f3ff3</data>
+      <data key="d11">unknown_source</data>
+      <data key="d12">1773427293</data>
+      <data key="d13" />
+    </edge>
+    <edge source="Optical Interconnects" target="Standardized Interfaces">
+      <data key="d7">1.0</data>
+      <data key="d8">Future evolution of optical interconnects focuses on standardized interfaces.</data>
+      <data key="d9">deployment,future evolution</data>
+      <data key="d10">chunk-13553145d3f41af0c13bdd91235f3ff3</data>
+      <data key="d11">unknown_source</data>
+      <data key="d12">1773427295</data>
+      <data key="d13" />
+    </edge>
+    <edge source="Optical Interconnects" target="Cost Optimization">
+      <data key="d7">1.0</data>
+      <data key="d8">Future evolution of optical interconnects focuses on cost optimization.</data>
+      <data key="d9">deployment,future evolution</data>
+      <data key="d10">chunk-13553145d3f41af0c13bdd91235f3ff3</data>
+      <data key="d11">unknown_source</data>
+      <data key="d12">1773427298</data>
+      <data key="d13" />
+    </edge>
+    <edge source="Optical Interconnects" target="Thinking Outside The Rack Scaling Up With Optical Interconnects">
+      <data key="d7">1.0</data>
+      <data key="d8">The document discusses the concept of optical interconnects.</data>
+      <data key="d9">subject matter,technology focus</data>
+      <data key="d10">chunk-de484dab9dc735b91436af3e79491149</data>
+      <data key="d11">unknown_source</data>
+      <data key="d12">1773427855</data>
+      <data key="d13" />
+    </edge>
+    <edge source="Optical Engine" target="Compute Unit">
+      <data key="d7">1.0</data>
+      <data key="d8">Optical engines are placed near compute units to reduce electrical transmission distance.</data>
+      <data key="d9">efficiency optimization,physical placement</data>
+      <data key="d10">chunk-13553145d3f41af0c13bdd91235f3ff3</data>
+      <data key="d11">unknown_source</data>
+      <data key="d12">1773427257</data>
+      <data key="d13" />
+    </edge>
+    <edge source="ReThinker Framework" target="Scientific Reasoning">
+      <data key="d7">1.0</data>
+      <data key="d8">The ReThinker Framework is designed to improve performance in Scientific Reasoning tasks.</data>
+      <data key="d9">application,enhancement</data>
+      <data key="d10">chunk-784d4585ebe0819ccbc35184946098ac</data>
+      <data key="d11">unknown_source</data>
+      <data key="d12">1773427510</data>
+      <data key="d13" />
+    </edge>
+    <edge source="ReThinker Framework" target="Guided Reflection">
+      <data key="d7">1.0</data>
+      <data key="d8">The ReThinker Framework incorporates Guided Reflection as a core mechanism.</data>
+      <data key="d9">composition,mechanism</data>
+      <data key="d10">chunk-784d4585ebe0819ccbc35184946098ac</data>
+      <data key="d11">unknown_source</data>
+      <data key="d12">1773427513</data>
+      <data key="d13" />
+    </edge>
+    <edge source="ReThinker Framework" target="Confidence Control">
+      <data key="d7">1.0</data>
+      <data key="d8">The ReThinker Framework incorporates Confidence Control to quantify uncertainty.</data>
+      <data key="d9">composition,mechanism</data>
+      <data key="d10">chunk-784d4585ebe0819ccbc35184946098ac</data>
+      <data key="d11">unknown_source</data>
+      <data key="d12">1773427516</data>
+      <data key="d13" />
+    </edge>
+    <edge source="ReThinker Framework" target="AI Model">
+      <data key="d7">1.0</data>
+      <data key="d8">The AI Model utilizes the ReThinker Framework to enable rethinking capabilities.</data>
+      <data key="d9">implementation,usage</data>
+      <data key="d10">chunk-784d4585ebe0819ccbc35184946098ac</data>
+      <data key="d11">unknown_source</data>
+      <data key="d12">1773427519</data>
+      <data key="d13" />
+    </edge>
+    <edge source="ReThinker Framework" target="ReThinker Scientific Reasoning Report">
+      <data key="d7">1.0</data>
+      <data key="d8">The report documents and describes the details of the ReThinker Framework.</data>
+      <data key="d9">description,documentation</data>
+      <data key="d10">chunk-784d4585ebe0819ccbc35184946098ac</data>
+      <data key="d11">unknown_source</data>
+      <data key="d12">1773427521</data>
+      <data key="d13" />
+    </edge>
+    <edge source="ReThinker Framework" target="Scientific Q&amp;A Scenarios">
+      <data key="d7">1.0</data>
+      <data key="d8">The framework is applicable to Scientific Q&amp;A Scenarios requiring high precision.</data>
+      <data key="d9">application,suitability</data>
+      <data key="d10">chunk-784d4585ebe0819ccbc35184946098ac</data>
+      <data key="d11">unknown_source</data>
+      <data key="d12">1773427524</data>
+      <data key="d13" />
+    </edge>
+    <edge source="ReThinker Framework" target="Hallucination">
+      <data key="d7">1.0</data>
+      <data key="d8">The framework effectively suppresses Hallucination and logical errors.</data>
+      <data key="d9">mitigation,suppression</data>
+      <data key="d10">chunk-784d4585ebe0819ccbc35184946098ac</data>
+      <data key="d11">unknown_source</data>
+      <data key="d12">1773427527</data>
+      <data key="d13" />
+    </edge>
+    <edge source="ReThinker Framework" target="Automatic Reasoning Systems">
+      <data key="d7">1.0</data>
+      <data key="d8">The ReThinker Framework pushes Automatic Reasoning Systems towards higher credibility.</data>
+      <data key="d9">advancement,development</data>
+      <data key="d10">chunk-784d4585ebe0819ccbc35184946098ac</data>
+      <data key="d11">unknown_source</data>
+      <data key="d12">1773427530</data>
+      <data key="d13" />
+    </edge>
+    <edge source="ReThinker Framework" target="Iterative Optimization">
+      <data key="d7">1.0</data>
+      <data key="d8">The ReThinker Framework enables a transition from single generation to Iterative Optimization.</data>
+      <data key="d9">enablement,process shift</data>
+      <data key="d10">chunk-784d4585ebe0819ccbc35184946098ac</data>
+      <data key="d11">unknown_source</data>
+      <data key="d12">1773427533</data>
+      <data key="d13" />
+    </edge>
+    <edge source="ReThinker Framework" target="Self-Correction">
+      <data key="d7">1.0</data>
+      <data key="d8">The ReThinker Framework emphasizes the role of Self-Correction in scientific applications.</data>
+      <data key="d9">emphasis,utilization</data>
+      <data key="d10">chunk-784d4585ebe0819ccbc35184946098ac</data>
+      <data key="d11">unknown_source</data>
+      <data key="d12">1773427536</data>
+      <data key="d13" />
+    </edge>
+    <edge source="ReThinker Framework" target="Uncertainty Quantification">
+      <data key="d7">1.0</data>
+      <data key="d8">The ReThinker Framework emphasizes the role of Uncertainty Quantification in scientific applications.</data>
+      <data key="d9">emphasis,utilization</data>
+      <data key="d10">chunk-784d4585ebe0819ccbc35184946098ac</data>
+      <data key="d11">unknown_source</data>
+      <data key="d12">1773427538</data>
+      <data key="d13" />
+    </edge>
+    <edge source="ReThinker Framework" target="Logical Errors">
+      <data key="d7">1.0</data>
+      <data key="d8">The ReThinker Framework effectively suppresses Logical Errors.</data>
+      <data key="d9">mitigation,suppression</data>
+      <data key="d10">chunk-784d4585ebe0819ccbc35184946098ac</data>
+      <data key="d11">unknown_source</data>
+      <data key="d12">1773427541</data>
+      <data key="d13" />
+    </edge>
+    <edge source="ReThinker Framework" target="Robustness">
+      <data key="d7">1.0</data>
+      <data key="d8">The ReThinker Framework significantly enhances Robustness in multi-step derivation.</data>
+      <data key="d9">enhancement,improvement</data>
+      <data key="d10">chunk-784d4585ebe0819ccbc35184946098ac</data>
+      <data key="d11">unknown_source</data>
+      <data key="d12">1773427544</data>
+      <data key="d13" />
+    </edge>
+    <edge source="ReThinker Framework" target="Accuracy">
+      <data key="d7">1.0</data>
+      <data key="d8">The ReThinker Framework significantly enhances Accuracy in multi-step derivation.</data>
+      <data key="d9">enhancement,improvement</data>
+      <data key="d10">chunk-784d4585ebe0819ccbc35184946098ac</data>
+      <data key="d11">unknown_source</data>
+      <data key="d12">1773427546</data>
+      <data key="d13" />
+    </edge>
+    <edge source="ReThinker Framework" target="Large Models">
+      <data key="d7">1.0</data>
+      <data key="d8">Large Models benefit from the ReThinker Framework for improved reasoning reliability.</data>
+      <data key="d9">application,benefit</data>
+      <data key="d10">chunk-784d4585ebe0819ccbc35184946098ac</data>
+      <data key="d11">unknown_source</data>
+      <data key="d12">1773427550</data>
+      <data key="d13" />
+    </edge>
+    <edge source="Thinking Outside The Rack Scaling Up With Optical Interconnects" target="1.45 MB">
+      <data key="d7">1.0</data>
+      <data key="d8">The document has a file size of 1.45 MB.</data>
+      <data key="d9">attribute,file size</data>
+      <data key="d10">chunk-de484dab9dc735b91436af3e79491149</data>
+      <data key="d11">unknown_source</data>
+      <data key="d12">1773427860</data>
+      <data key="d13" />
+    </edge>
+    <edge source="Thinking Outside The Rack Scaling Up With Optical Interconnects" target="Personal">
+      <data key="d7">1.0</data>
+      <data key="d8">The document is categorized under Personal.</data>
+      <data key="d9">category,classification</data>
+      <data key="d10">chunk-de484dab9dc735b91436af3e79491149</data>
+      <data key="d11">unknown_source</data>
+      <data key="d12">1773427862</data>
+      <data key="d13" />
+    </edge>
+    <edge source="ISSCC 2026" target="ISSCC 2026 Wearable And Wireless Biomedical Systems Collection">
+      <data key="d7">1.0</data>
+      <data key="d8">The collection originates from the ISSCC 2026 event.</data>
+      <data key="d9">conference origin,content source</data>
+      <data key="d10">chunk-e4a307af220b383886bf52906f7d65bf</data>
+      <data key="d11">unknown_source</data>
+      <data key="d12">1773428185</data>
+      <data key="d13" />
+    </edge>
+    <edge source="ISSCC 2026 Wearable And Wireless Biomedical Systems Collection" target="Wearable And Wireless Biomedical Systems">
+      <data key="d7">1.0</data>
+      <data key="d8">The collection covers the topic of wearable and wireless biomedical systems.</data>
+      <data key="d9">subject matter,topic coverage</data>
+      <data key="d10">chunk-e4a307af220b383886bf52906f7d65bf</data>
+      <data key="d11">unknown_source</data>
+      <data key="d12">1773428188</data>
+      <data key="d13" />
+    </edge>
+    <edge source="ISSCC 2026 Wearable And Wireless Biomedical Systems Collection" target="Frontier-Tech">
+      <data key="d7">1.0</data>
+      <data key="d8">The document is categorized under Frontier-Tech.</data>
+      <data key="d9">category,classification</data>
+      <data key="d10">chunk-e4a307af220b383886bf52906f7d65bf</data>
+      <data key="d11">unknown_source</data>
+      <data key="d12">1773428193</data>
+      <data key="d13" />
+    </edge>
+    <edge source="ISSCC 2026 Wearable And Wireless Biomedical Systems Collection" target="PPT">
+      <data key="d7">1.0</data>
+      <data key="d8">The document collection consists of 202 pages of PPT content wrapped in PDF.</data>
+      <data key="d9">composition,content format</data>
+      <data key="d10">chunk-e4a307af220b383886bf52906f7d65bf</data>
+      <data key="d11">unknown_source</data>
+      <data key="d12">1773428203</data>
+      <data key="d13" />
+    </edge>
+    <edge source="ISSCC 2026 Wearable And Wireless Biomedical Systems Collection" target="44.39 MB">
+      <data key="d7">1.0</data>
+      <data key="d8">The document collection has a specific file size of 44.39 MB.</data>
+      <data key="d9">file attribute,size</data>
+      <data key="d10">chunk-e4a307af220b383886bf52906f7d65bf</data>
+      <data key="d11">unknown_source</data>
+      <data key="d12">1773428206</data>
       <data key="d13" />
     </edge>
   </graph>

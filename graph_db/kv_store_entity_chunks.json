@@ -150,10 +150,12 @@
       "chunk-e27f03ec1e126815641b4755ece051c6",
       "chunk-968fbcf059982c556b4bcc6944efa36b",
       "chunk-f3b581e41172762e088bcf3b7f03c6a4",
-      "chunk-df273047e67bbcef8888ccc637f02f26"
+      "chunk-df273047e67bbcef8888ccc637f02f26",
+      "chunk-caffd63ee8599ae7be43759f1b96b861",
+      "chunk-de484dab9dc735b91436af3e79491149"
     ],
-    "count": 46,
-    "update_time": 1773341691,
+    "count": 48,
+    "update_time": 1773427791,
     "_id": "2026-03-07"
   },
   "PDF Format": {
@@ -270,10 +272,11 @@
       "chunk-bac65798eb982eaec66217171974d32c",
       "chunk-1b7fcd9c795c3ffe5951ea1b509567b7",
       "chunk-ec101ba502a70816a33b6a1e26f6054f",
-      "chunk-df273047e67bbcef8888ccc637f02f26"
+      "chunk-df273047e67bbcef8888ccc637f02f26",
+      "chunk-caffd63ee8599ae7be43759f1b96b861"
     ],
-    "count": 54,
-    "update_time": 1773341690,
+    "count": 55,
+    "update_time": 1773426822,
     "_id": "Server Architecture"
   },
   "Trust": {
@@ -356,10 +359,11 @@
       "chunk-62991649d9ddbddbdd87eed4b8473959",
       "chunk-1b7fcd9c795c3ffe5951ea1b509567b7",
       "chunk-ec101ba502a70816a33b6a1e26f6054f",
-      "chunk-df273047e67bbcef8888ccc637f02f26"
+      "chunk-df273047e67bbcef8888ccc637f02f26",
+      "chunk-caffd63ee8599ae7be43759f1b96b861"
     ],
-    "count": 21,
-    "update_time": 1773341690,
+    "count": 22,
+    "update_time": 1773426822,
     "_id": "Research Report Library"
   },
   "ZhiweiVault": {
@@ -418,11 +422,14 @@
   },
   "Obsidian": {
     "chunk_ids": [
-      "chunk-400a555f5d5834d5ffa5771be077ebcd"
+      "chunk-400a555f5d5834d5ffa5771be077ebcd",
+      "chunk-13553145d3f41af0c13bdd91235f3ff3",
+      "chunk-784d4585ebe0819ccbc35184946098ac",
+      "chunk-de484dab9dc735b91436af3e79491149",
+      "chunk-e4a307af220b383886bf52906f7d65bf"
     ],
-    "count": 1,
-    "create_time": 1773167452,
-    "update_time": 1773167452,
+    "count": 5,
+    "update_time": 1773428115,
     "_id": "Obsidian"
   },
   "Integration Test": {
@@ -481,11 +488,11 @@
   },
   "Advanced Packaging": {
     "chunk_ids": [
-      "chunk-546dfa6e8a446972d5dc6ae34a64ce0a"
+      "chunk-546dfa6e8a446972d5dc6ae34a64ce0a",
+      "chunk-13553145d3f41af0c13bdd91235f3ff3"
     ],
-    "count": 1,
-    "create_time": 1773167462,
-    "update_time": 1773167462,
+    "count": 2,
+    "update_time": 1773427245,
     "_id": "Advanced Packaging"
   },
   "CoWoS": {
@@ -618,10 +625,14 @@
       "chunk-bac65798eb982eaec66217171974d32c",
       "chunk-1b7fcd9c795c3ffe5951ea1b509567b7",
       "chunk-ec101ba502a70816a33b6a1e26f6054f",
-      "chunk-df273047e67bbcef8888ccc637f02f26"
+      "chunk-df273047e67bbcef8888ccc637f02f26",
+      "chunk-caffd63ee8599ae7be43759f1b96b861",
+      "chunk-13553145d3f41af0c13bdd91235f3ff3",
+      "chunk-de484dab9dc735b91436af3e79491149",
+      "chunk-e4a307af220b383886bf52906f7d65bf"
     ],
-    "count": 57,
-    "update_time": 1773341690,
+    "count": 61,
+    "update_time": 1773428115,
     "_id": "PDF"
   },
   "Core Report": {
@@ -733,10 +744,12 @@
       "chunk-1b7fcd9c795c3ffe5951ea1b509567b7",
       "chunk-b794cfeb2829ca445d838fe2fb1cd165",
       "chunk-ec101ba502a70816a33b6a1e26f6054f",
-      "chunk-df273047e67bbcef8888ccc637f02f26"
+      "chunk-df273047e67bbcef8888ccc637f02f26",
+      "chunk-de484dab9dc735b91436af3e79491149",
+      "chunk-e4a307af220b383886bf52906f7d65bf"
     ],
-    "count": 56,
-    "update_time": 1773341690,
+    "count": 58,
+    "update_time": 1773428116,
     "_id": "Liufang"
   },
   "File Path": {
@@ -846,10 +859,11 @@
       "chunk-17e8fab522b31c893a3a7ef21633d42a",
       "chunk-ef5a1dc3d7c28f0190c5185e1c92732b",
       "chunk-f023cd84d3e2ed9cf707d62efd5ddbb9",
-      "chunk-3bef51647317cfab8fd98c2182da0b1c"
+      "chunk-3bef51647317cfab8fd98c2182da0b1c",
+      "chunk-caffd63ee8599ae7be43759f1b96b861"
     ],
-    "count": 4,
-    "update_time": 1773254510,
+    "count": 5,
+    "update_time": 1773426822,
     "_id": "CXL"
   },
   "Datacenter Memory Fabric": {
@@ -889,10 +903,11 @@
       "chunk-c7fd39ddee62a6682cc2d3e58c3b66ed",
       "chunk-33d6bc980e862376c11685a00bf22ca3",
       "chunk-968fbcf059982c556b4bcc6944efa36b",
-      "chunk-230764380b33557b5524bd06ee945029"
+      "chunk-230764380b33557b5524bd06ee945029",
+      "chunk-de484dab9dc735b91436af3e79491149"
     ],
-    "count": 27,
-    "update_time": 1773340409,
+    "count": 28,
+    "update_time": 1773427789,
     "_id": "Report"
   },
   "7819 - Advancing PLDM- Structured Sensors Scalable Modeling and the Server Host SoC PLDM Specification_v2": {
@@ -1297,10 +1312,12 @@
       "chunk-266b57d952795e78de135dd7ea0d1822",
       "chunk-968fbcf059982c556b4bcc6944efa36b",
       "chunk-bac65798eb982eaec66217171974d32c",
-      "chunk-1b7fcd9c795c3ffe5951ea1b509567b7"
+      "chunk-1b7fcd9c795c3ffe5951ea1b509567b7",
+      "chunk-caffd63ee8599ae7be43759f1b96b861",
+      "chunk-e4a307af220b383886bf52906f7d65bf"
     ],
-    "count": 7,
-    "update_time": 1773341118,
+    "count": 9,
+    "update_time": 1773428116,
     "_id": "AI Deep Summary"
   },
   "7446 - Large CXL Memory Expansion Systems and Workloads_v2_v2": {
@@ -1517,11 +1534,11 @@
   },
   "Artificial Intelligence": {
     "chunk_ids": [
-      "chunk-e24b7488a587cd1f8bf6573d12f1c75a"
+      "chunk-e24b7488a587cd1f8bf6573d12f1c75a",
+      "chunk-13553145d3f41af0c13bdd91235f3ff3"
     ],
-    "count": 1,
-    "create_time": 1773167749,
-    "update_time": 1773167749,
+    "count": 2,
+    "update_time": 1773427245,
     "_id": "Artificial Intelligence"
   },
   "7430 - Smashing Memory I-O Limits- Architectures for the GenAI Era_v2_v2": {
@@ -2741,10 +2758,11 @@
       "chunk-e27f03ec1e126815641b4755ece051c6",
       "chunk-968fbcf059982c556b4bcc6944efa36b",
       "chunk-bac65798eb982eaec66217171974d32c",
-      "chunk-df273047e67bbcef8888ccc637f02f26"
+      "chunk-df273047e67bbcef8888ccc637f02f26",
+      "chunk-caffd63ee8599ae7be43759f1b96b861"
     ],
-    "count": 6,
-    "update_time": 1773341692,
+    "count": 7,
+    "update_time": 1773426825,
     "_id": "Vectorized"
   },
   "APEC Advanced PCIe Enclosure": {
@@ -3405,10 +3423,11 @@
       "chunk-968fbcf059982c556b4bcc6944efa36b",
       "chunk-635a8270f90d4ad369e34ef96c6f284f",
       "chunk-230764380b33557b5524bd06ee945029",
-      "chunk-df273047e67bbcef8888ccc637f02f26"
+      "chunk-df273047e67bbcef8888ccc637f02f26",
+      "chunk-caffd63ee8599ae7be43759f1b96b861"
     ],
-    "count": 7,
-    "update_time": 1773341692,
+    "count": 8,
+    "update_time": 1773426825,
     "_id": "Core"
   },
   "Large CXL Memory Expansion Systems and Workloads": {
@@ -3432,10 +3451,11 @@
   "Local File Path": {
     "chunk_ids": [
       "chunk-33d6bc980e862376c11685a00bf22ca3",
-      "chunk-bac65798eb982eaec66217171974d32c"
+      "chunk-bac65798eb982eaec66217171974d32c",
+      "chunk-caffd63ee8599ae7be43759f1b96b861"
     ],
-    "count": 2,
-    "update_time": 1773340896,
+    "count": 3,
+    "update_time": 1773426827,
     "_id": "Local File Path"
   },
   "Vectorized Status": {
@@ -3614,11 +3634,11 @@
   },
   "2026-03-07 19:05:19": {
     "chunk_ids": [
-      "chunk-f3b581e41172762e088bcf3b7f03c6a4"
+      "chunk-f3b581e41172762e088bcf3b7f03c6a4",
+      "chunk-caffd63ee8599ae7be43759f1b96b861"
     ],
-    "count": 1,
-    "create_time": 1773255012,
-    "update_time": 1773255012,
+    "count": 2,
+    "update_time": 1773426825,
     "_id": "2026-03-07 19:05:19"
   },
   "20250807 CXLT 301 1 Kim 07 27 01.00.16 Copy": {
@@ -3717,10 +3737,11 @@
       "chunk-bac65798eb982eaec66217171974d32c",
       "chunk-1b7fcd9c795c3ffe5951ea1b509567b7",
       "chunk-b794cfeb2829ca445d838fe2fb1cd165",
-      "chunk-ec101ba502a70816a33b6a1e26f6054f"
+      "chunk-ec101ba502a70816a33b6a1e26f6054f",
+      "chunk-e4a307af220b383886bf52906f7d65bf"
     ],
-    "count": 5,
-    "update_time": 1773341507,
+    "count": 6,
+    "update_time": 1773428121,
     "_id": "2026-03-11"
   },
   "Local Document Library": {
@@ -4037,5 +4058,725 @@
     "create_time": 1773341692,
     "update_time": 1773341692,
     "_id": "File Uri"
+  },
+  "Evaluating CXL Based Composable Memory Solutions A TCO Framework For Datacenter Workloads": {
+    "chunk_ids": [
+      "chunk-caffd63ee8599ae7be43759f1b96b861"
+    ],
+    "count": 1,
+    "create_time": 1773426822,
+    "update_time": 1773426822,
+    "_id": "Evaluating CXL Based Composable Memory Solutions A TCO Framework For Datacenter Workloads"
+  },
+  "Composable Memory Solutions": {
+    "chunk_ids": [
+      "chunk-caffd63ee8599ae7be43759f1b96b861"
+    ],
+    "count": 1,
+    "create_time": 1773426822,
+    "update_time": 1773426822,
+    "_id": "Composable Memory Solutions"
+  },
+  "TCO Framework": {
+    "chunk_ids": [
+      "chunk-caffd63ee8599ae7be43759f1b96b861"
+    ],
+    "count": 1,
+    "create_time": 1773426822,
+    "update_time": 1773426822,
+    "_id": "TCO Framework"
+  },
+  "Datacenter Workloads": {
+    "chunk_ids": [
+      "chunk-caffd63ee8599ae7be43759f1b96b861"
+    ],
+    "count": 1,
+    "create_time": 1773426822,
+    "update_time": 1773426822,
+    "_id": "Datacenter Workloads"
+  },
+  "Local Document": {
+    "chunk_ids": [
+      "chunk-caffd63ee8599ae7be43759f1b96b861"
+    ],
+    "count": 1,
+    "create_time": 1773426824,
+    "update_time": 1773426824,
+    "_id": "Local Document"
+  },
+  "1.81 MB": {
+    "chunk_ids": [
+      "chunk-caffd63ee8599ae7be43759f1b96b861"
+    ],
+    "count": 1,
+    "create_time": 1773426825,
+    "update_time": 1773426825,
+    "_id": "1.81 MB"
+  },
+  "麻省理工长毛兔": {
+    "chunk_ids": [
+      "chunk-f4f7f600f2ca98f707b1999fc4b9f540"
+    ],
+    "count": 1,
+    "create_time": 1773426933,
+    "update_time": 1773426933,
+    "_id": "麻省理工长毛兔"
+  },
+  "No-Code": {
+    "chunk_ids": [
+      "chunk-f4f7f600f2ca98f707b1999fc4b9f540"
+    ],
+    "count": 1,
+    "create_time": 1773426933,
+    "update_time": 1773426933,
+    "_id": "No-Code"
+  },
+  "Low-Code": {
+    "chunk_ids": [
+      "chunk-f4f7f600f2ca98f707b1999fc4b9f540"
+    ],
+    "count": 1,
+    "create_time": 1773426933,
+    "update_time": 1773426933,
+    "_id": "Low-Code"
+  },
+  "AI Agent": {
+    "chunk_ids": [
+      "chunk-f4f7f600f2ca98f707b1999fc4b9f540"
+    ],
+    "count": 1,
+    "create_time": 1773426933,
+    "update_time": 1773426933,
+    "_id": "AI Agent"
+  },
+  "Lovable": {
+    "chunk_ids": [
+      "chunk-f4f7f600f2ca98f707b1999fc4b9f540"
+    ],
+    "count": 1,
+    "create_time": 1773426933,
+    "update_time": 1773426933,
+    "_id": "Lovable"
+  },
+  "Cloud Code": {
+    "chunk_ids": [
+      "chunk-f4f7f600f2ca98f707b1999fc4b9f540"
+    ],
+    "count": 1,
+    "create_time": 1773426933,
+    "update_time": 1773426933,
+    "_id": "Cloud Code"
+  },
+  "N8N": {
+    "chunk_ids": [
+      "chunk-f4f7f600f2ca98f707b1999fc4b9f540"
+    ],
+    "count": 1,
+    "create_time": 1773426933,
+    "update_time": 1773426933,
+    "_id": "N8N"
+  },
+  "Cursor": {
+    "chunk_ids": [
+      "chunk-f4f7f600f2ca98f707b1999fc4b9f540"
+    ],
+    "count": 1,
+    "create_time": 1773426933,
+    "update_time": 1773426933,
+    "_id": "Cursor"
+  },
+  "Object Party": {
+    "chunk_ids": [
+      "chunk-f4f7f600f2ca98f707b1999fc4b9f540"
+    ],
+    "count": 1,
+    "create_time": 1773426936,
+    "update_time": 1773426936,
+    "_id": "Object Party"
+  },
+  "White Co": {
+    "chunk_ids": [
+      "chunk-f4f7f600f2ca98f707b1999fc4b9f540"
+    ],
+    "count": 1,
+    "create_time": 1773426936,
+    "update_time": 1773426936,
+    "_id": "White Co"
+  },
+  "Base44": {
+    "chunk_ids": [
+      "chunk-f4f7f600f2ca98f707b1999fc4b9f540"
+    ],
+    "count": 1,
+    "create_time": 1773426936,
+    "update_time": 1773426936,
+    "_id": "Base44"
+  },
+  "Mary Maker": {
+    "chunk_ids": [
+      "chunk-f4f7f600f2ca98f707b1999fc4b9f540"
+    ],
+    "count": 1,
+    "create_time": 1773426936,
+    "update_time": 1773426936,
+    "_id": "Mary Maker"
+  },
+  "吴文达": {
+    "chunk_ids": [
+      "chunk-f4f7f600f2ca98f707b1999fc4b9f540"
+    ],
+    "count": 1,
+    "create_time": 1773426936,
+    "update_time": 1773426936,
+    "_id": "吴文达"
+  },
+  "ASAT School": {
+    "chunk_ids": [
+      "chunk-f4f7f600f2ca98f707b1999fc4b9f540"
+    ],
+    "count": 1,
+    "create_time": 1773426936,
+    "update_time": 1773426936,
+    "_id": "ASAT School"
+  },
+  "12 Months 12 Products": {
+    "chunk_ids": [
+      "chunk-f4f7f600f2ca98f707b1999fc4b9f540"
+    ],
+    "count": 1,
+    "create_time": 1773426936,
+    "update_time": 1773426936,
+    "_id": "12 Months 12 Products"
+  },
+  "Goal Tracker": {
+    "chunk_ids": [
+      "chunk-f4f7f600f2ca98f707b1999fc4b9f540"
+    ],
+    "count": 1,
+    "create_time": 1773426937,
+    "update_time": 1773426937,
+    "_id": "Goal Tracker"
+  },
+  "Brand Sentiment Monitor": {
+    "chunk_ids": [
+      "chunk-f4f7f600f2ca98f707b1999fc4b9f540"
+    ],
+    "count": 1,
+    "create_time": 1773426938,
+    "update_time": 1773426938,
+    "_id": "Brand Sentiment Monitor"
+  },
+  "VC Email Pre-Screen AI Agent": {
+    "chunk_ids": [
+      "chunk-f4f7f600f2ca98f707b1999fc4b9f540"
+    ],
+    "count": 1,
+    "create_time": 1773426938,
+    "update_time": 1773426938,
+    "_id": "VC Email Pre-Screen AI Agent"
+  },
+  "Holiday Card Generator": {
+    "chunk_ids": [
+      "chunk-f4f7f600f2ca98f707b1999fc4b9f540"
+    ],
+    "count": 1,
+    "create_time": 1773426939,
+    "update_time": 1773426939,
+    "_id": "Holiday Card Generator"
+  },
+  "OpenAI": {
+    "chunk_ids": [
+      "chunk-f4f7f600f2ca98f707b1999fc4b9f540"
+    ],
+    "count": 1,
+    "create_time": 1773426939,
+    "update_time": 1773426939,
+    "_id": "OpenAI"
+  },
+  "抖音": {
+    "chunk_ids": [
+      "chunk-f4f7f600f2ca98f707b1999fc4b9f540"
+    ],
+    "count": 1,
+    "create_time": 1773426939,
+    "update_time": 1773426939,
+    "_id": "抖音"
+  },
+  "Web Coding": {
+    "chunk_ids": [
+      "chunk-f4f7f600f2ca98f707b1999fc4b9f540"
+    ],
+    "count": 1,
+    "create_time": 1773426939,
+    "update_time": 1773426939,
+    "_id": "Web Coding"
+  },
+  "TypeScript": {
+    "chunk_ids": [
+      "chunk-f4f7f600f2ca98f707b1999fc4b9f540"
+    ],
+    "count": 1,
+    "create_time": 1773426939,
+    "update_time": 1773426939,
+    "_id": "TypeScript"
+  },
+  "RAG": {
+    "chunk_ids": [
+      "chunk-f4f7f600f2ca98f707b1999fc4b9f540"
+    ],
+    "count": 1,
+    "create_time": 1773426940,
+    "update_time": 1773426940,
+    "_id": "RAG"
+  },
+  "Git": {
+    "chunk_ids": [
+      "chunk-f4f7f600f2ca98f707b1999fc4b9f540"
+    ],
+    "count": 1,
+    "create_time": 1773426941,
+    "update_time": 1773426941,
+    "_id": "Git"
+  },
+  "X Platform": {
+    "chunk_ids": [
+      "chunk-f4f7f600f2ca98f707b1999fc4b9f540"
+    ],
+    "count": 1,
+    "create_time": 1773426941,
+    "update_time": 1773426941,
+    "_id": "X Platform"
+  },
+  "X Platform AI Blogger Graph": {
+    "chunk_ids": [
+      "chunk-f4f7f600f2ca98f707b1999fc4b9f540"
+    ],
+    "count": 1,
+    "create_time": 1773426941,
+    "update_time": 1773426941,
+    "_id": "X Platform AI Blogger Graph"
+  },
+  "Mindset": {
+    "chunk_ids": [
+      "chunk-f4f7f600f2ca98f707b1999fc4b9f540"
+    ],
+    "count": 1,
+    "create_time": 1773426941,
+    "update_time": 1773426941,
+    "_id": "Mindset"
+  },
+  "MVP": {
+    "chunk_ids": [
+      "chunk-f4f7f600f2ca98f707b1999fc4b9f540"
+    ],
+    "count": 1,
+    "create_time": 1773426942,
+    "update_time": 1773426942,
+    "_id": "MVP"
+  },
+  "ToB": {
+    "chunk_ids": [
+      "chunk-f4f7f600f2ca98f707b1999fc4b9f540"
+    ],
+    "count": 1,
+    "create_time": 1773426942,
+    "update_time": 1773426942,
+    "_id": "ToB"
+  },
+  "Webhook": {
+    "chunk_ids": [
+      "chunk-f4f7f600f2ca98f707b1999fc4b9f540"
+    ],
+    "count": 1,
+    "create_time": 1773426942,
+    "update_time": 1773426942,
+    "_id": "Webhook"
+  },
+  "Large Model API": {
+    "chunk_ids": [
+      "chunk-f4f7f600f2ca98f707b1999fc4b9f540"
+    ],
+    "count": 1,
+    "create_time": 1773426943,
+    "update_time": 1773426943,
+    "_id": "Large Model API"
+  },
+  "3D Interaction Graph": {
+    "chunk_ids": [
+      "chunk-f4f7f600f2ca98f707b1999fc4b9f540"
+    ],
+    "count": 1,
+    "create_time": 1773426943,
+    "update_time": 1773426943,
+    "_id": "3D Interaction Graph"
+  },
+  "7833 - Thinking Outside The Rack- Scaling Up With Optical Interconnects": {
+    "chunk_ids": [
+      "chunk-13553145d3f41af0c13bdd91235f3ff3"
+    ],
+    "count": 1,
+    "create_time": 1773427245,
+    "update_time": 1773427245,
+    "_id": "7833 - Thinking Outside The Rack- Scaling Up With Optical Interconnects"
+  },
+  "Optical Interconnects": {
+    "chunk_ids": [
+      "chunk-13553145d3f41af0c13bdd91235f3ff3",
+      "chunk-de484dab9dc735b91436af3e79491149"
+    ],
+    "count": 2,
+    "update_time": 1773427789,
+    "_id": "Optical Interconnects"
+  },
+  "Electrical Interconnects": {
+    "chunk_ids": [
+      "chunk-13553145d3f41af0c13bdd91235f3ff3"
+    ],
+    "count": 1,
+    "create_time": 1773427245,
+    "update_time": 1773427245,
+    "_id": "Electrical Interconnects"
+  },
+  "Silicon Photonics": {
+    "chunk_ids": [
+      "chunk-13553145d3f41af0c13bdd91235f3ff3"
+    ],
+    "count": 1,
+    "create_time": 1773427245,
+    "update_time": 1773427245,
+    "_id": "Silicon Photonics"
+  },
+  "Data Centers": {
+    "chunk_ids": [
+      "chunk-13553145d3f41af0c13bdd91235f3ff3"
+    ],
+    "count": 1,
+    "create_time": 1773427245,
+    "update_time": 1773427245,
+    "_id": "Data Centers"
+  },
+  "Large Model Training": {
+    "chunk_ids": [
+      "chunk-13553145d3f41af0c13bdd91235f3ff3"
+    ],
+    "count": 1,
+    "create_time": 1773427245,
+    "update_time": 1773427245,
+    "_id": "Large Model Training"
+  },
+  "Optical Engine": {
+    "chunk_ids": [
+      "chunk-13553145d3f41af0c13bdd91235f3ff3"
+    ],
+    "count": 1,
+    "create_time": 1773427248,
+    "update_time": 1773427248,
+    "_id": "Optical Engine"
+  },
+  "Compute Unit": {
+    "chunk_ids": [
+      "chunk-13553145d3f41af0c13bdd91235f3ff3"
+    ],
+    "count": 1,
+    "create_time": 1773427248,
+    "update_time": 1773427248,
+    "_id": "Compute Unit"
+  },
+  "Bandwidth": {
+    "chunk_ids": [
+      "chunk-13553145d3f41af0c13bdd91235f3ff3"
+    ],
+    "count": 1,
+    "create_time": 1773427248,
+    "update_time": 1773427248,
+    "_id": "Bandwidth"
+  },
+  "Power Consumption": {
+    "chunk_ids": [
+      "chunk-13553145d3f41af0c13bdd91235f3ff3"
+    ],
+    "count": 1,
+    "create_time": 1773427248,
+    "update_time": 1773427248,
+    "_id": "Power Consumption"
+  },
+  "Storage": {
+    "chunk_ids": [
+      "chunk-13553145d3f41af0c13bdd91235f3ff3"
+    ],
+    "count": 1,
+    "create_time": 1773427248,
+    "update_time": 1773427248,
+    "_id": "Storage"
+  },
+  "Memory": {
+    "chunk_ids": [
+      "chunk-13553145d3f41af0c13bdd91235f3ff3"
+    ],
+    "count": 1,
+    "create_time": 1773427249,
+    "update_time": 1773427249,
+    "_id": "Memory"
+  },
+  "Resource Pooling": {
+    "chunk_ids": [
+      "chunk-13553145d3f41af0c13bdd91235f3ff3"
+    ],
+    "count": 1,
+    "create_time": 1773427250,
+    "update_time": 1773427250,
+    "_id": "Resource Pooling"
+  },
+  "Standardized Interfaces": {
+    "chunk_ids": [
+      "chunk-13553145d3f41af0c13bdd91235f3ff3"
+    ],
+    "count": 1,
+    "create_time": 1773427250,
+    "update_time": 1773427250,
+    "_id": "Standardized Interfaces"
+  },
+  "Cost Optimization": {
+    "chunk_ids": [
+      "chunk-13553145d3f41af0c13bdd91235f3ff3"
+    ],
+    "count": 1,
+    "create_time": 1773427251,
+    "update_time": 1773427251,
+    "_id": "Cost Optimization"
+  },
+  "Signal Attenuation": {
+    "chunk_ids": [
+      "chunk-13553145d3f41af0c13bdd91235f3ff3"
+    ],
+    "count": 1,
+    "create_time": 1773427251,
+    "update_time": 1773427251,
+    "_id": "Signal Attenuation"
+  },
+  "ReThinker Framework": {
+    "chunk_ids": [
+      "chunk-784d4585ebe0819ccbc35184946098ac"
+    ],
+    "count": 1,
+    "create_time": 1773427502,
+    "update_time": 1773427502,
+    "_id": "ReThinker Framework"
+  },
+  "Scientific Reasoning": {
+    "chunk_ids": [
+      "chunk-784d4585ebe0819ccbc35184946098ac"
+    ],
+    "count": 1,
+    "create_time": 1773427502,
+    "update_time": 1773427502,
+    "_id": "Scientific Reasoning"
+  },
+  "Guided Reflection": {
+    "chunk_ids": [
+      "chunk-784d4585ebe0819ccbc35184946098ac"
+    ],
+    "count": 1,
+    "create_time": 1773427502,
+    "update_time": 1773427502,
+    "_id": "Guided Reflection"
+  },
+  "Confidence Control": {
+    "chunk_ids": [
+      "chunk-784d4585ebe0819ccbc35184946098ac"
+    ],
+    "count": 1,
+    "create_time": 1773427502,
+    "update_time": 1773427502,
+    "_id": "Confidence Control"
+  },
+  "ReThinker Scientific Reasoning Report": {
+    "chunk_ids": [
+      "chunk-784d4585ebe0819ccbc35184946098ac"
+    ],
+    "count": 1,
+    "create_time": 1773427502,
+    "update_time": 1773427502,
+    "_id": "ReThinker Scientific Reasoning Report"
+  },
+  "AI Model": {
+    "chunk_ids": [
+      "chunk-784d4585ebe0819ccbc35184946098ac"
+    ],
+    "count": 1,
+    "create_time": 1773427502,
+    "update_time": 1773427502,
+    "_id": "AI Model"
+  },
+  "Hallucination": {
+    "chunk_ids": [
+      "chunk-784d4585ebe0819ccbc35184946098ac"
+    ],
+    "count": 1,
+    "create_time": 1773427502,
+    "update_time": 1773427502,
+    "_id": "Hallucination"
+  },
+  "Scientific Q&A Scenarios": {
+    "chunk_ids": [
+      "chunk-784d4585ebe0819ccbc35184946098ac"
+    ],
+    "count": 1,
+    "create_time": 1773427504,
+    "update_time": 1773427504,
+    "_id": "Scientific Q&A Scenarios"
+  },
+  "Automatic Reasoning Systems": {
+    "chunk_ids": [
+      "chunk-784d4585ebe0819ccbc35184946098ac"
+    ],
+    "count": 1,
+    "create_time": 1773427504,
+    "update_time": 1773427504,
+    "_id": "Automatic Reasoning Systems"
+  },
+  "Iterative Optimization": {
+    "chunk_ids": [
+      "chunk-784d4585ebe0819ccbc35184946098ac"
+    ],
+    "count": 1,
+    "create_time": 1773427505,
+    "update_time": 1773427505,
+    "_id": "Iterative Optimization"
+  },
+  "Self-Correction": {
+    "chunk_ids": [
+      "chunk-784d4585ebe0819ccbc35184946098ac"
+    ],
+    "count": 1,
+    "create_time": 1773427505,
+    "update_time": 1773427505,
+    "_id": "Self-Correction"
+  },
+  "Uncertainty Quantification": {
+    "chunk_ids": [
+      "chunk-784d4585ebe0819ccbc35184946098ac"
+    ],
+    "count": 1,
+    "create_time": 1773427505,
+    "update_time": 1773427505,
+    "_id": "Uncertainty Quantification"
+  },
+  "Logical Errors": {
+    "chunk_ids": [
+      "chunk-784d4585ebe0819ccbc35184946098ac"
+    ],
+    "count": 1,
+    "create_time": 1773427505,
+    "update_time": 1773427505,
+    "_id": "Logical Errors"
+  },
+  "Large Models": {
+    "chunk_ids": [
+      "chunk-784d4585ebe0819ccbc35184946098ac"
+    ],
+    "count": 1,
+    "create_time": 1773427505,
+    "update_time": 1773427505,
+    "_id": "Large Models"
+  },
+  "Robustness": {
+    "chunk_ids": [
+      "chunk-784d4585ebe0819ccbc35184946098ac"
+    ],
+    "count": 1,
+    "create_time": 1773427505,
+    "update_time": 1773427505,
+    "_id": "Robustness"
+  },
+  "Accuracy": {
+    "chunk_ids": [
+      "chunk-784d4585ebe0819ccbc35184946098ac"
+    ],
+    "count": 1,
+    "create_time": 1773427507,
+    "update_time": 1773427507,
+    "_id": "Accuracy"
+  },
+  "Thinking Outside The Rack Scaling Up With Optical Interconnects": {
+    "chunk_ids": [
+      "chunk-de484dab9dc735b91436af3e79491149"
+    ],
+    "count": 1,
+    "create_time": 1773427789,
+    "update_time": 1773427789,
+    "_id": "Thinking Outside The Rack Scaling Up With Optical Interconnects"
+  },
+  "1.45 MB": {
+    "chunk_ids": [
+      "chunk-de484dab9dc735b91436af3e79491149"
+    ],
+    "count": 1,
+    "create_time": 1773427789,
+    "update_time": 1773427789,
+    "_id": "1.45 MB"
+  },
+  "Personal": {
+    "chunk_ids": [
+      "chunk-de484dab9dc735b91436af3e79491149"
+    ],
+    "count": 1,
+    "create_time": 1773427789,
+    "update_time": 1773427789,
+    "_id": "Personal"
+  },
+  "ISSCC 2026": {
+    "chunk_ids": [
+      "chunk-e4a307af220b383886bf52906f7d65bf"
+    ],
+    "count": 1,
+    "create_time": 1773428115,
+    "update_time": 1773428115,
+    "_id": "ISSCC 2026"
+  },
+  "ISSCC 2026 Wearable And Wireless Biomedical Systems Collection": {
+    "chunk_ids": [
+      "chunk-e4a307af220b383886bf52906f7d65bf"
+    ],
+    "count": 1,
+    "create_time": 1773428115,
+    "update_time": 1773428115,
+    "_id": "ISSCC 2026 Wearable And Wireless Biomedical Systems Collection"
+  },
+  "Wearable And Wireless Biomedical Systems": {
+    "chunk_ids": [
+      "chunk-e4a307af220b383886bf52906f7d65bf"
+    ],
+    "count": 1,
+    "create_time": 1773428115,
+    "update_time": 1773428115,
+    "_id": "Wearable And Wireless Biomedical Systems"
+  },
+  "Frontier-Tech": {
+    "chunk_ids": [
+      "chunk-e4a307af220b383886bf52906f7d65bf"
+    ],
+    "count": 1,
+    "create_time": 1773428115,
+    "update_time": 1773428115,
+    "_id": "Frontier-Tech"
+  },
+  "PPT": {
+    "chunk_ids": [
+      "chunk-e4a307af220b383886bf52906f7d65bf"
+    ],
+    "count": 1,
+    "create_time": 1773428121,
+    "update_time": 1773428121,
+    "_id": "PPT"
+  },
+  "44.39 MB": {
+    "chunk_ids": [
+      "chunk-e4a307af220b383886bf52906f7d65bf"
+    ],
+    "count": 1,
+    "create_time": 1773428121,
+    "update_time": 1773428121,
+    "_id": "44.39 MB"
   }
 }

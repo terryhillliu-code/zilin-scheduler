@@ -740,5 +740,47 @@
     "create_time": 1773341767,
     "update_time": 1773341767,
     "_id": "doc-caffd63ee8599ae7be43759f1b96b861"
+  },
+  "doc-f4f7f600f2ca98f707b1999fc4b9f540": {
+    "content": "---\ntitle: \"一年零代码实践复盘：从入门到AI Agent探索\"\nsource_url: \"https://v.douyin.com/zuXVO1BxGds\"\ndate: 2026-03-13\ntags: [\"零代码\", \"AI Agent\", \"Lovable\", \"Cloud Code\", \"个人开发者\"]\ntype: video_distill\nasr_source: \"dashscope_recognition\"\nnoise_tags: []\n---\n\n# 一年零代码实践复盘：从入门到AI Agent探索\n\n## 💡 一句话核心\n分享零基础用低代码/无代码工具（Lovable、Cloud Code、N8N等）一年搭建12+产品的真实路径与避坑指南。\n\n## 🧠 知识点拆解\n- **[00:00]** 作者以兴趣驱动、非职业化方式学习Web Coding，强调享受过程而非速成，坚持业余投入。\n- **[01:00]** 2025年2月‘White Co’概念由Object Party提出，作者3月起分三阶段学习：认知→简易产品→AI Agent复杂应用。\n- **[02:00]** 八月为关键转折点：购入N8N/Lovable、听行业播客、研读Base44案例与Mary Maker报告，受吴文达教授演讲激发行动。\n- **[02:30]** 九月启动‘12个月12产品’挑战，首作目标追踪器、品牌舆情监听器（N8N）、VC邮件预筛AI Agent。\n- **[03:30]** 十二月认知升级：上线优于完美；掌握数据库、用户管理、Git基础；迁移到Cursor；发布节日贺卡生成器（2300+用户）。\n- **[04:30]** 第三阶段聚焦ToB方向，引入TypeScript、Cloud Code、Webhook调用API，并用RAG+Agent做代码审查与网络分析。\n- **[05:30]** 推荐新手技术栈：Lovable（快速原型）+ Cloud Code（逻辑扩展）+ 大模型API（如OpenAI），月成本约140–300元。\n- **[06:00]** 零代码改变思维模式：将‘鬼点子’即时落地为可用工具（如X平台AI博主图谱、一周年回顾页），提升自主性与生活满足感。\n\n## 📝 内容摘要\n本视频是创作者‘麻省理工长毛兔’在抖音分享的零代码（No-Code/Low-Code）实践一周年复盘。作者以兴趣为驱动，未报课、不全职，通过Lovable、N8N、Cloud Code、Cursor等工具，分三个阶段完成从概念认知、简易工具开发（目标追踪器、舆情监听器），到AI Agent应用（VC预沟通、RAG代码审查、3D交互图谱）的进阶。重点强调‘先上线再优化’、‘按需学习’、‘小步验证’的方法论，并指出早期可跳过纯理论阶段，直接动手做最小可行产品。同时提供高性价比技术选型建议与真实成本参考（月均140–300元），最终落脚于零代码对个人创造力与生活效能的实质性赋能。\n\n## ✅ 行动建议\n- 立即用Lovable搭建一个解决自己痛点的MVP工具\n- 订阅1–2个AI/低代码领域播客（如Base44、Maker相关）持续输入\n\n## 🔗 参考资料\n- Object Party White Co概念\n- Base44案例研究\n- Mary Maker报告\n- 吴文达教授ASAT School演讲\n\n## 📹 原始信息\n- 来源平台：douyin\n- 作者：麻省理工长毛兔\n- 原始链接：[点击查看](https://v.douyin.com/zuXVO1BxGds)\n\n---\n> 由知微系统自动生成，建议人工审核后归档",
+    "file_path": "unknown_source",
+    "create_time": 1773426602,
+    "update_time": 1773426602,
+    "_id": "doc-f4f7f600f2ca98f707b1999fc4b9f540"
+  },
+  "doc-13553145d3f41af0c13bdd91235f3ff3": {
+    "content": "---\ntitle: \"7833 - Thinking Outside the Rack- Scaling Up with Optical Interconnects\"\nauthor: \"未知\"\ndate: \"2026-03-07\"\ntype: \"report\"\nformat: \".pdf\"\npriority: \"reference\"\nvectorized: \"未向量化\"\ntags: \"\"\ncategory: \"Personal\"\nsource: \"obsidian\"\ncreated: \"2026-03-13\"\n---\n# 7833 - Thinking Outside the Rack- Scaling Up with Optical Interconnects\n\n🔗 **原文链接**: [点击打开本地文档](file:///Users/liufang/Documents/Library/【参考】个人成长/7833%20-%20Thinking%20Outside%20the%20Rack-%20Scaling%20Up%20with%20Optical%20Interconnects.pdf)\n\n> [!info] 文档信息\n> - **格式**: `.pdf`\n> - **文件大小**: `1.45 MB`\n> - **入库时间**: `2026-03-07 19:05:19`\n\n---\n\n## AI 深度摘要\n\n随着算力需求激增，传统电气互连在带宽与功耗上遭遇瓶颈，突破机架边界成为扩展关键。光学互连技术凭借高带宽、低延迟及低功耗优势，成为跨机架扩展的核心方案。通过引入硅光技术与先进封装，实现芯片间及机架间的高速光通信，有效降低信号衰减与能源消耗。该架构支持资源池化，允许计算、存储与内存解耦，提升整体利用率。创新点在于将光引擎靠近计算单元，减少电传输距离，显著改善能效比。此方案为构建超大规模数据中心提供了可行路径，推动算力集群向更灵活、高效的方向演进，满足 AI 与大模型训练对互联带宽的极致需求。未来演进将聚焦于标准化接口与成本优化，以实现广泛部署。",
+    "file_path": "unknown_source",
+    "create_time": 1773426993,
+    "update_time": 1773426993,
+    "_id": "doc-13553145d3f41af0c13bdd91235f3ff3"
+  },
+  "doc-784d4585ebe0819ccbc35184946098ac": {
+    "content": "---\ntitle: \"02 04 ReThinker Scientific Reasoning by Rethinking with Guided Reflection and Confidence Control\"\nauthor: \"未知\"\ndate: \"2026-03-08\"\ntype: \"report\"\nformat: \".pdf\"\npriority: \"reference\"\nvectorized: \"未向量化\"\ntags: \"\"\ncategory: \"Personal\"\nsource: \"obsidian\"\ncreated: \"2026-03-13\"\n---\n# 02 04 ReThinker Scientific Reasoning by Rethinking with Guided Reflection and Confidence Control\n\n🔗 **原文链接**: [点击打开本地文档](file:///Users/liufang/Documents/Library/【参考】个人成长/[2026]_02%2004%20ReThinker%20Scientific%20Reasoning%20by%20Rethinking%20with%20Guided%20Reflection%20and%20Confidence%20Control.pdf)\n\n> [!info] 文档信息\n> - **格式**: `.pdf`\n> - **文件大小**: `0.67 MB`\n> - **入库时间**: `2026-03-08 18:48:39`\n\n---\n\n## AI 深度摘要\n\n面向科学推理任务的复杂性，ReThinker 框架提出结合引导式反思与置信度控制的创新方法。该机制核心在于赋予模型“重新思考”能力，通过多阶段引导式反思动态评估推理路径的合理性。置信度控制模块用于量化不确定性，自动识别低可靠性步骤并触发修正流程，从而有效抑制幻觉与逻辑错误。这种方法实现了从单次生成向迭代优化的转变，显著增强了模型在处理多步推导问题时的鲁棒性与准确性。研究强调了自我修正与不确定性量化在严谨科学领域应用中的关键作用，为大模型提升推理可靠性提供了新的技术范式，推动自动推理系统向更高可信度方向发展，适用于需要高精度逻辑推导的科学问答场景。",
+    "file_path": "unknown_source",
+    "create_time": 1773427300,
+    "update_time": 1773427300,
+    "_id": "doc-784d4585ebe0819ccbc35184946098ac"
+  },
+  "doc-de484dab9dc735b91436af3e79491149": {
+    "content": "---\ntitle: \"Thinking Outside the Rack Scaling Up with Optical Interconnects\"\nauthor: \"未知\"\ndate: \"2026-03-07\"\ntype: \"report\"\nformat: \".pdf\"\npriority: \"reference\"\nvectorized: \"未向量化\"\ntags: \"\"\ncategory: \"Personal\"\nsource: \"obsidian\"\ncreated: \"2026-03-13\"\n---\n# Thinking Outside the Rack Scaling Up with Optical Interconnects\n\n🔗 **原文链接**: [点击打开本地文档](file:///Users/liufang/Documents/Library/【参考】个人成长/Thinking%20Outside%20the%20Rack%20Scaling%20Up%20with%20Optical%20Interconnects.pdf)\n\n> [!info] 文档信息\n> - **格式**: `.pdf`\n> - **文件大小**: `1.45 MB`\n> - **入库时间**: `2026-03-07 19:05:19`\n\n---\n\n## AI 深度摘要\n*(等待向量化及摘要提取后自动写入)*",
+    "file_path": "unknown_source",
+    "create_time": 1773427552,
+    "update_time": 1773427552,
+    "_id": "doc-de484dab9dc735b91436af3e79491149"
+  },
+  "doc-e4a307af220b383886bf52906f7d65bf": {
+    "content": "---\ntitle: \"ISSCC 2026可穿戴与无线生物医学系统合集（202页PPT）\"\nauthor: \"未知\"\ndate: \"2026-03-11\"\ntype: \"report\"\nformat: \".pdf\"\npriority: \"reference\"\nvectorized: \"未向量化\"\ntags: \"\"\ncategory: \"Frontier-Tech\"\nsource: \"obsidian\"\ncreated: \"2026-03-13\"\n---\n# ISSCC 2026可穿戴与无线生物医学系统合集（202页PPT）\n\n🔗 **原文链接**: [点击打开本地文档](file:///Users/liufang/Documents/Library/【参考】前沿技术/ISSCC%202026可穿戴与无线生物医学系统合集（202页PPT）.pdf)\n\n> [!info] 文档信息\n> - **格式**: `.pdf`\n> - **文件大小**: `44.39 MB`\n> - **入库时间**: `2026-03-11 12:56:52`\n\n---\n\n## AI 深度摘要\n*(等待向量化及摘要提取后自动写入)*",
+    "file_path": "unknown_source",
+    "create_time": 1773427870,
+    "update_time": 1773427870,
+    "_id": "doc-e4a307af220b383886bf52906f7d65bf"
+  },
+  "doc-311e0cb6a0fba237f123c1105d717672": {
+    "content": "---\ntitle: \"ISSCC 2026 神经与生物医学接口合集（438页PPT）\"\nauthor: \"未知\"\ndate: \"2026-03-11\"\ntype: \"report\"\nformat: \".pdf\"\npriority: \"reference\"\nvectorized: \"未向量化\"\ntags: \"\"\ncategory: \"Frontier-Tech\"\nsource: \"obsidian\"\ncreated: \"2026-03-13\"\n---\n# ISSCC 2026 神经与生物医学接口合集（438页PPT）\n\n🔗 **原文链接**: [点击打开本地文档](file:///Users/liufang/Documents/Library/【参考】前沿技术/ISSCC%202026%20神经与生物医学接口合集（438页PPT）.pdf)\n\n> [!info] 文档信息\n> - **格式**: `.pdf`\n> - **文件大小**: `37.61 MB`\n> - **入库时间**: `2026-03-11 12:56:47`\n\n---\n\n## AI 深度摘要\n*(等待向量化及摘要提取后自动写入)*",
+    "file_path": "unknown_source",
+    "create_time": 1773428211,
+    "update_time": 1773428211,
+    "_id": "doc-311e0cb6a0fba237f123c1105d717672"
   }
 }

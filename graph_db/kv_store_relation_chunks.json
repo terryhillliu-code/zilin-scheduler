@@ -7230,5 +7230,824 @@
     "create_time": 1773341765,
     "update_time": 1773341765,
     "_id": "Efficient AI Serving At Scale Processing Near Memory Acceleration For LLMs And Vector Search<SEP>File Uri"
+  },
+  "CXL<SEP>Evaluating CXL Based Composable Memory Solutions A TCO Framework For Datacenter Workloads": {
+    "chunk_ids": [
+      "chunk-caffd63ee8599ae7be43759f1b96b861"
+    ],
+    "count": 1,
+    "create_time": 1773426897,
+    "update_time": 1773426897,
+    "_id": "CXL<SEP>Evaluating CXL Based Composable Memory Solutions A TCO Framework For Datacenter Workloads"
+  },
+  "Composable Memory Solutions<SEP>Evaluating CXL Based Composable Memory Solutions A TCO Framework For Datacenter Workloads": {
+    "chunk_ids": [
+      "chunk-caffd63ee8599ae7be43759f1b96b861"
+    ],
+    "count": 1,
+    "create_time": 1773426899,
+    "update_time": 1773426899,
+    "_id": "Composable Memory Solutions<SEP>Evaluating CXL Based Composable Memory Solutions A TCO Framework For Datacenter Workloads"
+  },
+  "Evaluating CXL Based Composable Memory Solutions A TCO Framework For Datacenter Workloads<SEP>TCO Framework": {
+    "chunk_ids": [
+      "chunk-caffd63ee8599ae7be43759f1b96b861"
+    ],
+    "count": 1,
+    "create_time": 1773426902,
+    "update_time": 1773426902,
+    "_id": "Evaluating CXL Based Composable Memory Solutions A TCO Framework For Datacenter Workloads<SEP>TCO Framework"
+  },
+  "Datacenter Workloads<SEP>Evaluating CXL Based Composable Memory Solutions A TCO Framework For Datacenter Workloads": {
+    "chunk_ids": [
+      "chunk-caffd63ee8599ae7be43759f1b96b861"
+    ],
+    "count": 1,
+    "create_time": 1773426905,
+    "update_time": 1773426905,
+    "_id": "Datacenter Workloads<SEP>Evaluating CXL Based Composable Memory Solutions A TCO Framework For Datacenter Workloads"
+  },
+  "Evaluating CXL Based Composable Memory Solutions A TCO Framework For Datacenter Workloads<SEP>PDF": {
+    "chunk_ids": [
+      "chunk-caffd63ee8599ae7be43759f1b96b861"
+    ],
+    "count": 1,
+    "create_time": 1773426907,
+    "update_time": 1773426907,
+    "_id": "Evaluating CXL Based Composable Memory Solutions A TCO Framework For Datacenter Workloads<SEP>PDF"
+  },
+  "Evaluating CXL Based Composable Memory Solutions A TCO Framework For Datacenter Workloads<SEP>Server Architecture": {
+    "chunk_ids": [
+      "chunk-caffd63ee8599ae7be43759f1b96b861"
+    ],
+    "count": 1,
+    "create_time": 1773426910,
+    "update_time": 1773426910,
+    "_id": "Evaluating CXL Based Composable Memory Solutions A TCO Framework For Datacenter Workloads<SEP>Server Architecture"
+  },
+  "Evaluating CXL Based Composable Memory Solutions A TCO Framework For Datacenter Workloads<SEP>Research Report Library": {
+    "chunk_ids": [
+      "chunk-caffd63ee8599ae7be43759f1b96b861"
+    ],
+    "count": 1,
+    "create_time": 1773426913,
+    "update_time": 1773426913,
+    "_id": "Evaluating CXL Based Composable Memory Solutions A TCO Framework For Datacenter Workloads<SEP>Research Report Library"
+  },
+  "Evaluating CXL Based Composable Memory Solutions A TCO Framework For Datacenter Workloads<SEP>Local Document": {
+    "chunk_ids": [
+      "chunk-caffd63ee8599ae7be43759f1b96b861"
+    ],
+    "count": 1,
+    "create_time": 1773426916,
+    "update_time": 1773426916,
+    "_id": "Evaluating CXL Based Composable Memory Solutions A TCO Framework For Datacenter Workloads<SEP>Local Document"
+  },
+  "Local Document<SEP>Local File Path": {
+    "chunk_ids": [
+      "chunk-caffd63ee8599ae7be43759f1b96b861"
+    ],
+    "count": 1,
+    "create_time": 1773426918,
+    "update_time": 1773426918,
+    "_id": "Local Document<SEP>Local File Path"
+  },
+  "2026-03-07<SEP>Evaluating CXL Based Composable Memory Solutions A TCO Framework For Datacenter Workloads": {
+    "chunk_ids": [
+      "chunk-caffd63ee8599ae7be43759f1b96b861"
+    ],
+    "count": 1,
+    "create_time": 1773426918,
+    "update_time": 1773426918,
+    "_id": "2026-03-07<SEP>Evaluating CXL Based Composable Memory Solutions A TCO Framework For Datacenter Workloads"
+  },
+  "2026-03-07 19:05:19<SEP>Evaluating CXL Based Composable Memory Solutions A TCO Framework For Datacenter Workloads": {
+    "chunk_ids": [
+      "chunk-caffd63ee8599ae7be43759f1b96b861"
+    ],
+    "count": 1,
+    "create_time": 1773426920,
+    "update_time": 1773426920,
+    "_id": "2026-03-07 19:05:19<SEP>Evaluating CXL Based Composable Memory Solutions A TCO Framework For Datacenter Workloads"
+  },
+  "1.81 MB<SEP>Evaluating CXL Based Composable Memory Solutions A TCO Framework For Datacenter Workloads": {
+    "chunk_ids": [
+      "chunk-caffd63ee8599ae7be43759f1b96b861"
+    ],
+    "count": 1,
+    "create_time": 1773426923,
+    "update_time": 1773426923,
+    "_id": "1.81 MB<SEP>Evaluating CXL Based Composable Memory Solutions A TCO Framework For Datacenter Workloads"
+  },
+  "AI Deep Summary<SEP>Evaluating CXL Based Composable Memory Solutions A TCO Framework For Datacenter Workloads": {
+    "chunk_ids": [
+      "chunk-caffd63ee8599ae7be43759f1b96b861"
+    ],
+    "count": 1,
+    "create_time": 1773426926,
+    "update_time": 1773426926,
+    "_id": "AI Deep Summary<SEP>Evaluating CXL Based Composable Memory Solutions A TCO Framework For Datacenter Workloads"
+  },
+  "Evaluating CXL Based Composable Memory Solutions A TCO Framework For Datacenter Workloads<SEP>Vectorized": {
+    "chunk_ids": [
+      "chunk-caffd63ee8599ae7be43759f1b96b861"
+    ],
+    "count": 1,
+    "create_time": 1773426929,
+    "update_time": 1773426929,
+    "_id": "Evaluating CXL Based Composable Memory Solutions A TCO Framework For Datacenter Workloads<SEP>Vectorized"
+  },
+  "Core<SEP>Evaluating CXL Based Composable Memory Solutions A TCO Framework For Datacenter Workloads": {
+    "chunk_ids": [
+      "chunk-caffd63ee8599ae7be43759f1b96b861"
+    ],
+    "count": 1,
+    "create_time": 1773426931,
+    "update_time": 1773426931,
+    "_id": "Core<SEP>Evaluating CXL Based Composable Memory Solutions A TCO Framework For Datacenter Workloads"
+  },
+  "抖音<SEP>麻省理工长毛兔": {
+    "chunk_ids": [
+      "chunk-f4f7f600f2ca98f707b1999fc4b9f540"
+    ],
+    "count": 1,
+    "create_time": 1773426946,
+    "update_time": 1773426946,
+    "_id": "抖音<SEP>麻省理工长毛兔"
+  },
+  "No-Code<SEP>麻省理工长毛兔": {
+    "chunk_ids": [
+      "chunk-f4f7f600f2ca98f707b1999fc4b9f540"
+    ],
+    "count": 1,
+    "create_time": 1773426949,
+    "update_time": 1773426949,
+    "_id": "No-Code<SEP>麻省理工长毛兔"
+  },
+  "Lovable<SEP>麻省理工长毛兔": {
+    "chunk_ids": [
+      "chunk-f4f7f600f2ca98f707b1999fc4b9f540"
+    ],
+    "count": 1,
+    "create_time": 1773426952,
+    "update_time": 1773426952,
+    "_id": "Lovable<SEP>麻省理工长毛兔"
+  },
+  "Cloud Code<SEP>麻省理工长毛兔": {
+    "chunk_ids": [
+      "chunk-f4f7f600f2ca98f707b1999fc4b9f540"
+    ],
+    "count": 1,
+    "create_time": 1773426955,
+    "update_time": 1773426955,
+    "_id": "Cloud Code<SEP>麻省理工长毛兔"
+  },
+  "N8N<SEP>麻省理工长毛兔": {
+    "chunk_ids": [
+      "chunk-f4f7f600f2ca98f707b1999fc4b9f540"
+    ],
+    "count": 1,
+    "create_time": 1773426958,
+    "update_time": 1773426958,
+    "_id": "N8N<SEP>麻省理工长毛兔"
+  },
+  "Cursor<SEP>麻省理工长毛兔": {
+    "chunk_ids": [
+      "chunk-f4f7f600f2ca98f707b1999fc4b9f540"
+    ],
+    "count": 1,
+    "create_time": 1773426960,
+    "update_time": 1773426960,
+    "_id": "Cursor<SEP>麻省理工长毛兔"
+  },
+  "12 Months 12 Products<SEP>麻省理工长毛兔": {
+    "chunk_ids": [
+      "chunk-f4f7f600f2ca98f707b1999fc4b9f540"
+    ],
+    "count": 1,
+    "create_time": 1773426963,
+    "update_time": 1773426963,
+    "_id": "12 Months 12 Products<SEP>麻省理工长毛兔"
+  },
+  "Goal Tracker<SEP>麻省理工长毛兔": {
+    "chunk_ids": [
+      "chunk-f4f7f600f2ca98f707b1999fc4b9f540"
+    ],
+    "count": 1,
+    "create_time": 1773426965,
+    "update_time": 1773426965,
+    "_id": "Goal Tracker<SEP>麻省理工长毛兔"
+  },
+  "Brand Sentiment Monitor<SEP>麻省理工长毛兔": {
+    "chunk_ids": [
+      "chunk-f4f7f600f2ca98f707b1999fc4b9f540"
+    ],
+    "count": 1,
+    "create_time": 1773426968,
+    "update_time": 1773426968,
+    "_id": "Brand Sentiment Monitor<SEP>麻省理工长毛兔"
+  },
+  "VC Email Pre-Screen AI Agent<SEP>麻省理工长毛兔": {
+    "chunk_ids": [
+      "chunk-f4f7f600f2ca98f707b1999fc4b9f540"
+    ],
+    "count": 1,
+    "create_time": 1773426971,
+    "update_time": 1773426971,
+    "_id": "VC Email Pre-Screen AI Agent<SEP>麻省理工长毛兔"
+  },
+  "Holiday Card Generator<SEP>麻省理工长毛兔": {
+    "chunk_ids": [
+      "chunk-f4f7f600f2ca98f707b1999fc4b9f540"
+    ],
+    "count": 1,
+    "create_time": 1773426973,
+    "update_time": 1773426973,
+    "_id": "Holiday Card Generator<SEP>麻省理工长毛兔"
+  },
+  "Cloud Code<SEP>Lovable": {
+    "chunk_ids": [
+      "chunk-f4f7f600f2ca98f707b1999fc4b9f540"
+    ],
+    "count": 1,
+    "create_time": 1773426973,
+    "update_time": 1773426973,
+    "_id": "Cloud Code<SEP>Lovable"
+  },
+  "3D Interaction Graph<SEP>麻省理工长毛兔": {
+    "chunk_ids": [
+      "chunk-f4f7f600f2ca98f707b1999fc4b9f540"
+    ],
+    "count": 1,
+    "create_time": 1773426976,
+    "update_time": 1773426976,
+    "_id": "3D Interaction Graph<SEP>麻省理工长毛兔"
+  },
+  "Mindset<SEP>No-Code": {
+    "chunk_ids": [
+      "chunk-f4f7f600f2ca98f707b1999fc4b9f540"
+    ],
+    "count": 1,
+    "create_time": 1773426976,
+    "update_time": 1773426976,
+    "_id": "Mindset<SEP>No-Code"
+  },
+  "AI Agent<SEP>RAG": {
+    "chunk_ids": [
+      "chunk-f4f7f600f2ca98f707b1999fc4b9f540"
+    ],
+    "count": 1,
+    "create_time": 1773426976,
+    "update_time": 1773426976,
+    "_id": "AI Agent<SEP>RAG"
+  },
+  "Large Model API<SEP>OpenAI": {
+    "chunk_ids": [
+      "chunk-f4f7f600f2ca98f707b1999fc4b9f540"
+    ],
+    "count": 1,
+    "create_time": 1773426979,
+    "update_time": 1773426979,
+    "_id": "Large Model API<SEP>OpenAI"
+  },
+  "ToB<SEP>TypeScript": {
+    "chunk_ids": [
+      "chunk-f4f7f600f2ca98f707b1999fc4b9f540"
+    ],
+    "count": 1,
+    "create_time": 1773426979,
+    "update_time": 1773426979,
+    "_id": "ToB<SEP>TypeScript"
+  },
+  "吴文达<SEP>麻省理工长毛兔": {
+    "chunk_ids": [
+      "chunk-f4f7f600f2ca98f707b1999fc4b9f540"
+    ],
+    "count": 1,
+    "create_time": 1773426979,
+    "update_time": 1773426979,
+    "_id": "吴文达<SEP>麻省理工长毛兔"
+  },
+  "Object Party<SEP>麻省理工长毛兔": {
+    "chunk_ids": [
+      "chunk-f4f7f600f2ca98f707b1999fc4b9f540"
+    ],
+    "count": 1,
+    "create_time": 1773426982,
+    "update_time": 1773426982,
+    "_id": "Object Party<SEP>麻省理工长毛兔"
+  },
+  "Base44<SEP>麻省理工长毛兔": {
+    "chunk_ids": [
+      "chunk-f4f7f600f2ca98f707b1999fc4b9f540"
+    ],
+    "count": 1,
+    "create_time": 1773426985,
+    "update_time": 1773426985,
+    "_id": "Base44<SEP>麻省理工长毛兔"
+  },
+  "Mary Maker<SEP>麻省理工长毛兔": {
+    "chunk_ids": [
+      "chunk-f4f7f600f2ca98f707b1999fc4b9f540"
+    ],
+    "count": 1,
+    "create_time": 1773426988,
+    "update_time": 1773426988,
+    "_id": "Mary Maker<SEP>麻省理工长毛兔"
+  },
+  "MVP<SEP>麻省理工长毛兔": {
+    "chunk_ids": [
+      "chunk-f4f7f600f2ca98f707b1999fc4b9f540"
+    ],
+    "count": 1,
+    "create_time": 1773426990,
+    "update_time": 1773426990,
+    "_id": "MVP<SEP>麻省理工长毛兔"
+  },
+  "Data Centers<SEP>Optical Interconnects": {
+    "chunk_ids": [
+      "chunk-13553145d3f41af0c13bdd91235f3ff3"
+    ],
+    "count": 1,
+    "create_time": 1773427254,
+    "update_time": 1773427254,
+    "_id": "Data Centers<SEP>Optical Interconnects"
+  },
+  "Electrical Interconnects<SEP>Optical Interconnects": {
+    "chunk_ids": [
+      "chunk-13553145d3f41af0c13bdd91235f3ff3"
+    ],
+    "count": 1,
+    "create_time": 1773427257,
+    "update_time": 1773427257,
+    "_id": "Electrical Interconnects<SEP>Optical Interconnects"
+  },
+  "Compute Unit<SEP>Optical Engine": {
+    "chunk_ids": [
+      "chunk-13553145d3f41af0c13bdd91235f3ff3"
+    ],
+    "count": 1,
+    "create_time": 1773427257,
+    "update_time": 1773427257,
+    "_id": "Compute Unit<SEP>Optical Engine"
+  },
+  "Optical Interconnects<SEP>Silicon Photonics": {
+    "chunk_ids": [
+      "chunk-13553145d3f41af0c13bdd91235f3ff3"
+    ],
+    "count": 1,
+    "create_time": 1773427259,
+    "update_time": 1773427259,
+    "_id": "Optical Interconnects<SEP>Silicon Photonics"
+  },
+  "Advanced Packaging<SEP>Optical Interconnects": {
+    "chunk_ids": [
+      "chunk-13553145d3f41af0c13bdd91235f3ff3"
+    ],
+    "count": 1,
+    "create_time": 1773427262,
+    "update_time": 1773427262,
+    "_id": "Advanced Packaging<SEP>Optical Interconnects"
+  },
+  "Artificial Intelligence<SEP>Optical Interconnects": {
+    "chunk_ids": [
+      "chunk-13553145d3f41af0c13bdd91235f3ff3"
+    ],
+    "count": 1,
+    "create_time": 1773427265,
+    "update_time": 1773427265,
+    "_id": "Artificial Intelligence<SEP>Optical Interconnects"
+  },
+  "Large Model Training<SEP>Optical Interconnects": {
+    "chunk_ids": [
+      "chunk-13553145d3f41af0c13bdd91235f3ff3"
+    ],
+    "count": 1,
+    "create_time": 1773427268,
+    "update_time": 1773427268,
+    "_id": "Large Model Training<SEP>Optical Interconnects"
+  },
+  "Bandwidth<SEP>Optical Interconnects": {
+    "chunk_ids": [
+      "chunk-13553145d3f41af0c13bdd91235f3ff3"
+    ],
+    "count": 1,
+    "create_time": 1773427271,
+    "update_time": 1773427271,
+    "_id": "Bandwidth<SEP>Optical Interconnects"
+  },
+  "Optical Interconnects<SEP>Power Consumption": {
+    "chunk_ids": [
+      "chunk-13553145d3f41af0c13bdd91235f3ff3"
+    ],
+    "count": 1,
+    "create_time": 1773427275,
+    "update_time": 1773427275,
+    "_id": "Optical Interconnects<SEP>Power Consumption"
+  },
+  "Optical Engine<SEP>Optical Interconnects": {
+    "chunk_ids": [
+      "chunk-13553145d3f41af0c13bdd91235f3ff3"
+    ],
+    "count": 1,
+    "create_time": 1773427277,
+    "update_time": 1773427277,
+    "_id": "Optical Engine<SEP>Optical Interconnects"
+  },
+  "7833 - Thinking Outside The Rack- Scaling Up With Optical Interconnects<SEP>Optical Interconnects": {
+    "chunk_ids": [
+      "chunk-13553145d3f41af0c13bdd91235f3ff3"
+    ],
+    "count": 1,
+    "create_time": 1773427279,
+    "update_time": 1773427279,
+    "_id": "7833 - Thinking Outside The Rack- Scaling Up With Optical Interconnects<SEP>Optical Interconnects"
+  },
+  "Optical Interconnects<SEP>Storage": {
+    "chunk_ids": [
+      "chunk-13553145d3f41af0c13bdd91235f3ff3"
+    ],
+    "count": 1,
+    "create_time": 1773427282,
+    "update_time": 1773427282,
+    "_id": "Optical Interconnects<SEP>Storage"
+  },
+  "7833 - Thinking Outside The Rack- Scaling Up With Optical Interconnects<SEP>Obsidian": {
+    "chunk_ids": [
+      "chunk-13553145d3f41af0c13bdd91235f3ff3"
+    ],
+    "count": 1,
+    "create_time": 1773427282,
+    "update_time": 1773427282,
+    "_id": "7833 - Thinking Outside The Rack- Scaling Up With Optical Interconnects<SEP>Obsidian"
+  },
+  "7833 - Thinking Outside The Rack- Scaling Up With Optical Interconnects<SEP>PDF": {
+    "chunk_ids": [
+      "chunk-13553145d3f41af0c13bdd91235f3ff3"
+    ],
+    "count": 1,
+    "create_time": 1773427285,
+    "update_time": 1773427285,
+    "_id": "7833 - Thinking Outside The Rack- Scaling Up With Optical Interconnects<SEP>PDF"
+  },
+  "Memory<SEP>Optical Interconnects": {
+    "chunk_ids": [
+      "chunk-13553145d3f41af0c13bdd91235f3ff3"
+    ],
+    "count": 1,
+    "create_time": 1773427285,
+    "update_time": 1773427285,
+    "_id": "Memory<SEP>Optical Interconnects"
+  },
+  "Compute Unit<SEP>Optical Interconnects": {
+    "chunk_ids": [
+      "chunk-13553145d3f41af0c13bdd91235f3ff3"
+    ],
+    "count": 1,
+    "create_time": 1773427287,
+    "update_time": 1773427287,
+    "_id": "Compute Unit<SEP>Optical Interconnects"
+  },
+  "Optical Interconnects<SEP>Resource Pooling": {
+    "chunk_ids": [
+      "chunk-13553145d3f41af0c13bdd91235f3ff3"
+    ],
+    "count": 1,
+    "create_time": 1773427290,
+    "update_time": 1773427290,
+    "_id": "Optical Interconnects<SEP>Resource Pooling"
+  },
+  "Optical Interconnects<SEP>Signal Attenuation": {
+    "chunk_ids": [
+      "chunk-13553145d3f41af0c13bdd91235f3ff3"
+    ],
+    "count": 1,
+    "create_time": 1773427293,
+    "update_time": 1773427293,
+    "_id": "Optical Interconnects<SEP>Signal Attenuation"
+  },
+  "Optical Interconnects<SEP>Standardized Interfaces": {
+    "chunk_ids": [
+      "chunk-13553145d3f41af0c13bdd91235f3ff3"
+    ],
+    "count": 1,
+    "create_time": 1773427295,
+    "update_time": 1773427295,
+    "_id": "Optical Interconnects<SEP>Standardized Interfaces"
+  },
+  "Cost Optimization<SEP>Optical Interconnects": {
+    "chunk_ids": [
+      "chunk-13553145d3f41af0c13bdd91235f3ff3"
+    ],
+    "count": 1,
+    "create_time": 1773427298,
+    "update_time": 1773427298,
+    "_id": "Cost Optimization<SEP>Optical Interconnects"
+  },
+  "ReThinker Framework<SEP>Scientific Reasoning": {
+    "chunk_ids": [
+      "chunk-784d4585ebe0819ccbc35184946098ac"
+    ],
+    "count": 1,
+    "create_time": 1773427510,
+    "update_time": 1773427510,
+    "_id": "ReThinker Framework<SEP>Scientific Reasoning"
+  },
+  "Obsidian<SEP>ReThinker Scientific Reasoning Report": {
+    "chunk_ids": [
+      "chunk-784d4585ebe0819ccbc35184946098ac"
+    ],
+    "count": 1,
+    "create_time": 1773427510,
+    "update_time": 1773427510,
+    "_id": "Obsidian<SEP>ReThinker Scientific Reasoning Report"
+  },
+  "Guided Reflection<SEP>ReThinker Framework": {
+    "chunk_ids": [
+      "chunk-784d4585ebe0819ccbc35184946098ac"
+    ],
+    "count": 1,
+    "create_time": 1773427513,
+    "update_time": 1773427513,
+    "_id": "Guided Reflection<SEP>ReThinker Framework"
+  },
+  "Confidence Control<SEP>ReThinker Framework": {
+    "chunk_ids": [
+      "chunk-784d4585ebe0819ccbc35184946098ac"
+    ],
+    "count": 1,
+    "create_time": 1773427516,
+    "update_time": 1773427516,
+    "_id": "Confidence Control<SEP>ReThinker Framework"
+  },
+  "AI Model<SEP>ReThinker Framework": {
+    "chunk_ids": [
+      "chunk-784d4585ebe0819ccbc35184946098ac"
+    ],
+    "count": 1,
+    "create_time": 1773427519,
+    "update_time": 1773427519,
+    "_id": "AI Model<SEP>ReThinker Framework"
+  },
+  "ReThinker Framework<SEP>ReThinker Scientific Reasoning Report": {
+    "chunk_ids": [
+      "chunk-784d4585ebe0819ccbc35184946098ac"
+    ],
+    "count": 1,
+    "create_time": 1773427521,
+    "update_time": 1773427521,
+    "_id": "ReThinker Framework<SEP>ReThinker Scientific Reasoning Report"
+  },
+  "ReThinker Framework<SEP>Scientific Q&A Scenarios": {
+    "chunk_ids": [
+      "chunk-784d4585ebe0819ccbc35184946098ac"
+    ],
+    "count": 1,
+    "create_time": 1773427524,
+    "update_time": 1773427524,
+    "_id": "ReThinker Framework<SEP>Scientific Q&A Scenarios"
+  },
+  "Hallucination<SEP>ReThinker Framework": {
+    "chunk_ids": [
+      "chunk-784d4585ebe0819ccbc35184946098ac"
+    ],
+    "count": 1,
+    "create_time": 1773427527,
+    "update_time": 1773427527,
+    "_id": "Hallucination<SEP>ReThinker Framework"
+  },
+  "Automatic Reasoning Systems<SEP>ReThinker Framework": {
+    "chunk_ids": [
+      "chunk-784d4585ebe0819ccbc35184946098ac"
+    ],
+    "count": 1,
+    "create_time": 1773427530,
+    "update_time": 1773427530,
+    "_id": "Automatic Reasoning Systems<SEP>ReThinker Framework"
+  },
+  "Iterative Optimization<SEP>ReThinker Framework": {
+    "chunk_ids": [
+      "chunk-784d4585ebe0819ccbc35184946098ac"
+    ],
+    "count": 1,
+    "create_time": 1773427533,
+    "update_time": 1773427533,
+    "_id": "Iterative Optimization<SEP>ReThinker Framework"
+  },
+  "ReThinker Framework<SEP>Self-Correction": {
+    "chunk_ids": [
+      "chunk-784d4585ebe0819ccbc35184946098ac"
+    ],
+    "count": 1,
+    "create_time": 1773427536,
+    "update_time": 1773427536,
+    "_id": "ReThinker Framework<SEP>Self-Correction"
+  },
+  "ReThinker Framework<SEP>Uncertainty Quantification": {
+    "chunk_ids": [
+      "chunk-784d4585ebe0819ccbc35184946098ac"
+    ],
+    "count": 1,
+    "create_time": 1773427538,
+    "update_time": 1773427538,
+    "_id": "ReThinker Framework<SEP>Uncertainty Quantification"
+  },
+  "Logical Errors<SEP>ReThinker Framework": {
+    "chunk_ids": [
+      "chunk-784d4585ebe0819ccbc35184946098ac"
+    ],
+    "count": 1,
+    "create_time": 1773427541,
+    "update_time": 1773427541,
+    "_id": "Logical Errors<SEP>ReThinker Framework"
+  },
+  "ReThinker Framework<SEP>Robustness": {
+    "chunk_ids": [
+      "chunk-784d4585ebe0819ccbc35184946098ac"
+    ],
+    "count": 1,
+    "create_time": 1773427544,
+    "update_time": 1773427544,
+    "_id": "ReThinker Framework<SEP>Robustness"
+  },
+  "Accuracy<SEP>ReThinker Framework": {
+    "chunk_ids": [
+      "chunk-784d4585ebe0819ccbc35184946098ac"
+    ],
+    "count": 1,
+    "create_time": 1773427546,
+    "update_time": 1773427546,
+    "_id": "Accuracy<SEP>ReThinker Framework"
+  },
+  "Large Models<SEP>ReThinker Framework": {
+    "chunk_ids": [
+      "chunk-784d4585ebe0819ccbc35184946098ac"
+    ],
+    "count": 1,
+    "create_time": 1773427550,
+    "update_time": 1773427550,
+    "_id": "Large Models<SEP>ReThinker Framework"
+  },
+  "Obsidian<SEP>Thinking Outside The Rack Scaling Up With Optical Interconnects": {
+    "chunk_ids": [
+      "chunk-de484dab9dc735b91436af3e79491149"
+    ],
+    "count": 1,
+    "create_time": 1773427849,
+    "update_time": 1773427849,
+    "_id": "Obsidian<SEP>Thinking Outside The Rack Scaling Up With Optical Interconnects"
+  },
+  "Liufang<SEP>Thinking Outside The Rack Scaling Up With Optical Interconnects": {
+    "chunk_ids": [
+      "chunk-de484dab9dc735b91436af3e79491149"
+    ],
+    "count": 1,
+    "create_time": 1773427852,
+    "update_time": 1773427852,
+    "_id": "Liufang<SEP>Thinking Outside The Rack Scaling Up With Optical Interconnects"
+  },
+  "Optical Interconnects<SEP>Thinking Outside The Rack Scaling Up With Optical Interconnects": {
+    "chunk_ids": [
+      "chunk-de484dab9dc735b91436af3e79491149"
+    ],
+    "count": 1,
+    "create_time": 1773427855,
+    "update_time": 1773427855,
+    "_id": "Optical Interconnects<SEP>Thinking Outside The Rack Scaling Up With Optical Interconnects"
+  },
+  "PDF<SEP>Thinking Outside The Rack Scaling Up With Optical Interconnects": {
+    "chunk_ids": [
+      "chunk-de484dab9dc735b91436af3e79491149"
+    ],
+    "count": 1,
+    "create_time": 1773427857,
+    "update_time": 1773427857,
+    "_id": "PDF<SEP>Thinking Outside The Rack Scaling Up With Optical Interconnects"
+  },
+  "1.45 MB<SEP>Thinking Outside The Rack Scaling Up With Optical Interconnects": {
+    "chunk_ids": [
+      "chunk-de484dab9dc735b91436af3e79491149"
+    ],
+    "count": 1,
+    "create_time": 1773427860,
+    "update_time": 1773427860,
+    "_id": "1.45 MB<SEP>Thinking Outside The Rack Scaling Up With Optical Interconnects"
+  },
+  "Personal<SEP>Thinking Outside The Rack Scaling Up With Optical Interconnects": {
+    "chunk_ids": [
+      "chunk-de484dab9dc735b91436af3e79491149"
+    ],
+    "count": 1,
+    "create_time": 1773427862,
+    "update_time": 1773427862,
+    "_id": "Personal<SEP>Thinking Outside The Rack Scaling Up With Optical Interconnects"
+  },
+  "Report<SEP>Thinking Outside The Rack Scaling Up With Optical Interconnects": {
+    "chunk_ids": [
+      "chunk-de484dab9dc735b91436af3e79491149"
+    ],
+    "count": 1,
+    "create_time": 1773427865,
+    "update_time": 1773427865,
+    "_id": "Report<SEP>Thinking Outside The Rack Scaling Up With Optical Interconnects"
+  },
+  "2026-03-07<SEP>Thinking Outside The Rack Scaling Up With Optical Interconnects": {
+    "chunk_ids": [
+      "chunk-de484dab9dc735b91436af3e79491149"
+    ],
+    "count": 1,
+    "create_time": 1773427868,
+    "update_time": 1773427868,
+    "_id": "2026-03-07<SEP>Thinking Outside The Rack Scaling Up With Optical Interconnects"
+  },
+  "ISSCC 2026<SEP>ISSCC 2026 Wearable And Wireless Biomedical Systems Collection": {
+    "chunk_ids": [
+      "chunk-e4a307af220b383886bf52906f7d65bf"
+    ],
+    "count": 1,
+    "create_time": 1773428185,
+    "update_time": 1773428185,
+    "_id": "ISSCC 2026<SEP>ISSCC 2026 Wearable And Wireless Biomedical Systems Collection"
+  },
+  "ISSCC 2026 Wearable And Wireless Biomedical Systems Collection<SEP>Wearable And Wireless Biomedical Systems": {
+    "chunk_ids": [
+      "chunk-e4a307af220b383886bf52906f7d65bf"
+    ],
+    "count": 1,
+    "create_time": 1773428188,
+    "update_time": 1773428188,
+    "_id": "ISSCC 2026 Wearable And Wireless Biomedical Systems Collection<SEP>Wearable And Wireless Biomedical Systems"
+  },
+  "ISSCC 2026 Wearable And Wireless Biomedical Systems Collection<SEP>Obsidian": {
+    "chunk_ids": [
+      "chunk-e4a307af220b383886bf52906f7d65bf"
+    ],
+    "count": 1,
+    "create_time": 1773428190,
+    "update_time": 1773428190,
+    "_id": "ISSCC 2026 Wearable And Wireless Biomedical Systems Collection<SEP>Obsidian"
+  },
+  "Frontier-Tech<SEP>ISSCC 2026 Wearable And Wireless Biomedical Systems Collection": {
+    "chunk_ids": [
+      "chunk-e4a307af220b383886bf52906f7d65bf"
+    ],
+    "count": 1,
+    "create_time": 1773428193,
+    "update_time": 1773428193,
+    "_id": "Frontier-Tech<SEP>ISSCC 2026 Wearable And Wireless Biomedical Systems Collection"
+  },
+  "ISSCC 2026 Wearable And Wireless Biomedical Systems Collection<SEP>PDF": {
+    "chunk_ids": [
+      "chunk-e4a307af220b383886bf52906f7d65bf"
+    ],
+    "count": 1,
+    "create_time": 1773428195,
+    "update_time": 1773428195,
+    "_id": "ISSCC 2026 Wearable And Wireless Biomedical Systems Collection<SEP>PDF"
+  },
+  "AI Deep Summary<SEP>ISSCC 2026 Wearable And Wireless Biomedical Systems Collection": {
+    "chunk_ids": [
+      "chunk-e4a307af220b383886bf52906f7d65bf"
+    ],
+    "count": 1,
+    "create_time": 1773428198,
+    "update_time": 1773428198,
+    "_id": "AI Deep Summary<SEP>ISSCC 2026 Wearable And Wireless Biomedical Systems Collection"
+  },
+  "ISSCC 2026 Wearable And Wireless Biomedical Systems Collection<SEP>Liufang": {
+    "chunk_ids": [
+      "chunk-e4a307af220b383886bf52906f7d65bf"
+    ],
+    "count": 1,
+    "create_time": 1773428200,
+    "update_time": 1773428200,
+    "_id": "ISSCC 2026 Wearable And Wireless Biomedical Systems Collection<SEP>Liufang"
+  },
+  "ISSCC 2026 Wearable And Wireless Biomedical Systems Collection<SEP>PPT": {
+    "chunk_ids": [
+      "chunk-e4a307af220b383886bf52906f7d65bf"
+    ],
+    "count": 1,
+    "create_time": 1773428203,
+    "update_time": 1773428203,
+    "_id": "ISSCC 2026 Wearable And Wireless Biomedical Systems Collection<SEP>PPT"
+  },
+  "44.39 MB<SEP>ISSCC 2026 Wearable And Wireless Biomedical Systems Collection": {
+    "chunk_ids": [
+      "chunk-e4a307af220b383886bf52906f7d65bf"
+    ],
+    "count": 1,
+    "create_time": 1773428206,
+    "update_time": 1773428206,
+    "_id": "44.39 MB<SEP>ISSCC 2026 Wearable And Wireless Biomedical Systems Collection"
+  },
+  "2026-03-11<SEP>ISSCC 2026 Wearable And Wireless Biomedical Systems Collection": {
+    "chunk_ids": [
+      "chunk-e4a307af220b383886bf52906f7d65bf"
+    ],
+    "count": 1,
+    "create_time": 1773428208,
+    "update_time": 1773428208,
+    "_id": "2026-03-11<SEP>ISSCC 2026 Wearable And Wireless Biomedical Systems Collection"
   }
 }

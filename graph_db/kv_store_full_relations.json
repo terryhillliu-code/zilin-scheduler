@@ -4138,5 +4138,417 @@
     "create_time": 1773341766,
     "update_time": 1773341766,
     "_id": "doc-df273047e67bbcef8888ccc637f02f26"
+  },
+  "doc-caffd63ee8599ae7be43759f1b96b861": {
+    "relation_pairs": [
+      [
+        "2026-03-07 19:05:19",
+        "Evaluating CXL Based Composable Memory Solutions A TCO Framework For Datacenter Workloads"
+      ],
+      [
+        "Evaluating CXL Based Composable Memory Solutions A TCO Framework For Datacenter Workloads",
+        "Server Architecture"
+      ],
+      [
+        "Local Document",
+        "Local File Path"
+      ],
+      [
+        "CXL",
+        "Evaluating CXL Based Composable Memory Solutions A TCO Framework For Datacenter Workloads"
+      ],
+      [
+        "Evaluating CXL Based Composable Memory Solutions A TCO Framework For Datacenter Workloads",
+        "Research Report Library"
+      ],
+      [
+        "Core",
+        "Evaluating CXL Based Composable Memory Solutions A TCO Framework For Datacenter Workloads"
+      ],
+      [
+        "Evaluating CXL Based Composable Memory Solutions A TCO Framework For Datacenter Workloads",
+        "TCO Framework"
+      ],
+      [
+        "AI Deep Summary",
+        "Evaluating CXL Based Composable Memory Solutions A TCO Framework For Datacenter Workloads"
+      ],
+      [
+        "1.81 MB",
+        "Evaluating CXL Based Composable Memory Solutions A TCO Framework For Datacenter Workloads"
+      ],
+      [
+        "Evaluating CXL Based Composable Memory Solutions A TCO Framework For Datacenter Workloads",
+        "Local Document"
+      ],
+      [
+        "Evaluating CXL Based Composable Memory Solutions A TCO Framework For Datacenter Workloads",
+        "PDF"
+      ],
+      [
+        "Datacenter Workloads",
+        "Evaluating CXL Based Composable Memory Solutions A TCO Framework For Datacenter Workloads"
+      ],
+      [
+        "Evaluating CXL Based Composable Memory Solutions A TCO Framework For Datacenter Workloads",
+        "Vectorized"
+      ],
+      [
+        "2026-03-07",
+        "Evaluating CXL Based Composable Memory Solutions A TCO Framework For Datacenter Workloads"
+      ],
+      [
+        "Composable Memory Solutions",
+        "Evaluating CXL Based Composable Memory Solutions A TCO Framework For Datacenter Workloads"
+      ]
+    ],
+    "count": 15,
+    "create_time": 1773426934,
+    "update_time": 1773426934,
+    "_id": "doc-caffd63ee8599ae7be43759f1b96b861"
+  },
+  "doc-f4f7f600f2ca98f707b1999fc4b9f540": {
+    "relation_pairs": [
+      [
+        "Object Party",
+        "麻省理工长毛兔"
+      ],
+      [
+        "Goal Tracker",
+        "麻省理工长毛兔"
+      ],
+      [
+        "Mary Maker",
+        "麻省理工长毛兔"
+      ],
+      [
+        "MVP",
+        "麻省理工长毛兔"
+      ],
+      [
+        "Large Model API",
+        "OpenAI"
+      ],
+      [
+        "吴文达",
+        "麻省理工长毛兔"
+      ],
+      [
+        "Base44",
+        "麻省理工长毛兔"
+      ],
+      [
+        "Lovable",
+        "麻省理工长毛兔"
+      ],
+      [
+        "N8N",
+        "麻省理工长毛兔"
+      ],
+      [
+        "Cloud Code",
+        "麻省理工长毛兔"
+      ],
+      [
+        "No-Code",
+        "麻省理工长毛兔"
+      ],
+      [
+        "Mindset",
+        "No-Code"
+      ],
+      [
+        "3D Interaction Graph",
+        "麻省理工长毛兔"
+      ],
+      [
+        "Holiday Card Generator",
+        "麻省理工长毛兔"
+      ],
+      [
+        "抖音",
+        "麻省理工长毛兔"
+      ],
+      [
+        "Cloud Code",
+        "Lovable"
+      ],
+      [
+        "Brand Sentiment Monitor",
+        "麻省理工长毛兔"
+      ],
+      [
+        "12 Months 12 Products",
+        "麻省理工长毛兔"
+      ],
+      [
+        "Cursor",
+        "麻省理工长毛兔"
+      ],
+      [
+        "VC Email Pre-Screen AI Agent",
+        "麻省理工长毛兔"
+      ],
+      [
+        "ToB",
+        "TypeScript"
+      ],
+      [
+        "AI Agent",
+        "RAG"
+      ]
+    ],
+    "count": 22,
+    "create_time": 1773426993,
+    "update_time": 1773426993,
+    "_id": "doc-f4f7f600f2ca98f707b1999fc4b9f540"
+  },
+  "doc-13553145d3f41af0c13bdd91235f3ff3": {
+    "relation_pairs": [
+      [
+        "Optical Interconnects",
+        "Storage"
+      ],
+      [
+        "Optical Interconnects",
+        "Silicon Photonics"
+      ],
+      [
+        "Bandwidth",
+        "Optical Interconnects"
+      ],
+      [
+        "Optical Engine",
+        "Optical Interconnects"
+      ],
+      [
+        "Optical Interconnects",
+        "Signal Attenuation"
+      ],
+      [
+        "7833 - Thinking Outside The Rack- Scaling Up With Optical Interconnects",
+        "Optical Interconnects"
+      ],
+      [
+        "Cost Optimization",
+        "Optical Interconnects"
+      ],
+      [
+        "Memory",
+        "Optical Interconnects"
+      ],
+      [
+        "Advanced Packaging",
+        "Optical Interconnects"
+      ],
+      [
+        "Artificial Intelligence",
+        "Optical Interconnects"
+      ],
+      [
+        "Large Model Training",
+        "Optical Interconnects"
+      ],
+      [
+        "Compute Unit",
+        "Optical Interconnects"
+      ],
+      [
+        "Electrical Interconnects",
+        "Optical Interconnects"
+      ],
+      [
+        "Optical Interconnects",
+        "Power Consumption"
+      ],
+      [
+        "7833 - Thinking Outside The Rack- Scaling Up With Optical Interconnects",
+        "PDF"
+      ],
+      [
+        "Optical Interconnects",
+        "Standardized Interfaces"
+      ],
+      [
+        "Optical Interconnects",
+        "Resource Pooling"
+      ],
+      [
+        "Data Centers",
+        "Optical Interconnects"
+      ],
+      [
+        "7833 - Thinking Outside The Rack- Scaling Up With Optical Interconnects",
+        "Obsidian"
+      ],
+      [
+        "Compute Unit",
+        "Optical Engine"
+      ]
+    ],
+    "count": 20,
+    "create_time": 1773427300,
+    "update_time": 1773427300,
+    "_id": "doc-13553145d3f41af0c13bdd91235f3ff3"
+  },
+  "doc-784d4585ebe0819ccbc35184946098ac": {
+    "relation_pairs": [
+      [
+        "Confidence Control",
+        "ReThinker Framework"
+      ],
+      [
+        "ReThinker Framework",
+        "Scientific Q&A Scenarios"
+      ],
+      [
+        "ReThinker Framework",
+        "Uncertainty Quantification"
+      ],
+      [
+        "Automatic Reasoning Systems",
+        "ReThinker Framework"
+      ],
+      [
+        "ReThinker Framework",
+        "Scientific Reasoning"
+      ],
+      [
+        "ReThinker Framework",
+        "Self-Correction"
+      ],
+      [
+        "Obsidian",
+        "ReThinker Scientific Reasoning Report"
+      ],
+      [
+        "Accuracy",
+        "ReThinker Framework"
+      ],
+      [
+        "Guided Reflection",
+        "ReThinker Framework"
+      ],
+      [
+        "ReThinker Framework",
+        "ReThinker Scientific Reasoning Report"
+      ],
+      [
+        "Iterative Optimization",
+        "ReThinker Framework"
+      ],
+      [
+        "Logical Errors",
+        "ReThinker Framework"
+      ],
+      [
+        "Large Models",
+        "ReThinker Framework"
+      ],
+      [
+        "Hallucination",
+        "ReThinker Framework"
+      ],
+      [
+        "ReThinker Framework",
+        "Robustness"
+      ],
+      [
+        "AI Model",
+        "ReThinker Framework"
+      ]
+    ],
+    "count": 16,
+    "create_time": 1773427552,
+    "update_time": 1773427552,
+    "_id": "doc-784d4585ebe0819ccbc35184946098ac"
+  },
+  "doc-de484dab9dc735b91436af3e79491149": {
+    "relation_pairs": [
+      [
+        "Obsidian",
+        "Thinking Outside The Rack Scaling Up With Optical Interconnects"
+      ],
+      [
+        "Personal",
+        "Thinking Outside The Rack Scaling Up With Optical Interconnects"
+      ],
+      [
+        "Report",
+        "Thinking Outside The Rack Scaling Up With Optical Interconnects"
+      ],
+      [
+        "Liufang",
+        "Thinking Outside The Rack Scaling Up With Optical Interconnects"
+      ],
+      [
+        "PDF",
+        "Thinking Outside The Rack Scaling Up With Optical Interconnects"
+      ],
+      [
+        "2026-03-07",
+        "Thinking Outside The Rack Scaling Up With Optical Interconnects"
+      ],
+      [
+        "Optical Interconnects",
+        "Thinking Outside The Rack Scaling Up With Optical Interconnects"
+      ],
+      [
+        "1.45 MB",
+        "Thinking Outside The Rack Scaling Up With Optical Interconnects"
+      ]
+    ],
+    "count": 8,
+    "create_time": 1773427870,
+    "update_time": 1773427870,
+    "_id": "doc-de484dab9dc735b91436af3e79491149"
+  },
+  "doc-e4a307af220b383886bf52906f7d65bf": {
+    "relation_pairs": [
+      [
+        "ISSCC 2026 Wearable And Wireless Biomedical Systems Collection",
+        "PDF"
+      ],
+      [
+        "ISSCC 2026 Wearable And Wireless Biomedical Systems Collection",
+        "Obsidian"
+      ],
+      [
+        "ISSCC 2026 Wearable And Wireless Biomedical Systems Collection",
+        "PPT"
+      ],
+      [
+        "ISSCC 2026 Wearable And Wireless Biomedical Systems Collection",
+        "Wearable And Wireless Biomedical Systems"
+      ],
+      [
+        "2026-03-11",
+        "ISSCC 2026 Wearable And Wireless Biomedical Systems Collection"
+      ],
+      [
+        "ISSCC 2026 Wearable And Wireless Biomedical Systems Collection",
+        "Liufang"
+      ],
+      [
+        "Frontier-Tech",
+        "ISSCC 2026 Wearable And Wireless Biomedical Systems Collection"
+      ],
+      [
+        "AI Deep Summary",
+        "ISSCC 2026 Wearable And Wireless Biomedical Systems Collection"
+      ],
+      [
+        "44.39 MB",
+        "ISSCC 2026 Wearable And Wireless Biomedical Systems Collection"
+      ],
+      [
+        "ISSCC 2026",
+        "ISSCC 2026 Wearable And Wireless Biomedical Systems Collection"
+      ]
+    ],
+    "count": 10,
+    "create_time": 1773428211,
+    "update_time": 1773428211,
+    "_id": "doc-e4a307af220b383886bf52906f7d65bf"
   }
 }

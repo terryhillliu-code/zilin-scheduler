@@ -201,6 +201,15 @@ jobs:
     push_to: []
     retry: { max_attempts: 1, delay_seconds: 300 }
 
+  daily_voice_task_summary:
+    enabled: true
+    hour: 20
+    minute: 0
+    day_of_week: "mon-sun"
+    description: "每日语音任务汇总"
+    push_to: []
+    retry: { max_attempts: 2, delay_seconds: 60 }
+
 
   obsidian_sync:
     enabled: true

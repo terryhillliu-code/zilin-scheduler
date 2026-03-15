@@ -1608,13 +1608,105 @@ def job_graph_maintenance():
                 logger.info(f"✅ 知识图谱索引完成。{output}")
         else:
             logger.error(f"❌ 知识图谱索引失败: {result.stderr}")
-            
+
     except Exception as e:
         logger.error(f"❌ 知识图谱维护异常: {e}")
     finally:
         release_lock(task_name)
         end_time = time.time()
         log_task_metrics(task_name, start_time, end_time, success=True) # 索引不影响推送，标记为成功
+
+
+def job_daily_voice_task_summary():
+    """每日语音任务汇总 20:00
+
+    推送今日待办任务和已完成任务汇总
+    """
+    global logger
+    task_name = "daily_voice_task_summary"
+    logger.info("📋 === 每日任务汇总 ===")
+
+    if not acquire_lock(task_name):
+        logger.warning(f"⚠️ {task_name} 已在运行，跳过")
+        return
+
+    start_time = time.time()
+    success = False
+
+    try:
+        # 导入语音任务模块
+        sys.path.insert(0, str(Path.home() / "zhiwei-bot"))
+        from voice_task_store import VoiceTaskStore, create_daily_note
+
+        store = VoiceTaskStore()
+        pending = store.list_pending(20)
+        done_today = store.list_done_today(20)
+
+        # 创建 Obsidian 笔记
+        note_path = create_daily_note(pending, done_today)
+        logger.info(f"📝 创建每日笔记: {note_path}")
+
+        # 获取统计
+        stats = store.stats()
+
+        # 构建汇总消息
+        today = datetime.now().strftime('%Y-%m-%d')
+        lines = [
+            f"📋 每日任务汇总 ({today})",
+            "",
+            f"**待办任务** ({stats['pending']} 项)"
+        ]
+
+        if pending:
+            priority_icons = {"high": "🔴", "normal": "🟡", "low": "⚪"}
+            for task in pending[:10]:
+                icon = priority_icons.get(task.get('priority', 'normal'), '🟡')
+                lines.append(f"{icon} {task['content']}")
+            if len(pending) > 10:
+                lines.append(f"... 还有 {len(pending) - 10} 项")
+        else:
+            lines.append("暂无待办任务 🎉")
+
+        lines.append("")
+        lines.append(f"**今日完成** ({stats['done_today']} 项)")
+
+        if done_today:
+            for task in done_today[:5]:
+                lines.append(f"✅ {task['content']}")
+            if len(done_today) > 5:
+                lines.append(f"... 还有 {len(done_today) - 5} 项")
+        else:
+            lines.append("今日暂无完成任务")
+
+        # 推送汇总
+        summary = "\n".join(lines)
+
+        # 获取活跃用户推送
+        try:
+            feishu_user_file = Path.home() / "tasks" / ".feishu_user_id"
+            if feishu_user_file.exists():
+                target_user = feishu_user_file.read_text().strip()
+            else:
+                target_user = None
+
+            if target_user:
+                from feishu_api import send_direct_message
+                send_direct_message(target_user, summary)
+                logger.info(f"✅ 任务汇总已推送给用户: {target_user[:10]}...")
+            else:
+                logger.warning("⚠️ 未找到活跃用户，跳过推送")
+
+        except Exception as e:
+            logger.error(f"❌ 推送失败: {e}")
+
+        success = True
+
+    except Exception as e:
+        logger.error(f"❌ 每日任务汇总异常: {e}")
+    finally:
+        release_lock(task_name)
+        end_time = time.time()
+        log_task_metrics(task_name, start_time, end_time, success=success)
 
 
 def job_ws_health_check():
@@ -1705,6 +1797,7 @@ def main():
         "knowledge_classify": job_knowledge_classify,  # T-076
         "research_pipeline": job_research_pipeline,  # Phase 4a (T-411)
         "graph_maintenance": job_graph_maintenance,  # Phase 5b (T-501)
+        "daily_voice_task_summary": job_daily_voice_task_summary,  # 每日语音任务汇总
     }
 
     # 动态添加 info_brief_XX 任务映射 (07, 09, 11, 13, 15, 17, 19, 21)

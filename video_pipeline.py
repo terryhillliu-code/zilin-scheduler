@@ -57,8 +57,14 @@ def process_single_video(url: str):
             logger.info(f"该视频已在知识库中 (ID: {doc_id})，跳过处理。")
             return
             
-        # 3. 转录与总结
-        summary_md = process_video_content(audio_path)
+        # 3. 转录与总结（深度分析模式）
+        logger.info("启用深度分析模式...")
+        summary_md = process_video_content(
+            audio_path,
+            deep_analysis=True,
+            source_info=url,
+            duration=""  # 时长信息可从下载器获取
+        )
         
         # 4. 存入 Obsidian
         # 清理非法文件名字符

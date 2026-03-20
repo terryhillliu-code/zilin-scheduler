@@ -16,6 +16,9 @@ import threading
 from datetime import datetime, timedelta
 from pathlib import Path
 
+# 公共模块
+from llm_proxy import call_llm_direct
+
 # 新增业务跳过异常类
 class TaskSkippedException(Exception):
     pass
@@ -266,36 +269,7 @@ def load_prompt(template_name: str, **kwargs) -> str:
         return f"Error: Failed to render template {template_name}: {e}"
 
 # ============ Agent 调用 ============
-
-def call_llm_direct(message: str, timeout: int = 180) -> tuple[bool, str]:
-    """
-    绕过 OpenClaw，直接调用本地代理 (8045)
-    用于解决 Agent/模型工具冲突时的降级方案
-    """
-    import http.client
-    import json
-    
-    try:
-        payload = json.dumps({
-            "model": "qwen3.5-plus",
-            "messages": [{"role": "user", "content": message}],
-            "temperature": 0.7
-        })
-        
-        conn = http.client.HTTPConnection("127.0.0.1", 8045, timeout=timeout)
-        conn.request("POST", "/v1/chat/completions", body=payload, headers={"Content-Type": "application/json"})
-        resp = conn.getresponse()
-        data = json.loads(resp.read().decode())
-        conn.close()
-        
-        if resp.status == 200:
-            content = data.get("choices", [{}])[0].get("message", {}).get("content", "")
-            return True, content
-        else:
-            err = data.get("error", {}).get("message", "Unknown error")
-            return False, f"LLM Direct Error {resp.status}: {err}"
-    except Exception as e:
-        return False, f"LLM Direct Exception: {e}"
+# call_llm_direct 已迁移到 llm_proxy.py
 
 
 def call_agent(agent_id: str, message: str, timeout: int = 180) -> tuple[bool, str]:

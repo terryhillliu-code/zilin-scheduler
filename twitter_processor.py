@@ -142,7 +142,7 @@ def enrich_with_context(content: str, top_k: int = 5) -> str:
 def call_llm(prompt: str) -> str:
     """调用 LLM"""
     try:
-        from scheduler import call_llm_direct
+        from llm_proxy import call_llm_direct
         if call_llm_direct:
             return call_llm_direct(prompt)
     except ImportError:

@@ -36,6 +36,9 @@ except ImportError:
     LLM_CLIENT_AVAILABLE = False
     llm_client = None
 
+# 公共模块：本地代理调用
+from llm_proxy import call_llm_direct as llm_proxy_call
+
 # 日志配置
 logging.basicConfig(
     level=logging.INFO,
@@ -58,26 +61,6 @@ class UnifiedPusher:
     def _load_config(self):
         with open(CONFIG_PATH, 'r', encoding='utf-8') as f:
             return yaml.safe_load(f)
-
-    def call_llm_direct(self, message: str, timeout: int = 180) -> tuple[bool, str]:
-        """降级方案：直接调用本地模型代理"""
-        import http.client
-        try:
-            payload = json.dumps({
-                "model": "gpt-4o",
-                "messages": [{"role": "user", "content": message}],
-                "temperature": 0.7
-            })
-            conn = http.client.HTTPConnection("127.0.0.1", 8045, timeout=timeout)
-            conn.request("POST", "/v1/chat/completions", body=payload, headers={"Content-Type": "application/json"})
-            resp = conn.getresponse()
-            data = json.loads(resp.read().decode())
-            conn.close()
-            if resp.status == 200:
-                return True, data.get("choices", [{}])[0].get("message", {}).get("content", "")
-            return False, f"HTTP {resp.status}"
-        except Exception as e:
-            return False, str(e)
 
     def refine_content(self, title: str, content: str, task_name: str = "") -> str:
         """调用 Operator Agent 进行内容润色"""
@@ -109,7 +92,7 @@ class UnifiedPusher:
 
         # 降级：使用本地代理
         logger.warning("⚠️ LLM 客户端不可用，执行降级润色...")
-        ok, text = self.call_llm_direct(prompt)
+        ok, text = llm_proxy_call(prompt)
         return text if ok else content
 
     def process_message(self, msg: dict):

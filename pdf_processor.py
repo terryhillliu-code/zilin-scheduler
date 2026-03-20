@@ -16,7 +16,7 @@ from tempfile import TemporaryDirectory
 try:
     import sys
     sys.path.append(str(Path(__file__).parent))
-    from scheduler import call_llm_direct
+    from llm_proxy import call_llm_direct
 except ImportError:
     call_llm_direct = None
 

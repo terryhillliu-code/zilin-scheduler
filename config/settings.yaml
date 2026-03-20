@@ -237,6 +237,25 @@ jobs:
     push_to: []
     retry: { max_attempts: 1, delay_seconds: 30 }
 
+  # AI 信息源管理
+  ai_source_reminder:
+    enabled: true
+    hour: 9
+    minute: 0
+    day_of_week: "mon"
+    description: "每周一提醒评估 Twitter AI Builder 账号"
+    push_to: ["feishu"]
+    retry: { max_attempts: 1, delay_seconds: 60 }
+
+  podcast_update:
+    enabled: true
+    hour: 18
+    minute: 0
+    day_of_week: "mon-sun"
+    description: "每日检查播客更新并推送"
+    push_to: ["feishu"]
+    retry: { max_attempts: 2, delay_seconds: 30 }
+
 data_sources:
   weather:
     city: "杭州"

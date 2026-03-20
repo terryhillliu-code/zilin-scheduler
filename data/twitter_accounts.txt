@@ -1,0 +1,39 @@
+# Twitter AI Builder 待评估账号列表
+# 格式: twitter_handle | 领域 | 备注
+# 状态标记: [待评估] [已加入列表] [已跳过]
+# 最后更新: 2026-03-20
+
+## 一线 Builder（技术贡献者）
+
+# OpenAI 系
+karpathy | AI/LLM | OpenAI 创始成员，前 Tesla AI 总监，教育者 [待评估]
+sama | AI/创业 | OpenAI CEO [待评估]
+gdb | AI/研究 | OpenAI 联合创始人 [待评估]
+woj_zaremba | AI/研究 | OpenAI 联合创始人，Codex 负责人 [待评估]
+
+# Google/DeepMind 系
+jeffdean | AI/工程 | Google AI 负责人 [待评估]
+ylecun | AI/研究 | NYU 教授，Meta AI 首席科学家 [待评估]
+demishassabis | AI/研究 | DeepMind CEO [待评估]
+schmidhuber | AI/研究 | LSTM 发明者 [待评估]
+
+# Anthropic 系
+dario_amodei | AI/安全 | Anthropic CEO [待评估]
+jackclarksf | AI/政策 | Anthropic 联合创始人 [待评估]
+
+# 开源/基础设施
+karpathy | AI/教育 | nanoGPT, micrograd 作者 [待评估]
+anton-osika | AI/工具 | GPT-engineer 作者 [待评估]
+hwchung_27 | AI/研究 | OpenAI researcher [待评估]
+rasbt | AI/教育 | Machine Learning 书作者 [待评估]
+fchollet | AI/研究 | Keras 作者 [待评估]
+
+# 国内 Builder
+stephen_wolfram | AI/科学 | Wolfram Language 作者 [待评估]
+kaifulee | AI/投资 | 创新工场 [待评估]
+
+## 需要手动添加的账号
+# 在此区域添加你发现的账号，格式同上
+
+## 已评估结果
+# 格式: twitter_handle | 评分 | 决定 | 日期

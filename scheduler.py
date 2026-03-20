@@ -277,7 +277,7 @@ def call_llm_direct(message: str, timeout: int = 180) -> tuple[bool, str]:
     
     try:
         payload = json.dumps({
-            "model": "gpt-4o",
+            "model": "qwen3.5-plus",
             "messages": [{"role": "user", "content": message}],
             "temperature": 0.7
         })
@@ -561,48 +561,8 @@ def enrich_with_klib(task_name: str, prompt_text: str, top_k: int = 5) -> str:
     # 降级到旧方案 (GraphRAG)
     return enrich_with_klib_legacy(task_name, prompt_text)
 
-def fetch_rag_context(query: str, top_k: int = 2) -> str:
-    """
-    从本地知识库获取相关背景知识
-    """
-    import subprocess
 
-    cmd = [
-        "docker", "exec", "clawdbot",
-        "python3", "/root/workspace/skills/knowledge-search/search.py",
-        "vector", "--query", query, "--top_k", str(top_k)
-    ]
 
-    try:
-        result = subprocess.run(cmd, capture_output=True, text=True, timeout=30)
-
-        if result.returncode != 0:
-            logger.warning(f"RAG 查询失败: {result.stderr.strip()}")
-            return ""
-
-        output = result.stdout
-        # 解析输出，提取相关片段
-        lines = output.split('\n')
-        context_parts = []
-        capture = False
-
-        for line in lines:
-            if line.startswith('[1]') or line.startswith('[2]'):
-                capture = True
-                context_parts.append(line)
-            elif capture and line.strip():
-                context_parts.append(line)
-            elif line.strip() == '':
-                capture = False
-
-        return '\n'.join(context_parts[:6])  # 限制上下文长度
-
-    except subprocess.TimeoutExpired:
-        logger.warning("RAG 查询超时")
-        return ""
-    except Exception as e:
-        logger.warning(f"RAG 上下文获取异常: {e}")
-        return ""
 
 
 # ============ 任务定义 ============

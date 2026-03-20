@@ -1506,6 +1506,42 @@ def job_klib_sync():
         )
 
 
+def job_video_notes_organize():
+    """每日凌晨4点整理 Inbox 中的视频笔记"""
+    global logger
+    task_name = "video_notes_organize"
+
+    if not try_acquire_lock(task_name):
+        return
+
+    start_time = time.time()
+    success = False
+
+    try:
+        logger.info("🎬 === 视频笔记整理 ===")
+
+        from video_notes_organize import organize_video_notes
+        stats = organize_video_notes(dry_run=False)
+
+        if stats:
+            logger.info(f"🎬 整理完成: 移动 {stats['moved']} 个, 错误 {stats['errors']} 个")
+            success = stats['errors'] == 0
+        else:
+            success = True
+
+    except Exception as e:
+        logger.error(f"❌ {task_name} 发生异常: {e}")
+    finally:
+        release_lock(task_name)
+        end_time = time.time()
+        log_task_metrics(
+            task_name=task_name,
+            start_time=start_time,
+            end_time=end_time,
+            success=success
+        )
+
+
 def job_research_pipeline():
     """Phase 4a: PDF研报扫描与向量化入库"""
     global logger
@@ -1792,6 +1828,7 @@ def main():
         "system_metrics":  job_system_metrics_report,  # T-016.2
         "obsidian_sync":   job_obsidian_sync,  # Phase 2: Obsidian 笔记同步
         "klib_sync":       job_klib_sync, # KLib 每日自动整理知识库
+        "video_notes_organize": job_video_notes_organize,  # 视频笔记整理
         "fail_test":       job_fail_test,  # T-016.3 (test only)
         "log_rotate":      job_log_rotate,  # T-016.5
         "knowledge_classify": job_knowledge_classify,  # T-076

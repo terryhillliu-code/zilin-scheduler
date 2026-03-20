@@ -228,6 +228,15 @@ jobs:
     push_to: []
     retry: { max_attempts: 1, delay_seconds: 60 }
 
+  video_notes_organize:
+    enabled: true
+    hour: 4
+    minute: 0
+    day_of_week: "mon-sun"
+    description: "每日凌晨4点整理 Inbox 中的视频笔记到归档目录"
+    push_to: []
+    retry: { max_attempts: 1, delay_seconds: 30 }
+
 data_sources:
   weather:
     city: "杭州"

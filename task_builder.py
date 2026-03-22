@@ -30,11 +30,11 @@ VERIFICATION_REGISTRY = {
     "~/clawdbot-docker/data/openclaw/openclaw.json": [
         ("JSON语法", "python3 -m json.tool ~/clawdbot-docker/data/openclaw/openclaw.json > /dev/null && echo '语法正确'"),
         ("无密钥泄露", 'grep -n "sk-" ~/clawdbot-docker/data/openclaw/openclaw.json || echo "无泄露"'),
-        ("容器健康", "docker inspect -f '{{.State.Health.Status}}' clawdbot"),
+        ("容器健康", "python3 ~/zhiwei-scheduler/scripts/docker_cache.py --check clawdbot"),
         ("pre_check", "~/scripts/pre_check_v2.sh"),
     ],
     "~/clawdbot-docker/skills/": [
-        ("容器健康", "docker inspect -f '{{.State.Health.Status}}' clawdbot"),
+        ("容器健康", "python3 ~/zhiwei-scheduler/scripts/docker_cache.py --check clawdbot"),
         ("pre_check", "~/scripts/pre_check_v2.sh"),
     ],
     "~/scripts/": [

@@ -159,8 +159,9 @@ def job_morning_brief():
         success, content = call_agent("researcher", prompt, timeout=600)
 
         if success:
-            # 保存结果
-            save_result(task_name, content)
+            # 保存结果 (安全落盘：若今日已发则跳过)
+            save_result_safe(task_name, content, targets=["feishu"])
+
 
             # 尝试推送
             if not is_quiet_hours():
@@ -200,7 +201,7 @@ def job_noon_brief():
         success, content = call_agent("researcher", prompt, timeout=600)
 
         if success:
-            save_result(task_name, content)
+            save_result_safe(task_name, content, targets=["feishu"])
             if not is_quiet_hours():
                 try_push(task_name, content)
             log_task_metrics(task_name, "success", duration_ms=int((time.time() - start_time) * 1000))
@@ -243,8 +244,9 @@ def job_info_brief(hour: int):
                 log_task_metrics(task_name, "skipped", extra={"reason": "duplicate"})
                 return
 
-            # 保存结果
-            save_result(task_name, content)
+            # 保存结果 (安全落盘：若今日已发则跳过)
+            save_result_safe(task_name, content, targets=["feishu"])
+
 
             # 推送
             if not is_quiet_hours():
@@ -280,7 +282,7 @@ def job_us_market_open():
         success, content = call_agent("researcher", prompt, timeout=300)
 
         if success:
-            save_result(task_name, content)
+            save_result_safe(task_name, content, targets=["feishu"])
             try_push(task_name, content)
             log_task_metrics(task_name, "success", duration_ms=int((time.time() - start_time) * 1000))
         else:
@@ -309,7 +311,7 @@ def job_us_market_close():
         success, content = call_agent("researcher", prompt, timeout=300)
 
         if success:
-            save_result(task_name, content)
+            save_result_safe(task_name, content, targets=["feishu"])
             try_push(task_name, content)
             log_task_metrics(task_name, "success", duration_ms=int((time.time() - start_time) * 1000))
         else:
@@ -338,7 +340,7 @@ def job_crypto(period: str = "morning"):
         success, content = call_agent("researcher", prompt, timeout=180)
 
         if success:
-            save_result(task_name, content)
+            save_result_safe(task_name, content, targets=["feishu"])
             try_push(task_name, content)
             log_task_metrics(task_name, "success", duration_ms=int((time.time() - start_time) * 1000))
         else:
@@ -371,7 +373,7 @@ def job_arxiv():
 
             if result.returncode == 0:
                 content = result.stdout
-                save_result(task_name, content)
+                save_result_safe(task_name, content, targets=["feishu"])
                 try_push(task_name, content)
                 log_task_metrics(task_name, "success", duration_ms=int((time.time() - start_time) * 1000))
             else:
@@ -442,7 +444,7 @@ def job_system_check():
             )
 
             content = result.stdout if result.returncode == 0 else result.stderr
-            save_result(task_name, content)
+            save_result_safe(task_name, content, targets=["feishu"])
             log_task_metrics(task_name, "success", duration_ms=int((time.time() - start_time) * 1000))
         else:
             logger.warning("健康检查脚本不存在")
@@ -471,7 +473,7 @@ def job_system_metrics_report():
         success, content = call_agent("operator", prompt, timeout=300)
 
         if success:
-            save_result(task_name, content)
+            save_result_safe(task_name, content, targets=["feishu"])
             try_push(task_name, content)
             log_task_metrics(task_name, "success", duration_ms=int((time.time() - start_time) * 1000))
         else:

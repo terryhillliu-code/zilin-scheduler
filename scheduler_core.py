@@ -42,22 +42,14 @@ RETRY_DELAYS = [120, 300, 600]  # 2min, 5min, 10min
 JSON_LOG_PATH = Path.home() / "logs" / "scheduler.jsonl"
 
 
-def is_quiet_hours(now: datetime = None) -> bool:
-    """
-    检查当前时间是否在静默时段（23:00-06:30）
-    重试任务在静默时段不推送
-    """
-    if now is None:
-        now = datetime.now()
-    hour = now.hour
-    minute = now.minute
+# 导入核心工具
+sys.path.insert(0, str(Path.home() / "zhiwei-bot"))
+try:
+    from core.system_utils import is_quiet_hours
+except ImportError:
+    def is_quiet_hours(now=None):
+        return False
 
-    # 23:00-06:30 为静默时段
-    if hour >= 23 or hour < 6:
-        return True
-    if hour == 6 and minute < 30:
-        return True
-    return False
 
 
 def get_retry_delay(attempt: int) -> int:
@@ -264,14 +256,35 @@ except ImportError:
 
 # ============ RAG 相关 ============
 
-# 尝试导入 RAG 桥接
-try:
-    from rag_bridge import enrich_with_rag, is_available as rag_is_available
-    RAG_AVAILABLE = rag_is_available()
-except ImportError:
-    RAG_AVAILABLE = False
-    def enrich_with_rag(query, top_k=5):
+def enrich_with_rag(query, top_k=5):
+    """通过子进程调用 bridge.py 进行三轨检索增强 (V2-204-Fix2: 隔离依赖环境)"""
+    import subprocess
+    import json
+    try:
+        rag_venv = "/Users/liufang/zhiwei-rag/venv/bin/python3"
+        bridge_script = "/Users/liufang/zhiwei-rag/bridge.py"
+        
+        result = subprocess.run(
+            [rag_venv, bridge_script, "retrieve", query, "--top-k", str(top_k)],
+            capture_output=True, text=True, timeout=30
+        )
+        if result.returncode == 0:
+            data = json.loads(result.stdout)
+            if not data: return ""
+            context_parts = []
+            for r in data[:3]:
+                source = r.get('source', 'unknown')
+                text = r.get('text', '')[:300]
+                context_parts.append(f"【{source}】\n{text}")
+            return "\n\n" + "\n\n".join(context_parts)
+    except Exception as e:
+        logger.warning(f"RAG 子进程检索异常: {e}")
         return ""
+
+RAG_AVAILABLE = True
+
+
+
 
 
 # ============ 配置加载 ============

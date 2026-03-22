@@ -13,51 +13,17 @@ from lightrag import LightRAG, QueryParam
 from lightrag.llm.openai import openai_complete_if_cache, openai_embed
 from lightrag.llm.openai import wrap_embedding_func_with_attrs
 
-# 环境变量配置 (Coding Plan + Dashscope 分离)
-def _load_env_secrets():
-    """
-    使用 Coding Plan:
-    - LLM: BAILIAN_API_KEY + coding.dashscope.aliyuncs.com
-    - Embedding: DASHSCOPE_API_KEY + dashscope.aliyuncs.com
-    """
-    try:
-        from dotenv import load_dotenv
-        # 从 zhiwei-bot/.env 加载 (同时包含两个 key)
-        bot_env = Path("/Users/liufang/zhiwei-bot/.env")
-        if bot_env.exists():
-            load_dotenv(bot_env, override=True)
-    except ImportError:
-        pass
-    
-    # 返回 BAILIAN_API_KEY 用于 LLM
-    coding_key = os.getenv("BAILIAN_API_KEY")
-    if coding_key and coding_key.startswith("sk-"):
-        os.environ["DASHSCOPE_API_KEY"] = coding_key
-        return coding_key
-    
-    # 降级：DASHSCOPE_API_KEY
-    return os.getenv("DASHSCOPE_API_KEY")
+# 环境变量配置 - 使用统一密钥加载器
+import sys
+sys.path.insert(0, str(Path.home() / "scripts"))
+from load_secrets import load_secrets
 
-def _get_dashscope_key():
-    """获取 dashscope API Key (用于 Embedding) - 直接从文件读取避免覆盖"""
-    # 尝试从 ~/.secrets/zhiwei.env 读取 (不通过 load_dotenv 避免覆盖环境变量)
-    secrets_path = Path.home() / ".secrets" / "zhiwei.env"
-    if secrets_path.exists():
-        try:
-            with open(secrets_path, "r") as f:
-                for line in f:
-                    line = line.strip()
-                    if line.startswith("DASHSCOPE_API_KEY="):
-                        key = line.split("=", 1)[1].strip().strip("'").strip('"')
-                        if key.startswith("sk-"):
-                            return key
-        except Exception:
-            pass
-    
-    # 降级到 BAILIAN_API_KEY
-    return None
+load_secrets(silent=True)
 
-DASHSCOPE_API_KEY = _load_env_secrets()
+# API Key 配置
+DASHSCOPE_API_KEY = os.getenv("DASHSCOPE_API_KEY")
+BAILIAN_API_KEY = os.getenv("BAILIAN_API_KEY")
+
 # LLM 使用 Coding Plan 端点
 DASHSCOPE_API_URL = "https://coding.dashscope.aliyuncs.com/v1"
 # Embedding 仍使用 dashscope 端点 (Coding Plan 不支持 text-embedding-v3)

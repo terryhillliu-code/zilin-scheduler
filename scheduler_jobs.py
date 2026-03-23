@@ -142,8 +142,8 @@ def job_morning_brief():
     try:
         logger.info(f"🌅 开始执行: {task_name}")
 
-        # 加载 Prompt
-        prompt = load_prompt("morning_brief", date=datetime.now().strftime("%Y-%m-%d"))
+        # 加载 Prompt (修复: 注入 mode 变量)
+        prompt = load_prompt("morning_brief", mode="晨间精选", date=datetime.now().strftime("%Y-%m-%d"))
 
         if not prompt:
             logger.warning("早报 Prompt 加载失败")
@@ -599,9 +599,24 @@ def job_klib_sync():
         klib_path = Path.home() / "Documents" / "Library" / "klib.db"
 
         if klib_path.exists():
-            # 检查并更新
-            logger.info(f"klib 数据库正常: {klib_path}")
-            log_task_metrics(task_name, "success")
+            # klib 向量化逻辑 (实质性同步)
+            vectorize_script = BASE_DIR / "tasks" / "klib_vectorize.py"
+            if vectorize_script.exists():
+                logger.info("📖 启动 klib 向量化同步...")
+                result = subprocess.run(
+                    [sys.executable, str(vectorize_script)],
+                    capture_output=True,
+                    text=True,
+                    timeout=1800
+                )
+                if result.returncode == 0:
+                    logger.info("✅ klib 同步与向量化完成")
+                    log_task_metrics(task_name, "success")
+                else:
+                    logger.error(f"❌ klib 同步失败: {result.stderr}")
+                    log_task_metrics(task_name, "failure", error=result.stderr)
+            else:
+                logger.warning(f"⚠️ 向量化脚本不存在: {vectorize_script}")
         else:
             logger.warning("klib 数据库不存在")
 

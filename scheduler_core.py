@@ -16,6 +16,14 @@ import subprocess
 from datetime import datetime, timedelta
 from pathlib import Path
 
+# 加载全局密钥 (必须在最前面)
+sys.path.insert(0, str(Path.home() / "scripts"))
+try:
+    from load_secrets import load_secrets
+    load_secrets(silent=True)
+except ImportError:
+    pass
+
 # 公共模块
 from llm_proxy import call_llm_direct
 
@@ -116,7 +124,16 @@ def send_failure_alert(task_name: str, error_msg: str = None):
     # 尝试发送告警
     try:
         # 导入推送模块
+       # 添加项目路径
         sys.path.insert(0, str(Path(__file__).parent))
+
+        # 加载全局密钥
+        sys.path.insert(0, str(Path.home() / "scripts"))
+        try:
+            from load_secrets import load_secrets
+            load_secrets(silent=True)
+        except ImportError:
+            pass
         from scheduler_queue import try_push
 
         # 发送到飞书

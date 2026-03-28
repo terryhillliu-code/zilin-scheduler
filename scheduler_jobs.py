@@ -897,6 +897,68 @@ def job_intel_report():
         log_task_metrics(task_name, "failure", error=str(e))
 
 
+# ============ 视频处理重试任务 ============
+
+def job_video_retry():
+    """重试失败的视频处理任务
+
+    检查 video_history.db 中可重试的失败记录，
+    自动重新处理。
+    """
+    task_name = "video_retry"
+    start_time = time.time()
+
+    logger.info("📹 开始检查失败的视频任务...")
+
+    try:
+        # 导入 video_history 模块
+        zhiwei_bot_dir = Path.home() / "zhiwei-bot"
+        if str(zhiwei_bot_dir) not in sys.path:
+            sys.path.insert(0, str(zhiwei_bot_dir))
+
+        from video_history import get_video_history, RETRYABLE_ERRORS, MAX_RETRIES
+
+        history = get_video_history()
+        failed_records = history.get_failed_for_retry(limit=5)
+
+        if not failed_records:
+            logger.info("没有可重试的失败视频")
+            log_task_metrics(task_name, "success", duration_ms=int((time.time() - start_time) * 1000))
+            return
+
+        logger.info(f"发现 {len(failed_records)} 个可重试的失败视频")
+
+        # 导入 media_handler
+        from media_handler import process_video_url
+
+        success_count = 0
+        for record in failed_records:
+            url = record['url']
+            retry_count = record['retry_count']
+
+            logger.info(f"重试视频 ({retry_count + 1}/{MAX_RETRIES}): {url[:60]}...")
+
+            try:
+                result = process_video_url(url)
+                if "✅" in result:
+                    success_count += 1
+                    logger.info(f"视频重试成功: {url[:50]}...")
+                else:
+                    logger.warning(f"视频重试失败: {result[:100]}")
+            except Exception as e:
+                logger.error(f"视频重试异常: {e}")
+
+        logger.info(f"视频重试完成: {success_count}/{len(failed_records)} 成功")
+        log_task_metrics(task_name, "success", duration_ms=int((time.time() - start_time) * 1000))
+
+    except ImportError as e:
+        logger.warning(f"无法导入视频处理模块: {e}")
+        log_task_metrics(task_name, "failure", error=str(e))
+    except Exception as e:
+        logger.error(f"视频重试任务异常: {e}")
+        log_task_metrics(task_name, "failure", error=str(e))
+
+
 __all__ = [
     # 任务函数
     'job_morning_brief',
@@ -913,6 +975,7 @@ __all__ = [
     'job_knowledge_classify',
     'job_klib_sync',
     'job_video_notes_organize',
+    'job_video_retry',
     'job_research_pipeline',
     'job_vault_sync_master',
     'job_graph_maintenance',

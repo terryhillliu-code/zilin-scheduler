@@ -238,6 +238,15 @@ jobs:
     push_to: []
     retry: { max_attempts: 1, delay_seconds: 30 }
 
+  video_retry:
+    enabled: true
+    hour: 6
+    minute: 0
+    day_of_week: "mon-sun"
+    description: "重试失败的视频处理任务"
+    push_to: []
+    retry: { max_attempts: 1, delay_seconds: 30 }
+
   # AI 信息源管理
   ai_source_reminder:
     enabled: true

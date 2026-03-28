@@ -24,6 +24,9 @@ load_secrets(silent=True)
 from zhiwei_common.llm import llm_client
 from zhiwei_common.utils import is_quiet_hours
 
+# LLM 降级代理（本地 8045 端口）
+from llm_proxy import call_llm_direct
+
 # 业务异常类
 class TaskSkippedException(Exception):
     pass

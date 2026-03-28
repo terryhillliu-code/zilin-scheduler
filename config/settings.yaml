@@ -247,6 +247,15 @@ jobs:
     push_to: []
     retry: { max_attempts: 1, delay_seconds: 30 }
 
+  asr_health_check:
+    enabled: true
+    hour: 12
+    minute: 0
+    day_of_week: "mon-sun"
+    description: "ASR 服务健康检查"
+    push_to: []
+    retry: { max_attempts: 1, delay_seconds: 30 }
+
   # AI 信息源管理
   ai_source_reminder:
     enabled: true

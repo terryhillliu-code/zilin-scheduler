@@ -959,6 +959,64 @@ def job_video_retry():
         log_task_metrics(task_name, "failure", error=str(e))
 
 
+# ============ ASR 服务健康检查 ============
+
+def job_asr_health_check():
+    """ASR 服务健康检查
+
+    定期检查 DashScope ASR 和本地 Whisper 可用性，
+    发现问题记录到日志。
+    """
+    task_name = "asr_health_check"
+    start_time = time.time()
+
+    logger.info("🏥 开始 ASR 服务健康检查...")
+
+    try:
+        zhiwei_bot_dir = Path.home() / "zhiwei-bot"
+        script_path = zhiwei_bot_dir / "scripts" / "asr_health_check.py"
+        venv_python = zhiwei_bot_dir / "venv" / "bin" / "python"
+
+        if not script_path.exists():
+            logger.warning(f"健康检查脚本不存在: {script_path}")
+            return
+
+        # 运行健康检查
+        result = subprocess.run(
+            [str(venv_python), str(script_path), "--json"],
+            capture_output=True,
+            text=True,
+            timeout=60,
+            env={**os.environ, "PYTHONPATH": str(zhiwei_bot_dir)}
+        )
+
+        if result.returncode == 0:
+            import json
+            health_data = json.loads(result.stdout)
+            status = health_data.get("status", "unknown")
+
+            if status == "healthy":
+                logger.info("✅ ASR 服务健康检查通过")
+            else:
+                logger.warning(f"⚠️ ASR 服务状态: {status}")
+                # 检查具体问题
+                for check in health_data.get("checks", []):
+                    if check.get("error"):
+                        logger.warning(f"   {check.get('service', 'check')}: {check['error']}")
+
+            log_task_metrics(task_name, "success", duration_ms=int((time.time() - start_time) * 1000))
+        else:
+            logger.error(f"健康检查执行失败: {result.stderr}")
+            log_task_metrics(task_name, "failure", error=result.stderr[:200])
+
+    except subprocess.TimeoutExpired:
+        logger.error("健康检查超时")
+        log_task_metrics(task_name, "failure", error="timeout")
+    except Exception as e:
+        logger.error(f"健康检查异常: {e}")
+        log_task_metrics(task_name, "failure", error=str(e))
+
+
 __all__ = [
     # 任务函数
     'job_morning_brief',
@@ -976,6 +1034,7 @@ __all__ = [
     'job_klib_sync',
     'job_video_notes_organize',
     'job_video_retry',
+    'job_asr_health_check',
     'job_research_pipeline',
     'job_vault_sync_master',
     'job_graph_maintenance',

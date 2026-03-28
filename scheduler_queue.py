@@ -9,8 +9,7 @@ from pathlib import Path
 from datetime import datetime, timezone
 
 # 引入 MessageBus
-sys.path.insert(0, os.path.expanduser("~/zhiwei-dev"))
-from message_bus import MessageBus
+from zhiwei_common import MessageBus
 
 # 队列目录
 QUEUE_BASE = Path(__file__).parent / "outputs" / "artifacts"
@@ -116,10 +115,10 @@ def try_push(file_path: Path, push_manager=None, logger=None, return_status: boo
                 logger.info(f"📡 正在向统一消息总线投递任务: {task_name} | {targets}")
             
             mb = MessageBus()
-            # 这里的 topic 设为 notification 即可，由 UnifiedPusher 负责下发
+            # 这里的 topic 设为 feishu_notification 即可，由 UnifiedPusher 负责下发
             mb.publish(
                 sender="zhiwei-scheduler",
-                topic="notification",
+                topic="feishu_notification",
                 content=content,
                 metadata={
                     "task": task_name,

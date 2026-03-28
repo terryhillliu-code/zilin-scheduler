@@ -49,11 +49,8 @@ from apscheduler.triggers.date import DateTrigger
 from apscheduler.events import EVENT_JOB_EXECUTED, EVENT_JOB_ERROR
 
 # 其他模块
-BASE_DIR = Path(__file__).parent
-sys.path.insert(0, str(BASE_DIR))
-
 import trigger_listener
-from pusher import PushManager
+from zhiwei_common import PushManager
 
 
 # ============ 任务结果回调 ============
@@ -152,6 +149,11 @@ def main():
         trigger_type = job_conf.get("trigger", "cron")
         trigger_args = job_conf.get("trigger_args", {})
 
+        # 修复 (T-016.4): 显式合并顶层调度参数到 trigger_args
+        for key in ["hour", "minute", "second", "day_of_week", "day", "month"]:
+            if key in job_conf and key not in trigger_args:
+                trigger_args[key] = job_conf[key]
+
         try:
             if trigger_type == "cron":
                 trigger = CronTrigger(**trigger_args, timezone=tz)
@@ -162,7 +164,13 @@ def main():
                 continue
 
             job_func = job_map[job_name]
-            scheduler.add_job(job_func, trigger, id=job_name, name=job_name)
+            scheduler.add_job(
+                job_func, 
+                trigger, 
+                id=job_name, 
+                name=job_name,
+                misfire_grace_time=7200  # 容忍 2 小时的错过执行（用于 Mac 唤醒后补执行）
+            )
             registered_jobs.append(job_name)
             logger.info(f"✅ 已注册: {job_name}")
 

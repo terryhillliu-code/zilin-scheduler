@@ -11,6 +11,14 @@ import time
 from pathlib import Path
 from datetime import datetime
 
+# 导入统一的 API Key 获取函数
+try:
+    from zhiwei_common import get_api_key
+except ImportError:
+    import sys
+    sys.path.insert(0, str(Path.home() / "zhiwei-common"))
+    from zhiwei_common import get_api_key
+
 
 # 配置
 CHROMA_PATH = "/root/downloads/knowledge-library/chromadb"
@@ -18,8 +26,12 @@ CHROMA_COLLECTION = "knowledge_base"
 CONTAINER_NAME = "clawdbot"
 
 # DashScope API 配置（用于云端 embedding）
-DASHSCOPE_API_KEY = "sk-70d377bd717b4f8abe405bff72427147"
 DASHSCOPE_API_URL = "https://dashscope.aliyuncs.com/compatible-mode/v1/embeddings"
+
+
+def _get_api_key():
+    """延迟获取 API Key"""
+    return get_api_key(["BAILIAN_API_KEY", "CODING_PLAN_API_KEY", "DASHSCOPE_API_KEY"])
 
 
 def find_related_notes(content: str, top_k: int = 5) -> list:
@@ -33,6 +45,11 @@ def find_related_notes(content: str, top_k: int = 5) -> list:
     Returns:
         list: 相似笔记列表，每个元素包含 {id, title, content, score}
     """
+    api_key = _get_api_key()
+    if not api_key:
+        print("   ❌ API Key 未配置")
+        return []
+
     # 步骤 1: 使用 DashScope API 生成 embedding
     embed_data = json.dumps({
         "model": "text-embedding-v3",
@@ -45,7 +62,7 @@ def find_related_notes(content: str, top_k: int = 5) -> list:
         data=embed_data,
         headers={
             "Content-Type": "application/json",
-            "Authorization": f"Bearer {DASHSCOPE_API_KEY}"
+            "Authorization": f"Bearer {api_key}"
         }
     )
 
@@ -173,9 +190,12 @@ def confirm_relations(new_note: str, candidates: list) -> list:
 
         # 使用百炼 API 进行关联判断
         api_url = "https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions"
+        api_key = _get_api_key()
+        if not api_key:
+            return []
         api_headers = {
             "Content-Type": "application/json",
-            "Authorization": f"Bearer {DASHSCOPE_API_KEY}"
+            "Authorization": f"Bearer {api_key}"
         }
 
         api_data = json.dumps({

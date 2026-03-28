@@ -16,47 +16,29 @@ import subprocess
 from datetime import datetime, timedelta
 from pathlib import Path
 
-# 加载全局密钥 (必须在最前面)
-sys.path.insert(0, str(Path.home() / "scripts"))
-try:
-    from load_secrets import load_secrets
-    load_secrets(silent=True)
-except ImportError:
-    pass
+# 加载环境密钥
+from zhiwei_common.secrets import load_secrets
+load_secrets(silent=True)
 
-# 公共模块
-from llm_proxy import call_llm_direct
+# 公共模块与工具
+from zhiwei_common.llm import llm_client
+from zhiwei_common.utils import is_quiet_hours
 
-# 新增业务跳过异常类
+# 业务异常类
 class TaskSkippedException(Exception):
     pass
 
-
-# 直接初始化 logger
+# 日志配置
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
 )
 logger = logging.getLogger(__name__)
 
-# 模块级全局变量
 config = None
 push_manager = None
-
-# ============ 指数退避重试配置 ============
-RETRY_DELAYS = [120, 300, 600]  # 2min, 5min, 10min
-
-# JSONL 日志路径
+RETRY_DELAYS = [120, 300, 600]
 JSON_LOG_PATH = Path.home() / "logs" / "scheduler.jsonl"
-
-
-# 导入核心工具
-sys.path.insert(0, str(Path.home() / "zhiwei-bot"))
-try:
-    from core.system_utils import is_quiet_hours
-except ImportError:
-    def is_quiet_hours(now=None):
-        return False
 
 
 
@@ -121,29 +103,18 @@ def send_failure_alert(task_name: str, error_msg: str = None):
     if error_msg:
         alert_msg += f"\n错误: {error_msg[:200]}"
 
-    # 尝试发送告警
+    # 尝试发送告警 (v57.0)
     try:
-        # 导入推送模块
-       # 添加项目路径
-        sys.path.insert(0, str(Path(__file__).parent))
-
-        # 加载全局密钥
-        sys.path.insert(0, str(Path.home() / "scripts"))
-        try:
-            from load_secrets import load_secrets
-            load_secrets(silent=True)
-        except ImportError:
-            pass
-        from scheduler_queue import try_push
-
-        # 发送到飞书
-        try_push(
-            title="⚠️ 定时任务失败告警",
-            content=alert_msg,
-            channels=["feishu"],
-            silent=True  # 告警消息不记录发送状态
+        # 发送到飞书 (通过队列以符合 I/O 分离规范)
+        from scheduler_queue import save_result_safe
+        file_path, skipped = save_result_safe(
+            task="system_alert",
+            content=f"# {task_name}\n\n{alert_msg}",
+            targets=["feishu"],
+            force=True  # 告警消息强制落盘
         )
-        logger.info(f"📤 失败告警已发送: {task_name}")
+        try_push(file_path)
+        logger.info(f"📤 失败告警已入队并尝试推送: {task_name}")
     except Exception as e:
         logger.warning(f"发送告警失败: {e}")
 

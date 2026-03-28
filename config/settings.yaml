@@ -211,14 +211,6 @@ jobs:
     retry: { max_attempts: 2, delay_seconds: 60 }
 
 
-  obsidian_sync:
-    enabled: true
-    hour: 2
-    minute: 0
-    day_of_week: "mon-sun"
-    description: "Obsidian 笔记同步到 ChromaDB"
-    push_to: []
-    retry: { max_attempts: 2, delay_seconds: 30 }
   klib_sync:
     enabled: true
     hour: 3
@@ -227,6 +219,15 @@ jobs:
     description: "每日凌晨3点整理个人知识文档结构 (scan->organize->vectorize)"
     push_to: []
     retry: { max_attempts: 1, delay_seconds: 60 }
+
+  vault_sync_master:
+    enabled: true
+    hour: 3
+    minute: 0
+    day_of_week: "mon-sun"
+    description: "VaultSyncMaster - 全库笔记自愈与双库对齐 (V4.4)"
+    push_to: ["feishu"]
+    retry: { max_attempts: 1, delay_seconds: 120 }
 
   video_notes_organize:
     enabled: true
@@ -255,6 +256,23 @@ jobs:
     description: "每日检查播客更新并推送"
     push_to: ["feishu"]
     retry: { max_attempts: 2, delay_seconds: 30 }
+
+  # 情报中心 (v5.5)
+  intelligence_sync:
+    enabled: true
+    hour: 10
+    minute: 0
+    day_of_week: "mon-sun"
+    description: "智微情报中心自动化同步 (v5.5)"
+    push_to: []
+
+  intelligence_report:
+    enabled: true
+    hour: 8
+    minute: 30
+    day_of_week: "mon"
+    description: "每周情报深度简报 (v5.5)"
+    push_to: ["feishu"]
 
 data_sources:
   weather:

@@ -252,12 +252,19 @@ class PushManager:
                 dt_conf["webhook"], dt_conf["secret"]
             )
 
-        # 初始化飞书
+        # 初始化飞书 (Researcher - Default: 知微)
         fs_conf = config.get("push", {}).get("feishu", {})
         if fs_conf.get("enabled"):
             self.pushers["feishu"] = FeishuPusher(
                 app_id=fs_conf["app_id"],
                 app_secret=fs_conf["app_secret"],
+                chat_id=fs_conf["chat_id"]
+            )
+            # 初始化飞书 (Operator - Dedicated: 探微)
+            # 专用于系统运维、健康检查、告警等通知
+            self.pushers["feishu_operator"] = FeishuPusher(
+                app_id="cli_a4e76960fb39d00b",
+                app_secret="w3vX6P7wFwB7vW1tZ2vX3P4wFwB7vW1t",
                 chat_id=fs_conf["chat_id"]
             )
 
@@ -310,8 +317,18 @@ class PushManager:
             return {"status": "queued", "reason": "quiet_hours"}
 
         results = {}
+        # 运维关键字：触发路由重定向至「探微」
+        OP_KEYWORDS = ["健康", "巡检", "Status", "Health", "Maintenance", "系统", "告警", "维护", "Metrics"]
+        is_op_msg = any(k in title for k in OP_KEYWORDS)
+
         for channel in channels:
-            pusher = self.pushers.get(channel)
+            target_channel = channel
+            # 如果是飞书推送且属于运维类消息，切换至 tanwei-bot
+            if channel == "feishu" and is_op_msg and "feishu_operator" in self.pushers:
+                target_channel = "feishu_operator"
+                logger.debug(f"🔀 消息路由重定向: {title} -> 探微 (Operator)")
+
+            pusher = self.pushers.get(target_channel)
             if not pusher:
                 logger.warning(f"⚠️ 推送渠道未配置: {channel}")
                 continue

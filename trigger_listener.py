@@ -56,6 +56,16 @@ TRIGGER_JOBS = {
         "prompt": "生成午报",
         "job_name": "job_noon_brief",
         "description": "手动触发午报"
+    },
+    "market_open.run": {
+        "agent": "researcher",
+        "prompt": "生成美股开盘简报",
+        "job_name": "job_us_market_open",
+        "description": "手动触发美股开盘"
+    },
+    "voice_summary.run": {
+        "job_name": "job_daily_voice_task_summary",
+        "description": "手动触发语音任务汇总"
     }
 }
 
@@ -115,9 +125,7 @@ def execute_trigger(trigger_file: Path):
     print(f"🔥 触发: {trigger_name} -> {config['job_name']}")
 
     # 引入任务队列与消息总线
-    sys.path.insert(0, str(Path.home() / "zhiwei-dev"))
-    from task_store import TaskStore
-    from message_bus import MessageBus
+    from zhiwei_common import TaskStore, MessageBus
     store = TaskStore()
     mb = MessageBus()
 
@@ -148,6 +156,12 @@ def execute_trigger(trigger_file: Path):
             success = True
         elif trigger_name == "system.run":
             scheduler_jobs.job_system_check()
+            success = True
+        elif trigger_name == "market_open.run":
+            scheduler_jobs.job_us_market_open()
+            success = True
+        elif trigger_name == "voice_summary.run":
+            scheduler_jobs.job_daily_voice_task_summary()
             success = True
         elif trigger_name == "tanwei.run":
             # 兼容独立的 agent 调用

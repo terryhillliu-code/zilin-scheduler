@@ -19,13 +19,7 @@ from pathlib import Path
 from datetime import datetime
 
 # 环境准备
-BASE_DIR = Path(__file__).parent
-DEV_DIR = Path("/Users/liufang/zhiwei-dev")
-sys.path.insert(0, str(BASE_DIR))
-sys.path.insert(0, str(DEV_DIR))
-
-from pusher import PushManager
-from message_bus import MessageBus
+from zhiwei_common import MessageBus, DingTalkPusher, PushManager
 
 # V2-103: 导入 LLM 客户端替代 OpenClaw
 sys.path.insert(0, str(Path.home() / "zhiwei-bot"))

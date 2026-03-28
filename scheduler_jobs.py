@@ -160,12 +160,11 @@ def job_morning_brief():
 
         if success:
             # 保存结果 (安全落盘：若今日已发则跳过)
-            save_result_safe(task_name, content, targets=["feishu"])
-
+            file_path, skipped = save_result_safe(task_name, content, targets=["feishu"])
 
             # 尝试推送
-            if not is_quiet_hours():
-                try_push(task_name, content)
+            if not skipped and not is_quiet_hours():
+                try_push(file_path)
 
             log_task_metrics(task_name, "success", duration_ms=int((time.time() - start_time) * 1000))
         else:
@@ -201,9 +200,9 @@ def job_noon_brief():
         success, content = call_agent("researcher", prompt, timeout=600)
 
         if success:
-            save_result_safe(task_name, content, targets=["feishu"])
-            if not is_quiet_hours():
-                try_push(task_name, content)
+            file_path, skipped = save_result_safe(task_name, content, targets=["feishu"])
+            if not skipped and not is_quiet_hours():
+                try_push(file_path)
             log_task_metrics(task_name, "success", duration_ms=int((time.time() - start_time) * 1000))
         else:
             logger.error(f"午报生成失败: {content}")
@@ -245,12 +244,12 @@ def job_info_brief(hour: int):
                 return
 
             # 保存结果 (安全落盘：若今日已发则跳过)
-            save_result_safe(task_name, content, targets=["feishu"])
+            file_path, skipped = save_result_safe(task_name, content, targets=["feishu"])
 
 
             # 推送
-            if not is_quiet_hours():
-                try_push(task_name, content)
+            if not skipped and not is_quiet_hours():
+                try_push(file_path)
                 # 记录已发送
                 for title in titles:
                     record_sent(title)
@@ -282,8 +281,9 @@ def job_us_market_open():
         success, content = call_agent("researcher", prompt, timeout=300)
 
         if success:
-            save_result_safe(task_name, content, targets=["feishu"])
-            try_push(task_name, content)
+            file_path, skipped = save_result_safe(task_name, content, targets=["feishu"])
+            if not skipped:
+                try_push(file_path)
             log_task_metrics(task_name, "success", duration_ms=int((time.time() - start_time) * 1000))
         else:
             logger.error(f"美股开盘提醒失败: {content}")
@@ -311,8 +311,9 @@ def job_us_market_close():
         success, content = call_agent("researcher", prompt, timeout=300)
 
         if success:
-            save_result_safe(task_name, content, targets=["feishu"])
-            try_push(task_name, content)
+            file_path, skipped = save_result_safe(task_name, content, targets=["feishu"])
+            if not skipped:
+                try_push(file_path)
             log_task_metrics(task_name, "success", duration_ms=int((time.time() - start_time) * 1000))
         else:
             logger.error(f"美股收盘摘要失败: {content}")
@@ -340,8 +341,9 @@ def job_crypto(period: str = "morning"):
         success, content = call_agent("researcher", prompt, timeout=180)
 
         if success:
-            save_result_safe(task_name, content, targets=["feishu"])
-            try_push(task_name, content)
+            file_path, skipped = save_result_safe(task_name, content, targets=["feishu"])
+            if not skipped:
+                try_push(file_path)
             log_task_metrics(task_name, "success", duration_ms=int((time.time() - start_time) * 1000))
         else:
             logger.error(f"加密货币行情失败: {content}")
@@ -373,8 +375,9 @@ def job_arxiv():
 
             if result.returncode == 0:
                 content = result.stdout
-                save_result_safe(task_name, content, targets=["feishu"])
-                try_push(task_name, content)
+                file_path, skipped = save_result_safe(task_name, content, targets=["feishu"])
+                if not skipped:
+                    try_push(file_path)
                 log_task_metrics(task_name, "success", duration_ms=int((time.time() - start_time) * 1000))
             else:
                 logger.error(f"ArXiv 处理失败: {result.stderr}")
@@ -473,8 +476,9 @@ def job_system_metrics_report():
         success, content = call_agent("operator", prompt, timeout=300)
 
         if success:
-            save_result_safe(task_name, content, targets=["feishu"])
-            try_push(task_name, content)
+            file_path, skipped = save_result_safe(task_name, content, targets=["feishu"])
+            if not skipped:
+                try_push(file_path)
             log_task_metrics(task_name, "success", duration_ms=int((time.time() - start_time) * 1000))
         else:
             logger.error(f"运维报告生成失败: {content}")
@@ -682,6 +686,42 @@ def job_research_pipeline():
         log_task_metrics(task_name, "failure", error=str(e))
 
 
+def job_vault_sync_master():
+    """
+    ArXiv-Obsidian 搜索完备性对齐 (Research V4.4)
+    调用 reconcile_obsidian.py v3.0 进行全库同步
+    """
+    task_name = "vault_sync_master"
+    start_time = time.time()
+
+    try:
+        logger.info("开始执行 [VaultSyncMaster 全量同步] 任务...")
+
+        # 脚本路径
+        script_path = Path.home() / "zhiwei-rag" / "scripts" / "reconcile_obsidian.py"
+
+        if script_path.exists():
+            result = subprocess.run(
+                [sys.executable, str(script_path)],
+                capture_output=True,
+                text=True,
+                timeout=1800  # 30 分钟
+            )
+
+            if result.returncode == 0:
+                logger.info(f"VaultSyncMaster 全量同步完成:\n{result.stdout}")
+                log_task_metrics(task_name, "success", duration_ms=int((time.time() - start_time) * 1000))
+            else:
+                logger.error(f"VaultSyncMaster 全量同步失败: {result.stderr}")
+                log_task_metrics(task_name, "failure", error=result.stderr)
+        else:
+            logger.warning("VaultSyncMaster 全量同步脚本不存在")
+
+    except Exception as e:
+        logger.error(f"VaultSyncMaster 全量同步任务异常: {e}")
+        log_task_metrics(task_name, "failure", error=str(e))
+
+
 def job_graph_maintenance():
     """GraphRAG 图谱维护 (02:30)"""
     task_name = "graph_maintenance"
@@ -737,7 +777,8 @@ def job_daily_voice_task_summary():
             if result.returncode == 0:
                 content = result.stdout
                 if content:
-                    try_push(task_name, content)
+                    file_path, _ = save_result_safe(task_name, content, targets=["feishu"], force=True)
+                    try_push(file_path)
                 log_task_metrics(task_name, "success", duration_ms=int((time.time() - start_time) * 1000))
             else:
                 logger.error(f"语音任务汇总失败: {result.stderr}")
@@ -785,6 +826,77 @@ def job_ws_health_check():
 
 # ============ 导出 ============
 
+def job_intel_sync():
+    """情报中心自动化同步 (v5.5)"""
+    task_name = "intel_sync"
+    start_time = time.time()
+
+    try:
+        logger.info(f"📡 开始执行: {task_name}")
+        script_path = Path.home() / "zhiwei-rag" / "scripts" / "intel_sync.py"
+        python_executable = Path.home() / "zhiwei-rag" / "venv" / "bin" / "python3"
+
+        if script_path.exists():
+            result = subprocess.run(
+                [str(python_executable), str(script_path)],
+                capture_output=True,
+                text=True,
+                timeout=1200 # 20 分钟
+            )
+
+            if result.returncode == 0:
+                logger.info(f"情报同步完成: {result.stdout.splitlines()[-1] if result.stdout else ''}")
+                log_task_metrics(task_name, "success", duration_ms=int((time.time() - start_time) * 1000))
+            else:
+                logger.error(f"情报同步失败: {result.stderr}")
+                log_task_metrics(task_name, "failure", error=result.stderr)
+        else:
+            logger.warning("情报同步脚本不存在")
+
+    except Exception as e:
+        logger.error(f"情报同步任务异常: {e}")
+        log_task_metrics(task_name, "failure", error=str(e))
+
+
+def job_intel_report():
+    """情报中心周期性简报生成 (v5.5)"""
+    task_name = "intel_report"
+    start_time = time.time()
+
+    try:
+        logger.info(f"📊 开始执行: {task_name}")
+        script_path = Path.home() / "zhiwei-rag" / "scripts" / "intel_reporter.py"
+        python_executable = Path.home() / "zhiwei-rag" / "venv" / "bin" / "python3"
+
+        if script_path.exists():
+            result = subprocess.run(
+                [str(python_executable), str(script_path)],
+                capture_output=True,
+                text=True,
+                timeout=300
+            )
+
+            if result.returncode == 0:
+                logger.info(f"情报简报生成完成")
+                # 尝试从输出中提取报告路径
+                for line in result.stdout.splitlines():
+                    if "情报简报已生成并存入" in line:
+                        report_path_str = line.split(":")[-1].strip()
+                        if os.path.exists(report_path_str):
+                            try_push(Path(report_path_str))
+                
+                log_task_metrics(task_name, "success", duration_ms=int((time.time() - start_time) * 1000))
+            else:
+                logger.error(f"情报简报生成失败: {result.stderr}")
+                log_task_metrics(task_name, "failure", error=result.stderr)
+        else:
+            logger.warning("情报简报生成脚本不存在")
+
+    except Exception as e:
+        logger.error(f"情报简报任务异常: {e}")
+        log_task_metrics(task_name, "failure", error=str(e))
+
+
 __all__ = [
     # 任务函数
     'job_morning_brief',
@@ -796,16 +908,18 @@ __all__ = [
     'job_arxiv',
     'job_system_check',
     'job_system_metrics_report',
-    'job_obsidian_sync',
     'job_fail_test',
     'job_log_rotate',
     'job_knowledge_classify',
     'job_klib_sync',
     'job_video_notes_organize',
     'job_research_pipeline',
+    'job_vault_sync_master',
     'job_graph_maintenance',
     'job_daily_voice_task_summary',
     'job_ws_health_check',
+    'job_intel_sync',
+    'job_intel_report',
     # 辅助函数
     'enrich_with_graphrag',
     'enrich_with_klib',

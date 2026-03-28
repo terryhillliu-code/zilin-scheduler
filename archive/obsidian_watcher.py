@@ -13,6 +13,14 @@ from threading import Timer
 from watchdog.observers import Observer
 from watchdog.events import FileSystemEventHandler
 
+# 导入统一的 API Key 获取函数
+try:
+    from zhiwei_common import get_api_key
+except ImportError:
+    import sys
+    sys.path.insert(0, str(Path.home() / "zhiwei-common"))
+    from zhiwei_common import get_api_key
+
 
 # 配置
 OBSIDIAN_VAULT_PATH = Path.home() / "Documents" / "ZhiweiVault"
@@ -21,8 +29,12 @@ CHROMA_COLLECTION = "knowledge_base"
 CONTAINER_NAME = "clawdbot"
 
 # DashScope API 配置（用于云端 embedding）
-DASHSCOPE_API_KEY = "sk-70d377bd717b4f8abe405bff72427147"
 DASHSCOPE_API_URL = "https://dashscope.aliyuncs.com/compatible-mode/v1/embeddings"
+
+
+def _get_api_key():
+    """延迟获取 API Key"""
+    return get_api_key(["BAILIAN_API_KEY", "CODING_PLAN_API_KEY", "DASHSCOPE_API_KEY"])
 
 
 class ObsidianEventHandler(FileSystemEventHandler):
@@ -122,6 +134,11 @@ class ObsidianEventHandler(FileSystemEventHandler):
             }
 
             # 调用百炼 Embedding API
+            api_key = _get_api_key()
+            if not api_key:
+                print(f"   ❌ API Key 未配置")
+                return [], {}
+
             embed_data = json.dumps({
                 "model": "text-embedding-v3",
                 "input": content[:4096],  # 限制内容长度
@@ -133,7 +150,7 @@ class ObsidianEventHandler(FileSystemEventHandler):
                 data=embed_data,
                 headers={
                     "Content-Type": "application/json",
-                    "Authorization": f"Bearer {DASHSCOPE_API_KEY}"
+                    "Authorization": f"Bearer {api_key}"
                 }
             )
 

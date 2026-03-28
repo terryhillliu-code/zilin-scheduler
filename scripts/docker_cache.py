@@ -30,6 +30,12 @@ CACHE_DIR = Path.home() / ".cache"
 CACHE_FILE = CACHE_DIR / "docker_status.json"
 CACHE_TTL = 60  # 缓存有效期（秒）
 
+# Docker 路径 (针对 Cron 环境)
+DOCKER_BIN = "/usr/local/bin/docker"
+if not Path(DOCKER_BIN).exists():
+    import shutil
+    DOCKER_BIN = shutil.which("docker") or "docker"
+
 # 关注的容器列表
 CONTAINERS = ["clawdbot"]
 
@@ -72,7 +78,7 @@ def get_container_status(container: str) -> Dict[str, Any]:
 
     # 检查容器是否存在并运行
     success, output = run_docker_command(
-        ["docker", "inspect", "-f",
+        [DOCKER_BIN, "inspect", "-f",
          "{{.State.Status}}|{{.State.Health.Status}}|{{.State.StartedAt}}",
          container]
     )

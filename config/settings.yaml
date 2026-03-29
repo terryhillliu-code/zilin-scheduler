@@ -193,11 +193,11 @@ jobs:
     retry: { max_attempts: 2, delay_seconds: 120 }
 
   graph_maintenance:
-    enabled: true
+    enabled: false  # 已禁用: LightRAG 性价比低，使用 LanceDB RAG 替代
     hour: 2
     minute: 30
     day_of_week: "mon-sun"
-    description: "知识图谱自动化维护 (GraphRAG Indexing)"
+    description: "知识图谱自动化维护 (GraphRAG Indexing) - 已禁用"
     push_to: []
     retry: { max_attempts: 1, delay_seconds: 300 }
 

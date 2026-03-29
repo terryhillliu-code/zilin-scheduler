@@ -41,6 +41,9 @@ from scheduler_jobs import (
     job_graph_maintenance,
     job_daily_voice_task_summary,
     job_ws_health_check,
+    job_vault_sync_master,
+    job_intel_sync,
+    job_intel_report,
     log_health_status,
 )
 
@@ -130,6 +133,10 @@ def main():
         "research_pipeline": job_research_pipeline,
         "graph_maintenance": job_graph_maintenance,
         "daily_voice_task_summary": job_daily_voice_task_summary,
+        "vault_sync_master": job_vault_sync_master,
+        "intelligence_sync": job_intel_sync,
+        "intelligence_report": job_intel_report,
+        # ai_source_reminder 和 podcast_update 无对应函数，已禁用
     }
 
     # 动态添加 info_brief_XX 任务映射

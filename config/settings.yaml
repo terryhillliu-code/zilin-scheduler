@@ -42,11 +42,11 @@ jobs:
     retry: { max_attempts: 2, delay_seconds: 30 }
 
   arxiv_papers:
-    enabled: true
+    enabled: false  # 脚本缺失: arxiv_processor.py 不存在
     hour: 7
     minute: 0
     day_of_week: "mon-sun"
-    description: "arXiv 论文精选"
+    description: "arXiv 论文精选 (已禁用: 脚本缺失)"
     push_to: ["dingtalk", "feishu"]
     retry: { max_attempts: 3, delay_seconds: 120 }
 
@@ -212,11 +212,11 @@ jobs:
 
 
   klib_sync:
-    enabled: true
+    enabled: false  # 脚本缺失: klib_vectorize.py 不存在
     hour: 3
     minute: 0
     day_of_week: "mon-sun"
-    description: "每日凌晨3点整理个人知识文档结构 (scan->organize->vectorize)"
+    description: "klib 同步 (已禁用: 向量化脚本缺失)"
     push_to: []
     retry: { max_attempts: 1, delay_seconds: 60 }
 
@@ -230,11 +230,11 @@ jobs:
     retry: { max_attempts: 1, delay_seconds: 120 }
 
   video_notes_organize:
-    enabled: true
+    enabled: false  # 目录缺失: 40-49_视频笔记 不存在
     hour: 4
     minute: 0
     day_of_week: "mon-sun"
-    description: "每日凌晨4点整理 Inbox 中的视频笔记到归档目录"
+    description: "视频笔记整理 (已禁用: 目录缺失)"
     push_to: []
     retry: { max_attempts: 1, delay_seconds: 30 }
 
@@ -258,20 +258,20 @@ jobs:
 
   # AI 信息源管理
   ai_source_reminder:
-    enabled: true
+    enabled: false  # 函数缺失: 无 job_ai_source_reminder
     hour: 9
     minute: 0
     day_of_week: "mon"
-    description: "每周一提醒评估 Twitter AI Builder 账号"
+    description: "AI 源提醒 (已禁用: 函数缺失)"
     push_to: ["feishu"]
     retry: { max_attempts: 1, delay_seconds: 60 }
 
   podcast_update:
-    enabled: true
+    enabled: false  # 函数缺失: 无 job_podcast_update
     hour: 18
     minute: 0
     day_of_week: "mon-sun"
-    description: "每日检查播客更新并推送"
+    description: "播客更新检查 (已禁用: 函数缺失)"
     push_to: ["feishu"]
     retry: { max_attempts: 2, delay_seconds: 30 }
 

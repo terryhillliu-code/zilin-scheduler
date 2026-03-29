@@ -90,49 +90,58 @@ async def get_rag():
         return _rag_instance
 
 async def index_knowledge_sources():
-    """扫描并索引所有知识源 (Phase 5b: 增加热点检测)"""
+    """扫描并索引所有知识源 (Phase 5b: 增量索引优化)
+
+    v2.0 优化：只处理 24h 内修改的文件，避免全量索引
+    """
     rag = await get_rag()
     logger.info("=== 启动知识图谱增量索引 ===")
-    
+
     from datetime import datetime, timedelta
     cutoff = datetime.now() - timedelta(hours=24)
     hotspots = []
+    indexed_count = 0
 
-    # 1. 索引 Obsidian 笔记
+    # 1. 索引 Obsidian 笔记 (只处理热点)
     notes = list(Path(VAULT_PATH).rglob("*.md"))
-    logger.info(f"发现 {len(notes)} 份笔记，开始扫描...")
+    logger.info(f"发现 {len(notes)} 份笔记，筛选 24h 内热点...")
+
     for note in notes:
         try:
             mtime = datetime.fromtimestamp(note.stat().st_mtime)
+            # 只处理 24h 内修改的文件 (增量索引)
             if mtime > cutoff:
                 hotspots.append(f"Obsidian: {note.name}")
-            
-            content = note.read_text(encoding="utf-8")
-            if content.strip():
-                # 显式使用 ainsert 异步版本
-                await rag.ainsert(content)
+                content = note.read_text(encoding="utf-8")
+                if content.strip():
+                    await rag.ainsert(content)
+                    indexed_count += 1
         except Exception as e:
             logger.error(f"索引笔记失败 {note.name}: {e}")
 
-    # 2. 索引 PDF 研报的 MD 输出 (如果已解析)
+    # 2. 索引 PDF 研报的 MD 输出 (只处理热点)
     report_mds = list(REPORTS_DIR.rglob("*.md"))
-    logger.info(f"发现 {len(report_mds)} 份研报 Markdown，开始扫描...")
+    logger.info(f"发现 {len(report_mds)} 份研报 Markdown，筛选 24h 内热点...")
+
     for r_md in report_mds:
         try:
             mtime = datetime.fromtimestamp(r_md.stat().st_mtime)
+            # 只处理 24h 内修改的文件
             if mtime > cutoff:
                 hotspots.append(f"Report: {r_md.name}")
-
-            content = r_md.read_text(encoding="utf-8")
-            if content.strip():
-                await rag.ainsert(content)
+                content = r_md.read_text(encoding="utf-8")
+                if content.strip():
+                    await rag.ainsert(content)
+                    indexed_count += 1
         except Exception as e:
             logger.error(f"索引研报失败 {r_md.name}: {e}")
 
     if hotspots:
-        logger.info(f"🔥 本次索引发现 {len(hotspots)} 个热点更新: {', '.join(hotspots[:5])}...")
-    
-    logger.info("=== 知识图谱索引构建完成 ===")
+        logger.info(f"🔥 本次索引 {indexed_count} 个热点更新: {', '.join(hotspots[:5])}...")
+    else:
+        logger.info("无热点更新，跳过索引")
+
+    logger.info("=== 知识图谱增量索引完成 ===")
     return len(hotspots)
 
 async def query_graph(query: str, mode: str = "hybrid", user_prompt: str = None) -> str:

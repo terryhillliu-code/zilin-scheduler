@@ -928,8 +928,8 @@ def job_video_retry():
 
         logger.info(f"发现 {len(failed_records)} 个可重试的失败视频")
 
-        # 导入 media_handler
-        from media_handler import process_video_url
+        # 导入 media_handler (函数名修正: process_video 不是 process_video_url)
+        from media_handler import process_video
 
         success_count = 0
         for record in failed_records:
@@ -939,7 +939,8 @@ def job_video_retry():
             logger.info(f"重试视频 ({retry_count + 1}/{MAX_RETRIES}): {url[:60]}...")
 
             try:
-                result = process_video_url(url)
+                # process_video 需要 text 参数，URL 本身即可作为 text
+                result = process_video(url)
                 if "✅" in result:
                     success_count += 1
                     logger.info(f"视频重试成功: {url[:50]}...")

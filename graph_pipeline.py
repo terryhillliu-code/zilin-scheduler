@@ -57,6 +57,13 @@ async def llm_model_if_cache(
         **clean_kwargs,
     )
 
+def _get_dashscope_key() -> str:
+    """获取 DashScope API Key (兼容旧版本调用)"""
+    api_key = DASHSCOPE_API_KEY or os.getenv("DASHSCOPE_API_KEY")
+    if not api_key:
+        raise ValueError("DASHSCOPE_API_KEY 未配置")
+    return api_key
+
 async def embedding_func(texts: list[str]) -> list[list[float]]:
     """基于百炼的 Embedding 接口封装"""
     # Embedding 使用 dashscope 端点和 key

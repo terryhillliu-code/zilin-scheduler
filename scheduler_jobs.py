@@ -35,57 +35,17 @@ import trigger_listener
 CONTAINER = "clawdbot"
 
 
-# ============ GraphRAG 并发保护 ============
-
-_graphrag_lock = None
-
-def _get_graphrag_lock():
-    """获取 GraphRAG 锁"""
-    global _graphrag_lock
-    if _graphrag_lock is None:
-        import threading
-        _graphrag_lock = threading.Lock()
-    return _graphrag_lock
-
+# ============ GraphRAG (已禁用) ============
+# LightRAG 已禁用，使用 LanceDB RAG 替代 (scheduler_core.enrich_with_rag)
 
 def enrich_with_graphrag(task_name: str, prompt_text: str) -> str:
     """
-    使用 GraphRAG 增强上下文（带并发保护）
+    使用 GraphRAG 增强上下文 - 已禁用
 
-    Args:
-        task_name: 任务名称（用于日志）
-        prompt_text: 原始 Prompt
-
-    Returns:
-        增强后的上下文字符串
+    LightRAG 已禁用，使用 LanceDB RAG 替代。
+    此函数保留作为占位符，避免调用方报错。
     """
-    try:
-        from graph_rag import query_graph
-    except ImportError:
-        logger.debug("GraphRAG 模块未安装")
-        return ""
-
-    lock = _get_graphrag_lock()
-    acquired = lock.acquire(timeout=300)  # 最多等待5分钟
-
-    if not acquired:
-        logger.warning(f"⚠️ GraphRAG 繁忙，跳过增强: {task_name}")
-        return ""
-
-    try:
-        # 提取关键词
-        keywords = prompt_text[:200]  # 简单截取前200字符
-        result = query_graph(keywords, top_k=5)
-
-        if result:
-            logger.info(f"📊 GraphRAG 增强: {len(result)} 条结果")
-            return f"\n\n【知识图谱上下文】\n{result}\n"
-        return ""
-    except Exception as e:
-        logger.warning(f"GraphRAG 查询失败: {e}")
-        return ""
-    finally:
-        lock.release()
+    return ""
 
 
 def enrich_with_klib(task_name: str, prompt_text: str, top_k: int = 5) -> str:

@@ -24,9 +24,6 @@ load_secrets(silent=True)
 from zhiwei_common.llm import llm_client
 from zhiwei_common.utils import is_quiet_hours
 
-# LLM 降级代理（本地 8045 端口）
-from llm_proxy import call_llm_direct
-
 # 业务异常类
 class TaskSkippedException(Exception):
     pass
@@ -202,11 +199,7 @@ def load_prompt(template_name: str, **kwargs) -> str:
 
 def call_agent(agent_id: str, message: str, timeout: int = 180) -> tuple[bool, str]:
     """
-    调用 LLM Agent（直连百炼 API，不再依赖 OpenClaw/Docker）
-
-    V2-102 重构：
-    - 使用 llm_client 直连百炼 API
-    - 移除 Docker 依赖
+    调用 LLM Agent（直连百炼 API）
 
     Args:
         agent_id: Agent ID (main/researcher/operator)
@@ -216,33 +209,16 @@ def call_agent(agent_id: str, message: str, timeout: int = 180) -> tuple[bool, s
     Returns:
         (success, response) 元组
     """
-    # 尝试使用 llm_client
-    if LLM_CLIENT_AVAILABLE and llm_client:
-        try:
-            success, text = llm_client.call(agent_id, message, timeout=timeout)
-            if success:
-                return True, text
-            else:
-                logger.warning(f"LLM 客户端调用失败: {text}")
-        except Exception as e:
-            logger.error(f"LLM 客户端异常: {e}")
-
-    # 降级：使用本地代理
-    logger.warning("🔄 LLM 客户端不可用，降级到本地代理...")
-    return call_llm_direct(message, timeout)
-
-
-# ============ LLM 客户端导入 ============
-
-# 导入 LLM 客户端 (V2-102: 替代 OpenClaw)
-sys.path.insert(0, str(Path.home() / "zhiwei-bot"))
-try:
-    from llm_client import llm_client, LLMClient
-    LLM_CLIENT_AVAILABLE = True
-except ImportError:
-    LLM_CLIENT_AVAILABLE = False
-    llm_client = None
-    logger.warning("⚠️ llm_client 导入失败，将使用降级模式")
+    try:
+        success, text = llm_client.call(agent_id, message, timeout=timeout)
+        if success:
+            return True, text
+        else:
+            logger.warning(f"LLM 调用失败: {text}")
+            return False, text
+    except Exception as e:
+        logger.error(f"LLM 调用异常: {e}")
+        return False, str(e)
 
 
 # ============ RAG 相关 ============

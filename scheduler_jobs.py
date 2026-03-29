@@ -976,10 +976,15 @@ def job_asr_health_check():
     try:
         zhiwei_bot_dir = Path.home() / "zhiwei-bot"
         script_path = zhiwei_bot_dir / "scripts" / "asr_health_check.py"
-        venv_python = zhiwei_bot_dir / "venv" / "bin" / "python"
+        # 使用共享 venv (v2.0 合并后)
+        venv_python = Path.home() / "zhiwei-shared-venv" / "bin" / "python"
 
         if not script_path.exists():
             logger.warning(f"健康检查脚本不存在: {script_path}")
+            return
+
+        if not venv_python.exists():
+            logger.warning(f"共享 venv 不存在: {venv_python}")
             return
 
         # 运行健康检查

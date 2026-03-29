@@ -184,11 +184,11 @@ jobs:
     push_to: []
 
   research_pipeline:
-    enabled: true
+    enabled: false  # 已禁用: research_processor.py 和 marker-pdf 未安装
     hour: 23
     minute: 30
     day_of_week: "mon-sun"
-    description: "PDF 研报扫描与向量化入库"
+    description: "PDF 研报扫描与向量化入库 - 已禁用"
     push_to: ["dingtalk", "feishu"]
     retry: { max_attempts: 2, delay_seconds: 120 }
 

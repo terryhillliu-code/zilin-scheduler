@@ -102,8 +102,10 @@ def job_morning_brief():
     try:
         logger.info(f"🌅 开始执行: {task_name}")
 
-        # 加载 Prompt (修复: 注入 mode 变量)
-        prompt = load_prompt("morning_brief", mode="晨间精选", date=datetime.now().strftime("%Y-%m-%d"))
+        # 加载 Prompt (修复: 注入 date 和 time 变量)
+        prompt = load_prompt("morning_brief",
+                            date=datetime.now().strftime("%Y-%m-%d"),
+                            time=datetime.now().strftime("%H:%M"))
 
         if not prompt:
             logger.warning("早报 Prompt 加载失败")
@@ -146,7 +148,10 @@ def job_noon_brief():
     try:
         logger.info(f"🌞 开始执行: {task_name}")
 
-        prompt = load_prompt("noon_brief", date=datetime.now().strftime("%Y-%m-%d"))
+        # 加载 Prompt (修复: 注入 date 和 time 变量)
+        prompt = load_prompt("noon_brief",
+                            date=datetime.now().strftime("%Y-%m-%d"),
+                            time=datetime.now().strftime("%H:%M"))
 
         if not prompt:
             logger.warning("午报 Prompt 加载失败")

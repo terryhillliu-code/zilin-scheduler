@@ -237,7 +237,9 @@ def job_us_market_open():
     try:
         logger.info(f"📈 开始执行: {task_name}")
 
-        prompt = load_prompt("us_market_open")
+        prompt = load_prompt("us_market_open",
+                        date=datetime.now().strftime("%Y-%m-%d"),
+                        time=datetime.now().strftime("%H:%M"))
 
         if not prompt:
             logger.warning("美股开盘 Prompt 加载失败")
@@ -267,7 +269,9 @@ def job_us_market_close():
     try:
         logger.info(f"📉 开始执行: {task_name}")
 
-        prompt = load_prompt("us_market_close")
+        prompt = load_prompt("us_market_close",
+                        date=datetime.now().strftime("%Y-%m-%d"),
+                        time=datetime.now().strftime("%H:%M"))
 
         if not prompt:
             logger.warning("美股收盘 Prompt 加载失败")
@@ -297,7 +301,9 @@ def job_crypto(period: str = "morning"):
     try:
         logger.info(f"🪙 开始执行: {task_name}")
 
-        prompt = load_prompt(f"crypto_{period}")
+        prompt = load_prompt("crypto",
+                        date=datetime.now().strftime("%Y-%m-%d"),
+                        time=datetime.now().strftime("%H:%M"))
 
         if not prompt:
             logger.warning(f"加密货币 Prompt 加载失败: {period}")

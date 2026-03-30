@@ -659,10 +659,12 @@ def job_vault_sync_master():
 
         # 脚本路径
         script_path = Path.home() / "zhiwei-rag" / "scripts" / "reconcile_obsidian.py"
+        # ⭐ v62.0 修复：使用 zhiwei-rag 的 venv（lancedb 在此安装）
+        python_executable = Path.home() / "zhiwei-rag" / "venv" / "bin" / "python3"
 
-        if script_path.exists():
+        if script_path.exists() and python_executable.exists():
             result = subprocess.run(
-                [sys.executable, str(script_path)],
+                [str(python_executable), str(script_path)],
                 capture_output=True,
                 text=True,
                 timeout=1800  # 30 分钟
@@ -675,7 +677,13 @@ def job_vault_sync_master():
                 logger.error(f"VaultSyncMaster 全量同步失败: {result.stderr}")
                 log_task_metrics(task_name, "failure", error=result.stderr)
         else:
-            logger.warning("VaultSyncMaster 全量同步脚本不存在")
+            missing = []
+            if not script_path.exists():
+                missing.append(f"脚本: {script_path}")
+            if not python_executable.exists():
+                missing.append(f"Python: {python_executable}")
+            logger.warning(f"VaultSyncMaster 缺失: {', '.join(missing)}")
+            log_task_metrics(task_name, "skipped", extra={"missing": missing})
 
     except Exception as e:
         logger.error(f"VaultSyncMaster 全量同步任务异常: {e}")

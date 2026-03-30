@@ -22,31 +22,26 @@ from scheduler_core import (
 from scheduler_jobs import (
     job_morning_brief,
     job_noon_brief,
-    job_info_brief,
     job_us_market_open,
     job_us_market_close,
-    job_crypto,
     job_arxiv,
     job_system_check,
     job_system_metrics_report,
-    job_obsidian_sync,
-    job_fail_test,
     job_log_rotate,
     job_knowledge_classify,
-    job_klib_sync,
     job_video_notes_organize,
     job_video_retry,
     job_asr_health_check,
-    job_douyin_health_check,  # ⭐ v64.0 新增
+    job_douyin_health_check,
     job_research_pipeline,
-    job_graph_maintenance,
     job_daily_voice_task_summary,
     job_ws_health_check,
     job_vault_sync_master,
     job_intel_sync,
     job_intel_report,
-    job_sync_hn_daily,       # ⭐ v62.0
-    job_sync_github_weekly,  # ⭐ v62.0
+    job_sync_hn_daily,
+    job_sync_github_weekly,
+    job_podcast_update,  # ⭐ v65.0 新增
     log_health_status,
 )
 
@@ -121,35 +116,24 @@ def main():
         "noon_brief": job_noon_brief,
         "us_market_open": job_us_market_open,
         "us_market_close": job_us_market_close,
-        "crypto_morning": lambda: job_crypto("morning"),
-        "crypto_evening": lambda: job_crypto("evening"),
         "arxiv_papers": job_arxiv,
         "system_check": job_system_check,
         "system_metrics": job_system_metrics_report,
-        "obsidian_sync": job_obsidian_sync,
-        "klib_sync": job_klib_sync,
         "video_notes_organize": job_video_notes_organize,
         "video_retry": job_video_retry,
         "asr_health_check": job_asr_health_check,
-        "douyin_health_check": job_douyin_health_check,  # ⭐ v64.0 新增
-        "fail_test": job_fail_test,
+        "douyin_health_check": job_douyin_health_check,
         "log_rotate": job_log_rotate,
         "knowledge_classify": job_knowledge_classify,
         "research_pipeline": job_research_pipeline,
-        "graph_maintenance": job_graph_maintenance,
         "daily_voice_task_summary": job_daily_voice_task_summary,
         "vault_sync_master": job_vault_sync_master,
         "intelligence_sync": job_intel_sync,
         "intelligence_report": job_intel_report,
-        "sync_hn_daily": job_sync_hn_daily,           # ⭐ v62.0
-        "sync_github_weekly": job_sync_github_weekly, # ⭐ v62.0
-        # ai_source_reminder 和 podcast_update 无对应函数，已禁用
+        "sync_hn_daily": job_sync_hn_daily,
+        "sync_github_weekly": job_sync_github_weekly,
+        "podcast_update": job_podcast_update,  # ⭐ v65.0 新增
     }
-
-    # 动态添加 info_brief_XX 任务映射
-    for hour in [7, 9, 11, 13, 15, 17, 19, 21]:
-        job_name = f"info_brief_{hour:02d}"
-        job_map[job_name] = lambda h=hour: job_info_brief(h)
 
     # ============ 注册定时任务 ============
     registered_jobs = []

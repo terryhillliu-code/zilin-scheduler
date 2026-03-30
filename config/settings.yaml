@@ -164,7 +164,7 @@ jobs:
   sync_hn_daily:
     enabled: true
     hour: 8
-    minute: 0
+    minute: 5  # ⭐ v65.0 调整：避开 us_market_close
     day_of_week: "mon-sun"
     description: "同步 Hacker News Top 5 到 Obsidian Inbox"
     push_to: []
@@ -173,30 +173,55 @@ jobs:
   sync_github_weekly:
     enabled: true
     hour: 8
-    minute: 30
+    minute: 35  # ⭐ v65.0 调整：避开 intelligence_report
     day_of_week: "mon"
     description: "每周同步 GitHub Trending (AI) 到 Obsidian Inbox"
     push_to: []
     retry: { max_attempts: 2, delay_seconds: 60 }
 
-# ============ 已禁用任务 (保留配置但注释) ============
-# 以下任务已禁用，如需启用请取消注释并设置 enabled: true
+  # ============ 论文精选 (v65.0 恢复) ============
+  arxiv_papers:
+    enabled: true
+    hour: 7
+    minute: 0
+    day_of_week: "mon-sun"
+    description: "arXiv 论文精选（LLM+工具）"
+    push_to: ["feishu"]
+    retry: { max_attempts: 2, delay_seconds: 60 }
+
+  # ============ 视频笔记整理 (v65.0 恢复) ============
+  video_notes_organize:
+    enabled: true
+    hour: 4
+    minute: 0
+    day_of_week: "mon-sun"
+    description: "视频笔记整理（归档+分类+重命名+索引）"
+    push_to: []
+    retry: { max_attempts: 1, delay_seconds: 30 }
+
+  # ============ 播客更新 (v65.0 新增) ============
+  podcast_update:
+    enabled: true
+    hour: 18
+    minute: 0
+    day_of_week: "mon-sun"
+    description: "播客更新检查与下载"
+    push_to: ["feishu"]
+    retry: { max_attempts: 2, delay_seconds: 60 }
+
+# ============ 已归档任务 ============
+# 以下任务暂时禁用，后续可能恢复：
 #
-# arxiv_papers:
-#   enabled: false  # 脚本缺失: arxiv_processor.py 不存在
-#   hour: 7
-#   minute: 0
-#   description: "arXiv 论文精选"
-#
-# info_brief_* (8个): 信息流简报 - 与早报/午报重复，已禁用
-#
-# research_pipeline:
-#   enabled: false  # 脚本缺失
-#   description: "PDF 研报扫描与向量化入库"
-#
-# graph_maintenance:
-#   enabled: false  # LightRAG 已弃用
-#   description: "知识图谱自动化维护"
+# research_pipeline: PDF研报扫描与向量化（待优化实现）
+# klib_sync: klib向量化同步（待研究用途）
+
+# ============ 播客配置 (v65.0 新增) ============
+podcasts:
+  download_dir: "~/Documents/ZhiweiVault/70-79_个人笔记/播客"
+  feeds: []  # 用户后续补充播客订阅源
+  # feeds 示例:
+  # - name: "硬地骇客"
+  #   url: "https://feeds.xxx.com/xxx"
 
 data_sources:
   weather:

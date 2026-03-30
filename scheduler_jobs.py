@@ -179,57 +179,6 @@ def job_noon_brief():
         log_task_metrics(task_name, "failure", error=str(e))
 
 
-def job_info_brief(hour: int):
-    """信息流简报 (每2小时)"""
-    task_name = f"info_brief_{hour:02d}"
-    start_time = time.time()
-
-    try:
-        logger.info(f"📡 开始执行: {task_name}")
-
-        prompt = load_prompt("info_brief", hour=hour, date=datetime.now().strftime("%Y-%m-%d"))
-
-        if not prompt:
-            logger.warning("信息流 Prompt 加载失败")
-            return
-
-        # RAG 增强
-        rag_context = enrich_with_rag("信息流", top_k=5)
-        if rag_context:
-            prompt = f"{rag_context}\n\n{prompt}"
-
-        # 调用 Agent
-        success, content = call_agent("researcher", prompt, timeout=600)
-
-        if success:
-            # 新闻去重检查
-            titles = extract_titles_from_content(content)
-            if not should_push(titles):
-                logger.info(f"📭 {task_name}: 新闻已发送过，跳过")
-                log_task_metrics(task_name, "skipped", extra={"reason": "duplicate"})
-                return
-
-            # 保存结果 (安全落盘：若今日已发则跳过)
-            file_path, skipped = save_result_safe(task_name, content, targets=["feishu"])
-
-
-            # 推送
-            if not skipped and not is_quiet_hours():
-                try_push(file_path)
-                # 记录已发送
-                for title in titles:
-                    record_sent(title)
-
-            log_task_metrics(task_name, "success", duration_ms=int((time.time() - start_time) * 1000))
-        else:
-            logger.error(f"信息流生成失败: {content}")
-            log_task_metrics(task_name, "failure", error=content)
-
-    except Exception as e:
-        logger.error(f"信息流任务异常: {e}")
-        log_task_metrics(task_name, "failure", error=str(e))
-
-
 def job_us_market_open():
     """美股开盘提醒 (21:00)"""
     task_name = "us_market_open"
@@ -294,68 +243,61 @@ def job_us_market_close():
         log_task_metrics(task_name, "failure", error=str(e))
 
 
-def job_crypto(period: str = "morning"):
-    """加密货币行情"""
-    task_name = f"crypto_{period}"
-    start_time = time.time()
-
-    try:
-        logger.info(f"🪙 开始执行: {task_name}")
-
-        prompt = load_prompt("crypto",
-                        date=datetime.now().strftime("%Y-%m-%d"),
-                        time=datetime.now().strftime("%H:%M"))
-
-        if not prompt:
-            logger.warning(f"加密货币 Prompt 加载失败: {period}")
-            return
-
-        success, content = call_agent("researcher", prompt, timeout=180)
-
-        if success:
-            file_path, skipped = save_result_safe(task_name, content, targets=["feishu"])
-            if not skipped:
-                try_push(file_path)
-            log_task_metrics(task_name, "success", duration_ms=int((time.time() - start_time) * 1000))
-        else:
-            logger.error(f"加密货币行情失败: {content}")
-            log_task_metrics(task_name, "failure", error=content)
-
-    except Exception as e:
-        logger.error(f"加密货币任务异常: {e}")
-        log_task_metrics(task_name, "failure", error=str(e))
-
-
 def job_arxiv():
-    """ArXiv 论文精选 (07:00)"""
+    """ArXiv 论文精选 (07:00) - v65.0 改造：使用 ArxivSearchTool"""
     task_name = "arxiv_papers"
     start_time = time.time()
 
     try:
         logger.info(f"📄 开始执行: {task_name}")
 
-        # 调用 arxiv 处理脚本
-        arxiv_script = BASE_DIR / "arxiv_processor.py"
+        # 使用 ArxivSearchTool 获取论文
+        sys.path.insert(0, str(Path.home() / "zhiwei_agent"))
+        from tools.arxiv_search import ArxivSearchTool
 
-        if arxiv_script.exists():
-            result = subprocess.run(
-                [sys.executable, str(arxiv_script)],
-                capture_output=True,
-                text=True,
-                timeout=600
-            )
+        tool = ArxivSearchTool()
+        result = tool.execute(
+            query="LLM inference distributed training accelerator",
+            category="cs.DC",  # 分布式计算
+            limit=8,
+            with_summary=True  # 调用 LLM 总结
+        )
 
-            if result.returncode == 0:
-                content = result.stdout
-                file_path, skipped = save_result_safe(task_name, content, targets=["feishu"])
-                if not skipped:
-                    try_push(file_path)
-                log_task_metrics(task_name, "success", duration_ms=int((time.time() - start_time) * 1000))
-            else:
-                logger.error(f"ArXiv 处理失败: {result.stderr}")
-                log_task_metrics(task_name, "failure", error=result.stderr)
+        if result.success and result.data["papers"]:
+            papers = result.data["papers"]
+            trend = result.data.get("trend", "")
+
+            # 格式化输出
+            content = f"""# 📚 arXiv 论文精选
+
+> 生成时间: {datetime.now().strftime("%Y-%m-%d %H:%M")}
+
+## 论文推荐
+
+"""
+            for i, p in enumerate(papers, 1):
+                content += f"""### {i}. [{p['title']}]({p['url']})
+
+- **核心贡献**: {p.get('core_contribution', '暂无总结')}
+- **作者**: {', '.join(p['authors'][:3])}
+- **分类**: {', '.join(p['categories'][:2])}
+
+"""
+
+            if trend:
+                content += f"""## 🔬 趋势分析
+
+{trend}
+"""
+
+            # 保存并推送
+            file_path, skipped = save_result_safe(task_name, content, targets=["feishu"])
+            if not skipped:
+                try_push(file_path)
+            log_task_metrics(task_name, "success", duration_ms=int((time.time() - start_time) * 1000))
         else:
-            logger.warning("ArXiv 处理脚本不存在")
+            logger.warning(f"ArXiv 搜索无结果: {result.error or '未找到论文'}")
+            log_task_metrics(task_name, "skipped", extra={"reason": "no_papers"})
 
     except Exception as e:
         logger.error(f"ArXiv 任务异常: {e}")
@@ -460,45 +402,6 @@ def job_system_metrics_report():
         log_task_metrics(task_name, "failure", error=str(e))
 
 
-def job_obsidian_sync():
-    """Obsidian 笔记同步 (02:00)"""
-    task_name = "obsidian_sync"
-    start_time = time.time()
-
-    try:
-        logger.info(f"📝 开始执行: {task_name}")
-
-        # 调用向量化脚本
-        sync_script = BASE_DIR.parent / "zhiwei-rag" / "ingest" / "ingest_obsidian.py"
-
-        if sync_script.exists():
-            result = subprocess.run(
-                [sys.executable, str(sync_script)],
-                capture_output=True,
-                text=True,
-                timeout=1800  # 30 分钟
-            )
-
-            if result.returncode == 0:
-                logger.info(f"Obsidian 同步完成")
-                log_task_metrics(task_name, "success", duration_ms=int((time.time() - start_time) * 1000))
-            else:
-                logger.error(f"Obsidian 同步失败: {result.stderr}")
-                log_task_metrics(task_name, "failure", error=result.stderr)
-        else:
-            logger.warning("Obsidian 同步脚本不存在")
-
-    except Exception as e:
-        logger.error(f"Obsidian 同步异常: {e}")
-        log_task_metrics(task_name, "failure", error=str(e))
-
-
-def job_fail_test():
-    """测试用故障注入任务"""
-    logger.info("🧪 故障注入测试")
-    raise Exception("测试故障")
-
-
 def job_log_rotate():
     """日志轮转 (03:00)"""
     task_name = "log_rotate"
@@ -563,62 +466,87 @@ def job_knowledge_classify():
         log_task_metrics(task_name, "failure", error=str(e))
 
 
-def job_klib_sync():
-    """klib 同步 (03:00)"""
-    task_name = "klib_sync"
-    start_time = time.time()
-
-    try:
-        logger.info(f"📖 开始执行: {task_name}")
-
-        # klib 同步逻辑
-        klib_path = Path.home() / "Documents" / "Library" / "klib.db"
-
-        if klib_path.exists():
-            # klib 向量化逻辑 (实质性同步)
-            vectorize_script = BASE_DIR / "tasks" / "klib_vectorize.py"
-            if vectorize_script.exists():
-                logger.info("📖 启动 klib 向量化同步...")
-                result = subprocess.run(
-                    [sys.executable, str(vectorize_script)],
-                    capture_output=True,
-                    text=True,
-                    timeout=1800
-                )
-                if result.returncode == 0:
-                    logger.info("✅ klib 同步与向量化完成")
-                    log_task_metrics(task_name, "success")
-                else:
-                    logger.error(f"❌ klib 同步失败: {result.stderr}")
-                    log_task_metrics(task_name, "failure", error=result.stderr)
-            else:
-                logger.warning(f"⚠️ 向量化脚本不存在: {vectorize_script}")
-        else:
-            logger.warning("klib 数据库不存在")
-
-    except Exception as e:
-        logger.error(f"klib 同步异常: {e}")
-        log_task_metrics(task_name, "failure", error=str(e))
-
-
 def job_video_notes_organize():
-    """视频笔记整理"""
+    """视频笔记整理 - v65.0 改造：归档+分类+重命名+索引"""
     task_name = "video_notes_organize"
     start_time = time.time()
+
+    # 主题关键词配置
+    THEME_KEYWORDS = {
+        "AI": ["LLM", "GPT", "Claude", "transformer", "AI", "机器学习", "深度学习", "神经网络"],
+        "半导体": ["芯片", "GPU", "NVIDIA", "制程", "半导体", "晶圆", "芯片设计"],
+        "编程": ["Python", "代码", "开发", "编程", "算法", "软件工程"],
+        "创业": ["创业", "融资", "商业", "产品", "用户", "增长"],
+    }
 
     try:
         logger.info(f"🎬 开始执行: {task_name}")
 
-        # 视频笔记目录
         video_dir = Path.home() / "Documents" / "ZhiweiVault" / "40-49_视频笔记"
 
-        if video_dir.exists():
-            # 统计笔记数量
-            notes = list(video_dir.glob("**/*.md"))
-            logger.info(f"视频笔记数量: {len(notes)}")
-            log_task_metrics(task_name, "success", extra={"notes": len(notes)})
-        else:
+        if not video_dir.exists():
             logger.warning("视频笔记目录不存在")
+            return
+
+        notes = list(video_dir.glob("*.md"))  # 只处理顶层笔记
+        organized_count = 0
+
+        for note in notes:
+            # 跳过索引文件
+            if note.name.lower() in ["readme.md", "index.md"]:
+                continue
+
+            content = note.read_text(encoding="utf-8")
+            stat = note.stat()
+
+            # 1. 确定主题
+            theme = "其他"
+            for t, keywords in THEME_KEYWORDS.items():
+                if any(kw.lower() in content.lower() for kw in keywords):
+                    theme = t
+                    break
+
+            # 2. 确定日期（使用修改时间）
+            from datetime import datetime
+            mtime = datetime.fromtimestamp(stat.st_mtime)
+            year_month = mtime.strftime("%Y-%m")
+
+            # 3. 创建目标目录
+            theme_dir = video_dir / theme
+            date_dir = theme_dir / year_month
+            date_dir.mkdir(parents=True, exist_ok=True)
+
+            # 4. 新文件名
+            date_prefix = mtime.strftime("%Y-%m-%d")
+            new_name = f"VIDEO_{date_prefix}_{note.stem[:30]}.md"
+            new_path = date_dir / new_name
+
+            # 5. 移动文件（如果目标不同）
+            if note.resolve() != new_path.resolve():
+                note.rename(new_path)
+                organized_count += 1
+                logger.info(f"整理: {note.name} → {theme}/{year_month}/{new_name}")
+
+        # 6. 生成索引文件
+        index_path = video_dir / "README.md"
+        index_content = f"""# 视频笔记索引
+
+> 更新时间: {datetime.now().strftime("%Y-%m-%d %H:%M")}
+
+## 目录结构
+
+"""
+        for theme_dir in sorted(video_dir.iterdir()):
+            if theme_dir.is_dir() and not theme_dir.name.startswith("."):
+                note_count = len(list(theme_dir.glob("**/*.md")))
+                index_content += f"- **{theme_dir.name}** ({note_count} 篇)\n"
+
+        index_path.write_text(index_content, encoding="utf-8")
+
+        logger.info(f"✅ 视频笔记整理完成: 整理 {organized_count} 篇，索引已更新")
+        log_task_metrics(task_name, "success",
+                        duration_ms=int((time.time() - start_time) * 1000),
+                        extra={"organized": organized_count})
 
     except Exception as e:
         logger.error(f"视频笔记整理异常: {e}")
@@ -699,39 +627,6 @@ def job_vault_sync_master():
 
     except Exception as e:
         logger.error(f"VaultSyncMaster 全量同步任务异常: {e}")
-        log_task_metrics(task_name, "failure", error=str(e))
-
-
-def job_graph_maintenance():
-    """GraphRAG 图谱维护 (02:30)"""
-    task_name = "graph_maintenance"
-    start_time = time.time()
-
-    try:
-        logger.info(f"🕸️ 开始执行: {task_name}")
-
-        # GraphRAG 维护脚本
-        graph_script = BASE_DIR / "graph_maintenance.py"
-
-        if graph_script.exists():
-            result = subprocess.run(
-                [sys.executable, str(graph_script)],
-                capture_output=True,
-                text=True,
-                timeout=3600
-            )
-
-            if result.returncode == 0:
-                logger.info(f"图谱维护完成")
-                log_task_metrics(task_name, "success", duration_ms=int((time.time() - start_time) * 1000))
-            else:
-                logger.error(f"图谱维护失败: {result.stderr}")
-                log_task_metrics(task_name, "failure", error=result.stderr)
-        else:
-            logger.warning("图谱维护脚本不存在")
-
-    except Exception as e:
-        logger.error(f"图谱维护异常: {e}")
         log_task_metrics(task_name, "failure", error=str(e))
 
 
@@ -1234,34 +1129,124 @@ def job_sync_github_weekly():
         log_task_metrics(task_name, "failure", error=str(e))
 
 
+# ============ 播客更新任务 (v65.0 新增) ============
+
+def job_podcast_update():
+    """播客更新检查与下载"""
+    task_name = "podcast_update"
+    start_time = time.time()
+
+    try:
+        logger.info(f"🎧 开始执行: {task_name}")
+
+        # 读取播客配置
+        podcasts_config = config.get("podcasts", {}) if config else {}
+        download_dir = Path(podcasts_config.get("download_dir", "~/Documents/ZhiweiVault/70-79_个人笔记/播客")).expanduser()
+        feeds = podcasts_config.get("feeds", [])
+
+        if not feeds:
+            logger.info("播客订阅列表为空，跳过")
+            log_task_metrics(task_name, "skipped", extra={"reason": "no_feeds"})
+            return
+
+        download_dir.mkdir(parents=True, exist_ok=True)
+
+        # 记录新 episode
+        new_episodes = []
+
+        for feed in feeds:
+            feed_name = feed.get("name", "未知播客")
+            feed_url = feed.get("url")
+
+            if not feed_url:
+                continue
+
+            try:
+                import feedparser
+                parsed = feedparser.parse(feed_url)
+
+                if parsed.entries:
+                    # 获取最新 episode
+                    latest = parsed.entries[0]
+                    title = latest.get("title", "无标题")
+                    audio_url = None
+
+                    # 查找音频链接
+                    for enclosure in latest.get("enclosures", []):
+                        if "audio" in enclosure.get("type", ""):
+                            audio_url = enclosure.get("href")
+                            break
+
+                    if audio_url:
+                        # 检查是否已下载
+                        safe_title = "".join(c for c in title[:50] if c.isalnum() or c in " -_")
+                        audio_file = download_dir / f"{feed_name}_{safe_title}.mp3"
+
+                        if not audio_file.exists():
+                            # 下载音频
+                            logger.info(f"下载: {feed_name} - {title}")
+                            import urllib.request
+                            urllib.request.urlretrieve(audio_url, audio_file)
+                            new_episodes.append({
+                                "podcast": feed_name,
+                                "title": title,
+                                "file": str(audio_file)
+                            })
+                        else:
+                            logger.info(f"已存在: {title}")
+
+            except Exception as e:
+                logger.error(f"处理播客 {feed_name} 失败: {e}")
+
+        # 生成更新简报
+        if new_episodes:
+            content = f"""# 🎧 播客更新
+
+> 检查时间: {datetime.now().strftime("%Y-%m-%d %H:%M")}
+
+## 新下载的节目
+
+"""
+            for ep in new_episodes:
+                content += f"- **{ep['podcast']}**: {ep['title']}\n"
+
+            file_path, _ = save_result_safe(task_name, content, targets=["feishu"])
+            try_push(file_path)
+
+        logger.info(f"✅ 播客更新完成: 新下载 {len(new_episodes)} 个节目")
+        log_task_metrics(task_name, "success",
+                        duration_ms=int((time.time() - start_time) * 1000),
+                        extra={"new_episodes": len(new_episodes)})
+
+    except Exception as e:
+        logger.error(f"播客更新任务异常: {e}")
+        log_task_metrics(task_name, "failure", error=str(e))
+
+
 __all__ = [
     # 任务函数
     'job_morning_brief',
     'job_noon_brief',
-    'job_info_brief',
     'job_us_market_open',
     'job_us_market_close',
-    'job_crypto',
     'job_arxiv',
     'job_system_check',
     'job_system_metrics_report',
-    'job_fail_test',
     'job_log_rotate',
     'job_knowledge_classify',
-    'job_klib_sync',
     'job_video_notes_organize',
     'job_video_retry',
     'job_asr_health_check',
-    'job_douyin_health_check',  # ⭐ v64.0 新增
+    'job_douyin_health_check',
     'job_research_pipeline',
     'job_vault_sync_master',
-    'job_graph_maintenance',
     'job_daily_voice_task_summary',
     'job_ws_health_check',
     'job_intel_sync',
     'job_intel_report',
-    'job_sync_hn_daily',       # ⭐ v62.0
-    'job_sync_github_weekly',  # ⭐ v62.0
+    'job_sync_hn_daily',
+    'job_sync_github_weekly',
+    'job_podcast_update',  # ⭐ v65.0 新增
     # 辅助函数
     'enrich_with_graphrag',
     'enrich_with_klib',

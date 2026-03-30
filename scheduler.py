@@ -44,6 +44,8 @@ from scheduler_jobs import (
     job_vault_sync_master,
     job_intel_sync,
     job_intel_report,
+    job_sync_hn_daily,       # ⭐ v62.0
+    job_sync_github_weekly,  # ⭐ v62.0
     log_health_status,
 )
 
@@ -136,6 +138,8 @@ def main():
         "vault_sync_master": job_vault_sync_master,
         "intelligence_sync": job_intel_sync,
         "intelligence_report": job_intel_report,
+        "sync_hn_daily": job_sync_hn_daily,           # ⭐ v62.0
+        "sync_github_weekly": job_sync_github_weekly, # ⭐ v62.0
         # ai_source_reminder 和 podcast_update 无对应函数，已禁用
     }
 

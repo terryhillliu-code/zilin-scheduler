@@ -292,6 +292,25 @@ jobs:
     description: "每周情报深度简报 (v5.5)"
     push_to: ["feishu"]
 
+  # 信息源同步 (v62.0)
+  sync_hn_daily:
+    enabled: true
+    hour: 8
+    minute: 0
+    day_of_week: "mon-sun"
+    description: "同步 Hacker News Top 5 到 Obsidian Inbox"
+    push_to: []
+    retry: { max_attempts: 2, delay_seconds: 60 }
+
+  sync_github_weekly:
+    enabled: true
+    hour: 8
+    minute: 30
+    day_of_week: "mon"
+    description: "每周同步 GitHub Trending (AI) 到 Obsidian Inbox"
+    push_to: []
+    retry: { max_attempts: 2, delay_seconds: 60 }
+
 data_sources:
   weather:
     city: "杭州"

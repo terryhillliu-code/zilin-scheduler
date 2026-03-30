@@ -983,6 +983,152 @@ def job_asr_health_check():
         log_task_metrics(task_name, "failure", error=str(e))
 
 
+# ============ 信息源同步任务 (v62.0) ============
+
+def job_sync_hn_daily():
+    """同步 Hacker News Top 5 到 Obsidian Inbox
+
+    ⭐ v62.0 新增：定时同步优质内容
+    """
+    task_name = "sync_hn_daily"
+    start_time = time.time()
+
+    try:
+        logger.info(f"📰 开始执行: {task_name}")
+
+        # 使用 zhiwei_agent 的 trending_discover 工具
+        sys.path.insert(0, str(Path.home() / "zhiwei_agent"))
+        from tools.trending_discover import TrendingDiscoverTool
+
+        tool = TrendingDiscoverTool()
+        result = tool.execute(platform="hn", limit=5)
+
+        if not result.success:
+            logger.error(f"HN 获取失败: {result.error}")
+            log_task_metrics(task_name, "failure", error=result.error)
+            return
+
+        items = result.data.get("items", [])
+        if not items:
+            logger.warning("HN 无热门内容")
+            log_task_metrics(task_name, "skipped", extra={"reason": "no_items"})
+            return
+
+        # 生成 Markdown 内容
+        today = datetime.now().strftime("%Y-%m-%d")
+        content = f"""# NEWS_{today}_Hacker-News-Top5
+
+## 来源
+- Hacker News Top Stories
+- 抓取时间: {datetime.now().strftime("%Y-%m-%d %H:%M")}
+
+## 内容
+
+"""
+        for i, item in enumerate(items, 1):
+            title = item.get("title", "无标题")
+            url = item.get("url", "")
+            score = item.get("score", 0)
+            comments = item.get("comments", 0)
+            by = item.get("by", "")
+
+            content += f"""### {i}. {title}
+
+- URL: {url}
+- 分数: {score} | 评论: {comments} | 作者: {by}
+
+"""
+
+        # 保存到 Obsidian Inbox
+        inbox_path = Path.home() / "Documents" / "ZhiweiVault" / "Inbox"
+        inbox_path.mkdir(parents=True, exist_ok=True)
+
+        output_file = inbox_path / f"NEWS_{today}_Hacker-News-Top5.md"
+        with open(output_file, "w", encoding="utf-8") as f:
+            f.write(content)
+
+        logger.info(f"✅ HN Top 5 已保存到: {output_file}")
+        log_task_metrics(task_name, "success", duration_ms=int((time.time() - start_time) * 1000),
+                        extra={"items": len(items), "file": str(output_file)})
+
+    except Exception as e:
+        logger.error(f"HN 同步任务异常: {e}")
+        log_task_metrics(task_name, "failure", error=str(e))
+
+
+def job_sync_github_weekly():
+    """同步 GitHub Trending (AI) 到 Obsidian Inbox
+
+    ⭐ v62.0 新增：每周同步 GitHub AI 趋势
+    """
+    task_name = "sync_github_weekly"
+    start_time = time.time()
+
+    try:
+        logger.info(f"🐙 开始执行: {task_name}")
+
+        # 使用 zhiwei_agent 的 trending_discover 工具
+        sys.path.insert(0, str(Path.home() / "zhiwei_agent"))
+        from tools.trending_discover import TrendingDiscoverTool
+
+        tool = TrendingDiscoverTool()
+        result = tool.execute(platform="github", limit=10)
+
+        if not result.success:
+            logger.error(f"GitHub Trending 获取失败: {result.error}")
+            log_task_metrics(task_name, "failure", error=result.error)
+            return
+
+        items = result.data.get("items", [])
+        if not items:
+            logger.warning("GitHub Trending 无内容")
+            log_task_metrics(task_name, "skipped", extra={"reason": "no_items"})
+            return
+
+        # 生成 Markdown 内容
+        today = datetime.now().strftime("%Y-%m-%d")
+        content = f"""# NEWS_{today}_GitHub-Trending-AI
+
+## 来源
+- GitHub Trending (Daily)
+- 抓取时间: {datetime.now().strftime("%Y-%m-%d %H:%M")}
+
+## 内容
+
+"""
+        for i, item in enumerate(items, 1):
+            title = item.get("title", item.get("name", "无名称"))
+            url = item.get("url", "")
+            desc = item.get("description", "无描述")
+            stars = item.get("stars", 0)
+            lang = item.get("language", "Unknown")
+            author = item.get("author", "")
+
+            content += f"""### {i}. {title}
+
+- URL: {url}
+- 描述: {desc}
+- Stars: {stars} | 语言: {lang} | 作者: {author}
+
+"""
+
+        # 保存到 Obsidian Inbox
+        inbox_path = Path.home() / "Documents" / "ZhiweiVault" / "Inbox"
+        inbox_path.mkdir(parents=True, exist_ok=True)
+
+        output_file = inbox_path / f"NEWS_{today}_GitHub-Trending-AI.md"
+        with open(output_file, "w", encoding="utf-8") as f:
+            f.write(content)
+
+        logger.info(f"✅ GitHub Trending 已保存到: {output_file}")
+        log_task_metrics(task_name, "success", duration_ms=int((time.time() - start_time) * 1000),
+                        extra={"items": len(items), "file": str(output_file)})
+
+    except Exception as e:
+        logger.error(f"GitHub 同步任务异常: {e}")
+        log_task_metrics(task_name, "failure", error=str(e))
+
+
 __all__ = [
     # 任务函数
     'job_morning_brief',
@@ -1008,6 +1154,8 @@ __all__ = [
     'job_ws_health_check',
     'job_intel_sync',
     'job_intel_report',
+    'job_sync_hn_daily',       # ⭐ v62.0
+    'job_sync_github_weekly',  # ⭐ v62.0
     # 辅助函数
     'enrich_with_graphrag',
     'enrich_with_klib',

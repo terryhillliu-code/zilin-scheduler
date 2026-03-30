@@ -23,6 +23,43 @@ quiet_hours:
   end: "06:30"
 
 jobs:
+  # ============ 每日简报 ============
+  morning_brief:
+    enabled: true
+    hour: 9
+    minute: 30
+    day_of_week: "mon-sun"
+    description: "每日早报"
+    push_to: ["dingtalk", "feishu"]
+
+  noon_brief:
+    enabled: true
+    hour: 14
+    minute: 30
+    day_of_week: "mon-sun"
+    description: "每日午报"
+    push_to: ["dingtalk", "feishu"]
+
+  # ============ 美股信息 ============
+  us_market_close:
+    enabled: true
+    hour: 8
+    minute: 0
+    day_of_week: "tue-sat"
+    description: "美股收盘复盘"
+    push_to: ["dingtalk", "feishu"]
+    retry: { max_attempts: 3, delay_seconds: 120 }
+
+  us_market_open:
+    enabled: true
+    hour: 21
+    minute: 0
+    day_of_week: "mon-fri"
+    description: "美股开盘播报"
+    push_to: ["dingtalk", "feishu"]
+    retry: { max_attempts: 3, delay_seconds: 120 }
+
+  # ============ 系统维护 ============
   system_check:
     enabled: true
     hour: 6
@@ -41,132 +78,6 @@ jobs:
     push_to: ["dingtalk"]
     retry: { max_attempts: 2, delay_seconds: 30 }
 
-  arxiv_papers:
-    enabled: false  # 脚本缺失: arxiv_processor.py 不存在
-    hour: 7
-    minute: 0
-    day_of_week: "mon-sun"
-    description: "arXiv 论文精选 (已禁用: 脚本缺失)"
-    push_to: ["dingtalk", "feishu"]
-    retry: { max_attempts: 3, delay_seconds: 120 }
-
-  us_market_close:
-    enabled: true
-    hour: 8
-    minute: 0
-    day_of_week: "tue-sat"
-    description: "美股收盘复盘"
-    push_to: ["dingtalk", "feishu"]
-    retry: { max_attempts: 3, delay_seconds: 120 }
-
-  morning_brief:
-    enabled: true
-    hour: 9
-    minute: 30
-    day_of_week: "mon-sun"
-    description: "每日早报"
-    push_to: ["dingtalk", "feishu"]
-
-  noon_brief:
-    enabled: true
-    hour: 14
-    minute: 30
-    day_of_week: "mon-sun"
-    description: "每日午报"
-    push_to: ["dingtalk", "feishu"]
-
-  # 每2小时信息流简报（07:00, 09:00, 11:00, 13:00, 15:00, 17:00, 19:00, 21:00）
-  info_brief_07:
-    enabled: false
-    hour: 7
-    minute: 0
-    day_of_week: "mon-sun"
-    description: "信息流简报 07:00"
-    push_to: ["dingtalk", "feishu"]
-    retry: { max_attempts: 3, delay_seconds: 60 }
-
-  info_brief_09:
-    enabled: false
-    hour: 9
-    minute: 0
-    day_of_week: "mon-sun"
-    description: "信息流简报 09:00"
-    push_to: ["dingtalk", "feishu"]
-    retry: { max_attempts: 3, delay_seconds: 60 }
-
-  info_brief_11:
-    enabled: false
-    hour: 11
-    minute: 0
-    day_of_week: "mon-sun"
-    description: "信息流简报 11:00"
-    push_to: ["dingtalk", "feishu"]
-    retry: { max_attempts: 3, delay_seconds: 60 }
-
-  info_brief_13:
-    enabled: false
-    hour: 13
-    minute: 0
-    day_of_week: "mon-sun"
-    description: "信息流简报 13:00"
-    push_to: ["dingtalk", "feishu"]
-    retry: { max_attempts: 3, delay_seconds: 60 }
-
-  info_brief_15:
-    enabled: false
-    hour: 15
-    minute: 0
-    day_of_week: "mon-sun"
-    description: "信息流简报 15:00"
-    push_to: ["dingtalk", "feishu"]
-    retry: { max_attempts: 3, delay_seconds: 60 }
-
-  info_brief_17:
-    enabled: false
-    hour: 17
-    minute: 0
-    day_of_week: "mon-sun"
-    description: "信息流简报 17:00"
-    push_to: ["dingtalk", "feishu"]
-    retry: { max_attempts: 3, delay_seconds: 60 }
-
-  info_brief_19:
-    enabled: false
-    hour: 19
-    minute: 0
-    day_of_week: "mon-sun"
-    description: "信息流简报 19:00"
-    push_to: ["dingtalk", "feishu"]
-    retry: { max_attempts: 3, delay_seconds: 60 }
-
-  info_brief_21:
-    enabled: false
-    hour: 21
-    minute: 0
-    day_of_week: "mon-sun"
-    description: "信息流简报 21:00"
-    push_to: ["dingtalk", "feishu"]
-    retry: { max_attempts: 3, delay_seconds: 60 }
-
-  # 加密货币晚报（保留备用，与 info_brief_21 时段重叠）
-  crypto_evening:
-    enabled: false
-    hour: 21
-    minute: 0
-    day_of_week: "mon-sun"
-    description: "加密货币晚报（已弃用，合并到 info_brief_21）"
-    push_to: ["dingtalk", "feishu"]
-    retry: { max_attempts: 3, delay_seconds: 60 }
-
-  us_market_open:
-    enabled: true
-    hour: 21
-    minute: 0
-    day_of_week: "mon-fri"
-    description: "美股开盘播报"
-    push_to: ["dingtalk", "feishu"]
-    retry: { max_attempts: 3, delay_seconds: 120 }
-
   log_rotate:
     enabled: true
     hour: 3
@@ -175,6 +86,7 @@ jobs:
     description: "日志滚动（10MB/5版本）"
     push_to: []
 
+  # ============ 知识管理 ============
   knowledge_classify:
     enabled: true
     hour: 23
@@ -182,43 +94,6 @@ jobs:
     day_of_week: "mon-sun"
     description: "知识管线分类"
     push_to: []
-
-  research_pipeline:
-    enabled: false  # 已禁用: research_processor.py 和 marker-pdf 未安装
-    hour: 23
-    minute: 30
-    day_of_week: "mon-sun"
-    description: "PDF 研报扫描与向量化入库 - 已禁用"
-    push_to: ["dingtalk", "feishu"]
-    retry: { max_attempts: 2, delay_seconds: 120 }
-
-  graph_maintenance:
-    enabled: false  # 已禁用: LightRAG 性价比低，使用 LanceDB RAG 替代
-    hour: 2
-    minute: 30
-    day_of_week: "mon-sun"
-    description: "知识图谱自动化维护 (GraphRAG Indexing) - 已禁用"
-    push_to: []
-    retry: { max_attempts: 1, delay_seconds: 300 }
-
-  daily_voice_task_summary:
-    enabled: true
-    hour: 20
-    minute: 0
-    day_of_week: "mon-sun"
-    description: "每日语音任务汇总"
-    push_to: []
-    retry: { max_attempts: 2, delay_seconds: 60 }
-
-
-  klib_sync:
-    enabled: false  # 脚本缺失: klib_vectorize.py 不存在
-    hour: 3
-    minute: 0
-    day_of_week: "mon-sun"
-    description: "klib 同步 (已禁用: 向量化脚本缺失)"
-    push_to: []
-    retry: { max_attempts: 1, delay_seconds: 60 }
 
   vault_sync_master:
     enabled: true
@@ -229,15 +104,7 @@ jobs:
     push_to: ["feishu"]
     retry: { max_attempts: 1, delay_seconds: 120 }
 
-  video_notes_organize:
-    enabled: false  # 目录缺失: 40-49_视频笔记 不存在
-    hour: 4
-    minute: 0
-    day_of_week: "mon-sun"
-    description: "视频笔记整理 (已禁用: 目录缺失)"
-    push_to: []
-    retry: { max_attempts: 1, delay_seconds: 30 }
-
+  # ============ 视频处理 ============
   video_retry:
     enabled: true
     hour: 6
@@ -247,6 +114,7 @@ jobs:
     push_to: []
     retry: { max_attempts: 1, delay_seconds: 30 }
 
+  # ============ 健康检查 ============
   asr_health_check:
     enabled: true
     hour: 12
@@ -265,26 +133,17 @@ jobs:
     push_to: []
     retry: { max_attempts: 1, delay_seconds: 30 }
 
-  # AI 信息源管理
-  ai_source_reminder:
-    enabled: false  # 函数缺失: 无 job_ai_source_reminder
-    hour: 9
-    minute: 0
-    day_of_week: "mon"
-    description: "AI 源提醒 (已禁用: 函数缺失)"
-    push_to: ["feishu"]
-    retry: { max_attempts: 1, delay_seconds: 60 }
-
-  podcast_update:
-    enabled: false  # 函数缺失: 无 job_podcast_update
-    hour: 18
+  # ============ 语音任务 ============
+  daily_voice_task_summary:
+    enabled: true
+    hour: 20
     minute: 0
     day_of_week: "mon-sun"
-    description: "播客更新检查 (已禁用: 函数缺失)"
-    push_to: ["feishu"]
-    retry: { max_attempts: 2, delay_seconds: 30 }
+    description: "每日语音任务汇总"
+    push_to: []
+    retry: { max_attempts: 2, delay_seconds: 60 }
 
-  # 情报中心 (v5.5)
+  # ============ 情报中心 (v5.5) ============
   intelligence_sync:
     enabled: true
     hour: 10
@@ -301,7 +160,7 @@ jobs:
     description: "每周情报深度简报 (v5.5)"
     push_to: ["feishu"]
 
-  # 信息源同步 (v62.0)
+  # ============ 信息源同步 (v62.0) ============
   sync_hn_daily:
     enabled: true
     hour: 8
@@ -319,6 +178,25 @@ jobs:
     description: "每周同步 GitHub Trending (AI) 到 Obsidian Inbox"
     push_to: []
     retry: { max_attempts: 2, delay_seconds: 60 }
+
+# ============ 已禁用任务 (保留配置但注释) ============
+# 以下任务已禁用，如需启用请取消注释并设置 enabled: true
+#
+# arxiv_papers:
+#   enabled: false  # 脚本缺失: arxiv_processor.py 不存在
+#   hour: 7
+#   minute: 0
+#   description: "arXiv 论文精选"
+#
+# info_brief_* (8个): 信息流简报 - 与早报/午报重复，已禁用
+#
+# research_pipeline:
+#   enabled: false  # 脚本缺失
+#   description: "PDF 研报扫描与向量化入库"
+#
+# graph_maintenance:
+#   enabled: false  # LightRAG 已弃用
+#   description: "知识图谱自动化维护"
 
 data_sources:
   weather:

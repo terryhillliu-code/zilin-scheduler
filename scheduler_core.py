@@ -233,7 +233,7 @@ def enrich_with_rag(query, top_k=5):
         
         result = subprocess.run(
             [rag_venv, bridge_script, "retrieve", query, "--top-k", str(top_k)],
-            capture_output=True, text=True, timeout=30
+            capture_output=True, text=True, timeout=60  # ⭐ v64.0: 30s → 60s
         )
         if result.returncode == 0:
             data = json.loads(result.stdout)

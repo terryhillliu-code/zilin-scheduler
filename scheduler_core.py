@@ -249,6 +249,7 @@ def enrich_with_rag(query, top_k=5):
         return ""
 
 RAG_AVAILABLE = True
+LLM_CLIENT_AVAILABLE = True  # ⭐ v62.2 新增：修复健康检查状态
 
 
 

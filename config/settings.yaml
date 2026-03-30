@@ -256,6 +256,15 @@ jobs:
     push_to: []
     retry: { max_attempts: 1, delay_seconds: 30 }
 
+  douyin_health_check:  # ⭐ v64.0 新增
+    enabled: true
+    hour: "*/2"  # 每2小时检查一次
+    minute: 0
+    day_of_week: "mon-sun"
+    description: "Douyin API 健康检查（自动重启）"
+    push_to: []
+    retry: { max_attempts: 1, delay_seconds: 30 }
+
   # AI 信息源管理
   ai_source_reminder:
     enabled: false  # 函数缺失: 无 job_ai_source_reminder

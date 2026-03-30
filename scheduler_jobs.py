@@ -15,8 +15,9 @@ from datetime import datetime, timedelta
 from pathlib import Path
 
 # 导入核心模块
+import scheduler_core
 from scheduler_core import (
-    logger, config, push_manager,
+    logger, config,
     is_quiet_hours, get_retry_delay, log_task_metrics, send_failure_alert,
     load_prompt, call_agent, enrich_with_rag, save_output
 )
@@ -387,7 +388,7 @@ def log_health_status():
 
         # 检查推送
         try:
-            services["pusher"] = push_manager is not None
+            services["pusher"] = scheduler_core.push_manager is not None
         except:
             pass
 
@@ -1002,6 +1003,91 @@ def job_asr_health_check():
         log_task_metrics(task_name, "failure", error=str(e))
 
 
+def job_douyin_health_check():
+    """Douyin API 健康检查
+
+    定期检查 Douyin API 服务可用性，
+    发现问题自动重启并记录到日志。
+    """
+    task_name = "douyin_health_check"
+    start_time = time.time()
+
+    logger.info("🎬 开始 Douyin API 健康检查...")
+
+    try:
+        zhiwei_bot_dir = Path.home() / "zhiwei-bot"
+        script_path = zhiwei_bot_dir / "scripts" / "douyin_health_check.py"
+
+        # 使用系统 Python 或共享 venv
+        venv_python = Path.home() / "zhiwei-shared-venv" / "bin" / "python"
+        python_cmd = str(venv_python) if venv_python.exists() else "python3"
+
+        if not script_path.exists():
+            logger.warning(f"健康检查脚本不存在: {script_path}")
+            return
+
+        # 运行健康检查（带自动重启）
+        result = subprocess.run(
+            [python_cmd, str(script_path), "--json", "--restart"],
+            capture_output=True,
+            text=True,
+            timeout=30,
+            env={**os.environ, "PYTHONPATH": str(zhiwei_bot_dir)}
+        )
+
+        if result.returncode == 0:
+            import json
+            health_data = json.loads(result.stdout)
+            status = health_data.get("status", "unknown")
+
+            if status == "healthy":
+                logger.info("✅ Douyin API 健康检查通过")
+            elif status == "recovered":
+                logger.info("✅ Douyin API 已自动恢复")
+                # 发送恢复通知
+                _send_douyin_recovery_notification()
+            else:
+                logger.warning(f"⚠️ Douyin API 状态: {status}")
+                # 检查具体问题
+                for check in health_data.get("checks", []):
+                    if check.get("error"):
+                        logger.warning(f"   {check.get('service', check.get('check', 'check'))}: {check['error']}")
+
+            log_task_metrics(task_name, "success", duration_ms=int((time.time() - start_time) * 1000))
+        else:
+            logger.error(f"Douyin 健康检查执行失败: {result.stderr}")
+            log_task_metrics(task_name, "failure", error=result.stderr[:200])
+
+    except subprocess.TimeoutExpired:
+        logger.error("Douyin 健康检查超时")
+        log_task_metrics(task_name, "failure", error="timeout")
+    except Exception as e:
+        logger.error(f"Douyin 健康检查异常: {e}")
+        log_task_metrics(task_name, "failure", error=str(e))
+
+
+def _send_douyin_recovery_notification():
+    """发送 Douyin API 服务恢复通知到飞书"""
+    try:
+        zhiwei_bot_dir = Path.home() / "zhiwei-bot"
+        if str(zhiwei_bot_dir) not in sys.path:
+            sys.path.insert(0, str(zhiwei_bot_dir))
+
+        from video_history import ALERT_USER_ID
+
+        if ALERT_USER_ID:
+            from feishu_api import send_direct_message
+            msg = """✅ Douyin API 服务已恢复
+
+服务健康检查发现 Douyin API 不可运行，已自动重启。
+
+请确认视频处理功能正常。"""
+            send_direct_message(ALERT_USER_ID, msg)
+            logger.info("Douyin API 恢复通知已发送")
+    except Exception as e:
+        logger.warning(f"发送恢复通知失败: {e}")
+
+
 # ============ 信息源同步任务 (v62.0) ============
 
 def job_sync_hn_daily():
@@ -1166,6 +1252,7 @@ __all__ = [
     'job_video_notes_organize',
     'job_video_retry',
     'job_asr_health_check',
+    'job_douyin_health_check',  # ⭐ v64.0 新增
     'job_research_pipeline',
     'job_vault_sync_master',
     'job_graph_maintenance',

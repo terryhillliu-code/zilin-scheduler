@@ -14,7 +14,7 @@ from pathlib import Path
 
 # 导入核心模块
 from scheduler_core import (
-    logger, config, push_manager,
+    logger, config,
     setup_logging, load_config, log_task_metrics
 )
 
@@ -37,6 +37,7 @@ from scheduler_jobs import (
     job_video_notes_organize,
     job_video_retry,
     job_asr_health_check,
+    job_douyin_health_check,  # ⭐ v64.0 新增
     job_research_pipeline,
     job_graph_maintenance,
     job_daily_voice_task_summary,
@@ -73,7 +74,7 @@ def job_result_listener(event):
 # ============ 主程序 ============
 
 def main():
-    global config, push_manager, logger
+    global config, logger
 
     # 加载配置
     config = load_config()
@@ -84,8 +85,9 @@ def main():
         config.get("system", {}).get("log_retention_days", 30)
     )
 
-    # 初始化推送管理器
-    push_manager = PushManager(config)
+    # 初始化推送管理器（更新 scheduler_core 的全局变量）
+    import scheduler_core
+    scheduler_core.push_manager = PushManager(config)
 
     logger.info("=" * 50)
     logger.info("🤖 知微定时任务系统 v3.5 启动")
@@ -129,6 +131,7 @@ def main():
         "video_notes_organize": job_video_notes_organize,
         "video_retry": job_video_retry,
         "asr_health_check": job_asr_health_check,
+        "douyin_health_check": job_douyin_health_check,  # ⭐ v64.0 新增
         "fail_test": job_fail_test,
         "log_rotate": job_log_rotate,
         "knowledge_classify": job_knowledge_classify,

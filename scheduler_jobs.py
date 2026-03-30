@@ -1134,7 +1134,7 @@ def job_sync_github_weekly():
 # ============ 播客更新任务 (v65.0 新增) ============
 
 def job_podcast_update():
-    """播客更新检查与下载"""
+    """播客更新检查与下载 - v65.1 增强"""
     task_name = "podcast_update"
     start_time = time.time()
 
@@ -1147,13 +1147,21 @@ def job_podcast_update():
         feeds = podcasts_config.get("feeds", [])
 
         if not feeds:
-            logger.info("播客订阅列表为空，跳过")
+            logger.info("📢 播客订阅列表为空")
+            logger.info("   请在 settings.yaml 的 podcasts.feeds 中添加订阅源")
+            logger.info("   获取RSS地址: 小宇宙App → 播客页面 → 分享 → RSS")
             log_task_metrics(task_name, "skipped", extra={"reason": "no_feeds"})
             return
 
         download_dir.mkdir(parents=True, exist_ok=True)
 
-        # 记录新 episode
+        # 记录统计
+        stats = {
+            "checked": 0,
+            "new_downloads": 0,
+            "already_exists": 0,
+            "errors": 0
+        }
         new_episodes = []
 
         for feed in feeds:
@@ -1161,32 +1169,47 @@ def job_podcast_update():
             feed_url = feed.get("url")
 
             if not feed_url:
+                logger.warning(f"⚠️ {feed_name}: 未配置RSS地址")
                 continue
 
             try:
                 import feedparser
                 parsed = feedparser.parse(feed_url)
 
-                if parsed.entries:
-                    # 获取最新 episode
-                    latest = parsed.entries[0]
-                    title = latest.get("title", "无标题")
+                if not parsed.entries:
+                    logger.warning(f"⚠️ {feed_name}: RSS无内容，请检查地址是否正确")
+                    stats["errors"] += 1
+                    continue
+
+                stats["checked"] += 1
+                logger.info(f"📻 {feed_name}: {len(parsed.entries)} 个节目")
+
+                # 检查最近3个episode
+                for entry in parsed.entries[:3]:
+                    title = entry.get("title", "无标题")
                     audio_url = None
 
                     # 查找音频链接
-                    for enclosure in latest.get("enclosures", []):
+                    for enclosure in entry.get("enclosures", []):
                         if "audio" in enclosure.get("type", ""):
                             audio_url = enclosure.get("href")
                             break
 
+                    # 备选：检查链接
+                    if not audio_url and entry.get("link"):
+                        link = entry.get("link", "")
+                        if link.endswith((".mp3", ".m4a", ".mp4")):
+                            audio_url = link
+
                     if audio_url:
-                        # 检查是否已下载
-                        safe_title = "".join(c for c in title[:50] if c.isalnum() or c in " -_")
-                        audio_file = download_dir / f"{feed_name}_{safe_title}.mp3"
+                        # 安全文件名
+                        safe_title = "".join(c for c in title[:40] if c.isalnum() or c in " -_").strip()
+                        ext = audio_url.split(".")[-1][:4] if "." in audio_url else "mp3"
+                        audio_file = download_dir / f"{feed_name}_{safe_title}.{ext}"
 
                         if not audio_file.exists():
                             # 下载音频
-                            logger.info(f"下载: {feed_name} - {title}")
+                            logger.info(f"  ⬇️ 下载: {title[:40]}")
                             import urllib.request
                             urllib.request.urlretrieve(audio_url, audio_file)
                             new_episodes.append({
@@ -1194,11 +1217,13 @@ def job_podcast_update():
                                 "title": title,
                                 "file": str(audio_file)
                             })
+                            stats["new_downloads"] += 1
                         else:
-                            logger.info(f"已存在: {title}")
+                            stats["already_exists"] += 1
 
             except Exception as e:
-                logger.error(f"处理播客 {feed_name} 失败: {e}")
+                logger.error(f"❌ {feed_name}: {e}")
+                stats["errors"] += 1
 
         # 生成更新简报
         if new_episodes:
@@ -1215,10 +1240,11 @@ def job_podcast_update():
             file_path, _ = save_result_safe(task_name, content, targets=["feishu"])
             try_push(file_path)
 
-        logger.info(f"✅ 播客更新完成: 新下载 {len(new_episodes)} 个节目")
+        # 统计日志
+        logger.info(f"✅ 播客更新完成: 检查{stats['checked']}个源，新下载{stats['new_downloads']}个，已存在{stats['already_exists']}个")
         log_task_metrics(task_name, "success",
                         duration_ms=int((time.time() - start_time) * 1000),
-                        extra={"new_episodes": len(new_episodes)})
+                        extra=stats)
 
     except Exception as e:
         logger.error(f"播客更新任务异常: {e}")

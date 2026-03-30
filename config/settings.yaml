@@ -218,10 +218,30 @@ jobs:
 # ============ 播客配置 (v65.0 新增) ============
 podcasts:
   download_dir: "~/Documents/ZhiweiVault/70-79_个人笔记/播客"
-  feeds: []  # 用户后续补充播客订阅源
-  # feeds 示例:
-  # - name: "硬地骇客"
-  #   url: "https://feeds.xxx.com/xxx"
+  feeds:
+    # === 科技商业 ===
+    # 声动早咖啡 - 科技商业早新闻
+    # RSS: 请从小宇宙或Apple Podcasts获取
+    # - name: "声动早咖啡"
+    #   url: "https://feed.xiaoyuzhoufm.com/..."
+
+    # 硅谷101 - 硅谷科技趋势与创业
+    # - name: "硅谷101"
+    #   url: "https://feeds.megaphone.fm/..."
+
+    # 半拿铁 - 科技财经深度对话
+    # - name: "半拿铁"
+    #   url: "https://feeds.acast.com/..."
+
+    # 硬地骇客 - 独立开发者故事
+    # - name: "硬地骇客"
+    #   url: "https://feed.xiaoyuzhoufm.com/..."
+
+    # === 如何获取RSS地址 ===
+    # 1. 打开小宇宙App或网站
+    # 2. 进入播客页面，点击"分享"或"RSS"
+    # 3. 复制RSS地址粘贴到上方url字段
+    # 4. 取消注释即可启用
 
 data_sources:
   weather:

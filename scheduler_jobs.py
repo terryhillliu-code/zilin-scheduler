@@ -1061,10 +1061,11 @@ def job_douyin_health_check():
 
 
 def job_llm_health_check():
-    """LLM API 健康检查 ⭐ v67.0
+    """LLM API 健康检查 ⭐ v68.0
 
     定期检查三层 API (Coding Plan, DashScope, OpenRouter) 可用性，
     发现问题自动告警到钉钉，并记录统计信息。
+    支持报告归档，便于历史追溯。
     """
     task_name = "llm_health_check"
     start_time = time.time()
@@ -1080,9 +1081,9 @@ def job_llm_health_check():
             logger.warning(f"健康检查脚本不存在: {script_path}")
             return
 
-        # 运行健康检查（JSON 格式输出，自动告警）
+        # 运行健康检查（JSON 格式输出，自动告警，保存报告）
         result = subprocess.run(
-            [python_cmd, str(script_path), "--json", "--alert"],
+            [python_cmd, str(script_path), "--json", "--alert", "--save"],
             capture_output=True,
             text=True,
             timeout=120,

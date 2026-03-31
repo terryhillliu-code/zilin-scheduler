@@ -96,28 +96,58 @@ def enrich_with_klib(task_name: str, prompt_text: str, top_k: int = 5) -> str:
 
 
 def _collect_real_news_sources() -> str:
-    """收集真实数据源用于早报生成
+    """收集真实数据源用于早报生成 - v66.1 多源聚合
 
-    v66.0: 只使用真实数据，禁止LLM编造
+    数据源：
+    1. 实时搜索：当天 AI/科技新闻
+    2. Hacker News Top 5
+    3. GitHub Trending
+    4. 情报中心
+    5. 最新论文
     """
     sources = []
     today = datetime.now().strftime("%Y-%m-%d")
-
-    # 1. Hacker News Top 5（从 Obsidian Inbox 读取）
     inbox_path = Path.home() / "Documents" / "ZhiweiVault" / "Inbox"
+
+    # 1. 实时搜索：AI/科技新闻
+    try:
+        from tools.web_search import WebSearchTool
+        search_tool = WebSearchTool()
+
+        # 搜索当天新闻
+        search_queries = [
+            f"AI artificial intelligence news {today}",
+            "LLM large language model latest breakthrough",
+        ]
+
+        realtime_news = []
+        for query in search_queries:
+            result = search_tool.execute(query=query, num_results=5, use_cache=False)
+            if result.success and result.data.get("results"):
+                for item in result.data["results"][:3]:
+                    realtime_news.append(f"- [{item['title']}]({item['url']})\n  {item.get('snippet', '')[:80]}")
+
+        if realtime_news:
+            sources.append(f"### 🔴 实时新闻\n" + "\n".join(realtime_news[:6]))
+            logger.info(f"🔍 已获取实时新闻 {len(realtime_news)} 条")
+    except Exception as e:
+        logger.warning(f"实时搜索失败: {e}")
+
+    # 2. Hacker News Top 5
     hn_file = inbox_path / f"NEWS_{today}_Hacker-News-Top5.md"
+    if not hn_file.exists():
+        yesterday = (datetime.now() - timedelta(days=1)).strftime("%Y-%m-%d")
+        hn_file = inbox_path / f"NEWS_{yesterday}_Hacker-News-Top5.md"
 
     if hn_file.exists():
         hn_content = hn_file.read_text(encoding="utf-8")
         if "## 内容" in hn_content:
-            hn_items = hn_content.split("## 内容")[1].strip()
-            sources.append(f"### Hacker News Top 5\n{hn_items[:1500]}")
-            logger.info(f"📰 已加载 HN Top 5")
+            sources.append(f"### 📰 Hacker News\n{hn_content.split('## 内容')[1].strip()[:1000]}")
+            logger.info(f"📰 已加载 HN")
 
-    # 2. GitHub Trending（周一或有缓存时）
+    # 3. GitHub Trending
     github_file = inbox_path / f"NEWS_{today}_GitHub-Trending-AI.md"
     if not github_file.exists():
-        # 尝试最近7天的文件
         for i in range(1, 8):
             past_date = (datetime.now() - timedelta(days=i)).strftime("%Y-%m-%d")
             github_file = inbox_path / f"NEWS_{past_date}_GitHub-Trending-AI.md"
@@ -127,36 +157,37 @@ def _collect_real_news_sources() -> str:
     if github_file.exists():
         github_content = github_file.read_text(encoding="utf-8")
         if "## 内容" in github_content:
-            github_items = github_content.split("## 内容")[1].strip()
-            sources.append(f"### GitHub Trending (AI)\n{github_items[:1500]}")
-            logger.info(f"🐙 已加载 GitHub Trending")
+            sources.append(f"### 🐙 GitHub Trending\n{github_content.split('## 内容')[1].strip()[:800]}")
+            logger.info(f"🐙 已加载 GitHub")
 
-    # 3. 情报中心最近内容（深度情报）
-    intel_files = sorted(inbox_path.glob("2026-*_深度情报*.md"), reverse=True)[:5]
+    # 4. 情报中心（近3天）
+    intel_files = sorted(inbox_path.glob("2026-*_深度情报*.md"), reverse=True)[:3]
     if intel_files:
         intel_items = []
         for f in intel_files:
             content = f.read_text(encoding="utf-8")
-            # 提取标题和摘要
-            title = f.stem.replace("深度情报：", "")
-            # 取前300字作为摘要
-            summary = content[:300].replace("\n", " ").strip()
-            intel_items.append(f"- **{title}**: {summary}...")
-        sources.append(f"### 情报中心（近3天）\n" + "\n".join(intel_items))
-        logger.info(f"📡 已加载情报中心 {len(intel_files)} 条")
+            title = f.stem.replace("深度情报：", "")[:50]
+            source_url = ""
+            if "source_url:" in content:
+                import re
+                url_match = re.search(r'source_url:\s*"([^"]+)"', content)
+                if url_match:
+                    source_url = url_match.group(1)
+            if source_url:
+                intel_items.append(f"- **{title}**\n  > [来源]({source_url})")
+            else:
+                intel_items.append(f"- **{title}**")
+        sources.append(f"### 📡 情报中心\n" + "\n".join(intel_items))
+        logger.info(f"📡 已加载情报 {len(intel_files)} 条")
 
-    # 4. 论文笔记（如有）
+    # 5. 最新论文
     paper_files = sorted(inbox_path.glob("PAPER_*.md"), reverse=True)[:3]
     if paper_files:
-        paper_items = []
-        for f in paper_files:
-            title = f.stem.replace("PAPER_", "").split("_", 1)[-1] if "_" in f.stem else f.stem
-            paper_items.append(f"- {title[:60]}")
-        if paper_items:
-            sources.append(f"### 最新论文\n" + "\n".join(paper_items))
+        paper_items = [f"- {f.stem.split('_', 2)[-1][:50] if '_' in f.stem else f.stem[:50]}" for f in paper_files]
+        sources.append(f"### 📄 最新论文\n" + "\n".join(paper_items))
 
     if not sources:
-        return "⚠️ 今日暂无数据源，请检查 Inbox 目录或等待同步任务执行。"
+        return "⚠️ 今日暂无数据源"
 
     return "\n\n".join(sources)
 
@@ -1027,6 +1058,90 @@ def job_douyin_health_check():
         log_task_metrics(task_name, "failure", error=str(e))
 
 
+def job_llm_health_check():
+    """LLM API 健康检查 ⭐ v67.0
+
+    定期检查三层 API (Coding Plan, DashScope, OpenRouter) 可用性，
+    发现问题自动告警到钉钉，并记录统计信息。
+    """
+    task_name = "llm_health_check"
+    start_time = time.time()
+
+    logger.info("🤖 开始 LLM API 健康检查...")
+
+    try:
+        script_path = BASE_DIR / "scripts" / "llm_health_check.py"
+        venv_python = Path.home() / "zhiwei-shared-venv" / "bin" / "python"
+        python_cmd = str(venv_python) if venv_python.exists() else "python3"
+
+        if not script_path.exists():
+            logger.warning(f"健康检查脚本不存在: {script_path}")
+            return
+
+        # 运行健康检查（JSON 格式输出，自动告警）
+        result = subprocess.run(
+            [python_cmd, str(script_path), "--json", "--alert"],
+            capture_output=True,
+            text=True,
+            timeout=120,
+            env={**os.environ, "PYTHONPATH": str(Path.home() / "zhiwei-common")}
+        )
+
+        if result.returncode == 0:
+            health_data = json.loads(result.stdout)
+            status = health_data.get("status", "unknown")
+
+            if status == "healthy":
+                logger.info("✅ LLM API 三层全部可用")
+            elif status == "warning":
+                logger.warning("⚠️ LLM API 部分层不可用")
+                for issue in health_data.get("issues", []):
+                    logger.warning(f"   - {issue}")
+            elif status == "critical":
+                logger.error("🔴 LLM API 全层不可用")
+
+            # 记录统计信息
+            stats = health_data.get("stats", {})
+            for api_name, api_stats in stats.items():
+                logger.info(f"   {api_name}: 成功 {api_stats['success']}, 失败 {api_stats['fail']}")
+
+            log_task_metrics(task_name, "success", duration_ms=int((time.time() - start_time) * 1000))
+
+        elif result.returncode == 1:
+            logger.warning("⚠️ LLM 健康检查发现警告级问题")
+            try:
+                health_data = json.loads(result.stdout)
+                for issue in health_data.get("issues", []):
+                    logger.warning(f"   - {issue}")
+            except:
+                pass
+            log_task_metrics(task_name, "warning", duration_ms=int((time.time() - start_time) * 1000))
+
+        elif result.returncode == 2:
+            logger.error("🔴 LLM 健康检查发现严重问题")
+            try:
+                health_data = json.loads(result.stdout)
+                for issue in health_data.get("issues", []):
+                    logger.error(f"   - {issue}")
+            except:
+                pass
+            log_task_metrics(task_name, "critical", duration_ms=int((time.time() - start_time) * 1000))
+
+        else:
+            logger.warning(f"LLM 健康检查异常: {result.stderr}")
+            log_task_metrics(task_name, "failure", error=result.stderr[:200])
+
+    except subprocess.TimeoutExpired:
+        logger.error("❌ LLM 健康检查超时 (120s)")
+        log_task_metrics(task_name, "failure", error="timeout")
+    except json.JSONDecodeError as e:
+        logger.error(f"❌ LLM 健康检查输出解析失败: {e}")
+        log_task_metrics(task_name, "failure", error="json_parse_error")
+    except Exception as e:
+        logger.error(f"❌ LLM 健康检查执行失败: {e}")
+        log_task_metrics(task_name, "failure", error=str(e))
+
+
 def _send_douyin_recovery_notification():
     """发送 Douyin API 服务恢复通知到飞书"""
     try:
@@ -1337,6 +1452,7 @@ __all__ = [
     'job_sync_hn_daily',
     'job_sync_github_weekly',
     'job_podcast_update',  # ⭐ v65.0 新增
+    'job_llm_health_check',  # ⭐ v67.0 新增
     # 辅助函数
     'enrich_with_graphrag',
     'enrich_with_klib',

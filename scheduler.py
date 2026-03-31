@@ -42,6 +42,7 @@ from scheduler_jobs import (
     job_sync_hn_daily,
     job_sync_github_weekly,
     job_podcast_update,  # ⭐ v65.0 新增
+    job_llm_health_check,  # ⭐ v67.0 新增
     log_health_status,
 )
 
@@ -133,6 +134,7 @@ def main():
         "sync_hn_daily": job_sync_hn_daily,
         "sync_github_weekly": job_sync_github_weekly,
         "podcast_update": job_podcast_update,  # ⭐ v65.0 新增
+        "llm_health_check": job_llm_health_check,  # ⭐ v67.0 新增
     }
 
     # ============ 注册定时任务 ============

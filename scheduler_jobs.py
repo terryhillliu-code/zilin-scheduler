@@ -241,28 +241,27 @@ def job_morning_brief():
 
 
 def job_noon_brief():
-    """午报任务 (14:30)"""
+    """午报任务 (14:30) - v66.0: 只使用真实数据源，禁止幻觉"""
     task_name = "noon_brief"
     start_time = time.time()
 
     try:
         logger.info(f"🌞 开始执行: {task_name}")
 
-        # 加载 Prompt (修复: 注入 date 和 time 变量)
+        # 收集真实数据源
+        real_data = _collect_real_news_sources()
+
+        # 加载 Prompt
         prompt = load_prompt("noon_brief",
                             date=datetime.now().strftime("%Y-%m-%d"),
-                            time=datetime.now().strftime("%H:%M"))
+                            time=datetime.now().strftime("%H:%M"),
+                            real_data=real_data)
 
         if not prompt:
             logger.warning("午报 Prompt 加载失败")
             return
 
-        if enrich_with_rag:
-            rag_context = enrich_with_rag("午报", top_k=5)
-            if rag_context:
-                prompt = f"{rag_context}\n\n{prompt}"
-
-        success, content = call_agent("researcher", prompt, timeout=600)
+        success, content = call_agent("researcher", prompt, timeout=300)
 
         if success:
             file_path, skipped = save_result_safe(task_name, content, targets=["feishu"])

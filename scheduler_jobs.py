@@ -25,7 +25,8 @@ from scheduler_core import (
 # 导入其他模块
 BASE_DIR = Path(__file__).parent
 sys.path.insert(0, str(BASE_DIR))
-sys.path.insert(0, str(Path.home() / "zhiwei_agent"))  # ⭐ v65.1: 全局添加 zhiwei_agent 路径
+sys.path.insert(0, str(Path.home()))  # ⭐ v65.2: 添加 HOME 目录以支持 zhiwei_agent 绝对导入
+sys.path.insert(0, str(Path.home() / "zhiwei_agent"))
 
 from pusher import PushManager
 from scheduler_queue import save_result, try_push, save_result_safe

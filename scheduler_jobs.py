@@ -25,6 +25,7 @@ from scheduler_core import (
 # 导入其他模块
 BASE_DIR = Path(__file__).parent
 sys.path.insert(0, str(BASE_DIR))
+sys.path.insert(0, str(Path.home() / "zhiwei_agent"))  # ⭐ v65.1: 全局添加 zhiwei_agent 路径
 
 from pusher import PushManager
 from scheduler_queue import save_result, try_push, save_result_safe
@@ -252,7 +253,6 @@ def job_arxiv():
         logger.info(f"📄 开始执行: {task_name}")
 
         # 使用 ArxivSearchTool 获取论文
-        sys.path.insert(0, str(Path.home() / "zhiwei_agent"))
         from tools.arxiv_search import ArxivSearchTool
 
         tool = ArxivSearchTool()
@@ -509,7 +509,6 @@ def job_video_notes_organize():
                     break
 
             # 2. 确定日期（使用修改时间）
-            from datetime import datetime
             mtime = datetime.fromtimestamp(stat.st_mtime)
             year_month = mtime.strftime("%Y-%m")
 
@@ -999,7 +998,6 @@ def job_sync_hn_daily():
         logger.info(f"📰 开始执行: {task_name}")
 
         # 使用 zhiwei_agent 的 trending_discover 工具
-        sys.path.insert(0, str(Path.home() / "zhiwei_agent"))
         from tools.trending_discover import TrendingDiscoverTool
 
         tool = TrendingDiscoverTool()
@@ -1070,7 +1068,6 @@ def job_sync_github_weekly():
         logger.info(f"🐙 开始执行: {task_name}")
 
         # 使用 zhiwei_agent 的 trending_discover 工具
-        sys.path.insert(0, str(Path.home() / "zhiwei_agent"))
         from tools.trending_discover import TrendingDiscoverTool
 
         tool = TrendingDiscoverTool()

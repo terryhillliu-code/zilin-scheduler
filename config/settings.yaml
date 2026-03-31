@@ -230,32 +230,50 @@ podcasts:
   download_dir: "~/Documents/ZhiweiVault/70-79_个人笔记/播客"
   feeds:
     # === 科技商业 (已验证可用) ===
-    - name: "a16z Podcast"
-      url: "https://feeds.simplecast.com/54nAGcIl"
-
     - name: "Lex Fridman Podcast"
       url: "https://lexfridman.com/feed/podcast/"
 
     - name: "The Vergecast"
       url: "https://feeds.megaphone.fm/vergecast"
 
-    # === 中文播客 (需从小宇宙获取RSS) ===
+    # === NPR 高质量节目 (已验证可用) ===
+    - name: "Planet Money"
+      url: "https://feeds.npr.org/510289/podcast.xml"
+
+    - name: "Hidden Brain"
+      url: "https://feeds.npr.org/510308/podcast.xml"
+
+    - name: "The Indicator"
+      url: "https://feeds.npr.org/510325/podcast.xml"
+
+    # === 商业思维 (已验证可用) ===
+    - name: "Farnam Street (Knowledge Project)"
+      url: "https://fs.blog/knowledge-project-podcast/feed/"
+
+    - name: "Stratechery"
+      url: "https://stratechery.com/feed/"
+
+    # === 中文播客 (需从小宇宙App获取RSS) ===
     # 硅谷101 - 硅谷科技趋势与创业
+    # 小宇宙App → 搜索"硅谷101" → 分享 → 复制RSS链接
     # - name: "硅谷101"
-    #   url: "https://feeds.megaphone.fm/..."
+    #   url: "从小宇宙App获取"
 
     # 半拿铁 - 科技财经深度对话
     # - name: "半拿铁"
-    #   url: "https://feeds.acast.com/..."
+    #   url: "从小宇宙App获取"
 
     # 硬地骇客 - 独立开发者故事
     # - name: "硬地骇客"
-    #   url: "https://feed.xiaoyuzhoufm.com/..."
+    #   url: "从小宇宙App获取"
 
-    # === 如何获取RSS地址 ===
-    # 1. 打开小宇宙App或网站
-    # 2. 进入播客页面，点击"分享"或"RSS"
-    # 3. 复制RSS地址粘贴到上方url字段
+    # === 如何获取中文播客RSS ===
+    # 1. 打开小宇宙App (https://xiaoyuzhoufm.com)
+    # 2. 搜索目标播客名称
+    # 3. 进入播客详情页
+    # 4. 点击右上角"..."或"分享"按钮
+    # 5. 选择"RSS订阅"或"复制链接"
+    # 6. 将RSS地址粘贴到上方url字段
 
 data_sources:
   weather:

@@ -95,11 +95,39 @@ def enrich_with_klib(task_name: str, prompt_text: str, top_k: int = 5) -> str:
         return ""
 
 
+def _fetch_rss_articles(feeds: list, max_per_feed: int = 3, max_total: int = 10) -> list:
+    """通用 RSS 文章获取函数 - v66.2
+
+    Args:
+        feeds: [(name, url), ...] 格式的 RSS 源列表
+        max_per_feed: 每个 RSS 源最多获取的文章数
+        max_total: 总共最多返回的文章数
+
+    Returns:
+        格式化的文章列表
+    """
+    articles = []
+    for name, url in feeds:
+        try:
+            from tools.rss_feed import RSSFeedTool
+            rss_tool = RSSFeedTool()
+            result = rss_tool.execute(url=url, limit=5)
+            if result.success and result.data.get("articles"):
+                for article in result.data["articles"][:max_per_feed]:
+                    title = article.get("title", "")[:60]
+                    link = article.get("link", "")
+                    summary = article.get("summary", "")[:80]
+                    articles.append(f"- [{name}] **{title}**\n  {summary}\n  > [链接]({link})")
+        except Exception as e:
+            logger.warning(f"RSS {name} 获取失败: {e}")
+    return articles[:max_total]
+
+
 def _collect_real_news_sources() -> str:
-    """收集真实数据源用于早报生成 - v66.1 多源聚合
+    """收集真实数据源用于早报生成 - v66.2 多源聚合
 
     数据源：
-    1. 实时搜索：当天 AI/科技新闻
+    1. RSS 科技新闻
     2. Hacker News Top 5
     3. GitHub Trending
     4. 情报中心
@@ -109,8 +137,8 @@ def _collect_real_news_sources() -> str:
     today = datetime.now().strftime("%Y-%m-%d")
     inbox_path = Path.home() / "Documents" / "ZhiweiVault" / "Inbox"
 
-    # 1. RSS 实时新闻（替代 DuckDuckGo 搜索）
-    RSS_FEEDS = [
+    # 1. RSS 实时新闻
+    TECH_FEEDS = [
         ("TechCrunch AI", "https://techcrunch.com/category/artificial-intelligence/feed/"),
         ("MIT Tech Review", "https://www.technologyreview.com/feed/"),
         ("Ars Technica", "https://feeds.arstechnica.com/arstechnica/technology-lab"),
@@ -118,23 +146,9 @@ def _collect_real_news_sources() -> str:
         ("VentureBeat AI", "https://venturebeat.com/category/ai/feed/"),
     ]
 
-    rss_news = []
-    for name, url in RSS_FEEDS:
-        try:
-            from tools.rss_feed import RSSFeedTool
-            rss_tool = RSSFeedTool()
-            result = rss_tool.execute(url=url, limit=5)
-            if result.success and result.data.get("articles"):
-                for article in result.data["articles"][:3]:
-                    title = article.get("title", "")[:60]
-                    link = article.get("link", "")
-                    summary = article.get("summary", "")[:80]
-                    rss_news.append(f"- [{name}] **{title}**\n  {summary}\n  > [链接]({link})")
-        except Exception as e:
-            logger.warning(f"RSS {name} 获取失败: {e}")
-
+    rss_news = _fetch_rss_articles(TECH_FEEDS, max_per_feed=3, max_total=10)
     if rss_news:
-        sources.append(f"### 🔴 实时新闻\n" + "\n".join(rss_news[:10]))
+        sources.append(f"### 🔴 实时新闻\n" + "\n".join(rss_news))
         logger.info(f"🔍 已获取 RSS 新闻 {len(rss_news)} 条")
 
     # 2. Hacker News Top 5
@@ -280,10 +294,7 @@ def job_noon_brief():
 
 
 def _collect_us_market_news() -> str:
-    """收集美股相关新闻 - v66.1 RSS 数据源"""
-    sources = []
-
-    # 财经 RSS 源
+    """收集美股相关新闻 - v66.2 使用公共 RSS 函数"""
     FINANCE_FEEDS = [
         ("Yahoo Finance", "https://finance.yahoo.com/news/rssindex"),
         ("MarketWatch", "https://www.marketwatch.com/rss/topstories"),
@@ -291,28 +302,12 @@ def _collect_us_market_news() -> str:
         ("CNBC Markets", "https://www.cnbc.com/id/10000664/device/rss/rss.html"),
     ]
 
-    finance_news = []
-    for name, url in FINANCE_FEEDS:
-        try:
-            from tools.rss_feed import RSSFeedTool
-            rss_tool = RSSFeedTool()
-            result = rss_tool.execute(url=url, limit=5)
-            if result.success and result.data.get("articles"):
-                for article in result.data["articles"][:3]:
-                    title = article.get("title", "")[:60]
-                    link = article.get("link", "")
-                    finance_news.append(f"- [{name}] **{title}**\n  > [链接]({link})")
-        except Exception as e:
-            logger.warning(f"RSS {name} 获取失败: {e}")
-
+    finance_news = _fetch_rss_articles(FINANCE_FEEDS, max_per_feed=3, max_total=9)
     if finance_news:
-        sources.append(f"### 📊 财经新闻\n" + "\n".join(finance_news[:9]))
         logger.info(f"📊 已获取财经新闻 {len(finance_news)} 条")
+        return f"### 📊 财经新闻\n" + "\n".join(finance_news)
 
-    if not sources:
-        return "⚠️ 暂无财经数据"
-
-    return "\n\n".join(sources)
+    return "⚠️ 暂无财经数据"
 
 
 def job_us_market_open():

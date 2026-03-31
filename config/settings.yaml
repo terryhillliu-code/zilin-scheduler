@@ -225,16 +225,21 @@ jobs:
 # research_pipeline: PDF研报扫描与向量化（待优化实现）
 # klib_sync: klib向量化同步（待研究用途）
 
-# ============ 播客配置 (v65.0 新增) ============
+# ============ 播客配置 (v65.0 新增, v66.2 更新) ============
 podcasts:
   download_dir: "~/Documents/ZhiweiVault/70-79_个人笔记/播客"
   feeds:
-    # === 科技商业 ===
-    # 声动早咖啡 - 科技商业早新闻
-    # RSS: 请从小宇宙或Apple Podcasts获取
-    # - name: "声动早咖啡"
-    #   url: "https://feed.xiaoyuzhoufm.com/..."
+    # === 科技商业 (已验证可用) ===
+    - name: "a16z Podcast"
+      url: "https://feeds.simplecast.com/54nAGcIl"
 
+    - name: "Lex Fridman Podcast"
+      url: "https://lexfridman.com/feed/podcast/"
+
+    - name: "The Vergecast"
+      url: "https://feeds.megaphone.fm/vergecast"
+
+    # === 中文播客 (需从小宇宙获取RSS) ===
     # 硅谷101 - 硅谷科技趋势与创业
     # - name: "硅谷101"
     #   url: "https://feeds.megaphone.fm/..."
@@ -251,7 +256,6 @@ podcasts:
     # 1. 打开小宇宙App或网站
     # 2. 进入播客页面，点击"分享"或"RSS"
     # 3. 复制RSS地址粘贴到上方url字段
-    # 4. 取消注释即可启用
 
 data_sources:
   weather:

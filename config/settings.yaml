@@ -253,24 +253,29 @@ podcasts:
     - name: "Stratechery"
       url: "https://stratechery.com/feed/"
 
-    # === 中文播客 (需从小宇宙App获取RSS) ===
-    # 硅谷101 - 硅谷科技趋势与创业
-    # 小宇宙App → 搜索"硅谷101" → 分享 → 复制RSS链接
-    # - name: "硅谷101"
-    #   url: "从小宇宙App获取"
+    # === 中文播客 (从 Mac Podcasts 应用同步) ===
+    - name: "硅谷101"
+      url: "https://feeds.fireside.fm/sv101/rss"
 
-    # 半拿铁 - 科技财经深度对话
-    # - name: "半拿铁"
-    #   url: "从小宇宙App获取"
+    - name: "42章经"
+      url: "https://feed.xyzfm.space/evgg6xle9rdc"
 
-    # 硬地骇客 - 独立开发者故事
-    # - name: "硬地骇客"
-    #   url: "从小宇宙App获取"
+    - name: "AI局内人"
+      url: "https://feed.xyzfm.space/jbap8hlxmuev"
 
-    # === 如何获取中文播客RSS ===
-    # 1. 打开小宇宙App (https://xiaoyuzhoufm.com)
-    # 2. 搜索目标播客名称
-    # 3. 进入播客详情页
+    - name: "脑放电波"
+      url: "https://feed.xyzfm.space/wupdmt9er7nb"
+
+    - name: "启明聊AI"
+      url: "https://www.ximalaya.com/album/77629582.xml"
+
+    - name: "AI炼金术"
+      url: "https://www.ximalaya.com/album/74194808.xml"
+
+    # === 待添加 ===
+    # 如需添加更多播客，可通过 Mac Podcasts 应用订阅后
+    # 运行以下命令同步到配置：
+    # plutil -p ~/Library/Containers/com.apple.podcasts/Data/Documents/PodcastsDB.plist
     # 4. 点击右上角"..."或"分享"按钮
     # 5. 选择"RSS订阅"或"复制链接"
     # 6. 将RSS地址粘贴到上方url字段

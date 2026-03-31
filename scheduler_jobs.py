@@ -791,13 +791,14 @@ def job_research_pipeline():
 def job_vault_sync_master():
     """
     ArXiv-Obsidian 搜索完备性对齐 (Research V4.4)
-    调用 reconcile_obsidian.py v3.0 进行全库同步
+    调用 reconcile_obsidian.py v3.0 进行增量同步
+    ⭐ v68.0 优化：添加 --limit 50 避免超时，--skip-chroma 跳过 Docker
     """
     task_name = "vault_sync_master"
     start_time = time.time()
 
     try:
-        logger.info("开始执行 [VaultSyncMaster 全量同步] 任务...")
+        logger.info("开始执行 [VaultSyncMaster 增量同步] 任务...")
 
         # 脚本路径
         script_path = Path.home() / "zhiwei-rag" / "scripts" / "reconcile_obsidian.py"
@@ -806,17 +807,17 @@ def job_vault_sync_master():
 
         if script_path.exists() and python_executable.exists():
             result = subprocess.run(
-                [str(python_executable), str(script_path)],
+                [str(python_executable), str(script_path), "--limit", "50", "--skip-chroma"],
                 capture_output=True,
                 text=True,
-                timeout=1800  # 30 分钟
+                timeout=600  # 10 分钟（增量模式更快）
             )
 
             if result.returncode == 0:
-                logger.info(f"VaultSyncMaster 全量同步完成:\n{result.stdout}")
+                logger.info(f"VaultSyncMaster 增量同步完成:\n{result.stdout}")
                 log_task_metrics(task_name, "success", duration_ms=int((time.time() - start_time) * 1000))
             else:
-                logger.error(f"VaultSyncMaster 全量同步失败: {result.stderr}")
+                logger.error(f"VaultSyncMaster 增量同步失败: {result.stderr}")
                 log_task_metrics(task_name, "failure", error=result.stderr)
         else:
             missing = []
@@ -828,7 +829,7 @@ def job_vault_sync_master():
             log_task_metrics(task_name, "skipped", extra={"missing": missing})
 
     except Exception as e:
-        logger.error(f"VaultSyncMaster 全量同步任务异常: {e}")
+        logger.error(f"VaultSyncMaster 增量同步任务异常: {e}")
         log_task_metrics(task_name, "failure", error=str(e))
 
 

@@ -114,6 +114,8 @@ def _collect_real_news_sources() -> str:
         ("TechCrunch AI", "https://techcrunch.com/category/artificial-intelligence/feed/"),
         ("MIT Tech Review", "https://www.technologyreview.com/feed/"),
         ("Ars Technica", "https://feeds.arstechnica.com/arstechnica/technology-lab"),
+        ("Wired AI", "https://www.wired.com/feed/tag/ai/latest/rss"),
+        ("VentureBeat AI", "https://venturebeat.com/category/ai/feed/"),
     ]
 
     rss_news = []

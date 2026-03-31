@@ -288,6 +288,7 @@ def _collect_us_market_news() -> str:
         ("Yahoo Finance", "https://finance.yahoo.com/news/rssindex"),
         ("MarketWatch", "https://www.marketwatch.com/rss/topstories"),
         ("SeekingAlpha", "https://seekingalpha.com/market_currents.xml"),
+        ("CNBC Markets", "https://www.cnbc.com/id/10000664/device/rss/rss.html"),
     ]
 
     finance_news = []

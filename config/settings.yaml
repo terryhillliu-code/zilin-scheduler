@@ -229,7 +229,20 @@ jobs:
 podcasts:
   download_dir: "~/Documents/ZhiweiVault/70-79_个人笔记/播客"
   feeds:
-    # === 英文科技播客 ===
+    # === 开源社区推荐 ===
+    - name: "The Changelog"
+      url: "https://changelog.com/rss"
+
+    - name: "Talk Python To Me"
+      url: "https://talkpython.fm/episodes/rss"
+
+    - name: "Python Bytes"
+      url: "https://pythonbytes.fm/episodes/rss"
+
+    - name: "Linux Unplugged"
+      url: "https://linuxunplugged.com/rss"
+
+    # === 科技趋势 ===
     - name: "Lex Fridman Podcast"
       url: "https://lexfridman.com/feed/podcast/"
 
@@ -239,7 +252,7 @@ podcasts:
     - name: "Stratechery"
       url: "https://stratechery.com/feed/"
 
-    # === 中文科技播客 (从 Mac Podcasts 同步) ===
+    # === 中文科技播客 ===
     - name: "硅谷101"
       url: "https://feeds.fireside.fm/sv101/rss"
 

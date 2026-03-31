@@ -4,6 +4,7 @@
 特性: Prompt 外部化、支持热更新、重试机制、触发器监听
 
 v47.0 重构: 拆分为 scheduler_core.py + scheduler_jobs.py + scheduler.py
+v66.2 修复: 添加 sys.path 配置以支持 zhiwei_agent 导入
 """
 
 import os
@@ -11,6 +12,11 @@ import sys
 import signal
 from datetime import datetime
 from pathlib import Path
+
+# ⭐ v66.2: 添加 sys.path 配置，支持 zhiwei_agent 绝对导入
+BASE_DIR = Path(__file__).parent
+sys.path.insert(0, str(BASE_DIR))
+sys.path.insert(0, str(Path.home()))  # 支持 zhiwei_agent 绝对导入
 
 # 导入核心模块
 from scheduler_core import (

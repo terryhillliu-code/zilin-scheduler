@@ -383,15 +383,15 @@ def job_us_market_close():
 
 
 def job_arxiv():
-    """ArXiv 论文精选 (07:00) - v65.0 改造：使用 ArxivSearchTool"""
+    """ArXiv 论文精选 (07:00) - v66.2: 使用已配置的 sys.path"""
     task_name = "arxiv_papers"
     start_time = time.time()
 
     try:
         logger.info(f"📄 开始执行: {task_name}")
 
-        # 使用 ArxivSearchTool 获取论文
-        from tools.arxiv_search import ArxivSearchTool
+        # 使用 ArxivSearchTool 获取论文（依赖文件开头的 sys.path 配置）
+        from zhiwei_agent.tools.arxiv_search import ArxivSearchTool
 
         tool = ArxivSearchTool()
         result = tool.execute(
@@ -1284,7 +1284,7 @@ def job_sync_hn_daily():
         logger.info(f"📰 开始执行: {task_name}")
 
         # 使用 zhiwei_agent 的 trending_discover 工具
-        from tools.trending_discover import TrendingDiscoverTool
+        from zhiwei_agent.tools.trending_discover import TrendingDiscoverTool
 
         tool = TrendingDiscoverTool()
         result = tool.execute(platform="hn", limit=5)
@@ -1354,7 +1354,7 @@ def job_sync_github_weekly():
         logger.info(f"🐙 开始执行: {task_name}")
 
         # 使用 zhiwei_agent 的 trending_discover 工具
-        from tools.trending_discover import TrendingDiscoverTool
+        from zhiwei_agent.tools.trending_discover import TrendingDiscoverTool
 
         tool = TrendingDiscoverTool()
         result = tool.execute(platform="github", limit=10)

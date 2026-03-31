@@ -229,36 +229,19 @@ jobs:
 podcasts:
   download_dir: "~/Documents/ZhiweiVault/70-79_个人笔记/播客"
   feeds:
-    # === 科技商业 (已验证可用) ===
+    # === 英文科技播客 ===
     - name: "Lex Fridman Podcast"
       url: "https://lexfridman.com/feed/podcast/"
 
     - name: "The Vergecast"
       url: "https://feeds.megaphone.fm/vergecast"
 
-    # === NPR 高质量节目 (已验证可用) ===
-    - name: "Planet Money"
-      url: "https://feeds.npr.org/510289/podcast.xml"
-
-    - name: "Hidden Brain"
-      url: "https://feeds.npr.org/510308/podcast.xml"
-
-    - name: "The Indicator"
-      url: "https://feeds.npr.org/510325/podcast.xml"
-
-    # === 商业思维 (已验证可用) ===
-    - name: "Farnam Street (Knowledge Project)"
-      url: "https://fs.blog/knowledge-project-podcast/feed/"
-
     - name: "Stratechery"
       url: "https://stratechery.com/feed/"
 
-    # === 中文播客 (从 Mac Podcasts 应用同步) ===
+    # === 中文科技播客 (从 Mac Podcasts 同步) ===
     - name: "硅谷101"
       url: "https://feeds.fireside.fm/sv101/rss"
-
-    - name: "42章经"
-      url: "https://feed.xyzfm.space/evgg6xle9rdc"
 
     - name: "AI局内人"
       url: "https://feed.xyzfm.space/jbap8hlxmuev"
@@ -272,9 +255,8 @@ podcasts:
     - name: "AI炼金术"
       url: "https://www.ximalaya.com/album/74194808.xml"
 
-    # === 待添加 ===
-    # 如需添加更多播客，可通过 Mac Podcasts 应用订阅后
-    # 运行以下命令同步到配置：
+    # === 同步方法 ===
+    # Mac Podcasts 订阅后运行：
     # plutil -p ~/Library/Containers/com.apple.podcasts/Data/Documents/PodcastsDB.plist
     # 4. 点击右上角"..."或"分享"按钮
     # 5. 选择"RSS订阅"或"复制链接"

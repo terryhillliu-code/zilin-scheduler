@@ -30,7 +30,7 @@ jobs:
     minute: 30
     day_of_week: "mon-sun"
     description: "每日早报"
-    push_to: ["dingtalk", "feishu"]
+    push_to: ["feishu"]
 
   noon_brief:
     enabled: true
@@ -38,7 +38,7 @@ jobs:
     minute: 30
     day_of_week: "mon-sun"
     description: "每日午报"
-    push_to: ["dingtalk", "feishu"]
+    push_to: ["feishu"]
 
   # ============ 美股信息 ============
   us_market_close:
@@ -47,7 +47,7 @@ jobs:
     minute: 0
     day_of_week: "tue-sat"
     description: "美股收盘复盘"
-    push_to: ["dingtalk", "feishu"]
+    push_to: ["feishu"]
     retry: { max_attempts: 3, delay_seconds: 120 }
 
   us_market_open:
@@ -56,7 +56,7 @@ jobs:
     minute: 0
     day_of_week: "mon-fri"
     description: "美股开盘播报"
-    push_to: ["dingtalk", "feishu"]
+    push_to: ["feishu"]
     retry: { max_attempts: 3, delay_seconds: 120 }
 
   # ============ 系统维护 ============
@@ -66,7 +66,7 @@ jobs:
     minute: 30
     day_of_week: "mon-sun"
     description: "系统巡检"
-    push_to: ["dingtalk", "feishu"]
+    push_to: ["feishu"]
     retry: { max_attempts: 2, delay_seconds: 30 }
 
   system_metrics:
@@ -75,7 +75,7 @@ jobs:
     minute: 35
     day_of_week: "mon-sun"
     description: "运维指标报告"
-    push_to: ["dingtalk"]
+    push_to: ["feishu"]
     retry: { max_attempts: 2, delay_seconds: 30 }
 
   log_rotate:

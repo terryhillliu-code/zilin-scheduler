@@ -95,33 +95,97 @@ def enrich_with_klib(task_name: str, prompt_text: str, top_k: int = 5) -> str:
         return ""
 
 
+def _collect_real_news_sources() -> str:
+    """收集真实数据源用于早报生成
+
+    v66.0: 只使用真实数据，禁止LLM编造
+    """
+    sources = []
+    today = datetime.now().strftime("%Y-%m-%d")
+
+    # 1. Hacker News Top 5（从 Obsidian Inbox 读取）
+    inbox_path = Path.home() / "Documents" / "ZhiweiVault" / "Inbox"
+    hn_file = inbox_path / f"NEWS_{today}_Hacker-News-Top5.md"
+
+    if hn_file.exists():
+        hn_content = hn_file.read_text(encoding="utf-8")
+        if "## 内容" in hn_content:
+            hn_items = hn_content.split("## 内容")[1].strip()
+            sources.append(f"### Hacker News Top 5\n{hn_items[:1500]}")
+            logger.info(f"📰 已加载 HN Top 5")
+
+    # 2. GitHub Trending（周一或有缓存时）
+    github_file = inbox_path / f"NEWS_{today}_GitHub-Trending-AI.md"
+    if not github_file.exists():
+        # 尝试最近7天的文件
+        for i in range(1, 8):
+            past_date = (datetime.now() - timedelta(days=i)).strftime("%Y-%m-%d")
+            github_file = inbox_path / f"NEWS_{past_date}_GitHub-Trending-AI.md"
+            if github_file.exists():
+                break
+
+    if github_file.exists():
+        github_content = github_file.read_text(encoding="utf-8")
+        if "## 内容" in github_content:
+            github_items = github_content.split("## 内容")[1].strip()
+            sources.append(f"### GitHub Trending (AI)\n{github_items[:1500]}")
+            logger.info(f"🐙 已加载 GitHub Trending")
+
+    # 3. 情报中心最近内容（深度情报）
+    intel_files = sorted(inbox_path.glob("2026-*_深度情报*.md"), reverse=True)[:5]
+    if intel_files:
+        intel_items = []
+        for f in intel_files:
+            content = f.read_text(encoding="utf-8")
+            # 提取标题和摘要
+            title = f.stem.replace("深度情报：", "")
+            # 取前300字作为摘要
+            summary = content[:300].replace("\n", " ").strip()
+            intel_items.append(f"- **{title}**: {summary}...")
+        sources.append(f"### 情报中心（近3天）\n" + "\n".join(intel_items))
+        logger.info(f"📡 已加载情报中心 {len(intel_files)} 条")
+
+    # 4. 论文笔记（如有）
+    paper_files = sorted(inbox_path.glob("PAPER_*.md"), reverse=True)[:3]
+    if paper_files:
+        paper_items = []
+        for f in paper_files:
+            title = f.stem.replace("PAPER_", "").split("_", 1)[-1] if "_" in f.stem else f.stem
+            paper_items.append(f"- {title[:60]}")
+        if paper_items:
+            sources.append(f"### 最新论文\n" + "\n".join(paper_items))
+
+    if not sources:
+        return "⚠️ 今日暂无数据源，请检查 Inbox 目录或等待同步任务执行。"
+
+    return "\n\n".join(sources)
+
+
 # ============ 定时任务定义 ============
 
 def job_morning_brief():
-    """早报任务 (09:30)"""
+    """早报任务 (09:30) - v66.0: 只使用真实数据源，禁止幻觉"""
     task_name = "morning_brief"
     start_time = time.time()
 
     try:
         logger.info(f"🌅 开始执行: {task_name}")
 
-        # 加载 Prompt (修复: 注入 date 和 time 变量)
+        # 收集真实数据源
+        real_data = _collect_real_news_sources()
+
+        # 加载 Prompt
         prompt = load_prompt("morning_brief",
                             date=datetime.now().strftime("%Y-%m-%d"),
-                            time=datetime.now().strftime("%H:%M"))
+                            time=datetime.now().strftime("%H:%M"),
+                            real_data=real_data)
 
         if not prompt:
             logger.warning("早报 Prompt 加载失败")
             return
 
-        # RAG 增强
-        if enrich_with_rag:
-            rag_context = enrich_with_rag("早报", top_k=5)
-            if rag_context:
-                prompt = f"{rag_context}\n\n{prompt}"
-
         # 调用 Agent
-        success, content = call_agent("researcher", prompt, timeout=600)
+        success, content = call_agent("researcher", prompt, timeout=300)
 
         if success:
             # 保存结果 (安全落盘：若今日已发则跳过)

@@ -277,17 +277,56 @@ def job_noon_brief():
         log_task_metrics(task_name, "failure", error=str(e))
 
 
+def _collect_us_market_news() -> str:
+    """收集美股相关新闻 - v66.1 RSS 数据源"""
+    sources = []
+
+    # 财经 RSS 源
+    FINANCE_FEEDS = [
+        ("Yahoo Finance", "https://finance.yahoo.com/news/rssindex"),
+        ("MarketWatch", "https://www.marketwatch.com/rss/topstories"),
+        ("SeekingAlpha", "https://seekingalpha.com/market_currents.xml"),
+    ]
+
+    finance_news = []
+    for name, url in FINANCE_FEEDS:
+        try:
+            from tools.rss_feed import RSSFeedTool
+            rss_tool = RSSFeedTool()
+            result = rss_tool.execute(url=url, limit=5)
+            if result.success and result.data.get("articles"):
+                for article in result.data["articles"][:3]:
+                    title = article.get("title", "")[:60]
+                    link = article.get("link", "")
+                    finance_news.append(f"- [{name}] **{title}**\n  > [链接]({link})")
+        except Exception as e:
+            logger.warning(f"RSS {name} 获取失败: {e}")
+
+    if finance_news:
+        sources.append(f"### 📊 财经新闻\n" + "\n".join(finance_news[:9]))
+        logger.info(f"📊 已获取财经新闻 {len(finance_news)} 条")
+
+    if not sources:
+        return "⚠️ 暂无财经数据"
+
+    return "\n\n".join(sources)
+
+
 def job_us_market_open():
-    """美股开盘提醒 (21:00)"""
+    """美股开盘提醒 (21:00) - v66.0: 只使用真实数据源"""
     task_name = "us_market_open"
     start_time = time.time()
 
     try:
         logger.info(f"📈 开始执行: {task_name}")
 
+        # 收集真实数据源
+        real_data = _collect_us_market_news()
+
         prompt = load_prompt("us_market_open",
                         date=datetime.now().strftime("%Y-%m-%d"),
-                        time=datetime.now().strftime("%H:%M"))
+                        time=datetime.now().strftime("%H:%M"),
+                        real_data=real_data)
 
         if not prompt:
             logger.warning("美股开盘 Prompt 加载失败")
@@ -310,16 +349,20 @@ def job_us_market_open():
 
 
 def job_us_market_close():
-    """美股收盘摘要 (08:00)"""
+    """美股收盘摘要 (08:00) - v66.0: 只使用真实数据源"""
     task_name = "us_market_close"
     start_time = time.time()
 
     try:
         logger.info(f"📉 开始执行: {task_name}")
 
+        # 收集真实数据源
+        real_data = _collect_us_market_news()
+
         prompt = load_prompt("us_market_close",
                         date=datetime.now().strftime("%Y-%m-%d"),
-                        time=datetime.now().strftime("%H:%M"))
+                        time=datetime.now().strftime("%H:%M"),
+                        real_data=real_data)
 
         if not prompt:
             logger.warning("美股收盘 Prompt 加载失败")

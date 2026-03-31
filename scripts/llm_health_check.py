@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-LLM API 健康检查脚本 v1.0
+LLM API 健康检查脚本 v1.1
 
 定期检查三层 API 的可用性：
 - Coding Plan
@@ -8,6 +8,10 @@ LLM API 健康检查脚本 v1.0
 - OpenRouter
 
 发现问题自动告警，并记录统计信息。
+
+v1.1 新增:
+- 响应时间阈值告警
+- 连续失败升级告警
 """
 import os
 import sys
@@ -26,6 +30,16 @@ load_secrets(silent=True)
 
 from zhiwei_common.llm import llm_client
 
+# ⭐ v1.1: 响应时间阈值（毫秒）
+LATENCY_THRESHOLDS = {
+    "coding_plan": 5000,    # 5秒
+    "dashscope": 3000,      # 3秒
+    "openrouter": 20000,    # 20秒（免费模型较慢）
+}
+
+# 连续失败阈值
+CONSECUTIVE_FAIL_THRESHOLD = 3
+
 
 def check_all_apis() -> Dict[str, Any]:
     """检查所有 API 可用性"""
@@ -38,11 +52,12 @@ def check_all_apis() -> Dict[str, Any]:
     }
 
     # 1. 检查 Coding Plan
-    coding_plan_ok = check_coding_plan()
+    coding_plan_ok, coding_plan_latency = check_coding_plan_with_latency()
     result["apis"]["coding_plan"] = {
         "available": coding_plan_ok,
         "model": "glm-5",
-        "latency_ms": 0,
+        "latency_ms": coding_plan_latency,
+        "slow": coding_plan_latency > LATENCY_THRESHOLDS["coding_plan"] if coding_plan_ok else False,
     }
 
     # 2. 检查 DashScope
@@ -51,6 +66,7 @@ def check_all_apis() -> Dict[str, Any]:
         "available": dashscope_ok,
         "model": "qwen-turbo",
         "latency_ms": dashscope_latency,
+        "slow": dashscope_latency > LATENCY_THRESHOLDS["dashscope"] if dashscope_ok else False,
     }
 
     # 3. 检查 OpenRouter
@@ -59,7 +75,23 @@ def check_all_apis() -> Dict[str, Any]:
         "available": openrouter_ok,
         "model": "openrouter/free",
         "latency_ms": openrouter_latency,
+        "slow": openrouter_latency > LATENCY_THRESHOLDS["openrouter"] if openrouter_ok else False,
     }
+
+    # ⭐ v1.1: 检查响应时间阈值
+    for api_name, api_info in result["apis"].items():
+        if api_info.get("slow"):
+            result["issues"].append(f"{api_name} 响应过慢: {api_info['latency_ms']}ms > {LATENCY_THRESHOLDS[api_name]}ms")
+            if result["status"] == "healthy":
+                result["status"] = "warning"
+
+    # ⭐ v1.1: 检查连续失败
+    consecutive_fails = llm_client.get_consecutive_fails()
+    for api_name, count in consecutive_fails.items():
+        if count >= CONSECUTIVE_FAIL_THRESHOLD:
+            result["issues"].append(f"⚠️ {api_name} 连续失败 {count} 次，需要关注")
+            if result["status"] == "healthy":
+                result["status"] = "warning"
 
     # 判断整体状态
     available_count = sum([
@@ -84,11 +116,21 @@ def check_all_apis() -> Dict[str, Any]:
 def check_coding_plan() -> bool:
     """检查 Coding Plan API"""
     try:
-        start = time.time()
         success, _ = llm_client._call_via_bailian("glm-5", "", "hi", 15)
         return success
     except Exception as e:
         return False
+
+
+def check_coding_plan_with_latency() -> tuple:
+    """检查 Coding Plan API，返回 (是否可用, 延迟ms) ⭐ v1.1"""
+    try:
+        start = time.time()
+        success, _ = llm_client._call_via_bailian("glm-5", "", "hi", 15)
+        latency = int((time.time() - start) * 1000)
+        return success, latency
+    except Exception as e:
+        return False, 0
 
 
 def check_dashscope() -> tuple:

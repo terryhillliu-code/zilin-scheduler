@@ -109,29 +109,31 @@ def _collect_real_news_sources() -> str:
     today = datetime.now().strftime("%Y-%m-%d")
     inbox_path = Path.home() / "Documents" / "ZhiweiVault" / "Inbox"
 
-    # 1. 实时搜索：AI/科技新闻
-    try:
-        from tools.web_search import WebSearchTool
-        search_tool = WebSearchTool()
+    # 1. RSS 实时新闻（替代 DuckDuckGo 搜索）
+    RSS_FEEDS = [
+        ("TechCrunch AI", "https://techcrunch.com/category/artificial-intelligence/feed/"),
+        ("MIT Tech Review", "https://www.technologyreview.com/feed/"),
+        ("Ars Technica", "https://feeds.arstechnica.com/arstechnica/technology-lab"),
+    ]
 
-        # 搜索当天新闻
-        search_queries = [
-            f"AI artificial intelligence news {today}",
-            "LLM large language model latest breakthrough",
-        ]
+    rss_news = []
+    for name, url in RSS_FEEDS:
+        try:
+            from tools.rss_feed import RSSFeedTool
+            rss_tool = RSSFeedTool()
+            result = rss_tool.execute(url=url, limit=5)
+            if result.success and result.data.get("articles"):
+                for article in result.data["articles"][:3]:
+                    title = article.get("title", "")[:60]
+                    link = article.get("link", "")
+                    summary = article.get("summary", "")[:80]
+                    rss_news.append(f"- [{name}] **{title}**\n  {summary}\n  > [链接]({link})")
+        except Exception as e:
+            logger.warning(f"RSS {name} 获取失败: {e}")
 
-        realtime_news = []
-        for query in search_queries:
-            result = search_tool.execute(query=query, num_results=5, use_cache=False)
-            if result.success and result.data.get("results"):
-                for item in result.data["results"][:3]:
-                    realtime_news.append(f"- [{item['title']}]({item['url']})\n  {item.get('snippet', '')[:80]}")
-
-        if realtime_news:
-            sources.append(f"### 🔴 实时新闻\n" + "\n".join(realtime_news[:6]))
-            logger.info(f"🔍 已获取实时新闻 {len(realtime_news)} 条")
-    except Exception as e:
-        logger.warning(f"实时搜索失败: {e}")
+    if rss_news:
+        sources.append(f"### 🔴 实时新闻\n" + "\n".join(rss_news[:10]))
+        logger.info(f"🔍 已获取 RSS 新闻 {len(rss_news)} 条")
 
     # 2. Hacker News Top 5
     hn_file = inbox_path / f"NEWS_{today}_Hacker-News-Top5.md"

@@ -512,16 +512,79 @@ def job_system_check():
         log_task_metrics(task_name, "failure", error=str(e))
 
 
+def _collect_system_metrics() -> str:
+    """收集系统运维指标 - v66.0 真实数据"""
+    import subprocess
+
+    metrics = []
+
+    # 1. 服务状态
+    try:
+        result = subprocess.run(
+            ["launchctl", "list"],
+            capture_output=True, text=True, timeout=30
+        )
+        services = []
+        for line in result.stdout.split('\n'):
+            if 'zhiwei' in line.lower():
+                parts = line.split()
+                if len(parts) >= 3:
+                    status = "✅" if parts[0] != "0" else "❌"
+                    services.append(f"{status} {parts[2]}")
+        metrics.append(f"### 服务状态\n" + "\n".join(services[:6]))
+    except Exception as e:
+        metrics.append(f"### 服务状态\n查询失败: {e}")
+
+    # 2. 磁盘使用
+    try:
+        result = subprocess.run(
+            ["df", "-h", "/"],
+            capture_output=True, text=True, timeout=10
+        )
+        lines = result.stdout.strip().split('\n')
+        if len(lines) >= 2:
+            parts = lines[1].split()
+            metrics.append(f"### 磁盘使用\n- 总量: {parts[1]}\n- 已用: {parts[2]}\n- 可用: {parts[3]}\n- 使用率: {parts[4]}")
+    except Exception as e:
+        metrics.append(f"### 磁盘使用\n查询失败: {e}")
+
+    # 3. Docker 容器
+    try:
+        result = subprocess.run(
+            ["docker", "ps", "--format", "{{.Names}}\t{{.Status}}"],
+            capture_output=True, text=True, timeout=30
+        )
+        if result.returncode == 0 and result.stdout.strip():
+            containers = [f"- {line}" for line in result.stdout.strip().split('\n')[:5]]
+            metrics.append(f"### Docker 容器\n" + "\n".join(containers))
+    except Exception:
+        pass  # Docker 可能未安装
+
+    # 4. 日志大小
+    try:
+        log_dir = Path.home() / "logs"
+        if log_dir.exists():
+            total_size = sum(f.stat().st_size for f in log_dir.rglob("*") if f.is_file())
+            metrics.append(f"### 日志\n- 总大小: {total_size / 1024 / 1024:.1f} MB")
+    except Exception:
+        pass
+
+    return "\n\n".join(metrics)
+
+
 def job_system_metrics_report():
-    """运维报告 (每周一 09:00)"""
+    """运维报告 (10:35) - v66.0: 基于真实系统指标"""
     task_name = "system_metrics"
     start_time = time.time()
 
     try:
         logger.info(f"📊 开始执行: {task_name}")
 
-        # 生成运维报告
-        prompt = load_prompt("system_metrics")
+        # 收集真实系统指标
+        real_metrics = _collect_system_metrics()
+
+        # 加载 Prompt
+        prompt = load_prompt("system_metrics", real_data=real_metrics)
 
         if not prompt:
             logger.warning("运维报告 Prompt 加载失败")

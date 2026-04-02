@@ -32,7 +32,7 @@ from zhiwei_common.llm import llm_client
 
 # ⭐ v1.1: 响应时间阈值（毫秒）
 LATENCY_THRESHOLDS = {
-    "coding_plan": 5000,    # 5秒
+    "coding_plan": 10000,   # 10秒（百炼 API 正常延迟 ~8s）
     "dashscope": 3000,      # 3秒
     "openrouter": 20000,    # 20秒（免费模型较慢）
 }

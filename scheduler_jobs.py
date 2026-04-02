@@ -17,7 +17,7 @@ from pathlib import Path
 # 导入核心模块
 import scheduler_core
 from scheduler_core import (
-    logger, config,
+    logger,
     is_quiet_hours, get_retry_delay, log_task_metrics, send_failure_alert,
     load_prompt, call_agent, enrich_with_rag, save_output
 )
@@ -409,7 +409,7 @@ def job_morning_brief():
 
         if success:
             # v68.2: 从配置读取 push_to
-            push_targets = config.get("jobs", {}).get("morning_brief", {}).get("push_to", ["feishu"])
+            push_targets = scheduler_core.config.get("jobs", {}).get("morning_brief", {}).get("push_to", ["feishu"])
             file_path, skipped = save_result_safe(task_name, content, targets=push_targets)
 
             # 尝试推送
@@ -453,7 +453,7 @@ def job_noon_brief():
 
         if success:
             # v68.2: 从配置读取 push_to
-            push_targets = config.get("jobs", {}).get("noon_brief", {}).get("push_to", ["feishu"])
+            push_targets = scheduler_core.config.get("jobs", {}).get("noon_brief", {}).get("push_to", ["feishu"])
             file_path, skipped = save_result_safe(task_name, content, targets=push_targets)
             if not skipped and not is_quiet_hours():
                 try_push(file_path)
@@ -508,7 +508,7 @@ def job_us_market_open():
 
         if success:
             # v68.2: 从配置读取 push_to
-            push_targets = config.get("jobs", {}).get("us_market_open", {}).get("push_to", ["feishu"])
+            push_targets = scheduler_core.config.get("jobs", {}).get("us_market_open", {}).get("push_to", ["feishu"])
             file_path, skipped = save_result_safe(task_name, content, targets=push_targets)
             if not skipped:
                 try_push(file_path)
@@ -546,7 +546,7 @@ def job_us_market_close():
 
         if success:
             # v68.2: 从配置读取 push_to
-            push_targets = config.get("jobs", {}).get("us_market_close", {}).get("push_to", ["feishu"])
+            push_targets = scheduler_core.config.get("jobs", {}).get("us_market_close", {}).get("push_to", ["feishu"])
             file_path, skipped = save_result_safe(task_name, content, targets=push_targets)
             if not skipped:
                 try_push(file_path)
@@ -608,7 +608,7 @@ def job_arxiv():
 
             # 保存并推送
             # v68.2: 从配置读取 push_to
-            push_targets = config.get("jobs", {}).get("arxiv_papers", {}).get("push_to", ["feishu"])
+            push_targets = scheduler_core.config.get("jobs", {}).get("arxiv_papers", {}).get("push_to", ["feishu"])
             file_path, skipped = save_result_safe(task_name, content, targets=push_targets)
             if not skipped:
                 try_push(file_path)
@@ -680,7 +680,7 @@ def job_system_check():
 
             content = result.stdout if result.returncode == 0 else result.stderr
             # v68.1: 从配置读取 push_to
-            push_targets = config.get("jobs", {}).get("system_check", {}).get("push_to", ["feishu"])
+            push_targets = scheduler_core.config.get("jobs", {}).get("system_check", {}).get("push_to", ["feishu"])
             save_result_safe(task_name, content, targets=push_targets)
             log_task_metrics(task_name, "success", duration_ms=int((time.time() - start_time) * 1000))
         else:
@@ -774,7 +774,7 @@ def job_system_metrics_report():
 
         if success:
             # v68.1: 从配置读取 push_to
-            push_targets = config.get("jobs", {}).get("system_metrics", {}).get("push_to", ["feishu"])
+            push_targets = scheduler_core.config.get("jobs", {}).get("system_metrics", {}).get("push_to", ["feishu"])
             file_path, skipped = save_result_safe(task_name, content, targets=push_targets)
             if not skipped:
                 try_push(file_path)
@@ -1001,7 +1001,7 @@ def job_vault_sync_master():
                 content = result.stdout
                 logger.info(f"VaultSyncMaster 增量同步完成:\n{content[:500]}...")
                 # v68.2: 从配置读取 push_to 并推送
-                push_targets = config.get("jobs", {}).get("vault_sync_master", {}).get("push_to", ["feishu"])
+                push_targets = scheduler_core.config.get("jobs", {}).get("vault_sync_master", {}).get("push_to", ["feishu"])
                 if push_targets:
                     file_path, _ = save_result_safe(task_name, content, targets=push_targets)
                     try_push(file_path)
@@ -1120,7 +1120,7 @@ def job_intel_report():
                         if os.path.exists(report_path_str):
                             # 读取报告内容
                             report_content = Path(report_path_str).read_text(encoding="utf-8")
-                            push_targets = config.get("jobs", {}).get("intelligence_report", {}).get("push_to", ["feishu"])
+                            push_targets = scheduler_core.config.get("jobs", {}).get("intelligence_report", {}).get("push_to", ["feishu"])
                             file_path, _ = save_result_safe(task_name, report_content, targets=push_targets)
                             try_push(file_path)
                             break
@@ -1597,7 +1597,7 @@ def job_podcast_update():
         logger.info(f"🎧 开始执行: {task_name}")
 
         # 读取播客配置
-        podcasts_config = config.get("podcasts", {}) if config else {}
+        podcasts_config = scheduler_core.config.get("podcasts", {}) if scheduler_core.config else {}
         download_dir = Path(podcasts_config.get("download_dir", "~/Documents/ZhiweiVault/70-79_个人笔记/播客")).expanduser()
         feeds = podcasts_config.get("feeds", [])
 
@@ -1723,7 +1723,7 @@ def job_podcast_update():
 
 """
             # v68.2: 从配置读取 push_to
-            push_targets = config.get("jobs", {}).get("podcast_update", {}).get("push_to", ["feishu"])
+            push_targets = scheduler_core.config.get("jobs", {}).get("podcast_update", {}).get("push_to", ["feishu"])
             file_path, _ = save_result_safe(task_name, content, targets=push_targets)
             try_push(file_path)
 

@@ -41,7 +41,6 @@ from scheduler_jobs import (
     job_douyin_health_check,
     job_research_pipeline,
     job_daily_voice_task_summary,
-    job_ws_health_check,
     job_vault_sync_master,
     job_intel_sync,
     job_intel_report,
@@ -89,6 +88,7 @@ def main():
 
     # 初始化推送管理器（更新 scheduler_core 的全局变量）
     import scheduler_core
+    scheduler_core.config = config  # ⭐ v69.0: 同步配置到 core
     scheduler_core.push_manager = PushManager(config)
 
     logger.info("=" * 50)

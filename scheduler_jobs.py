@@ -124,7 +124,7 @@ def _fetch_rss_articles(feeds: list, max_per_feed: int = 3, max_total: int = 10)
 
 
 def _collect_real_news_sources() -> str:
-    """收集真实数据源用于早报生成 - v66.2 多源聚合
+    """收集真实数据源用于早报生成 - v68.3 多源聚合
 
     数据源：
     1. RSS 科技新闻
@@ -132,6 +132,9 @@ def _collect_real_news_sources() -> str:
     3. GitHub Trending
     4. 情报中心
     5. 最新论文
+    6. 国际动态 (新增)
+    7. 国内动态 (新增)
+    8. 加密货币 (新增)
     """
     sources = []
     today = datetime.now().strftime("%Y-%m-%d")
@@ -204,10 +207,178 @@ def _collect_real_news_sources() -> str:
         paper_items = [f"- {f.stem.split('_', 2)[-1][:50] if '_' in f.stem else f.stem[:50]}" for f in paper_files]
         sources.append(f"### 📄 最新论文\n" + "\n".join(paper_items))
 
+    # 6. 国际动态 (v68.3 新增)
+    intl_news = _collect_international_news()
+    if intl_news:
+        sources.append(intl_news)
+
+    # 7. 国内动态 (v68.3 新增)
+    domestic_news = _collect_domestic_news()
+    if domestic_news:
+        sources.append(domestic_news)
+
+    # 8. 加密货币 (v68.3 新增)
+    crypto_info = _collect_crypto_info()
+    if crypto_info:
+        sources.append(crypto_info)
+
+    # 9. 天气 (v68.5 新增)
+    weather = _collect_weather()
+    if weather:
+        sources.append(weather)
+
+    # 10. 行业洞察 (v68.5 新增)
+    insights = _collect_industry_insights()
+    if insights:
+        sources.append(insights)
+
+    # 11. 开发者资讯 (v68.5 新增)
+    dev_news = _collect_dev_news()
+    if dev_news:
+        sources.append(dev_news)
+
+    # 12. 科学前沿 (v68.5 新增)
+    science = _collect_science_news()
+    if science:
+        sources.append(science)
+
+    # 13. 产品发现 (v68.5 新增)
+    products = _collect_product_discovery()
+    if products:
+        sources.append(products)
+
     if not sources:
         return "⚠️ 今日暂无数据源"
 
     return "\n\n".join(sources)
+
+
+def _collect_international_news() -> str:
+    """收集国际新闻 - v68.4: 官方/主流来源
+
+    来源：
+    - TechCrunch (科技)
+    - Ars Technica (科技)
+    - The Verge (科技)
+    - WSJ Tech (华尔街日报科技)
+    - MarketWatch (财经)
+    """
+    INTERNATIONAL_FEEDS = [
+        ("WSJ Tech", "https://feeds.a.dj.com/rss/RSSWSJD.xml"),
+        ("TechCrunch", "https://techcrunch.com/feed/"),
+        ("Ars Technica", "https://feeds.arstechnica.com/arstechnica/index"),
+        ("The Verge", "https://www.theverge.com/rss/index.xml"),
+        ("MarketWatch", "https://www.marketwatch.com/rss/topstories"),
+    ]
+
+    articles = _fetch_rss_articles(INTERNATIONAL_FEEDS, max_per_feed=2, max_total=10)
+    if articles:
+        logger.info(f"🌍 已获取国际新闻 {len(articles)} 条")
+        return "### 🌍 国际动态\n" + "\n".join(articles)
+    return ""
+
+
+def _collect_domestic_news() -> str:
+    """收集国内新闻 - v68.3: 官方来源
+
+    来源：
+    - 新华网 (官方)
+    - 人民网 (官方)
+    """
+    DOMESTIC_FEEDS = [
+        ("新华网", "http://www.news.cn/politics/news_politics.xml"),
+        ("人民网", "http://www.people.com.cn/rss/politics.xml"),
+    ]
+
+    articles = _fetch_rss_articles(DOMESTIC_FEEDS, max_per_feed=4, max_total=8)
+    if articles:
+        logger.info(f"🇨🇳 已获取国内新闻 {len(articles)} 条")
+        return "### 🇨🇳 国内动态\n" + "\n".join(articles)
+    return ""
+
+
+def _collect_crypto_info() -> str:
+    """收集加密货币动态 - v68.4: 改用RSS新闻（API被墙）
+
+    来源：
+    - Cointelegraph (加密货币新闻)
+    - CryptoNews (加密货币新闻)
+    """
+    CRYPTO_FEEDS = [
+        ("Cointelegraph", "https://cointelegraph.com/rss"),
+        ("CryptoNews", "https://cryptonews.com/news/feed/"),
+    ]
+
+    articles = _fetch_rss_articles(CRYPTO_FEEDS, max_per_feed=2, max_total=4)
+    if articles:
+        logger.info(f"💰 已获取加密货币动态 {len(articles)} 条")
+        return "### 💰 加密货币动态\n" + "\n".join(articles)
+    return ""
+
+
+def _collect_weather() -> str:
+    """获取杭州天气 - v68.5: wttr.in API"""
+    try:
+        import urllib.request
+        url = "https://wttr.in/Hangzhou?format=%t+%C+%h+%w&lang=zh"
+        req = urllib.request.Request(url, headers={'User-Agent': 'curl'})
+        resp = urllib.request.urlopen(req, timeout=10)
+        weather = resp.read().decode().strip()
+        if weather:
+            logger.info(f"🌤️ 已获取天气: {weather}")
+            return f"### 🌤️ 杭州天气\n{weather}\n\n> 出行建议：根据天气情况合理安排行程"
+    except Exception as e:
+        logger.warning(f"天气获取失败: {e}")
+    return ""
+
+
+def _collect_industry_insights() -> str:
+    """收集行业洞察 - v68.5: McKinsey, 商业分析"""
+    INSIGHT_FEEDS = [
+        ("McKinsey", "https://www.mckinsey.com/rss"),
+    ]
+    articles = _fetch_rss_articles(INSIGHT_FEEDS, max_per_feed=3, max_total=3)
+    if articles:
+        logger.info(f"📊 已获取行业洞察 {len(articles)} 条")
+        return "### 📊 行业洞察\n" + "\n".join(articles)
+    return ""
+
+
+def _collect_dev_news() -> str:
+    """收集开发者资讯 - v68.5: Dev.to, 技术社区"""
+    DEV_FEEDS = [
+        ("Dev.to", "https://dev.to/feed"),
+        ("Smashing Mag", "https://www.smashingmagazine.com/feed/"),
+    ]
+    articles = _fetch_rss_articles(DEV_FEEDS, max_per_feed=2, max_total=4)
+    if articles:
+        logger.info(f"👨‍💻 已获取开发者资讯 {len(articles)} 条")
+        return "### 👨‍💻 开发者资讯\n" + "\n".join(articles)
+    return ""
+
+
+def _collect_science_news() -> str:
+    """收集科学前沿 - v68.5: Science Daily"""
+    SCIENCE_FEEDS = [
+        ("Science Daily AI", "https://www.sciencedaily.com/rss/computers_math/artificial_intelligence.xml"),
+    ]
+    articles = _fetch_rss_articles(SCIENCE_FEEDS, max_per_feed=3, max_total=3)
+    if articles:
+        logger.info(f"🔬 已获取科学前沿 {len(articles)} 条")
+        return "### 🔬 科学前沿\n" + "\n".join(articles)
+    return ""
+
+
+def _collect_product_discovery() -> str:
+    """收集产品发现 - v68.5: Product Hunt"""
+    PRODUCT_FEEDS = [
+        ("Product Hunt", "https://www.producthunt.com/feed"),
+    ]
+    articles = _fetch_rss_articles(PRODUCT_FEEDS, max_per_feed=3, max_total=3)
+    if articles:
+        logger.info(f"🚀 已获取产品发现 {len(articles)} 条")
+        return "### 🚀 产品发现\n" + "\n".join(articles)
+    return ""
 
 
 # ============ 定时任务定义 ============
@@ -237,8 +408,9 @@ def job_morning_brief():
         success, content = call_agent("researcher", prompt, timeout=300)
 
         if success:
-            # 保存结果 (安全落盘：若今日已发则跳过)
-            file_path, skipped = save_result_safe(task_name, content, targets=["feishu"])
+            # v68.2: 从配置读取 push_to
+            push_targets = config.get("jobs", {}).get("morning_brief", {}).get("push_to", ["feishu"])
+            file_path, skipped = save_result_safe(task_name, content, targets=push_targets)
 
             # 尝试推送
             if not skipped and not is_quiet_hours():
@@ -280,7 +452,9 @@ def job_noon_brief():
         success, content = call_agent("researcher", prompt, timeout=300)
 
         if success:
-            file_path, skipped = save_result_safe(task_name, content, targets=["feishu"])
+            # v68.2: 从配置读取 push_to
+            push_targets = config.get("jobs", {}).get("noon_brief", {}).get("push_to", ["feishu"])
+            file_path, skipped = save_result_safe(task_name, content, targets=push_targets)
             if not skipped and not is_quiet_hours():
                 try_push(file_path)
             log_task_metrics(task_name, "success", duration_ms=int((time.time() - start_time) * 1000))
@@ -333,7 +507,9 @@ def job_us_market_open():
         success, content = call_agent("researcher", prompt, timeout=300)
 
         if success:
-            file_path, skipped = save_result_safe(task_name, content, targets=["feishu"])
+            # v68.2: 从配置读取 push_to
+            push_targets = config.get("jobs", {}).get("us_market_open", {}).get("push_to", ["feishu"])
+            file_path, skipped = save_result_safe(task_name, content, targets=push_targets)
             if not skipped:
                 try_push(file_path)
             log_task_metrics(task_name, "success", duration_ms=int((time.time() - start_time) * 1000))
@@ -369,7 +545,9 @@ def job_us_market_close():
         success, content = call_agent("researcher", prompt, timeout=300)
 
         if success:
-            file_path, skipped = save_result_safe(task_name, content, targets=["feishu"])
+            # v68.2: 从配置读取 push_to
+            push_targets = config.get("jobs", {}).get("us_market_close", {}).get("push_to", ["feishu"])
+            file_path, skipped = save_result_safe(task_name, content, targets=push_targets)
             if not skipped:
                 try_push(file_path)
             log_task_metrics(task_name, "success", duration_ms=int((time.time() - start_time) * 1000))
@@ -429,7 +607,9 @@ def job_arxiv():
 """
 
             # 保存并推送
-            file_path, skipped = save_result_safe(task_name, content, targets=["feishu"])
+            # v68.2: 从配置读取 push_to
+            push_targets = config.get("jobs", {}).get("arxiv_papers", {}).get("push_to", ["feishu"])
+            file_path, skipped = save_result_safe(task_name, content, targets=push_targets)
             if not skipped:
                 try_push(file_path)
             log_task_metrics(task_name, "success", duration_ms=int((time.time() - start_time) * 1000))
@@ -499,7 +679,9 @@ def job_system_check():
             )
 
             content = result.stdout if result.returncode == 0 else result.stderr
-            save_result_safe(task_name, content, targets=["feishu"])
+            # v68.1: 从配置读取 push_to
+            push_targets = config.get("jobs", {}).get("system_check", {}).get("push_to", ["feishu"])
+            save_result_safe(task_name, content, targets=push_targets)
             log_task_metrics(task_name, "success", duration_ms=int((time.time() - start_time) * 1000))
         else:
             logger.warning("健康检查脚本不存在")
@@ -591,7 +773,9 @@ def job_system_metrics_report():
         success, content = call_agent("operator", prompt, timeout=300)
 
         if success:
-            file_path, skipped = save_result_safe(task_name, content, targets=["feishu"])
+            # v68.1: 从配置读取 push_to
+            push_targets = config.get("jobs", {}).get("system_metrics", {}).get("push_to", ["feishu"])
+            file_path, skipped = save_result_safe(task_name, content, targets=push_targets)
             if not skipped:
                 try_push(file_path)
             log_task_metrics(task_name, "success", duration_ms=int((time.time() - start_time) * 1000))
@@ -807,14 +991,20 @@ def job_vault_sync_master():
 
         if script_path.exists() and python_executable.exists():
             result = subprocess.run(
-                [str(python_executable), str(script_path), "--limit", "50", "--skip-chroma"],
+                [str(python_executable), str(script_path), "--limit", "30", "--skip-chroma"],
                 capture_output=True,
                 text=True,
-                timeout=600  # 10 分钟（增量模式更快）
+                timeout=900  # 15 分钟
             )
 
             if result.returncode == 0:
-                logger.info(f"VaultSyncMaster 增量同步完成:\n{result.stdout}")
+                content = result.stdout
+                logger.info(f"VaultSyncMaster 增量同步完成:\n{content[:500]}...")
+                # v68.2: 从配置读取 push_to 并推送
+                push_targets = config.get("jobs", {}).get("vault_sync_master", {}).get("push_to", ["feishu"])
+                if push_targets:
+                    file_path, _ = save_result_safe(task_name, content, targets=push_targets)
+                    try_push(file_path)
                 log_task_metrics(task_name, "success", duration_ms=int((time.time() - start_time) * 1000))
             else:
                 logger.error(f"VaultSyncMaster 增量同步失败: {result.stderr}")
@@ -867,39 +1057,6 @@ def job_daily_voice_task_summary():
     except Exception as e:
         logger.error(f"语音任务汇总异常: {e}")
         log_task_metrics(task_name, "failure", error=str(e))
-
-
-def job_ws_health_check():
-    """WebSocket 健康检查 (每5分钟)"""
-    task_name = "ws_health_check"
-
-    try:
-        # 检查飞书 WebSocket 进程
-        result = subprocess.run(
-            ["launchctl", "list"],
-            capture_output=True,
-            text=True,
-            timeout=10
-        )
-
-        if "zhiwei.bot" in result.stdout:
-            logger.debug("💚 飞书服务正常")
-        else:
-            logger.error("⚠️ 飞书服务未运行")
-
-        # 检查日志活跃度
-        log_file = Path.home() / "logs" / "feishu_bot.log"
-        if log_file.exists():
-            mtime = os.path.getmtime(log_file)
-            age_seconds = time.time() - mtime
-
-            if age_seconds > 600:
-                logger.warning(f"⚠️ 飞书日志 {int(age_seconds/60)} 分钟无更新")
-
-    except subprocess.TimeoutExpired:
-        logger.error("⚠️ WebSocket 健康检查超时")
-    except Exception as e:
-        logger.error(f"⚠️ WebSocket 健康检查失败: {e}")
 
 
 # ============ 导出 ============
@@ -956,13 +1113,18 @@ def job_intel_report():
 
             if result.returncode == 0:
                 logger.info(f"情报简报生成完成")
-                # 尝试从输出中提取报告路径
+                # v68.2: 从输出提取报告路径，走队列推送
                 for line in result.stdout.splitlines():
                     if "情报简报已生成并存入" in line:
                         report_path_str = line.split(":")[-1].strip()
                         if os.path.exists(report_path_str):
-                            try_push(Path(report_path_str))
-                
+                            # 读取报告内容
+                            report_content = Path(report_path_str).read_text(encoding="utf-8")
+                            push_targets = config.get("jobs", {}).get("intelligence_report", {}).get("push_to", ["feishu"])
+                            file_path, _ = save_result_safe(task_name, report_content, targets=push_targets)
+                            try_push(file_path)
+                            break
+
                 log_task_metrics(task_name, "success", duration_ms=int((time.time() - start_time) * 1000))
             else:
                 logger.error(f"情报简报生成失败: {result.stderr}")
@@ -1418,7 +1580,16 @@ def job_sync_github_weekly():
 # ============ 播客更新任务 (v65.0 新增) ============
 
 def job_podcast_update():
-    """播客更新检查与下载 - v65.1 增强"""
+    """播客更新检查与下载 - v69.0 增强：转录 + 知识蒸馏
+
+    流程：
+    1. 检查 RSS 更新
+    2. 下载新音频
+    3. ASR 转录
+    4. LLM 知识蒸馏
+    5. 保存到 Obsidian Vault
+    6. 推送更新通知
+    """
     task_name = "podcast_update"
     start_time = time.time()
 
@@ -1439,10 +1610,15 @@ def job_podcast_update():
 
         download_dir.mkdir(parents=True, exist_ok=True)
 
+        # 笔记输出目录
+        notes_dir = Path.home() / "Documents" / "ZhiweiVault" / "70-79_个人笔记" / "播客笔记"
+        notes_dir.mkdir(parents=True, exist_ok=True)
+
         # 记录统计
         stats = {
             "checked": 0,
             "new_downloads": 0,
+            "new_notes": 0,
             "already_exists": 0,
             "errors": 0
         }
@@ -1468,42 +1644,63 @@ def job_podcast_update():
                 stats["checked"] += 1
                 logger.info(f"📻 {feed_name}: {len(parsed.entries)} 个节目")
 
-                # 检查最近3个episode
-                for entry in parsed.entries[:3]:
-                    title = entry.get("title", "无标题")
-                    audio_url = None
+                # 只处理最新的 1 个 episode（避免处理时间过长）
+                entry = parsed.entries[0]
+                title = entry.get("title", "无标题")
+                audio_url = None
 
-                    # 查找音频链接
-                    for enclosure in entry.get("enclosures", []):
-                        if "audio" in enclosure.get("type", ""):
-                            audio_url = enclosure.get("href")
-                            break
+                # 查找音频链接
+                for enclosure in entry.get("enclosures", []):
+                    if "audio" in enclosure.get("type", ""):
+                        audio_url = enclosure.get("href")
+                        break
 
-                    # 备选：检查链接
-                    if not audio_url and entry.get("link"):
-                        link = entry.get("link", "")
-                        if link.endswith((".mp3", ".m4a", ".mp4")):
-                            audio_url = link
+                if not audio_url and entry.get("link"):
+                    link = entry.get("link", "")
+                    if link.endswith((".mp3", ".m4a", ".mp4")):
+                        audio_url = link
 
-                    if audio_url:
-                        # 安全文件名
-                        safe_title = "".join(c for c in title[:40] if c.isalnum() or c in " -_").strip()
-                        ext = audio_url.split(".")[-1][:4] if "." in audio_url else "mp3"
-                        audio_file = download_dir / f"{feed_name}_{safe_title}.{ext}"
+                if audio_url:
+                    # 安全文件名
+                    safe_title = "".join(c for c in title[:40] if c.isalnum() or c in " -_").strip()
+                    ext = audio_url.split(".")[-1][:4] if "." in audio_url else "mp3"
+                    audio_file = download_dir / f"{feed_name}_{safe_title}.{ext}"
 
-                        if not audio_file.exists():
-                            # 下载音频
-                            logger.info(f"  ⬇️ 下载: {title[:40]}")
-                            import urllib.request
-                            urllib.request.urlretrieve(audio_url, audio_file)
+                    if not audio_file.exists():
+                        # 下载音频
+                        logger.info(f"  ⬇️ 下载: {title[:40]}")
+                        import urllib.request
+                        urllib.request.urlretrieve(audio_url, audio_file)
+                        stats["new_downloads"] += 1
+
+                    # 检查是否已有笔记
+                    note_file = notes_dir / f"PODCAST_{datetime.now().strftime('%Y-%m-%d')}_{safe_title[:30]}.md"
+                    if not note_file.exists():
+                        # ⭐ v69.5: 转录 + 蒸馏（失败时生成基本笔记）
+                        logger.info(f"  🎤 转录中: {title[:30]}")
+                        transcript = _transcribe_podcast(audio_file)
+
+                        if transcript:
+                            logger.info(f"  🧠 蒸馏中: {len(transcript)} 字")
+                            note_content = _distill_podcast(title, transcript)
+                        else:
+                            # ⭐ 转录失败时，使用 RSS 元数据生成基本笔记
+                            logger.info(f"  ⚠️ 转录失败，生成基本笔记")
+                            summary = entry.get("summary", entry.get("description", ""))
+                            note_content = _generate_basic_podcast_note(feed_name, title, summary, audio_file)
+
+                        if note_content:
+                            _save_podcast_note(title, note_content, note_file)
+                            stats["new_notes"] += 1
                             new_episodes.append({
                                 "podcast": feed_name,
                                 "title": title,
-                                "file": str(audio_file)
+                                "file": str(audio_file),
+                                "note": str(note_file),
+                                "transcribed": bool(transcript)
                             })
-                            stats["new_downloads"] += 1
-                        else:
-                            stats["already_exists"] += 1
+                    else:
+                        stats["already_exists"] += 1
 
             except Exception as e:
                 logger.error(f"❌ {feed_name}: {e}")
@@ -1511,21 +1708,27 @@ def job_podcast_update():
 
         # 生成更新简报
         if new_episodes:
-            content = f"""# 🎧 播客更新
+            content = f"""# 🎧 播客更新与知识蒸馏
 
-> 检查时间: {datetime.now().strftime("%Y-%m-%d %H:%M")}
+> 处理时间: {datetime.now().strftime("%Y-%m-%d %H:%M")}
 
-## 新下载的节目
+## 新处理的节目
 
 """
             for ep in new_episodes:
-                content += f"- **{ep['podcast']}**: {ep['title']}\n"
+                content += f"""### {ep['podcast']}: {ep['title']}
 
-            file_path, _ = save_result_safe(task_name, content, targets=["feishu"])
+- 音频: `{Path(ep['file']).name}`
+- 笔记: `{Path(ep['note']).name}`
+
+"""
+            # v68.2: 从配置读取 push_to
+            push_targets = config.get("jobs", {}).get("podcast_update", {}).get("push_to", ["feishu"])
+            file_path, _ = save_result_safe(task_name, content, targets=push_targets)
             try_push(file_path)
 
         # 统计日志
-        logger.info(f"✅ 播客更新完成: 检查{stats['checked']}个源，新下载{stats['new_downloads']}个，已存在{stats['already_exists']}个")
+        logger.info(f"✅ 播客更新完成: 检查{stats['checked']}个源，下载{stats['new_downloads']}个，生成笔记{stats['new_notes']}个")
         log_task_metrics(task_name, "success",
                         duration_ms=int((time.time() - start_time) * 1000),
                         extra=stats)
@@ -1533,6 +1736,194 @@ def job_podcast_update():
     except Exception as e:
         logger.error(f"播客更新任务异常: {e}")
         log_task_metrics(task_name, "failure", error=str(e))
+
+
+def _transcribe_podcast(audio_path: Path) -> str:
+    """播客 ASR 转录 - v69.4: 使用 subprocess 调用，避免 Python 3.14 async 兼容性问题"""
+    try:
+        import subprocess
+        import tempfile
+        import json
+
+        # 创建临时输出文件
+        output_file = tempfile.NamedTemporaryFile(mode='w', suffix='.json', delete=False)
+        output_path = output_file.name
+        output_file.close()
+
+        # 调用转录脚本
+        script_path = BASE_DIR / "scripts" / "transcribe_audio.py"
+        if not script_path.exists():
+            logger.warning(f"转录脚本不存在: {script_path}")
+            return ""
+
+        logger.info(f"🎤 转录中（subprocess）...")
+
+        result = subprocess.run(
+            [
+                sys.executable,
+                str(script_path),
+                "--audio", str(audio_path.absolute()),
+                "--output", output_path
+            ],
+            capture_output=True,
+            text=True,
+            timeout=300,  # 5分钟超时
+            cwd=str(BASE_DIR)
+        )
+
+        if result.returncode == 0:
+            # 读取结果
+            try:
+                with open(output_path, 'r') as f:
+                    data = json.load(f)
+                text = data.get('text', '')
+                if text:
+                    logger.info(f"✅ 转录完成: {len(text)} 字符")
+                    return text
+                else:
+                    logger.warning("转录结果为空")
+                    return ""
+            except Exception as e:
+                logger.error(f"读取转录结果失败: {e}")
+                return ""
+        else:
+            logger.error(f"转录脚本失败: {result.stderr[:200]}")
+            return ""
+
+    except subprocess.TimeoutExpired:
+        logger.error("转录超时（300s）")
+        return ""
+    except Exception as e:
+        logger.error(f"转录异常: {e}")
+        return ""
+    finally:
+        # 清理临时文件
+        try:
+            import os
+            if output_path and os.path.exists(output_path):
+                os.unlink(output_path)
+        except:
+            pass
+
+
+DISTILL_PROMPT = """你是一个顶级的技术研究员与情报分析师，擅长从播客内容中提取高密度知识。
+
+**任务**：从播客转录文本中蒸馏出核心知识，生成结构化的 Markdown 笔记。
+
+**输出格式**：
+
+## 🎧 核心观点
+
+> 一句话总结本期核心价值
+
+## 📌 关键要点
+
+1. 要点1
+2. 要点2
+3. 要点3
+
+## 🔍 深度解读
+
+### 技术要点
+- 要点1：详细解释
+- 要点2：详细解释
+
+### 工具/资源
+- 工具名：用途说明
+
+### 实践建议
+- 建议1
+- 建议2
+
+## 💡 启发与思考
+
+- 启发1
+- 启发2
+
+## 📚 延伸阅读
+
+- 相关主题
+
+---
+
+**播客标题**: {title}
+**转录字数**: {word_count} 字
+
+**转录文本**：
+{transcript}
+"""
+
+
+def _distill_podcast(title: str, transcript: str) -> str:
+    """LLM 知识蒸馏"""
+    try:
+        from zhiwei_common.llm import llm_client
+
+        word_count = len(transcript)
+        prompt = DISTILL_PROMPT.format(
+            title=title,
+            word_count=word_count,
+            transcript=transcript[:15000]  # 限制长度
+        )
+
+        # 使用 llm_client.call() 方法
+        success, response = llm_client.call("researcher", prompt, timeout=120)
+        if success and response:
+            logger.info(f"✅ 蒸馏完成: {len(response)} 字符")
+            return response
+        else:
+            logger.error(f"蒸馏失败: LLM 调用不成功")
+            return f"# {title}\n\n转录文本：\n\n{transcript[:2000]}"
+
+    except Exception as e:
+        logger.error(f"蒸馏失败: {e}")
+        return f"# {title}\n\n转录文本：\n\n{transcript[:2000]}"
+
+
+def _generate_basic_podcast_note(podcast_name: str, title: str, summary: str, audio_file: Path) -> str:
+    """生成基本播客笔记（转录失败时的降级方案）"""
+    # 清理 summary
+    if summary:
+        # 移除 HTML 标签
+        import re
+        summary = re.sub(r'<[^>]+>', '', summary)
+        summary = summary[:500]  # 限制长度
+
+    content = f"""## 🎧 播客信息
+
+- **来源**: {podcast_name}
+- **标题**: {title}
+- **音频文件**: `{audio_file.name}`
+- **生成时间**: {datetime.now().strftime("%Y-%m-%d %H:%M")}
+- **转录状态**: ⚠️ 未转录（待手动处理）
+
+## 📝 简介
+
+{summary if summary else "无简介"}
+
+---
+
+> 💡 提示：此笔记为基本版本，待后续转录后可更新为深度分析版本。
+"""
+
+    return content
+
+
+def _save_podcast_note(title: str, content: str, output_path: Path) -> None:
+    """保存播客笔记"""
+    import re
+
+    full_content = f"""---
+title: {title}
+date: {datetime.now().strftime("%Y-%m-%d %H:%M")}
+type: podcast
+tags: [播客, 技术]
+---
+
+{content}
+"""
+    output_path.write_text(full_content, encoding="utf-8")
+    logger.info(f"📝 笔记已保存: {output_path.name}")
 
 
 __all__ = [

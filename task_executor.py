@@ -29,8 +29,8 @@ MAX_BUDGET = 1.0
 POLL_INTERVAL = 10
 WORKING_DIR = str(Path.home())
 
-MAX_RETRIES = 3
-RETRY_DELAY = 10
+MAX_RETRIES = 1  # 遇到错误严禁反复唤醒死推演
+RETRY_DELAY = 5
 
 AUTO_EXECUTE_LEVELS = {"low"}
 MANUAL_APPROVE_LEVELS = {"medium", "high", "architecture"}

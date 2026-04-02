@@ -976,7 +976,7 @@ def job_vault_sync_master():
     """
     ArXiv-Obsidian 搜索完备性对齐 (Research V4.4)
     调用 reconcile_obsidian.py v3.0 进行增量同步
-    ⭐ v68.0 优化：添加 --limit 50 避免超时，--skip-chroma 跳过 Docker
+    ⭐ v69.0 优化：增加 --limit 200 加速同步，--skip-chroma 跳过 Docker
     """
     task_name = "vault_sync_master"
     start_time = time.time()
@@ -991,7 +991,7 @@ def job_vault_sync_master():
 
         if script_path.exists() and python_executable.exists():
             result = subprocess.run(
-                [str(python_executable), str(script_path), "--limit", "30", "--skip-chroma"],
+                [str(python_executable), str(script_path), "--limit", "200", "--skip-chroma"],
                 capture_output=True,
                 text=True,
                 timeout=900  # 15 分钟

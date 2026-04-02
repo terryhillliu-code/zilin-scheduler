@@ -189,13 +189,16 @@ jobs:
     push_to: []
     retry: { max_attempts: 2, delay_seconds: 60 }
 
-  # ============ 论文精选 (v65.0 恢复) ============
+  # ============ 论文精选 (已禁用，由 Paper Analyzer 替代) ============
+  # 原 arxiv_papers 任务功能与 Paper Analyzer 重复
+  # Paper Analyzer 提供更完整的: 深度分析 + 持久化 + RAG 检索
+  # 如需恢复推送功能，建议改造为 "Paper Analyzer Tier A 新论文通知"
   arxiv_papers:
-    enabled: true
+    enabled: false  # 禁用，避免重复
     hour: 7
     minute: 0
     day_of_week: "mon-sun"
-    description: "arXiv 论文精选（LLM+工具）"
+    description: "[已禁用] 原 arXiv 论文精选，现由 Paper Analyzer 替代"
     push_to: ["feishu", "dingtalk"]
     retry: { max_attempts: 2, delay_seconds: 60 }
 

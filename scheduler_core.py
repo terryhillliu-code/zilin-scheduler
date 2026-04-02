@@ -106,7 +106,7 @@ def send_failure_alert(task_name: str, error_msg: str = None):
     # 尝试发送告警 (v57.0)
     try:
         # 发送到飞书 (通过队列以符合 I/O 分离规范)
-        from scheduler_queue import save_result_safe
+        from scheduler_queue import save_result_safe, try_push  # ⭐ v69.2: 添加 try_push 导入
         file_path, skipped = save_result_safe(
             task="system_alert",
             content=f"# {task_name}\n\n{alert_msg}",

@@ -104,6 +104,26 @@ jobs:
     push_to: ["feishu", "dingtalk"]
     retry: { max_attempts: 1, delay_seconds: 120 }
 
+  # ============ Paper Analyzer 联动同步 (v1.1) ============
+  paper_property_sync:
+    enabled: true
+    hour: 4
+    minute: 0
+    day_of_week: "mon-sun"
+    description: "Paper Analyzer 属性同步 - Obsidian 变更同步到数据库"
+    push_to: []
+    retry: { max_attempts: 1, delay_seconds: 30 }
+
+  # ============ Paper Analyzer 论文抓取 (v1.2) ============
+  paper_fetch:
+    enabled: true
+    hour: 8
+    minute: 0
+    day_of_week: "mon-sun"
+    description: "Paper Analyzer 论文抓取 - 自动抓取最新 arXiv 论文"
+    push_to: []
+    retry: { max_attempts: 2, delay_seconds: 300 }
+
   # ============ 视频处理 ============
   video_retry:
     enabled: true

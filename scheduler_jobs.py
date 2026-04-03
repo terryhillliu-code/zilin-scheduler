@@ -976,7 +976,9 @@ def job_vault_sync_master():
     """
     ArXiv-Obsidian 搜索完备性对齐 (Research V4.4)
     调用 reconcile_obsidian.py v3.0 进行增量同步
-    ⭐ v69.0 优化：增加 --limit 200 加速同步，--skip-chroma 跳过 Docker
+    ⭐ v69.0 优化：增加 --limit 加速同步，--skip-chroma 跳过 Docker
+    ⭐ v70.0 优化：增加 --callback 同步完成后自动更新 rag_indexed
+    ⭐ v71.0 优化：减少 --limit 到 50 避免超时，增加超时到 30 分钟
     """
     task_name = "vault_sync_master"
     start_time = time.time()
@@ -991,10 +993,10 @@ def job_vault_sync_master():
 
         if script_path.exists() and python_executable.exists():
             result = subprocess.run(
-                [str(python_executable), str(script_path), "--limit", "200", "--skip-chroma"],
+                [str(python_executable), str(script_path), "--limit", "50", "--skip-chroma", "--callback"],
                 capture_output=True,
                 text=True,
-                timeout=900  # 15 分钟
+                timeout=1800  # 30 分钟
             )
 
             if result.returncode == 0:
@@ -1020,6 +1022,102 @@ def job_vault_sync_master():
 
     except Exception as e:
         logger.error(f"VaultSyncMaster 增量同步任务异常: {e}")
+        log_task_metrics(task_name, "failure", error=str(e))
+
+
+def job_paper_property_sync():
+    """
+    Paper Analyzer 属性同步 - Obsidian 变更同步到数据库 (v1.1)
+
+    扫描 Obsidian Vault 中 PAPER_*.md 文件的 frontmatter 属性变更，
+    同步 tier、tags、personal_rating、personal_notes 到 papers.db
+
+    ⭐ 定时任务: 每日凌晨 4:00 执行
+    """
+    task_name = "paper_property_sync"
+    start_time = time.time()
+
+    try:
+        logger.info("开始执行 [Paper Analyzer 属性同步] 任务...")
+
+        # 脚本路径
+        script_path = Path.home() / "arxiv-paper-analyzer" / "backend" / "scripts" / "sync_obsidian_properties.py"
+        python_executable = Path.home() / "arxiv-paper-analyzer" / "backend" / "venv" / "bin" / "python3"
+
+        if script_path.exists() and python_executable.exists():
+            result = subprocess.run(
+                [str(python_executable), str(script_path)],
+                capture_output=True,
+                text=True,
+                timeout=300  # 5 分钟
+            )
+
+            if result.returncode == 0:
+                content = result.stdout
+                logger.info(f"Paper Analyzer 属性同步完成:\n{content[:500]}...")
+                log_task_metrics(task_name, "success", duration_ms=int((time.time() - start_time) * 1000))
+            else:
+                logger.error(f"Paper Analyzer 属性同步失败: {result.stderr}")
+                log_task_metrics(task_name, "failure", error=result.stderr)
+        else:
+            missing = []
+            if not script_path.exists():
+                missing.append(f"脚本: {script_path}")
+            if not python_executable.exists():
+                missing.append(f"Python: {python_executable}")
+            logger.warning(f"Paper Analyzer 属性同步缺失依赖: {', '.join(missing)}")
+            log_task_metrics(task_name, "skipped", extra={"missing": missing})
+
+    except Exception as e:
+        logger.error(f"Paper Analyzer 属性同步任务异常: {e}")
+        log_task_metrics(task_name, "failure", error=str(e))
+
+
+def job_paper_fetch():
+    """
+    Paper Analyzer 论文抓取 - 自动抓取最新 arXiv 论文 (v1.2)
+
+    从 arXiv API 抓取最新论文并创建分析任务。
+    支持多分类抓取，自动去重。
+
+    ⭐ 定时任务: 每日 8:00 执行 (arXiv 更新时间)
+    """
+    task_name = "paper_fetch"
+    start_time = time.time()
+
+    try:
+        logger.info("开始执行 [Paper Analyzer 论文抓取] 任务...")
+
+        # 使用 daily_workflow.py 脚本（完整流程：抓取+预筛选+创建任务）
+        workflow_script = Path.home() / "arxiv-paper-analyzer" / "backend" / "scripts" / "daily_workflow.py"
+        python_executable = Path.home() / "arxiv-paper-analyzer" / "backend" / "venv" / "bin" / "python3"
+
+        if workflow_script.exists():
+            result = subprocess.run(
+                [str(python_executable), str(workflow_script)],
+                capture_output=True,
+                text=True,
+                timeout=300,
+                cwd=str(Path.home() / "arxiv-paper-analyzer" / "backend"),
+            )
+
+            if result.returncode == 0:
+                # 提取关键信息
+                output_lines = result.stdout.strip().splitlines()
+                summary = output_lines[-1] if output_lines else "完成"
+                logger.info(f"论文抓取完成: {summary}")
+                log_task_metrics(task_name, "success", duration_ms=int((time.time() - start_time) * 1000))
+            else:
+                logger.error(f"论文抓取失败: {result.stderr[:200]}")
+                log_task_metrics(task_name, "failure", error=result.stderr[:200])
+        else:
+            logger.warning("daily_workflow.py 脚本不存在，跳过论文抓取")
+            log_task_metrics(task_name, "skipped", error="script_not_found")
+            logger.error(f"论文抓取失败: {result.stderr}")
+            log_task_metrics(task_name, "failure", error=result.stderr)
+
+    except Exception as e:
+        logger.error(f"论文抓取任务异常: {e}")
         log_task_metrics(task_name, "failure", error=str(e))
 
 
@@ -1951,6 +2049,8 @@ __all__ = [
     'job_sync_github_weekly',
     'job_podcast_update',  # ⭐ v65.0 新增
     'job_llm_health_check',  # ⭐ v67.0 新增
+    'job_paper_property_sync',  # ⭐ Paper Analyzer v1.1 新增
+    'job_paper_fetch',  # ⭐ Paper Analyzer v1.2 新增
     # 辅助函数
     'enrich_with_graphrag',
     'enrich_with_klib',

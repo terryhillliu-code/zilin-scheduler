@@ -48,6 +48,8 @@ from scheduler_jobs import (
     job_sync_github_weekly,
     job_podcast_update,  # ⭐ v65.0 新增
     job_llm_health_check,  # ⭐ v67.0 新增
+    job_paper_property_sync,  # ⭐ Paper Analyzer v1.1 新增
+    job_paper_fetch,  # ⭐ Paper Analyzer v1.2 新增
     log_health_status,
 )
 
@@ -141,6 +143,8 @@ def main():
         "sync_github_weekly": job_sync_github_weekly,
         "podcast_update": job_podcast_update,  # ⭐ v65.0 新增
         "llm_health_check": job_llm_health_check,  # ⭐ v67.0 新增
+        "paper_property_sync": job_paper_property_sync,  # ⭐ Paper Analyzer v1.1 新增
+        "paper_fetch": job_paper_fetch,  # ⭐ Paper Analyzer v1.2 新增
     }
 
     # ============ 注册定时任务 ============

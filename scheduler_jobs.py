@@ -787,6 +787,41 @@ def job_system_metrics_report():
         log_task_metrics(task_name, "failure", error=str(e))
 
 
+def job_lance_cleanup():
+    """LanceDB 清理 (04:00) - 清理事务文件和旧版本"""
+    task_name = "lance_cleanup"
+    start_time = time.time()
+
+    try:
+        logger.info(f"📋 开始执行: {task_name}")
+
+        # 调用 LanceDB 清理脚本
+        script_path = Path.home() / "zhiwei-rag" / "scripts" / "lance_cleanup.py"
+        python_executable = Path.home() / "zhiwei-rag" / "venv" / "bin" / "python3"
+
+        if script_path.exists() and python_executable.exists():
+            result = subprocess.run(
+                [str(python_executable), str(script_path), "--days", "7"],
+                capture_output=True,
+                text=True,
+                timeout=300
+            )
+
+            if result.returncode == 0:
+                logger.info(f"LanceDB 清理输出:\n{result.stdout}")
+                log_task_metrics(task_name, "success", extra={"output": result.stdout})
+            else:
+                logger.error(f"LanceDB 清理失败: {result.stderr}")
+                log_task_metrics(task_name, "failure", error=result.stderr)
+        else:
+            logger.warning(f"LanceDB 清理脚本不存在: {script_path}")
+            log_task_metrics(task_name, "skipped")
+
+    except Exception as e:
+        logger.error(f"LanceDB 清理异常: {e}")
+        log_task_metrics(task_name, "failure", error=str(e))
+
+
 def job_log_rotate():
     """日志轮转 (03:00) - 使用 log_cleanup.py"""
     task_name = "log_rotate"
@@ -2033,6 +2068,7 @@ __all__ = [
     'job_arxiv',
     'job_system_check',
     'job_system_metrics_report',
+    'job_lance_cleanup',  # ⭐ v69.0 新增
     'job_log_rotate',
     'job_knowledge_classify',
     'job_video_notes_organize',

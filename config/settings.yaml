@@ -86,6 +86,14 @@ jobs:
     description: "日志滚动（10MB/5版本）"
     push_to: []
 
+  lance_cleanup:
+    enabled: true
+    hour: 4
+    minute: 0
+    day_of_week: "mon-sun"
+    description: "LanceDB 事务清理"
+    push_to: []
+
   # ============ 知识管理 ============
   knowledge_classify:
     enabled: true

@@ -132,6 +132,7 @@ def main():
         "video_retry": job_video_retry,
         "asr_health_check": job_asr_health_check,
         "douyin_health_check": job_douyin_health_check,
+        "lance_cleanup": job_lance_cleanup,  # ⭐ v69.0 新增
         "log_rotate": job_log_rotate,
         "knowledge_classify": job_knowledge_classify,
         "research_pipeline": job_research_pipeline,

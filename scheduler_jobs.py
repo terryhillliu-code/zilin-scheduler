@@ -788,30 +788,30 @@ def job_system_metrics_report():
 
 
 def job_log_rotate():
-    """日志轮转 (03:00)"""
+    """日志轮转 (03:00) - 使用 log_cleanup.py"""
     task_name = "log_rotate"
     start_time = time.time()
 
     try:
         logger.info(f"📋 开始执行: {task_name}")
 
-        log_dir = Path.home() / "logs"
+        # 调用日志清理脚本
+        import subprocess
+        script_path = Path(__file__).parent / "scripts" / "log_cleanup.py"
 
-        # 清理 30 天前的日志
-        cutoff = datetime.now() - timedelta(days=30)
-        cleaned = 0
+        result = subprocess.run(
+            [sys.executable, str(script_path)],
+            capture_output=True,
+            text=True,
+            timeout=60
+        )
 
-        for log_file in log_dir.glob("*.log.*"):
-            try:
-                mtime = datetime.fromtimestamp(log_file.stat().st_mtime)
-                if mtime < cutoff:
-                    log_file.unlink()
-                    cleaned += 1
-            except:
-                pass
-
-        logger.info(f"日志清理完成: {cleaned} 个文件")
-        log_task_metrics(task_name, "success", extra={"cleaned": cleaned})
+        if result.returncode == 0:
+            logger.info(f"日志清理输出:\n{result.stdout}")
+            log_task_metrics(task_name, "success", extra={"output": result.stdout})
+        else:
+            logger.error(f"日志清理失败: {result.stderr}")
+            log_task_metrics(task_name, "failure", error=result.stderr)
 
     except Exception as e:
         logger.error(f"日志轮转异常: {e}")

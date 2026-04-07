@@ -95,13 +95,14 @@ def enrich_with_klib(task_name: str, prompt_text: str, top_k: int = 5) -> str:
         return ""
 
 
-def _fetch_rss_articles(feeds: list, max_per_feed: int = 3, max_total: int = 10) -> list:
-    """通用 RSS 文章获取函数 - v66.2
+def _fetch_rss_articles(feeds: list, max_per_feed: int = 3, max_total: int = 10, max_age_days: int = 7) -> list:
+    """通用 RSS 文章获取函数 - v72.0 添加时间过滤
 
     Args:
         feeds: [(name, url), ...] 格式的 RSS 源列表
         max_per_feed: 每个 RSS 源最多获取的文章数
         max_total: 总共最多返回的文章数
+        max_age_days: 只获取最近 N 天的文章（防止抓到旧缓存）
 
     Returns:
         格式化的文章列表
@@ -111,7 +112,7 @@ def _fetch_rss_articles(feeds: list, max_per_feed: int = 3, max_total: int = 10)
         try:
             from tools.rss_feed import RSSFeedTool
             rss_tool = RSSFeedTool()
-            result = rss_tool.execute(url=url, limit=5)
+            result = rss_tool.execute(url=url, limit=5, max_age_days=max_age_days)
             if result.success and result.data.get("articles"):
                 for article in result.data["articles"][:max_per_feed]:
                     title = article.get("title", "")[:60]

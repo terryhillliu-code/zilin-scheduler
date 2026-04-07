@@ -221,7 +221,7 @@ def save_report(result: Dict[str, Any]):
     return report_file
 
 
-def send_alert(result: Dict[str, Any]):
+def send_alert(result: Dict[str, Any], silent: bool = False):
     """发送告警（如果状态不是 healthy）"""
     if result["status"] == "healthy":
         return
@@ -230,7 +230,8 @@ def send_alert(result: Dict[str, Any]):
         # 使用钉钉 webhook 发送告警
         webhook_url = os.environ.get("DINGTALK_WEBHOOK")
         if not webhook_url:
-            print("未配置钉钉 Webhook，跳过告警")
+            if not silent:
+                print("未配置钉钉 Webhook，跳过告警", file=sys.stderr)
             return
 
         import urllib.request
@@ -262,10 +263,12 @@ def send_alert(result: Dict[str, Any]):
         with urllib.request.urlopen(req, timeout=10, context=context) as resp:
             resp.read()
 
-        print(f"已发送 {result['status']} 告警到钉钉")
+        if not silent:
+            print(f"已发送 {result['status']} 告警到钉钉", file=sys.stderr)
 
     except Exception as e:
-        print(f"发送告警失败: {e}")
+        if not silent:
+            print(f"发送告警失败: {e}", file=sys.stderr)
 
 
 def main():
@@ -290,11 +293,12 @@ def main():
     # 保存报告
     if args.save:
         report_file = save_report(result)
-        print(f"\n报告已保存: {report_file}")
+        if not args.json:
+            print(f"\n报告已保存: {report_file}")
 
     # 发送告警
     if args.alert or result["status"] != "healthy":
-        send_alert(result)
+        send_alert(result, silent=args.json)
 
     # 返回状态码
     if result["status"] == "critical":

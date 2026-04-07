@@ -96,7 +96,7 @@ def enrich_with_klib(task_name: str, prompt_text: str, top_k: int = 5) -> str:
 
 
 def _fetch_rss_articles(feeds: list, max_per_feed: int = 3, max_total: int = 10, max_age_days: int = 7) -> list:
-    """通用 RSS 文章获取函数 - v72.0 添加时间过滤
+    """通用 RSS 文章获取函数 - v72.2 增强可靠性
 
     Args:
         feeds: [(name, url), ...] 格式的 RSS 源列表
@@ -108,19 +108,34 @@ def _fetch_rss_articles(feeds: list, max_per_feed: int = 3, max_total: int = 10,
         格式化的文章列表
     """
     articles = []
+    failed_sources = []
+
     for name, url in feeds:
         try:
             from tools.rss_feed import RSSFeedTool
             rss_tool = RSSFeedTool()
             result = rss_tool.execute(url=url, limit=5, max_age_days=max_age_days)
+
             if result.success and result.data.get("articles"):
+                fetched_count = len(result.data["articles"])
                 for article in result.data["articles"][:max_per_feed]:
                     title = article.get("title", "")[:60]
                     link = article.get("link", "")
                     summary = article.get("summary", "")[:80]
                     articles.append(f"- [{name}] **{title}**\n  {summary}\n  > [链接]({link})")
+                logger.debug(f"RSS {name}: 获取 {fetched_count} 条文章")
+            else:
+                failed_sources.append(name)
+                logger.warning(f"RSS {name}: 无有效文章")
+
         except Exception as e:
+            failed_sources.append(name)
             logger.warning(f"RSS {name} 获取失败: {e}")
+
+    # 记录数据源健康状态
+    if failed_sources:
+        logger.info(f"⚠️ RSS 数据源异常: {failed_sources}")
+
     return articles[:max_total]
 
 
@@ -280,18 +295,22 @@ def _collect_international_news() -> str:
 
 
 def _collect_domestic_news() -> str:
-    """收集国内新闻 - v68.3: 官方来源
+    """收集国内新闻 - v72.1: 可靠科技媒体
 
-    来源：
-    - 新华网 (官方)
-    - 人民网 (官方)
+    原新华网/人民网RSS返回旧缓存内容，替换为：
+    - 36氪 (科技/创投)
+    - 虎嗅 (商业/科技)
+    - IT之家 (科技资讯)
+    - 少数派 (数码/效率)
     """
     DOMESTIC_FEEDS = [
-        ("新华网", "http://www.news.cn/politics/news_politics.xml"),
-        ("人民网", "http://www.people.com.cn/rss/politics.xml"),
+        ("36氪", "https://36kr.com/feed"),
+        ("虎嗅", "https://www.huxiu.com/rss/0.xml"),
+        ("IT之家", "https://www.ithome.com/rss/"),
+        ("少数派", "https://sspai.com/feed"),
     ]
 
-    articles = _fetch_rss_articles(DOMESTIC_FEEDS, max_per_feed=4, max_total=8)
+    articles = _fetch_rss_articles(DOMESTIC_FEEDS, max_per_feed=2, max_total=6)
     if articles:
         logger.info(f"🇨🇳 已获取国内新闻 {len(articles)} 条")
         return "### 🇨🇳 国内动态\n" + "\n".join(articles)

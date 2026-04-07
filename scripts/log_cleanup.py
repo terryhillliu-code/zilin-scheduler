@@ -16,9 +16,9 @@ from datetime import datetime, timedelta
 
 # 配置
 LOG_DIR = Path.home() / "logs"
-MAX_SIZE_MB = 5  # 超过此大小触发轮转
+MAX_SIZE_MB = 10  # 超过此大小触发轮转（从5MB提高到10MB）
 KEEP_DAYS = 7    # 保留最近 N 天的日志
-KEEP_ROTATED = 3 # 保留最近 N 个轮转文件
+KEEP_ROTATED = 5 # 保留最近 N 个轮转文件（从3提高到5）
 
 
 def get_log_files() -> list[Path]:

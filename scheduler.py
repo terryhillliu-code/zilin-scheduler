@@ -180,11 +180,13 @@ def main():
 
             job_func = job_map[job_name]
             scheduler.add_job(
-                job_func, 
-                trigger, 
-                id=job_name, 
+                job_func,
+                trigger,
+                id=job_name,
                 name=job_name,
-                misfire_grace_time=7200  # 容忍 2 小时的错过执行（用于 Mac 唤醒后补执行）
+                misfire_grace_time=7200,  # 容忍 2 小时的错过执行（用于 Mac 唤醒后补执行）
+                coalesce=True,  # 合并错过的执行，避免积压
+                max_instances=1  # 同时只运行一个实例（防止资源竞争）
             )
             registered_jobs.append(job_name)
             logger.info(f"✅ 已注册: {job_name}")

@@ -34,7 +34,7 @@ class GitHubProfile:
     company: str = ""
     blog: str = ""
     location: str = ""
-    recent_repos: List[dict] = None
+    recent_repos: Optional[List[dict]] = None
     activity_score: float = 0.0
     activity_level: str = "Unknown"
 
@@ -173,7 +173,7 @@ class GitHubAnalyzer:
                             recent_updates += 4
                         elif days_ago < 180:
                             recent_updates += 2
-                    except:
+                    except Exception:
                         pass
             score += min(30, recent_updates)
 

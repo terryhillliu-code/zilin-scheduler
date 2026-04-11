@@ -129,7 +129,7 @@ class WeeklyReportGenerator:
                         for tag in tags:
                             if tag:
                                 tag_counter[tag] += 1
-                except:
+                except Exception:
                     pass
 
             stats.papers_tier_a = tier_counter.get("A", 0)
@@ -167,7 +167,7 @@ class WeeklyReportGenerator:
                                     "highlight": highlight[:100]
                                 })
                         break
-            except:
+            except Exception:
                 pass
 
     def _collect_task_stats(self, stats: WeeklyStats, week_start: datetime, week_end: datetime):
@@ -230,7 +230,7 @@ class WeeklyReportGenerator:
                             runs += 1
                             if record.get("success"):
                                 success += 1
-                    except:
+                    except Exception:
                         pass
 
             stats.scheduler_runs = runs
@@ -326,7 +326,7 @@ class WeeklyReportGenerator:
         return output_path
 
 
-def send_to_feishu(self, content: str) -> bool:
+    def send_to_feishu(self, content: str) -> bool:
         """推送周报到飞书"""
         try:
             import sys

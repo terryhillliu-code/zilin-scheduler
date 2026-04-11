@@ -109,7 +109,7 @@ def get_container_status(container: str) -> Dict[str, Any]:
                 hours = int(uptime_sec // 3600)
                 minutes = int((uptime_sec % 3600) // 60)
                 uptime = f"{hours}h{minutes}m"
-            except:
+            except Exception:
                 pass
 
         return {

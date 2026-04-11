@@ -80,7 +80,7 @@ def claim_file(source: Path, dest_dir: Path):
         return None
 
 
-def try_push(file_path: Path, push_manager=None, logger=None, return_status: bool = False):
+def try_push(file_path: Path, logger=None, return_status: bool = False):
     """
     尝试推送到 MessageBus（并发安全）
 
@@ -154,14 +154,14 @@ def try_push(file_path: Path, push_manager=None, logger=None, return_status: boo
     except Exception as e:
         try:
             processing_path.rename(FAILED / processing_path.name)
-        except:
+        except Exception:
             pass
         if logger:
             logger.error(f"❌ 投递异常: {e}")
         return False if not return_status else {}
 
 
-def retry_failed(push_manager, max_retries: int = 3, logger=None):
+def retry_failed(max_retries: int = 3, logger=None):
     """
     重试 failed 队列中的任务
     """
@@ -170,7 +170,7 @@ def retry_failed(push_manager, max_retries: int = 3, logger=None):
     for f in sorted(FAILED.glob("*.json")):
         try:
             data = json.loads(f.read_text())
-        except:
+        except Exception:
             continue
         
         if data.get("retries", 0) >= max_retries:
@@ -180,13 +180,13 @@ def retry_failed(push_manager, max_retries: int = 3, logger=None):
         try:
             f.rename(PENDING / f.name)
             retried += 1
-        except:
+        except Exception:
             continue
     
     # 处理 pending
     success = 0
     for f in sorted(PENDING.glob("*.json")):
-        if try_push(f, push_manager, logger):
+        if try_push(f, logger=logger):
             success += 1
     
     return {"retried": retried, "success": success}
@@ -235,7 +235,7 @@ def check_and_alert(push_manager, alert_threshold: int = 3, logger=None):
                 retries = data.get("retries", 0)
                 error = str(data.get("last_error", ""))[:60]
                 alerts.append(f"  - `{data.get('job_id')}` (重试{retries}次): {error}")
-            except:
+            except Exception:
                 alerts.append(f"  - {f.name}")
     
     # 检查 processing 卡住（超过30分钟的文件）

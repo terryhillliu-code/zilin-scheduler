@@ -30,7 +30,7 @@ def main():
     check_and_alert(push_manager, alert_threshold=3, logger=logger)
     
     # 执行重试
-    result = retry_failed(push_manager, max_retries=3, logger=logger)
+    result = retry_failed(max_retries=3, logger=logger)
     
     # 后续状态
     after_stats = get_queue_stats()

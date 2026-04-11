@@ -105,11 +105,10 @@ def release_lock(lock_name: str) -> bool:
             os.unlink(lock_file)
             logger.debug(f"🔓 释放锁: {lock_name}")
             return True
+        return True  # 锁不存在视为已释放
     except Exception as e:
         logger.error(f"❌ 释放锁失败 [{lock_name}]: {e}")
         return False
-
-    return False
 
 
 @contextmanager
@@ -180,7 +179,7 @@ def acquire_lock(lock_name: str, timeout: int = 0):
             try:
                 fcntl.flock(lock_fd.fileno(), fcntl.LOCK_UN)
                 lock_fd.close()
-            except:
+            except Exception:
                 pass
 
         # 如果是强制释放，不删除锁文件（让它被下次获取时清理）
@@ -188,7 +187,7 @@ def acquire_lock(lock_name: str, timeout: int = 0):
             try:
                 os.unlink(lock_file)
                 logger.debug(f"🔓 释放锁: {lock_name}")
-            except:
+            except Exception:
                 pass
 
 
@@ -208,7 +207,7 @@ def is_stale_lock(lock_file: Path, max_age: int = 3600) -> bool:
         except OSError:
             # 进程不存在，锁 stale
             return True
-    except:
+    except Exception:
         return False
 
 
@@ -237,7 +236,7 @@ def get_lock_info(lock_name: str) -> Optional[dict]:
             "age_seconds": time.time() - stat.st_mtime,
             "is_stale": is_stale_lock(lock_file)
         }
-    except:
+    except Exception:
         return None
 
 

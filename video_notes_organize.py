@@ -75,30 +75,28 @@ def is_video_note(filepath: Path) -> bool:
     """
     判断文件是否是视频笔记
 
-    通过检查文件内容中的视频来源标识
+    通过检查文件内容中的视频来源标识（逐行读取，命中即退出）
     """
+    video_markers = [
+        "来源平台",
+        "douyin",
+        "bilibili",
+        "b23.tv",
+        "抖音",
+        "B站",
+        "v.douyin.com",
+    ]
     try:
-        content = filepath.read_text(encoding='utf-8', errors='ignore')
-
-        # 排除论文（arXiv 等）
-        if 'arxiv.org' in content.lower():
-            return False
-
-        # 检查是否包含视频来源标识
-        video_markers = [
-            "来源平台",
-            "douyin",
-            "bilibili",
-            "b23.tv",
-            "抖音",
-            "B站",
-            "v.douyin.com"
-        ]
-        for marker in video_markers:
-            if marker in content:
-                return True
+        with open(filepath, "r", encoding="utf-8", errors="ignore") as f:
+            for line in f:
+                lower_line = line.lower()
+                if "arxiv.org" in lower_line:
+                    return False
+                for marker in video_markers:
+                    if marker in line:
+                        return True
         return False
-    except:
+    except Exception:
         return False
 
 
@@ -125,7 +123,11 @@ def move_video_note(filepath: Path, target_dir: Path) -> Path:
     if target_path.exists() and target_path != filepath:
         # 添加时间戳后缀
         timestamp = datetime.now().strftime("%H%M%S")
-        new_name = f"VIDEO_{info['date']}_{info['title']}_{timestamp}.md"
+        if info:
+            new_name = f"VIDEO_{info['date']}_{info['title']}_{timestamp}.md"
+        else:
+            base = filepath.stem
+            new_name = f"VIDEO_{base}_{timestamp}.md"
         target_path = target_dir / new_name
 
     # 移动文件

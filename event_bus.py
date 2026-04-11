@@ -137,7 +137,7 @@ class EventBus:
         try:
             response = response_queue.get(timeout=timeout)
             return response
-        except:
+        except Exception:
             logger.warning(f"请求超时: {msg_id}")
             return None
         finally:
@@ -164,18 +164,21 @@ class EventBus:
                 queue.put(response)
     
     def poll_messages(self, agent_id: str) -> List[AgentMessage]:
-        """轮询文件系统中的消息"""
+        """轮询文件系统中的消息（原子读取+删除）"""
         messages = []
         pattern = f"*_{agent_id}_*.json"
-        
+
         for f in MESSAGE_DIR.glob(pattern):
             try:
-                msg = AgentMessage.from_json(f.read_text())
+                data = f.read_text()
+                f.unlink()  # 原子读取后删除
+                msg = AgentMessage.from_json(data)
                 messages.append(msg)
-                f.unlink()  # 读取后删除
+            except FileNotFoundError:
+                pass  # 已被其他进程取走
             except Exception as e:
                 logger.error(f"读取消息失败 {f}: {e}")
-        
+
         return messages
     
     def start_polling(self, agent_id: str, handler: Callable):

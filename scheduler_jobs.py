@@ -599,20 +599,20 @@ def log_health_status():
         try:
             from scheduler_core import LLM_CLIENT_AVAILABLE
             services["llm_client"] = LLM_CLIENT_AVAILABLE
-        except:
+        except Exception:
             pass
 
         # 检查 RAG
         try:
             from scheduler_core import RAG_AVAILABLE
             services["rag"] = RAG_AVAILABLE
-        except:
+        except Exception:
             pass
 
         # 检查推送
         try:
             services["pusher"] = scheduler_core.push_manager is not None
-        except:
+        except Exception:
             pass
 
         status_str = " | ".join(f"{k}: {'✅' if v else '❌'}" for k, v in services.items())
@@ -1478,7 +1478,7 @@ def job_llm_health_check():
                 health_data = json.loads(result.stdout)
                 for issue in health_data.get("issues", []):
                     logger.warning(f"   - {issue}")
-            except:
+            except Exception:
                 pass
             log_task_metrics(task_name, "warning", duration_ms=int((time.time() - start_time) * 1000))
 
@@ -1488,7 +1488,7 @@ def job_llm_health_check():
                 health_data = json.loads(result.stdout)
                 for issue in health_data.get("issues", []):
                     logger.error(f"   - {issue}")
-            except:
+            except Exception:
                 pass
             log_task_metrics(task_name, "critical", duration_ms=int((time.time() - start_time) * 1000))
 
@@ -1898,7 +1898,7 @@ def _transcribe_podcast(audio_path: Path) -> str:
             import os
             if output_path and os.path.exists(output_path):
                 os.unlink(output_path)
-        except:
+        except Exception:
             pass
 
 

@@ -125,7 +125,7 @@ jobs:
   # ============ Paper Analyzer 论文抓取 (v1.2) ============
   paper_fetch:
     enabled: true
-    hour: 8
+    hour: 18  # ⭐ v1.3 调整：arXiv 论文 UTC 17:00 发布，北京时间下午运行可抓当天新论文
     minute: 0
     day_of_week: "mon-sun"
     description: "Paper Analyzer 论文抓取 - 自动抓取最新 arXiv 论文"

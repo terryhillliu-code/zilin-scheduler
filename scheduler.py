@@ -33,6 +33,7 @@ from scheduler_jobs import (
     job_arxiv,
     job_system_check,
     job_system_metrics_report,
+    job_lance_cleanup,  # ⭐ v69.0 新增
     job_log_rotate,
     job_knowledge_classify,
     job_video_notes_organize,

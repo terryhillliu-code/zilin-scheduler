@@ -38,63 +38,6 @@ import trigger_listener
 CONTAINER = "clawdbot"
 
 
-# ============ GraphRAG (已禁用) ============
-# LightRAG 已禁用，使用 LanceDB RAG 替代 (scheduler_core.enrich_with_rag)
-
-def enrich_with_graphrag(task_name: str, prompt_text: str) -> str:
-    """
-    使用 GraphRAG 增强上下文 - 已禁用
-
-    LightRAG 已禁用，使用 LanceDB RAG 替代。
-    此函数保留作为占位符，避免调用方报错。
-    """
-    return ""
-
-
-def enrich_with_klib(task_name: str, prompt_text: str, top_k: int = 5) -> str:
-    """
-    使用 klib.db 进行全文检索增强
-
-    Args:
-        task_name: 任务名称
-        prompt_text: 原始 Prompt
-        top_k: 返回数量
-
-    Returns:
-        增强后的上下文字符串
-    """
-    try:
-        import sqlite3
-        klib_path = Path.home() / "Documents" / "Library" / "klib.db"
-
-        if not klib_path.exists():
-            return ""
-
-        # 简单关键词提取
-        keywords = prompt_text[:100]
-
-        conn = sqlite3.connect(str(klib_path))
-        cursor = conn.execute("""
-            SELECT title, summary FROM books
-            WHERE title LIKE ? OR summary LIKE ?
-            LIMIT ?
-        """, (f"%{keywords}%", f"%{keywords}%", top_k))
-
-        results = cursor.fetchall()
-        conn.close()
-
-        if results:
-            context = "\n\n【知识库参考】\n"
-            for title, summary in results:
-                context += f"- {title}: {summary[:200] if summary else ''}\n"
-            logger.info(f"📚 klib 增强: {len(results)} 条结果")
-            return context
-        return ""
-    except Exception as e:
-        logger.warning(f"klib 检索失败: {e}")
-        return ""
-
-
 def _fetch_rss_articles(feeds: list, max_per_feed: int = 3, max_total: int = 10, max_age_days: int = 7) -> list:
     """通用 RSS 文章获取函数 - v72.2 增强可靠性
 
@@ -2107,8 +2050,5 @@ __all__ = [
     'job_llm_health_check',  # ⭐ v67.0 新增
     'job_paper_property_sync',  # ⭐ Paper Analyzer v1.1 新增
     'job_paper_fetch',  # ⭐ Paper Analyzer v1.2 新增
-    # 辅助函数
-    'enrich_with_graphrag',
-    'enrich_with_klib',
     'log_health_status',
 ]

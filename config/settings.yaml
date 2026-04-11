@@ -116,7 +116,7 @@ jobs:
   paper_property_sync:
     enabled: true
     hour: 4
-    minute: 0
+    minute: 30  # ⭐ v1.4 调整：与 lance_cleanup 错开 30 分钟避免资源竞争
     day_of_week: "mon-sun"
     description: "Paper Analyzer 属性同步 - Obsidian 变更同步到数据库"
     push_to: []

@@ -13,7 +13,7 @@ import subprocess
 from pathlib import Path
 from datetime import datetime
 
-# V2-103: 导入 LLM 客户端替代 OpenClaw
+# 模块级导入（避免热路径重复导入）
 sys.path.insert(0, str(Path.home() / "zhiwei-bot"))
 try:
     from llm_client import llm_client
@@ -21,6 +21,11 @@ try:
 except ImportError:
     LLM_CLIENT_AVAILABLE = False
     llm_client = None
+
+sys.path.insert(0, str(Path.home() / "zhiwei-scheduler"))
+from zhiwei_common import TaskStore, MessageBus
+import scheduler_jobs
+from scheduler_queue import try_push, save_result_safe
 
 # 默认触发器目录
 TRIGGER_DIR = Path("/Users/liufang/zhiwei-scheduler/triggers")
@@ -124,53 +129,40 @@ def execute_trigger(trigger_file: Path):
         _logger.info(f"🔥 检测到触发器: {trigger_name} ({config['description']})")
     print(f"🔥 触发: {trigger_name} -> {config['job_name']}")
 
-    # 引入任务队列与消息总线
-    from zhiwei_common import TaskStore, MessageBus
     store = TaskStore()
     mb = MessageBus()
 
     # 入队并标记为运行中
     task_id = store.enqueue(config['description'], backend='trigger')
-    with store._connect() as conn:
-        conn.execute("UPDATE tasks SET status='running', started_at=datetime('now', 'localtime') WHERE id=?", (task_id,))
+    store.mark_running(task_id)
 
     # 飞书：任务开始通知
     mb.publish("trigger_listener", "feishu_notification", f"⏳ 开始执行定制任务：{config['description']} (Task #{task_id})", {"targets": ["feishu"]})
 
-    # 映射到 scheduler_jobs 中真正包含完整业务逻辑的函数
-    sys.path.insert(0, str(Path.home() / "zhiwei-scheduler"))
-    import scheduler_jobs
-    
+    # 触发器处理函数映射
+    HANDLERS = {
+        "morning.run": lambda: scheduler_jobs.job_morning_brief(),
+        "noon.run": lambda: scheduler_jobs.job_noon_brief(),
+        "arxiv.run": lambda: scheduler_jobs.job_arxiv(),
+        "system.run": lambda: scheduler_jobs.job_system_check(),
+        "market_open.run": lambda: scheduler_jobs.job_us_market_open(),
+        "voice_summary.run": lambda: scheduler_jobs.job_daily_voice_task_summary(),
+    }
+
     success = False
     result_text = "成功发出指令"
 
     try:
-        if trigger_name == "morning.run":
-            scheduler_jobs.job_morning_brief()
-            success = True
-        elif trigger_name == "noon.run":
-            scheduler_jobs.job_noon_brief()
-            success = True
-        elif trigger_name == "arxiv.run":
-            scheduler_jobs.job_arxiv()
-            success = True
-        elif trigger_name == "system.run":
-            scheduler_jobs.job_system_check()
-            success = True
-        elif trigger_name == "market_open.run":
-            scheduler_jobs.job_us_market_open()
-            success = True
-        elif trigger_name == "voice_summary.run":
-            scheduler_jobs.job_daily_voice_task_summary()
-            success = True
-        elif trigger_name == "tanwei.run":
+        if trigger_name == "tanwei.run":
             # 兼容独立的 agent 调用
             succ, result_text = call_agent(config['agent'], config['prompt'])
             success = succ
             if success:
-                from scheduler_queue import try_push, save_result_safe
                 save_result_safe("manual_brief", result_text, ["feishu"])
                 try_push(Path.home() / "zhiwei-scheduler/outputs/artifacts/pending/manual_brief.json")
+        elif trigger_name in HANDLERS:
+            HANDLERS[trigger_name]()
+            success = True
         else:
             success = False
             result_text = "未实现的触发器函数映射"
@@ -205,34 +197,18 @@ def watch_loop(check_interval: int = 5):
     """监听循环"""
     global _running, _logger
 
-    processed = set()
-
     while _running:
         try:
             # 确保目录存在
             TRIGGER_DIR.mkdir(parents=True, exist_ok=True)
 
-            # 遍历所有 .run 文件
+            # 遍历所有 .run 文件，执行后成功者会自行删除
             for trigger_file in TRIGGER_DIR.glob("*.run"):
-                filename = trigger_file.name
-
-                # 跳过已处理的文件
-                if filename in processed:
-                    continue
-
-                # 标记为已处理
-                processed.add(filename)
-
-                # 执行触发任务
                 try:
                     execute_trigger(trigger_file)
                 except Exception as e:
                     if _logger:
-                        _logger.error(f"❌ 执行触发器异常 [{filename}]: {e}")
-
-                # 从已处理集合中移除（如果文件被删除）
-                if not trigger_file.exists():
-                    processed.discard(filename)
+                        _logger.error(f"❌ 执行触发器异常 [{trigger_file.name}]: {e}")
 
         except Exception as e:
             if _logger:

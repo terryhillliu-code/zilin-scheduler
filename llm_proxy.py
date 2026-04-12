@@ -4,8 +4,10 @@ LLM 直连代理模块 - 兼容层
 
 已迁移到 zhiwei_common.llm，此文件保留作为兼容导入。
 """
-# 兼容层：重定向到 zhiwei_common.llm
+import logging
 from zhiwei_common.llm import llm_client
+
+logger = logging.getLogger(__name__)
 
 def call_llm_direct(message: str, timeout: int = 180, model: str = None, temperature: float = 0.7) -> tuple:
     """
@@ -20,6 +22,8 @@ def call_llm_direct(message: str, timeout: int = 180, model: str = None, tempera
     Returns:
         (success, content) 元组
     """
+    if model is not None:
+        logger.warning("llm_proxy.call_llm_direct: model 参数已忽略，使用角色模型")
+    if temperature != 0.7:
+        logger.warning("llm_proxy.call_llm_direct: temperature 参数已忽略")
     return llm_client.call("chat", message, timeout=timeout)
-
-__all__ = ["call_llm_direct"]

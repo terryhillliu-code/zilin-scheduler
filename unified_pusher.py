@@ -40,7 +40,8 @@ logging.basicConfig(
 )
 logger = logging.getLogger("unified-pusher")
 
-# 配置常量
+# 路径与配置
+BASE_DIR = Path(__file__).parent
 CONFIG_PATH = BASE_DIR / "config" / "settings.yaml"
 POLL_INTERVAL = 10  # 秒
 CONTAINER = "clawdbot"

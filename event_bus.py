@@ -171,8 +171,8 @@ class EventBus:
         for f in MESSAGE_DIR.glob(pattern):
             try:
                 data = f.read_text()
-                f.unlink()  # 原子读取后删除
                 msg = AgentMessage.from_json(data)
+                f.unlink()  # 解析成功后删除
                 messages.append(msg)
             except FileNotFoundError:
                 pass  # 已被其他进程取走

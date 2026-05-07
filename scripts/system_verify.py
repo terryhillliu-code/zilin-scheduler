@@ -31,25 +31,6 @@ all_warnings: List[str] = []
 
 
 # ── 工具函数 ──────────────────────────────────────────────
-def ok(icon: str = "✅"):
-    return icon
-
-
-def result_line(name: str, status: str, detail: str = "", latency_ms: int = 0):
-    if status == "ok":
-        icon = "✅"
-    elif status == "warn":
-        icon = "⚠️"
-    else:
-        icon = "❌"
-    line = f"  {name}: {icon}"
-    if detail:
-        line += f" ({detail})"
-    if latency_ms > 0:
-        line += f" [{latency_ms}ms]"
-    return line, icon
-
-
 def check_url(url: str, timeout: int = 5) -> Tuple[bool, int]:
     """检查 HTTP URL 是否可达，返回 (ok, latency_ms)"""
     try:
@@ -157,19 +138,10 @@ def layer2_llm_api(quick: bool = False):
     test_timeout = 30
 
     providers = [
-        ("百炼 Coding Plan", "bailian", [
-            ("glm-5", "主模型"),
-            ("qwen3.6-plus", "最强模型"),
-        ]),
-        ("火山引擎", "volcengine", [
-            ("doubao-seed-2.0-pro", "主模型"),
-        ]),
-        ("DashScope", "dashscope", [
-            ("qwen-plus", "主模型"),
-        ]),
-        ("OpenRouter", "openrouter", [
-            ("openrouter/free", "免费模型"),
-        ]),
+        ("百炼 Coding Plan", "bailian", ["glm-5", "qwen3.6-plus"]),
+        ("火山引擎", "volcengine", ["doubao-seed-2.0-pro"]),
+        ("DashScope", "dashscope", ["qwen-plus"]),
+        ("OpenRouter", "openrouter", ["openrouter/free"]),
     ]
 
     for provider_name, provider_key, models in providers:
@@ -180,7 +152,7 @@ def layer2_llm_api(quick: bool = False):
         provider_ok = True
         model_results = []
 
-        for model_name, label in models:
+        for model_name in models:
             success = False
             latency_ms = 0
 
@@ -223,12 +195,12 @@ def layer3_websearch(quick: bool = False):
     icons = []
 
     sources = [
-        ("Exa", "EXA_API_KEY", "web_search_exa"),
-        ("Tavily", "TAVILY_API_KEY", "web_search_tavily"),
-        ("DDGS", None, "web_search_ddgs"),
+        ("Exa", "EXA_API_KEY"),
+        ("Tavily", "TAVILY_API_KEY"),
+        ("DDGS", None),
     ]
 
-    for name, key_env, method_name in sources:
+    for name, key_env in sources:
         if quick:
             lines.append(f"  {name}: ⏭️ (跳过)")
             continue
@@ -241,18 +213,12 @@ def layer3_websearch(quick: bool = False):
             all_warnings.append(f"WebSearch {name} 未配置")
             continue
 
-        try:
-            method = getattr(llm_client, method_name, None) if hasattr(llm_client, method_name) else None
-            # WebSearch 使用 zhiwei-rag 的 web_search 端点或直接测试
-            # 这里通过检查 API Key 存在性做基础验证
-            if key_env:
-                lines.append(f"  {name}: ✅ (Key 已配置)")
-            else:
-                lines.append(f"  {name}: ✅ (零成本)")
-            icons.append("✅")
-        except Exception:
-            lines.append(f"  {name}: ❌")
-            icons.append("❌")
+        # 仅验证 Key 存在性，实际调用在 web_search 端点中完成
+        if key_env:
+            lines.append(f"  {name}: ✅ (Key 已配置)")
+        else:
+            lines.append(f"  {name}: ✅ (零成本)")
+        icons.append("✅")
 
     status = "ok" if all(i == "✅" for i in icons) else "warn"
     return status, lines
@@ -324,8 +290,6 @@ def layer5_rag():
 
     # /health
     try:
-        ok_val, data, ms = http_post_json(f"{base}/health", {}, {}, timeout=5)
-        # health 是 GET 请求，改用 check_url
         ok_val, ms = check_url(f"{base}/health", timeout=5)
         if ok_val:
             # 再拿详细数据
@@ -426,8 +390,6 @@ def layer6_scheduler():
     jsonl_path = Path.home() / "logs" / "scheduler.jsonl"
     if jsonl_path.exists():
         try:
-            now = datetime.now()
-            day_ago = now - timedelta(hours=24)
             fail_count = 0
             total_count = 0
             job_times = {}
